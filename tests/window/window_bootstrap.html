@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv=content-type content=text/html;charset=utf-8>
+	<meta name=viewport content=width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1>
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a href="#" class="brand">Thinskin</a>
+		</div>
+	</div>
+</div>
+
+<table class="table table-striped">
+</table>
+
+<script type="text/javascript" src="../js/benchmark.js"></script>
+<script type="text/javascript">
+	var output = document.querySelector('.brand');
+	var table = document.querySelector('table');
+	var benchmark = new Benchmark.Suite('thinskin', {
+		onStart: function () { self.opener.popup = self; }
+	});
+
+	benchmark.add('insert tr/td (with bootstrap)', function() {
+		var tr = document.createElement('tr');
+		var td = document.createElement('td');
+		td.innerHTML = 'some info here';
+		tr.appendChild(td);
+		table.appendChild(tr);
+	})
+	.on('cycle', function(event) {
+		console.log(String(event.target));
+		output.innerHTML = String(event.target);
+		self.opener.appendOutput(String(event.target));
+	})
+	.on('complete', function() {
+	  console.log('Fastest is ' + this.filter('fastest').pluck('name'));
+	  console.log(this.filter('fastest'));
+	  window.close();
+	})
+
+	benchmark.run({'async':true});
+</script>
+</body>
+</html>
