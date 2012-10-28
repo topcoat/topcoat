@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html>
 <head>
     <meta http-equiv=content-type content=text/html;charset=utf-8>
@@ -28,12 +28,12 @@
     }
 
     li {
-        margin:0;
+        border-radius:10px;
+        margin:5px;
         line-height:49px;
         text-indent:20px;
         height:49px;
         background:#eaeaea;
-        border-bottom: 1px solid #ccc;
     }
     </style>
 </head>
@@ -60,15 +60,9 @@
 	  ol.appendChild(li);
 	})
 	.on('cycle', function(event) {
-		console.log(String(event.target));
-		output.innerHTML = String(event.target);
-		self.opener.appendOutput(String(event.target));
-		self.opener.launchTest('window/window_bootstrap.html');
-	})
-	.on('complete', function() {
-	  console.log('Fastest is ' + this.filter('fastest').pluck('name'));
-	  console.log(this.filter('fastest'));
-	})
+        self.opener.appendOutput(String(event.target), '#rounded');
+        self.opener.launchTest();
+    });
 
 	benchmark.run({'async':true});
 

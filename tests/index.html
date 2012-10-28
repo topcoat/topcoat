@@ -2,9 +2,27 @@
 <html>
 <head>
 	<title>benchmark.js</title>
-	<div id="output"></div>
+	<style>
+
+		ul li {
+			list-style:none;
+			padding:5px;
+			margin:5px;
+			border-bottom:1px solid #eee;
+		}
+
+	</style>
 </head>
 <body>
+	
+	<h2>Which tests to run ?</h2>
+	<ul>
+		<li><input type="checkbox" id="simple"> <label for="simple">insert li elements</label></li>
+		<li><input type="checkbox" id="bootstrap"> <label for="bootstrap">insert tr/td elements (with bootstrap)</label></li>
+		<li><input type="checkbox" id="rounded"> <label for="rounded">insert li elements with rounded corners</label></li>
+		<li><input type="submit" id="run" value="Run!"></li>
+	</ul>
+	<div id="output"></div>
 
 
 

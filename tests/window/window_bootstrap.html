@@ -34,15 +34,9 @@
 		table.appendChild(tr);
 	})
 	.on('cycle', function(event) {
-		console.log(String(event.target));
-		output.innerHTML = String(event.target);
-		self.opener.appendOutput(String(event.target));
-	})
-	.on('complete', function() {
-	  console.log('Fastest is ' + this.filter('fastest').pluck('name'));
-	  console.log(this.filter('fastest'));
-	  window.close();
-	})
+		self.opener.appendOutput(String(event.target), '#bootstrap');
+		self.opener.launchTest();
+	});
 
 	benchmark.run({'async':true});
 </script>
