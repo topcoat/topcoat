@@ -5,7 +5,7 @@ A temporary space for a experimental css microlibrary.
 
 ## Embedded Webview Targets
 
-- iOS 4+
+- iOS 5+
 - Android 2.2+
 - BlackBerry 6+
 - Windows Phone 8+
@@ -15,7 +15,7 @@ A temporary space for a experimental css microlibrary.
 - Firefox for Android
 - Opera Mini
 - Android 2.2+ system browser
-- Mobile Safari 4+
+- Mobile Safari 5+
 
 ## Desktop Browser Targets
 
