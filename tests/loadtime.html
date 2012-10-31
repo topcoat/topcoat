@@ -7,7 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script>
-      window.startTime = (new Date()).getTime();
+      window.startTime = window.performance.now ?
+                    (performance.now() + performance.timing.navigationStart) : 
+                    Date.now();
     </script>
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -188,7 +190,10 @@
     <script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-    var time = (new Date()).getTime() - window.startTime;
+    var now = this.startTime = window.performance.now ?
+                    (performance.now() + performance.timing.navigationStart) : 
+                    Date.now();
+    var time = now - window.startTime;
     document.getElementById('restart').addEventListener('click', function(){
       localStorage.clear();
       location.reload();
