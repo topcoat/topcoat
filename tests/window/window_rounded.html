@@ -51,7 +51,13 @@
 	var output = document.querySelector('#header');
 	var ol = document.querySelector('ol');
 	var benchmark = new Benchmark.Suite('thinskin', {
-		onStart: function () { self.opener.popup = self; }
+        onStart: function () {
+            if(self.opener) {
+                self.opener.popup = self;
+            } else {
+                alert('This test should be runned from the index.html page')
+            }
+        }
 	});
 
 	benchmark.add('insert li', function() {
@@ -60,9 +66,13 @@
 	  ol.appendChild(li);
 	})
 	.on('cycle', function(event) {
-        self.opener.appendOutput(String(event.target), '#rounded');
-        self.opener.suite.add(event.target);
-        self.opener.launchTest();
+        if(self.opener) {
+            self.opener.appendOutput(String(event.target), '#rounded');
+            self.opener.suite.add(event.target);
+            self.opener.launchTest();
+        } else {
+            alert(String(event.target));
+        }
     });
 
 	benchmark.run({'async':true});
