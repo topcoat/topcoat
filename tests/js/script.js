@@ -3,6 +3,8 @@ var TARGET_WINDOW_HEIGHT = 600;
 var popup = null;
 var tests = [];
 
+var suite = new Benchmark.Suite();
+
 document.querySelector('#run').addEventListener('click', function(){
 	var inputs = document.querySelectorAll('input[type=checkbox]:checked');
 	
@@ -15,8 +17,9 @@ document.querySelector('#run').addEventListener('click', function(){
 }, false);
 
 function appendOutput(content, selector) {
-	var el = document.querySelector(selector);
-	el.parentNode.innerHTML += '<span> ' + content + '</span>';
+	var node = document.querySelector(selector);
+	el = node.parentElement.parentElement.querySelector('.output');
+	el.innerHTML += '<span class="label label-important"> ' + content + '</span>';
 }
 
 function launchTest(test) {
@@ -29,6 +32,12 @@ function launchTest(test) {
 		}, this), 1000);
 	else {
 		popup.close();
+		var fastest = suite.filter('fastest').pluck('name');
+		var output = document.querySelectorAll('.output');
+		[].forEach.call(output, function(el){
+			if(el.innerHTML.match(fastest))
+				el.parentElement.classList.add('success');
+		});
 	}
 }
 

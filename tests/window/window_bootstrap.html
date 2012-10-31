@@ -16,14 +16,21 @@
 </div>
 
 <table class="table table-striped">
+	<tbody></tbody>
 </table>
 
 <script type="text/javascript" src="../js/benchmark.js"></script>
 <script type="text/javascript">
 	var output = document.querySelector('.brand');
-	var table = document.querySelector('table');
+	var table = document.querySelector('tbody');
 	var benchmark = new Benchmark.Suite('thinskin', {
-		onStart: function () { self.opener.popup = self; }
+		onStart: function () {
+			if(self.opener) {
+				self.opener.popup = self;
+			} else {
+				alert('This test must be runned from the index.html page')
+			}
+		}
 	});
 
 	benchmark.add('insert tr/td (with bootstrap)', function() {
@@ -34,8 +41,13 @@
 		table.appendChild(tr);
 	})
 	.on('cycle', function(event) {
-		self.opener.appendOutput(String(event.target), '#bootstrap');
-		self.opener.launchTest();
+		if(self.opener) {
+			self.opener.appendOutput(String(event.target), '#bootstrap');
+			self.opener.suite.add(event.target);
+			self.opener.launchTest();
+		} else {
+			alert(String(event.target));
+		}
 	});
 
 	benchmark.run({'async':true});

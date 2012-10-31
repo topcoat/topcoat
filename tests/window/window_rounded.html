@@ -61,6 +61,7 @@
 	})
 	.on('cycle', function(event) {
         self.opener.appendOutput(String(event.target), '#rounded');
+        self.opener.suite.add(event.target);
         self.opener.launchTest();
     });
 
