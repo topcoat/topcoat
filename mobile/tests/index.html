@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title>benchmark.js</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		tr td:first-child {
+			width:20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<div class="hero-unit">
+				<h1>Which tests to run ?</h1>
+				<p>
+					select them and click run
+				</p>
+			</div>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>
+							<i class="icon icon-ok"></i>
+						</th>
+						<th>test</th>
+						<th>output</th>
+					</tr>
+				</thead>
+				<tr>
+					<td><input type="checkbox" id="simple"></td>
+					<td><label for="simple">insert li elements</label></td>
+					<td class="output"></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="bootstrap"></td>
+					<td><label for="bootstrap">insert tr/td elements <span class="label label-info">with bootstrap</span></label></td>
+					<td class="output"></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="rounded"></td>
+					<td><label for="rounded">insert li elements <span class="label label-info">rounded corners</span></label></td>
+					<td class="output"></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="shadow"></td>
+					<td><label for="shadow">insert li elements <span class="label label-info">box-shadow</span></label></td>
+					<td class="output"></td>
+				</tr>
+			</table>
+			<input type="submit" id="run" value="Run!" class="btn btn-primary btn-large">
+	</div>
+
+
+
+<script type="text/javascript" src="js/benchmark.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
