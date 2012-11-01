@@ -1,0 +1,1210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"> <!-- Google Chrome Frame -->
+    <title>Topcoat Style Guide</title>
+    <script type="text/javascript" src="//use.typekit.net/tfw6uyb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/topcoat.css">
+</head>
+<body>
+
+<div id="container">
+    <header>
+    <hgroup>
+        <h1>TopCoat</h1> 
+        <h2>Style Guide - November 1, 2012</h2> 
+    </hgroup>
+    <nav>
+        <h3>General</h3>
+        <ul>
+            <li><a href="#what-is-TopCoat">What is TopCoat?</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#icons">Icons</a></li>
+            <li><a href="#visual-hierarchy">Visual Hierarchy</a></li>
+            <li><a href="#spacing">Spacing</a></li>
+            <li><a href="#words">Words</a></li>
+            <li><a href="#os-wrapper-vs-browser">OS Wrapper vs. Browser</a></li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+            <li><a href="#button">Button</a></li>
+            <li><a href="#icon-button">Icon Button</a></li>
+            <li><a href="#icon-label-button">Icon Label Button</a></li>
+            <li><a href="#call-to-action-button">Call-to-Action-Button</a></li>
+            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+            <li><a href="#drop-down">Drop-Down</a></li>
+            <li><a href="#Split-Action">Split-Action</a></li>
+            <li><a href="#link">Link</a></li>
+            <li><a href="#button-bar">Button Bar</a></li>
+        </ul>
+        <h3>Toggles</h3>
+        <ul>
+            <li><a href="#slide-switch">Slide Switch</a></li>
+            <li><a href="#toggle-buttons">Toggle Buttons</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#disclosure-toggle">Disclosure Toggle</a></li>
+        </ul>
+        <h3>Settings</h3>
+        <ul>
+            <li><a href="#text-field">Text Field</a></li>
+            <li><a href="#combo-box">Combo Box</a></li>
+            <li><a href="#select">Select</a></li>                        
+            <li><a href="#swatch">Swatch</a></li>
+            <li><a href="#checkbox">Checkbox</a></li>
+            <li><a href="#radio-button">Radio Button</a></li>
+            <li><a href="#approximate-slider">Approximate Slider</a></li>
+            <li><a href="#step-slider">Step / Precision Slider</a></li>
+            <li><a href="#tags">Tags</a></li>
+        </ul>
+        <h3>Indicators</h3>
+        <ul>
+            <li><a href="#spinner">Spinner</a></li>
+            <li><a href="#indicator-bar">Indicator Bar</a></li>
+        </ul>
+	</nav>
+    </header>
+    <div id="main" role="main">
+        <section id="general">
+            <h4 id="what-is-TopCoat"><span>What is TopCoat?</span></h4>	
+            <p>TopCoat is the design language for Adobe's Web platform &amp; authoring tools. It was tailored for a set of light weight applications that  are based on web standards. Moving away from the powerful, monolithic apps that you launch and use for most of your day, these apps are meant to be working alongside a set of other tools and services. They can be launched on your desktop or on the browser.</p>
+
+            <p>TopCoat was not meant for mobile apps, web sites and services, powerful authoring tools with a lot of configuration options. And extension of TopCoat would be required for those spaces.</p>
+
+            <p>Our Design Principles:</p>
+            <ul>
+                <li>We want to be good OS Citizens while still retaining our identity.</li>
+                <li>Our UI Framework should accelerate design, not restrict it.</li>
+                <li>We should be able to convey human, without literally showing our heart.</li>
+                <li>We want to be clean and simple without sacrificing being clear. </li>
+                <li>We’d like to explore the aesthetics of being functional.</li>
+                <li>We love our craft and it should be apparent in the quality of our UI.</li>
+            </ul>
+            <p><strong>Note:</strong> This style guide is not meant to be prescriptive. You shouldn't let this style guide hold you back if you've figured out a better way. Please feel free to let us know how we can improve TopCoat.</p>          
+
+            <h4 id="examples"><span>Examples</span></h4>
+            <table class="tabular images">
+                <tr>
+                    <th>Brackets (Edge Code)</th>
+                    <th>Edge Reflow</th>
+                    <th>Edge Inspect</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#e1" class="openmodal"><img src="assets/img/examples/brackets.png" alt="Brackets Screenshot" /></a>
+                    </td>
+                    <td>
+                        <a href="#e2" class="openmodal"><img src="assets/img/examples/edge-reflow.png" alt="Edge Reflow Screenshot" /></a>
+                    </td>
+                    <td>
+                        <a href="#e3" class="openmodal"><img src="assets/img/examples/edge-inspect.png" alt="Edge Inspect Screenshot" style="width: 100px;" /></a>
+                         (Chrome Extension)
+                    </td>
+                </tr>
+            </table>
+            <aside id="e1" class="modal">
+                <div>
+                    <h1>Brackets <a href="#close" title="Close">Close</a></h1>
+                    <img src="assets/img/examples/brackets.png" alt="Brackets (Edge Code) Screenshot" width="100%" />
+                </div>
+            </aside>
+            <aside id="e2" class="modal">
+                <div>
+                    <h1>Edge Reflow <a href="#close" title="Close">Close</a></h1>
+                    <img src="assets/img/examples/edge-reflow.png" alt="Edge Reflow Screenshot" width="100%" />
+                </div>
+            </aside>
+            <aside id="e3" class="modal">
+                <div>
+                    <h1>Edge Inspect <a href="#close" title="Close">Close</a></h1>
+                    <img src="assets/img/examples/edge-inspect.png" alt="Edge Inspect Screenshot" style="display: block; margin: 18px auto 36px;" />
+                </div>
+            </aside>                           
+
+            <h4 id="fonts"><span>Fonts</span></h4>
+            <table class="fonts tabular">
+                <tr>
+                    <th class="bg-white">On White</th>
+                    <th class="bg-lightgray">On Light Gray</th>
+                    <th class="bg-slategray">On Slate Gray</th>         
+                </tr>
+                <tr>
+                    <td class="bg-white">
+                        <h1 class="title">Title</h1>
+                        <p>Standard Text</p>
+                        <p class="large ">Large Text</p>
+                    </td>
+                    <td class="bg-lightgray">
+                        <h1 class="title">Title</h1>
+                        <p>Standard Text</p>
+                        <p class="large ">Large Text</p>
+                    </td>
+                    <td class="bg-slategray">
+                        <h1 class="title">Title</h1>
+                        <p>Standard Text</p>
+                        <p class="large ">Large Text</p>
+                        <h2 class="group-label">Group Label</h2>                        
+                    </td>
+                </tr>
+            </table>            
+            <p>TopCoat uses <a href="http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html">Source Sans Pro</a>, Adobe’s first open source type family; the fonts are included in this style guide in <code>/assets/fonts</code>. Right now only Regular and Semibold are being used on the controls, 12px Regular on Standard controls and 14px Semibold on Large controls.</p>
+
+            <p>If you're going to use text shadow or highlight on text that don't have a clickable bounding box make sure that:</p>
+            <ul>
+                <li>interactive text are raised (shadow below text or highlight above text)</li>
+                <li>non-interactive text are sunken (the opposite).</li>
+            </ul>
+
+            <h4 id="colors"><span>Colors</span></h4>
+            <h5>Surface Palette</h5>
+            <table class="tabular">
+                <tr>
+                    <th>Color</th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>Note</th>
+                </tr>
+                <tr>
+                    <td><div class="swatch large" style="background: #494d4e;"></div></td>
+                    <td>Slate Gray (gradient start)</td>
+                    <td>#494D4E</td>
+                    <td>73,77,78</td>
+                    <td>Gradient background for global navigation or driver e.g. App Bar, Primary Side Bar, Chrome Extension</td>
+                </tr>
+                <tr>
+                    <td><div class="swatch large" style="background: #3b3f41;"></div></td>
+                    <td>Slate Gray (gradient end)</td>
+                    <td>#3B3F41</td>
+                    <td>59,63,65</td>
+                    <td>(See above.)</td>
+                </tr>
+                <tr>
+                    <td><div class="swatch large" style="background: #fff;"></div></td>
+                    <td>White</td>
+                    <td>#FFFFFF</td>
+                    <td>255,255,255</td>
+                    <td>Background color for Content, Settings, Windows, Dialogs</td>
+                </tr>
+                <tr>
+                    <td><div class="swatch large" style="background: #f8f8f8;"></div></td>
+                    <td>Nested-White</td>
+                    <td>#F8F8F8</td>
+                    <td>248,248,248</td>
+                    <td>Background color for nested area of Content, Settings</td>
+                </tr>
+                <tr>
+                    <td><div class="swatch large" style="background: #dfe2e2;"></div></td>
+                    <td>Light Gray</td>
+                    <td>#DFE2E2</td>
+                    <td>222,226,225</td>
+                    <td>Background color for HUD/Pop-over, Secondary Side Bar</td>
+                </tr> 
+                 <tr>
+                    <td><div class="swatch large" style="background: #d4d7d7;"></div></td>
+                    <td>Nested Light Gray</td>
+                    <td>#D4D7D7</td>
+                    <td>222,226,225</td>
+                    <td>Background color for nested or sunken area of HUD/Pop-over, Secondary Side Bar</td>
+                </tr>                                                    
+            </table>
+
+            <h4 id="icons"><span>Icons</span></h4>
+            <div class="preview">
+                <img src="assets/img/examples/harborline.png" alt="Pro Icon Examples" />        
+            </div>
+            <p>Icons are used to:</p>
+            <ul>
+                <li>leverage globally understood visual concepts, or where icons usage is more conventional than text</li>
+                <li>save space by using an easily understood symbol, where localization or text orientation is constrained</li>
+                <li>direct the user visually and break down or differentiate elements (i.e. feature lists)</li>
+                <li>enforce consistency within the application</li>
+                <li>make the interface visually engaging</li>  
+            </ul>
+
+            <h4 id="visual-hierarchy"><span>Visual Hierarchy</span></h4>
+            <p>Visual hierarchy is used to indicate what is important. Primary objects or actions have the highest contrast to their surroundings.</p>
+            <h5>Example: TopCoat Button Visual Hierarchy</h5>
+            <ol>
+                <li>Call-to-Action</li>
+                <li>Icon Label Button</li>
+                <li>Icon Button</li>
+                <li>Button</li>
+                <li>Icon Label Button - Quiet</li>
+                <li>Icon Button - Quiet</li>
+                <li>Button - Quiet</li>
+            </ol>
+
+            <h4 id="spacing"><span>Spacing</span></h4>
+            <h5>Example: Spacing in HUD</h5>
+            <ol>
+                <li>Parent container padding: 15px</li>
+                <li>Section Spacing: 10px</li>
+                <li>Spacing within Sections: 5px</li>
+            </ol>
+            <div class="preview"></div>
+            <ul>
+                <li>Use spacing to convey association</li>
+                <li>Item spacing should not be greater than container padding</li>
+            </ul>
+            
+            <h4 id="words"><span>Words</span></h4>
+            <p>
+                For Headings, Component Labels and Menu Items, capitalize all major words (nouns, verbs, adjectives, adverbs and pronouns) including the second part of hyphenated major words (e.g. Snuggle-Cake, not Snuggle-cake).
+            </p>
+
+            <h4 id="os-wrapper-vs-browser"><span>OS Wrapper vs. Browser</span></h4>
+            <p>When TopCoat is being used in the context of an OS app, it needs to be a good OS citizen. If it reside within a browser then it should behave more like a web page.</p>
+            <table class="tabular">
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>OS Wrapper</th>
+                    <th>Browser</th>
+                </tr>
+                <tr>
+                    <td class="var">Cursor Hovering Clickable Component</td>
+                    <td>Default arrow cursor (cursor: default;)</td>
+                    <td>Pointer cursor (cursor: pointer;)</td>
+
+                </tr>
+                <tr>
+                    <td class="var">Hover State</td>
+                    <td>Not Required unless hit area isn't clear</td>
+                    <td>Recommended especially if the hit area isn't clear</td>
+                </tr>
+            </table>
+
+        </section>
+        <section id="actions">
+
+        <h4 id="button"><span>Button</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <a href="#" class="button">Button</a>
+                        <a href="#" class="button disabled">Disabled Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="button quiet">Quiet Button</a>
+                        <a href="#" class="button quiet disabled">Disabled Quiet Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="button large">Large Button</a>
+                        <a href="#" class="button large disabled">Large Disabled Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="button large quiet">Quiet Button</a>
+                        <a href="#" class="button large quiet disabled">Disabled Quiet Button</a>
+                    </p>                                           
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <a href="#" class="button dark">Button</a>
+                        <a href="#" class="button dark disabled">Disabled Dark Button</a>  
+                    </p>
+                    <p>
+                        <a href="#" class="button dark quiet">Quiet Button</a>
+                        <a href="#" class="button dark quiet disabled">Disabled Quiet Button</a>        
+                    </p>
+                    <p>
+                        <a href="#" class="button large dark">Large Button</a>
+                        <a href="#" class="button large dark disabled">Large Disabled Button</a>  
+                    </p>
+                    <p>
+                        <a href="#" class="button large dark quiet">Large Quiet Button</a>
+                        <a href="#" class="button large dark quiet disabled">Large Disabled Quiet Button</a>        
+                    </p>                    
+                </td>
+            </tr>
+        </table>
+        <p>Just your average buttons.</p>
+
+        <h4 id="icon-button"><span>Icon Button</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <a class="button no-label" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>
+                        <a class="button no-label disabled" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button no-label quiet" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>
+                        <a class="button no-label quiet disabled" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>
+                    </p>
+                    <p>
+                        <a class="button no-label large" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>
+                        <a class="button no-label large disabled" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>  
+                    </p>
+                    <p>
+                        <a class="button no-label quiet large" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>
+                        <a class="button no-label quiet large disabled" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>
+                    </p>   
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <a class="button no-label dark" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>
+                        <a class="button no-label dark disabled" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button no-label quiet dark" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>
+                        <a class="button no-label quiet dark disabled" href="#">
+                            <i class="icon-xs example"></i>
+                        </a>
+                    </p>
+                    <p>
+                        <a class="button no-label large dark" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>
+                        <a class="button no-label large dark disabled" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>  
+                    </p>
+                    <p>
+                        <a class="button no-label quiet large dark" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>
+                        <a class="button no-label quiet large dark disabled" href="#">
+                            <i class="icon-sm example"></i>
+                        </a>
+                    </p>   
+                </td>
+            </tr>
+        </table>
+        <p>Icon buttons save space, use them when labels aren't really required.</p>
+
+        <h4 id="icon-label-button"><span>Icon Label Button</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <a class="button" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button disabled" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button quiet" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button quiet disabled" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button large" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button large disabled" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button large quiet" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button large quiet disabled" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>                                        
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <a class="button dark" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button dark disabled" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button quiet dark" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button quiet dark disabled" href="#">
+                            <i class="icon-xs example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button large dark" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button large dark disabled" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>
+                    <p>
+                        <a class="button large quiet dark" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>
+                        <a class="button large quiet dark disabled" href="#">
+                            <i class="icon-sm example"></i>
+                            Icon Label Button
+                        </a>                        
+                    </p>  
+                </td>
+            </tr>
+        </table>
+        <p>Use icon label buttons to call out main actions.</p>
+
+        <h4 id="call-to-action-button"><span>Call-to-Action-Button</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <a href="#" class="button cta">Button</a>
+                        <a href="#" class="button cta disabled">Disabled Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="button cta large">Large Button</a>
+                        <a href="#" class="button cta large disabled">Large Disabled Button</a>
+                    </p>                    
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <a href="#" class="button cta dark">Button</a>
+                        <a href="#" class="button cta dark disabled">Disabled Button</a>
+                    </p>                    
+                    <p>
+                        <a href="#" class="button cta large dark">Large Button</a>
+                        <a href="#" class="button cta large dark disabled">Large Disabled Button</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p>The primary or suggested action in the workflow, there's usually only one of these on a screen.</p>
+
+        <h4 id="breadcrumbs"><span>Breadcrumbs</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        Soon                                           
+                    </p>                                           
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <ol class="breadcrumbs">
+                            <li><a href="">First Level</a></li>
+                            <li><a href="">Second Level</a></li>
+                            <li>Third Level</li>
+                        </ol>
+                    </p>
+                    <p>
+                        <ol class="breadcrumbs">
+                            <li><a href="">…</a></li>
+                            <li><a href="">Fourth Level</a></li>
+                            <li><a href="">Fifth Level</a></li>
+                            <li>Sixth Level</li>
+                        </ol>
+                    </p>
+                        <ol class="breadcrumbs large">
+                            <li><a href="">First Level</a></li>
+                            <li><a href="">Second Level</a></li>
+                            <li>Third Level</li>
+                        </ol>                                            
+                    </p> 
+                    <p>
+                        <ol class="breadcrumbs large">
+                            <li><a href="">…</a></li>
+                            <li><a href="">Fourth Level</a></li>
+                            <li><a href="">Fifth Level</a></li>
+                            <li>Sixth Level</li>
+                        </ol>                                            
+                    </p>                                           
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li>Typically appear horizontally across the top of an interface.</li>
+            <li>They provide links back to each previous page the user navigated through to get to the current page or - in hierarchical site structures - the parent pages of the current one.</li>
+            <li>breadcrumbs provide a trail for the user to follow back to the starting or entry point. A greater-than sign (>) serves as the hierarchical separator.</li>
+        </ul>
+
+        <h4 id="drop-down"><span>Drop-Down</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                        <span class="button drop-down">
+                            Drop-Down
+                            <i class="drop-down-triangle"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span>
+                        <span class="button drop-down disabled">
+                            Drop-Down
+                            <i class="drop-down-triangle"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span> 
+
+                        <div class="space"></div>
+
+                        <span class="button drop-down large">
+                            Drop-Down
+                            <i class="drop-down-triangle"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span>
+                        <span class="button drop-down large disabled">
+                            Drop-Down
+                            <i class="drop-down-triangle"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span>  
+
+                        <div class="space"></div>                                                                   
+
+                </td>
+                <td class="bg-slategray">
+                        <span class="button drop-down dark">
+                            Drop-Down
+                            <i class="drop-down-triangle dark"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span>
+                        <span class="button drop-down dark disabled">
+                            Drop-Down
+                            <i class="drop-down-triangle dark"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span> 
+
+                        <div class="space"></div>
+
+                        <span class="button drop-down large dark">
+                            Drop-Down
+                            <i class="drop-down-triangle dark"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span>
+                        <span class="button drop-down large dark disabled">
+                            Drop-Down
+                            <i class="drop-down-triangle dark"></i>
+                            <ul class="menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </span>  
+
+                        <div class="space"></div>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li>This is generally used to reveal a set of actions or navigation items. This shouldn't be used in settings or forms.</li>            
+            <li>Always opens up a fly-out surface</li>
+            <li>Fly-out surfaces never covers the drop-down</li>
+            <li>Clicking once on the button opens up the panel</li>
+            <li>Once a surface is open it remains open until the user clicks outside of the surfaces</li>
+        </ul>     
+
+        <h4 id="Split-Action"><span>Split-Action</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light" style="white-space: nowrap;">
+                    <span class="button-group">
+                        <a class="button start" href="#">Split-Action</a>
+                        <a class="button more" href="#"><i class="drop-down-triangle"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+                    <span class="button-group disabled">
+                        <a class="button start" href="#">Split-Action</a>
+                        <a class="button more" href="#"><i class="drop-down-triangle"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+
+                    <div class="space"></div>
+
+                    <span class="button-group large">
+                        <a class="button start large" href="#">Split-Action</a>
+                        <a class="button more large" href="#"><i class="drop-down-triangle"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+                    <span class="button-group large disabled">
+                        <a class="button start large" href="#">Split-Action</a>
+                        <a class="button more large" href="#"><i class="drop-down-triangle"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+
+                    <div class="space"></div>
+                </td>
+                <td class="bg-slategray" style="white-space: nowrap;">
+                    <span class="button-group">
+                        <a class="button start dark" href="#">Split-Action</a>
+                        <a class="button more dark" href="#"><i class="drop-down-triangle dark"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+                    <span class="button-group disabled">
+                        <a class="button start dark" href="#">Split-Action</a>
+                        <a class="button more dark" href="#"><i class="drop-down-triangle dark"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+
+                    <div class="space"></div>
+
+                    <span class="button-group large">
+                        <a class="button start large dark" href="#">Split-Action</a>
+                        <a class="button more large dark" href="#"><i class="drop-down-triangle dark"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+                    <span class="button-group large disabled">
+                        <a class="button start large dark" href="#">Split-Action</a>
+                        <a class="button more large dark" href="#"><i class="drop-down-triangle dark"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </span>
+
+                    <div class="space"></div>
+                </td>
+            </tr>
+        </table>
+
+        <h4 id="link"><span>Link</span></h4>
+        <table class="fonts tabular">
+            <tr>
+                <th class="bg-white">On White</th>
+                <th class="bg-lightgray">On Light Gray</th>
+                <th class="bg-slategray">On Slate Gray</th>         
+            </tr>
+            <tr>
+                <td class="bg-white">
+                    <p><a class="link" href="#">Standard Link</a></p>
+                    <p><a class="link large" href="#">Large Link</a></p>
+                </td>
+                <td class="bg-lightgray">
+                    <p><a class="link" href="#">Standard Link</a></p>
+                    <p><a class="link large" href="#">Large Link</a></p>
+                </td>
+                <td class="bg-slategray">
+                    <p><a class="link dark" href="#">Standard Link</a></p>
+                    <p><a class="link large dark" href="#">Large Link</a></p>
+                </td>
+            </tr>
+        </table>
+        <p>Generally used for inline actions in Applications.</p>
+
+        <h4 id="button-bar"><span>Button Bar</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <span class="button-group">
+                            <a class="button start" href="#">Button 1</a>
+                            <a class="button inside">Button 2</a>
+                            <a class="button end" href="#">Button 3</a>
+                        </span>
+                        <span class="button-group disabled">
+                            <a class="button start" href="#">Button 1</a>
+                            <a class="button inside">Button 2</a>
+                            <a class="button end" href="#">Button 3</a>
+                        </span> 
+                    </p>
+                    <p>
+                        <span class="button-group large">
+                            <a class="button start large" href="#">Button 1</a>
+                            <a class="button inside large">Button 2</a>
+                            <a class="button end large" href="#">Button 3</a>
+                        </span>
+                        <span class="button-group large disabled">
+                            <a class="button start large" href="#">Button 1</a>
+                            <a class="button inside large">Button 2</a>
+                            <a class="button end large" href="#">Button 3</a>
+                        </span>                         
+                    </p>
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <span class="button-group">
+                            <a class="button start dark" href="#">Button 1</a>
+                            <a class="button inside dark">Button 2</a>
+                            <a class="button end dark" href="#">Button 3</a>
+                        </span>
+                        <span class="button-group disabled">
+                            <a class="button start dark" href="#">Button 1</a>
+                            <a class="button inside dark">Button 2</a>
+                            <a class="button end dark" href="#">Button 3</a>
+                        </span>                         
+                    </p>
+                    <p>
+                        <span class="button-group large">
+                            <a class="button start dark large" href="#">Button 1</a>
+                            <a class="button inside dark large">Button 2</a>
+                            <a class="button end dark large" href="#">Button 3</a>
+                        </span>
+                        <span class="button-group large disabled">
+                            <a class="button start dark large" href="#">Button 1</a>
+                            <a class="button inside dark large">Button 2</a>
+                            <a class="button end dark large" href="#">Button 3</a>
+                        </span>                         
+                    </p>
+                </td>
+            </tr>
+        </table>      
+        <ul>
+            <li>When a button is selected, others within the group are deselected</li>
+            <li>Should always accompanied by comprehensive and clearly distinct text</li>
+            <li>Best used when choices should be shown, involve more than one choice, or the options can not be described as opposite</li>
+            <li>Also used to change pages within group boxes and dialogs</li>
+        </ul>
+    
+    </section> <!-- end of #actions -->
+
+    <section id="toggles">
+        <h4 id="slide-switch"><span>Slide Switch</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <label class="slide-switch">
+                            <input type="checkbox" />
+                            <span class="wrapper">
+                                <span class="on">ON</span>
+                                <span class="switch"></span>
+                                <span class="off">OFF</span>
+                            </span>
+                        </label>                        
+                    </p>
+                    <p>
+                        <label class="slide-switch large">
+                            <input type="checkbox" />
+                            <span class="wrapper">
+                                <span class="on">ON</span>
+                                <span class="switch"></span>
+                                <span class="off">OFF</span>
+                            </span>
+                        </label>                        
+                    </p>                    
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <label class="slide-switch dark">
+                            <input type="checkbox" />
+                            <span class="wrapper">
+                                <span class="on">ON</span>
+                                <span class="switch"></span>
+                                <span class="off">OFF</span>
+                            </span>
+                        </label>
+                    </p>
+                    <p>
+                        <label class="slide-switch large dark">
+                            <input type="checkbox" />
+                            <span class="wrapper">
+                                <span class="on">ON</span>
+                                <span class="switch"></span>
+                                <span class="off">OFF</span>
+                            </span>
+                        </label>                        
+                    </p>                    
+                </td>
+            </tr>
+        </table> 
+        <p>Use this as the primary on/off or binary switch.</p>
+        <ul>
+            <li>Should be accompanied by positive and active text</li>
+            <li>Use to indicate binary choice, such as settings are either 'on' or 'off'</li>
+            <li>Do not allow binary buttons to become excessive. Any more than 6 might indicate that the design should use some other method.</li>
+        </ul>
+
+        <h4 id="toggle-buttons"><span>Toggle Buttons</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </tr>
+        </table>
+
+        <h4 id="tabs"><span>Tabs</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </tr>
+        </table>
+        <p>Tabs allow multiple documents or screens to be contained within an area and tabs are used to navigate between them.</p>
+
+        <h4 id="disclosure-toggle"><span>Disclosure Toggle</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </tr>
+        </table>
+        <p>Usability can be improved by only presenting the minimum data required to perform the task. We can hide additional data (advanced or extra features) by default and use the disclosure toggle to reveal them when they are needed.</p>
+
+        </section> <!-- end of #toggles -->
+        <section id="settings">
+            
+            <h4 id="text-field"><span>Text Field</span></h4>
+            <table class="preview">
+                <td class="bg-light">
+                    <p>
+                        <input class="text-field" type="text" name="text_field" placeholder="Text Field" />
+                        <input class="text-field" type="text" name="text_field" placeholder="Disabled State" disabled="disabled" /> 
+                        <input class="text-field error" type="text" name="text_field" placeholder="Error State" /> 
+                    </p>
+                    <p>
+                       <input class="text-field large" type="text" name="text_field" placeholder="Large Text Field" /> 
+                    </p>                   
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <input class="text-field dark" type="text" name="text_field" placeholder="Text Field" />
+                        <input class="text-field dark" type="text" name="text_field" placeholder="Disabled State" disabled="disabled" />
+                        <input class="text-field dark error" type="text" name="text_field" placeholder="Error State" />
+                    </p>                       
+                    <p>
+                        <input class="text-field dark large" type="text" name="text_field" placeholder="Large Text Field" />
+                    </p>                 
+                </td>
+            </table>
+            <p>A text field is used to input a variable or string.</p>
+
+            <h4 id="combo-box"><span>Combo Box</span></h4>
+            <table class="preview">
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </table>
+            <ul>
+                <li>Click arrow to reveal Menu or fly-out surface</li>
+                <li>Combo-boxes should be scrubbable (see Scrubby Slider)</li>
+            </ul>
+
+            <h4 id="select"><span>Select</span></h4>
+            <table class="preview">
+                <tr>
+                    <td class="bg-light">
+                        <p>
+                            <select class="button">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>
+                            <select class="button disabled">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>                        
+                        </p>
+                        <p>
+                            <select class="button large">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>
+                            <select class="button large disabled">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>                        
+                        </p>                    
+                    </td>
+                    <td class="bg-slategray">
+                        <p>
+                            <select class="button dark">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>
+                            <select class="button dark disabled">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>                        
+                        </p>
+                        <p>
+                            <select class="button large dark">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>
+                            <select class="button large dark disabled">
+                                <option>Select Item 1 </option>
+                                <option>Select Item 2</option>
+                                <option>Select Item 3</option>
+                            </select>                        
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <ul>
+                <li>This is generally used for settings or forms. The selected option is always shown as opposed to the drop-down component, because of this, it should be accompanied with labels.</li>
+                <li>Always opens up a Menu or list (never a fly-out surface)</li>
+                <li>The menu will always cover the Select</li>
+                <li>Clicking inside the menu will change the icon or text to reflect the current state</li>
+                <li>Clicking outside the menu with close the menu</li>
+            </ul> 
+
+            <h4 id="swatch"><span>Swatch</span></h4>
+            <table class="preview">
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </table>
+
+            <h4 id="checkbox"><span>Checkbox</span></h4>
+            <table class="preview">
+                <td class="bg-light">
+                    <input class="checkbox" type='checkbox' name='thing' value='valuable' id="light"/><label for="light">Checkbox</label>
+                </td>
+                <td class="bg-slategray">
+                    <input class="checkbox dark" type='checkbox' name='thing' value='valuable' id="dark"/><label for="dark">Checkbox</label>
+                </td>
+            </table>
+            <ul>
+            <li>Checkboxes should always accompanied by positive and active text</li>
+            <li>Checkboxes can be used in front of almost any other component. For example, you could enable or disable a drop-down, slider, etc. as well as be integrated into trees or menus.</li>
+            </ul>
+
+            <h4 id="radio-button"><span>Radio Button</span></h4>
+            <table class="preview">
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </table>
+            <ul>
+                <li>Radio buttons should always accompanied by comprehensive and clearly distinct text</li>
+                <li>Always used in groups- one must always be selected</li>
+                <li>When a button is selected, others within the group are deselected</li>
+            </ul>
+
+            <h4 id="approximate-slider"><span>Approximate Slider</span></h4>
+            <table class="preview">
+                <td class="bg-light">
+                    <p>
+                        <span class="inline-block">
+                            <input class="approx-slider" type="range" />
+                        </span>
+                    </p>                    
+                    <p>
+                        <span class="inline-block large">
+                            <input class="approx-slider large" type="range" />
+                        </span>
+                    </p>
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <span class="inline-block">
+                            <input class="approx-slider dark" type="range" />
+                        </span>
+                    </p>                    
+                    <p>
+                        <span class="inline-block large">
+                            <input class="approx-slider large dark" type="range" />
+                        </span>
+                    </p>
+                </td>
+            </table>
+            <p>Allows the user to roughly adjust values in a finite range.</p>
+
+        <h4 id="step-slider"><span>Step / Precision Slider</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </tr>
+        </table>
+
+        <h4 id="tags"><span>Tags</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </tr>
+        </table>
+        <p>Used to map content to multiple nonhierarchical categories.</p>
+
+        </section> <!-- end of #settings -->
+        <section id="indicators">
+
+        <h4 id="spinner"><span>Spinner</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p><div class="spinner small"> </div></p>
+                    <p><div class="spinner large"> </div></p>
+                </td>
+                <td class="bg-slategray">
+                    <p><div class="spinner small"> </div></p>
+                    <p><div class="spinner large"> </div></p>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li>Indicates indefinite progress</li>
+            <li>Don’t lock up the UI, let the users continue with their work when progress is being made if at all possible</li>
+            <li>Replace the button/component that triggered the action with a spinner so that the user can’t duplicate action</li>
+            <li>If process is initiated with a button, that button should be disabled while process is ongoing</li>
+        </ul>
+
+        <h4 id="indicator-bar"><span>Indicator Bar</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    Soon
+                </td>
+                <td class="bg-slategray">
+                    Soon
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="space"></div>
+        <div class="space"></div> 
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div> 
+        <div class="space"></div>    
+
+        </section><!-- end of #indicators -->
+
+  </div>
+</div> <!-- end of #container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="assets/js/jquery.viewport.js"></script>
+<script>
+
+    $('#main').scroll(function () {
+      var inview = '#' + $("#main h4:in-viewport:first").attr('id'),
+          $link = $('nav a').filter('[hash=' + inview + ']');
+
+      if ($link.length && !$link.is('.selected')) {
+        $('nav a').removeClass('selected');
+        $link.addClass('selected');
+      }
+    });
+
+</script>
+
+</body>
+</html>
