@@ -1,20 +1,18 @@
 <!doctype html>
 <html>
 <head>
-	<title>benchmark.js</title>
+	<title>Topcoat &middot; tests</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<style type="text/css">
-		tr td:first-child {
-			width:20px;
-		}
-	</style>
 </head>
 <body>
 	<div class="container">
 			<div class="hero-unit">
 				<h1>Which tests to run ?</h1>
 				<p>
-					select them and click run
+					Tests make dom insertions with <a href="benchmarkjs.com">benchmark.js</a>
+				</p>
+				<p>
+					See test <code>description</code> for more info; <code>output</code> will be ops/sec
 				</p>
 			</div>
 			<table class="table table-striped">
@@ -23,32 +21,57 @@
 						<th>
 							<i class="icon icon-ok"></i>
 						</th>
-						<th>test</th>
+						<th>description</th>
 						<th>output</th>
 					</tr>
 				</thead>
 				<tr>
 					<td><input type="checkbox" id="simple"></td>
-					<td><label for="simple">insert li elements</label></td>
+					<td><label for="simple">li elements</label></td>
 					<td class="output"></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" id="bootstrap"></td>
-					<td><label for="bootstrap">insert tr/td elements <span class="label label-info">with bootstrap</span></label></td>
+					<td><label for="bootstrap">tr/td elements <span class="label label-info">with bootstrap</span></label></td>
 					<td class="output"></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" id="rounded"></td>
-					<td><label for="rounded">insert li elements <span class="label label-info">rounded corners</span></label></td>
+					<td><label for="rounded">li elements <span class="label label-info">rounded corners</span></label></td>
 					<td class="output"></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" id="shadow"></td>
-					<td><label for="shadow">insert li elements <span class="label label-info">box-shadow</span></label></td>
+					<td><label for="shadow">li elements <span class="label label-info">box-shadow</span></label></td>
 					<td class="output"></td>
 				</tr>
+				<tr>
+					<td><input type="checkbox" id="foundation"></td>
+					<td><label for="shadow">panel elems <span class="label label-info">with foundation</span></label></td>
+					<td class="output"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan=2><input type="submit" id="run" value="Run!" class="btn btn-primary btn-large"></td>
+				</tr>
 			</table>
-			<input type="submit" id="run" value="Run!" class="btn btn-primary btn-large">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>
+							Page load time
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="loadtime/bootstrap.html">Bootstrap demo page</a></td>
+					</tr>
+					<tr>
+						<td><a href="loadtime/foundation.html">Foundation demo page</a></td>
+					</tr>
+				</tbody>
+			</table>
 	</div>
 
 

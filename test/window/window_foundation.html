@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Foundation</title>
+  <script>
+	window.startTime = window.performance.now ?
+				  (performance.now() + performance.timing.navigationStart) : 
+				  Date.now();
+  </script>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../foundation/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../foundation/stylesheets/app.css">
+
+  <script src="../foundation/javascripts/modernizr.foundation.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<div class="fixed">
+	<nav class="top-bar">
+	  <ul>
+		<!-- Title Area -->
+		<li class="name">
+		  <h1>
+			<a href="#">
+			  Top Bar Title
+			</a>
+		  </h1>
+		</li>
+		<li class="toggle-topbar"><a href="#"></a></li>
+	  </ul>
+
+	  <section>
+		<!-- Left Nav Section -->
+		<ul class="left">
+		  <li class="divider"></li>
+		  <li class="has-dropdown">
+			<a class="active" href="#">Item 1</a>
+			<ul class="dropdown">
+			  <li><label>Section Name</label></li>
+			  <li class="has-dropdown">
+				<a href="#" class="">Level 1, Has Dropdown</a>
+				<ul class="dropdown">
+				  <li><a href="#">Level 2</a></li>
+				  <li><a href="#">Level 2</a></li>
+				  <li class="has-dropdown"><a href="#">Level 2, Has Dropdown</a>
+					<ul class="dropdown">
+					  <li><label>Section</label></li>
+					  <li><a href="#">Level 3</a></li>
+					  <li><a href="#">Level 3</a></li>
+					  <li class="divider"></li>
+					  <li><a href="#">Level 3</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#">Level 2</a></li>
+				  <li><a href="#">Level 2</a></li>
+				</ul>
+			  </li>
+			  <li><a href="#">Level 1</a></li>
+			  <li><a href="#">Level 1</a></li>
+			  <li class="divider"></li>
+			  <li><label>Section Name</label></li>
+			  <li><a href="#">Level 1</a></li>
+			  <li><a href="#">Level 1</a></li>
+			  <li><a href="#">Level 1</a></li>
+			  <li class="divider"></li>
+			  <li><a href="#">See all &rarr;</a></li>
+			</ul>
+		  </li>
+		  <li class="divider hide-for-small"></li>
+		</ul>
+
+		<!-- Right Nav Section -->
+		<ul class="right">
+		  <li class="divider show-for-medium-and-up"></li>
+		  <li class="has-dropdown">
+			<a href="#">Item 2</a>
+			<ul class="dropdown">
+			  <li><label>Section Name</label></li>
+			  <li><a href="#" class="">Level 1</a></li>
+			  <li><a href="#">Dropdown Option</a></li>
+			  <li><a href="#">Dropdown Option</a></li>
+			  <li class="divider"></li>
+			  <li><label>Section Name</label></li>
+			  <li><a href="#">Dropdown Option</a></li>
+			  <li><a href="#">Dropdown Option</a></li>
+			  <li><a href="#">Dropdown Option</a></li>
+			  <li class="divider"></li>
+			  <li><a href="#">See all &rarr;</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  </section>
+	</nav>
+</div>
+
+<div class='twelve columns' id="output">
+</div>
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="../foundation/javascripts/jquery.js"></script>
+  <script src="../foundation/javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="../foundation/javascripts/app.js"></script>
+
+<script type="text/javascript" src="../js/benchmark.js"></script>
+<script type="text/javascript">
+
+	var ol = document.querySelector('#output');
+	var benchmark = new Benchmark.Suite('thinskin', {
+		onStart: function () {
+			if(self.opener !== null) {
+				self.opener.popup = self;
+			} else {
+				alert('This test should be runned from the index.html page')
+			}
+		}
+	});
+
+	benchmark.add('insert panels', function() {
+	  var div = document.createElement('div');
+	  var p = document.createElement('p');
+	  p.innerHTML = 'some info here';
+	  div.classList.add('panel');
+	  div.appendChild(p);
+	  ol.appendChild(div);
+	})
+	.on('cycle', function(event) {
+		if(self.opener) {
+			self.opener.appendOutput(String(event.target), '#foundation');
+			self.opener.suite.add(event.target);
+			self.opener.launchTest();
+		} else {
+			alert(String(event.target));
+		}
+	});
+
+	benchmark.run({'async':true});
+
+</script>
+</body>
+</html>

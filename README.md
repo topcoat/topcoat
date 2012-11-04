@@ -36,7 +36,8 @@ There is also support for Component:
     component install adobe/topcoat
 
 ### Running the tests
-More info coming soon!
+
+To run the tests `clone` the repo, `cd` into the test folder and start a localserver there. Navigate to the specific address and you'll be able to run the tests. 
 
 ### Building the src
 
