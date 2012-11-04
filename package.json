@@ -1,0 +1,25 @@
+{
+  "name": "topcoat",
+  "version": "0.1.0",
+  "description": "An experimental CSS library.",
+  "main": "topcoat.js",
+  "dependencies": {
+    "grunt-contrib-less": "~0.3.2",
+    "grunt-contrib-mincss": "~0.3.2",
+    "grunt-contrib-copy": "~0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/topcoat.git"
+  },
+  "keywords": [
+    "CSS",
+    "library"
+  ],
+  "author": "Adobe Systems",
+  "license": "Apache2"
+}
