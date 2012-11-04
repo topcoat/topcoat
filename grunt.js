@@ -1,10 +1,10 @@
 /*global module:false*/
 
-var component = {
-    name: 'topcoat',
-    version: '0.1.0',
-    main: []
-}
+var component = { name: 'topcoat',version: '0.1.0', main: []}
+,   fs        = require('fs')
+,   path      = require('path')
+,   base      = path.join(__dirname, 'release')
+
 
 module.exports = function(grunt) {
     
@@ -25,8 +25,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'release/font/': 'src/font/**',
-                    'release/img/': 'src/img/**',
-                    'release/doc/': 'doc/**'
+                    'release/img/': 'src/img/**'
                 }
             }
         },
@@ -40,10 +39,6 @@ module.exports = function(grunt) {
     })
   
     grunt.registerTask('manifest', 'Generates component.json file.', function() {
-        var fs = require('fs')
-        ,   path = require('path')
-        ,   base = path.join(__dirname, 'release')
-
         fs.readdirSync(base).forEach(function(dir){
             if (dir != 'doc') {
                 var srcDir = path.join(base, dir)
