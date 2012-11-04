@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         fs.readdirSync(base).forEach(function(dir){
             var srcDir = path.join(base, dir)
             fs.readdirSync(srcDir).forEach(function(srcFile) {
-                var srcFilePath = path.join(dir, srcFile)
+                var srcFilePath = path.join('release', dir, srcFile)
                 // I do not understand why Bower requires a manifest if it relies on git solely. But whatever.
                 bower.main.push(srcFilePath)
                 // now adding fonts and images for Component
