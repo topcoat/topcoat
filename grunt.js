@@ -1,52 +1,60 @@
 /*global module:false*/
+
+var component = {
+    name: 'topcoat',
+    version: '0.1.0',
+    main: []
+}
+
 module.exports = function(grunt) {
-  grunt.initConfig({
-
-    pkg: '<json:package.json>',
-
-    meta: {
-      banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-        ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
-    },
-
-    less: {
-        css: {
-            src: ['src/less/topcoat.less'],
-            dest: 'release/<%= pkg.version %>/css/topcoat.css',
-        }
-    },
     
-    copy: {
-        dist: {
-            files: {
-                'release/<%= pkg.version %>/font/': 'src/font/**',
-                'release/<%= pkg.version %>/img/': 'src/img/**'
+    grunt.loadNpmTasks('grunt-contrib-less')
+    grunt.loadNpmTasks('grunt-contrib-mincss')
+    grunt.loadNpmTasks('grunt-contrib-copy')
+    
+    grunt.initConfig({
+
+        less: {
+            css: {
+                src: ['src/less/topcoat.less'],
+                dest: 'release/css/topcoat.css',
+            }
+        },
+        
+        copy: {
+            dist: {
+                files: {
+                    'release/font/': 'src/font/**',
+                    'release/img/': 'src/img/**',
+                    'release/doc/': 'doc/**'
+                }
+            }
+        },
+
+        mincss: {
+            css: {
+                src: 'release/css/topcoat.css',
+                dest: 'release/css/topcoat-min.css'
             }
         }
-    },
+    })
+  
+    grunt.registerTask('manifest', 'Generates component.json file.', function() {
+        var fs = require('fs')
+        ,   path = require('path')
+        ,   base = path.join(__dirname, 'release')
 
-   /*
-    concat: {
-        css: {
-            src: [SRC_CSS + 'libs/*.css',
-            SRC_CSS + 'app/*.css'],
-            dest: BUILD_CSS + 'css/all.css'
-        }
-    },
-    cssmin: {
-        css: {
-            src: '',
-            dest: BUILD_CSS + 'css/all-min.css'
-        }
-    }
-   */
-  });
+        fs.readdirSync(base).forEach(function(dir){
+            if (dir != 'doc') {
+                var srcDir = path.join(base, dir)
+                fs.readdirSync(srcDir).forEach(function(srcFile) {
+                    component.main.push(path.join(dir, srcFile))
+                }) 
+            } 
+        })
+        fs.writeFileSync(path.join(__dirname,'component.json'), JSON.stringify(component), 'utf8')
+    })
 
-  grunt.loadNpmTasks('grunt-contrib-less')
-  grunt.loadNpmTasks('grunt-contrib-mincss')
-  grunt.loadNpmTasks('grunt-contrib-copy')
-  grunt.registerTask('default', 'less copy')
+    // fin    
+    grunt.registerTask('default', 'less copy mincss manifest')
 }
