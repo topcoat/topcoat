@@ -37,7 +37,8 @@ module.exports = function(grunt) {
             }
         }
     })
-  
+    
+    /* the manifest for component.json is used by Bower */  
     grunt.registerTask('manifest', 'Generates component.json file.', function() {
         fs.readdirSync(base).forEach(function(dir){
             if (dir != 'doc') {
