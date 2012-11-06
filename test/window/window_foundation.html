@@ -125,6 +125,8 @@
   <script src="../foundation/javascripts/app.js"></script>
 
 <script type="text/javascript" src="../js/benchmark.js"></script>
+<script type="text/javascript" src="../js/BrowserDetect.js"></script>
+
 <script type="text/javascript">
 
 	var ol = document.querySelector('#output');
@@ -138,7 +140,7 @@
 		}
 	});
 
-	benchmark.add('insert panels', function() {
+	benchmark.add('insert panels (with foundation)', function() {
 	  var div = document.createElement('div');
 	  var p = document.createElement('p');
 	  p.innerHTML = 'some info here';
@@ -147,6 +149,7 @@
 	  ol.appendChild(div);
 	})
 	.on('cycle', function(event) {
+		sendBenchmark(String(event.target));
 		if(self.opener) {
 			self.opener.appendOutput(String(event.target), '#foundation');
 			self.opener.suite.add(event.target);
@@ -157,6 +160,25 @@
 	});
 
 	benchmark.run({'async':true});
+
+	function sendBenchmark(benchtest) {
+    
+    var formData = new FormData();
+    formData.append('benchmark_result', benchtest);
+    formData.append('os', BrowserDetect.OS);
+    formData.append('version', BrowserDetect.version);
+    formData.append('browser', BrowserDetect.browser);
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://topcoat.jit.su/benchmark', true);
+        xhr.responseType = 'text';
+        xhr.onload = function(e) {
+            if (this.status == 200) {
+                console.log(this.response);
+            }
+        };
+        xhr.send(formData);
+    }
 
 </script>
 </body>

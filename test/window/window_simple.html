@@ -43,12 +43,10 @@
 <ol></ol>
 
 <script type="text/javascript" src="../js/benchmark.js"></script>
+<script type="text/javascript" src="../js/BrowserDetect.js"></script>
+
 <script type="text/javascript">
 
-	var TARGET_WINDOW_WIDTH = 800;
-	var TARGET_WINDOW_HEIGHT = 600;
-	
-	var output = document.querySelector('#header');
 	var ol = document.querySelector('ol');
 	var benchmark = new Benchmark.Suite('thinskin', {
         onStart: function () {
@@ -60,12 +58,13 @@
         }
 	});
 
-	benchmark.add('insert li', function() {
+	benchmark.add('insert li simple', function() {
 	  var li = document.createElement('li');
 	  li.innerHTML = 'some info here';
 	  ol.appendChild(li);
 	})
 	.on('cycle', function(event) {
+        sendBenchmark(String(event.target));
         if(self.opener) {
             self.opener.appendOutput(String(event.target), '#simple');
             self.opener.suite.add(event.target);
@@ -76,6 +75,25 @@
     });
 
 	benchmark.run({'async':true});
+
+    function sendBenchmark(benchtest) {
+    
+    var formData = new FormData();
+    formData.append('benchmark_result', benchtest);
+    formData.append('os', BrowserDetect.OS);
+    formData.append('version', BrowserDetect.version);
+    formData.append('browser', BrowserDetect.browser);
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://topcoat.jit.su/benchmark', true);
+        xhr.responseType = 'text';
+        xhr.onload = function(e) {
+            if (this.status == 200) {
+                console.log(this.response);
+            }
+        };
+        xhr.send(formData);
+    }
 
 </script>
 </body>
