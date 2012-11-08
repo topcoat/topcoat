@@ -43,17 +43,22 @@
 <ol></ol>
 
 <script type="text/javascript" src="../js/benchmark.js"></script>
-<script type="text/javascript" src="../js/BrowserDetect.js"></script>
+<script type="text/javascript" src="../js/ua-parser.js"></script>
+<script type="text/javascript" src="../js/send-benchmark.js"></script>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
 
 <script type="text/javascript">
 
+    var parser = new UAParser();
+    var ua = parser.getResult(); // object containing device/os/browser info
 	var ol = document.querySelector('ol');
+
+    var submitResults = (self.opener) ? self.opener.submitResults : confirm("Do you want to submit the results ?");
+
 	var benchmark = new Benchmark.Suite('thinskin', {
         onStart: function () {
             if(self.opener) {
                 self.opener.popup = self;
-            } else {
-                alert('This test should be runned from the index.html page')
             }
         }
 	});
@@ -64,7 +69,8 @@
 	  ol.appendChild(li);
 	})
 	.on('cycle', function(event) {
-        sendBenchmark(String(event.target));
+        if(submitResults)
+            sendBenchmark(String(event.target), 'border-radius');
         if(self.opener) {
             self.opener.appendOutput(String(event.target), '#rounded');
             self.opener.suite.add(event.target);
@@ -75,25 +81,6 @@
     });
 
 	benchmark.run({'async':true});
-
-    function sendBenchmark(benchtest) {
-    
-    var formData = new FormData();
-    formData.append('benchmark_result', benchtest);
-    formData.append('os', BrowserDetect.OS);
-    formData.append('version', BrowserDetect.version);
-    formData.append('browser', BrowserDetect.browser);
-    
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://topcoat.jit.su/benchmark', true);
-        xhr.responseType = 'text';
-        xhr.onload = function(e) {
-            if (this.status == 200) {
-                console.log(this.response);
-            }
-        };
-        xhr.send(formData);
-    }
 
 </script>
 </body>

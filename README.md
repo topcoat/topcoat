@@ -37,7 +37,7 @@ There is also support for Component:
 
 ### Running the tests
 
-To run the tests `clone` the repo, `cd` into the test folder and start a localserver there. Navigate to the specific address and you'll be able to run the tests. 
+To run the tests `clone` the repo, `cd` into the test folder and start a localserver (suggestion `python -m SimpleHTTPServer` on osx/linux will start an http server on port 8000) there. Navigate to the specific address and you'll be able to run the tests. 
 
 ### Building the src
 

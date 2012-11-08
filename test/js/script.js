@@ -1,15 +1,15 @@
-var TARGET_WINDOW_WIDTH = 800;
-var TARGET_WINDOW_HEIGHT = 600;
 var popup = null;
 var tests = [];
-
 var suite = new Benchmark.Suite();
+var submitResults = false;
 
 document.querySelector('#run').addEventListener('click', function(){
-	var inputs = document.querySelectorAll('input[type=checkbox]:checked');
+
+	submitResults = document.querySelector('#submit-results').checked;
+	var inputs = document.querySelectorAll('.test-window');
 	
-	tests = [].map.call(inputs, function(test){
-		return 'window/window_' + test.id + '.html';
+	tests = [].map.call(inputs, function(test) {
+		if(test.checked) return 'window/window_' + test.id + '.html';
 	});
 
 	launchTest();
@@ -28,7 +28,7 @@ function launchTest(test) {
 		window.setTimeout(bind(function() {
 			this.benchmarkWindow_ = window.open(test + '?'+ Math.random(), 'thinskin',
 			'left=' + 400 + ',top=' + 200 +
-			',width='+ TARGET_WINDOW_WIDTH + ',height=' + TARGET_WINDOW_HEIGHT);
+			',width='+ 800 + ',height=' + 600);
 		}, this), 1000);
 	else {
 		popup.close();
