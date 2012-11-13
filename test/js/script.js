@@ -6,12 +6,12 @@ var submitResults = false;
 document.querySelector('#run').addEventListener('click', function(){
 
 	submitResults = document.querySelector('#submit-results').checked;
-	var inputs = document.querySelectorAll('.test-window');
+	var inputs = document.querySelectorAll('.test-window:checked');
 	
 	tests = [].map.call(inputs, function(test) {
-		if(test.checked) return 'window/window_' + test.id + '.html';
+		return 'window/window_' + test.id + '.html';
 	});
-
+	
 	launchTest();
 
 }, false);
