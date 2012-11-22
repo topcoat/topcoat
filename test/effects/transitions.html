@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>css animations and transitions</title>
+	<style type="text/css">
+
+		.move-around {
+			width:200px;
+			height:200px;
+			background:green;
+			-moz-animation-duration: 1s;
+			-webkit-animation-duration: 1s;
+			-moz-animation-name: slidein;
+			-webkit-animation-name: slidein;
+			-webkit-animation-direction:alternate;
+			-webkit-animation-iteration-count: infinite; 
+		}
+
+		@-webkit-keyframes slidein {
+			from {
+				margin-left:0%;
+		}
+
+		to {
+				margin-left:20%;
+				margin-top:20%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="move-around"></div>
+
+</body>
+</html>
