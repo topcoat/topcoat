@@ -2,6 +2,7 @@
     "name": "topcoat",
     "version": "0.1.0",
     "main": [
+        "release/css/.DS_Store",
         "release/css/topcoat-min.css",
         "release/css/topcoat.css",
         "release/font/SourceCodePro-Black.otf",
