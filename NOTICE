@@ -4,6 +4,18 @@ Topcoat uses the following third party libraries that may have licenses
 differing from that of Brackets itself. You can find the libraries and their
 respective licenses below.
 
+ - Source Code Pro ./src/font/SourceCodePro
+ 	Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+	This Font Software is licensed under the SIL Open Font License, Version 1.1.
+	This license is available with a FAQ at: http://scripts.sil.org/OFL
+ 	https://github.com/adobe/source-code-pro
+
+- Source Code Sans ./src/font/SourceSans
+ 	Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+	This Font Software is licensed under the SIL Open Font License, Version 1.1.
+	This license is available with a FAQ at: http://scripts.sil.org/OFL
+ 	https://github.com/adobe/source-sans-pro
+
  - Bootstrap - ./test/third_party/bootstrap 
 	Copyright 2012 Twitter, Inc
 	Licensed under the Apache License v2.0
