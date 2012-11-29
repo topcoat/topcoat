@@ -3,14 +3,18 @@ window.addEventListener('load', function() {
 }, false);
 
 var toggle = document.querySelector('#show');
-var menu = document.querySelector('.menucontent');
+var menu = document.querySelector('.sidemenu');
 var container = document.querySelector('.container');
 var body = document.querySelector('body');
+
+if(!Modernizr.csstransforms3d) {
+	container.style.position = 'absolute';
+}
 
 toggle.addEventListener('click', function(e){
 	
 	body.classList.toggle('freeze');
-
+	menu.style.zIndex = 0;
 	if(Modernizr.csstransforms3d) {
 		if(container.classList.contains('translateright')) {
 			container.classList.add('restore');
