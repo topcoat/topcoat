@@ -53,17 +53,18 @@ var showLeft = function () {
 var _startX, _diff;
 
 var touchStart = function (e) {
-	console.log('touchstart', e.pageX);
 	_startX = e.pageX || e.touches[0].pageX;
 };
 
 var touchMove = function (e) {
 	
 	_diff = _startX - (e.pageX || e.touches[0].pageX);
+	if(Math.abs(_diff) > 0 && Math.abs(_diff) < 50)
+		_diff = 1;
 };
 
 var touchEnd = function (e) {
-	console.log('touchend', _diff);
+	if(_diff === 1) return;
 	if(_diff > 0)
 		showRight();
 	else
