@@ -22,23 +22,23 @@
  */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url('../font/SourceSans/SourceSansPro-Regular.otf');
+  src: url('../font/SourceSansPro/SourceSansPro-Regular.otf');
 }
 @font-face {
   font-family: "source";
-  src: url('../font/SourceSans/SourceSansPro-Regular.otf');
+  src: url('../font/SourceSansPro/SourceSansPro-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source-l";
-  src: url('../font/SourceSans/SourceSansPro-Light.otf');
+  src: url('../font/SourceSansPro/SourceSansPro-Light.otf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source-sb";
-  src: url('../font/SourceSans/SourceSansPro-Semibold.otf');
+  src: url('../font/SourceSansPro/SourceSansPro-Semibold.otf');
   font-weight: normal;
   font-style: normal;
 }
