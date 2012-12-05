@@ -1,22 +1,19 @@
 (function () {
 // quick example to see if swipe can be done natively
-var mainContainer = document.querySelector('.main-container');
-var slideContainer = document.querySelector('.slide-container');
-var slides = mainContainer.querySelectorAll('.slide');
+var mainContainer = document.querySelector('.main-container')
+	, slideContainer = document.querySelector('.slide-container')
+	, slides = mainContainer.querySelectorAll('.slide');
 
-var totalWidth = 0;
-
-var marginDiff = mainContainer.offsetWidth - mainContainer.clientWidth;
-
-var _slWidth = 0;
-
-var idx = 0;
+var totalWidth = 0
+	, marginDiff = mainContainer.offsetWidth - mainContainer.clientWidth
+	, _slWidth = 0
+	, idx = 0
+	, _startX
+	, _diff;
 
 [].forEach.call(slides, function(s){
-
 	_slWidth = s.offsetWidth;
 	totalWidth += s.offsetWidth;
-
 });
 
 slideContainer.style.width = (totalWidth + marginDiff) + 'px';
@@ -49,8 +46,6 @@ var showLeft = function () {
 		}, 50);
 	}
 };
-
-var _startX, _diff;
 
 var touchStart = function (e) {
 	_startX = e.pageX || e.touches[0].pageX;

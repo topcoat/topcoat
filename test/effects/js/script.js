@@ -13,21 +13,10 @@ if(!Modernizr.csstransforms3d) {
 
 toggle.addEventListener('click', function(e){
 	
-	body.classList.toggle('freeze');
+	//body.classList.toggle('freeze');
 	menu.style.zIndex = 0;
 	if(Modernizr.csstransforms3d) {
-		if(container.classList.contains('translateright')) {
-			container.classList.add('restore');
-			container.classList.remove('translateright');
-			setTimeout(function(){
-				var sillyLittleFix = body.offsetWidth;
-				body.offsetWidth = sillyLittleFix;
-			}, 0);
-		}
-		else {
-			container.classList.add('translateright');
-			container.classList.remove('restore');
-		}
+		container.classList.toggle('translateright');
 	} else {
 		if(container.classList.contains('stayright')) {
 			container.classList.remove('stayright');
