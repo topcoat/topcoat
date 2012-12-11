@@ -593,7 +593,7 @@ a:active {
 .button.inside.dark {
   border-left: 1px solid rgba(0, 0, 0, 0);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px 0 0 3px !important;
+  border-radius: 0;
   margin: 0;
 }
 .button.start.dark {
