@@ -7,24 +7,21 @@
 		.move-around {
 			width:200px;
 			height:200px;
-			background:green;
-			-moz-animation-duration: 1s;
-			-webkit-animation-duration: 1s;
-			-moz-animation-name: slidein;
-			-webkit-animation-name: slidein;
-			-webkit-animation-direction:alternate;
-			-webkit-animation-iteration-count: infinite; 
+			background:blue;
+			-webkit-transition: all 1s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-o-transition: all 1s ease-in-out;
+			-ms-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out;
 		}
 
-		@-webkit-keyframes slidein {
-			from {
-				margin-left:0%;
-		}
-
-		to {
-				margin-left:20%;
-				margin-top:20%;
-			}
+		.active {
+			background-color: #fc3;
+			-webkit-transform: rotate(360deg) scale(2);
+			-moz-transform: rotate(360deg) scale(2);
+			-o-transform: rotate(360deg) scale(2);
+			-ms-transform: rotate(360deg) scale(2);
+			transform: rotate(360deg) scale(2);
 		}
 
 	</style>
@@ -32,6 +29,20 @@
 <body>
 
 	<div class="move-around"></div>
+	<p></p>
 
+	<script type="text/javascript">
+
+		var div = document.querySelector('.move-around');
+
+		setTimeout(function(){
+			
+			var cls = div.getAttribute('class');
+			alert(cls);
+
+		}, 2000);
+		
+
+	</script>
 </body>
 </html>

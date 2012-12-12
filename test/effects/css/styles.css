@@ -1,5 +1,5 @@
 html, body {
-	background:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/gray_jean.png);
+	background:#eee;
 }
 
 .main-container {
@@ -32,8 +32,9 @@ html, body {
 	}
 
 .slide-container {
-	-webkit-transition-duration:.4s;
+	-webkit-transition-duration:.1s;
 	-webkit-backface-visibility: hidden;
+	-webkit-user-select:none;
 	-webkit-transform:translateZ(0);
 }
 
@@ -48,5 +49,4 @@ html, body {
 		margin:0;
 		width:300px;
 		height:320px;
-		-webkit-transform:translateZ(0);
 	}

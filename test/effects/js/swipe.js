@@ -1,4 +1,3 @@
-(function () {
 // quick example to see if swipe can be done natively
 var mainContainer = document.querySelector('.main-container')
 	, slideContainer = document.querySelector('.slide-container')
@@ -18,55 +17,53 @@ var totalWidth = 0
 
 slideContainer.style.width = (totalWidth + marginDiff) + 'px';
 
-var showRight = function () {
+var showPanel = function (id) {
 	var amount;
-	if(Math.abs(idx) < slides.length-1) {
-		idx--;
-		amount = _slWidth * idx;
-		slideContainer.style.webkitTransform = 'translateX('+amount+'px)';
-	} else {
-		amount = _slWidth * (idx-1) + _slWidth*0.75;
-		slideContainer.style.webkitTransform = 'translateX('+amount+'px)';
-		setTimeout(function(){
-			slideContainer.style.webkitTransform = 'translateX('+(_slWidth * idx)+'px)';
-		}, 50);
+	if(id > 0) {
+		return;
 	}
-};
-
-var showLeft = function () {
-	if(idx < 0) {
-		idx++;
-		var amount = _slWidth * idx;
+	if(Math.abs(id) > slides.length-1) {
+		return;
+	}
+	if(id < slides.length-1 || id > 0) {
+		amount = _slWidth * id;
 		slideContainer.style.webkitTransform = 'translateX('+amount+'px)';
-	} else {
-		amount = _slWidth * (idx+1) - _slWidth*0.75;
-		slideContainer.style.webkitTransform = 'translateX('+amount+'px)';
-		setTimeout(function(){
-			slideContainer.style.webkitTransform = 'translateX('+(_slWidth * idx)+'px)';
-		}, 50);
 	}
 };
 
 var touchStart = function (e) {
 	_startX = e.pageX || e.touches[0].pageX;
+	_diff = 1;
 };
 
 var touchMove = function (e) {
-	
+
 	_diff = _startX - (e.pageX || e.touches[0].pageX);
-	if(Math.abs(_diff) > 0 && Math.abs(_diff) < 50)
-		_diff = 1;
+	_diff /= 4;
+	var pos = slideContainer.style.webkitTransform || 0;
+	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
+
+	if(_diff > 0) {
+		pos -= _diff;
+		slideContainer.style.webkitTransform = 'translateX('+pos+'px)';
+	} else {
+		pos	-= _diff;
+		slideContainer.style.webkitTransform = 'translateX('+pos+'px)';
+	}
 };
 
 var touchEnd = function (e) {
-	if(_diff === 1) return;
+	if(_diff == 1) return;
+	if(Math.abs(_diff) > 0 && Math.abs(_diff) < 20) {
+		showPanel(idx);
+		return;
+	}
 	if(_diff > 0)
-		showRight();
+		showPanel(--idx);
 	else
-		showLeft();
+		showPanel(++idx);
 };
 
 mainContainer.addEventListener('touchstart', touchStart, false);
 mainContainer.addEventListener('touchmove', touchMove, false);
 mainContainer.addEventListener('touchend', touchEnd, false);
-})();

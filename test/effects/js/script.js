@@ -7,17 +7,13 @@ var menu = document.querySelector('.sidemenu');
 var container = document.querySelector('.container');
 var body = document.querySelector('body');
 
-if(!Modernizr.csstransforms3d) {
-	container.style.position = 'absolute';
-}
+menu.style.zIndex = -100;
 
 toggle.addEventListener('click', function(e){
-	
-	//body.classList.toggle('freeze');
-	menu.style.zIndex = 0;
 	if(Modernizr.csstransforms3d) {
 		container.classList.toggle('translateright');
 	} else {
+		container.setAttribute('class', 'translateright');
 		if(container.classList.contains('stayright')) {
 			container.classList.remove('stayright');
 			container.classList.remove('translateright');
@@ -32,5 +28,11 @@ toggle.addEventListener('click', function(e){
 			}, 250);
 		}
 	}
-
+	if(!container.classList.contains('translateright')) {
+		setTimeout(function(){
+			menu.style.zIndex = -10;
+		}, 250);
+	} else {
+		menu.style.zIndex = 0;
+	}
 });
