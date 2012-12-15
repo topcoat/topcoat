@@ -1,0 +1,254 @@
+html, body {
+	height: 100%;
+	width:100%;
+	background:#eee;
+	overflow-x:hidden;
+}
+
+.main-container {
+	width:300px;
+	height:300px;
+	overflow:hidden;
+	background:black;
+	-webkit-transform:translateZ(0);
+	margin:10px auto;
+}
+
+
+.slide-container {
+	-webkit-transition-duration:.15s;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:translateZ(0);
+}
+
+.slide {
+	width:300px;
+	height:100%;
+	-webkit-transform:translateZ(0);
+	-webkit-backface-visibility: hidden;
+	background:#ddd;
+	float:left;
+}
+
+	.slide img {
+		margin:0;
+		width:300px;
+		height:300px;
+	}
+
+.sidemenu {
+	width:260px;
+	top:0;
+	left:0;
+	position: absolute;
+	background:#aaa;
+	height: auto;
+	z-index:-1;
+}
+
+	.ie .sidemenu {
+		z-index:1; 
+	}
+
+	.csstransforms3d .sidemenu {
+		position: fixed;
+		height: 100%;
+		overflow: scroll;
+	}
+
+	.sidemenu ul {
+		height: auto;
+		padding:0;
+		margin:0;
+		/*-webkit-overflow-scrolling: touch;*/
+	}
+
+	.csstransforms3d .sidemenu ul {
+		height:100%;
+		overflow-x: hidden;
+		overflow-y:scroll;
+	}
+
+	.sidemenu ul li {
+		display:block;
+	}
+
+	.sidemenu li a {
+		margin:2;
+		display:inline-block;
+		list-style:none;
+		background:#888;
+		border-top:1px solid #666;
+		padding:.7em;
+		color:#f8f8f8;
+	}
+
+		ul li a:focus {
+			background:#f05;
+		}
+
+		li.heading {
+			background:-webkit-linear-gradient(#888,#666);
+            padding:.7em;
+            text-shadow:0 -1px 0 #222;
+            color:#fff;
+            border-top:1px solid #777;
+            margin-top:1px;
+			width: 100%;
+		}
+
+		.sidemenu ul li a {
+			width:100%;
+			min-width: 85%;
+		}
+
+		.sidemenu li img {
+			width:16px;
+			margin:0 5px -2px 0;
+			opacity:.6;
+		}
+
+header {
+	background: #f8f8f8;
+	padding: 10px 0 ;
+}
+
+ul.button-group {
+	margin:0;
+}
+
+ul.button-group li {
+	list-style:none;
+	float:left;
+}
+
+	.button-group li {
+		margin:0;
+	}
+
+	.button-group .button {
+		border-radius:0;
+	}
+
+	.button-group .button.large {
+		margin:0 !important;
+	}
+
+		.button-group li:first-child a.button {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		.button-group li:last-child a.button {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+article {
+	width:95%;
+	margin: 0 auto;
+	padding-bottom:10px;
+	border-bottom: 1px solid #ccc;
+	padding:0 5%;
+}
+
+.container {
+	background:#eee;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:.25s;
+	transition-duration:.25s;
+	-webkit-transform:translateZ(0);
+	-webkit-backface-visibility: hidden;
+}
+
+	.no-csstransforms3d .container {
+		position:absolute;
+		z-index: 2;
+	}
+
+	.csstransforms3d .container {
+		position: relative;
+		z-index: 2;
+/*		height: 100%;
+		overflow-y: scroll;
+		overflow-x:hidden;
+		-webkit-overflow-scrolling: touch;*/
+	}
+
+	.container.stayright, .container.translateright {
+		overflow: hidden;
+		height:100%;
+	}
+
+.csstransforms3d .translateright {
+	-webkit-transform:translateX(260px);
+	transform:translateX(260px);
+}
+
+	.no-csstransforms3d .translateright {
+		-webkit-animation:.25s translateright;
+		-webkit-animation-fill-mode:forwards;
+		-moz-animation:.25s translateright;
+		-moz-animation-fill-mode:forwards;
+	}
+
+	.stayright {
+		left:240px;
+	}
+
+.goright {
+	left:260px;
+	-webkit-animation-duration: .25s;
+	-moz-animation-duration: .25s;
+}
+
+.restore {
+	-webkit-animation:.25s restore;
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation:.25s restore;
+	-moz-animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes restore {
+	from {
+		-webkit-transform:translateX(240px);	
+	}
+	to {
+		-webkit-transform:translateX(0);
+	}
+}
+
+@-webkit-keyframes translateright {
+	from {
+		-webkit-transform:translateX(0);	
+	}
+	to {
+		-webkit-transform:translateX(240px);
+	}
+}
+
+@media only screen and (max-width : 320px) {
+
+	.button-group li {
+		display:block;
+	}
+
+	.button-group .button.large {
+		margin: 5px !important;
+		width:100%;
+		border-radius:5px;
+		max-width:100%;
+	}
+
+	ul.button-group li {
+		width:100%;
+		display:block;
+	}
+
+	ul.button-group {
+		width:85%;
+		padding:0;
+	}
+
+}
+
