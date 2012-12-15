@@ -1,0 +1,48 @@
+// Approximate Slider
+
+.approx-slider {
+    background: @light-track-background;
+    border: @light-track-border;
+    border-radius: @component-radius;
+    display: inline-block;
+    height: @standard-track-height;
+    outline: none;
+    width: @standard-track-width;
+    -webkit-appearance: none !important;
+}
+
+    .approx-slider::-webkit-slider-thumb{
+        .light-style;
+        border-radius: @component-radius;
+        cursor: pointer;
+        height: @standard-slider-thumb-height;
+        width: @standard-slider-thumb-width;
+        -webkit-appearance: none !important;
+    }
+
+    .approx-slider:focus::-webkit-slider-thumb {
+        .light-focus-style;
+    }
+
+.approx-slider.large {
+    height: @standard-track-height + 2;
+    width: @standard-track-width + 40 !important;
+}
+
+    .approx-slider.large::-webkit-slider-thumb{
+        height: @standard-slider-thumb-height + 4;
+        width: @standard-slider-thumb-width + 4;
+    }
+
+.approx-slider.dark {
+    background: @dark-track-background;
+    border: @dark-track-border;
+}
+
+    .approx-slider.dark::-webkit-slider-thumb{
+        .dark-style;
+    }
+
+    .approx-slider.dark:focus::-webkit-slider-thumb {
+        .dark-focus-style;
+    }
