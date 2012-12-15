@@ -1,0 +1,144 @@
+// Slide Switch
+
+.slide-switch {
+    .standard-structure;
+    background-color: #ccc; // using background instead background-color will override background clip
+    border: @light-border;
+    font-family: source-sb;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    width: 54px;
+}
+
+    .slide-switch input {
+        display: none;
+    }
+
+    .slide-switch input:checked + .wrapper {
+        left: -38px;
+    }
+
+    .slide-switch::focus {
+        .light-focus-style;
+    }
+
+    .wrapper {
+        display: block;
+        height: @standard-height;
+        position: relative;
+        top: 0px;
+        -moz-transition: left .2s ease-out;
+        -webkit-transition: left .2s ease-out;
+        transition: left .2s ease-out;
+        width: 90px;
+        z-index: 1;
+    }
+
+    .switch,
+    .on,
+    .off {
+        display: block;
+        height: @standard-height;
+        font-size: @standard-font-size;
+        line-height: @standard-height;
+        position: absolute;
+        text-align: center;
+        text-shadow: @light-text-shadow;
+        top: 0;
+     }
+
+    .switch {
+        background-image: linear-gradient(top, @light-gradient-start, @light-gradient-end);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(@light-gradient-start), to(@light-gradient-end));
+        border-left: @light-border;
+        border-right: @light-border;
+        border-radius: @component-radius;
+        box-shadow: @light-gradient-highlight;
+        left: 37px;
+        width: 16px;
+    }
+
+    .on {
+        background: @light-blue;
+        border-top-left-radius: @component-radius;
+        border-bottom-left-radius: @component-radius;
+        box-shadow: @light-down-shadow;
+        color: @light-blue-text;
+        width: 37px;
+     }
+
+    .off {
+        background: @light-down;
+        border-top-right-radius: @component-radius;
+        border-bottom-right-radius: @component-radius;
+        box-shadow: @light-down-shadow;
+        left: 55px;
+        width: 37px;
+    }
+
+.slide-switch.dark {
+    background-color: @dark-down; // using background instead background-color will override background clip
+    border: @dark-border;
+}
+    .dark .switch,
+    .dark .on,
+    .dark .off {
+        text-shadow: @dark-text-shadow;
+     }
+
+    .dark .switch {
+        background-image: linear-gradient(top, @dark-gradient-start, @dark-gradient-end);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(@dark-gradient-start), to(@dark-gradient-end));
+        border-left: @dark-border;
+        border-right: @dark-border;
+        box-shadow: @dark-gradient-highlight;
+    }
+
+    .dark .on {
+        background: @dark-down;
+        box-shadow: @dark-down-shadow;
+        color: @dark-blue-text;
+     }
+
+    .dark .off {
+        background: @dark-down;
+        box-shadow: @dark-down-shadow;
+        color: #999;
+    }
+
+.slide-switch.large {
+    height: 27px;
+    width: 69px;
+    .wrapper {
+        display: block;
+        height: 27px;
+        position: relative;
+        top: 0px;
+        -moz-transition: left .2s ease-out;
+        -webkit-transition: left .2s ease-out;
+        transition: left .2s ease-out;
+        z-index: 1;
+    }
+    .switch,
+    .on,
+    .off {
+        height: 27px;
+        font-size: 14px;
+        line-height: 28px;
+     }
+    .switch {
+        left: 47px;
+        width: 21px;
+    }
+    .on {
+        width: 48px;
+     }
+    .off {
+        left: 70px;
+        width: 48px;
+    }
+}
+    .slide-switch.large input:checked + .wrapper {
+        left: -48px;
+    }

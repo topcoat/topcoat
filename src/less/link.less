@@ -1,0 +1,31 @@
+// Link
+
+a {
+    color: @light-link-color;
+    text-decoration: none;
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+.link {
+    .standard-structure;
+    color: @light-link-color;
+    min-width: auto;
+    max-width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    text-decoration: none;
+    &:active {
+        text-decoration: underline;
+    }
+    &:focus {
+        color: @light-blue-text;
+        outline: none;
+        text-shadow: @light-border-glow;
+    }
+}
+
+.link.dark {
+    color: @dark-link-color;
+}
