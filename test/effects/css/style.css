@@ -53,9 +53,6 @@ h1 {
 .container {
 	width:100%;
 	background:#c8e5f6;
-	/*-webkit-transform:translateZ(0);*/
-	/* translateZ is a lie */
-	/*-webkit-transform: translate3d(0px,0px,0px);*/
 	margin-top: 60px;
 }
 
@@ -105,10 +102,14 @@ h1 {
 
 .sidemenu {
 	width:260px;
-	position: fixed;
+	position:absolute;
 	top:60px;
-	z-index:-10;
 }
+
+	.container {
+		position: relative;
+		z-index:100;
+	}
 
 	.sidemenu h2 {
 		font-size:1em;
