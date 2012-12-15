@@ -38,13 +38,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // less: {
-        //     css: {
-        //         src: ['src/less/topcoat.less'],
-        //         dest: 'release/css/topcoat.css'
-        //     }
-        // },
-
         copy: {
             dist: {
                 files: {
