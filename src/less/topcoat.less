@@ -99,6 +99,7 @@
 @light-hover-gradient-end: #edefef;
 @light-hud-shadow: 0 3px 9px rgba(0,0,0,.3);
 @light-link-color: #0083e8;
+@light-link-glow: 0 0 4px rgba(0,136,255,.69);
 @light-text: #454545;
 @light-text-shadow: 0 1px 0 #fff;
 @light-track-background: #d4d7d7;
@@ -133,6 +134,7 @@
 @dark-hover-gradient-end: #6a6b6b;
 @dark-hud-shadow: 0 3px 9px rgba(0,0,0,.3);
 @dark-link-color: #6bc3fa;
+@dark-link-glow: 0 0 4px rgba(107, 195, 250,.69);
 @dark-text: #eff1f1;
 @dark-text-shadow: 0 -1px 0 #000;
 @dark-track-background: #1f1f1f;
@@ -314,8 +316,9 @@
 	}	
 
 .cta-style {
+    background-color: @cta-gradient-end;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@cta-gradient-start), to(@cta-gradient-end));
 	background-image: linear-gradient(top, @cta-gradient-start, @cta-gradient-end);
-		background-image: -webkit-gradient(linear, left top, left bottom, from(@cta-gradient-start), to(@cta-gradient-end));	
 	border: @cta-border;
 	box-shadow: @cta-gradient-highlight;
 	color: @cta-text;
@@ -323,8 +326,9 @@
 }
 
 	.cta-hover-style {
+        background-color: @cta-hover-gradient-end;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(@cta-hover-gradient-start), to(@cta-hover-gradient-end));
 		background-image: linear-gradient(top, @cta-hover-gradient-start, @cta-hover-gradient-end);
-			background-image: -webkit-gradient(linear, left top, left bottom, from(@cta-hover-gradient-start), to(@cta-hover-gradient-end));	
 	}
 
 	.cta-down-style {
@@ -338,6 +342,25 @@
 		box-shadow: @cta-border-glow;
 		outline: none;
 	}
+
+/* Hides content visually, but keeps it in the DOM for screen readers. */
+.hidden-accessible { 
+	border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+}
+
+/* For image replacement this hides text within a element containing a full-width and full-height background image */
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
 
 // Global ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -459,12 +482,22 @@ a {
 	&:focus {
 		color: @light-blue-text;
 		outline: none;
-		text-shadow: @light-border-glow;
+		text-shadow: @light-link-glow;
+        box-shadow: @light-link-glow;
+        border: 1px solid @light-blue-text; 
+        padding-left: 2px;
+		padding-right: 2px;
+        margin-left: -2px;
+		margin-right: -2px;
 	}	
 }
 
 .link.dark {
 	color: @dark-link-color;
+    &:focus {
+        box-shadow: @dark-link-glow;
+        border-color: @dark-link-color;
+	}
 }
 
 
@@ -479,6 +512,7 @@ a {
 	right: 6px;
 	top: 9px;
 	width: 9px;
+    .hide-text;
 }
 	.drop-down-triangle.dark {
 		background-image: url(../img/drop-down-triangle-dark.png) !important;
@@ -498,18 +532,20 @@ a {
 
 .icon-xs {
 	.icon-structure;
+    .hide-text;
 	background: #aaa; // temporary placeholder
 	height: @icon-xs-height;
 	width: @icon-xs-width;
-	margin: @icon-xs-margin-top @icon-xs-margin-right 0 @icon-xs-margin-left; 
+	margin: @icon-xs-margin-top @icon-xs-margin-right 0 @icon-xs-margin-left;
 }
 
 .icon-sm {
 	.icon-structure;
+    .hide-text;
 	background: #aaa; // temporary placeholder
 	height: @icon-sm-height;
 	width: @icon-sm-width;
-	margin: @icon-sm-margin-top @icon-sm-margin-right 0 @icon-sm-margin-left; 
+	margin: @icon-sm-margin-top @icon-sm-margin-right 0 @icon-sm-margin-left;
 }
 
 
@@ -701,14 +737,24 @@ a {
 	.button.inside.dark {
 		border-left: @transparent-border;
 		border-right: @dark-button-divider;
-		border-radius: @component-radius 0 0 @component-radius !important;
-		margin: 0;
+		border-radius: 0;
+		margin: 0 0 0 -3px !important;
 	}
 	.button.start.dark {
 		border-right: @dark-button-divider;
 		border-radius: @component-radius 0 0 @component-radius !important;
 		margin: 0;
 	}
+    
+    .button:focus {
+        z-index: 1;
+        border-left: @light-border-focus;
+		border-right: @light-border-focus;
+    }
+    .button.dark:focus {
+        border-left: @dark-border-focus;
+		border-right: @dark-border-focus;
+    }
 
 .button-group.large {
 	margin: 0 10px 10px 0 !important;
@@ -796,9 +842,9 @@ select.button.large {
 	}
 
 	.button.cta:focus {
-	 	.light-focus-style;
+        .cta-hover-style;
+	 	.cta-focus-style;
 	}
-
 
 /* Approx. Slider */
 
@@ -863,7 +909,8 @@ select.button.large {
 }
 
 	.slide-switch input {
-	    display: none;
+	    /* display: none; */
+        .hidden-accessible
 	}
 
 	.slide-switch input:checked + .wrapper {
@@ -997,11 +1044,11 @@ select.button.large {
 
 
 
-
 /* Checkbox */
 
 input[type=checkbox] {
-	display: none;
+	/* display: none; */
+    .hidden-accessible
 }
 
 input[type=checkbox] + label {
@@ -1027,6 +1074,24 @@ input.dark[type=checkbox]:checked + label {
 	background: url("../img/checkbox_checked_dark.png") no-repeat 0 50%;
 	display: inline-block;
 	padding: 0 0 0 20px;
+}
+
+input[type=checkbox]:focus + label,
+input[type=checkbox]:checked:focus + label {
+	.light-focus-style;
+    border-radius: @component-radius;
+    padding: 2px 2px 2px 22px;
+    background-position: 2px 50%;
+    margin: -3px;
+}
+
+input.dark[type=checkbox]:focus + label,
+input.dark[type=checkbox]:checked:focus + label {
+	.dark-focus-style;
+    border-radius: @component-radius;
+    padding: 2px 2px 2px 22px;
+    background-position: 2px 50%;
+    margin: -3px;
 }
 
 

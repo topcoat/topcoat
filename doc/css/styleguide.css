@@ -203,7 +203,12 @@ header a:focus {
     border: 1px solid #0940fd;
     -webkit-box-shadow: 0 0 4px #0088ff;
     box-shadow: 0 0 4px #0088ff;
-    outline: none;   
+    outline: none;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 0 10px 0 25px;
+    background: rgba(112,112,112,0.24);
+    color: #fff !important;   
 }
 
 header a:active {

@@ -143,16 +143,18 @@
   outline: none;
 }
 .cta-style {
-  background-image: linear-gradient(top, #4fa3e1, #237fcb);
+  background-color: #237fcb;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4fa3e1), to(#237fcb));
+  background-image: linear-gradient(top, #4fa3e1, #237fcb);
   border: 1px solid #014994;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.27);
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
 }
 .cta-hover-style {
-  background-image: linear-gradient(top, #5dafed, #3892de);
+  background-color: #3892de;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#5dafed), to(#3892de));
+  background-image: linear-gradient(top, #5dafed, #3892de);
 }
 .cta-down-style {
   background: #4290d1;
@@ -163,6 +165,23 @@
   border: 1px solid #0940fd;
   box-shadow: 0 0 4px 0 rgba(0, 136, 255, 0.69);
   outline: none;
+}
+/* Hides content visually, but keeps it in the DOM for screen readers. */
+.hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+}
+/* For image replacement this hides text within a element containing a full-width and full-height background image */
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body {
   color: #454545;
@@ -297,9 +316,19 @@ a:active {
   color: #0083e8;
   outline: none;
   text-shadow: 0 0 4px rgba(0, 136, 255, 0.69);
+  box-shadow: 0 0 4px rgba(0, 136, 255, 0.69);
+  border: 1px solid #0083e8;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: -2px;
+  margin-right: -2px;
 }
 .link.dark {
   color: #6bc3fa;
+}
+.link.dark:focus {
+  box-shadow: 0 0 4px rgba(107, 195, 250, 0.69);
+  border-color: #6bc3fa;
 }
 .drop-down-triangle {
   background-image: url(../img/drop-down-triangle.png);
@@ -310,6 +339,9 @@ a:active {
   right: 6px;
   top: 9px;
   width: 9px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .drop-down-triangle.dark {
   background-image: url(../img/drop-down-triangle-dark.png) !important;
@@ -329,6 +361,9 @@ a:active {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: top;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   background: #aaa;
   height: 13px;
   width: 13px;
@@ -338,6 +373,9 @@ a:active {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: top;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   background: #aaa;
   height: 16px;
   width: 16px;
@@ -593,13 +631,22 @@ a:active {
 .button.inside.dark {
   border-left: 1px solid rgba(0, 0, 0, 0);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px 0 0 3px !important;
-  margin: 0;
+  border-radius: 0;
+  margin: 0 0 0 -3px !important;
 }
 .button.start.dark {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px 0 0 3px !important;
   margin: 0;
+}
+.button:focus {
+  z-index: 1;
+  border-left: 1px solid rgba(9, 64, 253, 0.84);
+  border-right: 1px solid rgba(9, 64, 253, 0.84);
+}
+.button.dark:focus {
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
 }
 .button-group.large {
   margin: 0 10px 10px 0 !important;
@@ -714,16 +761,18 @@ select.button.large {
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  background-image: linear-gradient(top, #4fa3e1, #237fcb);
+  background-color: #237fcb;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4fa3e1), to(#237fcb));
+  background-image: linear-gradient(top, #4fa3e1, #237fcb);
   border: 1px solid #014994;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.27);
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
 }
 .button.cta:hover {
-  background-image: linear-gradient(top, #5dafed, #3892de);
+  background-color: #3892de;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#5dafed), to(#3892de));
+  background-image: linear-gradient(top, #5dafed, #3892de);
 }
 .button.cta:active {
   background: #4290d1;
@@ -731,8 +780,11 @@ select.button.large {
   text-decoration: none;
 }
 .button.cta:focus {
-  border: 1px solid rgba(9, 64, 253, 0.84);
-  box-shadow: 0 0 4px rgba(0, 136, 255, 0.69);
+  background-color: #3892de;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5dafed), to(#3892de));
+  background-image: linear-gradient(top, #5dafed, #3892de);
+  border: 1px solid #0940fd;
+  box-shadow: 0 0 4px 0 rgba(0, 136, 255, 0.69);
   outline: none;
 }
 /* Approx. Slider */
@@ -823,7 +875,16 @@ select.button.large {
   width: 54px;
 }
 .slide-switch input {
-  display: none;
+  /* display: none; */
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }
 .slide-switch input:checked + .wrapper {
   left: -38px;
@@ -945,7 +1006,16 @@ select.button.large {
 }
 /* Checkbox */
 input[type=checkbox] {
-  display: none;
+  /* display: none; */
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }
 input[type=checkbox] + label {
   background: url("../img/checkbox_unchecked.png") no-repeat 0 50%;
@@ -967,6 +1037,26 @@ input.dark[type=checkbox]:checked + label {
   background: url("../img/checkbox_checked_dark.png") no-repeat 0 50%;
   display: inline-block;
   padding: 0 0 0 20px;
+}
+input[type=checkbox]:focus + label,
+input[type=checkbox]:checked:focus + label {
+  border: 1px solid rgba(9, 64, 253, 0.84);
+  box-shadow: 0 0 4px rgba(0, 136, 255, 0.69);
+  outline: none;
+  border-radius: 3px;
+  padding: 2px 2px 2px 22px;
+  background-position: 2px 50%;
+  margin: -3px;
+}
+input.dark[type=checkbox]:focus + label,
+input.dark[type=checkbox]:checked:focus + label {
+  border: 1px solid #000000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.69);
+  outline: none;
+  border-radius: 3px;
+  padding: 2px 2px 2px 22px;
+  background-position: 2px 50%;
+  margin: -3px;
 }
 /* Spinner */
 .spinner {
