@@ -37,6 +37,11 @@ module.exports = function(grunt) {
                 src: 'release/css/topcoat.css',
                 dest: 'release/css/topcoat-min.css'
             }
+        },
+
+        watch: {
+            files: ['src/less/topcoat.less'],
+            tasks: ['less', 'mincss']
         }
     })
     
@@ -57,5 +62,5 @@ module.exports = function(grunt) {
     })
 
     // fin    
-    grunt.registerTask('default', 'less copy mincss manifest')
+    grunt.registerTask('default', 'less copy mincss manifest watch')
 }
