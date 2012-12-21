@@ -8,40 +8,45 @@ var _slWidth = slides[0].offsetWidth
 	, totalWidth = _slWidth * slides.length
 	, _startX
 	, _diff
-	, idx=0
 	, _prevdif;
 
 slideContainer.style.width = totalWidth + 'px';
 
-var showPanel = function (id) {
-	var amount;
-	if(id > 0) {
-		return;
+var round = function (n) {
+	var max = Math.ceil(n);
+	var min = Math.floor(n);
+	if(Math.abs(max - n) < Math.abs(n - min)) {
+		return max;
+	} else {
+		return min;
 	}
-	if(Math.abs(id) > slides.length-1) {
-		return;
-	}
-	if(id < slides.length-1 || id > 0) {
-		amount = _slWidth * id;
-		slideContainer.style.webkitTransform = 'translateX('+amount+'px)';
+};
 
-		var c = mainContainer.querySelector('.current');
-		if(c) c.classList.remove('current');
-		slides[Math.abs(id)].classList.add('current');
-	}
+var showPanel = function () {
+	var pos = slideContainer.style.webkitTransform || 0;
+	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
+	id = round(pos/_slWidth);
+
+	slideContainer.style.webkitTransform = 'translateX('+(_slWidth * id)+'px)';
 };
 
 var touchStart = function (e) {
-	_startX = e.pageX || e.touches[0].pageX;
-	_diff = 1;
-	prevdif = 0;
+	e.preventDefault();
+
+	_startX = e.touches[0].pageX;
+	_prevdif = _diff = 1;
 };
 
 var touchMove = function (e) {
+	e.preventDefault();
 
-	_diff = _startX - (e.pageX || e.touches[0].pageX);
+	_diff = _startX - e.touches[0].pageX;
 
-	if(Math.abs(_prevdif - _diff) < 10)
+	if(Math.abs(_prevdif) > Math.abs(_diff)) { // direction change
+		_startX = e.touches[0].pageX;
+	}
+
+	if(Math.abs(_prevdif - _diff) < 20)
 		return;
 	else
 		_prevdif = _diff;
@@ -49,30 +54,22 @@ var touchMove = function (e) {
 	var pos = slideContainer.style.webkitTransform || 0;
 	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
 
-	if(pos - _diff > 0 || Math.abs(pos - _diff) > totalWidth - _slWidth) {
+	if(pos - _diff > 0 || Math.abs(pos - _diff) > totalWidth - _slWidth) { // reached the edges
 		return;
 	}
 
-	if(_diff > 0) {
-		slideContainer.style.webkitTransform = 'translateX('+(pos - _diff)+'px)';
-	} else {
-		slideContainer.style.webkitTransform = 'translateX('+(pos - _diff)+'px)';
-	}
-
-	e.preventDefault();
+	slideContainer.style.webkitTransform = 'translateX('+(pos - _diff)+'px)';
 };
 
 var touchEnd = function (e) {
-	if(_diff == 1) return;
-
-	if(Math.abs(_diff) > 0 && Math.abs(_diff) < 10) {
-		showPanel(idx);
-		return;
-	}
-	if(_diff > 0)
-		showPanel(--idx);
+	direction = [];
+	if(Math.abs(_diff) > 0 && Math.abs(_diff) < 30)
+		showPanel();
 	else
-		showPanel(++idx);
+		if(_diff > 0)
+			showPanel();
+		else
+			showPanel();
 };
 
 mainContainer.addEventListener('touchstart', touchStart, false);

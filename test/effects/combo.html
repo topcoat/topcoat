@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>swipe</title>
-	<meta name=viewport content=width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1>
+	<meta name=viewport content=width=device-width,user-scalable=0,initial-scale=1,maximum-scale=1>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../../release/css/topcoat.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
 </head>
 <body>
 
@@ -26,17 +28,17 @@
 		</ul>
 	</div>
 
+	<header>
+		<ul class="button-group">
+			<li>
+				<button id="show" href="#" class="button large cta">Slide</button>
+			</li>
+			<li>
+				<a href="index.html" class="button large cta">Home</a>
+			</li>
+		</ul>
+	</header>
 	<div class="container">
-		<header>
-			<ul class="button-group">
-				<li>
-					<a id="show" href="#" class="button large">Slide</a>
-				</li>
-				<li>
-					<a href="#" class="button large">Home</a>
-				</li>
-			</ul>
-		</header>
 
 		
 		<div class="content">
@@ -62,53 +64,55 @@
 				<div>posted by <a href="#">Andrei</a> &middot; 5 comments &middot; <a href="#" class="button">Share</a></div>
 			</article>
 
-			<div class="main-container">
-				<div class="slide-container">
-					<div class="slide">
-						<h1>Hello world</h1>
-						<p>
-							<h3>Try swipeing the content to the left</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.
-						</p>
-					</div>
-					<div class="slide">
-						<h1>Panel 2</h1>
-						<img width=300 height=320 src="img/cat1.png">
-						<p>
-							<h3>Try swipeing the content to the left</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.
-						</p>
-					</div>
-					<div class="slide">
-						<h1>Panel 3</h1>
-						<img width=300 height=320 src="img/cat2.png">
-					</div>
-					<div class="slide">
-						<h1>Panel 4</h1>
-						
-						<p>
-							<h3>Try swipeing the content to the left</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.
-						</p>
-					</div>
-					<div class="slide">
-						<h1>Panel 5</h1>
-						<img width=300 height=320 src="img/cat4.png">
+			<article>
+				<div class="main-container">
+					<div class="slide-container">
+						<div class="slide">
+							<h1>Hello world</h1>
+							<p>
+								<h3>Try swipeing the content to the left</h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.
+							</p>
+						</div>
+						<div class="slide">
+							<h1>Panel 2</h1>
+							<img width=300 height=320 src="img/cat1.png">
+							<p>
+								<h3>Try swipeing the content to the left</h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.
+							</p>
+						</div>
+						<div class="slide">
+							<h1>Panel 3</h1>
+							<img width=300 height=320 src="img/cat2.png">
+						</div>
+						<div class="slide">
+							<h1>Panel 4</h1>
+							
+							<p>
+								<h3>Try swipeing the content to the left</h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.
+							</p>
+						</div>
+						<div class="slide">
+							<h1>Panel 5</h1>
+							<img width=300 height=320 src="img/cat4.png">
+						</div>
 					</div>
 				</div>
-			</div>
+			</article>
 
 			<article>
 				<h3>Try swipeing the content to the left</h3>
@@ -131,14 +135,15 @@
 			
 
 		</div>
+		<div id="footer">
+			<h2>Click 4 &hearts;</h2>
+		</div>
 
 	</div>
-
 </body>
-	<script type="text/javascript" src="js/classList.js"></script>
-	<script type="text/javascript" src="js/modernizr.js"></script>
-	<script type="text/javascript" src="js/fastclick.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/swipe.js"></script>
-	<script src="http://169.254.213.103:8080/target/target-script-min.js"></script>
+	<script type="text/javascript" src="js/classList.js" async></script>
+	<script type="text/javascript" src="js/loadPosts.js" async></script>
+	<script type="text/javascript" src="js/script.js" async></script>
+	<script type="text/javascript" src="js/swipe.js" async></script>
+	<script src="http://169.254.101.64:8080/target/target-script-min.js#anonymous"></script>
 </html>
