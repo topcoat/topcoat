@@ -3,6 +3,9 @@ var tests = [];
 var suite = new Benchmark.Suite();
 var submitResults = false;
 
+var parser = new UAParser();
+var ua = parser.getResult(); // object containing device/os/browser info
+
 document.querySelector('#run').addEventListener('click', function(){
 
 	submitResults = document.querySelector('#submit-results').checked;
@@ -16,10 +19,11 @@ document.querySelector('#run').addEventListener('click', function(){
 
 }, false);
 
-function appendOutput(content, selector) {
+function appendOutput(content, selector, test) {
 	var node = document.querySelector(selector);
 	el = node.parentElement.parentElement.querySelector('.output');
 	el.innerHTML += '<span class="label label-important"> ' + content + '</span>';
+	sendBenchmark(content, test);
 }
 
 function launchTest(test) {

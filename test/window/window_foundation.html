@@ -156,7 +156,7 @@
 		if(submitResults)
 			sendBenchmark(String(event.target), 'foundation');
 		if(self.opener) {
-			self.opener.appendOutput(String(event.target), '#foundation');
+			self.opener.appendOutput(String(event.target), '#foundation', 'foundation');
 			self.opener.suite.add(event.target);
 			self.opener.launchTest();
 		} else {

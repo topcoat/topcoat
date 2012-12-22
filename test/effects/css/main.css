@@ -6,12 +6,13 @@ html, body {
 }
 
 .main-container {
-	width:300px;
+	width:80%;
 	height:300px;
 	overflow:hidden;
 	background:black;
 	-webkit-transform:translateZ(0);
 	margin:10px auto;
+	border:1px solid #f8f8f8;
 }
 
 
@@ -19,10 +20,12 @@ html, body {
 	-webkit-transition-duration:.15s;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform:translateZ(0);
+	-webkit-animation-timing-function:linear; 
+	height:100%;
 }
 
 .slide {
-	width:300px;
+	width:100%;
 	height:100%;
 	-webkit-transform:translateZ(0);
 	-webkit-backface-visibility: hidden;
@@ -32,8 +35,8 @@ html, body {
 
 	.slide img {
 		margin:0;
-		width:300px;
-		height:300px;
+		width:100%;
+		height:auto;
 	}
 
 .sidemenu {
@@ -88,8 +91,7 @@ html, body {
 
 		li.heading {
 			background:#666;
-			background:-webkit-linear-gradient(#888,#666);
-			border-top:1px solid #666;
+			border-bottom:1px solid #444;
             padding:.7em;
             text-shadow:0 -1px 0 #222;
             color:#fff;
@@ -109,6 +111,7 @@ html, body {
 
 header {
 	background: #f8f8f8;
+	border-bottom:1px solid #ddd;
 	padding: 10px 0;
 	position:fixed;
 	top:0;
@@ -116,6 +119,7 @@ header {
 	right:0;
 	z-index:20;
 	-webkit-transition-duration:.25s;
+	height:30px;
 }
 
 ul.button-group {
@@ -134,6 +138,15 @@ article {
 	border-bottom: 1px solid #ccc;
 	padding:0 5%;
 }
+	article img {
+		float:left;
+	}
+
+	article:after {
+		content:"";
+		display:block;
+		clear:both;
+	}
 
 .container {
 	background:#eee;

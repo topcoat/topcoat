@@ -69,10 +69,11 @@
       ol.appendChild(li);
     })
     .on('cycle', function(event) {
-        if(submitResults)
+        if(submitResults) {
             sendBenchmark(String(event.target), 'li simple'); // send results to server
+        }
         if(self.opener) {
-            self.opener.appendOutput(String(event.target), '#simple'); // results added to main window output td
+            self.opener.appendOutput(String(event.target), '#simple', 'li simple'); // results added to main window output td
             self.opener.suite.add(event.target); // this adds all test results in an array to compare which was fastest
             self.opener.launchTest(); // launch a new test (if any)
         } else {

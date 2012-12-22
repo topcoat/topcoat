@@ -73,7 +73,7 @@
         if(submitResults)
             sendBenchmark(String(event.target), 'box-shadow');
         if(self.opener) {
-            self.opener.appendOutput(String(event.target), '#shadow');
+            self.opener.appendOutput(String(event.target), '#shadow', 'box-shadow');
             self.opener.suite.add(event.target);
             self.opener.launchTest();
         } else {

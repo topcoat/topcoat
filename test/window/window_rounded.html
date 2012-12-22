@@ -72,7 +72,7 @@
         if(submitResults)
             sendBenchmark(String(event.target), 'border-radius');
         if(self.opener) {
-            self.opener.appendOutput(String(event.target), '#rounded');
+            self.opener.appendOutput(String(event.target), '#rounded', 'border-radius');
             self.opener.suite.add(event.target);
             self.opener.launchTest();
         } else {

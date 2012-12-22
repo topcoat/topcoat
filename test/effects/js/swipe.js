@@ -1,16 +1,20 @@
+// !function () {
 // quick example to see if swipe can be done natively
 var mainContainer = document.querySelector('.main-container')
 	, slideContainer = document.querySelector('.slide-container')
 	, slides = mainContainer.querySelectorAll('.slide');
 
+[].forEach.call(slides, function(s){
+	s.style.width = mainContainer.offsetWidth + 'px';
+});
 
 var _slWidth = slides[0].offsetWidth
-	, totalWidth = _slWidth * slides.length
-	, _startX
-	, _diff
+	, startX
+    , totalWidth = _slWidth * slides.length
+	, delta
 	, _prevdif;
 
-slideContainer.style.width = totalWidth + 'px';
+slideContainer.style.width = (_slWidth * slides.length) + 'px';
 
 var round = function (n) {
 	var max = Math.ceil(n);
@@ -32,46 +36,51 @@ var showPanel = function () {
 
 var touchStart = function (e) {
 	e.preventDefault();
+	_slWidth = slides[0].offsetWidth;
 
-	_startX = e.touches[0].pageX;
-	_prevdif = _diff = 1;
+	slideContainer.style.width = (_slWidth * slides.length) + 'px';
+
+	if(parseInt(slides[0].style.width) != mainContainer.offsetWidth) {
+		[].forEach.call(slides, function(s){
+			s.style.width = mainContainer.offsetWidth + 'px';
+		});
+		//slideContainer.style.webkitTransform = 'translateX(0px)';
+	}
+
+
+	startX = e.touches[0].pageX;
+	_prevdif = delta = 1;
 };
 
 var touchMove = function (e) {
 	e.preventDefault();
 
-	_diff = _startX - e.touches[0].pageX;
+	delta = startX - e.touches[0].pageX;
 
-	if(Math.abs(_prevdif) > Math.abs(_diff)) { // direction change
-		_startX = e.touches[0].pageX;
+	if(Math.abs(_prevdif) > Math.abs(delta)) { // direction change
+		startX = e.touches[0].pageX;
 	}
 
-	if(Math.abs(_prevdif - _diff) < 20)
+	if(Math.abs(_prevdif - delta) < 5)
 		return;
 	else
-		_prevdif = _diff;
+		_prevdif = delta;
 
 	var pos = slideContainer.style.webkitTransform || 0;
 	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
 
-	if(pos - _diff > 0 || Math.abs(pos - _diff) > totalWidth - _slWidth) { // reached the edges
+	if(pos - delta > 0 || Math.abs(pos - delta) > totalWidth - _slWidth) { // reached the edges
 		return;
 	}
-
-	slideContainer.style.webkitTransform = 'translateX('+(pos - _diff)+'px)';
+	startX = e.touches[0].pageX;
+	slideContainer.style.webkitTransform = 'translateX('+(pos - delta)+'px)';
 };
 
 var touchEnd = function (e) {
-	direction = [];
-	if(Math.abs(_diff) > 0 && Math.abs(_diff) < 30)
-		showPanel();
-	else
-		if(_diff > 0)
-			showPanel();
-		else
-			showPanel();
+	showPanel();
 };
 
 mainContainer.addEventListener('touchstart', touchStart, false);
 mainContainer.addEventListener('touchmove', touchMove, false);
 mainContainer.addEventListener('touchend', touchEnd, false);
+// }();

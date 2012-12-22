@@ -51,7 +51,7 @@
 		if(submitResults)
 			sendBenchmark(String(event.target), 'bootstrap');
 		if(self.opener) {
-			self.opener.appendOutput(String(event.target), '#bootstrap');
+			self.opener.appendOutput(String(event.target), '#bootstrap', 'bootstrap');
 			self.opener.suite.add(event.target);
 			self.opener.launchTest();
 		} else {
