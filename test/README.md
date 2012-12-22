@@ -6,4 +6,4 @@ To run the tests `clone` the repo, and start a localserver from ./topcoat (sugge
 
 ## Test results
 
-You can opt to submit the test results to http://topcoat.jit.su and view them here http://topcoat.jit.su/view/results
+You can opt to submit the test results to http://topcoat.herokuapps.com and view them here http://topcoat.herokuapps.com/view/results
