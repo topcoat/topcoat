@@ -12,7 +12,7 @@
               \__\/       \__\/       \__\/       \__\/       \__\/                        
 </pre>
 
-An experimental CSS library. Check out the <a href="http://adobe.github.com/topcoat/">desktop demo (WIP)</a>.
+An experimental CSS library. Check out the <a href="http://git.io/topcoat">desktop demo (WIP)</a>.
 
 
 ### Installing
@@ -33,7 +33,7 @@ Or Yeoman:
 
 There is also support for Component:
 
-    component install adobe/topcoat
+    component install topcoat/topcoat
 
 ### Running the tests
 
