@@ -128,6 +128,7 @@ header {
 	position: absolute;
 	right: 0;
 	top: 0;
+    z-index:1;
 }
 
 header hgroup {
@@ -331,11 +332,12 @@ header {
 	z-index: 10000;
 
 	/* Transition opacity on open */
-	-webkit-transition: opacity 200ms ease-in;
-	transition: opacity 200ms ease-in;
+	-webkit-transition: opacity 200ms ease-in 100ms;
+	transition: opacity 200ms ease-in 100ms;
 
 	/* Hide for now */
-	opacity: 0;
+	display: none;
+    opacity: 0;
 	pointer-events: none;
 
 	-webkit-touch-callout: none;
@@ -348,7 +350,8 @@ header {
 
 /* Show modal */
 .modal:target {
-	opacity: 1;
+	display: block;
+    opacity: 1;
 	pointer-events: auto;
 }
 
