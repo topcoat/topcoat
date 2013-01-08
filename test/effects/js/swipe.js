@@ -30,24 +30,24 @@ var showPanel = function () {
 	var pos = slideContainer.style.webkitTransform || 0;
 	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
 	id = round(pos/_slWidth);
-
+	id %= slides.length;
 	slideContainer.style.webkitTransform = 'translateX('+(_slWidth * id)+'px)';
+};
+
+var orientationChange = function (e) {
+	setTimeout(function(){ // did i just do this ?!
+		[].forEach.call(slides, function(s){
+			s.style.width = mainContainer.offsetWidth + 'px';
+		});
+		_slWidth = slides[0].offsetWidth;
+		slideContainer.style.width = (_slWidth * slides.length) + 'px';
+		totalWidth = _slWidth * slides.length
+		showPanel();
+	}, 50);
 };
 
 var touchStart = function (e) {
 	e.preventDefault();
-	_slWidth = slides[0].offsetWidth;
-
-	slideContainer.style.width = (_slWidth * slides.length) + 'px';
-
-	if(parseInt(slides[0].style.width) != mainContainer.offsetWidth) {
-		[].forEach.call(slides, function(s){
-			s.style.width = mainContainer.offsetWidth + 'px';
-		});
-		//slideContainer.style.webkitTransform = 'translateX(0px)';
-	}
-
-
 	startX = e.touches[0].pageX;
 	_prevdif = delta = 1;
 };
@@ -68,7 +68,7 @@ var touchMove = function (e) {
 
 	var pos = slideContainer.style.webkitTransform || 0;
 	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
-
+	
 	if(pos - delta > 0 || Math.abs(pos - delta) > totalWidth - _slWidth) { // reached the edges
 		return;
 	}
@@ -80,6 +80,7 @@ var touchEnd = function (e) {
 	showPanel();
 };
 
+window.addEventListener('orientationchange', orientationChange, false);
 mainContainer.addEventListener('touchstart', touchStart, false);
 mainContainer.addEventListener('touchmove', touchMove, false);
 mainContainer.addEventListener('touchend', touchEnd, false);

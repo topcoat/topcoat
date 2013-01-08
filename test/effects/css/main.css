@@ -113,17 +113,12 @@ header {
 	background: #f8f8f8;
 	border-bottom:1px solid #ddd;
 	padding: 10px 0;
-	position:fixed;
-	top:0;
-	left:0;
-	right:0;
-	z-index:20;
-	-webkit-transition-duration:.25s;
 	height:30px;
 }
 
 ul.button-group {
 	margin:0;
+	padding:0;
 }
 
 ul.button-group li {
@@ -149,6 +144,7 @@ article {
 	}
 
 .container {
+	width:100%;
 	background:#eee;
 	-webkit-transition-duration:.25s;
 }

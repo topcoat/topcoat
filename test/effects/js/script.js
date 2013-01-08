@@ -12,7 +12,7 @@ var body = document.querySelector('body');
 var slide = function(e) {
 	body.classList.add('ie');
 	container.classList.toggle('translateright');
-	header.classList.toggle('translateright');
+	//header.classList.toggle('translateright');
 };
 
 toggle.addEventListener('click', slide, false);
