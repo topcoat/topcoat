@@ -18,6 +18,7 @@ h1 {
 	margin:0;
 	position:fixed;
 	top:0;
+	left:0;
 	z-index:101;
 	border-bottom:1px solid #196795;
 	-webkit-box-shadow:0 0 4px #555;
@@ -102,7 +103,7 @@ h1 {
 
 .sidemenu {
 	width:260px;
-	position:absolute;
+	position:fixed;
 	top:60px;
 	display:none;
 }
