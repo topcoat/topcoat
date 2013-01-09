@@ -182,6 +182,7 @@
         <p>&copy; Company 2012</p>
       </div>
 
+    <div id="perf"></div>
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -189,6 +190,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../third_party/jquery/jquery-1.8.2.min.js"></script>
     <script src="../third_party/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/perf.js"></script>
     <script>
     var now = window.performance.now ?
                     (performance.now() + performance.timing.navigationStart) : 
@@ -213,7 +215,7 @@
       var timeArr = localStorage.getItem('timeArr');
       timeArr = JSON.parse(timeArr);
       t = timeArr.reduce(function(x,y){return x+y})/10;
-      alert('Average load time ' + t + ' in 10 reloads');
+      alert('Average load time ' + t + 'ms in 10 reloads');
     }
     </script>
   </body>

@@ -1,3 +1,6 @@
+var parser = new UAParser();
+var ua = parser.getResult(); // object containing device/os/browser info
+
 function sendBenchmark(benchtest, title) {
 	
 	var device = "";

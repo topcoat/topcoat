@@ -1,8 +1,9 @@
 // !function () {
-// quick example to see if swipe can be done natively
+// quick example to see if swipe can be done to look like natively
 var mainContainer = document.querySelector('.main-container')
 	, slideContainer = document.querySelector('.slide-container')
-	, slides = mainContainer.querySelectorAll('.slide');
+	, slides = mainContainer.querySelectorAll('.slide')
+	;
 
 [].forEach.call(slides, function(s){
 	s.style.width = mainContainer.offsetWidth + 'px';
@@ -12,7 +13,10 @@ var _slWidth = slides[0].offsetWidth
 	, startX
     , totalWidth = _slWidth * slides.length
 	, delta
-	, _prevdif;
+	, _prevdif
+	, prevWidth = mainContainer.offsetWidth
+	, id
+	;
 
 slideContainer.style.width = (_slWidth * slides.length) + 'px';
 
@@ -26,27 +30,37 @@ var round = function (n) {
 	}
 };
 
-var showPanel = function () {
+var showPanel = function (idx) {
 	var pos = slideContainer.style.webkitTransform || 0;
 	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
-	id = round(pos/_slWidth);
-	id %= slides.length;
+	id = idx || round(pos/_slWidth);
 	slideContainer.style.webkitTransform = 'translateX('+(_slWidth * id)+'px)';
 };
 
 var orientationChange = function (e) {
+	prevWidth = mainContainer.offsetWidth;
 	setTimeout(function(){ // did i just do this ?!
 		[].forEach.call(slides, function(s){
 			s.style.width = mainContainer.offsetWidth + 'px';
 		});
 		_slWidth = slides[0].offsetWidth;
+		slideContainer.style.webkitTransitionDuration = ".6s";
 		slideContainer.style.width = (_slWidth * slides.length) + 'px';
-		totalWidth = _slWidth * slides.length
-		showPanel();
+		setTimeout(function(){
+			slideContainer.style.webkitTransitionDuration = ".1s";
+		}, 600);
+		totalWidth = _slWidth * slides.length;
+		showPanel(id);
 	}, 50);
 };
 
 var touchStart = function (e) {
+
+	if(prevWidth != mainContainer.offsetWidth) {
+		orientationChange();
+		prevWidth = mainContainer.offsetWidth;
+	}
+
 	e.preventDefault();
 	startX = e.touches[0].pageX;
 	_prevdif = delta = 1;
@@ -56,10 +70,6 @@ var touchMove = function (e) {
 	e.preventDefault();
 
 	delta = startX - e.touches[0].pageX;
-
-	if(Math.abs(_prevdif) > Math.abs(delta)) { // direction change
-		startX = e.touches[0].pageX;
-	}
 
 	if(Math.abs(_prevdif - delta) < 5)
 		return;
@@ -80,7 +90,9 @@ var touchEnd = function (e) {
 	showPanel();
 };
 
+
 window.addEventListener('orientationchange', orientationChange, false);
+
 mainContainer.addEventListener('touchstart', touchStart, false);
 mainContainer.addEventListener('touchmove', touchMove, false);
 mainContainer.addEventListener('touchend', touchEnd, false);

@@ -10,12 +10,14 @@ body {
 	-webkit-transform:translateZ(0);
 	margin:10px auto;
 	border:5px solid #fff;
-	box-shadow:0 0 6px #000;
+	border-left:0;
+	border-right:0;
+	box-shadow:0 2px 6px #000;
 }
 
 
 .slide-container {
-	-webkit-transition-duration:.15s;
+	-webkit-transition-duration:.1s;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform:translateZ(0);
 	-webkit-animation-timing-function:linear; 
@@ -29,9 +31,10 @@ body {
 	-webkit-backface-visibility: hidden;
 	background:#ddd;
 	float:left;
+	text-align: center;
 }
 
 	.slide img {
+		height:100%;
 		margin:0;
-		width:100%;
 	}

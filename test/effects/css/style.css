@@ -2,11 +2,7 @@ html, body {
 	height: 100%;
 	width:100%;
 	overflow-x: hidden;
-	background:#999;
-}
-
-body {
-	margin: 0;
+	background:#c8e5f6;
 }
 
 h1 {
@@ -23,11 +19,12 @@ h1 {
 	position:fixed;
 	top:0;
 	z-index:101;
+	border-bottom:1px solid #196795;
+	-webkit-box-shadow:0 0 4px #555;
 }
 
 	.menu img {
 		width:24px;
-		opacity:.5;
 	}
 
 .menu li {
@@ -52,12 +49,13 @@ h1 {
 
 .container {
 	width:100%;
-	background:#c8e5f6;
 	margin-top: 60px;
+	background:#c8e5f6;
 }
 
 	.no-csstransforms3d .container {
 		position:absolute;
+		-webkit-backface-visibility:hidden;
 	}
 
 	.csstransforms3d .container {
@@ -74,7 +72,9 @@ h1 {
 
 	.news li {
 		list-style:none;
-		border:1px solid #ddd;
+		border:1px solid #9cd0ef;
+		border-top:1px solid #e5f3fb;
+		border-bottom:2px solid #62b5e5;
 		margin:.7em;
 		background:#fff;
 		border-radius:5px;
@@ -95,7 +95,7 @@ h1 {
 		}
 
 	.container img {
-		width:50%;
+		width:100px;
 		float:left;
 		margin:.5em;
 	}
@@ -104,6 +104,7 @@ h1 {
 	width:260px;
 	position:absolute;
 	top:60px;
+	display:none;
 }
 
 	.container {
@@ -125,7 +126,7 @@ h1 {
 	.sidemenu li {
 		list-style:none;
 		background:#999;
-		padding:.5em;
+		padding:1em;
 		border-bottom:1px solid #666;
 		border-top:1px solid #bbb;
 		font-size:1em;
@@ -151,28 +152,14 @@ h1 {
 
 	.no-csstransforms3d .translateright {
 		-webkit-animation:.25s translateright;
-		-webkit-animation-fill-mode:forwards;
-		-moz-animation:.25s translateright;
-		-moz-animation-fill-mode:forwards;
-		-ms-animation:.25s translateright;
-		-ms-animation-fill-mode:forwards;
 	}
 
 	.stayright {
 		left:260px;
 	}
 
-.goright {
-	left:260px;
-	-webkit-animation-duration: .25s;
-	-moz-animation-duration: .25s;
-}
-
 .restore {
 	-webkit-animation:.25s restore;
-	-webkit-animation-fill-mode:forwards;
-	-moz-animation:.25s restore;
-	-moz-animation-fill-mode:forwards;
 }
 
 @-webkit-keyframes restore {
@@ -190,41 +177,5 @@ h1 {
 	}
 	to {
 		-webkit-transform:translateX(260px);
-	}
-}
-
-@-ms-keyframes translateright {
-	from {
-		-ms-transform:translateX(0);	
-	}
-	to {
-		-ms-transform:translateX(260px);
-	}
-}
-
-@-ms-animation-fill-mode-keyframes restore {
-	from {
-		-ms-transform:translateX(260px);	
-	}
-	to {
-		-ms-transform:translateX(0);
-	}
-}
-
-@-moz-keyframes restore {
-	from {
-		-moz-transform:translateX(260px);	
-	}
-	to {
-		-moz-transform:translateX(0);
-	}
-}
-
-@-moz-keyframes translateright {
-	from {
-		-moz-transform:translateX(0);	
-	}
-	to {
-		-moz-transform:translateX(260px);
 	}
 }
