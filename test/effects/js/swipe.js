@@ -1,4 +1,4 @@
-// !function () {
+!function () {
 // quick example to see if swipe can be done to look like natively
 var mainContainer = document.querySelector('.main-container')
 	, slideContainer = document.querySelector('.slide-container')
@@ -79,9 +79,10 @@ var touchMove = function (e) {
 	var pos = slideContainer.style.webkitTransform || 0;
 	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
 	
-	if(pos - delta > 0 || Math.abs(pos - delta) > totalWidth - _slWidth) { // reached the edges
+	if(pos - delta > _slWidth/2 || Math.abs(pos - delta) > totalWidth - _slWidth / 2) { // reached the edges
 		return;
 	}
+
 	startX = e.touches[0].pageX;
 	slideContainer.style.webkitTransform = 'translateX('+(pos - delta)+'px)';
 };
@@ -96,4 +97,4 @@ window.addEventListener('orientationchange', orientationChange, false);
 mainContainer.addEventListener('touchstart', touchStart, false);
 mainContainer.addEventListener('touchmove', touchMove, false);
 mainContainer.addEventListener('touchend', touchEnd, false);
-// }();
+}();
