@@ -66,9 +66,12 @@ textarea {
    ========================================================================== */
 
 html, body {
+	overflow-x:hidden;
+}
+
+.csstransforms3d, body {
 	width:100%;
 	height:100%;
-	overflow-x:hidden;
 }
 
 body {
@@ -199,14 +202,14 @@ nav {
 	-webkit-animation-delay:.05s;
 	position:relative;
 	z-index:2;
-
-	height:100%;
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;
-
-	-webkit-transfrom:translateZ(0);
-
 }
+
+	.csstransforms3d .container {
+		height:100%;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
+		-webkit-transfrom:translateZ(0);
+	}
 
 .content {
 	padding:0;
@@ -237,7 +240,7 @@ nav {
 		overflow: hidden;
 	}
 
-	.no-csstransforms3d nav, .no-csstransforms3d header {
+	.no-csstransforms3d nav {
 		position:absolute;
 	}
 
