@@ -11,10 +11,6 @@ if(oldie) {
 	chat.style.display = 'none';
 }
 
-// messages.addEventListener('click', function () {
-// 	document.querySelector('#inbox').classList.toggle('hidden');
-// }, false);
-
 slideR.addEventListener('click', function (e) {
 
 	if(document.body.classList.contains('chat-visible')) {
@@ -25,22 +21,15 @@ slideR.addEventListener('click', function (e) {
 
 	document.body.classList.toggle('menu-visible');
 	chat.classList.toggle('hidden');
+	nav.style.display = 'block';
 
 	if (oldie) {
 		if (!document.body.classList.contains('menu-visible')) {
 			setTimeout(function () {
 				nav.style.display = 'none';
 			}, 250);
-			setTimeout(function () {
-				container.classList.remove('stop-scrolling');
-				container.style.height = 'auto';
-			}, 250);
 		} else {
 			nav.style.display = 'block';
-			setTimeout(function () {
-				container.classList.add('stop-scrolling');
-				container.style.height = nav.querySelector('li').offsetHeight * nav.querySelectorAll('li').length + 60 + 'px';
-			}, 250);
 		}
 	}
 
@@ -54,8 +43,6 @@ slideL.addEventListener('click', function (e) {
 
 		if (oldie) {
 			nav.style.display = 'none';
-			container.classList.remove('stop-scrolling');
-			container.style.height = 'auto';
 		}
 	}
 
@@ -73,67 +60,69 @@ slideL.addEventListener('click', function (e) {
 
 }, false);
 
-var startX,
-	_prevdif,
-	delta,
-	slideContainer = document.querySelector('.scrollable');
 
-var touchStart = function (e) {
-	startX = e.touches[0].pageY;
-	_prevdif = delta = 1;
+function slider(el) {
+	console.log('?');
+	var startX,
+		_prevdif,
+		delta,
+		slideContainer = el.querySelector('.scrollable');
 
-	console.log('start', startX);
-
-	e.preventDefault();
-};
-
-var touchMove = function (e) {
-	e.preventDefault();
-
-	delta = startX - e.touches[0].pageY;
-
-	if(Math.abs(_prevdif) > Math.abs(delta)) { // direction change
+	var touchStart = function (e) {
 		startX = e.touches[0].pageY;
-	}
+		_prevdif = delta = 1;
+		e.preventDefault();
+	};
 
-	if(Math.abs(_prevdif - delta) < 5)
-		return;
-	else
-		_prevdif = delta;
+	var touchMove = function (e) {
+		e.preventDefault();
+		delta = startX - e.touches[0].pageY;
 
-	var pos = slideContainer.style.webkitTransform || 0;
-	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
-	
-	startX = e.touches[0].pageY;
-	slideContainer.style.webkitTransform = 'translateY('+(pos - delta)+'px)';
-};
+		if(Math.abs(_prevdif - delta) < 5)
+			return;
+		else
+			_prevdif = delta;
 
-var touchEnd = function (e) {
-	var pos = slideContainer.style.webkitTransform || 0;
-	if(pos) pos = parseInt(pos.slice(11, pos.length-3));
+		var pos = slideContainer.style.webkitTransform || 0;
+		if(pos) pos = parseInt(pos.slice(11, pos.length-3));
+		
+		startX = e.touches[0].pageY;
+		slideContainer.style.webkitTransform = 'translateY('+(pos - delta)+'px)';
+	};
 
-	if (pos > 10) {
-		slideContainer.style.webkitTransitionDuration = '.3s';
-		slideContainer.style.webkitTransform = 'translateY(20px)';
-		setTimeout(function () {
-			slideContainer.style.webkitTransitionDuration = '0s';
-		}, 300);
-	} else {
-		var height = chat.querySelector('li').offsetHeight * chat.querySelectorAll('li').length;
-		if (Math.abs(pos) > 0.6 * height) {
+	var touchEnd = function (e) {
+		var pos = slideContainer.style.webkitTransform || 0;
+		if(pos) pos = parseInt(pos.slice(11, pos.length-3));
+
+		if (pos > 10) {
 			slideContainer.style.webkitTransitionDuration = '.3s';
-			slideContainer.style.webkitTransform = 'translateY('+(-height/2)+'px)';
+			slideContainer.style.webkitTransform = 'translateY(20px)';
 			setTimeout(function () {
 				slideContainer.style.webkitTransitionDuration = '0s';
 			}, 300);
+		} else {
+			var height = el.offsetHeight;
+			if (Math.abs(pos) > 0.6 * height) {
+				slideContainer.style.webkitTransitionDuration = '.3s';
+				slideContainer.style.webkitTransform = 'translateY('+(-height/2)+'px)';
+				setTimeout(function () {
+					slideContainer.style.webkitTransitionDuration = '0s';
+				}, 300);
+			}
 		}
-	}
 
-};
+	};
 
+	el.addEventListener('touchstart', touchStart, false);
+	el.addEventListener('touchmove', touchMove, false);
+	el.addEventListener('touchend', touchEnd, false);
 
+	return el;
+
+}
+
+// start the sliders
 if(oldie) {
-	chat.addEventListener('touchstart', touchStart, false);
-	chat.addEventListener('touchmove', touchMove, false);
-	chat.addEventListener('touchend', touchEnd, false);
+	chat = new slider(chat);
+	nav  = new slider(nav);
 }
