@@ -12,5 +12,5 @@
 ## PhoneGap
 ![qr install](https://chart.googleapis.com/chart?chs=116x116&cht=qr&chl=http://build.phonegap.com/apps/277311/install/?qr_key=P7f9pfYpCEHqXsyqvRfx&chld=L|1&choe=UTF-8)
 
-The installer does not work for iOS
+The installer does not work for iOS, because your phone is not in the provisioning profile of the Apple developer certificate used to package it. You need to re-package the app using your own Apple developer certificate.
 
