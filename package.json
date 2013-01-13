@@ -17,5 +17,6 @@
 	, "mocha-phantomjs": "*"
 	, "mocha": "*"
 	, "chai": "*"
+	, "grunt": "*"
   }
 }
