@@ -13,7 +13,7 @@
 </pre>
 
 An experimental CSS library. Check out the <a href="http://adobe.github.com/topcoat/">desktop demo (WIP)</a>.
-[![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+[![Build Status](https://secure.travis-ci.org/piatra/topcoat.png)](http://travis-ci.org/piatra/topcoat)
 
 ### Installing
 
