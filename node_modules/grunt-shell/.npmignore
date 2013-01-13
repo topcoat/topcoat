@@ -1,0 +1,6 @@
+.editorconfig
+*.sublime-project
+*.sublime-workspace
+test
+grunt.js
+readme.md

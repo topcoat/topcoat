@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"> <!-- Google Chrome Frame -->
+    <title>TopCoat Component Test</title>
+    <script type="text/javascript" src="//use.typekit.net/tfw6uyb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" type="text/css" href="../../doc/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../doc/css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="../../release/css/topcoat.css">
+</head>
+<body>
+		<div id="mocha"></div>
+        <script src="../../node_modules/mocha/mocha.js"></script>
+        <script src="../../node_modules/chai/chai.js"></script>
+        <script>
+            mocha.ui('bdd');
+            mocha.reporter('html');
+            var expect = chai.expect;
+        </script>
+        <script src="unit/test.js"></script>
+        <script>
+            if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+            else { mocha.run(); }
+        </script>
+</body>
+</html>

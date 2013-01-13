@@ -7,14 +7,14 @@ var bower     = { name: 'topcoat', version: '0.1.0', main: []}
 ,   path      = require('path')
 ,   base      = path.join(__dirname, 'release')
 
-
 module.exports = function(grunt) {
     
     grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-mincss')
     grunt.loadNpmTasks('grunt-contrib-copy')
+    grunt.loadNpmTasks('grunt-shell')
     
-    grunt.initConfig({
+	grunt.initConfig({
 
         less: {
             css: {
@@ -42,7 +42,12 @@ module.exports = function(grunt) {
         watch: {
             files: ['src/less/topcoat.less'],
             tasks: ['less', 'mincss']
-        }
+        },
+
+	testing: {
+		command: 'mocha-phantomjs ./test/phantomjs/index.html'
+	}
+
     })
     
     /* the manifest for component.json is used by Bower */  
@@ -62,5 +67,15 @@ module.exports = function(grunt) {
     })
 
     // fin    
-    grunt.registerTask('default', 'less copy mincss manifest watch')
+    grunt.registerTask('default', 'less copy mincss manifest')
+
+
+	  grunt.registerTask('test', 'run mocha-phantomjs', function () {
+    var done = this.async();
+    require('child_process').exec('mocha-phantomjs test/phantomjs/index.html', function (err, stdout) {
+      grunt.log.write(stdout);
+      done(err);
+    });
+  });
+
 }
