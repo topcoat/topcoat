@@ -215,7 +215,7 @@
       var timeArr = localStorage.getItem('timeArr');
       timeArr = JSON.parse(timeArr);
       t = timeArr.reduce(function(x,y){return x+y})/10;
-      alert('Average load time ' + t + 'ms in 10 reloads');
+      console.log('Average load time ' + t + 'ms in 10 reloads');
     }
     </script>
   </body>
