@@ -62,5 +62,5 @@ module.exports = function(grunt) {
     })
 
     // fin    
-    grunt.registerTask('default', 'less copy mincss manifest watch')
+    grunt.registerTask('default', 'less copy mincss manifest')
 }
