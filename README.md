@@ -17,7 +17,7 @@ An experimental CSS library. Check out the <a href="http://topcoat.github.com/to
 
 ### Installing
 
-You can install TopCoat manually by just dropping it in. We reccomend downloading a tag so its easy to upgrade.
+You can install TopCoat manually by just dropping it in. We recommend downloading a tag so its easy to upgrade.
 
     <link rel=stylesheet type=text/css href=vendor/topcoat-0.1.0/release/css/topcoat-min.css>
 
