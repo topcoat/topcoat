@@ -32,7 +32,7 @@ The following frameworks and libraries are used just for testing and benchmark a
 	Licensed under the Apache License v2.0
 	http://www.apache.org/licenses/LICENSE-2.0
 
- - jQuery - ./test/third_party/jquery-1.8.2.js
+ - jQuery - ./test/third-party/jquery-1.8.2.js
 
  	https://github.com/jquery/jquery
 
