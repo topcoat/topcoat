@@ -20,9 +20,7 @@ respective licenses below.
 	This Font Software is licensed under the SIL Open Font License, Version 1.1.
 	This license is available with a FAQ at: http://scripts.sil.org/OFL
 
-
-The following frameworks and libraries are used just for testing and benchmark and are not part of the Topcoat release
-
+The following frameworks and libraries are provided just for testing and benchmarking and, as provided, should not be included as part of Topcoat output.
 
  - Bootstrap - ./test/third-party/bootstrap 
 

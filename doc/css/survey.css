@@ -11,8 +11,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-*/
-	
+*/	
 	.imageGrid figure {
 		display: inline-block;
 		width: auto;
@@ -42,3 +41,10 @@ limitations under the License.
 	top: 0;
 	width: 50px;
 }
+
+
+
+	.image-hover .hover-hide { display: none; }
+	.image-hover .hover-show { display: block; }
+	.image-hover:hover .hover-hide { display: block; }
+	.image-hover:hover .hover-show { display: none; }
