@@ -10,11 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../../doc/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../doc/css/styleguide.css">
     <link rel="stylesheet" type="text/css" href="../../release/css/topcoat.css">
-    <script>
-      window.startTime = window.performance.now ?
-                    (performance.now() + performance.timing.navigationStart) :
-                    Date.now();
-    </script>
 </head>
 <body>
 
@@ -590,36 +585,12 @@
 
             <div class="spinner large"></div>
         </div>
+
+        <div id="perf"></div>
+        <table></table>
         <!-- end of .bg-slategray --> </div>
     <!-- end of #container -->
     <script src="../third-party/foundation/javascripts/jquery.js"></script>
     <script type="text/javascript" src="../js/perf.js"></script>
-    <script>
-        var now = window.performance.now ?
-                        (performance.now() + performance.timing.navigationStart) :
-                        Date.now();
-        var time = now - window.startTime;
-        document.getElementById('restart').addEventListener('click', function(){
-          localStorage.clear();
-          location.reload();
-        }, false);
-        var i = localStorage.getItem('idx') || 0;
-        if(i<10) {
-          var timeArr = localStorage.getItem('timeArr') || null;
-          timeArr = (timeArr) ? JSON.parse(timeArr) : [];
-          timeArr.push(time);
-          timeArr = JSON.stringify(timeArr);
-          localStorage.setItem('timeArr', timeArr);
-          localStorage.setItem('idx', ++i);
-          $(document).ready(function(){
-            location.reload();
-          })
-        } else {
-          var timeArr = localStorage.getItem('timeArr');
-          timeArr = JSON.parse(timeArr);
-          t = timeArr.reduce(function(x,y){return x+y})/10;
-          alert('Average load time ' + t + 'ms in 10 reloads');
-        }
-    </script>
 </body>
 </html>

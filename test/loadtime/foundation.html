@@ -165,6 +165,9 @@
     </p>
     <a class="close-reveal-modal">×</a>
   </div>
+
+  <div id="perf"></div>
+  <table></table>
   
   
   <!-- Included JS Files (Uncompressed) -->
@@ -217,32 +220,6 @@
       $("#featured").orbit();
     });
     </script> 
-    <script>
-    var now = window.performance.now ?
-                    (performance.now() + performance.timing.navigationStart) : 
-                    Date.now();
-    var time = now - window.startTime;
-    document.getElementById('restart').addEventListener('click', function(){
-      localStorage.clear();
-      location.reload();
-    }, false);
-    var i = localStorage.getItem('idx') || 0;
-    if(i<10) {
-      var timeArr = localStorage.getItem('timeArr') || null;
-      timeArr = (timeArr) ? JSON.parse(timeArr) : [];
-      timeArr.push(time);
-      timeArr = JSON.stringify(timeArr);
-      localStorage.setItem('timeArr', timeArr);
-      localStorage.setItem('idx', ++i);
-      $(document).ready(function(){
-        location.reload();
-      })
-    } else {
-      var timeArr = localStorage.getItem('timeArr');
-      timeArr = JSON.parse(timeArr);
-      t = timeArr.reduce(function(x,y){return x+y})/10;
-      alert('Average load time ' + t + ' in 10 reloads');
-    }
-    </script>
+    <script type="text/javascript" src="../js/perf.js"></script>
 </body>
 </html>
