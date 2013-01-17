@@ -5,23 +5,18 @@
 	<style type="text/css">
 
 		.move-around {
+			-webkit-transform: translate3d(0, 0, 0);
 			width:200px;
 			height:200px;
-			background:blue;
-			-webkit-transition: all 1s ease-in-out;
-			-moz-transition: all 1s ease-in-out;
-			-o-transition: all 1s ease-in-out;
-			-ms-transition: all 1s ease-in-out;
-			transition: all 1s ease-in-out;
+			background:green;
+			-webkit-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
 		}
 
-		.active {
-			background-color: #fc3;
-			-webkit-transform: rotate(360deg) scale(2);
-			-moz-transform: rotate(360deg) scale(2);
-			-o-transform: rotate(360deg) scale(2);
-			-ms-transform: rotate(360deg) scale(2);
-			transform: rotate(360deg) scale(2);
+		li {
+			background:#f05;
+			border:5px solid black;
+			height:300px;
 		}
 
 	</style>
@@ -34,15 +29,42 @@
 	<script type="text/javascript">
 
 		var div = document.querySelector('.move-around');
-
-		setTimeout(function(){
-			
-			var cls = div.getAttribute('class');
-			alert(cls);
-
-		}, 2000);
+		var startX, deltaX;
 		
 
+		var onTouchStart = function(e) {
+    
+		    startX = e.touches[0].pageX;
+		    deltaX = 0;
+
+		    
+		    
+		    
+		    e.stopPropagation();
+		  };
+
+		 var  onTouchMove = function(e) {
+		 	
+		 	deltaX = e.touches[0].pageX - startX;
+
+		 	var pos = div.style.webkitTransform || 0;
+			if(pos) pos = parseInt(pos.slice(11, pos.length-3));
+
+		      // translate immediately 1-to-1
+		      div.style.webkitTransform = 'translateX(' + (deltaX - pos) + 'px)';
+		      
+		      e.stopPropagation();
+		 }
+
+		  var onTouchEnd = function(e) {
+		    e.stopPropagation();
+		};
+		document.body.addEventListener('touchstart', onTouchStart, false);
+		document.body.addEventListener('touchmove', onTouchMove, false);
+		document.body.addEventListener('touchend', onTouchEnd, false);
+
 	</script>
+
+
 </body>
 </html>

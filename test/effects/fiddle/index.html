@@ -11,12 +11,6 @@
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="cleartype" content="on">
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
-
         <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
         <!--
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,10 +22,10 @@
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/topcoat.css">
+        <link rel="stylesheet" type="text/css" href="../../third-party/normalize/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../../../release/css/topcoat-min.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="../../third-party/modernizr/modernizr.js"></script>
     </head>
     <body>
 
@@ -239,9 +233,8 @@
             </ul>
         </div>
 
-        <script src="http://169.254.10.43:8080/target/target-script-min.js#anonymous"></script>
-        <script src="js/vendor/classList.js"></script>
-        <script src="js/fastclick.js"></script>
+        <script src="../../third-party/classlist/classList.js"></script>
+        <script src="../../third-party/fastclick/fastclick.js"></script>
         <script src="js/main.js"></script>
         <script>
 

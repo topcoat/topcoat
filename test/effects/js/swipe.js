@@ -1,4 +1,19 @@
-!function () {
+/*!
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+// !function () {
 // quick example to see if swipe can be done to look like natively
 var mainContainer = document.querySelector('.main-container')
 	, slideContainer = document.querySelector('.slide-container')
@@ -64,6 +79,7 @@ var touchStart = function (e) {
 	e.preventDefault();
 	startX = e.touches[0].pageX;
 	_prevdif = delta = 1;
+	slideContainer.style.webkitTransitionDuration = 0;
 };
 
 var touchMove = function (e) {
@@ -88,6 +104,7 @@ var touchMove = function (e) {
 };
 
 var touchEnd = function (e) {
+	slideContainer.style.webkitTransitionDuration = '.1s';
 	showPanel();
 };
 
@@ -97,4 +114,4 @@ window.addEventListener('orientationchange', orientationChange, false);
 mainContainer.addEventListener('touchstart', touchStart, false);
 mainContainer.addEventListener('touchmove', touchMove, false);
 mainContainer.addEventListener('touchend', touchEnd, false);
-}();
+// }();

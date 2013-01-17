@@ -17,7 +17,7 @@ An experimental CSS library. Check out the <a href="http://topcoat.github.com/to
 
 ### Installing
 
-You can install TopCoat manually by just dropping it in. We reccomend downloading a tag so its easy to upgrade.
+You can install TopCoat manually by just dropping it in. We recommend downloading a tag so its easy to upgrade.
 
     <link rel=stylesheet type=text/css href=vendor/topcoat-0.1.0/release/css/topcoat-min.css>
 
@@ -41,9 +41,12 @@ To run the tests `clone` the repo, `cd` into the test folder and start a localse
 
 ### Building the src
 
-Topcoat utilizes Grunt for building.
+Topcoat utilizes Grunt for building. You have to install that first
 
-    grunt
+    npm install grunt -g
+
+Then you can run `grunt` to build the sources. The results will be in ./release
+There is also a watch task that you can run. It automatically lints and compiles your less sources when it spots any changes.
 
 ---
 

@@ -12,7 +12,7 @@
                     Date.now();
     </script>
     <!-- Le styles -->
-    <link href="../third_party/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../third-party/bootstrap/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -53,7 +53,7 @@
         margin-right:10px;
       }
     </style>
-    <link href="../third_party/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../third-party/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -121,14 +121,14 @@
         
           <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" src="../third_party/bootstrap/img/64x64.gif">
+                <img class="media-object" src="../third-party/bootstrap/img/64x64.gif">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Media heading</h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 <div class="media">
                   <a class="pull-left" href="#">
-                    <img class="media-object" src="../third_party/bootstrap/img/64x64.gif">
+                    <img class="media-object" src="../third-party/bootstrap/img/64x64.gif">
                   </a>
                   <div class="media-body">
                     <h4 class="media-heading">Media heading</h4>
@@ -139,14 +139,14 @@
             </div>
             <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" src="../third_party/bootstrap/img/64x64.gif">
+                <img class="media-object" src="../third-party/bootstrap/img/64x64.gif">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Media heading</h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 <div class="media">
                   <a class="pull-left" href="#">
-                    <img class="media-object" src="../third_party/bootstrap/img/64x64.gif">
+                    <img class="media-object" src="../third-party/bootstrap/img/64x64.gif">
                   </a>
                   <div class="media-body">
                     <h4 class="media-heading">Media heading</h4>
@@ -157,14 +157,14 @@
             </div>
             <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" src="../third_party/bootstrap/img/64x64.gif">
+                <img class="media-object" src="../third-party/bootstrap/img/64x64.gif">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Media heading</h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 <div class="media">
                   <a class="pull-left" href="#">
-                    <img class="media-object" src="../third_party/bootstrap/img/64x64.gif">
+                    <img class="media-object" src="../third-party/bootstrap/img/64x64.gif">
                   </a>
                   <div class="media-body">
                     <h4 class="media-heading">Media heading</h4>
@@ -188,8 +188,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../third_party/jquery/jquery-1.8.2.min.js"></script>
-    <script src="../third_party/bootstrap/js/bootstrap.js"></script>
+    <script src="../third-party/jquery/jquery-1.8.2.min.js"></script>
+    <script src="../third-party/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../js/perf.js"></script>
     <script>
     var now = window.performance.now ?
@@ -215,7 +215,7 @@
       var timeArr = localStorage.getItem('timeArr');
       timeArr = JSON.parse(timeArr);
       t = timeArr.reduce(function(x,y){return x+y})/10;
-      alert('Average load time ' + t + 'ms in 10 reloads');
+      console.log('Average load time ' + t + 'ms in 10 reloads');
     }
     </script>
   </body>
