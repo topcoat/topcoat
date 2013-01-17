@@ -104,7 +104,7 @@ var touchMove = function (e) {
 };
 
 var touchEnd = function (e) {
-	slideContainer.style.webkitTransitionDuration = '.1s';
+	slideContainer.style.webkitTransitionDuration = '.075s';
 	showPanel();
 };
 

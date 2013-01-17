@@ -183,6 +183,7 @@
       </div>
 
     <div id="perf"></div>
+    <table></table>
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -192,31 +193,31 @@
     <script src="../third-party/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../js/perf.js"></script>
     <script>
-    var now = window.performance.now ?
-                    (performance.now() + performance.timing.navigationStart) : 
-                    Date.now();
-    var time = now - window.startTime;
-    document.getElementById('restart').addEventListener('click', function(){
-      localStorage.clear();
-      location.reload();
-    }, false);
-    var i = localStorage.getItem('idx') || 0;
-    if(i<10) {
-      var timeArr = localStorage.getItem('timeArr') || null;
-      timeArr = (timeArr) ? JSON.parse(timeArr) : [];
-      timeArr.push(time);
-      timeArr = JSON.stringify(timeArr);
-      localStorage.setItem('timeArr', timeArr);
-      localStorage.setItem('idx', ++i);
-      $(document).ready(function(){
-        location.reload();
-      })
-    } else {
-      var timeArr = localStorage.getItem('timeArr');
-      timeArr = JSON.parse(timeArr);
-      t = timeArr.reduce(function(x,y){return x+y})/10;
-      console.log('Average load time ' + t + 'ms in 10 reloads');
-    }
+    // var now = window.performance.now ?
+    //                 (performance.now() + performance.timing.navigationStart) : 
+    //                 Date.now();
+    // var time = now - window.startTime;
+    // document.getElementById('restart').addEventListener('click', function(){
+    //   localStorage.clear();
+    //   location.reload();
+    // }, false);
+    // var i = localStorage.getItem('idx') || 0;
+    // if(i<10) {
+    //   var timeArr = localStorage.getItem('timeArr') || null;
+    //   timeArr = (timeArr) ? JSON.parse(timeArr) : [];
+    //   timeArr.push(time);
+    //   timeArr = JSON.stringify(timeArr);
+    //   localStorage.setItem('timeArr', timeArr);
+    //   localStorage.setItem('idx', ++i);
+    //   $(document).ready(function(){
+    //     location.reload();
+    //   })
+    // } else {
+    //   var timeArr = localStorage.getItem('timeArr');
+    //   timeArr = JSON.parse(timeArr);
+    //   t = timeArr.reduce(function(x,y){return x+y})/10;
+    //   console.log('Average load time ' + t + 'ms in 10 reloads');
+    // }
     </script>
   </body>
 </html>
