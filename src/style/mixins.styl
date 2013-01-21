@@ -23,6 +23,23 @@ standard-structure()
     white-space nowrap
     user-select()
 
+/* Hides content visually, but keeps it in the DOM for screen readers. */
+hidden-accessible()
+    border 0
+    clip rect(0 0 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute !important
+    width 1px
+
+/* For image replacement this hides text within a element containing a full-width and full-height background image */
+hide-text()
+    text-indent 100%
+    white-space nowrap
+    overflow hidden
+
 icon-structure()
     background-repeat no-repeat
     display inline-block
