@@ -1,0 +1,37 @@
+.approx-slider
+    background light-track-background
+    border light-track-border
+    border-radius component-radius
+    display inline-block
+    height standard-track-height
+    outline none
+    width standard-track-width
+    -webkit-appearance none !important
+
+    &::-webkit-slider-thumb
+        light-style()
+        border-radius component-radius
+        cursor pointer
+        height standard-slider-thumb-height
+        width standard-slider-thumb-width
+        -webkit-appearance none !important
+
+    &:focus::-webkit-slider-thumb
+        light-focus-style()
+
+    &.large
+        height standard-track-height + 2
+        width standard-track-width + 40 !important
+
+    &.large::-webkit-slider-thumb
+        height standard-slider-thumb-height + 4
+        width standard-slider-thumb-width + 4
+
+    &.dark
+        background dark-track-background
+        border dark-track-border
+        &::-webkit-slider-thumb
+            dark-style()
+
+        &:focus::-webkit-slider-thumb
+            dark-focus-style()
