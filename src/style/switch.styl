@@ -1,183 +1,183 @@
 input.slide-switch[type=checkbox]
     hidden-accessible()
 
-    input.slide-switch[type=checkbox] + label
-        standard-structure()
-        margin 0 standard-margin standard-margin standard-margin
-        background-color #ccc // using background instead background-color will override background clip
-        background-image none !important
-        border light-border
-        font-family source-sb
-        cursor pointer
-        padding 0
-        position relative
-        width 54px
-        vertical-align: middle
+input.slide-switch[type=checkbox] + label
+    standard-structure()
+    margin 0 standard-margin standard-margin standard-margin
+    background-color #ccc // using background instead background-color will override background clip
+    background-image none !important
+    border light-border
+    font-family source-sb
+    cursor pointer
+    padding 0
+    position relative
+    width 54px
+    vertical-align: middle
 
-    input.slide-switch[type=checkbox]:checked + label .wrapper
-        left 0px
-        padding 0 0 0 0
-        .on
-            visibility visible
-            -moz-transition visibility 0s linear 0s
-            -webkit-transition visibility 0s linear 0s
-            transition visibility 0s linear 0s
-
-        .off
-            visibility hidden
-            -moz-transition visibility 0s linear 0.2s
-            -webkit-transition visibility 0s linear 0.2s
-            transition visibility 0s linear 0.2s
-
-
-
-    input.slide-switch[type=checkbox]:focus + label
-        light-focus-style()
-        padding 0 0 0 0
-        margin 0 standard-margin standard-margin standard-margin
-        .switch
-            border light-border-focus
-            box-shadow light-border-glow
-
-    input.slide-switch.dark[type=checkbox]:focus + label
-        dark-focus-style()
-        padding 0 0 0 0
-        margin 0 standard-margin standard-margin standard-margin
-        .switch
-            border dark-border-focus
-            box-shadow dark-border-glow
-
-    input.slide-switch[type=checkbox] + label .wrapper
-        display block
-        height standard-height
-        position relative
-        top 0px
-        left -38px
-        -moz-transition left .2s ease-out
-        -webkit-transition left .2s ease-out
-        transition left .2s ease-out
-        width 90px
-        z-index 1
-
-    input.slide-switch[type=checkbox] + label .switch,
-    input.slide-switch[type=checkbox] + label .on,
-    input.slide-switch[type=checkbox] + label .off
-        display block
-        height standard-height
-        font-size standard-font-size
-        line-height standard-height
-        position absolute
-        text-align center
-        text-shadow light-text-shadow
-        top 0
-
-
-    input.slide-switch[type=checkbox] + label .switch
-        background light-gradient-start /* Old browsers */
-        background -moz-linear-gradient(top, light-gradient-start, light-gradient-end) /* FF3.6+ */
-        background -webkit-gradient(linear, left top, left bottom, from(light-gradient-start), to(light-gradient-end)) /* Chrome,Safari4+ */
-        background -webkit-linear-gradient(top, light-gradient-start, light-gradient-end) /* Chrome10+,Safari5.1+ */
-        background -o-linear-gradient(top, light-gradient-start, light-gradient-end) /* Opera 11.10+ */
-        background -ms-linear-gradient(top, light-gradient-start, light-gradient-end) /* IE10+ */
-        background linear-gradient(top, light-gradient-start, light-gradient-end) /* W3C */
-        // filter progid:DXImageTransform.Microsoft.gradient(startColorstr=light-gradient-start,endColorstr=light-gradient-end,GradientType=0) /* IE6-8 */
-        border light-border
-        border-radius component-radius
-        box-shadow light-gradient-highlight
-        left 37px
-        width 16px
-        top -1px
-        z-index 1
-
-    input.slide-switch[type=checkbox] + label .on
-        background light-blue
-        border-top-left-radius component-radius
-        border-bottom-left-radius component-radius
-        box-shadow light-down-shadow
-        color light-blue-text
-        width 38px
-        padding-right component-radius
-        visibility hidden
-        -moz-transition visibility 0s linear 0.2s
-        -webkit-transition visibility 0s linear 0.2s
-        transition visibility 0s linear 0.2s
-
-    input.slide-switch[type=checkbox] + label .off
-        background light-down
-        border-top-right-radius component-radius
-        border-bottom-right-radius component-radius
-        box-shadow light-down-shadow
-        left 54 - component-radius
-        width 38px
-        padding-left component-radius
+input.slide-switch[type=checkbox]:checked + label .wrapper
+    left 0px
+    padding 0 0 0 0
+    .on
         visibility visible
         -moz-transition visibility 0s linear 0s
         -webkit-transition visibility 0s linear 0s
         transition visibility 0s linear 0s
 
-    input.slide-switch.dark[type=checkbox] + label
-        background-color dark-down // using background instead background-color will override background clip
-        border dark-border
-        padding 0 0 0 0
+    .off
+        visibility hidden
+        -moz-transition visibility 0s linear 0.2s
+        -webkit-transition visibility 0s linear 0.2s
+        transition visibility 0s linear 0.2s
 
-    input.slide-switch.dark[type=checkbox] + label .switch,
-    input.slide-switch.dark[type=checkbox] + label .on,
-    input.slide-switch.dark[type=checkbox] + label .off
-        text-shadow dark-text-shadow
 
-    input.slide-switch.dark[type=checkbox] + label .switch
-        background dark-gradient-start /* Old browsers */
-        background -moz-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* FF3.6+ */
-        background -webkit-gradient(linear, left top, left bottom, from(dark-gradient-start), to(dark-gradient-end)) /* Chrome,Safari4+ */
-        background -webkit-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* Chrome10+,Safari5.1+ */
-        background -o-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* Opera 11.10+ */
-        background -ms-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* IE10+ */
-        background linear-gradient(top, dark-gradient-start, dark-gradient-end) /* W3C */
-        // filter progid:DXImageTransform.Microsoft.gradient(startColorstr=dark-gradient-start,endColorstr=dark-gradient-end,GradientType=0) /*  IE6-8 */
-        border dark-border
-        box-shadow dark-gradient-highlight
 
-    input.slide-switch.dark[type=checkbox] + label .on
-        background dark-down
-        box-shadow dark-down-shadow
-        color dark-blue-text
+input.slide-switch[type=checkbox]:focus + label
+    light-focus-style()
+    padding 0 0 0 0
+    margin 0 standard-margin standard-margin standard-margin
+    .switch
+        border light-border-focus
+        box-shadow light-border-glow
 
-    input.slide-switch.dark[type=checkbox] + label .off
-        background dark-down
-        box-shadow dark-down-shadow
-        color #999
+input.slide-switch.dark[type=checkbox]:focus + label
+    dark-focus-style()
+    padding 0 0 0 0
+    margin 0 standard-margin standard-margin standard-margin
+    .switch
+        border dark-border-focus
+        box-shadow dark-border-glow
 
-    input.slide-switch.large[type=checkbox] + label
+input.slide-switch[type=checkbox] + label .wrapper
+    display block
+    height standard-height
+    position relative
+    top 0px
+    left -38px
+    -moz-transition left .2s ease-out
+    -webkit-transition left .2s ease-out
+    transition left .2s ease-out
+    width 90px
+    z-index 1
+
+input.slide-switch[type=checkbox] + label .switch,
+input.slide-switch[type=checkbox] + label .on,
+input.slide-switch[type=checkbox] + label .off
+    display block
+    height standard-height
+    font-size standard-font-size
+    line-height standard-height
+    position absolute
+    text-align center
+    text-shadow light-text-shadow
+    top 0
+
+
+input.slide-switch[type=checkbox] + label .switch
+    background light-gradient-start /* Old browsers */
+    background -moz-linear-gradient(top, light-gradient-start, light-gradient-end) /* FF3.6+ */
+    background -webkit-gradient(linear, left top, left bottom, from(light-gradient-start), to(light-gradient-end)) /* Chrome,Safari4+ */
+    background -webkit-linear-gradient(top, light-gradient-start, light-gradient-end) /* Chrome10+,Safari5.1+ */
+    background -o-linear-gradient(top, light-gradient-start, light-gradient-end) /* Opera 11.10+ */
+    background -ms-linear-gradient(top, light-gradient-start, light-gradient-end) /* IE10+ */
+    background linear-gradient(top, light-gradient-start, light-gradient-end) /* W3C */
+    // filter progid:DXImageTransform.Microsoft.gradient(startColorstr=light-gradient-start,endColorstr=light-gradient-end,GradientType=0) /* IE6-8 */
+    border light-border
+    border-radius component-radius
+    box-shadow light-gradient-highlight
+    left 37px
+    width 16px
+    top -1px
+    z-index 1
+
+input.slide-switch[type=checkbox] + label .on
+    background light-blue
+    border-top-left-radius component-radius
+    border-bottom-left-radius component-radius
+    box-shadow light-down-shadow
+    color light-blue-text
+    width 38px
+    padding-right component-radius
+    visibility hidden
+    -moz-transition visibility 0s linear 0.2s
+    -webkit-transition visibility 0s linear 0.2s
+    transition visibility 0s linear 0.2s
+
+input.slide-switch[type=checkbox] + label .off
+    background light-down
+    border-top-right-radius component-radius
+    border-bottom-right-radius component-radius
+    box-shadow light-down-shadow
+    left 54 - component-radius
+    width 38px
+    padding-left component-radius
+    visibility visible
+    -moz-transition visibility 0s linear 0s
+    -webkit-transition visibility 0s linear 0s
+    transition visibility 0s linear 0s
+
+input.slide-switch.dark[type=checkbox] + label
+    background-color dark-down // using background instead background-color will override background clip
+    border dark-border
+    padding 0 0 0 0
+
+input.slide-switch.dark[type=checkbox] + label .switch,
+input.slide-switch.dark[type=checkbox] + label .on,
+input.slide-switch.dark[type=checkbox] + label .off
+    text-shadow dark-text-shadow
+
+input.slide-switch.dark[type=checkbox] + label .switch
+    background dark-gradient-start /* Old browsers */
+    background -moz-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* FF3.6+ */
+    background -webkit-gradient(linear, left top, left bottom, from(dark-gradient-start), to(dark-gradient-end)) /* Chrome,Safari4+ */
+    background -webkit-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* Chrome10+,Safari5.1+ */
+    background -o-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* Opera 11.10+ */
+    background -ms-linear-gradient(top, dark-gradient-start, dark-gradient-end) /* IE10+ */
+    background linear-gradient(top, dark-gradient-start, dark-gradient-end) /* W3C */
+    // filter progid:DXImageTransform.Microsoft.gradient(startColorstr=dark-gradient-start,endColorstr=dark-gradient-end,GradientType=0) /*  IE6-8 */
+    border dark-border
+    box-shadow dark-gradient-highlight
+
+input.slide-switch.dark[type=checkbox] + label .on
+    background dark-down
+    box-shadow dark-down-shadow
+    color dark-blue-text
+
+input.slide-switch.dark[type=checkbox] + label .off
+    background dark-down
+    box-shadow dark-down-shadow
+    color #999
+
+input.slide-switch.large[type=checkbox] + label
+    height 27px
+    width 69px
+    .wrapper
+        display block
         height 27px
-        width 69px
-        .wrapper
-            display block
-            height 27px
-            position relative
-            top 0px
-            left -48px
-            -moz-transition left .2s ease-out
-            -webkit-transition left .2s ease-out
-            transition left .2s ease-out
-            z-index 1
+        position relative
+        top 0px
+        left -48px
+        -moz-transition left .2s ease-out
+        -webkit-transition left .2s ease-out
+        transition left .2s ease-out
+        z-index 1
 
-        .switch,
-        .on,
-        .off
-            height 27px
-            font-size 14px
-            line-height 28px
+    .switch,
+    .on,
+    .off
+        height 27px
+        font-size 14px
+        line-height 28px
 
-        .switch
-            left 47px
-            width 21px
+    .switch
+        left 47px
+        width 21px
 
-        .on
-            width 48px
+    .on
+        width 48px
 
-        .off
-            left 69 - component-radius
-            width 48px
+    .off
+        left 69 - component-radius
+        width 48px
 
-    input.slide-switch.large[type=checkbox]:checked + label .wrapper
-        left 0px
+input.slide-switch.large[type=checkbox]:checked + label .wrapper
+    left 0px
