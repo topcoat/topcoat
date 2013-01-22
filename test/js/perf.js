@@ -50,7 +50,7 @@ window.onload = function(){
   setTimeout(function(){
     var t = performance.timing;
     var table = document.querySelector('table');
-    var tr = '<tr><td>Page load time (after being received from the server)</td><td colspan=4>'+(t.loadEventEnd - t.responseEnd)+' ms</td></tr>';
+    var tr = '<tr><td>Page load time (after downloading)</td><td colspan=4>'+(t.loadEventEnd - t.responseEnd)+' ms</td></tr>';
     table.innerHTML += tr;
   }, 0);
 };
