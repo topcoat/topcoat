@@ -1,0 +1,43 @@
+.spinner {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: .75s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: .75s;
+
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: .75s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: rotate;
+    -moz-animation-duration: .75s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+
+.spinner {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    width:16px;
+    height:16px;
+    background:url(../img/spinner-sml.png) 50% no-repeat;
+    background-size: 100%;
+}
+
+.spinner.large {
+    width:36px;
+    height:36px;
+    background:url(../img/spinner-lrg.png) 50% no-repeat;
+    background-size: 100%;
+}
+
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}

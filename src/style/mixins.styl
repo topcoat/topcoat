@@ -1,0 +1,170 @@
+user-select()
+    user-select none
+    -webkit-touch-callout none
+    -webkit-user-select none
+
+standard-structure()
+    background-clip component-background-clip
+    border transparent-border
+    border-radius component-radius
+    display inline-block
+    font-size standard-font-size
+    height standard-height
+    line-height standard-height
+    min-width standard-min-width
+    margin 0 standard-margin standard-margin 0
+    max-width standard-max-width
+    overflow hidden
+    padding 0 standard-padding
+    position relative
+    text-decoration none
+    text-overflow ellipsis
+    vertical-align top
+    white-space nowrap
+    user-select()
+
+/* Hides content visually, but keeps it in the DOM for screen readers. */
+hidden-accessible()
+    border 0
+    clip rect(0 0 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute !important
+    width 1px
+
+/* For image replacement this hides text within a element containing a full-width and full-height background image */
+hide-text()
+    text-indent 100%
+    white-space nowrap
+    overflow hidden
+
+icon-structure()
+    background-repeat no-repeat
+    display inline-block
+    vertical-align top
+
+light-style(light-background-image=none, background-position=center, background-repeat=none)
+    background-image light-background-image, linear-gradient(top, light-gradient-start, light-gradient-end)
+    background-image light-background-image,-webkit-gradient(linear,left top,left bottom,from(light-gradient-start), to(light-gradient-end))
+    background-position background-position
+    background-repeat background-repeat
+    border light-border
+    box-shadow light-gradient-highlight
+    color light-text
+    text-shadow light-text-shadow
+
+light-hover-style(light-background-image=none, background-position=center, background-repeat=none)
+    background-image light-background-image, linear-gradient(top, light-hover-gradient-start, light-hover-gradient-end)
+    background-image light-background-image, -webkit-gradient(linear, left top, left bottom, from(light-hover-gradient-start), to(light-hover-gradient-end))
+    background-position background-position
+    background-repeat background-repeat
+
+light-down-style(light-background-image=none, background-position=center, background-repeat=none)
+    background-color light-down
+    background-image light-background-image
+    background-position background-position
+    background-repeat background-repeat
+    box-shadow light-down-shadow
+    text-decoration none
+
+light-focus-style()
+    border light-border-focus
+    box-shadow light-border-glow
+    outline none
+
+quiet-style()
+    background-image linear-gradient(top, quiet-gradient-start, quiet-gradient-end)
+    background-image -webkit-gradient(linear, left top, left bottom, from(quiet-gradient-start), to(quiet-gradient-end))
+    border quiet-border
+    box-shadow quiet-gradient-highlight
+    color quiet-text
+    text-shadow none
+
+quiet-hover-style()
+    background-image linear-gradient(top,quiet-hover-gradient-start,quiet-hover-gradient-end)
+    background-image -webkit-gradient(linear, left top, left bottom, from(quiet-hover-gradient-start), to(quiet-hover-gradient-end))
+
+quiet-down-style()
+    background quiet-down
+    box-shadow quiet-down-shadow
+    text-decoration none
+
+quiet-focus-style()
+    border quiet-border-focus
+    box-shadow quiet-border-glow
+    outline none
+
+dark-style(dark-background-image=none, background-position=center, background-repeat=none)
+    background-image dark-background-image, linear-gradient(top, dark-gradient-start, dark-gradient-end)
+    background-image dark-background-image, -webkit-gradient(linear, left top, left bottom, from(dark-gradient-start), to(dark-gradient-end))
+    background-position background-position
+    background-repeat background-repeat
+    border dark-border
+    box-shadow dark-gradient-highlight
+    color dark-text
+    text-shadow dark-text-shadow
+
+dark-hover-style(dark-background-image=none, background-position=center, background-repeat=none)
+    background-image dark-background-image, linear-gradient(top, dark-hover-gradient-start, dark-hover-gradient-end)
+    background-image dark-background-image, -webkit-gradient(linear, left top, left bottom, from(dark-hover-gradient-start), to(dark-hover-gradient-end))
+    background-position background-position
+    background-repeat background-repeat
+
+dark-down-style(dark-background-image=none, background-position=center, background-repeat=none)
+    background-color dark-down
+    background-image dark-background-image
+    background-position background-position
+    background-repeat background-repeat
+    box-shadow dark-down-shadow
+    text-decoration none
+
+dark-focus-style()
+    border dark-border-focus
+    box-shadow dark-border-glow
+    outline none
+
+dark-quiet-style()
+    background-image linear-gradient(top, dark-quiet-gradient-start, dark-quiet-gradient-end)
+    background-image -webkit-gradient(linear, left top, left bottom, from(dark-quiet-gradient-start), to(dark-quiet-gradient-end))
+    border dark-quiet-border
+    box-shadow dark-quiet-gradient-highlight
+    color dark-quiet-text
+    text-shadow none
+
+dark-quiet-hover-style()
+    background-image linear-gradient(top, dark-quiet-hover-gradient-start, dark-quiet-hover-gradient-end)
+    background-image -webkit-gradient(linear, left top, left bottom, from(dark-quiet-hover-gradient-start), to(dark-quiet-hover-gradient-end))
+
+dark-quiet-down-style()
+    background dark-quiet-down
+    box-shadow dark-quiet-down-shadow
+    text-decoration none
+
+dark-quiet-focus-style()
+    border dark-quiet-border-focus
+    box-shadow dark-quiet-border-glow
+    outline none
+
+cta-style()
+    background-color cta-gradient-end
+    background-image -webkit-gradient(linear, left top, left bottom, from(cta-gradient-start), to(cta-gradient-end))
+    background-image linear-gradient(top,cta-gradient-start,cta-gradient-end)
+    border cta-border
+    box-shadow cta-gradient-highlight
+    color cta-text
+    text-shadow cta-text-shadow
+
+cta-hover-style()
+    background-color cta-hover-gradient-end
+    background-image -webkit-gradient(linear, left top, left bottom, from(cta-hover-gradient-start), to(cta-hover-gradient-end))
+    background-image linear-gradient(top,cta-hover-gradient-start,cta-hover-gradient-end)
+
+cta-down-style()
+    background cta-down
+    box-shadow cta-down-shadow
+    text-decoration none
+    box-shadow cta-border-glow
+    outline  none
+

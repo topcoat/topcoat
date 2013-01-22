@@ -1,0 +1,37 @@
+input[type=checkbox]
+    hidden-accessible()
+
+    input[type=checkbox] + label
+        background url("../img/checkbox_unchecked.png") no-repeat 0 50%
+        display inline-block
+        font-weight 400
+        padding 0 0 0 20px
+
+    input[type=checkbox]:checked + label
+        background: url("../img/checkbox_checked.png") no-repeat 0 50%
+        display inline-block
+        padding 0 0 0 20px
+
+    input.dark[type=checkbox] + label
+        background url("../img/checkbox_unchecked_dark.png") no-repeat 0 50%
+        display inline-block
+        padding 0 0 0 20px
+
+    input.dark[type=checkbox]:checked + label
+        background url("../img/checkbox_checked_dark.png") no-repeat 0 50%
+        display inline-block
+        padding 0 0 0 20px
+
+    input[type=checkbox]:focus + label
+        light-focus-style()
+        border-radius component-radius
+        padding 2px 2px 2px 22px
+        background-position 2px 50%
+        margin -3px
+
+    input.dark[type=checkbox]:focus + label
+        dark-focus-style()
+        border-radius component-radius
+        padding 2px 2px 2px 22px
+        background-position 2px 50%
+        margin -3px
