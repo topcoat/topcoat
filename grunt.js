@@ -72,8 +72,8 @@ var bower = {
             },
 
             watch: {
-                files: ['src/less/topcoat.less'],
-                tasks: ['less', 'mincss']
+                files: ['src/style/*.styl'],
+                tasks: ['stylus', 'mincss']
             }
         });
 
