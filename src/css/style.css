@@ -29,24 +29,20 @@
 
 /* Global ----------------------------------------------------------------- */
 body {
-	background-color: #fff;
+	margin: 0;
+	padding: 0;	background-color: #fff;
 	color: #000;
 	font: 16px "Source Sans", helvetica, arial, sans-serif;
 	font-weight: 200;
-	margin: 0;
-	padding: 0;
 	text-rendering: optimizeLegibility;
 }
 
 .disabled {
 	opacity: 0.3;
-	cursor: not-allowed;
+	cursor: default;
+  	pointer-events: none;
 }
 
-
-.light { background-color: #dfe2e2; }
-
-.dark { background-color: #3A3F42; }
 
 
 /* Buttons --------------------------------------------------------------- */
@@ -76,7 +72,7 @@ body {
   	background-color: #e5e9e8;
   	box-shadow: inset 0 1px #ffffff;
   	color: #454545;
-  	text-shadow: 0 -1px #ffffff;
+  	text-shadow: 0 1px #ffffff;
 }
 
 
@@ -106,7 +102,16 @@ body {
   	background-color: #e5e9e8;
   	box-shadow: inset 0 1px #ffffff;
   	color: #454545;
-  	text-shadow: 0 -1px #ffffff;
+  	text-shadow: 0 1px #ffffff;
+}
+
+.dark.button,
+.dark.large-button {
+	border: 1px solid rgba(0, 0, 0, 0.36);
+  	background-color: #595b5b;
+  	box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
+  	color: #c6c8c8;
+  	text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
 }
 
 	.button:active,
@@ -117,14 +122,6 @@ body {
 	  	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
 	}
 
-	.dark.button,
-	.dark.large-button {
-		border: 1px solid rgba(0, 0, 0, 0.36);
-	  	background-color: #595b5b;
-	  	box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
-	  	color: #c6c8c8;
-	  	text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
-	}
 	.dark.button:active,
 	.dark.button.down,
 	.dark.large-button:active,
@@ -144,13 +141,15 @@ body {
 	font-weight: 500;
 	text-shadow: 0 -1px rgba(0, 0, 0, 0.36);	
 }
+
+.dark.cta { border: 1px solid #0055ad; }
+
 	.cta:active,
 	.cta.down {
 		background-color: #0380e8;
 	  	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
 	}
 
-	.dark.cta { border: 1px solid #0055ad; }
 	.dark.cta:active,
 	.dark.cta.down {
 		background-color: #1976c3;
@@ -227,62 +226,66 @@ body {
 	user-select: none;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-
+	white-space: nowrap;
 }
 
-.button-bar > .button:not(:first-child):not(:last-child) {
-	border-radius: 0;
-	margin: 0 -4px;
-	border-left: 1px solid rgba(188,188,188,0.6);
-	border-right: 1px solid rgba(188,188,188,0.6);
-}
+	.button-bar > .button,
+	.button-bar > .large-button { word-wrap: break-word; }
 
-.button-bar > .dark.button:not(:first-child):not(:last-child) {
-	border-left: 1px solid rgba(0,0,0,0.3);
-	border-right: 1px solid rgba(0,0,0,0.3);
-}
+	.button-bar > .button:not(:first-child):not(:last-child),
+	.button-bar > .large-button:not(:first-child):not(:last-child) {
+		border-radius: 0;
+		margin: 0 -4px;
+		border-left: 1px solid rgba(188,188,188,0.6);
+		border-right: 1px solid rgba(188,188,188,0.6);
+	}
 
-.button-bar > .button:first-child {
-  	border-radius: 6px 0 0 6px;
-  	margin: 0;
-	border-right: 1px solid rgba(188,188,188,0.6);
-}
+	.button-bar > .dark:not(:first-child):not(:last-child) {
+		border-left: 1px solid rgba(0,0,0,0.3);
+		border-right: 1px solid rgba(0,0,0,0.3);
+	}
 
-.button-bar > .dark.button:first-child {
-	border-right: 1px solid rgba(0,0,0,0.3);
-}
+	.button-bar > .button:first-child,
+	.button-bar > .large-button:first-child {
+	  	border-radius: 6px 0 0 6px;
+	  	margin: 0;
+		border-right: 1px solid rgba(188,188,188,0.6);
+	}
 
-.button-bar > .button:last-child {
-  	border-radius: 0 6px 6px 0;
-  	margin: 0;
-	border-left: 1px solid rgba(188,188,188,0.6);
-}
+	.button-bar > .dark:first-child { border-right: 1px solid rgba(0,0,0,0.3); }
 
-.button-bar > .dark.button:last-child {
-	border-left: 1px solid rgba(0,0,0,0.3);
-}
+	.button-bar > .button:last-child,
+	.button-bar > .large-button:last-child {
+	  	border-radius: 0 6px 6px 0;
+	  	margin: 0;
+		border-left: 1px solid rgba(188,188,188,0.6);
+	}
+
+	.button-bar > .dark:last-child { border-left: 1px solid rgba(0,0,0,0.3); }
 
 
 /* Header Bar ------------------------------------------------------------ */
 .header-bar {
 	height: 3.9000000000000004rem;
 	width: 100%;
-	border-width: 1px 0;
-	font-size: 1.3rem;
-	line-height: 3.9000000000000004rem;
-	text-align: center;
 	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-width: 1px 0;
 	background-color: #e5e9e9;
 	box-shadow: inset 0 1px #ffffff;
 	color: #000;
+	font-size: 1.3rem;
+	line-height: 3.9000000000000004rem;
+	text-align: center;
+
 	}
 
-	.dark.header-bar {
-		border: 1px solid rgba(0, 0, 0, 0.36);
-		background-color: #595b5b;
-		box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
-		color: #fff;	
-	}
+.dark.header-bar {
+	border: 1px solid rgba(0, 0, 0, 0.36);
+	border-width: 1px 0;
+	background-color: #595b5b;
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
+	color: #fff;	
+}
 
 	.header-bar p { margin: 0; }
 	.header-bar .header-bar-left {
@@ -330,11 +333,13 @@ body {
 		background-color: #e5e9e8;
 		box-shadow: inset 0 1px #ffffff;
 		color: #454545;
-		text-shadow: 0 -1px #ffffff;
+		text-decoration: none;
+		text-shadow: 0 1px #ffffff;
 		box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 	}	
-		.tab-bar a:first-child { border: 0; }
+		.tab-bar a:first-child,
+		.dark.tab-bar a:first-child { border: 0; }
 	
 		
 	.dark.tab-bar a {
@@ -376,19 +381,39 @@ body {
 	border-bottom: 1px solid #eff1f1;
 	color: #454545;
 	}
+
+.dark.list {
+	border-top: 1px solid #2f3234;
+	border-bottom: 1px solid #5e6061;
+	color: #c6c8c8;
+}	
+	
 	.list > li {
 		padding: 0 30px;
 		border-top: 1px solid #eff1f1;
 		border-bottom: 1px solid #bcbfbf;
-	}
+	}		
 
-		
-	.dark.list {
-		border-top: 1px solid #2f3234;
-		border-bottom: 1px solid #5e6061;
-		color: #c6c8c8;
-	}
-		.dark.list > li {
-			border-top: 1px solid #5e6061;
-			border-bottom: 1px solid #2f3234;
-		}		
+	.dark.list > li {
+		border-top: 1px solid #5e6061;
+		border-bottom: 1px solid #2f3234;
+	}		
+
+
+
+/* Styles for Mobile Index Page */
+.bg-slategray {
+  background: #3a3f42 url("../img/bg_dark.png") repeat-x;
+  color: #c7c7c7;
+  font-size: ;
+  padding: 20px;
+}
+
+.mobile-tab-bar,
+.header-bar {
+	width: 80%;
+}
+
+.mobile-list {
+	width: 40%;
+}
