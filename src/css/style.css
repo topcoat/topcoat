@@ -27,6 +27,22 @@
   font-weight: 600;
 }
 
+
+@font-face {
+  font-family: "source";
+  src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "source-l";
+  src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "source-sb";
+  src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+
 /* Global ----------------------------------------------------------------- */
 body {
 	margin: 0;
@@ -402,6 +418,8 @@ body {
 
 
 /* Styles for Mobile Index Page */
+#main td { font-weight: 200; }
+
 .bg-slategray {
   background: #3a3f42 url("../img/bg_dark.png") repeat-x;
   color: #c7c7c7;
