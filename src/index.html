@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"> <!-- Google Chrome Frame -->
+    <title>Topcoat Style Guide</title>
+    <link rel="stylesheet" type="text/css" href="../doc/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../doc/css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body>
+<a href="https://github.com/topcoat/topcoat"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:4000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+<div id="container">
+    <header>
+    <hgroup>
+        <h1>TopCoat</h1> 
+        <h2>Style Guide - January 23, 2013</h2> 
+    </hgroup>
+    <nav>
+        <h3>Mobile Navigation</h3>
+        <ul>
+            <li><a href="#mobile-header">Header Bar</a></li>
+            <li><a href="#mobile-tab-bar">Tab Bar</a></li>
+        </ul>
+        <h3>Mobile Actions</h3>
+        <ul>
+            <li><a href="#mobile-button">Button</a></li>
+            <li><a href="#mobile-icon-button">Icon Button</a></li>
+            <li><a href="#mobile-label-button">Icon Label Button</a></li>
+            <li><a href="#mobile-cta-button">Call-to-Action Button</a></li>
+            <li><a href="#mobile-button-bar">Button Bar</a></li>
+        </ul>
+        <h3>Mobile Lists</h3>
+        <ul>
+            <li><a href="#mobile-list">Unordered List</a></li>
+        </ul>
+	</nav>
+    </header>
+    <div id="main" role="main">
+   
+		<section id="mobile-navigation">
+			<h4 id="mobile-header"><span>Header Bar</span></h4>
+		   	<table class="preview header-bar">
+		      	<tr>
+		         	<td class="bg-light">
+							<p>
+								<div class="header-bar">
+									<a class="header-bar-left"></a>
+									<p class="header-bar-title">Header Bar</p>
+									<a class="header-bar-right"></a>
+								</div>
+							</p>
+		        		</td>
+		   			<td class="bg-slategray">
+		       			<p>
+								<div class="dark header-bar">
+									<a class="header-bar-left"></a>
+									<p class="header-bar-title">Header Bar</p>
+									<a class="header-bar-right"></a>
+								</div>
+							</p>
+						</td>
+					</tr>
+				</table>
+		
+		      <h4 id="mobile-tab-bar"><span>Tab Bar</span></h4>
+		      <table class="preview mobile-tab-bar">
+					<tr>
+						<td class="bg-light">
+							<p>
+								<ul class="tab-bar">
+									<a href="">#1</a>
+									<a href="">#2</a>
+									<a href="">#3</a>
+									<a href="">#4</a>
+									<a href="">#5</a>
+								</ul>
+						  	</p>
+        				</td>
+	     				<td class="bg-slategray">
+   						<p>
+								<ul class="dark tab-bar">
+									<a href="">#1</a>
+									<a href="">#2</a>
+									<a href="">#3</a>
+									<a href="">#4</a>
+									<a href="">#5</a>
+								</ul>
+		  					</p>
+  						</td>
+		    		</tr>
+		   	</table>
+			</section><!-- end of #mobile-navigation -->
+		
+		
+
+			<section id="mobile-actions">
+
+	       	<h4 id="mobile-button"><span>Button</span></h4>
+	       	<table class="preview">
+	         	<tr>
+         			<td class="bg-light">
+							<p>
+                   		<a href="#mobile-button" class="button" role="button">Button</a>
+                   		<a class="button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                    	</p>
+                    	<p>
+                     	<a href="#mobile-button" class="button quiet" role="button">Quiet Button</a>
+                       	<a class="button quiet disabled" role="button" aria-disabled="true">Disabled Quiet Button</a>
+                    	</p>
+                    	<p>
+                    		<a href="#mobile-button" class="large-button" role="button">Large Button</a>
+                     	<a class="large-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
+                    	</p>
+                    	<p>
+                        <a href="#mobile-button" class="large-button quiet" role="button">Quiet Button</a>
+                       	<a class="large-button quiet disabled" role="button" aria-disabled="true">Disabled Quiet Button</a>
+                    	</p>
+	      			</td>    
+	               <td class="bg-slategray">
+							<p>
+                   		<a href="#mobile-button" class="dark button" role="button">Button</a>
+                   		<a class="dark button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                    	</p>
+                    	<p>
+                     	<a href="#mobile-button" class="dark button quiet" role="button">Quiet Button</a>
+                       	<a class="dark button quiet disabled" role="button" aria-disabled="true">Disabled Quiet Button</a>
+                    	</p>
+                    	<p>
+                    		<a href="#mobile-button" class="dark large-button" role="button">Large Button</a>
+                     	<a class="dark large-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
+                    	</p>
+                    	<p>
+                        <a href="#mobile-button" class="dark large-button quiet" role="button">Quiet Button</a>
+                       	<a class="dark large-button quiet disabled" role="button" aria-disabled="true">Disabled Quiet Button</a>
+                    	</p>
+	          		</td>
+	     			</tr>
+	   		</table>
+   
+
+	       	<h4 id="mobile-icon-button"><span>Icon Button</span></h4>
+	       	<table class="preview">
+	         	<tr>
+         			<td class="bg-light">
+							<p>
+								<a href="#mobile-icon-button" class="button no-label" role="button"><i class="icon">Placeholder Icon</i></a>
+								<a class="button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+                     	<a href="#mobile-icon-button" class="quiet button no-label" role="button" ><i class="icon">Placeholder Icon</i></a>
+								<a class="quiet button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+                    	</p>
+							<p>
+                   		<a href="#mobile-icon-button" class="large-button no-label" role="button"><i class="icon">Placeholder Icon</i></a>
+								<a class="large-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+								<a href="#mobile-icon-button" class="quiet large-button no-label" role="button" ><i class="icon">Placeholder Icon</i></a>
+								<a class="quiet large-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+                    	</p>
+	      			</td>    
+	               <td class="bg-slategray">
+							<p>
+                   		<a href="#mobile-icon-button" class="dark button no-label" role="button"><i class="icon">Placeholder Icon</i></a>
+								<a class="dark button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+								<a href="#mobile-icon-button" class="dark quiet button no-label" role="button" ><i class="icon">Placeholder Icon</i></a>
+								<a class="dark quiet button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+                    	</p>
+                   	<p>
+                   		<a href="#mobile-icon-button" class="dark large-button no-label" role="button"><i class="icon">Placeholder Icon</i></a>
+								<a class="dark large-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+								<a href="#mobile-icon-button" class="dark quiet large-button no-label" role="button" ><i class="icon">Placeholder Icon</i></a>
+								<a class="dark quiet large-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Placeholder Icon</i></a>
+                    	</p>
+	          		</td>
+	     			</tr>
+	   		</table>
+
+	       <h4 id="mobile-label-button"><span>Icon Label Button</span></h4>
+	       <table class="preview">
+	           <tr>
+	               <td class="bg-light">
+	               	<p>
+								<a href="#mobile-label-button" class="button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+							<p>
+								<a href="#mobile-label-button" class="quiet button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="quiet button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+							<p>
+								<a href="#mobile-label-button" class="large-button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="large-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+							<p>
+								<a href="#mobile-label-button" class="quiet large-button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="quiet large-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+	               </td>
+	               <td class="bg-slategray">
+	               	<p>
+								<a href="#mobile-label-button" class="dark button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="dark button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+							<p>
+								<a href="#mobile-label-button" class="quiet dark button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="quiet dark button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+							<p>
+								<a href="#mobile-label-button" class="dark large-button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="dark large-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+							<p>
+								<a href="#mobile-label-button" class="quiet dark large-button" role="button"><i class="icon"></i>Default Icon</a>
+								<a class="quiet dark large-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+							</p>
+	               </td>
+	           </tr>
+	       </table>
+
+		   <h4 id="mobile-cta-button"><span>Call-to-Action Button</span></h4>
+	       <table class="preview">
+	           <tr>
+	               <td class="bg-light">
+                   	<p>
+                   		<a href="#mobile-cta-button" class="cta button" role="button">Button</a>
+                   		<a class="cta button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                    	</p>
+                    	<p>
+                    		<a href="#mobile-cta-button" class="cta large-button" role="button">Large Button</a>
+                     	<a class="cta large-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
+                    	</p>
+	               </td>
+	               <td class="bg-slategray">
+	                   <p>
+                   		<a href="#mobile-cta-button" class="dark cta button" role="button">Button</a>
+                   		<a class="dark cta button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                    	</p>
+                    	<p>
+                    		<a href="#mobile-cta-button" class="dark cta large-button" role="button">Large Button</a>
+                     	<a class="dark cta large-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
+                    	</p>
+	               </td>
+	           </tr>
+	       </table>
+
+	       <h4 id="mobile-button-bar"><span>Button Bar</span></h4>
+	       <table class="preview">
+	           <tr>
+	               <td class="bg-light">
+	                   <p>
+								<div class="button-bar">
+									<a href="#mobile-button-bar" class="button" role="button">First</a>
+									<a href="#mobile-button-bar" class="button" role="button">Second</a>
+									<a href="#mobile-button-bar" class="button" role="button">Third</a>
+								</div>
+							</p>
+							<p>
+								<div class="button-bar">
+									<a href="#mobile-button-bar" class="large-button" role="button">First</a>
+									<a href="#mobile-button-bar" class="large-button" role="button">Second</a>
+									<a href="#mobile-button-bar" class="large-button" role="button">Third</a>
+								</div>
+							</p>
+	               </td>
+	               <td class="bg-slategray">
+							<p>
+								<div class="button-bar">
+									<a href="#mobile-button-bar" class="dark button" role="button">First</a>
+									<a href="#mobile-button-bar" class="dark button" role="button">Second</a>
+									<a href="#mobile-button-bar" class="dark button" role="button">Third</a>
+								</div>
+							</p>
+							<p>
+								<div class="button-bar">
+									<a href="#mobile-button-bar" class="dark large-button" role="button">First</a>
+									<a href="#mobile-button-bar" class="dark large-button" role="button">Second</a>
+									<a href="#mobile-button-bar" class="dark large-button" role="button">Third</a>
+								</div>
+							</p>
+	               </td>
+	           </tr>
+	       </table> 
+
+	    </section><!-- end of #mobile-actions -->
+
+		<section id="mobile-lists">
+
+		      <h4 id="mobile-list"><span>Unordered List</span></h4>
+		      <table class="preview mobile-list">
+		          <tr>
+		              <td class="bg-light">
+		                  <p>
+									<ul class="list">
+										<li>Item #1</li>
+										<li>Item #2</li>
+										<li>Item #3</li>
+									</ul>
+								</p>
+		              </td>
+		              <td class="bg-slategray">
+		                  <p>
+									<ul class="dark list">
+										<li>Item #1</li>
+										<li>Item #2</li>
+										<li>Item #3</li>
+									</ul>
+								</p>
+		              </td>
+		          </tr>
+		      </table>
+
+		      <div class="space"></div>
+		      <div class="space"></div> 
+		      <div class="space"></div>
+		      <div class="space"></div>
+		      <div class="space"></div> 
+		      <div class="space"></div>    
+
+		</section><!-- end of #mobile-lists -->
+
+
+  </div>
+</div> <!-- end of #container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="doc/js/third-party/jquery.viewport.js"></script>
+<script>
+
+    $('#main').scroll(function () {
+      var inview = '#' + $("#main h4:in-viewport:first").attr('id'),
+          $link = $('nav a').filter('[hash=' + inview + ']');
+
+      if ($link.length && !$link.is('.selected')) {
+        $('nav a').removeClass('selected');
+        $link.addClass('selected');
+      }
+    });
+
+</script>
+
+</body>
+</html>
