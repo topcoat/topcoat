@@ -14,7 +14,6 @@
 <body>
 
     <div id="test-container">
-        <p><a href="#" class="cta large button" id="restart">Restart loadtime test</a></p>
         <h4>
             <span>Standard on White</span>
         </h4>
@@ -586,11 +585,21 @@
             <div class="spinner large"></div>
         </div>
 
+
+        <p>
+            <h3>Do a 
+                    <a href="javascript:(function(d){var s=d.createElement('script');s.src='http://andy.edinborough.org/Demos/css-stress/stressTest.js?_='+Math.random();var es=d.getElementsByTagName('script')[0];es.parentNode.insertBefore(s,es);var doit=function(){if(window.stressTest){stressTest.bookmarklet();}else{setTimeout(doit,100);}};doit();})(document);">Stress CSS
+                    </a>
+            </h3>
+        </p>
         <div id="perf"></div>
         <table></table>
+
         <!-- end of .bg-slategray --> </div>
     <!-- end of #container -->
     <script src="../third-party/foundation/javascripts/jquery.js"></script>
-    <script type="text/javascript" src="../js/perf.js"></script>
+    <script src="../third-party/ua-parser/ua-parser.js"></script>
+    <script src="../js/send-benchmark.js"></script>
+    <script src="../js/perf.js"></script>
 </body>
 </html>
