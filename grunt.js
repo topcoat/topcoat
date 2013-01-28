@@ -1,4 +1,4 @@
-/*!
+/*
 Copyright 2012 Adobe Systems Inc.;
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -39,18 +39,11 @@ var bower = {
         grunt.loadNpmTasks('grunt-contrib-copy');
 
         grunt.initConfig({
+            pkg: '<json:package.json>',
             stylus: {
                 compile: {
-                    options: {
-                        // paths: ['path/to/import', 'another/to/import'],
-                        // urlfunc: 'embedurl',
-                        // use embedurl('test.png') in our code to trigger Data URI embedding
-                        // use: [
-                            // require('nib')
-                        // ]
-                    },
                     files: {
-                        'release/css/topcoat.css': 'src/style/topcoat.styl'
+                        'release/css/topcoat.css': ['src/style/copyright.styl','src/style/topcoat.styl']
                     }
                 }
             },
@@ -66,7 +59,7 @@ var bower = {
 
             mincss: {
                 css: {
-                    src: 'release/css/topcoat.css',
+                    src: ['src/style/copyright.styl','release/css/topcoat.css'],
                     dest: 'release/css/topcoat-min.css'
                 }
             },
