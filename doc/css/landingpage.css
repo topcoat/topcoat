@@ -14,7 +14,7 @@
 
 body {
     color: #454545;
-    margin: 0;
+    text-rendering: optimizeLegibility;
 }
 
 #container {
@@ -28,10 +28,15 @@ h1 {
     font-family: "source-sb";
     font-size: 4em;
     margin-bottom: 0.5em;
+    letter-spacing: -0.07em;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0.5em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+}
+
+.title-kerning {
+    letter-spacing: -0.09em;
 }
 
 p {
