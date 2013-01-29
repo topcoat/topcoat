@@ -21,7 +21,7 @@ body {
     font-family: "source-l";
     text-align: center;
     width: 400px;
-    margin: 15% auto 0 auto;
+    margin: 10% auto 0 auto;
 }
 
 h1 {
@@ -51,22 +51,14 @@ p {
     font-size: .875em;
 }
 
-.links > li {
-    display: inline-block;
-    margin-right: 30px;
-}
-
 a {
     color: #888888;
     text-decoration: none;
 }
 
 li {
-    display: inline;
-}
-
-.devices > li {
-    margin: 0 30px 0 0;
+    display: inline-block;
+    margin-right: 30px;
 }
 
 .desktop-icon {
@@ -94,24 +86,21 @@ aside {
 .twitter-icon {
     display: block;
     padding: 30px;
-    background: url("../img/twitter_icon.png");
-    background-repeat: no-repeat;
+    background: url("../img/twitter_icon.png") no-repeat center;
     background-size: 41px 33px;
 }
 
 .github-icon {
     display: block;
     padding: 30px;
-    background: url("../img/github_icon.png");
-    background-repeat: no-repeat;
+    background: url("../img/github_icon.png") no-repeat center;
     background-size: 43px 42px;
 }
 
 .adobe-icon {
     display: block;
     padding: 30px;
-    background: url("../img/adobe_icon.png");
-    background-repeat: no-repeat;
+    background: url("../img/adobe_icon.png") no-repeat center;
     background-size: 32px 37px;
 }
 
