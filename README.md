@@ -12,7 +12,7 @@
               \__\/       \__\/       \__\/       \__\/       \__\/                        
 </pre>
 
-An experimental CSS library. Check out the <a href="http://topcoat.github.com/topcoat/">desktop demo (WIP)</a>.
+An experimental CSS library.
 
 
 ### Installing
