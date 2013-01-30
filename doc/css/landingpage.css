@@ -21,18 +21,14 @@ body {
     font-family: "source-l";
     text-align: center;
     width: 400px;
-    margin: 10% auto 0 auto;
+    margin: 12% auto 0 auto;
 }
 
 h1 {
     font-family: "source-sb";
     font-size: 4em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
     letter-spacing: -0.07em;
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0.5em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
 }
 
 .title-kerning {
@@ -40,18 +36,28 @@ h1 {
 }
 
 p {
+	margin-top: -20px;
     margin-bottom: 0.5em;
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0.5em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
 }
 
 .copy {
     font-size: 1.5em;
 }
 
+footer {
+	position: absolute;
+	bottom: 69px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+.devices {
+	margin: 0;
+}
+
 .links {
+	margin: 0;
+	padding: 0;
     margin-top: 50px;
     font-size: .875em;
 }
@@ -70,43 +76,56 @@ li {
     display: inline-block;
     width: 61px;
     height: 50px;
-    background: url("..//img/topcoat_desktop.png") no-repeat center;
+    background-image: url("..//img/topcoat_desktop.png");
+	background-image: -webkit-image-set(url("..//img/topcoat_desktop.png") 1x,
+	               url("..//img/topcoat_desktop@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;    
 }
 
 .mobile-icon {
     display: inline-block;
     width: 75px;
     height: 59px;
-    background: url("..//img/topcoat_mobile.png") no-repeat center;
+    background-image: url("..//img/topcoat_mobile.png");
+	background-image: -webkit-image-set(url("..//img/topcoat_mobile.png") 1x,
+	               url("..//img/topcoat_mobile@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;
 }
 
 aside {
-    margin-bottom: 3.5em;
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 3.5em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    margin-bottom: 2.7em;
 }
 
 .twitter-icon {
     display: block;
     padding: 30px;
-    background: url("../img/twitter_icon.png") no-repeat center;
-    background-size: 41px 33px;
+    background-image: url("../img/twitter_icon.png");
+    background-image: -webkit-image-set(url("../img/twitter_icon.png") 1x,
+                   url("../img/twitter_icon@2x.png") 2x);
+    background-repeat: no-repeat;               
+    background-position: center;
 }
 
 .github-icon {
     display: block;
     padding: 30px;
-    background: url("../img/github_icon.png") no-repeat center;
-    background-size: 43px 42px;
+    background-image: url("../img/github_icon.png");
+	background-image: -webkit-image-set(url("../img/github_icon.png") 1x,
+               url("../img/github_icon@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;
 }
 
 .adobe-icon {
     display: block;
     padding: 30px;
-    background: url("../img/adobe_icon.png") no-repeat center;
-    background-size: 32px 37px;
+    background-image: url("../img/adobe_icon.png");
+	background-image: -webkit-image-set(url("../img/adobe_icon.png") 1x,
+               url("../img/adobe_icon@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;
 }
 
 @media only screen and (min-width: 35em) {
@@ -125,27 +144,3 @@ aside {
 
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-            only screen and (min-resolution: 144dpi) {
-
-    .desktop-icon {
-        background: url("../img/topcoat_desktop@2x.png") no-repeat center;
-    }
-
-    .mobile-icon {
-        background: url("../img/topcoat_mobile@2x.png") no-repeat center;
-    }
-
-    .twitter-icon {
-        background: url("../img/twitter_icon@2x.png") no-repeat center;
-    }
-
-    .github-icon {
-        background: url("../img/github_icon@2x.png") no-repeat center;
-    }
-
-    .adobe-icon {
-        background: url("../img/adobe_icon@2x.png") no-repeat center;
-    }
-
-}
