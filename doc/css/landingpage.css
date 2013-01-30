@@ -12,7 +12,15 @@
   font-style: normal;
 }
 
+html,
 body {
+    margin: 0;
+    padding: 0;
+    height: 90%;
+}
+
+body {
+
     color: #454545;
 }
 
@@ -36,10 +44,13 @@ aside {
 }
 
 .container {
+    width: 400px;
+    min-height: 80%;
+    height: auto !important;
+    height: 80%;
     font-family: "source-l";
     text-align: center;
-    width: 400px;
-    margin: 12% auto 0 auto;
+    margin: 12% auto -50px;
 }
 
 .title {
@@ -48,6 +59,7 @@ aside {
     font-weight: normal;
     margin-bottom: 0.4em;
     letter-spacing: -0.07em;
+    -webkit-margin-before: 0px; /* normalize webkit margin */
 }
 
 .title-kerning {
@@ -59,10 +71,9 @@ aside {
 }
 
 .footer {
-	position: absolute;
-	bottom: 69px;
-	left: 50%;
-	margin-left: -150px;
+    text-align: center;
+    margin: 0 auto;
+    min-width: 400px;
 }
 
 .devices {
