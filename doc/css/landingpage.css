@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "source-l";
+  src: url("../../src/font/SourceSansPro/SourceSansPro-Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source-sb";
+  src: url("../../src/font/SourceSansPro/SourceSansPro-Semibold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    color: #454545;
+    text-rendering: optimizeLegibility;
+}
+
+#container {
+    font-family: "source-l";
+    text-align: center;
+    width: 400px;
+    margin: 12% auto 0 auto;
+}
+
+h1 {
+    font-family: "source-sb";
+    font-size: 4em;
+    margin-bottom: 0.4em;
+    letter-spacing: -0.07em;
+}
+
+.title-kerning {
+    letter-spacing: -0.09em;
+}
+
+p {
+	margin-top: -20px;
+    margin-bottom: 0.5em;
+}
+
+.copy {
+    font-size: 1.5em;
+}
+
+footer {
+	position: absolute;
+	bottom: 69px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+.devices {
+	margin: 0;
+}
+
+.links {
+	margin: 0;
+	padding: 0;
+    margin-top: 50px;
+    font-size: .875em;
+}
+
+a {
+    color: #888888;
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.desktop-icon {
+    display: inline-block;
+    width: 61px;
+    height: 50px;
+    background-image: url("..//img/topcoat_desktop.png");
+	background-image: -webkit-image-set(url("..//img/topcoat_desktop.png") 1x,
+	               url("..//img/topcoat_desktop@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;    
+}
+
+.mobile-icon {
+    display: inline-block;
+    width: 75px;
+    height: 59px;
+    background-image: url("..//img/topcoat_mobile.png");
+	background-image: -webkit-image-set(url("..//img/topcoat_mobile.png") 1x,
+	               url("..//img/topcoat_mobile@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;
+}
+
+aside {
+    margin-bottom: 2.7em;
+}
+
+.twitter-icon {
+    display: block;
+    padding: 30px;
+    background-image: url("../img/twitter_icon.png");
+    background-image: -webkit-image-set(url("../img/twitter_icon.png") 1x,
+                   url("../img/twitter_icon@2x.png") 2x);
+    background-repeat: no-repeat;               
+    background-position: center;
+}
+
+.github-icon {
+    display: block;
+    padding: 30px;
+    background-image: url("../img/github_icon.png");
+	background-image: -webkit-image-set(url("../img/github_icon.png") 1x,
+               url("../img/github_icon@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;
+}
+
+.adobe-icon {
+    display: block;
+    padding: 30px;
+    background-image: url("../img/adobe_icon.png");
+	background-image: -webkit-image-set(url("../img/adobe_icon.png") 1x,
+               url("../img/adobe_icon@2x.png") 2x);
+	background-repeat: no-repeat;               
+	background-position: center;
+}
+
+@media only screen and (min-width: 35em) {
+
+    #container {
+        width: 550px;
+    }
+
+    .copy {
+        font-size: 2.1em;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+}
+
