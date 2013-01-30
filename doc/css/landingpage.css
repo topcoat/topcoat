@@ -17,14 +17,33 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-#container {
+p {
+    margin-top: -20px;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #888888;
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+aside {
+    margin-bottom: 2.7em;
+}
+
+.container {
     font-family: "source-l";
     text-align: center;
     width: 400px;
     margin: 12% auto 0 auto;
 }
 
-h1 {
+.title {
     font-family: "source-sb";
     font-size: 4em;
     margin-bottom: 0.4em;
@@ -35,16 +54,11 @@ h1 {
     letter-spacing: -0.09em;
 }
 
-p {
-	margin-top: -20px;
-    margin-bottom: 0.5em;
-}
-
 .copy {
     font-size: 1.5em;
 }
 
-footer {
+.footer {
 	position: absolute;
 	bottom: 69px;
 	left: 50%;
@@ -62,25 +76,15 @@ footer {
     font-size: .875em;
 }
 
-a {
-    color: #888888;
-    text-decoration: none;
-}
-
-li {
-    display: inline-block;
-    margin-right: 30px;
-}
-
 .desktop-icon {
     display: inline-block;
     width: 61px;
     height: 50px;
-    background-image: url("..//img/topcoat_desktop.png");
-	background-image: -webkit-image-set(url("..//img/topcoat_desktop.png") 1x,
-	               url("..//img/topcoat_desktop@2x.png") 2x);
-	background-repeat: no-repeat;               
-	background-position: center;    
+    background-image: url("../img/topcoat_desktop.png");
+	background-image: -webkit-image-set(url("../img/topcoat_desktop.png") 1x,
+	               url("../img/topcoat_desktop@2x.png") 2x);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .mobile-icon {
@@ -90,12 +94,8 @@ li {
     background-image: url("..//img/topcoat_mobile.png");
 	background-image: -webkit-image-set(url("..//img/topcoat_mobile.png") 1x,
 	               url("..//img/topcoat_mobile@2x.png") 2x);
-	background-repeat: no-repeat;               
+	background-repeat: no-repeat;
 	background-position: center;
-}
-
-aside {
-    margin-bottom: 2.7em;
 }
 
 .twitter-icon {
@@ -104,7 +104,7 @@ aside {
     background-image: url("../img/twitter_icon.png");
     background-image: -webkit-image-set(url("../img/twitter_icon.png") 1x,
                    url("../img/twitter_icon@2x.png") 2x);
-    background-repeat: no-repeat;               
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -114,7 +114,7 @@ aside {
     background-image: url("../img/github_icon.png");
 	background-image: -webkit-image-set(url("../img/github_icon.png") 1x,
                url("../img/github_icon@2x.png") 2x);
-	background-repeat: no-repeat;               
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
@@ -124,13 +124,13 @@ aside {
     background-image: url("../img/adobe_icon.png");
 	background-image: -webkit-image-set(url("../img/adobe_icon.png") 1x,
                url("../img/adobe_icon@2x.png") 2x);
-	background-repeat: no-repeat;               
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
 @media only screen and (min-width: 35em) {
 
-    #container {
+    .container {
         width: 550px;
     }
 
@@ -138,7 +138,7 @@ aside {
         font-size: 2.1em;
     }
 
-    h1 {
+    .title {
         font-size: 5em;
     }
 
