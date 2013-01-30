@@ -14,7 +14,6 @@
 
 body {
     color: #454545;
-    text-rendering: optimizeLegibility;
 }
 
 p {
@@ -46,6 +45,7 @@ aside {
 .title {
     font-family: "source-sb";
     font-size: 4em;
+    font-weight: normal;
     margin-bottom: 0.4em;
     letter-spacing: -0.07em;
 }
