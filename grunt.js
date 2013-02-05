@@ -21,7 +21,7 @@ var bower = {
     main: []
 },
     component = {
-        repo: 'adobe/topcoat',
+        repo: 'topcoat/topcoat',
         description: 'An experimental CSS library.',
         styles: ['release/css/topcoat-min.css'],
         files: []
