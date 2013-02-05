@@ -33,7 +33,7 @@ Or Yeoman:
 
 There is also support for Component:
 
-    component install adobe/topcoat
+    component install topcoat/topcoat
 
 ### Running the tests
 
