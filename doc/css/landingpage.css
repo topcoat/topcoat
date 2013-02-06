@@ -50,7 +50,7 @@ aside {
     height: 80%;
     font-family: "source-l";
     text-align: center;
-    margin: 12% auto -50px;
+    margin: 12% auto -50px auto;
 }
 
 .title {
