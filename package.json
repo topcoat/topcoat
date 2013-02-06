@@ -1,0 +1,39 @@
+{
+  "name": "topcoat",
+  "version": "0.0.0",
+  "description": "experimental css",
+  "homepage": "https://topcoat.github.com/topcoat",
+  "main": "grunt.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topcoat/topcoat.git"
+  },
+  },
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "license": {
+    "type": "Apache",
+    "url": "https://github.com/topcoat/topcoat/blob/master/LICENSE"
+  },
+  "keywords": [
+    "css",
+    "ui",
+    "ux",
+    "pattern",
+    "library",
+    "mobile",
+    "desktop",
+    "native",
+    "application",
+    "web",
+    "standards"
+  ]
+}
