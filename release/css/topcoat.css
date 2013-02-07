@@ -18,81 +18,81 @@ limitations under the License.
   src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
 }
 @font-face {
-  font-weight: normal;
-  font-style: normal;
   font-family: "source";
   src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
-}
-@font-face {
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
   font-family: "source-l";
   src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
-}
-@font-face {
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
   font-family: "source-sb";
   src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
+  font-weight: normal;
+  font-style: normal;
 }
 body {
-  padding: 0;
-  margin: 0;
   color: ;
   font: 14px "source", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: subpixel-antialiased !important;
   text-rendering: optimizeLegibility;
 }
 .large {
-  font-size: 14px !important;
   font-family: source-sb !important;
+  font-size: 14px !important;
   line-height: 27px !important;
 }
 .disabled {
-  opacity: 0.6;
   cursor: default;
+  opacity: 0.6;
   pointer-events: none;
 }
 .bg-white {
-  padding: 20px;
   background: #fff;
   font-size: ;
+  padding: 20px;
 }
 .bg-lightgray {
-  padding: 20px;
   background: #dfe2e2;
   font-size: ;
+  padding: 20px;
 }
 .bg-slategray {
-  padding: 20px;
   background: #3a3f42 url("../img/bg_dark.png") repeat-x;
   color: #c7c7c7;
   font-size: ;
+  padding: 20px;
 }
 .bg-white .title {
   color: #000;
-  font-weight: 300;
   font-size: 18px;
+  font-weight: 300;
 }
 .bg-lightgray .title {
-  text-shadow: 0 1px 0 #fff;
-  font-weight: 300;
   font-size: 18px;
+  font-weight: 300;
+  text-shadow: 0 1px 0 #fff;
 }
 .bg-slategray .title {
   color: #fff;
-  text-shadow: 0 -1px 0 #000;
   font-size: 18px;
+  text-shadow: 0 -1px 0 #000;
 }
 .bg-slategray .group-label {
   color: #a4b4b7;
-  text-shadow: 0 -1px 0 #000;
   font-size: 14px;
+  text-shadow: 0 -1px 0 #000;
 }
 .button.large {
-  padding: 0 15px !important;
-  margin: 0 10px 10px 0 !important;
   height: 27px !important;
+  margin: 0 10px 10px 0 !important;
+  padding: 0 15px !important;
 }
 .button.large.no-label {
   padding: 0 !important;
@@ -103,34 +103,34 @@ body {
 .button,
 .button.disabled:hover,
 .button.disabled:active {
-  position: relative;
+  background-clip: padding-box !important;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 3px;
   display: inline-block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  min-width: 15px;
+  margin: 0 5px 5px 0;
+  max-width: 150px;
   overflow: hidden;
   padding: 0 8px;
-  margin: 0 5px 5px 0;
-  min-width: 15px;
-  max-width: 150px;
-  height: 21px;
-  border: 1px solid rgba(0,0,0,0);
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 3px;
-  background-image: none, linear-gradient(top, #f5f8fa, #e3e5e5);
-  background-image: none, -webkit-gradient(linear, left top, left bottom, from(#f5f8fa), to(#e3e5e5));
-  background-position: center;
-  background-clip: padding-box !important;
-  background-repeat: none;
-  box-shadow: inset 0 1px 0 #fff;
-  color: #454545;
-  vertical-align: top;
+  position: relative;
   text-decoration: none;
   text-overflow: ellipsis;
-  text-shadow: 0 1px 0 #fff;
+  vertical-align: top;
   white-space: nowrap;
-  font-size: 12px;
-  line-height: 21px;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  background-image: none, linear-gradient(top, #f5f8fa, #e3e5e5);
+  background-image: none, -webkit-gradient(linear, left top, left bottom, from(#f5f8fa), to(#e3e5e5));
+  background-position: center;
+  background-repeat: none;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 0 #fff;
+  color: #454545;
+  text-shadow: 0 1px 0 #fff;
 }
 .button:hover {
   background-image: none, linear-gradient(top, #f8fafb, #edefef);
@@ -147,39 +147,39 @@ body {
   text-decoration: none;
 }
 .button:focus {
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px rgba(0,136,255,0.69);
+  outline: none;
 }
 .button.quiet,
 .button.quiet.disabled:hover,
 .button.quiet.disabled:active {
-  position: relative;
+  background-clip: padding-box !important;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 3px;
   display: inline-block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  min-width: 15px;
+  margin: 0 5px 5px 0;
+  max-width: 150px;
   overflow: hidden;
   padding: 0 8px;
-  margin: 0 5px 5px 0;
-  min-width: 15px;
-  max-width: 150px;
-  height: 21px;
-  border: 1px solid rgba(0,0,0,0);
-  border: 1px solid rgba(0,0,0,0.21);
-  border-radius: 3px;
-  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0));
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0)));
-  background-clip: padding-box !important;
-  box-shadow: inset 0 1px 0 rgba(0,0,0,0);
-  color: #454545;
-  vertical-align: top;
+  position: relative;
   text-decoration: none;
   text-overflow: ellipsis;
-  text-shadow: none;
+  vertical-align: top;
   white-space: nowrap;
-  font-size: 12px;
-  line-height: 21px;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0)));
+  border: 1px solid rgba(0,0,0,0.21);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0);
+  color: #454545;
+  text-shadow: none;
 }
 .button.quiet:hover {
   background-image: linear-gradient(top, #f9f9f9, #f9f9f9);
@@ -191,18 +191,18 @@ body {
   text-decoration: none;
 }
 .button.quiet:focus {
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px 0 rgba(0,136,255,0.69);
+  outline: none;
 }
 .button.dark,
 .button.dark.disabled:hover,
 .button.dark.disabled:active {
-  border: 1px solid rgba(0,0,0,0.8);
   background-image: none, linear-gradient(top, #7a7c7c, #5f6060);
   background-image: none, -webkit-gradient(linear, left top, left bottom, from(#7a7c7c), to(#5f6060));
   background-position: center;
   background-repeat: none;
+  border: 1px solid rgba(0,0,0,0.8);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
   color: #eff1f1;
   text-shadow: 0 -1px 0 #000;
@@ -222,16 +222,16 @@ body {
   text-decoration: none;
 }
 .button.dark:focus {
-  outline: none;
   border: 1px solid #000;
   box-shadow: 0 0 4px rgba(0,0,0,0.69);
+  outline: none;
 }
 .button.quiet.dark,
 .button.quiet.dark.disabled:hover,
 .button.quiet.dark.disabled:active {
-  border: 1px solid rgba(255,255,255,0.21);
   background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0));
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0)));
+  border: 1px solid rgba(255,255,255,0.21);
   box-shadow: inset 0 1px 0 rgba(0,0,0,0);
   color: #eff1f1;
   text-shadow: none;
@@ -246,32 +246,32 @@ body {
   text-decoration: none;
 }
 .button.quiet.dark:focus {
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px 0 rgba(0,136,255,0.69);
+  outline: none;
 }
 .button.no-label {
   padding: 0 0 0 8px;
 }
 .button.drop-down {
-  position: relative;
+  min-width: 70px;
   overflow: visible;
   padding: 0 30px 0 5px !important;
-  min-width: 70px;
+  position: relative;
 }
 .menu {
-  position: absolute;
-  top: 22px;
-  left: 0px;
-  z-index: 1000;
-  overflow: hidden;
-  padding: 3px 0;
-  margin: 0;
-  min-width: 94%;
+  background: #fff;
   border-top: none !important;
   border-radius: 3px;
-  background: #fff;
   box-shadow: 0 3px 9px rgba(0,0,0,0.3);
+  left: 0px;
+  margin: 0;
+  overflow: hidden;
+  padding: 3px 0;
+  position: absolute;
+  top: 22px;
+  min-width: 94%;
+  z-index: 1000;
 }
 .menu li {
   list-style: none;
@@ -280,10 +280,10 @@ body {
   border-radius: 3px;
 }
 .menu a {
-  display: block;
-  padding: 0 0 0 10px;
-  outline: none;
   color: #454545;
+  display: block;
+  outline: none;
+  padding: 0 0 0 10px;
   text-shadow: none;
 }
 .menu a:hover,
@@ -297,75 +297,75 @@ body {
   border-top: none !important;
 }
 .large .menu {
-  top: 28px !important;
   border-top: none !important;
+  top: 28px !important;
 }
 .large.dark .menu {
-  top: 28px !important;
   border-top: none !important;
+  top: 28px !important;
 }
 .button.drop-down.large {
-  padding: 0 30px 0 10px !important;
   min-width: 100px;
+  padding: 0 30px 0 10px !important;
 }
 .button.drop-down.large .menu {
   top: 28px;
 }
 .button-group {
-  position: relative;
   display: inline-block;
-  overflow: visible;
   vertical-align: top;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  overflow: visible;
+  position: relative;
 }
 .button-group .menu {
-  top: 23px;
   left: 1px;
+  top: 23px;
 }
 .button.inside {
-  margin: 0 0 0 -3px !important;
-  border-right: 1px solid rgba(187,187,187,0.8);
   border-left: 1px solid rgba(0,0,0,0);
+  border-right: 1px solid rgba(187,187,187,0.8);
   border-radius: 0;
+  margin: 0 0 0 -3px !important;
 }
 .button.start {
-  margin: 0;
   border-right: 1px solid rgba(187,187,187,0.8);
   border-radius: 3px 0 0 3px !important;
+  margin: 0;
 }
 .button.end {
-  margin: 0 5px 5px -3px;
   border-left: 1px solid rgba(0,0,0,0);
   border-radius: 0 3px 3px 0 !important;
+  margin: 0 5px 5px -3px;
 }
 .button.more {
-  padding: 0;
-  margin: 0 5px 5px -3px;
-  width: 20px;
   border-left: 1px solid rgba(0,0,0,0);
   border-radius: 0 3px 3px 0 !important;
+  margin: 0 5px 5px -3px;
+  padding: 0;
+  width: 20px;
 }
 .button.inside.dark {
-  margin: 0 0 0 -3px !important;
-  border-right: 1px solid rgba(0,0,0,0.1);
   border-left: 1px solid rgba(0,0,0,0);
+  border-right: 1px solid rgba(0,0,0,0.1);
   border-radius: 0;
+  margin: 0 0 0 -3px !important;
 }
 .button.start.dark {
-  margin: 0;
   border-right: 1px solid rgba(0,0,0,0.1);
   border-radius: 3px 0 0 3px !important;
+  margin: 0;
 }
 .button:focus {
   z-index: 1;
-  border-right: 1px solid rgba(9,64,253,0.84);
   border-left: 1px solid rgba(9,64,253,0.84);
+  border-right: 1px solid rgba(9,64,253,0.84);
 }
 .button.dark:focus {
-  border-right: 1px solid #000;
   border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 .button-group.large {
   margin: 0 10px 10px 0 !important;
@@ -383,21 +383,21 @@ body {
   margin: 0 5px 5px -4px !important;
 }
 .button.more.large {
-  padding: 0 !important;
   margin: 0 5px 5px -4px !important;
+  padding: 0 !important;
 }
 select.button {
-  padding: 0 30px 0 5px;
-  min-width: 70px;
-  height: 23px;
-  border: 1px solid rgba(0,0,0,0.3);
   background-image: url("../img/pop-up-triangle.png"), linear-gradient(top, #f5f8fa, #e3e5e5);
   background-image: url("../img/pop-up-triangle.png"), -webkit-gradient(linear, left top, left bottom, from(#f5f8fa), to(#e3e5e5));
   background-position: right;
   background-repeat: no-repeat;
+  border: 1px solid rgba(0,0,0,0.3);
   box-shadow: inset 0 1px 0 #fff;
   color: #454545;
   text-shadow: 0 1px 0 #fff;
+  height: 23px;
+  min-width: 70px;
+  padding: 0 30px 0 5px;
   -webkit-appearance: none !important;
 }
 select.button:hover {
@@ -415,22 +415,22 @@ select.button:active {
   text-decoration: none;
 }
 select.button:focus {
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px rgba(0,136,255,0.69);
+  outline: none;
 }
 select.button.dark {
-  padding: 0 30px 0 5px;
-  min-width: 70px;
-  height: 23px;
-  border: 1px solid rgba(0,0,0,0.8);
   background-image: url("../img/pop-up-triangle-dark.png"), linear-gradient(top, #7a7c7c, #5f6060);
   background-image: url("../img/pop-up-triangle-dark.png"), -webkit-gradient(linear, left top, left bottom, from(#7a7c7c), to(#5f6060));
   background-position: right;
   background-repeat: no-repeat;
+  border: 1px solid rgba(0,0,0,0.8);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
   color: #eff1f1;
   text-shadow: 0 -1px 0 #000;
+  height: 23px;
+  min-width: 70px;
+  padding: 0 30px 0 5px;
   -webkit-appearance: none !important;
 }
 select.button.dark:hover {
@@ -448,45 +448,45 @@ select.button.dark:active {
   text-decoration: none;
 }
 select.button.dark:focus {
-  outline: none;
   border: 1px solid #000;
   box-shadow: 0 0 4px rgba(0,0,0,0.69);
+  outline: none;
 }
 select.button.large {
-  padding: 0 30px 0 10px !important;
-  min-width: 70px;
   height: 29px !important;
+  min-width: 70px;
+  padding: 0 30px 0 10px !important;
 }
 .button.cta,
 .button.cta.disabled:hover,
 .button.cta.disabled:active {
-  position: relative;
+  background-clip: padding-box !important;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 3px;
   display: inline-block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  min-width: 15px;
+  margin: 0 5px 5px 0;
+  max-width: 150px;
   overflow: hidden;
   padding: 0 8px;
-  margin: 0 5px 5px 0;
-  min-width: 15px;
-  max-width: 150px;
-  height: 21px;
-  border: 1px solid rgba(0,0,0,0);
-  border: 1px solid #014994;
-  border-radius: 3px;
-  background-color: #237fcb;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#4fa3e1), to(#237fcb));
-  background-image: linear-gradient(top, #4fa3e1, #237fcb);
-  background-clip: padding-box !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.27);
-  color: #fff;
-  vertical-align: top;
+  position: relative;
   text-decoration: none;
   text-overflow: ellipsis;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.36);
+  vertical-align: top;
   white-space: nowrap;
-  font-size: 12px;
-  line-height: 21px;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  background-color: #237fcb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4fa3e1), to(#237fcb));
+  background-image: linear-gradient(top, #4fa3e1, #237fcb);
+  border: 1px solid #014994;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.27);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.36);
 }
 .button.cta:hover {
   background-color: #3892de;
@@ -494,11 +494,11 @@ select.button.large {
   background-image: linear-gradient(top, #5dafed, #3892de);
 }
 .button.cta:active {
-  outline: none;
   background: #4290d1;
   box-shadow: inset 0 1px 0px rgba(0,0,0,0.12);
-  box-shadow: 0 0 4px 0 rgba(0,136,255,0.69);
   text-decoration: none;
+  box-shadow: 0 0 4px 0 rgba(0,136,255,0.69);
+  outline: none;
 }
 .button.cta:focus {
   background-color: #3892de;
@@ -507,54 +507,54 @@ select.button.large {
 }
 .text,
 .inline-block {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  padding: 0 8px;
-  padding-right: 0;
-  padding-left: 0;
-  margin: 0 5px 5px 0;
-  min-width: 15px;
-  min-width: auto;
-  max-width: 150px;
-  max-width: auto;
-  height: 21px;
+  background-clip: padding-box !important;
   border: 1px solid rgba(0,0,0,0);
   border-radius: 3px;
-  background-clip: padding-box !important;
-  vertical-align: top;
+  display: inline-block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  min-width: 15px;
+  margin: 0 5px 5px 0;
+  max-width: 150px;
+  overflow: hidden;
+  padding: 0 8px;
+  position: relative;
   text-decoration: none;
   text-overflow: ellipsis;
+  vertical-align: top;
   white-space: nowrap;
-  font-size: 12px;
-  line-height: 21px;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  min-width: auto;
+  max-width: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 .text-field {
-  box-sizing: border-box;
-  padding: 1px 3px 0 3px;
-  margin: 0 3px 3px 0;
-  min-width: 150px;
-  height: 21px;
   border: 1px solid #a5a8a8;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  color: #000;
+  font-family: "Source Sans Pro", "source", helvetica, arial, sans-serif;
   -webkit-border-radius: 4px;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
-  color: #000;
-  font-weight: 400;
   font-size: 12px;
-  font-family: "Source Sans Pro", "source", helvetica, arial, sans-serif;
+  font-weight: 400;
+  height: 21px;
+  margin: 0 3px 3px 0;
+  padding: 1px 3px 0 3px;
+  min-width: 150px;
 }
 .text-field.large {
+  font-size: 14px;
   padding: 1px 4px 0 4px;
   height: 27px;
-  font-size: 14px;
 }
 .text-field.dark {
-  border: 1px solid rgba(0,0,0,0.7);
   background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(0,0,0,0.7);
   color: #fff;
 }
 .text-field.error {
@@ -568,16 +568,16 @@ select.button.large {
   box-shadow: 0 0 4px #ff0078, inset 0px 1px 0px rgba(0,0,0,0.15);
 }
 .text-field:focus {
-  outline: none;
   border: 1px solid #0940fd;
   -webkit-box-shadow: 0 0 4px #08f;
   box-shadow: 0 0 4px #08f;
+  outline: none;
 }
 .text-field.dark:focus {
-  outline: none;
   border: 1px solid #000;
   -webkit-box-shadow: 0 0 4px #222;
   box-shadow: 0 0 4px #222;
+  outline: none;
 }
 .text-field[disabled=disabled] {
   opacity: 0.6;
@@ -590,252 +590,252 @@ a:active {
   text-decoration: underline;
 }
 .link {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  padding: 0 8px;
-  padding-right: 0;
-  padding-left: 0;
-  margin: 0 5px 5px 0;
-  min-width: 15px;
-  min-width: auto;
-  max-width: 150px;
-  max-width: auto;
-  height: 21px;
+  background-clip: padding-box !important;
   border: 1px solid rgba(0,0,0,0);
   border-radius: 3px;
-  background-clip: padding-box !important;
-  color: #0083e8;
-  vertical-align: top;
-  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  min-width: 15px;
+  margin: 0 5px 5px 0;
+  max-width: 150px;
+  overflow: hidden;
+  padding: 0 8px;
+  position: relative;
   text-decoration: none;
   text-overflow: ellipsis;
+  vertical-align: top;
   white-space: nowrap;
-  font-size: 12px;
-  line-height: 21px;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  color: #0083e8;
+  min-width: auto;
+  max-width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration: none;
 }
 .link:active {
   text-decoration: underline;
 }
 .link:focus {
-  padding-right: 2px;
-  padding-left: 2px;
-  margin-right: -2px;
-  margin-left: -2px;
-  outline: none;
-  border: 1px solid;
-  box-shadow: 0 0 4px rgba(0,136,255,0.69);
   color: #0083e8;
+  outline: none;
   text-shadow: 0 0 4px rgba(0,136,255,0.69);
+  box-shadow: 0 0 4px rgba(0,136,255,0.69);
+  border: 1px solid;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: -2px;
+  margin-right: -2px;
 }
 .link.dark {
   color: #6bc3fa;
 }
 .link.dark:focus {
-  border-color: ;
   box-shadow: ;
+  border-color: ;
 }
 .drop-down-triangle {
-  position: absolute;
-  top: 9px;
-  right: 6px;
-  display: inline-block;
-  overflow: hidden;
-  width: 9px;
-  height: 6px;
   background-image: url("../img/drop-down-triangle.png");
   background-repeat: no-repeat;
+  display: inline-block;
+  height: 6px;
+  position: absolute;
+  right: 6px;
+  top: 9px;
+  width: 9px;
   text-indent: 100%;
   white-space: nowrap;
+  overflow: hidden;
 }
 .drop-down-triangle.dark {
-  top: 8px;
   background-image: url("../img/drop-down-triangle-dark.png") !important;
+  top: 8px;
 }
 .large .drop-down-triangle {
-  position: absolute;
-  top: 12px;
-  right: 6px;
-  display: inline-block;
-  width: 9px;
-  height: 6px;
   background-image: url("../img/drop-down-triangle.png");
   background-repeat: no-repeat;
+  display: inline-block;
+  height: 6px;
+  position: absolute;
+  right: 6px;
+  top: 12px;
+  width: 9px;
 }
 .icon-xs {
-  display: inline-block;
-  overflow: hidden;
-  margin: 4px 4px 0 -3px;
-  width: 13px;
-  height: 13px;
-  background: #aaa;
   background-repeat: no-repeat;
+  display: inline-block;
   vertical-align: top;
   text-indent: 100%;
   white-space: nowrap;
+  overflow: hidden;
+  background: #aaa;
+  height: 13px;
+  width: 13px;
+  margin: 4px 4px 0 -3px;
 }
 .icon-sm {
-  display: inline-block;
-  overflow: hidden;
-  margin: 5px 6px 0 -9px;
-  width: 16px;
-  height: 16px;
-  background: #aaa;
   background-repeat: no-repeat;
+  display: inline-block;
   vertical-align: top;
   text-indent: 100%;
   white-space: nowrap;
+  overflow: hidden;
+  background: #aaa;
+  height: 16px;
+  width: 16px;
+  margin: 5px 6px 0 -9px;
 }
 .approx-slider {
-  display: inline-block;
-  width: 100px;
-  height: 3px;
-  outline: none;
+  background: #d4d7d7;
   border: 1px solid #babdbd;
   border-radius: 3px;
-  background: #d4d7d7;
+  display: inline-block;
+  height: 3px;
+  outline: none;
+  width: 100px;
   -webkit-appearance: none !important;
 }
 .approx-slider::-webkit-slider-thumb {
-  width: 9px;
-  height: 11px;
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 3px;
   background-image: none, linear-gradient(top, #f5f8fa, #e3e5e5);
   background-image: none, -webkit-gradient(linear, left top, left bottom, from(#f5f8fa), to(#e3e5e5));
   background-position: center;
   background-repeat: none;
+  border: 1px solid rgba(0,0,0,0.3);
   box-shadow: inset 0 1px 0 #fff;
   color: #454545;
   text-shadow: 0 1px 0 #fff;
+  border-radius: 3px;
   cursor: pointer;
+  height: 11px;
+  width: 9px;
   -webkit-appearance: none !important;
 }
 .approx-slider:focus::-webkit-slider-thumb {
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px rgba(0,136,255,0.69);
+  outline: none;
 }
 .approx-slider.large {
-  width: 140px !important;
   height: 5px;
+  width: 140px !important;
 }
 .approx-slider.large::-webkit-slider-thumb {
-  width: 13px;
   height: 15px;
+  width: 13px;
 }
 .approx-slider.dark {
-  border: 1px solid #000;
   background: #1f1f1f;
+  border: 1px solid #000;
 }
 .approx-slider.dark::-webkit-slider-thumb {
-  border: 1px solid rgba(0,0,0,0.8);
   background-image: none, linear-gradient(top, #7a7c7c, #5f6060);
   background-image: none, -webkit-gradient(linear, left top, left bottom, from(#7a7c7c), to(#5f6060));
   background-position: center;
   background-repeat: none;
+  border: 1px solid rgba(0,0,0,0.8);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
   color: #eff1f1;
   text-shadow: 0 -1px 0 #000;
 }
 .approx-slider.dark:focus::-webkit-slider-thumb {
-  outline: none;
   border: 1px solid #000;
   box-shadow: 0 0 4px rgba(0,0,0,0.69);
+  outline: none;
 }
 input[type=checkbox] {
-  position: absolute !important;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  padding: 0;
-  margin: -1px;
-  width: 1px;
-  height: 1px;
   border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }
 input[type=checkbox] input[type=checkbox] + label {
-  display: inline-block;
-  padding: 0 0 0 20px;
   background: url("../img/checkbox_unchecked.png") no-repeat 0 50%;
+  display: inline-block;
   font-weight: 400;
+  padding: 0 0 0 20px;
 }
 input[type=checkbox] input[type=checkbox]:checked + label {
+  background: url("../img/checkbox_checked.png") no-repeat 0 50%;
   display: inline-block;
   padding: 0 0 0 20px;
-  background: url("../img/checkbox_checked.png") no-repeat 0 50%;
 }
 input[type=checkbox] input.dark[type=checkbox] + label {
+  background: url("../img/checkbox_unchecked_dark.png") no-repeat 0 50%;
   display: inline-block;
   padding: 0 0 0 20px;
-  background: url("../img/checkbox_unchecked_dark.png") no-repeat 0 50%;
 }
 input[type=checkbox] input.dark[type=checkbox]:checked + label {
+  background: url("../img/checkbox_checked_dark.png") no-repeat 0 50%;
   display: inline-block;
   padding: 0 0 0 20px;
-  background: url("../img/checkbox_checked_dark.png") no-repeat 0 50%;
 }
 input[type=checkbox] input[type=checkbox]:focus + label {
-  padding: 2px 2px 2px 22px;
-  margin: -3px;
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
-  border-radius: 3px;
-  background-position: 2px 50%;
   box-shadow: 0 0 4px rgba(0,136,255,0.69);
+  outline: none;
+  border-radius: 3px;
+  padding: 2px 2px 2px 22px;
+  background-position: 2px 50%;
+  margin: -3px;
 }
 input[type=checkbox] input.dark[type=checkbox]:focus + label {
-  padding: 2px 2px 2px 22px;
-  margin: -3px;
-  outline: none;
   border: 1px solid #000;
-  border-radius: 3px;
-  background-position: 2px 50%;
   box-shadow: 0 0 4px rgba(0,0,0,0.69);
+  outline: none;
+  border-radius: 3px;
+  padding: 2px 2px 2px 22px;
+  background-position: 2px 50%;
+  margin: -3px;
 }
 input.slide-switch[type=checkbox] {
-  position: absolute !important;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  padding: 0;
-  margin: -1px;
-  width: 1px;
-  height: 1px;
   border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }
 input.slide-switch[type=checkbox] + label {
-  position: relative;
-  position: relative;
+  background-clip: padding-box !important;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 3px;
   display: inline-block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  min-width: 15px;
+  margin: 0 5px 5px 0;
+  max-width: 150px;
   overflow: hidden;
   padding: 0 8px;
-  padding: 0;
-  margin: 0 5px 5px 0;
-  margin: 0 5px 5px 5px;
-  min-width: 15px;
-  max-width: 150px;
-  width: 54px;
-  height: 21px;
-  border: 1px solid rgba(0,0,0,0);
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 3px;
-  background-color: #ccc;
-  background-image: none !important;
-  background-clip: padding-box !important;
-  vertical-align: top;
-  vertical-align: middle;
+  position: relative;
   text-decoration: none;
   text-overflow: ellipsis;
+  vertical-align: top;
   white-space: nowrap;
-  font-size: 12px;
-  font-family: source-sb;
-  line-height: 21px;
-  cursor: pointer;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  margin: 0 5px 5px 5px;
+  background-color: #ccc;
+  background-image: none !important;
+  border: 1px solid rgba(0,0,0,0.3);
+  font-family: source-sb;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  width: 54px;
+  vertical-align: middle;
 }
 input.slide-switch[type=checkbox]:checked + label .wrapper {
   left: 0px;
@@ -843,69 +843,63 @@ input.slide-switch[type=checkbox]:checked + label .wrapper {
 }
 input.slide-switch[type=checkbox]:checked + label .wrapper .on {
   visibility: visible;
-  -webkit-transition: visibility 0s linear 0s;
   -moz-transition: visibility 0s linear 0s;
+  -webkit-transition: visibility 0s linear 0s;
   transition: visibility 0s linear 0s;
 }
 input.slide-switch[type=checkbox]:checked + label .wrapper .off {
   visibility: hidden;
-  -webkit-transition: visibility 0s linear 0.2s;
   -moz-transition: visibility 0s linear 0.2s;
+  -webkit-transition: visibility 0s linear 0.2s;
   transition: visibility 0s linear 0.2s;
 }
 input.slide-switch[type=checkbox]:focus + label {
-  padding: 0 0 0 0;
-  margin: 0 5px 5px 5px;
-  outline: none;
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px rgba(0,136,255,0.69);
+  outline: none;
+  padding: 0 0 0 0;
+  margin: 0 5px 5px 5px;
 }
 input.slide-switch[type=checkbox]:focus + label .switch {
   border: 1px solid rgba(9,64,253,0.84);
   box-shadow: 0 0 4px rgba(0,136,255,0.69);
 }
 input.slide-switch.dark[type=checkbox]:focus + label {
-  padding: 0 0 0 0;
-  margin: 0 5px 5px 5px;
-  outline: none;
   border: 1px solid #000;
   box-shadow: 0 0 4px rgba(0,0,0,0.69);
+  outline: none;
+  padding: 0 0 0 0;
+  margin: 0 5px 5px 5px;
 }
 input.slide-switch.dark[type=checkbox]:focus + label .switch {
   border: 1px solid #000;
   box-shadow: 0 0 4px rgba(0,0,0,0.69);
 }
 input.slide-switch[type=checkbox] + label .wrapper {
+  display: block;
+  height: 21px;
   position: relative;
   top: 0px;
   left: -38px;
-  z-index: 1;
-  display: block;
-  width: 90px;
-  height: 21px;
-  -webkit-transition: left 0.2s ease-out;
   -moz-transition: left 0.2s ease-out;
+  -webkit-transition: left 0.2s ease-out;
   transition: left 0.2s ease-out;
+  width: 90px;
+  z-index: 1;
 }
 input.slide-switch[type=checkbox] + label .switch,
 input.slide-switch[type=checkbox] + label .on,
 input.slide-switch[type=checkbox] + label .off {
-  position: absolute;
-  top: 0;
   display: block;
   height: 21px;
-  text-align: center;
-  text-shadow: 0 1px 0 #fff;
   font-size: 12px;
   line-height: 21px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  top: 0;
 }
 input.slide-switch[type=checkbox] + label .switch {
-  top: -1px;
-  left: 37px;
-  z-index: 1;
-  width: 16px;
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 3px;
   background: #f5f8fa;
 /* Old browsers */
   background: -moz-linear-gradient(top, #f5f8fa, #e3e5e5);
@@ -920,38 +914,44 @@ input.slide-switch[type=checkbox] + label .switch {
 /* IE10+ */
   background: linear-gradient(top, #f5f8fa, #e3e5e5);
 /* W3C */
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 3px;
   box-shadow: inset 0 1px 0 #fff;
+  left: 37px;
+  width: 16px;
+  top: -1px;
+  z-index: 1;
 }
 input.slide-switch[type=checkbox] + label .on {
-  visibility: hidden;
-  padding-right: 3px;
-  width: 38px;
+  background: #e0f0fa;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  background: #e0f0fa;
   box-shadow: inset 0 1px 0px rgba(0,0,0,0.06);
   color: #0083e8;
-  -webkit-transition: visibility 0s linear 0.2s;
+  width: 38px;
+  padding-right: 3px;
+  visibility: hidden;
   -moz-transition: visibility 0s linear 0.2s;
+  -webkit-transition: visibility 0s linear 0.2s;
   transition: visibility 0s linear 0.2s;
 }
 input.slide-switch[type=checkbox] + label .off {
-  left: 51px;
-  visibility: visible;
-  padding-left: 3px;
-  width: 38px;
+  background: #d3d7d7;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background: #d3d7d7;
   box-shadow: inset 0 1px 0px rgba(0,0,0,0.06);
-  -webkit-transition: visibility 0s linear 0s;
+  left: 51px;
+  width: 38px;
+  padding-left: 3px;
+  visibility: visible;
   -moz-transition: visibility 0s linear 0s;
+  -webkit-transition: visibility 0s linear 0s;
   transition: visibility 0s linear 0s;
 }
 input.slide-switch.dark[type=checkbox] + label {
-  padding: 0 0 0 0;
-  border: 1px solid rgba(0,0,0,0.8);
   background-color: #2b2d2d;
+  border: 1px solid rgba(0,0,0,0.8);
+  padding: 0 0 0 0;
 }
 input.slide-switch.dark[type=checkbox] + label .switch,
 input.slide-switch.dark[type=checkbox] + label .on,
@@ -959,7 +959,6 @@ input.slide-switch.dark[type=checkbox] + label .off {
   text-shadow: 0 -1px 0 #000;
 }
 input.slide-switch.dark[type=checkbox] + label .switch {
-  border: 1px solid rgba(0,0,0,0.8);
   background: #7a7c7c;
 /* Old browsers */
   background: -moz-linear-gradient(top, #7a7c7c, #5f6060);
@@ -974,6 +973,7 @@ input.slide-switch.dark[type=checkbox] + label .switch {
 /* IE10+ */
   background: linear-gradient(top, #7a7c7c, #5f6060);
 /* W3C */
+  border: 1px solid rgba(0,0,0,0.8);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
 }
 input.slide-switch.dark[type=checkbox] + label .on {
@@ -987,19 +987,19 @@ input.slide-switch.dark[type=checkbox] + label .off {
   color: #999;
 }
 input.slide-switch.large[type=checkbox] + label {
-  width: 69px;
   height: 27px;
+  width: 69px;
 }
 input.slide-switch.large[type=checkbox] + label .wrapper {
+  display: block;
+  height: 27px;
   position: relative;
   top: 0px;
   left: -48px;
-  z-index: 1;
-  display: block;
-  height: 27px;
-  -webkit-transition: left 0.2s ease-out;
   -moz-transition: left 0.2s ease-out;
+  -webkit-transition: left 0.2s ease-out;
   transition: left 0.2s ease-out;
+  z-index: 1;
 }
 input.slide-switch.large[type=checkbox] + label .switch,
 input.slide-switch.large[type=checkbox] + label .on,
@@ -1023,18 +1023,18 @@ input.slide-switch.large[type=checkbox]:checked + label .wrapper {
   left: 0px;
 }
 .spinner {
-  -webkit-transition-duration: 0.75s;
-  -moz-transition-duration: 0.75s;
   -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.75s;
   -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 0.75s;
   -webkit-animation-name: rotate;
-  -moz-animation-name: rotate;
   -webkit-animation-duration: 0.75s;
-  -moz-animation-duration: 0.75s;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotate;
+  -moz-animation-duration: 0.75s;
   -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
 }
 .spinner {
   display: inline-block;
@@ -1069,26 +1069,26 @@ input.slide-switch.large[type=checkbox]:checked + label .wrapper {
   }
 }
 .swatch.large {
-  width: 27px;
-  height: 27px;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
   box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+  height: 27px;
+  width: 27px;
 }
 .breadcrumbs {
-  padding: 0;
-  margin: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .breadcrumbs li {
-  display: inline-block;
-  padding: 0 11px 0 0;
-  margin: 0 3px 0 0;
   background: url("../img/breadcrumb.png") no-repeat right 3px;
   color: #000;
-  font-weight: 400;
+  display: inline-block;
   font-size: 12px;
+  font-weight: 400;
   line-height: 18px;
+  margin: 0 3px 0 0;
+  padding: 0 11px 0 0;
 }
 .breadcrumbs li:last-child {
   background: none;
