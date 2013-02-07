@@ -315,22 +315,18 @@
 		      <table class="preview mobile-list">
 		          <tr>
 		              <td class="bg-light">
-		                  <p>
 									<ul class="light-list">
 										<li>Item #1</li>
 										<li>Item #2</li>
 										<li>Item #3</li>
 									</ul>
-								</p>
 		              </td>
 		              <td class="bg-slategray">
-		                  <p>
 									<ul class="dark-list">
 										<li>Item #1</li>
 										<li>Item #2</li>
 										<li>Item #3</li>
 									</ul>
-								</p>
 		              </td>
 		          </tr>
 		      </table>
@@ -428,12 +424,28 @@
 		      <table class="preview">
 		          <tr>
 		              <td class="bg-light">
-		                  <p><input type="search" class="light-text-input" value="" placeholder="Small Search Input"></p>
-								<p><input type="search" class="light-text-input large-text-input" value="" placeholder="Large Search Input"></p>
+		                  <p><label for="slideswitch-light">Slide Switch</label>
+						      <input class="light-slide-switch slide-switch" id="slideswitch-light" type="checkbox" checked />
+						      <label for="slideswitch-light">
+						          <span class="wrapper">
+						              <span class="on">ON</span>
+						              <span class="switch"></span>
+						              <span class="off">OFF</span>
+						          </span>
+						      </label></p>
 		              </td>
 		              <td class="bg-slategray">
-								<p><input type="search" class="dark-text-input" value="" placeholder="Small Search Input"></p>
-								<p><input type="search" class="dark-text-input large-text-input" value="" placeholder="Large Search Input"></p>
+								<p>
+								  <label for="slideswitch-dark">Slide Switch</label>
+							      <input class="dark-slide-switch slide-switch" id="slideswitch-dark" type="checkbox" checked />
+							      <label for="slideswitch-dark">
+							          <span class="wrapper">
+							              <span class="on">ON</span>
+							              <span class="switch"></span>
+							              <span class="off">OFF</span>
+							          </span>
+							      </label>	
+								</p>
 		              </td>
 		          </tr>
 		      </table>
@@ -499,9 +511,12 @@
 		          <tr>
 		              <td class="bg-light">
 		                  <p><div class="spinner"> </div></p>
+		                  <p><div class="large-spinner"> </div></p>
+		
 		              </td>
 		              <td class="bg-slategray">
 							   <p><div class="spinner"> </div></p>
+		                  <p><div class="large-spinner"> </div></p>
 		              </td>
 		          </tr>
 		      </table>
