@@ -16,8 +16,6 @@ limitations under the License.
 var parser = new UAParser();
 var ua = parser.getResult(); // object containing device/os/browser info
 
-var device = ['iPhone Apple Mobile', ''];
-
 function sendBenchmark(benchtest, title, version) {
 	
 	var device = "";
@@ -28,7 +26,7 @@ function sendBenchmark(benchtest, title, version) {
 	// $.post("http://localhost:3000/benchmark", { // used $.post since xhr doesn't work on android 2.2 from what I've seen
 		benchmark_result: benchtest,
 		version: version,
-		device: device[parseInt(Math.random()*10%device.length,10)],
+		device: device,
 		commit: commit,
         date: date,
 		test: title,
