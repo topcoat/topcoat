@@ -468,6 +468,7 @@ body {
 	background-color: #424546;
 	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
 	color: #c6c8c8;
+/*	color: #000;*/
 	height: 3em;
 	font: 1em "Source Sans", helvetica, arial, sans-serif;
 	font-weight: 200;
@@ -481,11 +482,17 @@ body {
 	border: 1px solid #a5a8a8;
 	border-radius: 6px;
 	margin: 5px;
-	background-color: #ffffff;
+	background-color: #eff1f1;
 	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
 	height: 3em;
 	font: 1em "Source Sans", helvetica, arial, sans-serif;
 	font-weight: 200;
+}
+
+.dark-text-input:focus,
+.light-text-input:focus{
+	background-color: #ffffff;
+	color: #454545;
 }
 
 .large-text-input {
@@ -495,13 +502,17 @@ body {
 }
 
 input[type=search] {
-	-webkit-appearance: none;
 	padding-right: 0;
-	padding-left: 30px;
+	padding-left: 25px;
 	border-radius: 25px;
 	background-image: url("../img/search-bg.png");
 	background-repeat: no-repeat;
 	background-position: 10px center;
+}
+
+input[type="search"]::-webkit-search-cancel-button, 
+input[type="search"]::-webkit-search-decoration {
+	margin-right: 5px;
 }
 
 input[type=search].large-text-input {
@@ -521,6 +532,11 @@ textarea {
 	resize: none;
 }
 
+textarea:focus{
+	background-color: #ffffff;
+	color: #454545;
+}
+
 .dark-textarea {
 	border: 1px solid #2f3233;
 	background-color: #424546;
@@ -530,7 +546,7 @@ textarea {
 
 .light-textarea {
 	border: 1px solid #a5a8a8;
-	background-color: #ffffff;
+	background-color: #eff1f1;
 	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
 	color: #454545;
 }
@@ -705,11 +721,13 @@ input[type="radio"]:checked + .radio-right:after {
   border: 1px solid #a5a8a8;
   border-radius: 6px;
   background-color: #d3d7d7;
-  background-clip: padding-box !important;
+  background-clip: content-box !important;
   vertical-align: middle;
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 3em;
+-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
 }
 
 .slide-switch:checked + label .wrapper {
@@ -718,15 +736,15 @@ input[type="radio"]:checked + .radio-right:after {
 }
 .slide-switch:checked + label .wrapper .on {
   visibility: visible;
-  -webkit-transition: visibility 0s linear 0s;
+  -webkit-transition: visibility 0s linear .0s;
   -moz-transition: visibility 0s linear 0s;
   transition: visibility 0s linear 0s;
 }
 .slide-switch:checked + label .wrapper .off {
   visibility: hidden;
-  -webkit-transition: visibility 0s linear 0.2s;
-  -moz-transition: visibility 0s linear 0.2s;
-  transition: visibility 0s linear 0.2s;
+  -webkit-transition: visibility 0s linear 0.5s;
+  -moz-transition: visibility 0s linear 0.5s;
+  transition: visibility 0s linear 0.5s;
 }
 .slide-switch + label .wrapper {
   position: relative;
@@ -736,9 +754,9 @@ input[type="radio"]:checked + .radio-right:after {
   display: block;
   width: 5.5em;
   height: 3em;
-  -webkit-transition: left 0.2s ease-out;
-  -moz-transition: left 0.2s ease-out;
-  transition: left 0.2s ease-out;
+  -webkit-transition: left 0.5s ease-out;
+  -moz-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
 }
 
 .dark-slide-switch + label .switch,
@@ -780,6 +798,8 @@ input[type="radio"]:checked + .radio-right:after {
   left: 3.5em;
   z-index: 1;
   width: 2em;
+-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
   border-radius: 6px;
   border-right: 1px solid #a5a8a8;
   background: url("../img/light-grips.png") center center no-repeat #e5e9e8;
@@ -816,9 +836,9 @@ input[type="radio"]:checked + .radio-right:after {
   background: #e0f0fa;
   box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
   color: #0083e8;
-  -webkit-transition: visibility 0s linear 0.2s;
-  -moz-transition: visibility 0s linear 0.2s;
-  transition: visibility 0s linear 0.2s;
+  -webkit-transition: visibility 0s linear 0.5s;
+  -moz-transition: visibility 0s linear 0.5s;
+  transition: visibility 0s linear 0.5s;
 }
 
 .dark-slide-switch + label .off {
@@ -850,19 +870,6 @@ input[type="radio"]:checked + .radio-right:after {
   -moz-transition: visibility 0s linear 0s;
   transition: visibility 0s linear 0s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .dark-slider {
@@ -1073,3 +1080,138 @@ input[type="radio"]:checked + .radio-right:after {
 	height: 350px;
 	background: url("../img/dialog-zone-bg.png") center center #fff;
 }
+
+
+
+/*
+
+.slide-switch {
+	position: relative; 
+	width: 5.5em;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-user-select:none; 
+	-moz-user-select:none; 
+	-ms-user-select: none;
+	margin-left: 10px;
+}
+
+.dark-slide-switch {
+	display: inline-block; 
+	overflow: hidden; 
+	cursor: pointer;
+	border: 1px solid #2f3233; 
+	width: 5.5em;
+	border-radius: 6px;
+	
+}
+
+.light-slide-switch {
+	display: inline-block; 
+	overflow: hidden; 
+	cursor: pointer;
+	border: 1px solid #a5a8a8; 
+	border-radius: 6px;
+	width: 5.5em;
+}
+.on-off {
+	width: 200%; 
+	margin-left: -100%;
+	-moz-transition: margin 0.2s ease-in 0s; 
+	-webkit-transition: margin 0.2s ease-in 0s;
+	-o-transition: margin 0.2s ease-in 0s; 
+	transition: margin 0.2s ease-in 0s;
+}
+
+.on-off:before, .on-off:after {
+	float: left; 
+	width: 50%; 
+	height: 3em; 
+	padding: 0; 
+	line-height: 3em;
+	font-size: 16px; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+
+.dark-slide-switch .on-off:before {
+    content: "ON";
+    padding-left: 1em;
+    background-color: #404141; 
+	box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+	color: #5dc1ff;
+}
+.dark-slide-switch .on-off:after {
+    content: "OFF";
+    padding-right: 1em;
+    background-color: #404141; 
+	box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+	color: #5dc1ff;
+    text-align: right;
+}
+
+.light-slide-switch .on-off:before {
+    content: "ON";
+    padding-left: 1em;
+    background-color: #e0f0fa; 
+	box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+	color: #0083e8;
+	text-shadow: 0 1px #fff;
+}
+.light-slide-switch .on-off:after {
+    content: "OFF";
+    padding-right: 1em;
+    background-color: #D3D7D7; 
+	box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+	color: #000;
+    text-align: right;
+	text-shadow: 0 1px #fff;
+}
+
+
+.dark-slide-switch .switch {
+	width: 2em;
+	margin: 0px;
+    background: url("../img/dark-grips.png") center center no-repeat #595b5b;
+    border: 1px solid #2f3233; 
+	background-size: 7px;
+	height: 3em;
+  	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+	border-radius: 6px;
+    position: absolute; top: 0; bottom: 0; 
+	right: 3.35em;
+    -moz-transition: all 0.2s ease-in 0s; -webkit-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s; transition: all 0.2s ease-in 0s; 
+    background-image: -moz-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.light-slide-switch .switch {
+	width: 2em;
+	margin: 0px;
+    background: url("../img/light-grips.png") center center no-repeat #e5e9e8;
+    border: 1px solid #a5a8a8; 
+	background-size: 7px;
+	height: 3em;
+  	box-shadow: inset 0 1px 0 white;
+	border-radius: 6px;
+    position: absolute; top: 0; bottom: 0; 
+	right: 3.35em;
+    -moz-transition: all 0.2s ease-in 0s; -webkit-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s; transition: all 0.2s ease-in 0s; 
+    background-image: -moz-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}
+.slide-switch input[type="checkbox"]:checked + label .on-off {
+    margin-left: 0;
+}
+.slide-switch input[type="checkbox"]:checked + label .switch {
+    right: -2px; 
+}*/
