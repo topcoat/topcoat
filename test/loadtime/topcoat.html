@@ -7,13 +7,21 @@
     <title>TopCoat Component Test</title>
     <script type="text/javascript" src="//use.typekit.net/tfw6uyb.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" type="text/css" href="../../..doc/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../../..doc/css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="../../../doc/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../doc/css/styleguide.css">
     <link rel="stylesheet" type="text/css" href="../../release/css/topcoat.css">
+    <style type="text/css">
+
+    .notice {
+        width:400px;
+    }
+
+    </style>
 </head>
 <body>
 
     <div id="test-container">
+        <p><a href="#" class="cta large button" id="restart">Restart loadtime test</a></p>
         <h4>
             <span>Standard on White</span>
         </h4>
@@ -584,14 +592,25 @@
 
             <div class="spinner large"></div>
         </div>
-
-
         <p>
             <h3>Do a
-                    <a href="javascript:(function(d){var s=d.createElement('script');s.src='http://andy.edinborough.org/Demos/css-stress/stressTest.js?_='+Math.random();var es=d.getElementsByTagName('script')[0];es.parentNode.insertBefore(s,es);var doit=function(){if(window.stressTest){stressTest.bookmarklet();}else{setTimeout(doit,100);}};doit();})(document);">Stress CSS
-                    </a>
+                <a href="javascript:(function(d){var s=d.createElement('script');s.src='../third-party/stress-css/stressTest.js?_='+Math.random();var es=d.getElementsByTagName('script')[0];es.parentNode.insertBefore(s,es);var doit=function(){if(window.stressTest){stressTest.bookmarklet();}else{setTimeout(doit,100);}};doit();})(document);">Stress CSS
+                </a>
+                <input type=checkbox disabled>
+                <button disabled id='submit' class='button quiet cta large'>Submit</button>
             </h3>
         </p>
+        <p>
+                <h3>Want to submit results?</h3>
+                <p>After stress CSS has run, close the results window and follow the steps (don't worry the results are already stored in a variable)</p>
+                <h4>Paste in the following bash command to determine your topcoat version</h4>
+                <textarea class='notice'>git log --pretty=format:"%H %ai" | head -n 1</textarea>
+                <h4>Paste the result in the textarea</h4>
+                <p>
+                    <textarea placeholder='Place the result here' class='topcoat-version notice'></textarea>
+                </p>
+        </p>
+
         <div id="perf"></div>
         <table></table>
 
@@ -601,5 +620,6 @@
     <script src="../third-party/ua-parser/ua-parser.js"></script>
     <script src="../js/send-benchmark.js"></script>
     <script src="../js/perf.js"></script>
+    <script src="../js/stress-css-send.js"></script>
 </body>
 </html>
