@@ -15,45 +15,34 @@ limitations under the License.
 
 var commit
 ,   date
-,   parser = new UAParser()
-,   ua = parser.getResult()
-,   device = ""
 ;
 
-for(var i in ua.device) // if there is any, usually works on mobile
-		if(ua.device[i]) device += ua.device[i] + ' ';
-
-device = device.trim();
-
 $('.topcoat-version').on('keyup', function () {
-		var val = $(this).val().trim().split(' ');
-		commit = val.shift();
-		date = val.join(' ');
-		if(commit.length == 40 && date.length) {
-				if(Date.parse(date)) {
-					$('input[type=checkbox]').attr('disabled', false).attr('checked', 'true');
-					$('#submit').attr('disabled', false);
-					$('#page-load-time').attr('disabled', false);
-				}
-				else
-					alert('Invalid Date');
-		}
+	var val = $(this).val().trim().split(' ');
+	commit  = val.shift();
+	date	= val.join(' ');
+	if(commit.length == 40 && date.length) {
+			if(Date.parse(date)) {
+				$('input[type=checkbox]')
+					.attr('disabled', false)
+					.attr('checked', 'true');
+				$('#submit')
+					.attr('disabled', false);
+				$('#page-load-time')
+					.attr('disabled', false);
+			}
+			else
+				alert('Invalid Date');
+	}
 });
 
 $('#submit').on('click', function () {
-		console.log('submit stress css results');
-		var results = window.results;
-		$.post("http://topcoat.herokuapp.com/benchmark", {
-		//$.post("http://localhost:3000/benchmark", {
-			benchmark_result: results.baselineTime,
-			commit: commit,
-			date: date,
-			selector: results.selector,
-			device: device,
-			ua: navigator.appVersion,
-			test: 'stressCSS'
-		}).success(function(data){
-			console.log(data);
-		});
+	console.log('Submit stress css results');
 
+	// the extra field is where I send the top 3 CSS class selectors from the stress CSS results
+	var extra = {};
+	extra.field = 'selector';
+	extra.value = results.selector;
+
+	sendBenchmark(results.baselineTime, 'stressCSS', extra);
 });

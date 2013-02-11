@@ -16,22 +16,29 @@ limitations under the License.
 var parser = new UAParser();
 var ua = parser.getResult(); // object containing device/os/browser info
 
-function sendBenchmark(benchtest, title, version) {
+function sendBenchmark(benchtest, title, optional) {
 	
 	var device = "";
 	for(var i in ua.device) // if there is any, usually works on mobile
 		if(ua.device[i]) device += ua.device[i] + ' ';
 	device = device.trim();
-	$.post("http://topcoat.herokuapp.com/benchmark", { // used $.post since xhr doesn't work on android 2.2 from what I've seen
-	// $.post("http://localhost:3000/benchmark", { // used $.post since xhr doesn't work on android 2.2 from what I've seen
+
+	var postData = {
 		benchmark_result: benchtest,
-		version: version,
+		date: date,
 		device: device,
 		commit: commit,
-        date: date,
 		test: title,
 		ua: navigator.appVersion
-	}).success(function(data){
+	};
+
+	if(optional)
+		postData[optional.field] =  optional.value;
+	console.log(postData);
+
+	// $.post("http://localhost:3000/benchmark", postData)
+	$.post("http://topcoat.herokuapp.com/benchmark", postData)
+	.success(function(data){
 		console.log(data);
 	});
 }

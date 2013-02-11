@@ -1139,27 +1139,29 @@
 	</div>
 <!-- end of #test-container -->
 
-        <p>
-            <h3>Do a
-                <a href="javascript:(function(d){var s=d.createElement('script');s.src='../third-party/stress-css/stressTest.js?_='+Math.random();var es=d.getElementsByTagName('script')[0];es.parentNode.insertBefore(s,es);var doit=function(){if(window.stressTest){stressTest.bookmarklet();}else{setTimeout(doit,100);}};doit();})(document);">Stress CSS
-                </a>
-                <input type=checkbox disabled>
-                <button disabled id='submit' class='button quiet cta large'>Submit</button>
-            </h3>
-        </p>
-        <p>
-                <h3>Want to submit results?</h3>
-                <p>After stress CSS has run, close the results window and follow the steps (don't worry the results are already stored in a variable)</p>
-                <h4>Paste in the following bash command to determine your topcoat version</h4>
-                <textarea class='notice'>git log --pretty=format:"%H %ai" | head -n 1</textarea>
-                <h4>Paste the result in the textarea</h4>
-                <p>
-                    <textarea placeholder='Place the result here' class='topcoat-version notice'></textarea>
-                </p>
-        </p>
+    <p>
+        <h2>Do a
+            <a href="javascript:(function(d){var s=d.createElement('script');s.src='../third-party/stress-css/stressTest.js?_='+Math.random();var es=d.getElementsByTagName('script')[0];es.parentNode.insertBefore(s,es);var doit=function(){if(window.stressTest){stressTest.bookmarklet();}else{setTimeout(doit,100);}};doit();})(document);">Stress CSS
+            </a>
+            <input type=checkbox disabled>
+        </h2>
+    </p>
+    <p>
+            <h1>Want to submit results?</h1>
+            <p>1. Run stress CSS</p>
+            <p>2. Close the results window</p>
+            <h4>3. Paste in the following bash command to determine your topcoat version</h4>
+            <textarea class='notice'>git log --pretty=format:"%H %ai" | head -n 1</textarea>
+            <h4>4. Paste the result in the textarea</h4>
+            <p>
+                <textarea placeholder='Place the result here' class='topcoat-version notice'></textarea>
+            </p>
+            <p>The submit buttons are at the bottom</p>
+    </p>
 
-        <div id="perf"></div>
-        <table id="loadtime-table"></table>
+    <div id="perf"></div>
+    <table id="loadtime-table"></table>
+    <button disabled id='submit' class='button quiet cta large'>Submit Stress CSS results</button>
 
     <script src="../third-party/foundation/javascripts/jquery.js"></script>
     <script src="../third-party/ua-parser/ua-parser.js"></script>
