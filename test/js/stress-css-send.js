@@ -44,7 +44,7 @@ $('#submit').on('click', function () {
 		console.log('submit stress css results');
 		var results = window.results;
 		$.post("http://topcoat.herokuapp.com/benchmark", {
-		// $.post("http://localhost:3000/benchmark", {
+		//$.post("http://localhost:3000/benchmark", {
 			benchmark_result: results.baselineTime,
 			commit: commit,
 			date: date,
