@@ -46,7 +46,7 @@ function loadResTimData() {
 window.onload = function(){
   setTimeout(function(){
     var t = performance.timing;
-    var table = document.querySelector('table');
+    var table = document.querySelector('#loadtime-table');
     var tr = '<tr><td>Page load time (after downloading)</td><td colspan=4>'+(t.loadEventEnd - t.responseEnd)+' ms</td></tr>';
     tr += '<tr><td><button id="page-load-time" class="button cta large quiet" disabled> Submit load time </button></td></tr>';
     table.innerHTML += tr;
