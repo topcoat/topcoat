@@ -16,12 +16,12 @@ You should do a clean before committing to git, so that you don't accidentally c
 # Running the tests
 After generating the test files and copying them to chromium, you can run the telemetry tests. The tests currently require the `topcoat` folder to be available through http under port 8000, so you first need to:
 ```
-    cd _topcoat_base_dir_
+    cd <topcoat_base_dir>
     python -m SimpleHTTPServer
 ```
 
 Then you can start the tests:
 ```
-    cd chromium_src/tools/perf
+    cd <chromium_src>/tools/perf
     ./run_multipage_benchmarks --browser=system loading_benchmark page_sets/topcoat_buttons.json 
 ``` 
