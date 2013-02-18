@@ -15,6 +15,9 @@ limitations under the License.
 
 /*global module:false*/
 
+//todo: find a way to configure this externally (env var?)
+var CHROMIUM_SRC = '/Users/cataling/work/chromium/home/src_tarball/tarball/chromium/src/';
+
 var bower = {
     name: 'topcoat',
     version: '0.1.0',
@@ -37,6 +40,8 @@ var bower = {
         grunt.loadNpmTasks('grunt-contrib-stylus');
         grunt.loadNpmTasks('grunt-contrib-mincss');
         grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.loadNpmTasks('grunt-contrib-jade');
+        grunt.loadNpmTasks('grunt-contrib-clean');
 
         grunt.initConfig({
             pkg: '<json:package.json>',
@@ -54,7 +59,16 @@ var bower = {
                         'release/font/': 'src/font/**',
                         'release/img/': 'src/img/**'
                     }
-                }
+                },
+
+				/* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
+				telemetry: {
+					files: [
+						{src: ['test/telemetry/perf/**'], dest: path.join(CHROMIUM_SRC, 'tools/perf/')}
+						/*{src: ['test/telemetry/telemetry/**'], dest:'/tmp/perf/'}	*/
+					]
+				}
+
             },
 
             mincss: {
@@ -67,6 +81,24 @@ var bower = {
             watch: {
                 files: ['src/style/*.styl'],
                 tasks: ['stylus', 'mincss']
+            }, 
+            
+            jade: {
+              telemetry: {
+                options: {
+                  data: {
+                    debug: false,
+                    pretty: true 
+                  }
+                },
+                files: {
+                  "test/telemetry/perf/page_sets/topcoat/topcoat_buttons.html": ["test/telemetry/page_sets_src/topcoat_buttons.jade"]
+                }
+              }
+            }, 
+            
+            clean: {
+              telemetry: ["test/telemetry/perf/page_sets/topcoat/topcoat_buttons.html"]
             }
         });
 
@@ -87,5 +119,6 @@ var bower = {
         });
 
         // fin
-        grunt.registerTask('default', 'stylus copy mincss manifest');
+        grunt.registerTask('default', 'stylus copy:dist mincss manifest');
+		grunt.registerTask('telemetry', 'jade:telemetry copy:telemetry');
     };
