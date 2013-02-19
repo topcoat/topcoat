@@ -15,9 +15,6 @@ limitations under the License.
 
 /*global module:false*/
 
-//todo: find a way to configure this externally (env var?)
-var CHROMIUM_SRC = '/Users/cataling/work/chromium/home/src_tarball/tarball/chromium/src/';
-
 var bower = {
     name: 'topcoat',
     version: '0.1.0',
@@ -32,7 +29,8 @@ var bower = {
     _ = require('underscore'),
     fs = require('fs'),
     path = require('path'),
-    base = path.join(__dirname, 'release');
+    base = path.join(__dirname, 'release'),
+    chromiumSrc = process.env.CHROMIUM_SRC;
 
 
     module.exports = function (grunt) {
@@ -64,7 +62,7 @@ var bower = {
 				/* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
 				telemetry: {
 					files: [
-						{src: ['test/telemetry/perf/**'], dest: path.join(CHROMIUM_SRC, 'tools/perf/')}
+						{src: ['test/telemetry/perf/**'], dest: path.join(chromiumSrc, 'tools/perf/')}
 						/*{src: ['test/telemetry/telemetry/**'], dest:'/tmp/perf/'}	*/
 					]
 				}
@@ -117,8 +115,16 @@ var bower = {
             var c = JSON.stringify(_.extend(bower, component), null, 4);
             fs.writeFileSync(path.join(__dirname, 'component.json'), c, 'utf8');
         });
+        
+        grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
+            if (!chromiumSrc) {
+                grunt.fail.warn("Please set the CHROMIUM_SRC env var to the root of your chromium sources (ends in /src)");
+            } else {
+                grunt.log.writeln("CHROMIUM_SRC points to " + chromiumSrc.cyan);                
+            }
+        });
 
         // fin
         grunt.registerTask('default', 'stylus copy:dist mincss manifest');
-		grunt.registerTask('telemetry', 'jade:telemetry copy:telemetry');
+		grunt.registerTask('telemetry', 'check_chromium_src jade:telemetry copy:telemetry');
     };
