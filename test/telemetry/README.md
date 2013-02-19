@@ -33,7 +33,7 @@ python -m SimpleHTTPServer
 
 Then you can start the tests:
 ```
-cd $CHROMIUM_SRC_/tools/perf
+cd $CHROMIUM_SRC/tools/perf
 ./run_multipage_benchmarks --browser=system loading_benchmark page_sets/topcoat_buttons.json -o /tmp/loading_benchmark_topcoat_buttons.txt
 ./run_multipage_benchmarks --browser=system smoothness_benchmark page_sets/topcoat_buttons.json -o /tmp/loading_benchmark_topcoat_buttons.txt
 ``` 
