@@ -29,7 +29,8 @@ var bower = {
     _ = require('underscore'),
     fs = require('fs'),
     path = require('path'),
-    base = path.join(__dirname, 'release');
+    base = path.join(__dirname, 'release'),
+    chromiumSrc = process.env.CHROMIUM_SRC;
 
 
     module.exports = function (grunt) {
@@ -37,6 +38,9 @@ var bower = {
         grunt.loadNpmTasks('grunt-contrib-stylus');
         grunt.loadNpmTasks('grunt-contrib-mincss');
         grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.loadNpmTasks('grunt-contrib-jade');
+        grunt.loadNpmTasks('grunt-contrib-clean');
+        grunt.loadNpmTasks('grunt-exec');
 
         grunt.initConfig({
             pkg: '<json:package.json>',
@@ -54,7 +58,16 @@ var bower = {
                         'release/font/': 'src/font/**',
                         'release/img/': 'src/img/**'
                     }
-                }
+                },
+
+				/* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
+				telemetry: {
+					files: [
+						{src: ['test/telemetry/perf/**'], dest: path.join(chromiumSrc, 'tools/perf/')}
+						/*{src: ['test/telemetry/telemetry/**'], dest:'/tmp/perf/'}	*/
+					]
+				}
+
             },
 
             mincss: {
@@ -67,6 +80,24 @@ var bower = {
             watch: {
                 files: ['src/style/*.styl'],
                 tasks: ['stylus', 'mincss']
+            }, 
+            
+            jade: {
+              telemetry: {
+                options: {
+                  data: {
+                    debug: false,
+                    pretty: true 
+                  }
+                },
+                files: {
+                  "test/telemetry/perf/page_sets/topcoat/topcoat_buttons.html": ["test/telemetry/page_sets_src/topcoat_buttons.jade"]
+                }
+              }
+            }, 
+            
+            clean: {
+              telemetry: ["test/telemetry/perf/page_sets/topcoat/topcoat_buttons.html"]
             }
         });
 
@@ -85,7 +116,66 @@ var bower = {
             var c = JSON.stringify(_.extend(bower, component), null, 4);
             fs.writeFileSync(path.join(__dirname, 'component.json'), c, 'utf8');
         });
+        
+        grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
+            if (!chromiumSrc) {
+                grunt.fail.warn("Please set the CHROMIUM_SRC env var to the root of your chromium sources (ends in /src)");
+            } else {
+                grunt.log.writeln("CHROMIUM_SRC points to " + chromiumSrc.cyan);                
+            }
+        });
 
         // fin
-        grunt.registerTask('default', 'stylus copy mincss manifest');
+        grunt.registerTask('default', 'stylus copy:dist mincss manifest');
+		grunt.registerTask('telemetry', 'check_chromium_src jade:telemetry copy:telemetry');
+        grunt.registerTask('telemetry-submit', 'Submit telemetry test results', function(){
+
+            var myTerminal = require("child_process").exec,
+            commandToBeExecuted = 'git log --pretty=format:"%H %ai" | head -n 1';
+            var done = this.async();
+
+            myTerminal(commandToBeExecuted, function(error, stdout, stderr) {
+                if (error) {
+                    grunt.log.error('Error');
+                    console.log(error);
+                    done();
+                } else {
+                    var querystring = require('querystring');
+                    var http = require('http');
+
+                    var version = stdout.split(' ');
+
+                    var post_data = querystring.stringify({
+                        commit : version[0],
+                        date   : version[1]
+                    });
+
+                    // An object of options to indicate where to post to
+                    var post_options = {
+                        host: 'topcoat.herokuapp.com',
+                        port: '80',
+                        path: '/v2/grunt',
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'Content-Length': post_data.length
+                        }
+                    };
+
+                    // Set up the request
+                    var post_req = http.request(post_options, function(res) {
+                        res.setEncoding('utf8');
+                        res.on('data', function (chunk) {
+                            console.log('Response: ' + chunk);
+                        });
+                    });
+
+                    // post the data
+                    post_req.write(post_data);
+                    post_req.end();
+
+                }
+            });
+
+        });
     };

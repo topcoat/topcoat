@@ -36,8 +36,8 @@ function sendBenchmark(benchtest, title, optional) {
 		postData[optional.field] =  optional.value;
 	console.log(postData);
 
-	// $.post("http://localhost:3000/benchmark", postData)
-	$.post("http://topcoat.herokuapp.com/benchmark", postData)
+	$.post("http://localhost:3000/benchmark", postData)
+	// $.post("http://topcoat.herokuapp.com/benchmark", postData)
 	.success(function(data){
 		console.log(data);
 	});
