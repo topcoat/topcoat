@@ -40,6 +40,7 @@ var bower = {
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-contrib-jade');
         grunt.loadNpmTasks('grunt-contrib-clean');
+        grunt.loadNpmTasks('grunt-exec');
 
         grunt.initConfig({
             pkg: '<json:package.json>',
@@ -127,4 +128,54 @@ var bower = {
         // fin
         grunt.registerTask('default', 'stylus copy:dist mincss manifest');
 		grunt.registerTask('telemetry', 'check_chromium_src jade:telemetry copy:telemetry');
+        grunt.registerTask('telemetry-submit', 'Submit telemetry test results', function(){
+
+            var myTerminal = require("child_process").exec,
+            commandToBeExecuted = 'git log --pretty=format:"%H %ai" | head -n 1';
+            var done = this.async();
+
+            myTerminal(commandToBeExecuted, function(error, stdout, stderr) {
+                if (error) {
+                    grunt.log.error('Error');
+                    console.log(error);
+                    done();
+                } else {
+                    var querystring = require('querystring');
+                    var http = require('http');
+
+                    var version = stdout.split(' ');
+
+                    var post_data = querystring.stringify({
+                        commit : version[0],
+                        date   : version[1]
+                    });
+
+                    // An object of options to indicate where to post to
+                    var post_options = {
+                        host: 'topcoat.herokuapp.com',
+                        port: '80',
+                        path: '/v2/grunt',
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'Content-Length': post_data.length
+                        }
+                    };
+
+                    // Set up the request
+                    var post_req = http.request(post_options, function(res) {
+                        res.setEncoding('utf8');
+                        res.on('data', function (chunk) {
+                            console.log('Response: ' + chunk);
+                        });
+                    });
+
+                    // post the data
+                    post_req.write(post_data);
+                    post_req.end();
+
+                }
+            });
+
+        });
     };
