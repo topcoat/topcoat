@@ -13,31 +13,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-var parser = new UAParser();
-var ua = parser.getResult(); // object containing device/os/browser info
-
-function sendBenchmark(benchtest, title, optional) {
-	
-	var device = "";
-	for(var i in ua.device) // if there is any, usually works on mobile
-		if(ua.device[i]) device += ua.device[i] + ' ';
-	device = device.trim();
+function sendBenchmark(benchtest, commit, date, title, device, ua) {
 
 	var postData = {
-		benchmark_result: benchtest,
-		date: date,
-		device: device,
-		commit: commit,
-		test: title,
-		ua: navigator.appVersion
+		resultName  : benchtest.resultHeader,
+		resultValue : benchtest.resultData,
+		date		: date,
+		device		: device,
+		commit		: commit,
+		test		: title,
+		ua			: ua
 	};
 
-	if(optional)
-		postData[optional.field] =  optional.value;
 	console.log(postData);
 
-	$.post("http://localhost:3000/benchmark", postData)
-	// $.post("http://topcoat.herokuapp.com/benchmark", postData)
+	// $.post("http://localhost:3000/v2/benchmark", postData)
+	$.post("http://topcoat.herokuapp.com/v2/benchmark", postData)
 	.success(function(data){
 		console.log(data);
 	});
