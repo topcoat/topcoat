@@ -54,7 +54,7 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'release/css/topcoat.css': ['src/style/copyright.styl', 'src/style/topcoat.styl']
+          'release/css/topcoat-min.css': ['src/style/copyright.styl', 'src/style/topcoat.styl']
         }
       }
     },
