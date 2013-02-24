@@ -723,7 +723,7 @@ a:active {
 }
 .approx-slider.dark {
   background: #414545;
-  border: 1px solid #2f3133;
+  border: 1px solid #2d2f31;
   box-shadow: inset 0 1px 0px rgba(0,0,0,0.18);
 }
 .approx-slider.dark::-webkit-slider-thumb {
