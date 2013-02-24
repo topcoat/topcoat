@@ -32,10 +32,8 @@
 
 .button.quiet:hover
     quiet-hover-style()
-
 .button.quiet:active
     quiet-down-style()
-
 .button.quiet:focus
     quiet-focus-style()
 
@@ -206,6 +204,7 @@ select.button
     min-width 70px
     padding 0 30px 0 5px
     -webkit-appearance none !important
+    font-family topcoat-font // no idea why it switches to lucida grande if this is not applied
 
     &:hover
         light-hover-style(url(../img/pop-up-triangle.png), right, no-repeat)
