@@ -395,7 +395,7 @@ select.button {
   min-width: 70px;
   padding: 0 30px 0 5px;
   -webkit-appearance: none !important;
-  font-family: 12px "source", helvetica, arial, sans-serif;
+  font: 12px "source", helvetica, arial, sans-serif;
 }
 select.button:hover {
   background-image: url("../img/pop-up-triangle.png"), linear-gradient(top, #edf1f1, #edf1f1);
