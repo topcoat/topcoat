@@ -16,6 +16,7 @@
 .button.disabled:active
     standard-structure()
     light-style()
+    cursor pointer
 
 .button:hover
     light-hover-style()
@@ -125,49 +126,65 @@
         top standard-height + 7
 
 .button-group
-    display inline-block
-    vertical-align top
+    display: inline-block;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: top;
     user-select()
     overflow visible
     position relative
 
     .menu
+        font-size 12px
+        line-height: 21px
         left 1px
         top standard-height + 2
 
-.button.inside
-    border-left transparent-border
-    border-right light-button-divider
-    border-radius 0
-    margin 0 0 0 -3px !important
-
 .button.start
-    border-right light-button-divider
+    border-right none
     border-radius component-radius 0 0 component-radius !important
     margin  0
 
+.button.inside
+    border-left light-button-divider
+    border-right none
+    border-radius 0
+    margin 0 0 0 -1px !important
+
 .button.end
-    border-left transparent-border
+    border-left light-button-divider
     border-radius 0 component-radius component-radius 0 !important
-    margin 0 standard-margin standard-margin -3px
+    margin 0 standard-margin standard-margin -1px
 
 .button.more
-    border-left transparent-border
+    border-right light-button-divider
     border-radius 0 component-radius component-radius 0 !important
-    margin 0 standard-margin  standard-margin -3px
+    margin 0 standard-margin  standard-margin -1px
     padding 0
     width 20px
 
-.button.inside.dark
-    border-left transparent-border
-    border-right dark-button-divider
-    border-radius 0
-    margin 0 0 0 -3px !important
-
 .button.start.dark
-    border-right dark-button-divider
+    border-left dark-button-divider
     border-radius component-radius 0 0 component-radius !important
     margin 0
+
+.button.inside.dark
+    border-left dark-button-divider
+    border-right none
+    border-radius 0
+    margin 0 0 0 -2px !important
+
+.button.end.dark
+    border-left dark-button-divider
+    border-radius 0 component-radius component-radius 0 !important
+    margin 0 standard-margin standard-margin -1px
+
+.button.more.dark
+    border-right dark-button-divider
+    border-radius 0 component-radius component-radius 0 !important
+    margin 0 standard-margin  standard-margin -1px
+    padding 0
+    width 20px
 
 .button:focus
     z-index 1
@@ -185,7 +202,7 @@
         top standard-height + 8 !important
 
 .button.inside.large
-    margin 0 0 0 -4px !important
+    margin 0 0 0 -3px !important
 
 .button.start.large
     margin 0 !important
@@ -252,6 +269,5 @@ select.button.large
     cta-down-style()
 
 .button.cta:focus
-    cta-hover-style()
     cta-focus-style()
 
