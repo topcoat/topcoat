@@ -2,7 +2,7 @@ var file = function (path) {
 	return path.split('/').pop().split('.')[0];
 };
 
-var submitData = function (stdout, path) {
+var submitData = function (stdout, path, args) {
 	var querystring = require('querystring');
 	var http        = require('http');
 	var fs          = require('fs');
@@ -20,7 +20,8 @@ var submitData = function (stdout, path) {
 
 		post_data.commit = version[0];
 		post_data.date   = version[1];
-		post_data.test   = file(path);
+		post_data.test   = args.test || file(path);
+		post_data.device = args.device || 'device?';
 
 		post_data = querystring.stringify({data : JSON.stringify(post_data)});
 
