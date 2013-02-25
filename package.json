@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "grunt-exec": "~0.4.0",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "csv": "~0.2.7"
   },
   "devDependencies": {
     "grunt-lib-contrib": "0.3.1",
