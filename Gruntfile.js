@@ -77,7 +77,9 @@ module.exports = function(grunt) {
 		/* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
 		telemetry: {
 			files: [{
-				src: ['test/perf/telemetry/perf/**'],
+			    expand: true,
+			    cwd: "test/perf/telemetry/perf/",
+				src: ['**'],
 				dest: path.join(chromiumSrc, 'tools/perf/')
 			} /*{src: ['test/telemetry/telemetry/**'], dest:'/tmp/perf/'} */ ]
 		}
