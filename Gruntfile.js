@@ -81,7 +81,12 @@ module.exports = function(grunt) {
                     dest: 'test/perf/telemetry/perf/page_sets/topcoat/'               
                 }, {
                     expand: true,
-                    cwd: "test/perf/telemetry/perf/",
+                    cwd: 'components/topcoat-button/',
+                    src: ['release/**'],
+                    dest: 'test/perf/telemetry/perf/page_sets/topcoat/'
+                }, {
+                    expand: true,
+                    cwd: 'test/perf/telemetry/perf/',
                     src: ['**'],
                     dest: path.join(chromiumSrc, 'tools/perf/')
                 }]
@@ -99,6 +104,7 @@ module.exports = function(grunt) {
 			},
 			files: { //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
 				"test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.html": ["test/perf/telemetry/page_sets_src/topcoat_buttons.jade"],
+				"test/perf/telemetry/perf/page_sets/topcoat/buttons_no_theme.html": ["test/perf/telemetry/page_sets_src/buttons_no_theme.jade"]
 			}
 		}
 	},
