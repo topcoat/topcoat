@@ -41,4 +41,12 @@ We store the benchmark output in a file - the next script will take this output 
 
 # Pushing benchmark results to the server
 
-TBD - working on it
+There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt [--device] [--test]`
+
+Device is an optional parameter and sets the device on which the test ran.
+
+Test is an optional parameter and it overrides the default test name ( which is the name of the file from path ).
+
+There is a `settings.js` file located under `/test/perf/telemetry/lib/` where you can change the address where to submit. It is currently set for http://topcoat.herokuapp.com/v2/benchmark
+
+You can view the results at http://topcoat.herokuapp.com/v2/view/results
