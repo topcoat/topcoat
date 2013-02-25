@@ -77,21 +77,21 @@ module.exports = function(grunt) {
             /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
             telemetry: {
                 files: [{
-                    src: ['release/**'],
-                    dest: 'test/perf/telemetry/perf/page_sets/topcoat/'               
-                }, {
-                    expand: true,
-                    cwd: 'components/topcoat-button/',
-                    src: ['release/**'],
-                    dest: 'test/perf/telemetry/perf/page_sets/topcoat/'
-                }, {
                     expand: true,
                     cwd: 'test/perf/telemetry/perf/',
                     src: ['**'],
                     dest: path.join(chromiumSrc, 'tools/perf/')
+                }, {
+                    src: ['release/**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')              
+                }, {
+                    expand: true,
+                    cwd: 'components/topcoat-button/',
+                    src: ['release/**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
                 }]
             }
-
+            
 	},
 
 	jade: {
@@ -102,15 +102,15 @@ module.exports = function(grunt) {
 					pretty: true
 				}
 			},
-			files: { //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
-				"test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.html": ["test/perf/telemetry/page_sets_src/topcoat_buttons.jade"],
-				"test/perf/telemetry/perf/page_sets/topcoat/buttons_no_theme.html": ["test/perf/telemetry/page_sets_src/buttons_no_theme.jade"]
-			}
+			files: [{ //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
+			        dest: path.join(chromiumSrc, "tools/perf/page_sets/topcoat/topcoat_buttons.html"), 
+			        src: "test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.jade"
+			    }, {
+			        dest: path.join(chromiumSrc, "tools/perf/page_sets/topcoat/topcoat_buttons_no_theme.html"),
+			        src: "test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons_no_theme.jade"
+			    }
+			]
 		}
-	},
-
-	clean: {
-		telemetry: ["test/perf/telemetry/perf/page_sets/topcoat"]
 	},
 
 	jshint: {

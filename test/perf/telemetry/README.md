@@ -17,13 +17,7 @@ Next you can prepare the telemetry tests:
 ```
 grunt telemetry
 ```
-This does two things: generates test files based on grunt templates from `page_sets_src`, and copies them to the right location in chromium telemetry tests. The telemetry files are first generated under `perf/page_sets` for debugging purposes (we might decide to generate them directly under chromium src later).
-To clean up the generated files, run
-```
-grunt clean:telemetry
-```
-
-You should do a clean before committing to git, so that you don't accidentally commit the generated files.
+This does two things: generates test files based on grunt templates from `perf/page_sets`, and copies them to the right location in chromium telemetry tests. 
 
 # Running the tests
 You can run telemetry tests with:
