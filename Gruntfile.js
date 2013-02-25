@@ -72,17 +72,20 @@ module.exports = function(grunt) {
 					src: 'src/img/**',
 					dest: 'release/img/'
 				}]
-		},
+		    },
 
-		/* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
-		telemetry: {
-			files: [{
-			    expand: true,
-			    cwd: "test/perf/telemetry/perf/",
-				src: ['**'],
-				dest: path.join(chromiumSrc, 'tools/perf/')
-			} /*{src: ['test/telemetry/telemetry/**'], dest:'/tmp/perf/'} */ ]
-		}
+            /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
+            telemetry: {
+                files: [{
+                    src: ['release/**'],
+                    dest: 'test/perf/telemetry/perf/page_sets/topcoat/'               
+                }, {
+                    expand: true,
+                    cwd: "test/perf/telemetry/perf/",
+                    src: ['**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/')
+                }]
+            }
 
 	},
 
@@ -94,14 +97,14 @@ module.exports = function(grunt) {
 					pretty: true
 				}
 			},
-			files: {
-				"test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.html": ["test/perf/telemetry/page_sets_src/topcoat_buttons.jade"]
+			files: { //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
+				"test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.html": ["test/perf/telemetry/page_sets_src/topcoat_buttons.jade"],
 			}
 		}
 	},
 
 	clean: {
-		telemetry: ["test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.html"]
+		telemetry: ["test/perf/telemetry/perf/page_sets/topcoat"]
 	},
 
 	jshint: {

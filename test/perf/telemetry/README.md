@@ -17,7 +17,8 @@ Next you can prepare the telemetry tests:
 ```
 grunt telemetry
 ```
-This does two things: generates test files based on grunt templates from `page_sets_src`, and copies them to the right location in chromium telemetry tests. To clean up the generated files, run
+This does two things: generates test files based on grunt templates from `page_sets_src`, and copies them to the right location in chromium telemetry tests. The telemetry files are first generated under `perf/page_sets` for debugging purposes (we might decide to generate them directly under chromium src later).
+To clean up the generated files, run
 ```
 grunt clean:telemetry
 ```
@@ -25,13 +26,7 @@ grunt clean:telemetry
 You should do a clean before committing to git, so that you don't accidentally commit the generated files.
 
 # Running the tests
-After generating the test files and copying them to chromium, you can run the telemetry tests. The tests currently require the `topcoat` folder to be available through http under port 8000, so you first need to:
-```
-cd <topcoat_base_dir>
-python -m SimpleHTTPServer
-```
-
-Then you can start the tests:
+You can run telemetry tests with:
 ```
 cd $CHROMIUM_SRC/tools/perf
 ./run_multipage_benchmarks --browser=system loading_benchmark page_sets/topcoat_buttons.json -o /tmp/loading_benchmark_topcoat_buttons.txt
