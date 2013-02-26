@@ -63,8 +63,9 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					flatten: true,
-					src: 'src/font/**',
+					cwd: 'src/font/',
+					//flatten: true,
+					src: '**',
 					dest: 'release/font/'
 				}, {
 					expand: true,
