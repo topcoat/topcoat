@@ -3,7 +3,7 @@
     "archive_data_file": "../data/buttons_no_theme.json",
     "pages": [
         {
-            "url": "file:///topcoat/buttons_no_theme.html",
+            "url": "file:///topcoat/topcoat_buttons_no_theme.html",
 			"smoothness": {
                 "action": "scrolling_action"
             }
