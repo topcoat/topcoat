@@ -77,14 +77,15 @@ light-focus-style()
 quiet-style()
     background-image linear-gradient(top, quiet-gradient-start, quiet-gradient-end)
     background-image -webkit-gradient(linear, left top, left bottom, from(quiet-gradient-start), to(quiet-gradient-end))
-    border quiet-border
-    box-shadow quiet-gradient-highlight
+    box-shadow none
     color quiet-text
     text-shadow none
 
 quiet-hover-style()
     background-image linear-gradient(top,quiet-hover-gradient-start,quiet-hover-gradient-end)
     background-image -webkit-gradient(linear, left top, left bottom, from(quiet-hover-gradient-start), to(quiet-hover-gradient-end))
+    border quiet-border
+    box-shadow quiet-gradient-highlight
 
 quiet-down-style()
     background quiet-down
