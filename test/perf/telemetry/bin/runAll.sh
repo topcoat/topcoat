@@ -72,6 +72,7 @@ function runTests() {
 
     testFiles=$(ls ../perf/page_sets/*.json);
 
+    currentDir=`pwd`
     cd $CHROMIUM_SRC/tools/perf
 
     for test in $testFiles
@@ -82,6 +83,8 @@ function runTests() {
         ./run_multipage_benchmarks $browserParams loading_benchmark page_sets/$testFileBaseName -o $RESULTS_DIR/loading_benchmark_$testName.txt
         ./run_multipage_benchmarks $browserParams smoothness_benchmark page_sets/$testFileBaseName -o $RESULTS_DIR/smoothness_benchmark_$testName.txt
     done
+    
+    cd $currentDir
 }
 
 function submitResults() {
@@ -93,7 +96,6 @@ function submitResults() {
     done    
 }
 
-currentDir=`pwd`
 
 checkEnvVars
 prepareResultsDir
@@ -101,4 +103,3 @@ prepareTelemetryTests
 runTests
 submitResults
 
-cd $currentDir
