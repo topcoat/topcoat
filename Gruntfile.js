@@ -15,21 +15,21 @@ limitations under the License.
 
 /*global module:false*/
 
-var bower = {
-	name: 'topcoat',
-	version: '0.2.0',
-	main: []
-},
-	component = {
+var 
+	component = { /* see https://github.com/component/component/wiki/Spec for a description of what this should contain */
+	    name: 'topcoat',
 		repo: 'topcoat/topcoat',
+	    version: '0.2.0', 
 		description: 'An experimental CSS library.',
-		styles: ['release/css/topcoat-min.css'],
-		files: []
+		main: [],
+		styles: [],
+		images: [],
+		fonts: [],
+		files: [], 
 	},
 	_ = require('underscore'),
 	fs = require('fs'),
 	path = require('path'),
-	base = path.join(__dirname, 'release'),
 	chromiumSrc = process.env.CHROMIUM_SRC;
 
 module.exports = function(grunt) {
@@ -159,17 +159,43 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.registerTask('default', ['stylus', 'copy:dist', 'manifest']); /* the manifest for component.json is used by Bower */
 
 grunt.registerTask('manifest', 'Generates component.json file.', function() {
-	fs.readdirSync(base).forEach(function(dir) {
-		var srcDir = path.join(base, dir);
-		fs.readdirSync(srcDir).forEach(function(srcFile) {
-			var srcFilePath = path.join('release', dir, srcFile);
-			// I do not understand why Bower requires a manifest if it relies on git solely. But whatever.
-			bower.main.push(srcFilePath);
-			// now adding fonts and images for Component
-			if(dir != 'css') component.files.push(srcFilePath);
-		});
+    var base = path.join(__dirname, 'release');
+    
+    function addFilesToCollection(collection, basePath, localPath) {
+        fs.readdirSync(path.join(basePath,localPath)).forEach(function(file) {
+            if (fs.statSync(path.join(basePath, localPath, file)).isDirectory()) {
+                addFilesToCollection(collection, basePath, path.join(localPath, file));
+            } else {
+                collection.push(path.join("release", localPath, file));
+            }
+        });
+    }
+    
+	fs.readdirSync(base).forEach(function(dir) {	    
+        switch (dir) {
+            case "css": {
+                addFilesToCollection(component.styles, base, dir);
+                break;
+            }
+            case "font": {
+                addFilesToCollection(component.fonts, base, dir);
+                break;
+            }
+            case "img": {
+                addFilesToCollection(component.images, base, dir);
+                break;
+            }
+            default: {
+                addFilesToCollection(component.images, base, dir);
+                break;			        
+            }
+        }
+        
+    	/* bower needs everything to be pushed in main */
+        addFilesToCollection(component.main, base, dir);				
 	});
-	var c = JSON.stringify(_.extend(bower, component), null, 4);
+	
+	var c = JSON.stringify(component, null, 4);
 	fs.writeFileSync(path.join(__dirname, 'component.json'), c, 'utf8');
 });
 
