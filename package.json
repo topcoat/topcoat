@@ -1,6 +1,6 @@
 {
   "name": "topcoat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
   "main": "Gruntfile.js",
   "directories": {
