@@ -1,19 +1,33 @@
 {
   "name": "topcoat",
-  "version": "0.0.0",
-  "description": "experimental css",
-  "homepage": "https://topcoat.github.com/topcoat",
-  "main": "grunt.js",
+  "version": "0.2.0",
+  "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
+  "main": "Gruntfile.js",
   "directories": {
     "doc": "doc",
     "test": "test"
+  },
+  "dependencies": {
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {
+    "grunt-lib-contrib": "0.3.1",
+    "grunt-contrib-mincss": "0.3.2",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-stylus": "~0.4.0",
+    "grunt-contrib-jade": "~0.4.0",
+    "grunt-contrib-watch": "~0.1.4",
+    "grunt-stylusguide": "~0.1.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-exec": "~0.4.0",
+    "csv": "~0.2.7"
   },
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/topcoat/topcoat.git"
+    "url": "git://github.com/topcoat/topcoat.git"
   },
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
@@ -21,14 +35,6 @@
   "license": {
     "type": "Apache",
     "url": "https://github.com/topcoat/topcoat/blob/master/LICENSE"
-  },
-  "devDependencies": {
-    "grunt-lib-contrib": "0.3.1",
-    "grunt-contrib-mincss": "0.3.2",
-    "grunt-contrib-copy": "0.3.2",
-    "grunt": "0.3.17",
-    "grunt-contrib-stylus": "~0.3.1",
-    "underscore": "~1.4.4"
   },
   "keywords": [
     "css",

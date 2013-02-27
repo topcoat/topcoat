@@ -1,0 +1,10 @@
+-var repeats = 200
+!!!
+html
+    head
+        title TopCoat buttons test
+        |<link rel="stylesheet" type="text/css" href="./release/css/topcoat-min.css">
+    body
+        -while (repeats > 0)
+            -var repeats = repeats - 1
+            include buttons.html

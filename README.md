@@ -41,9 +41,11 @@ To run the tests `clone` the repo, `cd` into the test folder and start a localse
 
 ### Building the src
 
-Topcoat utilizes Grunt for building. You have to install that first
+Topcoat utilizes Grunt for building. You have to install its command line interface (CLI) globally
 
-    npm install grunt -g
+    npm install -g grunt-cli
+
+Topcoat uses Grunt 0.4.0 for upgrades you can [read](http://gruntjs.com/getting-started) more on their website.
 
 Then you can run `grunt` to build the sources. The results will be in ./release
 There is also a watch task that you can run. It automatically lints and compiles your less sources when it spots any changes.
@@ -73,3 +75,5 @@ An experimental CSS microlibrary for building super fast mobile web apps.
 - Android 2.2+ system browser
 - Mobile Safari 5+
 
+## Release notes
+See [Release Notes](https://github.com/topcoat/topcoat/wiki/Release-Notes) on the wiki.

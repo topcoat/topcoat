@@ -1,6 +1,6 @@
 {
     "name": "topcoat",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "main": [
         "release/css/topcoat-min.css",
         "release/css/topcoat.css",
@@ -12,13 +12,24 @@
         "release/img/checkbox_checked_dark.png",
         "release/img/checkbox_unchecked.png",
         "release/img/checkbox_unchecked_dark.png",
+        "release/img/dark-grips.png",
+        "release/img/dark-sprites.png",
+        "release/img/dark-sprites2x.png",
+        "release/img/dialog-zone-bg.png",
         "release/img/drop-down-triangle-dark.png",
         "release/img/drop-down-triangle.png",
+        "release/img/img",
+        "release/img/light-grips.png",
+        "release/img/light-sprites.png",
+        "release/img/light-sprites2x.png",
         "release/img/pop-up-triangle-dark.png",
         "release/img/pop-up-triangle.png",
+        "release/img/search-bg.png",
+        "release/img/search-bg2x.png",
         "release/img/spinner-lrg.png",
         "release/img/spinner-lrg@2x.png",
-        "release/img/spinner-sml.png"
+        "release/img/spinner-sml.png",
+        "release/img/spinner.png"
     ],
     "repo": "topcoat/topcoat",
     "description": "An experimental CSS library.",
@@ -34,12 +45,23 @@
         "release/img/checkbox_checked_dark.png",
         "release/img/checkbox_unchecked.png",
         "release/img/checkbox_unchecked_dark.png",
+        "release/img/dark-grips.png",
+        "release/img/dark-sprites.png",
+        "release/img/dark-sprites2x.png",
+        "release/img/dialog-zone-bg.png",
         "release/img/drop-down-triangle-dark.png",
         "release/img/drop-down-triangle.png",
+        "release/img/img",
+        "release/img/light-grips.png",
+        "release/img/light-sprites.png",
+        "release/img/light-sprites2x.png",
         "release/img/pop-up-triangle-dark.png",
         "release/img/pop-up-triangle.png",
+        "release/img/search-bg.png",
+        "release/img/search-bg2x.png",
         "release/img/spinner-lrg.png",
         "release/img/spinner-lrg@2x.png",
-        "release/img/spinner-sml.png"
+        "release/img/spinner-sml.png",
+        "release/img/spinner.png"
     ]
 }
