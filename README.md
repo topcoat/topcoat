@@ -75,3 +75,5 @@ An experimental CSS microlibrary for building super fast mobile web apps.
 - Android 2.2+ system browser
 - Mobile Safari 5+
 
+## Release notes
+See [Release Notes](https://github.com/topcoat/topcoat/wiki/Release-Notes) on the wiki.
