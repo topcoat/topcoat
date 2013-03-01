@@ -54,7 +54,7 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'release/css/topcoat-desktop-min.css': ['src/style/copyright.styl', 'src/style/topcoat-dekstop.styl']
+          'release/css/topcoat-desktop-min.css': ['src/style/copyright.styl', 'src/style/topcoat-desktop.styl']
         }
       }
     },
@@ -64,13 +64,13 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           flatten: true,
-          src: 'src/font/**',
-          dest: 'release/font/'
+          src: 'src/font/*/*',
+          dest: 'release/font'
         }, {
           expand: true,
           flatten: true,
-          src: 'src/img/**',
-          dest: 'release/img/'
+          src: 'src/img/*',
+          dest: 'release/img'
         }]
     },
 

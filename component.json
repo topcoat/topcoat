@@ -6,6 +6,7 @@
         "release/css/topcoat-desktop.css",
         "release/css/topcoat-min.css",
         "release/css/topcoat.css",
+        "release/font/.DS_Store",
         "release/font/font",
         "release/font/LICENSE.txt",
         "release/font/SourceCodePro",
@@ -61,6 +62,7 @@
         "release/css/topcoat-min.css"
     ],
     "files": [
+        "release/font/.DS_Store",
         "release/font/font",
         "release/font/LICENSE.txt",
         "release/font/SourceCodePro",

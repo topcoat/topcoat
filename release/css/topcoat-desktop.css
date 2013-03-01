@@ -15,19 +15,19 @@ limitations under the License.
 
 @font-face {
   font-family: "source";
-  src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
+  src: url("../font/SourceSansPro-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source-l";
-  src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
+  src: url("../font/SourceSansPro-Light.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source-sb";
-  src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
+  src: url("../font/SourceSansPro-Semibold.otf");
   font-weight: normal;
   font-style: normal;
 }
