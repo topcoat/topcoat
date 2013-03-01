@@ -1,6 +1,6 @@
 {
   "name": "topcoat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
   "main": "Gruntfile.js",
   "directories": {
@@ -8,7 +8,6 @@
     "test": "test"
   },
   "dependencies": {
-    "grunt-exec": "~0.4.0",
     "underscore": "~1.4.4"
   },
   "devDependencies": {
@@ -19,7 +18,9 @@
     "grunt-contrib-jade": "~0.4.0",
     "grunt-contrib-watch": "~0.1.4",
     "grunt-stylusguide": "~0.1.0",
-    "grunt-contrib-clean": "~0.4.0"
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-exec": "~0.4.0",
+    "csv": "~0.2.7"
   },
   "scripts": {
     "test": "grunt test"

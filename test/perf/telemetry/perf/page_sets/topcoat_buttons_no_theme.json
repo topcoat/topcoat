@@ -1,9 +1,9 @@
 {
     "description": "Test",
-    "archive_data_file": "../data/topcoat_buttons.json",
+    "archive_data_file": "../data/buttons_no_theme.json",
     "pages": [
         {
-            "url": "file:///topcoat/topcoat_buttons.html",
+            "url": "file:///topcoat/topcoat_buttons_no_theme.html",
 			"smoothness": {
                 "action": "scrolling_action"
             }

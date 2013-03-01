@@ -17,28 +17,25 @@ Next you can prepare the telemetry tests:
 ```
 grunt telemetry
 ```
-This does two things: generates test files based on grunt templates from `page_sets_src`, and copies them to the right location in chromium telemetry tests. To clean up the generated files, run
-```
-grunt clean:telemetry
-```
-
-You should do a clean before committing to git, so that you don't accidentally commit the generated files.
+This does two things: generates test files based on grunt templates from `perf/page_sets`, and copies them to the right location in chromium telemetry tests. 
 
 # Running the tests
-After generating the test files and copying them to chromium, you can run the telemetry tests. The tests currently require the `topcoat` folder to be available through http under port 8000, so you first need to:
-```
-cd <topcoat_base_dir>
-python -m SimpleHTTPServer
-```
-
-Then you can start the tests:
+You can run telemetry tests with:
 ```
 cd $CHROMIUM_SRC/tools/perf
 ./run_multipage_benchmarks --browser=system loading_benchmark page_sets/topcoat_buttons.json -o /tmp/loading_benchmark_topcoat_buttons.txt
-./run_multipage_benchmarks --browser=system smoothness_benchmark page_sets/topcoat_buttons.json -o /tmp/loading_benchmark_topcoat_buttons.txt
+./run_multipage_benchmarks --browser=system smoothness_benchmark page_sets/topcoat_buttons.json -o /tmp/smoothness_benchmark_topcoat_buttons.txt
 ``` 
 We store the benchmark output in a file - the next script will take this output and push it to the server
 
 # Pushing benchmark results to the server
 
-TBD - working on it
+There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt [--device] [--test]`
+
+Device is an optional parameter and sets the device on which the test ran.
+
+Test is an optional parameter and it overrides the default test name ( which is the name of the file from path ).
+
+There is a `settings.js` file located under `/test/perf/telemetry/lib/` where you can change the address where to submit. It is currently set for http://topcoat.herokuapp.com/v2/benchmark
+
+You can view the results at http://topcoat.herokuapp.com/v2/view/results
