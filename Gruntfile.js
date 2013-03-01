@@ -46,7 +46,7 @@ module.exports = function(grunt) {
           compress: false
         },
         files: {
-          'release/css/topcoat.css': ['src/style/copyright.styl', 'src/style/topcoat.styl']
+          'release/css/topcoat-desktop.css': ['src/style/copyright.styl', 'src/style/topcoat-desktop.styl']
         }
       },
       minify: {
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'release/css/topcoat-min.css': ['src/style/copyright.styl', 'src/style/topcoat.styl']
+          'release/css/topcoat-desktop-min.css': ['src/style/copyright.styl', 'src/style/topcoat-desktop.styl']
         }
       }
     },
