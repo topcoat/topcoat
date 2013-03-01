@@ -20,7 +20,7 @@ component = { /* see https://github.com/component/component/wiki/Spec for a desc
     name: 'topcoat',
     repo: 'topcoat/topcoat',
     version: '0.2.0',
-    description: 'An experimental CSS library.',
+    description: 'An Open Source UI Library for creating beautiful and responsive applications using web standards',
     main: [],
     styles: [],
     images: [],
@@ -148,7 +148,6 @@ module.exports = function(grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-mincss');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -156,8 +155,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'clean',  'stylus', 'copy:dist', 'manifest']); /* the manifest for component.json is used by Bower */
+    grunt.registerTask('default', ['clean',  'stylus', 'copy:dist', 'manifest']);
 
+    /* the manifest for component.json is used by Bower */
     grunt.registerTask('manifest', 'Generates component.json file.', function() {
         var base = path.join(__dirname, 'release');
 

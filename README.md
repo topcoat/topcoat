@@ -1,79 +1,56 @@
-<pre>
-               ___         ___         ___         ___         ___                         
-      ___     /  /\       /  /\       /  /\       /  /\       /  /\        ___            
-     /  /\   /  /::\     /  /::\     /  /:/      /  /::\     /  /::\      /  /\           
-    /  /:/  /  /:/\:\   /  /:/\:\   /  /:/      /  /:/\:\   /  /:/\:\    /  /:/           
-   /  /:/  /  /:/  \:\ /  /:/~/:/  /  /:/  ___ /  /:/  \:\ /  /:/~/::\  /  /:/            
-  /  /::\ /__/:/ \__\:/__/:/ /:/  /__/:/  /  //__/:/ \__\:/__/:/ /:/\:\/  /::\            
- /__/:/\:\\  \:\ /  /:\  \:\/:/   \  \:\ /  /:\  \:\ /  /:\  \:\/:/__\/__/:/\:\           
- \__\/  \:\\  \:\  /:/ \  \::/     \  \:\  /:/ \  \:\  /:/ \  \::/    \__\/  \:\          
-      \  \:\\  \:\/:/   \  \:\      \  \:\/:/   \  \:\/:/   \  \:\         \  \:\         
-       \__\/ \  \::/     \  \:\      \  \::/     \  \::/     \  \:\         \__\/         
-              \__\/       \__\/       \__\/       \__\/       \__\/                        
-</pre>
+# TopCoat
+An Open Source UI Library for creating beautiful and responsive applications using web standards
 
-An experimental CSS library.
+## Usage
 
+* [Download TopCoat](http://github.com/topcoat/topcoat/tags)
 
-### Installing
+* Copy all the contents of the release folder to your desired project.
+* Link the CSS into your page
 
-You can install TopCoat manually by just dropping it in. We recommend downloading a tag so its easy to upgrade.
+        <link rel="stylesheet" type="text/css" href="css/topcoat-desktop-min.css">
 
-    <link rel=stylesheet type=text/css href=vendor/topcoat-0.1.0/release/css/topcoat-min.css>
+_*Alternatively incorporate the css into your build process if you are so
+inclined._
 
-Topcoat also supports popular clientside package management frameworks.
+## Contributing
 
-If you are using Bower:
-
-    bower install topcoat
-
-Or Yeoman:
-
-    yeoman install topcoat
-
-There is also support for Component:
-
-    component install topcoat/topcoat
+* [Fill out the CLA here](http://topcoat.io/topcoat/dev/topcoat-cla.html)
+* [fork](https://help.github.com/articles/fork-a-repo) the repo
+* Follow the [coding guidelines](https://github.com/topcoat/topcoat/wiki/Coding-Guidelines)
+* make a [pull request](https://help.github.com/articles/using-pull-requests)
 
 ### Running the tests
 
-To run the tests `clone` the repo, `cd` into the test folder and start a localserver (suggestion `python -m SimpleHTTPServer` on osx/linux will start an http server on port 8000) there. Navigate to the specific address and you'll be able to run the tests. 
+ _*Need to add steps to run performance tests_
 
-### Building the src
+### Building from src
 
-Topcoat utilizes Grunt for building. You have to install its command line interface (CLI) globally
+TopCoat uses [Grunt](http://gruntjs.com/) to build
 
-    npm install -g grunt-cli
+* Open the terminal from the topcoat directory
 
-Topcoat uses Grunt 0.4.0 for upgrades you can [read](http://gruntjs.com/getting-started) more on their website.
+        cd topcoat
 
-Then you can run `grunt` to build the sources. The results will be in ./release
-There is also a watch task that you can run. It automatically lints and compiles your less sources when it spots any changes.
+* Install [npm](http://nodejs.org/download/)
+_*comes packaged with node._
+* Install its command line interface (CLI) globally
+
+        npm install -g grunt-cli
+
+* Install dependencies with npm
+
+        npm install
+
+
+_*Topcoat uses Grunt 0.4.0 you might want to [read](http://gruntjs.com/getting-started) more on their website if you haven't upgraded since a lot has changed.._
+
+* Type `grunt` in the command line to build the css.
+* The results will be in built into the release folder.
+* Alternatively type `grunt watch` to have the build run automatically when you make changes to
+source files.
 
 ---
-
-# TopCoat Mobile
-
-An experimental CSS microlibrary for building super fast mobile web apps.
-
-- listview
-- titlebar
-- tabbar
-- code
-
-## Embedded Webview Targets
-
-- iOS 5+
-- Android 2.2+
-- BlackBerry 6+
-- Windows Phone 8+
-
-## Mobile Browser Targets
-
-- Firefox for Android
-- Opera Mini
-- Android 2.2+ system browser
-- Mobile Safari 5+
 
 ## Release notes
 See [Release Notes](https://github.com/topcoat/topcoat/wiki/Release-Notes) on the wiki.
