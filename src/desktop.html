@@ -6,7 +6,7 @@
     <title>Topcoat Style Guide</title>
     <link rel="stylesheet" type="text/css" href="../doc/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../doc/css/styleguide.css">
-    <link rel="stylesheet" type="text/css" href="../release/css/topcoat-min.css">
+    <link rel="stylesheet" type="text/css" href="../release/css/topcoat-desktop-min.css">
 </head>
 <body>
 <a href="https://github.com/topcoat/topcoat"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:4000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
@@ -1181,22 +1181,6 @@
 
   </div>
 </div> <!-- end of #container -->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script src="..doc/js/third-party/jquery.viewport.js"></script>
-<script>
-
-    $('#main').scroll(function () {
-      var inview = '#' + $("#main h4:in-viewport:first").attr('id'),
-          $link = $('nav a').filter('[hash=' + inview + ']');
-
-      if ($link.length && !$link.is('.selected')) {
-        $('nav a').removeClass('selected');
-        $link.addClass('selected');
-      }
-    });
-
-</script>
 
 </body>
 </html>

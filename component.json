@@ -4,9 +4,8 @@
     "version": "0.2.0",
     "description": "An experimental CSS library.",
     "main": [
-        "release/css/topcoat-min.css",
-        "release/css/topcoat-min.css",
-        "release/css/topcoat.css",
+        "release/css/topcoat-desktop-min.css",
+        "release/css/topcoat-desktop.css",
         "release/font/SourceCodePro/LICENSE.txt",
         "release/font/SourceCodePro/SourceCodePro-Black.otf",
         "release/font/SourceCodePro/SourceCodePro-Bold.otf",
@@ -52,8 +51,8 @@
         "release/img/spinner.png"
     ],
     "styles": [
-        "release/css/topcoat-min.css",
-        "release/css/topcoat.css"
+        "release/css/topcoat-desktop-min.css",
+        "release/css/topcoat-desktop.css"
     ],
     "images": [
         "release/img/bg_dark.png",

@@ -1,693 +1,676 @@
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1"> <!-- Google Chrome Frame -->
     <title>Topcoat Style Guide</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../doc/css/normalize.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="../doc/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../doc/css/styleguide.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 </head>
 <body>
-	<a href="https://github.com/topcoat/topcoat">
-		<img style="position: absolute; top: 0; right: 0; border: 0; z-index:4000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
-	</a>
+    <a href="https://github.com/topcoat/topcoat">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index:4000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+    </a>
 
 <div id="container">
-	<header>
-		<hgroup>
-        	<h1>TopCoat</h1> 
-        	<h2>Style Guide - January 23, 2013</h2> 
-    	</hgroup>
+    <header>
+        <hgroup>
+            <h1>TopCoat</h1>
+            <h2>Style Guide - January 23, 2013</h2>
+        </hgroup>
 
-    	<nav>
-        	<h3>Mobile Navigation</h3>
-        	<ul>
-            	<li><a href="#mobile-header">Header Bar</a></li>
-            	<li><a href="#mobile-tab-bar">Tab Bar</a></li>
-        	</ul>
+        <nav>
+            <h3>Mobile Navigation</h3>
+            <ul>
+                <li><a href="#mobile-header">Header Bar</a></li>
+                <li><a href="#mobile-tab-bar">Tab Bar</a></li>
+            </ul>
 
-        	<h3>Mobile Actions</h3>
-	        <ul>
-	       		<li><a href="#mobile-button">Button</a></li>
-	            <li><a href="#mobile-icon-button">Icon Button</a></li>
-	            <li><a href="#mobile-label-button">Icon Label Button</a></li>
-	            <li><a href="#mobile-cta-button">Call-to-Action Button</a></li>
-	            <li><a href="#mobile-button-bar">Button Bar</a></li>
-	        </ul>
-	
-	        <h3>Mobile Lists</h3>
-	        <ul>
-	            <li><a href="#mobile-list">Unordered List</a></li>
-	        </ul>
+            <h3>Mobile Actions</h3>
+            <ul>
+                <li><a href="#mobile-button">Button</a></li>
+                <li><a href="#mobile-icon-button">Icon Button</a></li>
+                <li><a href="#mobile-label-button">Icon Label Button</a></li>
+                <li><a href="#mobile-cta-button">Call-to-Action Button</a></li>
+                <li><a href="#mobile-button-bar">Button Bar</a></li>
+            </ul>
 
-	        <h3>Mobile Text Inputs</h3>
-	        <ul>
-	            <li><a href="#m-text-inputs">Text Inputs</a></li>
-	            <li><a href="#m-search-inputs">Search Inputs</a></li>
-	            <li><a href="#m-textarea">Textarea</a></li>
-	        </ul>
-        
-			<h3>Mobile Control Inputs</h3>
-	        <ul>
-	            <li><a href="#m-checkbox">Checkboxes</a></li>
-	            <li><a href="#m-switch">Switches</a></li>
-	            <li><a href="#m-radio">Radio Buttons</a></li>
-	            <li><a href="#m-slider">Slider</a></li>
+            <h3>Mobile Lists</h3>
+            <ul>
+                <li><a href="#mobile-list">Unordered List</a></li>
+            </ul>
 
-	        </ul>
-	
-	        <h3>Mobile Indicators</h3>
-	        <ul>
-	            <li><a href="#m-spinner">Spinner</a></li>
-	            <li><a href="#m-progress">Progress Bar</a></li>
-	            <li><a href="#m-notification">Notification</a></li>
-	        </ul>
-	
-	        <h3>Structural Elements</h3>
-	        <ul>
-	            <li><a href="#m-well">Well</a></li>
-	            <li><a href="#m-overlay">Overlay</a></li>
-	            <li><a href="#m-callout">Callout</a></li>
-	        </ul>
-		</nav>
+            <h3>Mobile Text Inputs</h3>
+            <ul>
+                <li><a href="#m-text-inputs">Text Inputs</a></li>
+                <li><a href="#m-search-inputs">Search Inputs</a></li>
+                <li><a href="#m-textarea">Textarea</a></li>
+            </ul>
+
+            <h3>Mobile Control Inputs</h3>
+            <ul>
+                <li><a href="#m-checkbox">Checkboxes</a></li>
+                <li><a href="#m-switch">Switches</a></li>
+                <li><a href="#m-radio">Radio Buttons</a></li>
+                <li><a href="#m-slider">Slider</a></li>
+
+            </ul>
+
+            <h3>Mobile Indicators</h3>
+            <ul>
+                <li><a href="#m-spinner">Spinner</a></li>
+                <li><a href="#m-progress">Progress Bar</a></li>
+                <li><a href="#m-notification">Notification</a></li>
+            </ul>
+
+            <h3>Structural Elements</h3>
+            <ul>
+                <li><a href="#m-well">Well</a></li>
+                <li><a href="#m-overlay">Overlay</a></li>
+                <li><a href="#m-callout">Callout</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div id="main" role="main">
 
-		<section id="mobile-navigation">
-			<h4 id="mobile-header"><span>Header Bar</span></h4>
-		   	<table class="preview header-bar">
-				<tr>
-		        	<td class="bg-light">
-						<p>
-							<div class="light-header-bar">
-								<p class="header-bar-title">Header Bar</p>
-							</div>
-						</p>
-		        	</td>
-		   			<td class="bg-slategray">
-		       			<p>
-							<div class="dark-header-bar">
-								<p class="header-bar-title">Header Bar</p>
-							</div>
-						</p>
-					</td>
-				</tr>
-			</table>
+        <section id="mobile-navigation">
+            <h4 id="mobile-header"><span>Header Bar</span></h4>
+            <table class="preview header-bar">
+                <tr>
+                    <td class="bg-light">
+                        <p>
+                            <div class="light-header-bar">
+                                <p class="header-bar-title">Header Bar</p>
+                            </div>
+                        </p>
+                    </td>
+                    <td class="bg-slategray">
+                        <p>
+                            <div class="dark-header-bar">
+                                <p class="header-bar-title">Header Bar</p>
+                            </div>
+                        </p>
+                    </td>
+                </tr>
+            </table>
 
-			<h4 id="mobile-tab-bar"><span>Tab Bar</span></h4>
-			<table class="preview mobile-tab-bar">
-				<tr>
-					<td class="bg-light">
-						<p>
-							<ul class="light-tab-bar">
-								<a href="">#1</a>
-								<a href="">#2</a>
-								<a href="">#3</a>
-								<a href="">#4</a>
-								<a href="">#5</a>
-							</ul>
-						</p>
-					</td>
-					<td class="bg-slategray">
-						<p>
-							<ul class="dark-tab-bar">
-								<a href="">#1</a>
-								<a href="">#2</a>
-								<a href="">#3</a>
-								<a href="">#4</a>
-								<a href="">#5</a>
-							</ul>
-						</p>
-					</td>
-				</tr>
-			</table>
-		</section><!-- end of #mobile-navigation -->
-
-		
-		<section id="mobile-actions">
-			<h4 id="mobile-button"><span>Button</span></h4>
-	       	<table class="preview">
-	         	<tr>
-         			<td class="bg-light">
-						<p>
-                   			<a href="#mobile-button" class="light-button" role="button">Button</a>
-                   			<a class="light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                     		<a href="#mobile-button" class="quiet-button light-button" role="button">Quiet Button</a>
-                       		<a class="quiet-button light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                    		<a href="#mobile-button" class="large-button light-button" role="button">Large Button</a>
-                     		<a class="large-button quiet-button light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                        	<a href="#mobile-button" class="large-button quiet-button light-button" role="button">Large Quiet Button</a>
-                       		<a class="large-button quiet-button light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-	      			</td>    
-	               	<td class="bg-slategray">
-						<p>
-                   			<a href="#mobile-button" class="dark-button" role="button">Button</a>
-                   			<a class="dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                     		<a href="#mobile-button" class="quiet-button dark-button" role="button">Quiet Button</a>
-                       		<a class="quiet-button dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                    		<a href="#mobile-button" class="large-button dark-button" role="button">Large Button</a>
-                     		<a class="large-button quiet-button dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                        	<a href="#mobile-button" class="large-button quiet-button dark-button" role="button">Large Quiet Button</a>
-                       		<a class="large-button quiet-button dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-	          		</td>
-	     		</tr>
-	   		</table>
+            <h4 id="mobile-tab-bar"><span>Tab Bar</span></h4>
+            <table class="preview mobile-tab-bar">
+                <tr>
+                    <td class="bg-light">
+                        <p>
+                            <ul class="light-tab-bar">
+                                <a href="">#1</a>
+                                <a href="">#2</a>
+                                <a href="">#3</a>
+                                <a href="">#4</a>
+                                <a href="">#5</a>
+                            </ul>
+                        </p>
+                    </td>
+                    <td class="bg-slategray">
+                        <p>
+                            <ul class="dark-tab-bar">
+                                <a href="">#1</a>
+                                <a href="">#2</a>
+                                <a href="">#3</a>
+                                <a href="">#4</a>
+                                <a href="">#5</a>
+                            </ul>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section><!-- end of #mobile-navigation -->
 
 
-	       	<h4 id="mobile-icon-button"><span>Icon Button</span></h4>
-	       	<table class="preview">
-	         	<tr>
-         			<td class="bg-light">
-							<p>
-								<a href="#mobile-icon-button" class="light-button no-label" role="button"><i class="icon">Icon alt</i></a>
-								<a class="light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                     	<a href="#mobile-icon-button" class="quiet-button light-button no-label" role="button" ><i class="icon">Icon alt</i></a>
-								<a class="quiet-button light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                    	</p>
-							<p>
-								<a href="#mobile-icon-button" class="large-button light-button no-label" role="button"><i class="icon">Icon alt</i></a>
-								<a class="large-button light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                     	<a href="#mobile-icon-button" class="large-button quiet-button light-button no-label" role="button" ><i class="icon">Icon alt</i></a>
-								<a class="large-button quiet-button light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                    	</p>
-	      			</td>    
-	               <td class="bg-slategray">
-							<p>
-								<a href="#mobile-icon-button" class="dark-button no-label" role="button"><i class="icon">Icon alt</i></a>
-								<a class="dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                     	<a href="#mobile-icon-button" class="quiet-button dark-button no-label" role="button" ><i class="icon">Icon alt</i></a>
-								<a class="quiet-button dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                    	</p>
-							<p>
-								<a href="#mobile-icon-button" class="large-button dark-button no-label" role="button"><i class="icon">Icon alt</i></a>
-								<a class="large-button dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                     	<a href="#mobile-icon-button" class="large-button quiet-button dark-button no-label" role="button" ><i class="icon">Icon alt</i></a>
-								<a class="large-button quiet-button dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
-                    	</p>
-	          		</td>
-	     			</tr>
-	   		</table>
-
-	       <h4 id="mobile-label-button"><span>Icon Label Button</span></h4>
-	       <table class="preview">
-	           <tr>
-	               <td class="bg-light">
-	               	<p>
-								<a href="#mobile-label-button" class="light-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-							<p>
-								<a href="#mobile-label-button" class="quiet-button light-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="quiet-button light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-							<p>
-								<a href="#mobile-label-button" class="large-button light-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="large-button light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-							<p>
-								<a href="#mobile-label-button" class="large-button quiet-button light-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="large-button quiet-button light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-	               </td>
-	               <td class="bg-slategray">
-	               	<p>
-								<a href="#mobile-label-button" class="dark-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-							<p>
-								<a href="#mobile-label-button" class="quiet-button dark-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="quiet-button dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-							<p>
-								<a href="#mobile-label-button" class="large-button dark-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="large-button dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-							<p>
-								<a href="#mobile-label-button" class="large-button quiet-button dark-button" role="button"><i class="icon"></i>Default Icon</a>
-								<a class="large-button quiet-button dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
-							</p>
-	               </td>
-	           </tr>
-	       </table>
-
-		   <h4 id="mobile-cta-button"><span>Call-to-Action Button</span></h4>
-	       <table class="preview">
-	           <tr>
-	               <td class="bg-light">
-                   	<p>
-                   		<a href="#mobile-cta-button" class="light-cta light-button" role="button">Button</a>
-                   		<a class="light-cta light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                    		<a href="#mobile-cta-button" class="large-button light-cta light-button" role="button">Large Button</a>
-                     	<a class="large-button light-cta light-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
-                    	</p>
-	               </td>
-	               <td class="bg-slategray">
-                   	<p>
-                   		<a href="#mobile-cta-button" class="dark-cta dark-button" role="button">Button</a>
-                   		<a class="dark-cta dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
-                    	</p>
-                    	<p>
-                    		<a href="#mobile-cta-button" class="large-button dark-cta dark-button" role="button">Large Button</a>
-                     	<a class="large-button dark-cta dark-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
-                    	</p>
-	               </td>
-	           </tr>
-	       </table>
-
-		<h4 id="mobile-button-bar"><span>Button Bar</span></h4>
-	    <table class="preview">
-	    	<tr>
-	            <td class="bg-light">
-					<p>
-						<div class="button-bar duo">
-							<a href="#mobile-button-bar" class="light-button" role="button">First</a>
-							<a href="#mobile-button-bar" class="light-button" role="button">Last</a>
-						</div>
-					</p>
-				
-	                <p>
-						<div class="button-bar">
-							<a href="#mobile-button-bar" class="light-button" role="button">First</a>
-							<a href="#mobile-button-bar" class="light-button" role="button">Second</a>
-							<a href="#mobile-button-bar" class="light-button" role="button">Third</a>
-						</div>
-					</p>
-					<p>
-						<div class="button-bar">
-							<a href="#mobile-button-bar" class="large-button light-button" role="button">First</a>
-							<a href="#mobile-button-bar" class="large-button light-button" role="button">Second</a>
-							<a href="#mobile-button-bar" class="large-button light-button" role="button">Third</a>
-						</div>
-					</p>
-	            </td>
-				<td class="bg-slategray">
-					<p>
-						<div class="button-bar duo">
-							<a href="#mobile-button-bar" class="dark-button" role="button">First</a>
-							<a href="#mobile-button-bar" class="dark-button" role="button">Last</a>
-						</div>
-					</p>	
-					<p>
-						<div class="button-bar">
-							<a href="#mobile-button-bar" class="dark-button" role="button">First</a>
-							<a href="#mobile-button-bar" class="dark-button" role="button">Second</a>
-							<a href="#mobile-button-bar" class="dark-button" role="button">Third</a>
-						</div>
-					</p>
-					<p>
-						<div class="button-bar">
-							<a href="#mobile-button-bar" class="dark-button large-button" role="button">First</a>
-							<a href="#mobile-button-bar" class="dark-button large-button" role="button">Second</a>
-							<a href="#mobile-button-bar" class="dark-button large-button" role="button">Third</a>
-						</div>
-					</p>
-				</td>
-			</tr>
-		</table> 
-
-	</section><!-- end of #mobile-actions -->
-
-		<section id="mobile-lists">
-
-		      <h4 id="mobile-list"><span>Unordered List</span></h4>
-		      <table class="preview mobile-list">
-		          <tr>
-		              <td class="bg-light">
-									<ul class="light-list">
-										<li>Item #1</li>
-										<li>Item #2</li>
-										<li>Item #3</li>
-									</ul>
-		              </td>
-		              <td class="bg-slategray">
-									<ul class="dark-list">
-										<li>Item #1</li>
-										<li>Item #2</li>
-										<li>Item #3</li>
-									</ul>
-		              </td>
-		          </tr>
-		      </table>
-
-		</section><!-- end of #mobile-lists -->
-		
-		<section id="mobile-text-input">
-
-		      <h4 id="m-text-inputs"><span>Text Inputs</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p><input type="text" class="light-text-input" value="" placeholder="Small Input"></p>
-								<p><input type="text" class="light-text-input large-text-input" value="" placeholder="Large Input"></p>
-		              </td>
-		              <td class="bg-slategray">
-								<p><input type="text" class="dark-text-input" value="" placeholder="Small Input"></p>
-								<p><input type="text" class="dark-text-input large-text-input" value="" placeholder="Large Input"></p>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-search-inputs"><span>Search Inputs</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p><input type="search" class="light-search-input" value="" placeholder="Small Search"></p>
-								<p><input type="search" class="light-search-input large-text-input" value="" placeholder="Large Search"></p>
-		              </td>
-		              <td class="bg-slategray">
-								<p><input type="search" class="dark-search-input" value="" placeholder="Small Search"></p>
-								<p><input type="search" class="dark-search-input large-text-input" value="" placeholder="Large Search"></p>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-textarea"><span>Textareas</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p><textarea class="light-textarea" rows="6" cols="36" placeholder="Small Textarea"></textarea></p>
-		                  <p><textarea class="light-textarea large-textarea" rows="6" cols="36" placeholder="Large Textarea"></textarea></p>
-		              </td>
-		              <td class="bg-slategray">
-		                  <p><textarea class="dark-textarea" rows="6" cols="36" placeholder="Small Textarea"></textarea></p>
-		                  <p><textarea class="dark-textarea large-textarea" rows="6" cols="36" placeholder="Large Textarea"></textarea></p>
-		              </td>
-		          </tr>
-		      </table>
+        <section id="mobile-actions">
+            <h4 id="mobile-button"><span>Button</span></h4>
+            <table class="preview">
+                <tr>
+                    <td class="bg-light">
+                        <p>
+                            <a href="#mobile-button" class="light-button" role="button">Button</a>
+                            <a class="light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-button" class="quiet-button light-button" role="button">Quiet Button</a>
+                            <a class="quiet-button light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-button" class="large-button light-button" role="button">Large Button</a>
+                            <a class="large-button quiet-button light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-button" class="large-button quiet-button light-button" role="button">Large Quiet Button</a>
+                            <a class="large-button quiet-button light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                    </td>
+                    <td class="bg-slategray">
+                        <p>
+                            <a href="#mobile-button" class="dark-button" role="button">Button</a>
+                            <a class="dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-button" class="quiet-button dark-button" role="button">Quiet Button</a>
+                            <a class="quiet-button dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-button" class="large-button dark-button" role="button">Large Button</a>
+                            <a class="large-button quiet-button dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-button" class="large-button quiet-button dark-button" role="button">Large Quiet Button</a>
+                            <a class="large-button quiet-button dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                    </td>
+                </tr>
+            </table>
 
 
-		</section><!-- end of #mobile-text-input -->
-		
-		<section id="mobile-control-input">
+            <h4 id="mobile-icon-button"><span>Icon Button</span></h4>
+            <table class="preview">
+                <tr>
+                    <td class="bg-light">
+                            <p>
+                                <a href="#mobile-icon-button" class="light-button no-label" role="button"><i class="icon">Icon alt</i></a>
+                                <a class="light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        <a href="#mobile-icon-button" class="quiet-button light-button no-label" role="button" ><i class="icon">Icon alt</i></a>
+                                <a class="quiet-button light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        </p>
+                            <p>
+                                <a href="#mobile-icon-button" class="large-button light-button no-label" role="button"><i class="icon">Icon alt</i></a>
+                                <a class="large-button light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        <a href="#mobile-icon-button" class="large-button quiet-button light-button no-label" role="button" ><i class="icon">Icon alt</i></a>
+                                <a class="large-button quiet-button light-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        </p>
+                    </td>
+                   <td class="bg-slategray">
+                            <p>
+                                <a href="#mobile-icon-button" class="dark-button no-label" role="button"><i class="icon">Icon alt</i></a>
+                                <a class="dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        <a href="#mobile-icon-button" class="quiet-button dark-button no-label" role="button" ><i class="icon">Icon alt</i></a>
+                                <a class="quiet-button dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        </p>
+                            <p>
+                                <a href="#mobile-icon-button" class="large-button dark-button no-label" role="button"><i class="icon">Icon alt</i></a>
+                                <a class="large-button dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        <a href="#mobile-icon-button" class="large-button quiet-button dark-button no-label" role="button" ><i class="icon">Icon alt</i></a>
+                                <a class="large-button quiet-button dark-button no-label disabled" role="button" aria-disabled="true"><i class="icon">Icon alt</i></a>
+                        </p>
+                    </td>
+                    </tr>
+            </table>
 
-		      <h4 id="m-checkbox"><span>Checbox</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-			               <p>
-									<input type="checkbox" id="checkbox-1" />
-									<label for="checkbox-1" class="light-checkbox checkbox-left">Extremely Long Label</label> 
-										<br />
-									<input type="checkbox" id="checkbox-2" />
-									<label for="checkbox-2" class="light-checkbox checkbox-left">Short Label</label></p>
-								</p>
-		                  <p>
-									<input type="checkbox" id="checkbox-3" />
-									<label for="checkbox-3" class="light-checkbox checkbox-right">Extremely Long Label</label> 
-										<br />
-									<input type="checkbox" id="checkbox-4" />
-									<label for="checkbox-4" class="light-checkbox checkbox-right">Short Label</label></p>
-								</p>
-		              </td>
-		              <td class="bg-slategray">
-							   <p>
-									<input type="checkbox" id="checkbox-5" />
-									<label for="checkbox-5" class="dark-checkbox checkbox-left">Extremely Long Label</label> 
-										<br />
-									<input type="checkbox" id="checkbox-6" />
-									<label for="checkbox-6" class="dark-checkbox checkbox-left">Short Label</label></p>
-								</p>
-		                  <p>
-									<input type="checkbox" id="checkbox-7" />
-									<label for="checkbox-7" class="dark-checkbox checkbox-right">Extremely Long Label</label> 
-										<br />
-									<input type="checkbox" id="checkbox-8" />
-									<label for="checkbox-8" class="dark-checkbox checkbox-right">Short Label</label></p>
-								</p>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-switch"><span>Switch</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-									<label for="slideswitch-light">Slide Switch</label>
+           <h4 id="mobile-label-button"><span>Icon Label Button</span></h4>
+           <table class="preview">
+               <tr>
+                   <td class="bg-light">
+                    <p>
+                                <a href="#mobile-label-button" class="light-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                            <p>
+                                <a href="#mobile-label-button" class="quiet-button light-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="quiet-button light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                            <p>
+                                <a href="#mobile-label-button" class="large-button light-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="large-button light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                            <p>
+                                <a href="#mobile-label-button" class="large-button quiet-button light-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="large-button quiet-button light-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                   </td>
+                   <td class="bg-slategray">
+                    <p>
+                                <a href="#mobile-label-button" class="dark-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                            <p>
+                                <a href="#mobile-label-button" class="quiet-button dark-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="quiet-button dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                            <p>
+                                <a href="#mobile-label-button" class="large-button dark-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="large-button dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                            <p>
+                                <a href="#mobile-label-button" class="large-button quiet-button dark-button" role="button"><i class="icon"></i>Default Icon</a>
+                                <a class="large-button quiet-button dark-button disabled" role="button" aria-disabled="true"><i class="icon"></i>Default Icon</a>
+                            </p>
+                   </td>
+               </tr>
+           </table>
 
-									<!-- <div class="slide-switch-container">
-													    <input type="checkbox" name="switch" id="slideswitch" checked>
-													    <label class="slide-switch" for="slideswitch">
-													        <div class="on-off"></div>
-													        <div class="switch"></div>
-													    </label>
-													</div> -->
+           <h4 id="mobile-cta-button"><span>Call-to-Action Button</span></h4>
+           <table class="preview">
+               <tr>
+                   <td class="bg-light">
+                    <p>
+                        <a href="#mobile-cta-button" class="light-cta light-button" role="button">Button</a>
+                        <a class="light-cta light-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-cta-button" class="large-button light-cta light-button" role="button">Large Button</a>
+                        <a class="large-button light-cta light-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
+                        </p>
+                   </td>
+                   <td class="bg-slategray">
+                    <p>
+                        <a href="#mobile-cta-button" class="dark-cta dark-button" role="button">Button</a>
+                        <a class="dark-cta dark-button disabled" role="button" aria-disabled="true">Disabled Button</a>
+                        </p>
+                        <p>
+                            <a href="#mobile-cta-button" class="large-button dark-cta dark-button" role="button">Large Button</a>
+                        <a class="large-button dark-cta dark-button disabled" role="button" aria-disabled="true">Large Disabled Button</a>
+                        </p>
+                   </td>
+               </tr>
+           </table>
+
+        <h4 id="mobile-button-bar"><span>Button Bar</span></h4>
+        <table class="preview">
+            <tr>
+                <td class="bg-light">
+                    <p>
+                        <div class="button-bar duo">
+                            <a href="#mobile-button-bar" class="light-button" role="button">First</a>
+                            <a href="#mobile-button-bar" class="light-button" role="button">Last</a>
+                        </div>
+                    </p>
+
+                    <p>
+                        <div class="button-bar">
+                            <a href="#mobile-button-bar" class="light-button" role="button">First</a>
+                            <a href="#mobile-button-bar" class="light-button" role="button">Second</a>
+                            <a href="#mobile-button-bar" class="light-button" role="button">Third</a>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="button-bar">
+                            <a href="#mobile-button-bar" class="large-button light-button" role="button">First</a>
+                            <a href="#mobile-button-bar" class="large-button light-button" role="button">Second</a>
+                            <a href="#mobile-button-bar" class="large-button light-button" role="button">Third</a>
+                        </div>
+                    </p>
+                </td>
+                <td class="bg-slategray">
+                    <p>
+                        <div class="button-bar duo">
+                            <a href="#mobile-button-bar" class="dark-button" role="button">First</a>
+                            <a href="#mobile-button-bar" class="dark-button" role="button">Last</a>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="button-bar">
+                            <a href="#mobile-button-bar" class="dark-button" role="button">First</a>
+                            <a href="#mobile-button-bar" class="dark-button" role="button">Second</a>
+                            <a href="#mobile-button-bar" class="dark-button" role="button">Third</a>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="button-bar">
+                            <a href="#mobile-button-bar" class="dark-button large-button" role="button">First</a>
+                            <a href="#mobile-button-bar" class="dark-button large-button" role="button">Second</a>
+                            <a href="#mobile-button-bar" class="dark-button large-button" role="button">Third</a>
+                        </div>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </section><!-- end of #mobile-actions -->
+
+        <section id="mobile-lists">
+
+              <h4 id="mobile-list"><span>Unordered List</span></h4>
+              <table class="preview mobile-list">
+                  <tr>
+                      <td class="bg-light">
+                                    <ul class="light-list">
+                                        <li>Item #1</li>
+                                        <li>Item #2</li>
+                                        <li>Item #3</li>
+                                    </ul>
+                      </td>
+                      <td class="bg-slategray">
+                                    <ul class="dark-list">
+                                        <li>Item #1</li>
+                                        <li>Item #2</li>
+                                        <li>Item #3</li>
+                                    </ul>
+                      </td>
+                  </tr>
+              </table>
+
+        </section><!-- end of #mobile-lists -->
+
+        <section id="mobile-text-input">
+
+              <h4 id="m-text-inputs"><span>Text Inputs</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p><input type="text" class="light-text-input" value="" placeholder="Small Input"></p>
+                                <p><input type="text" class="light-text-input large-text-input" value="" placeholder="Large Input"></p>
+                      </td>
+                      <td class="bg-slategray">
+                                <p><input type="text" class="dark-text-input" value="" placeholder="Small Input"></p>
+                                <p><input type="text" class="dark-text-input large-text-input" value="" placeholder="Large Input"></p>
+                      </td>
+                  </tr>
+              </table>
+
+              <h4 id="m-search-inputs"><span>Search Inputs</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p><input type="search" class="light-search-input" value="" placeholder="Small Search"></p>
+                                <p><input type="search" class="light-search-input large-text-input" value="" placeholder="Large Search"></p>
+                      </td>
+                      <td class="bg-slategray">
+                                <p><input type="search" class="dark-search-input" value="" placeholder="Small Search"></p>
+                                <p><input type="search" class="dark-search-input large-text-input" value="" placeholder="Large Search"></p>
+                      </td>
+                  </tr>
+              </table>
+
+              <h4 id="m-textarea"><span>Textareas</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p><textarea class="light-textarea" rows="6" cols="36" placeholder="Small Textarea"></textarea></p>
+                          <p><textarea class="light-textarea large-textarea" rows="6" cols="36" placeholder="Large Textarea"></textarea></p>
+                      </td>
+                      <td class="bg-slategray">
+                          <p><textarea class="dark-textarea" rows="6" cols="36" placeholder="Small Textarea"></textarea></p>
+                          <p><textarea class="dark-textarea large-textarea" rows="6" cols="36" placeholder="Large Textarea"></textarea></p>
+                      </td>
+                  </tr>
+              </table>
 
 
-															<div class="slide-switch-container">
-															    <input type="checkbox" name="light-switch" id="slideswitch-light" checked>
-															    <label class="light-slide-switch" for="slideswitch-light">
-															        <div class="on-off"></div>
-															        <div class="switch"></div>
-															    </label>
-															</div>
-		              </td>
-		              <td class="bg-slategray">
-								 	<label for="slide">Slide Switch</label>
+        </section><!-- end of #mobile-text-input -->
 
-									<div class="slide-switch-container">
-									    <input type="checkbox" name="dark-switch" id="slide" checked>
-									    <label class="dark-slide-switch" for="slide">
-									        <div class="on-off"></div>
-									        <div class="switch"></div>
-									    </label>
-									</div>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-radio"><span>Radio Button</span></h4>
-		      <table class="preview">
-		          <tr>
-	                 <td class="bg-light">
-			               <p>
-									<input type="radio" id="radio-1" name="light-left" />
-									<label for="radio-1" class="light-radio radio-left">Extremely Long Label</label> 
-										<br />
-									<input type="radio" id="radio-2" name="light-left" />
-									<label for="radio-2" class="light-radio radio-left">Short Label</label></p>
-								</p>
-		                  <p>
-									<input type="radio" id="radio-3" name="light-right" />
-									<label for="radio-3" class="light-radio radio-right">Extremely Long Label</label> 
-										<br />
-									<input type="radio" id="radio-4" name="light-right" />
-									<label for="radio-4" class="light-radio radio-right">Short Label</label></p>
-								</p>
-		              </td>
-		              <td class="bg-slategray">
-							   <p>
-									<input type="radio" id="radio-5" name="dark-left" />
-									<label for="radio-5" class="dark-radio radio-left">Extremely Long Label</label> 
-										<br />
-									<input type="radio" id="radio-6" name="dark-left" />
-									<label for="radio-6" class="dark-radio radio-left">Short Label</label></p>
-								</p>
-		                  <p>
-									<input type="radio" id="radio-7" name="dark-right" />
-									<label for="radio-7" class="dark-radio radio-right">Extremely Long Label</label> 
-										<br />
-									<input type="radio" id="radio-8" name="dark-right" />
-									<label for="radio-8" class="dark-radio radio-right">Short Label</label></p>
-								</p>
-		              </td>
-		          </tr>
-		      </table>
+        <section id="mobile-control-input">
 
-				<h4 id="m-slider"><span>Slider</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p><input type="range" class="light-slider" name="" value=""></p>
-		              </td>
-		              <td class="bg-slategray">
-		                  <p><input type="range" class="dark-slider" name="" value=""></p>
-		              </td>
-		          </tr>
-		      </table>
+              <h4 id="m-checkbox"><span>Checbox</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                           <p>
+                                    <input type="checkbox" id="checkbox-1" />
+                                    <label for="checkbox-1" class="light-checkbox checkbox-left">Extremely Long Label</label>
+                                        <br />
+                                    <input type="checkbox" id="checkbox-2" />
+                                    <label for="checkbox-2" class="light-checkbox checkbox-left">Short Label</label></p>
+                                </p>
+                          <p>
+                                    <input type="checkbox" id="checkbox-3" />
+                                    <label for="checkbox-3" class="light-checkbox checkbox-right">Extremely Long Label</label>
+                                        <br />
+                                    <input type="checkbox" id="checkbox-4" />
+                                    <label for="checkbox-4" class="light-checkbox checkbox-right">Short Label</label></p>
+                                </p>
+                      </td>
+                      <td class="bg-slategray">
+                               <p>
+                                    <input type="checkbox" id="checkbox-5" />
+                                    <label for="checkbox-5" class="dark-checkbox checkbox-left">Extremely Long Label</label>
+                                        <br />
+                                    <input type="checkbox" id="checkbox-6" />
+                                    <label for="checkbox-6" class="dark-checkbox checkbox-left">Short Label</label></p>
+                                </p>
+                          <p>
+                                    <input type="checkbox" id="checkbox-7" />
+                                    <label for="checkbox-7" class="dark-checkbox checkbox-right">Extremely Long Label</label>
+                                        <br />
+                                    <input type="checkbox" id="checkbox-8" />
+                                    <label for="checkbox-8" class="dark-checkbox checkbox-right">Short Label</label></p>
+                                </p>
+                      </td>
+                  </tr>
+              </table>
 
-		</section><!-- end of #mobile-control-input -->
-		
-		
-		
-		<section id="mobile-indicators">
+              <h4 id="m-switch"><span>Switch</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                                    <label for="slideswitch-light">Slide Switch</label>
 
-		      <h4 id="m-spinner"><span>Spinner</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p><div class="spinner"> </div></p>
-		                  <p><div class="large-spinner"> </div></p>
-		
-		              </td>
-		              <td class="bg-slategray">
-							   <p><div class="spinner"> </div></p>
-		                  <p><div class="large-spinner"> </div></p>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-progress"><span>Progress Bar</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p>
-									<div class="light-progress-bar">
-										<span class="progress"></span>
-									</div>
-								</p>
-		              </td>
-		              <td class="bg-slategray">
-								 <p>
-									<div class="dark-progress-bar">
-										<span class="progress"></span>
-									</div>
-								</p>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-notification"><span>Notification</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <p>
-									<strong>Inbox</strong> <span class="notification">1</span>
-									
-								</p>
-		              </td>
-		              <td class="bg-slategray">
-								 <p>
-									<strong>Inbox</strong> <span class="notification">1</span>
-									
-								</p>
-		              </td>
-		          </tr>
-		      </table>
-		
-		</section><!-- end of #mobile-indicators -->
+                                    <!-- <div class="slide-switch-container">
+                                                        <input type="checkbox" name="switch" id="slideswitch" checked>
+                                                        <label class="slide-switch" for="slideswitch">
+                                                            <div class="on-off"></div>
+                                                            <div class="switch"></div>
+                                                        </label>
+                                                    </div> -->
+
+
+                                                            <div class="slide-switch-container">
+                                                                <input type="checkbox" name="light-switch" id="slideswitch-light" checked>
+                                                                <label class="light-slide-switch" for="slideswitch-light">
+                                                                    <div class="on-off"></div>
+                                                                    <div class="switch"></div>
+                                                                </label>
+                                                            </div>
+                      </td>
+                      <td class="bg-slategray">
+                                    <label for="slide">Slide Switch</label>
+
+                                    <div class="slide-switch-container">
+                                        <input type="checkbox" name="dark-switch" id="slide" checked>
+                                        <label class="dark-slide-switch" for="slide">
+                                            <div class="on-off"></div>
+                                            <div class="switch"></div>
+                                        </label>
+                                    </div>
+                      </td>
+                  </tr>
+              </table>
+
+              <h4 id="m-radio"><span>Radio Button</span></h4>
+              <table class="preview">
+                  <tr>
+                     <td class="bg-light">
+                           <p>
+                                    <input type="radio" id="radio-1" name="light-left" />
+                                    <label for="radio-1" class="light-radio radio-left">Extremely Long Label</label>
+                                        <br />
+                                    <input type="radio" id="radio-2" name="light-left" />
+                                    <label for="radio-2" class="light-radio radio-left">Short Label</label></p>
+                                </p>
+                          <p>
+                                    <input type="radio" id="radio-3" name="light-right" />
+                                    <label for="radio-3" class="light-radio radio-right">Extremely Long Label</label>
+                                        <br />
+                                    <input type="radio" id="radio-4" name="light-right" />
+                                    <label for="radio-4" class="light-radio radio-right">Short Label</label></p>
+                                </p>
+                      </td>
+                      <td class="bg-slategray">
+                               <p>
+                                    <input type="radio" id="radio-5" name="dark-left" />
+                                    <label for="radio-5" class="dark-radio radio-left">Extremely Long Label</label>
+                                        <br />
+                                    <input type="radio" id="radio-6" name="dark-left" />
+                                    <label for="radio-6" class="dark-radio radio-left">Short Label</label></p>
+                                </p>
+                          <p>
+                                    <input type="radio" id="radio-7" name="dark-right" />
+                                    <label for="radio-7" class="dark-radio radio-right">Extremely Long Label</label>
+                                        <br />
+                                    <input type="radio" id="radio-8" name="dark-right" />
+                                    <label for="radio-8" class="dark-radio radio-right">Short Label</label></p>
+                                </p>
+                      </td>
+                  </tr>
+              </table>
+
+                <h4 id="m-slider"><span>Slider</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p><input type="range" class="light-slider" name="" value=""></p>
+                      </td>
+                      <td class="bg-slategray">
+                          <p><input type="range" class="dark-slider" name="" value=""></p>
+                      </td>
+                  </tr>
+              </table>
+
+        </section><!-- end of #mobile-control-input -->
 
 
 
-		<section id="structural-elements">
+        <section id="mobile-indicators">
 
-		      <h4 id="m-well"><span>Well</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                  <section class="light-well">
-									<h2>Alex Trebek</h2>
-									<p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
-									<a href="#" class="light-cta light-button" role="button">Daily Double!</a>
-									<a href="#" class="light-button" role="button">Unfriend</a>
-								</section>
-		              </td>
-		              <td class="bg-slategray">
-							   <section class="dark-well">
-									<h2>Alex Trebek</h2>
-									<p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
-									<a href="#" class="dark-cta dark-button" role="button">Daily Double!</a>
-									<a href="#" class="dark-button" role="button">Unfriend</a>
-								</section>
-		              </td>
-		          </tr>
-		      </table>
-		
-		      <h4 id="m-overlay"><span>Overlay</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
-		                 <section class="dialog-zone">
+              <h4 id="m-spinner"><span>Spinner</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p><div class="spinner"> </div></p>
+                          <p><div class="large-spinner"> </div></p>
 
-								<aside class="light-dialog">
-									<center>Are eagles nice?</center><br /><br />
-									<a href="#" class="light-cta light-button" role="button">Yes!</a>
-									<a href="#" class="light-button" role="button">No</a>
-								</aside>
-								
-								<div class="dialog-overlay"></div>
-							</section>
-		              </td>
-		              <td class="bg-slategray">
-							  <section class="dialog-zone">
+                      </td>
+                      <td class="bg-slategray">
+                               <p><div class="spinner"> </div></p>
+                          <p><div class="large-spinner"> </div></p>
+                      </td>
+                  </tr>
+              </table>
 
-								<aside class="dark-dialog">
-									<center>Are eagles nice?</center><br /><br />
-									<a href="#" class="dark-cta dark-button" role="button">Yes!</a>
-									<a href="#" class="dark-button" role="button">No</a>
-								</aside>
+              <h4 id="m-progress"><span>Progress Bar</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p>
+                                    <div class="light-progress-bar">
+                                        <span class="progress"></span>
+                                    </div>
+                                </p>
+                      </td>
+                      <td class="bg-slategray">
+                                 <p>
+                                    <div class="dark-progress-bar">
+                                        <span class="progress"></span>
+                                    </div>
+                                </p>
+                      </td>
+                  </tr>
+              </table>
 
-								<div class="dialog-overlay"></div>
-							</section>
-		              </td>
-		          </tr>
-		      </table>
-		
-				<h4 id="m-callout"><span>Callout</span></h4>
-		      <table class="preview">
-		          <tr>
-		              <td class="bg-light">
+              <h4 id="m-notification"><span>Notification</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <p>
+                                    <strong>Inbox</strong> <span class="notification">1</span>
 
-								<section class="light-callout">
-										Light Callout Dummy Content
-								</section>
-		              		
-							</td>
-		              <td class="bg-slategray">
+                                </p>
+                      </td>
+                      <td class="bg-slategray">
+                                 <p>
+                                    <strong>Inbox</strong> <span class="notification">1</span>
 
-								<section class="dark-callout">
-										Dark Callout Dummy Content
-								</section>
-								
-		              </td>
-		          </tr>
-		      </table>
-		      <div class="space"></div>
-		      <div class="space"></div> 
-		      <div class="space"></div>
-		      <div class="space"></div>
-		      <div class="space"></div> 
-		      <div class="space"></div>
-		</section><!-- end of #structural-elements -->
+                                </p>
+                      </td>
+                  </tr>
+              </table>
+
+        </section><!-- end of #mobile-indicators -->
+
+
+
+        <section id="structural-elements">
+
+              <h4 id="m-well"><span>Well</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                          <section class="light-well">
+                                    <h2>Alex Trebek</h2>
+                                    <p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
+                                    <a href="#" class="light-cta light-button" role="button">Daily Double!</a>
+                                    <a href="#" class="light-button" role="button">Unfriend</a>
+                                </section>
+                      </td>
+                      <td class="bg-slategray">
+                               <section class="dark-well">
+                                    <h2>Alex Trebek</h2>
+                                    <p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
+                                    <a href="#" class="dark-cta dark-button" role="button">Daily Double!</a>
+                                    <a href="#" class="dark-button" role="button">Unfriend</a>
+                                </section>
+                      </td>
+                  </tr>
+              </table>
+
+              <h4 id="m-overlay"><span>Overlay</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+                         <section class="dialog-zone">
+
+                                <aside class="light-dialog">
+                                    <center>Are eagles nice?</center><br /><br />
+                                    <a href="#" class="light-cta light-button" role="button">Yes!</a>
+                                    <a href="#" class="light-button" role="button">No</a>
+                                </aside>
+
+                                <div class="dialog-overlay"></div>
+                            </section>
+                      </td>
+                      <td class="bg-slategray">
+                              <section class="dialog-zone">
+
+                                <aside class="dark-dialog">
+                                    <center>Are eagles nice?</center><br /><br />
+                                    <a href="#" class="dark-cta dark-button" role="button">Yes!</a>
+                                    <a href="#" class="dark-button" role="button">No</a>
+                                </aside>
+
+                                <div class="dialog-overlay"></div>
+                            </section>
+                      </td>
+                  </tr>
+              </table>
+
+                <h4 id="m-callout"><span>Callout</span></h4>
+              <table class="preview">
+                  <tr>
+                      <td class="bg-light">
+
+                                <section class="light-callout">
+                                        Light Callout Dummy Content
+                                </section>
+
+                            </td>
+                      <td class="bg-slategray">
+
+                                <section class="dark-callout">
+                                        Dark Callout Dummy Content
+                                </section>
+
+                      </td>
+                  </tr>
+              </table>
+              <div class="space"></div>
+              <div class="space"></div>
+              <div class="space"></div>
+              <div class="space"></div>
+              <div class="space"></div>
+              <div class="space"></div>
+        </section><!-- end of #structural-elements -->
 
   </div>
 </div> <!-- end of #container -->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script src="doc/js/third-party/jquery.viewport.js"></script>
-<script>
-
-    $('#main').scroll(function () {
-      var inview = '#' + $("#main h4:in-viewport:first").attr('id'),
-          $link = $('nav a').filter('[hash=' + inview + ']');
-
-      if ($link.length && !$link.is('.selected')) {
-        $('nav a').removeClass('selected');
-        $link.addClass('selected');
-      }
-    });
-
-</script>
 
 </body>
 </html>

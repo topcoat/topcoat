@@ -1,0 +1,495 @@
+/*!
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+/* Styleguide CSS here pls ------------------------------------------------------------------------------- */
+
+html {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+body { 
+    color: #444;
+    font: 14px "source-sans-pro", "source", helvetica, arial, sans-serif;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.guides {
+/*	border: 1px solid red;*/
+}
+
+.space {
+	height: 90px;
+}
+
+#container {
+	min-width: 600px;
+}
+
+#test-container {
+	padding: 0 120px 30px 30px ;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #000;
+	font-family: "source-l", helvetica, arial, sans-serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+h4 {
+	border-bottom: 1px solid #d7d7d7;
+	font-size: 30px;
+	margin: 20px 0;
+}
+
+h5 {
+	font-size: 21px;
+}
+
+h4 span {
+	background: #fff;
+	padding: 0 7px 0 0;
+	position: relative;
+	bottom: -10px;
+}
+
+.tabular {
+	border: 1px solid rgba(0,0,0,0.09);
+    border-spacing: 0;
+	margin: 14px 0;
+}
+
+th, td, .tabular td.var {
+	border-bottom: 1px solid #eee;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 5px 10px;
+	text-align: left;
+}
+
+th {
+	white-space: nowrap;
+}
+
+.tabular tr:last-child td {
+	border: none;
+}
+
+.tabular td {
+	font-size: 12px;
+	padding: 10px;
+}
+
+.images {
+	width: 100% !important;
+}
+
+.images td,
+.images th {
+	border-right: 1px solid #eee !important;
+	padding: 18px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.images th {
+	padding: 9px;
+}
+
+.images tr:last-child td,
+.images tr th:last-child  {
+	border-right: none !important;
+}
+
+.images img {
+	width: 300px;
+}
+
+header {
+	background: #3a3f42 url("../img/bg_dark.png") repeat-x;
+	bottom: 0;
+	cursor: default;
+	left: 0;
+	overflow-y: scroll;
+	padding: 0 0 30px 0;
+	position: absolute;
+	top: 0;
+	width: 220px;
+}
+
+#main {
+	bottom: 0;
+	left: 220px;
+	margin: 0;
+	overflow-y: scroll;
+	padding: 0 100px 60px 40px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+header hgroup {
+	padding: 15px;
+}
+
+header hgroup {
+	border-bottom: 1px solid rgba(0,0,0,0.36);
+    box-shadow: 0px 1px 0px rgba(255,255,255,0.11);
+}
+
+header h1 {
+	color: #fff;
+	font-size: 18px;
+	text-shadow: 0 -1px 0 #000;
+}
+
+header h2 {
+	color: #c7c7c7;
+	font-size: 12px;
+	text-shadow: 0 -1px 0 #000;
+}
+
+header h3 {
+	color: #A4B4B7;
+	font-size: 14px;
+	text-shadow: 0 -1px 0 #000;
+	margin: 15px 0 5px 15px;
+}
+
+header ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+header a {
+	box-sizing: border-box;
+	border-top: 1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid rgba(0,0,0,0); 
+	color: #bbb;
+	display: block;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 15px 0 30px;
+	text-shadow: 0 1px 0 #000;
+}
+
+header a:link,
+header a:visited {
+	color: #c7c7c7;
+	text-decoration: none;
+}
+
+header .selected {
+	background: rgba(112,112,112,0.24);
+	border-top: 1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid rgba(0,0,0,0);
+	color: #fff !important;
+}
+
+
+header a:hover {
+	background: rgba(112,112,112,0.24);
+	border-top: 1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid rgba(0,0,0,0);
+	color: #fff !important;
+}
+
+header a:focus {
+    border: 1px solid #0940fd;
+    -webkit-box-shadow: 0 0 4px #0088ff;
+    box-shadow: 0 0 4px #0088ff;
+    outline: none;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 0 10px 0 25px;
+    background: rgba(112,112,112,0.24);
+    color: #fff !important;   
+}
+
+header a:active {
+	background: rgba(0,0,0,0.24);
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.15);
+	color: #fff;
+}
+
+h4:target span {
+  -webkit-animation: highlight 5s ease;  
+  -moz-animation: highlight 5s ease;    
+}
+
+	@-webkit-keyframes highlight {
+	  0% { color: #0083E8; 	text-shadow: 0 0 4px rgba(0,136,255,.69); }
+	  100% { color: #000; text-shadow: none; }
+	}
+
+.preview {
+    border-spacing: 0;
+    width: auto;
+}
+
+.preview td {
+	padding: 15px 30px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+
+.bg-light {
+	background: #f8f8f8;
+	border: 1px solid rgba(0,0,0,0.09);
+	font-size: 12px;
+}
+
+.fonts.tabular {
+	width: 100%;
+}
+
+.fonts.tabular th.bg-white {
+	border-bottom: 1px solid rgba(0,0,0,0.09);
+}
+
+.fonts.tabular th.bg-lightgray {
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.fonts.tabular th.bg-slategray {
+	border-bottom: 1px solid #5c6061;
+}
+
+.fonts.tabular td {
+	vertical-align: top;
+	width: 33%;
+}
+
+
+/* Selection ------------------------------------------------------------------------------- */
+
+::selection {
+    background: #e0f0fa;
+    color: #000;
+}
+
+header {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Scrollbars ------------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+	height: 8px;
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+	background: rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.1); 
+}
+
+
+/* Scrollbars ------------------------------------------------------------------------------- */
+
+
+/* Container */
+.modal {
+	/* Overlay page content */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 10000;
+
+	/* Transition opacity on open */
+	-webkit-transition: opacity 200ms ease-in;
+	transition: opacity 200ms ease-in;
+
+	/* Hide for now */
+	opacity: 0;
+	pointer-events: none;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+
+/* Show modal */
+.modal:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Hide modal */
+.modal:active {
+	opacity: 0;
+}
+
+/* Content */
+.modal > div {
+	width: 65%;
+	background: #fff;
+	position: relative;
+	margin: 10% auto;
+
+	/* Default minimise animation */
+	-webkit-animation: minimise 500ms linear;
+
+	/* Prettify */
+	padding: 12px 15px;
+	border-radius: 4px;
+	box-shadow: 0 15px 36px rgba(0,0,0,0.6);
+	background: #fff;
+	text-shadow: 0 1px 0 #fff;
+}
+
+/* Override animation on modal open */
+.modal:target > div {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+}
+
+.modal h1 {
+	font-size: 24px;
+	padding: 0 0 10px;
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: scale3d(1,1,1);
+	}
+	55% {
+		-webkit-transform: scale3d(1,1,1);
+	}
+	100% {
+		-webkit-transform: scale3d(1,1,1);
+	}
+/*	0% {
+		-webkit-transform: scale3d(0.1,0.1,1);
+		box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+	}
+	55% {
+		-webkit-transform: scale3d(1,1,1);
+		box-shadow: 0 10px 20px rgba(0,0,0,0);
+	}
+	75% {
+		-webkit-transform: scale3d(0.95,0.95,1);
+		box-shadow: 0 0 20px rgba(0,0,0,0.9);
+	}
+	100% {
+		-webkit-transform: scale3d(1,1,1);
+		box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+	}
+*/
+}
+
+@-webkit-keyframes minimise {
+	0% {
+		-webkit-transform: scale3d(1,1,1);
+	}
+	100% {
+		-webkit-transform: scale3d(0.1,0.1,1);
+	}
+}
+
+/* Modal close link */
+.modal a[href="#close"] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: transparent;
+}
+
+/* Reset native styles */
+	.modal a[href="#close"]:focus {
+	outline: none;
+}
+
+/* Create close button */
+.modal a[href="#close"]:after {
+	content: url("../img/close_modal.png");
+	display: block;
+
+	/* Position */
+	position: absolute;
+	right: 15px;
+	top: 15px;
+
+	/* Style */
+	font-size: 12px;
+	text-decoration: none;
+	text-shadow: none;
+	text-align: center;
+	font-weight: bold;
+	background: #fff;
+}
+
+.modal a[href="#close"]:focus:after,
+.modal a[href="#close"]:hover:after {
+
+}
+
+.modal a[href="#close"]:focus:after {
+	outline: 1px solid #000;
+}
+
+.modal a[href="#close"] {
+	text-shadow: none !important;
+}
+
+/* Open modal */
+a.openmodal {
+	display: block;
+	text-align: center;
+}
+
+a.openmodal:hover,
+a.openmodal:focus {
+
+}
