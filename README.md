@@ -19,6 +19,12 @@ inclined._
 
 ## Contributing
 
+Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/board)
+The idea is that items in the ready column are open for anyone to work on.
+
+_*We use [Huboard](https://github.com/rauhryan/huboard) to keep our issues
+organized into a backlog._
+
 * [Fill out the CLA here](http://topcoat.io/topcoat/dev/topcoat-cla.html)
 * [fork](https://help.github.com/articles/fork-a-repo) the repo
 * Create a branch
