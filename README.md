@@ -68,7 +68,7 @@ _*comes packaged with node._
 _*Topcoat uses Grunt 0.4.0 you might want to [read](http://gruntjs.com/getting-started) more on their website if you haven't upgraded since a lot has changed.._
 
 * Type `grunt` in the command line to build the css.
-* The results will be in built into the release folder.
+* The results will be built into the release folder.
 * Alternatively type `grunt watch` to have the build run automatically when you make changes to
 source files.
 
