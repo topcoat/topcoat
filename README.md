@@ -42,9 +42,11 @@ organized into a backlog._
 
 * make a [pull request](https://help.github.com/articles/using-pull-requests)
 
+For the details see our [Engineering Practices](https://github.com/topcoat/topcoat/wiki/Engineering-Practices).
+
 ### Testing
 
- _*Need to add steps to run performance tests_
+For performance tests, see [test/perf/telemetry/README.md](https://github.com/topcoat/topcoat/blob/master/test/perf/telemetry/README.md).
 
 ### Building
 
