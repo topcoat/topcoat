@@ -19,8 +19,8 @@ inclined._
 
 ## Contributing
 
-Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/board)
-The idea is that items in the ready column are open for anyone to work on.
+Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/board). 
+To see the prioritized list of items just click on the blue arrow on the left (a panel called Backlog should slide in).
 
 _*We use [Huboard](https://github.com/rauhryan/huboard) to keep our issues
 organized into a backlog._
