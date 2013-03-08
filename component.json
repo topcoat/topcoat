@@ -2,7 +2,7 @@
     "name": "topcoat",
     "repo": "topcoat/topcoat",
     "version": "0.2.0",
-    "description": "An experimental CSS library.",
+    "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
     "main": [
         "release/css/topcoat-desktop-min.css",
         "release/css/topcoat-desktop.css",
