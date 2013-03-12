@@ -25,7 +25,7 @@ To see the prioritized list of items just click on the blue arrow on the left (a
 _*We use [Huboard](https://github.com/rauhryan/huboard) to keep our issues
 organized into a backlog._
 
-* [Fill out the CLA here](http://topcoat.io/topcoat/dev/topcoat-cla.html)
+* [Fill out the CLA here](http://topcoat.io/dev/topcoat-cla.html)
 * [fork](https://help.github.com/articles/fork-a-repo) the repo
 * Create a branch
 
