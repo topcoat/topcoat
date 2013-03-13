@@ -28,6 +28,14 @@ var parseCSV = function(file, cb) {
 
 	csv()
 	.from.stream(fs.createReadStream(file))
+    .transform(function(row, index){
+        //in case there are blank lines in between key & value on Win7
+        if (row[0] == ""){
+            return null;
+        }else{
+            return row;
+        }
+    })
 	.on('record', function(row,index){
 		if (index === 0)
 			header.push(row);
