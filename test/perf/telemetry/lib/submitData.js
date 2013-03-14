@@ -14,7 +14,14 @@ limitations under the License.
 */
 
 var file = function (path) {
-	return path.split('/').pop().split('.')[0];
+    if (path.split('/').length > 1) {
+        sep = '/';
+    } else if (path.split('\\').length > 1) {
+        sep = '\\';
+    } else {
+        throw new Error('ERROR: the separator in test result file path is neither "/" nor "\\".');
+    }
+    return path.split(sep).pop().split('.')[0];
 };
 
 var submitData = function (stdout, path, args) {
@@ -25,7 +32,7 @@ var submitData = function (stdout, path, args) {
 	var postOptions = require('./settings');
 
 	var post_data = {};
-	
+
 	parse(path, function (j) {
 		post_data = {
 			resultName : j
@@ -53,7 +60,7 @@ var submitData = function (stdout, path, args) {
 		// post the data
 		post_req.write(post_data);
 		post_req.end();
-		
+
 	});
 
 };
