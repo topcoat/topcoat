@@ -1,6 +1,6 @@
 /* Definitions -----------------------------------------------------------
 
-/* 
+/*
   Fonts
 	200 = light
 	500 = normal
@@ -46,7 +46,7 @@
 /* Global ----------------------------------------------------------------- */
 body {
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 	background-color: #fff;
 	color: #000;
 	font: 16px "Source Sans", helvetica, arial, sans-serif;
@@ -63,9 +63,9 @@ body {
 
 /*
  1.1 Button
- 
+
  ".*-button" is a base button class. Apply other classes, like ".large-button" to change its appearance.
- 
+
  .down - to simulate an active state on mobile devices
  .large-button - creates a large version of your button
  .quiet-button - creates a quiet version of your button
@@ -106,7 +106,7 @@ body {
 	box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
   	color: #c6c8c8;
   	text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
-}	
+}
 
 	/* Button States */
 	.dark-button:active,
@@ -164,9 +164,9 @@ body {
 
 /*
  1.2 CTA Button
- 
- ".*-cta" adds call-to-action styling to a button. 
- 
+
+ ".*-cta" adds call-to-action styling to a button.
+
  .down - to simulate an active state on mobile devices
  .large-button - creates a large version of your button
 
@@ -175,8 +175,8 @@ body {
 
 */
 .dark-cta,
-.light-cta { 
-	border: 1px solid #143250; 
+.light-cta {
+	border: 1px solid #143250;
 	background-color: #288edf;
 	box-shadow: inset 0 1px rgba(255, 255, 255, 0.36);
 	color: #ffffff;
@@ -248,7 +248,7 @@ body {
 
 /*
  1.4 Button Bar
- 
+
  Wrap this class around a group of buttons to create a button bar.
 
 	<div class="button-bar">
@@ -256,7 +256,7 @@ body {
 		<a class="dark-button">Second</a>
 		<a class="dark-button">Third</a>
 	</div>
-	
+
 	<div class="button-bar">
 		<a class="large-button light-button">Demand</a>
 		<a class="large-button light-button">Moar</a>
@@ -279,7 +279,7 @@ body {
 	.button-bar > .dark-button:first-child,
 	.button-bar > .light-button:first-child {
 	  	border-radius: 6px 0 0 6px;
-	  	margin: 0;	
+	  	margin: 0;
 	}
 
 
@@ -296,7 +296,7 @@ body {
 	.button-bar > .dark-button:last-child,
 	.button-bar > .light-button:last-child {
 	  	border-radius: 0 6px 6px 0;
-	  	margin: 0;	
+	  	margin: 0;
 	}
 
 
@@ -309,8 +309,8 @@ body {
 /*
  2.1 Inputs - Single Line Text
 
- Applying ".*-text-input" to text-based form input elements such as "text", "search", or 
- "email" input element adds base styling. 
+ Applying ".*-text-input" to text-based form input elements such as "text", "search", or
+ "email" input element adds base styling.
 
 	.large-text-input - larger-sized elements that match the height of a ".large-button".
 
@@ -325,7 +325,7 @@ body {
 	vertical-align: top;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	padding: 0 20px;	
+	padding: 0 20px;
 	border-radius: 6px;
 	margin: 5px;
 	height: 3em;
@@ -352,9 +352,9 @@ body {
 	font-weight: 200;
 }
 
-@media 
-only screen and (-webkit-min-device-pixel-ratio: 2), 
-only screen and (min-resolution: 192dpi) { 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
    	.dark-search-input,
 	.light-search-input {
 		background-image: url("../img/search-bg2x.png");
@@ -378,11 +378,11 @@ only screen and (min-resolution: 192dpi) {
 		color: #454545;
 	}
 
-		input[type="search"]::-webkit-search-cancel-button, 
+		input[type="search"]::-webkit-search-cancel-button,
 		input[type="search"]::-webkit-search-decoration {
 			margin-right: 5px;
 		}
-	
+
 
 .dark-text-input:focus,
 .dark-search-input:focus,
@@ -405,7 +405,7 @@ only screen and (min-resolution: 192dpi) {
 	font: 1.3rem "Source Sans", helvetica, arial, sans-serif;
 	font-weight: 200;
 }
-	
+
 	.dark-search-input.large-text-input,
 	.light-search-input.large-text-input {
 		padding-left: 2.8em;
@@ -423,14 +423,14 @@ only screen and (min-resolution: 192dpi) {
 
 /*
  2.2 Inputs - Textareas
- 
+
  Base styles for textareas.
 
  .large-textarea - apply this to create a large textarea
 
 	<textarea class="dark-textarea {{modifier}}" rows="6" cols="36"></textarea>
 	<textarea class="light-textarea {{modifier}}" rows="6" cols="36"></textarea>
-	
+
 */
 textarea {
 	vertical-align: top;
@@ -443,7 +443,7 @@ textarea {
 	font-weight: 200;
 	line-height: 1.5em;
 	resize: none;
-	outline: none;	
+	outline: none;
 }
 
 textarea:focus{
@@ -501,7 +501,7 @@ input[type="radio"] {
 	content: " ";
 	display: inline-block;
 	position: relative;
-	top: -6px;	
+	top: -6px;
 	width: 35px;
 	height: 31px;
 	background-position: left -37px;
@@ -553,7 +553,7 @@ input[type="checkbox"]:checked + .checkbox-right:after {
 input[type="checkbox"]:disabled + label {
 	opacity: 0.3;
 	cursor: default;
-  	pointer-events: none;	
+  	pointer-events: none;
 }
 
 
@@ -573,7 +573,7 @@ input[type="checkbox"]:disabled + label {
 	<br />
 	<input type="radio" id="radio" name="radiogroup" checked />
 	<label for="radio" class="dark-radio {{modifier}}">Option</label>
-	
+
 	<input type="radio" id="radio" name="radiogroup" />
 	<label for="radio" class="light-radio {{modifier}}">Option</label>
 	<br />
@@ -595,7 +595,7 @@ input[type="checkbox"]:disabled + label {
 }
 
 .radio-left:before {
-	float: left;	
+	float: left;
 	margin-right: 15px;
 }
 
@@ -614,8 +614,8 @@ input[type="checkbox"]:disabled + label {
 }
 
 
-@media 
-(-webkit-min-device-pixel-ratio: 2) { 
+@media
+(-webkit-min-device-pixel-ratio: 2) {
 
 	.dark-radio:before,
 	.dark-radio:after {
@@ -641,7 +641,7 @@ input[type="radio"]:checked + .dark-radio {
 input[type="radio"]:disabled + label {
 	opacity: 0.3;
 	cursor: default;
-  	pointer-events: none;	
+  	pointer-events: none;
 }
 
 
@@ -657,7 +657,7 @@ input[type="radio"]:disabled + label {
 	        <div class="switch"></div>
 	    </label>
 	</div>
-	
+
 	<div class="slide-switch-container">
 	    <input type="checkbox" name="switch" id="slideswitch" checked>
 	    <label class="light-slide-switch" for="slideswitch">
@@ -668,20 +668,20 @@ input[type="radio"]:disabled + label {
 
 */
 .slide-switch-container {
-	position: relative; 
+	position: relative;
 	width: 5.5em;
 	display: inline-block;
 	vertical-align: middle;
-	-webkit-user-select:none; 
-	-moz-user-select:none; 
+	-webkit-user-select:none;
+	-moz-user-select:none;
 	-ms-user-select: none;
 	margin-left: 10px;
 }
 
 .dark-slide-switch,
 .light-slide-switch {
-	display: inline-block; 
-	overflow: hidden; 
+	display: inline-block;
+	overflow: hidden;
 	cursor: pointer;
 	width: 5.5em;
 	border-radius: 6px;
@@ -691,32 +691,32 @@ input[type="radio"]:disabled + label {
 .light-slide-switch { border: 1px solid #a5a8a8; }
 
 .on-off {
-	width: 200%; 
+	width: 200%;
 	margin-left: -100%;
-	-moz-transition: margin 0.2s ease-in 0s; 
+	-moz-transition: margin 0.2s ease-in 0s;
 	-webkit-transition: margin 0.2s ease-in 0s;
-	-o-transition: margin 0.2s ease-in 0s; 
+	-o-transition: margin 0.2s ease-in 0s;
 	transition: margin 0.2s ease-in 0s;
 }
 
-	.on-off:before, 
+	.on-off:before,
 	.on-off:after {
-		float: left; 
-		width: 50%; 
-		height: 3em; 
-		padding: 0px; 
+		float: left;
+		width: 50%;
+		height: 3em;
+		padding: 0px;
 		border-radius: 4px;
 		line-height: 3em;
-		font-size: 16px; 
-		-moz-box-sizing: border-box; 
-		-webkit-box-sizing: border-box; 
+		font-size: 16px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		overflow: hidden;
 	}
 
 	.on-off:before {
 	    content: "ON";
-	    padding-left: 1em;	
+	    padding-left: 1em;
 	}
 
 	.on-off:after {
@@ -727,25 +727,25 @@ input[type="radio"]:disabled + label {
 
 
 		.dark-slide-switch .on-off:before {
-		    background-color: #404141; 
+		    background-color: #404141;
 			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
 			color: #5dc1ff;
 		}
 
 		.dark-slide-switch .on-off:after {
-		    background-color: #404141; 
+		    background-color: #404141;
 			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
 			color: #909090;
 		}
 
 		.light-slide-switch .on-off:before {
-		    background-color: #e0f0fa; 
+		    background-color: #e0f0fa;
 			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
 			color: #0083e8;
 			text-shadow: 0 1px #fff;
 		}
 		.light-slide-switch .on-off:after {
-		    background-color: #D3D7D7; 
+		    background-color: #D3D7D7;
 			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
 			color: #909090;
 			text-shadow: 0 1px #fff;
@@ -757,7 +757,7 @@ input[type="radio"]:disabled + label {
 	margin: 0px;
 	height: 3em;
 	border-radius: 6px;
-    position: absolute; top: 0; bottom: 0; 
+    position: absolute; top: 0; bottom: 0;
 	right: 3.4em;
     -moz-transition: all 0.2s ease-in 0s; -webkit-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s; transition: all 0.2s ease-in 0s;
@@ -766,14 +766,14 @@ input[type="radio"]:disabled + label {
 	.dark-slide-switch .switch {
 	    background: url("../img/dark-grips.png") center center no-repeat #595b5b;
 		background-size: 7px;
-	    border: 1px solid #2f3233; 
+	    border: 1px solid #2f3233;
 	  	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 	}
 
 	.light-slide-switch .switch {
 	    background: url("../img/light-grips.png") center center no-repeat #e5e9e8;
 		background-size: 7px;
-	    border: 1px solid #a5a8a8; 
+	    border: 1px solid #a5a8a8;
 	  	box-shadow: inset 0 1px 0 white;
 
 	}
@@ -781,7 +781,7 @@ input[type="radio"]:disabled + label {
 	    margin-left: 0;
 	}
 	.slide-switch-container input[type="checkbox"]:checked + label .switch {
-	    right: -2px; 
+	    right: -2px;
 	}
 
 
@@ -857,7 +857,7 @@ input[type="radio"]:disabled + label {
 	overflow: hidden;
 	white-space: nowrap;
 	vertical-align: top;
-	padding: 0 60px 0 20px;		
+	padding: 0 60px 0 20px;
 	border-radius: 6px;
 	background-clip: padding-box;
 	line-height: 3rem;
@@ -879,9 +879,9 @@ input[type="radio"]:disabled + label {
 	color: #b9bbbc;
 }
 
-	@media 
-	only screen and (-webkit-min-device-pixel-ratio: 2), 
-	only screen and (min-resolution: 192dpi) { 
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
 		.spinner {
 			background: url("../img/dark-combo-box-bg2x.png") no-repeat;
 			background-size: 11px;
@@ -898,9 +898,9 @@ input[type="radio"]:disabled + label {
 	color: #b9bbbc;
 }
 
-	@media 
-	only screen and (-webkit-min-device-pixel-ratio: 2), 
-	only screen and (min-resolution: 192dpi) { 
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
 		.spinner {
 			background: url("../img/light-combo-box-bg2x.png") no-repeat;
 			background-size: 11px;
@@ -946,13 +946,13 @@ input[type="radio"]:disabled + label {
 		.dark-combo-drop li {
 			border-top: 1px solid #484b4c;
 		}
-	
+
 	.light-combo-drop{
 		background-color: #e5e9e9;
 		color: #454545;
 	}
 		.light-combo-drop li {
-			border-top: 1px solid #d3d7d7;	
+			border-top: 1px solid #d3d7d7;
 		}
 
 
@@ -1004,7 +1004,7 @@ input[type="radio"]:disabled + label {
 		box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
 	}
 
-.complete { width: 100% }	
+.complete { width: 100% }
 
 
 
@@ -1014,7 +1014,7 @@ input[type="radio"]:disabled + label {
 
 	<div class="spinner"></div>
 	<div class="large-spinner"></div>
-	
+
 */
 .spinner {
 	width: 36px;
@@ -1025,9 +1025,9 @@ input[type="radio"]:disabled + label {
 	-webkit-animation: spinner 1s infinite linear;
 }
 
-@media 
-only screen and (-webkit-min-device-pixel-ratio: 2), 
-only screen and (min-resolution: 192dpi) { 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
 	.spinner {
 		background: url("../img/spinner2x.png") no-repeat;
 		background-size: 36px;
@@ -1054,7 +1054,7 @@ only screen and (min-resolution: 192dpi) {
  3.3 Indicators - Notification
 
 	<strong>Inbox</strong> <span class="notification">1</span>
-	
+
 */
 .notification {
   display: inline-block;
@@ -1070,7 +1070,7 @@ only screen and (min-resolution: 192dpi) {
 
 
 
-	
+
 /*
  4.1 Navigation - Header Bar
 
@@ -1090,7 +1090,7 @@ only screen and (min-resolution: 192dpi) {
 	height: 3.9000000000000004rem;
 	width: 100%;
 	line-height: 3.9000000000000004rem;
-	text-align: center;	
+	text-align: center;
 }
 
 .dark-header-bar {
@@ -1108,7 +1108,7 @@ only screen and (min-resolution: 192dpi) {
 	.dark-header-bar p,
 	.light-header-bar p { margin: 0; }
 
-	
+
 	.header-bar-title{
 		font-size: 1.3rem;
 		text-align: center;
@@ -1116,7 +1116,7 @@ only screen and (min-resolution: 192dpi) {
 
 
 
-	
+
 /*
  4.2 Navigation - Tab Bar
 
@@ -1182,7 +1182,7 @@ only screen and (min-resolution: 192dpi) {
 		color: #454545;
 		text-decoration: none;
 		text-shadow: 0 1px #ffffff;
-	}	
+	}
 		.dark-tab-bar a:first-child,
 		.light-tab-bar a:first-child { border: 0; }
 
@@ -1192,7 +1192,7 @@ only screen and (min-resolution: 192dpi) {
 		color: #5dc1ff;
 	  	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
 	}
-		
+
 	.light-tab-bar a.down,
 	.light-tab-bar a:active {
 		background-color: #e0f0fa;
@@ -1202,7 +1202,7 @@ only screen and (min-resolution: 192dpi) {
 
 
 
-		
+
 /*
  5.1 Lists
 
@@ -1211,7 +1211,7 @@ only screen and (min-resolution: 192dpi) {
 		<li>Item #2</li>
 		<li>Item #3</li>
 	</ul>
-	
+
 	<ul class="light-list">
 		<li>Item #1</li>
 		<li>Item #2</li>
@@ -1225,7 +1225,7 @@ only screen and (min-resolution: 192dpi) {
 	list-style: none;
 	user-select: none;
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;	
+	-webkit-user-select: none;
 }
 
 
@@ -1233,7 +1233,7 @@ only screen and (min-resolution: 192dpi) {
 	border-top: 1px solid #2f3234;
 	border-bottom: 1px solid #5e6061;
 	color: #c6c8c8;
-}	
+}
 	.dark-list > li {
 		/* Editable padding variable */
 		padding: 20px;
@@ -1251,7 +1251,7 @@ only screen and (min-resolution: 192dpi) {
 		padding: 20px;
 		border-top: 1px solid #eff1f1;
 		border-bottom: 1px solid #bcbfbf;
-	}		
+	}
 
 
 
@@ -1267,7 +1267,7 @@ only screen and (min-resolution: 192dpi) {
 		<a href="#" class="dark-cta dark-button" role="button">Daily Double!</a>
 		<a href="#" class="dark-button" role="button">Unfriend</a>
 	</section>
-	
+
 	<section class="light-well">
 		<h2>Alex Trebek</h2>
 		<p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
@@ -1289,11 +1289,11 @@ only screen and (min-resolution: 192dpi) {
 	.light-well h1 {
 		font-size: 1.5625rem;
 	}
-	
+
 	.dark-well h1 {
 		color: #fff;
 	}
-	
+
 	.light-well h1 {
 		color: #000;
 	}
@@ -1340,18 +1340,18 @@ only screen and (min-resolution: 192dpi) {
 	margin:25% 20%;
 	text-align: center;
 }
-		
+
 		.dark-dialog h1,
 		.light-dialog h1 {
 			font-size: 1.1875rem;
 		}
-		
+
 		.dark-dialog h1 {
 			color: #fff;
 			padding-bottom: 20px;
 			border-bottom: 1px solid #505252;
 		}
-		
+
 		.light-dialog h1 {
 			color: #484b4c;
 			padding-bottom: 20px;
@@ -1407,7 +1407,7 @@ only screen and (min-resolution: 192dpi) {
 	border-radius: 6px;
 	margin: auto;
 	position: relative;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);	
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 	.dark-callout:after,
 	.light-callout:after {
@@ -1509,7 +1509,7 @@ only screen and (min-resolution: 192dpi) {
 	.user-info p {
 		margin: 0;
 	}
-	
+
 	.user-info a {
 		color: #0083e8;
 		text-decoration: none;
@@ -1568,7 +1568,7 @@ only screen and (min-resolution: 192dpi) {
 	.inline-item {
 		float: left;
 	}
-	
+
 	.dark-callout .inline-item + .inline-item{
 		border-left: 1px solid #474949;
 	}
