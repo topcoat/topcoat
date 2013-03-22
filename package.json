@@ -3,16 +3,20 @@
   "version": "0.2.0",
   "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
   "main": "Gruntfile.js",
+  "topcoat": {
+    "controls": {
+      "topcoat/button": ""
+    },
+    "theme": {
+      "topcoat/theme": ""
+    }
+  },
   "directories": {
     "doc": "doc",
     "test": "test"
   },
-  "dependencies": {
-    "underscore": "~1.4.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "grunt-lib-contrib": "0.3.1",
-    "grunt-contrib-mincss": "0.3.2",
     "grunt-contrib-copy": "~0.4.0",
     "grunt-contrib-stylus": "~0.4.0",
     "grunt-contrib-jade": "~0.4.0",
@@ -20,7 +24,9 @@
     "grunt-stylusguide": "~0.1.0",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-exec": "~0.4.0",
-    "csv": "~0.2.7"
+    "grunt-zip": "~0.5.0",
+    "csv": "~0.2.9",
+    "grunt-topcoat": "0.0.2"
   },
   "scripts": {
     "test": "grunt test"

@@ -15,46 +15,78 @@ limitations under the License.
 
 /*global module:false*/
 
-var
-component = { /* see https://github.com/component/component/wiki/Spec for a description of what this should contain */
-    name: 'topcoat',
-    repo: 'topcoat/topcoat',
-    version: '0.2.0',
-    description: 'An Open Source UI Library for creating beautiful and responsive applications using web standards',
-    main: [],
-    styles: [],
-    images: [],
-    fonts: [],
-    files: [],
-},
-    _ = require('underscore'),
-    fs = require('fs'),
-    path = require('path'),
+var path = require('path'),
     chromiumSrc = process.env.CHROMIUM_SRC;
 
 module.exports = function(grunt) {
 
-    // Project configuration.
     grunt.initConfig({
-        // Metadata.
         pkg: grunt.file.readJSON('package.json'),
-        banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n' + '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' + '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' + ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-        // Task configuration.
+        topcoat: {
+            download: {
+                options: {
+                    srcPath: "src/",
+                    repos: "<%= pkg.topcoat %>"
+                }
+            }
+        },
+        unzip: {
+            controls: {
+                src: "src/controls/*.zip",
+                dest: "src/controls"
+            },
+            theme: {
+                src: "src/*.zip",
+                dest: "src/"
+            }
+        },
         stylus: {
             compile: {
                 options: {
+                    paths: ['src/controls/**/src/mixins'],
                     compress: false
                 },
                 files: {
-                    'release/css/topcoat-desktop.css': ['src/style/copyright.styl', 'src/style/topcoat-desktop.styl']
+                    'release/css/topcoat-mobile-light.css': [
+                        'src/**/src/theme-mobile-light.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
+                    'release/css/topcoat-mobile-dark.css': [
+                        'src/**/src/theme-mobile-dark.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
+                    'release/css/topcoat-desktop-light.css': [
+                        'src/**/src/theme-desktop-light.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
+                    'release/css/topcoat-desktop-dark.css': [
+                        'src/**/src/theme-desktop-dark.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
                 }
             },
             minify: {
                 options: {
+                    paths: ['src/controls/**/src/mixins'],
                     compress: true
                 },
                 files: {
-                    'release/css/topcoat-desktop-min.css': ['src/style/copyright.styl', 'src/style/topcoat-desktop.styl']
+                    'release/css/topcoat-mobile-light.min.css': [
+                        'src/**/src/theme-mobile-light.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
+                    'release/css/topcoat-mobile-dark.min.css': [
+                        'src/**/src/theme-mobile-dark.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
+                    'release/css/topcoat-desktop-light.min.css': [
+                        'src/**/src/theme-desktop-light.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
+                    'release/css/topcoat-desktop-dark.min.css': [
+                        'src/**/src/theme-desktop-dark.styl',
+                        'src/**/src/skins/*.styl'
+                    ],
                 }
             }
         },
@@ -65,13 +97,15 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'src/font/',
-                    src: '**',
+                    // FIXME: Can't figure out how to keep from hard coding
+                    // this path :(
+                    cwd: 'src/topcoat-theme-fce9bdf/font/',
+                    src: ['**'],
                     dest: 'release/font/'
                 }, {
                     expand: true,
                     flatten: true,
-                    src: 'src/img/*',
+                    src: 'src/**/img/*',
                     dest: 'release/img'
                 }]
             },
@@ -153,59 +187,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-topcoat');
+    grunt.loadNpmTasks('grunt-zip');
 
     // Default task.
-    grunt.registerTask('default', ['clean',  'stylus', 'copy:dist', 'manifest']);
-
-    /* the manifest for component.json is used by Bower */
-    grunt.registerTask('manifest', 'Generates component.json file.', function() {
-        var base = path.join(__dirname, 'release');
-
-        function addFilesToCollection(collection, basePath, localPath) {
-            fs.readdirSync(path.join(basePath, localPath)).forEach(function(file) {
-                if (fs.statSync(path.join(basePath, localPath, file)).isDirectory()) {
-                    addFilesToCollection(collection, basePath, path.join(localPath, file));
-                } else {
-                    collection.push(path.join("release", localPath, file));
-                }
-            });
-        }
-
-        fs.readdirSync(base).forEach(function(dir) {
-            switch (dir) {
-            case "css":
-                {
-                    addFilesToCollection(component.styles, base, dir);
-                    break;
-                }
-            case "font":
-                {
-                    addFilesToCollection(component.fonts, base, dir);
-                    break;
-                }
-            case "img":
-                {
-                    addFilesToCollection(component.images, base, dir);
-                    break;
-                }
-            default:
-                {
-                    addFilesToCollection(component.images, base, dir);
-                    break;
-                }
-            }
-
-            /* bower needs everything to be pushed in main */
-            addFilesToCollection(component.main, base, dir);
-        });
-
-        var c = JSON.stringify(component, null, 4);
-        fs.writeFileSync(path.join(__dirname, 'component.json'), c, 'utf8');
-    });
+    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'stylus', 'copy:dist']);
 
     grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
         if (!chromiumSrc) {
-            grunt.fail.warn("Please set the CHROMIUM_SRC env var to the root of your chromium sources (ends in /src)");
+            grunt.fail.warn("Please set the CHROMIUM_SRC env var to the root of your chromium sources(ends in /src)");
         } else {
             grunt.log.writeln("CHROMIUM_SRC points to " + chromiumSrc.cyan);
         }
@@ -233,7 +223,7 @@ module.exports = function(grunt) {
                     console.log('No path file specified');
                     console.log('Usage: grunt telemetry-submit --path=path_to_output_file [--test= Test name ] [--device= Device type ]');
                 } else {
-                    var submitData = require('./test/perf/telemetry/lib/submitData');
+                    var submitData = require('./test / perf / telemetry / lib / submitData ');
                     submitData(stdout, path, {
                         device: device,
                         test: test
