@@ -17,7 +17,7 @@ var file = function (path) {
 	return path.split('/').pop().split('.')[0];
 };
 
-var submitData = function (stdout, path, args) {
+var submitData = function (stdout, path, args, destination) {
 	var querystring = require('querystring');
 	var http        = require('http');
 	var fs          = require('fs');
@@ -25,7 +25,7 @@ var submitData = function (stdout, path, args) {
 	var postOptions = require('./settings');
 
 	var post_data = {};
-	
+
 	parse(path, function (j) {
 		post_data = {
 			resultName : j
@@ -41,6 +41,13 @@ var submitData = function (stdout, path, args) {
 		post_data = querystring.stringify({data : JSON.stringify(post_data)});
 
 		post_options = postOptions(post_data.length);
+		if (destination.host && destination.port) {
+			var location = destination.host.split('/');
+
+			post_options.host = location.shift();
+			post_options.path = '/' + location.join('/');
+			post_options.port = destination.port;
+		}
 
 		// Set up the request
 		var post_req = http.request(post_options, function(res) {

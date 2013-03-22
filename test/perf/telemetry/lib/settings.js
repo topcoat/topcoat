@@ -15,7 +15,7 @@ limitations under the License.
 
 function settings (contentLength) {
 	var post_options = {
-		host: 'topcoat.herokuapp.com',
+		host: 'bench.topcoat.io',
 		port: '80',
 		path: '/v2/benchmark',
 		method: 'POST',

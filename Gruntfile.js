@@ -223,11 +223,15 @@ module.exports = function(grunt) {
                 grunt.log.error('Error');
                 console.log(error);
                 done();
+
             } else {
 
-                var path = grunt.option('path'),
-                    device = grunt.option('device'),
-                    test = grunt.option('test');
+                var path = grunt.option('path')
+                ,   device = grunt.option('device')
+                ,   test = grunt.option('test')
+                ,   host = grunt.option('host')
+                ,   port = grunt.option('port')
+                ;
 
                 if (!path) {
                     console.log('No path file specified');
@@ -237,6 +241,9 @@ module.exports = function(grunt) {
                     submitData(stdout, path, {
                         device: device,
                         test: test
+                    }, {
+                        host : host,
+                        port : port
                     });
                 }
             }
