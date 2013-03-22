@@ -17,7 +17,6 @@ limitations under the License.
 
 var path = require('path'),
     chromiumSrc = process.env.CHROMIUM_SRC;
-
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -43,49 +42,49 @@ module.exports = function(grunt) {
         stylus: {
             compile: {
                 options: {
-                    paths: ['src/controls/**/src/mixins'],
+                    paths: grunt.file.expand('src/controls/**/src/mixins'),
                     compress: false
                 },
                 files: {
                     'release/css/topcoat-mobile-light.css': [
                         'src/**/src/theme-mobile-light.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                     'release/css/topcoat-mobile-dark.css': [
                         'src/**/src/theme-mobile-dark.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                     'release/css/topcoat-desktop-light.css': [
                         'src/**/src/theme-desktop-light.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                     'release/css/topcoat-desktop-dark.css': [
                         'src/**/src/theme-desktop-dark.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                 }
             },
             minify: {
                 options: {
-                    paths: ['src/controls/**/src/mixins'],
+                    paths: grunt.file.expand('src/controls/**/src/mixins'),
                     compress: true
                 },
                 files: {
                     'release/css/topcoat-mobile-light.min.css': [
                         'src/**/src/theme-mobile-light.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                     'release/css/topcoat-mobile-dark.min.css': [
                         'src/**/src/theme-mobile-dark.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                     'release/css/topcoat-desktop-light.min.css': [
                         'src/**/src/theme-desktop-light.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                     'release/css/topcoat-desktop-dark.min.css': [
                         'src/**/src/theme-desktop-dark.styl',
-                        'src/**/src/skins/*.styl'
+                        'src/**/skins/**/src/*.styl'
                     ],
                 }
             }
@@ -99,7 +98,7 @@ module.exports = function(grunt) {
                     expand: true,
                     // FIXME: Can't figure out how to keep from hard coding
                     // this path :(
-                    cwd: 'src/topcoat-theme-fce9bdf/font/',
+                    cwd: 'src/topcoat-theme-376e6f8/font/',
                     src: ['**'],
                     dest: 'release/font/'
                 }, {
