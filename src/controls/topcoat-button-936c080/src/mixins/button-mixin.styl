@@ -1,0 +1,26 @@
+button-base() {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  user-select: none;
+}
+
+button-base--quiet() {
+  /* Border is added so button doesn't shift when clicked */;
+  border: 1px solid transparent;
+  box-shadow: none;
+}

@@ -1,0 +1,10 @@
+@import button-mixin
+
+.button {
+  button-base();
+}
+
+.button--quiet {
+  @extend .button
+  button-base--quiet();
+}
