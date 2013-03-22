@@ -229,8 +229,8 @@ module.exports = function(grunt) {
                 var path = grunt.option('path')
                 ,   device = grunt.option('device')
                 ,   test = grunt.option('test')
-                ,   host = grunt.option('host')
-                ,   port = grunt.option('port')
+                ,   host = process.env.TOPCOAT_BENCHMARK_SERVER
+                ,   port = process.env.TOPCOAT_BENCHMARK_PORT
                 ;
 
                 if (!path) {
