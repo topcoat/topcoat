@@ -17,6 +17,7 @@ limitations under the License.
 
 var path = require('path'),
     chromiumSrc = process.env.CHROMIUM_SRC;
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -40,66 +41,60 @@ module.exports = function(grunt) {
             }
         },
         stylus: {
-            compile: {
+            compile_mobile_light_theme: {
                 options: {
                     paths: grunt.file.expand('src/controls/**/src/mixins'),
+                    import: grunt.file.expand('src/**/src/theme-mobile-light.styl'),
                     compress: false
                 },
                 files: {
-                    'release/css/topcoat-mobile-light.css': [
-                        'src/**/src/theme-mobile-light.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
-                    'release/css/topcoat-mobile-dark.css': [
-                        'src/**/src/theme-mobile-dark.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
-                    'release/css/topcoat-desktop-light.css': [
-                        'src/**/src/theme-desktop-light.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
-                    'release/css/topcoat-desktop-dark.css': [
-                        'src/**/src/theme-desktop-dark.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
+                    'release/css/topcoat-mobile-light.css': 'src/**/skins/**/src/*.styl'
                 }
             },
-            minify: {
+            compile_mobile_dark_theme: {
                 options: {
                     paths: grunt.file.expand('src/controls/**/src/mixins'),
-                    compress: true
+                    import: grunt.file.expand('src/**/src/theme-mobile-dark.styl'),
+                    compress: false
                 },
                 files: {
-                    'release/css/topcoat-mobile-light.min.css': [
-                        'src/**/src/theme-mobile-light.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
-                    'release/css/topcoat-mobile-dark.min.css': [
-                        'src/**/src/theme-mobile-dark.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
-                    'release/css/topcoat-desktop-light.min.css': [
-                        'src/**/src/theme-desktop-light.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
-                    'release/css/topcoat-desktop-dark.min.css': [
-                        'src/**/src/theme-desktop-dark.styl',
-                        'src/**/skins/**/src/*.styl'
-                    ],
+                    'release/css/topcoat-mobile-dark.css': 'src/**/skins/**/src/*.styl'
+                }
+            },
+            compile_desktop_light_theme: {
+                options: {
+                    paths: grunt.file.expand('src/controls/**/src/mixins'),
+                    import: grunt.file.expand('src/**/src/theme-desktop-light.styl'),
+                    compress: false
+                },
+                files: {
+                    'release/css/topcoat-desktop-light.css': 'src/**/skins/**/src/*.styl'
+                }
+            },
+            compile_desktop_dark_theme: {
+                options: {
+                    paths: grunt.file.expand('src/controls/**/src/mixins'),
+                    import: grunt.file.expand('src/**/src/theme-desktop-dark.styl'),
+                    compress: false
+                },
+                files: {
+                    'release/css/topcoat-desktop-dark.css': 'src/**/skins/**/src/*.styl'
                 }
             }
         },
 
-        clean: ["release"],
+        clean: {
+            src: ['src'],
+            release: ['release'],
+            doc: ['doc']
+        },
 
         copy: {
             dist: {
                 files: [{
                     expand: true,
-                    // FIXME: Can't figure out how to keep from hard coding
-                    // this path :(
-                    cwd: 'src/topcoat-theme-376e6f8/font/',
-                    src: ['**'],
+                    flatten: true,
+                    src: 'src/**/font/**',
                     dest: 'release/font/'
                 }, {
                     expand: true,
@@ -108,26 +103,39 @@ module.exports = function(grunt) {
                     dest: 'release/img'
                 }]
             },
-
-            /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
-            telemetry: {
+            docs: {
                 files: [{
                     expand: true,
-                    cwd: 'test/perf/telemetry/perf/',
-                    src: ['**'],
-                    dest: path.join(chromiumSrc, 'tools/perf/')
-                }, {
-                    src: ['release/**'],
-                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
+                    flatten: true,
+                    src: 'src/**/font/**',
+                    dest: 'doc/styleguide/font/'
                 }, {
                     expand: true,
-                    cwd: 'components/topcoat-button/',
-                    src: ['release/**'],
-                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
+                    flatten: true,
+                    src: 'src/**/img/*',
+                    dest: 'doc/styleguide/img'
                 }]
             }
-
         },
+
+        /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
+        telemetry: {
+            files: [{
+                expand: true,
+                cwd: 'test/perf/telemetry/perf/',
+                src: ['**'],
+                dest: path.join(chromiumSrc, 'tools/perf/')
+            }, {
+                src: ['release/**'],
+                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
+            }, {
+                expand: true,
+                cwd: 'components/topcoat-button/',
+                src: ['release/**'],
+                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
+            }]
+        },
+
 
         jade: {
             telemetry: {
@@ -176,6 +184,14 @@ module.exports = function(grunt) {
         watch: {
             files: ['src/style/*.styl'],
             tasks: ['stylus']
+        },
+
+        styleguide: {
+            doc: {
+                files: {
+                    'doc/styleguide': 'release/css/*.css'
+                }
+            }
         }
     });
 
@@ -188,9 +204,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-zip');
+    grunt.loadNpmTasks('grunt-styleguide');
+
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'stylus', 'copy:dist']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'stylus', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('docs', ['clean:doc', 'stylus', 'styleguide', 'copy:docs']);
 
     grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
         if (!chromiumSrc) {
