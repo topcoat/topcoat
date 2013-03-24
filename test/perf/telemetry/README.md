@@ -28,6 +28,9 @@ cd $CHROMIUM_SRC/tools/perf
 ``` 
 We store the benchmark output in a file - the next script will take this output and push it to the server
 
+For steps of running performance tests on Android:
+https://github.com/topcoat/topcoat/wiki/Running-TopCoat-Performance-Test-on-Android
+
 # Pushing benchmark results to the server
 
 There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt [--device] [--test]`
