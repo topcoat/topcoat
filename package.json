@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "topcoat": {
     "controls": {
-      "topcoat/button": ""
+      "topcoat/button-base": ""
     },
     "theme": {
       "topcoat/theme": ""
