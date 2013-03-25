@@ -97,7 +97,8 @@ module.exports = function(grunt) {
         clean: {
             src: ['src'],
             release: ['release'],
-            docs: ['docs']
+            docs: ['docs'],
+            zip: ['src/*.zip', 'src/controls/*.zip', 'src/**/skins/*.zip']
         },
 
         copy: {
@@ -220,7 +221,7 @@ module.exports = function(grunt) {
 
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('docs', ['clean:docs', 'stylus', 'styleguide', 'copy:docs']);
 
     grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
