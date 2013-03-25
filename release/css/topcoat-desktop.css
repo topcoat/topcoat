@@ -1053,13 +1053,13 @@ input.slide-switch.large[type=checkbox]:checked + label .wrapper {
   margin: 0 5px 5px 0;
   width: 16px;
   height: 16px;
-  background: url("../img/spinner-sml.png") 50% no-repeat;
+  background: url("../img/spinner.png") 50% no-repeat;
   background-size: 100%;
 }
 .spinner.large {
   width: 36px;
   height: 36px;
-  background: url("../img/spinner-lrg.png") 50% no-repeat;
+  background: url("../img/spinner2x.png") 50% no-repeat;
   background-size: 100%;
 }
 @-webkit-keyframes rotate {
