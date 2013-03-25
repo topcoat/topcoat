@@ -92,7 +92,7 @@ function submitResults() {
 
     for resultFile in $RESULTS_DIR/* 
     do
-        grunt telemetry-submit --path=$resultFile --device \"$DEVICE_NAME\"    
+        grunt telemetry-submit --path=$resultFile --device $DEVICE_NAME   
     done    
 }
 
