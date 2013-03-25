@@ -61,4 +61,7 @@ In the json file you can reference the test file to load using `file:///topcoat/
 
 From telemetry we're currently using loading and smoothness benchmarks. The runAll.sh script currently runs these two benchmarks on all the .json tests under page_sets. 
 
-Note: part of this will probably change when we switch to the new components/themes architecture.
+Note 1: runAll.sh uses CEF ([chromium embedding framework](https://code.google.com/p/chromiumembedded/)) to run the tests on desktop (Win and Mac) by default. This is because the target for TopCoat are web applications, not web sites, and CEF is the preferred way to develop web applications on desktop. 
+We're currently using a custom CEF build because telemetry does not work in CEF by default. A patch has been submitted to CEF upstream (https://code.google.com/p/chromiumembedded/issues/detail?id=917&sort=-id) to fix this. 
+
+Note 2: part of this will probably change when we switch to the new components/themes architecture.
