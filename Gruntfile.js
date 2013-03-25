@@ -83,10 +83,21 @@ module.exports = function(grunt) {
             }
         },
 
+        cssmin: {
+            minify: {
+                files: {
+                    'release/css/topcoat-mobile-light.min.css': 'release/css/topcoat-mobile-light.css',
+                    'release/css/topcoat-mobile-dark.min.css': 'release/css/topcoat-mobile-dark.css',
+                    'release/css/topcoat-desktop-light.min.css': 'release/css/topcoat-desktop-light.css',
+                    'release/css/topcoat-desktop-dark.min.css': 'release/css/topcoat-desktop-dark.css',
+                }
+            }
+        },
+
         clean: {
             src: ['src'],
             release: ['release'],
-            doc: ['doc']
+            docs: ['docs']
         },
 
         copy: {
@@ -108,12 +119,12 @@ module.exports = function(grunt) {
                     expand: true,
                     flatten: true,
                     src: 'src/**/font/**',
-                    dest: 'doc/styleguide/font/'
+                    dest: 'docs/font/'
                 }, {
                     expand: true,
                     flatten: true,
                     src: 'src/**/img/*',
-                    dest: 'doc/styleguide/img'
+                    dest: 'docs/img'
                 }]
             }
         },
@@ -187,9 +198,9 @@ module.exports = function(grunt) {
         },
 
         styleguide: {
-            doc: {
+            docs: {
                 files: {
-                    'doc/styleguide': 'release/css/*.css'
+                    'docs/styleguide': 'release/css/*.css'
                 }
             }
         }
@@ -205,11 +216,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-zip');
     grunt.loadNpmTasks('grunt-styleguide');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'stylus', 'copy:dist', 'styleguide', 'copy:docs']);
-    grunt.registerTask('docs', ['clean:doc', 'stylus', 'styleguide', 'copy:docs']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('docs', ['clean:docs', 'stylus', 'styleguide', 'copy:docs']);
 
     grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
         if (!chromiumSrc) {
