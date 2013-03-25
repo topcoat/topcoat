@@ -1,0 +1,1599 @@
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/* Definitions -----------------------------------------------------------
+
+/*
+  Fonts
+	200 = light
+	500 = normal
+	600 = demi-bold
+
+  Icons
+	sm = 24x24
+	lg = 36x36
+*/
+
+/* Fonts ----------------------------------------------------------------- */
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro/SourceSansPro-Regular.otf');
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro/SourceSansPro-Light.otf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro/SourceSansPro-Semibold.otf');
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: "source";
+  src: url("../font/SourceSansPro/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "source-l";
+  src: url("../font/SourceSansPro/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "source-sb";
+  src: url("../font/SourceSansPro/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+
+/* Global ----------------------------------------------------------------- */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: #000;
+	font: 16px "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+	text-rendering: optimizeLegibility;
+}
+
+.disabled {
+	opacity: 0.3;
+	cursor: default;
+  	pointer-events: none;
+}
+
+
+/*
+ 1.1 Button
+
+ ".*-button" is a base button class. Apply other classes, like ".large-button" to change its appearance.
+
+ .down - to simulate an active state on mobile devices
+ .large-button - creates a large version of your button
+ .quiet-button - creates a quiet version of your button
+
+     <a class="dark-button {{modifier}}">Button</a>
+     <a class="light-button {{modifier}}">Button</a>
+
+*/
+
+
+.dark-button,
+.light-button {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	vertical-align: top;
+	padding: 0 20px;
+	border-radius: 6px;
+	margin: 5px 10px 5px 0;
+	background-clip: padding-box;
+	font-size: 16px;
+	line-height: 3rem;
+	letter-spacing: 1px;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.dark-button {
+	border: 1px solid rgba(0, 0, 0, 0.36);
+  	background-color: #595b5b;
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
+  	color: #c6c8c8;
+  	text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
+}
+
+	/* Button States */
+	.dark-button:active,
+	.dark-button.down {
+		background-color: #404141;
+	  	box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
+	}
+
+.light-button {
+	border: 1px solid #a5a8a8;
+  	background-color: #e5e9e8;
+  	box-shadow: inset 0 1px #ffffff;
+  	color: #454545;
+  	text-shadow: 0 1px #ffffff;
+}
+	/* Button States */
+	.light-button:active,
+	.light-button.down {
+	  	background-color: #d3d7d7;
+	  	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	}
+
+
+.quiet-button {
+	/* Adding a border here to the button doesn't shift when clicked*/
+	border: 1px solid transparent;
+	background-color: transparent;
+	box-shadow: none;
+}
+	/* Button States */
+	.quiet-button.dark-button:active,
+	.quiet-button.dark-button.down {
+		border: 1px solid rgba(0, 0, 0, 0.36);
+		background-color: #404141;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
+		color: #c6c8c8;
+		text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
+	}
+	.quiet-button.light-button:active,
+	.quiet-button.light-button.down {
+		border: 1px solid #a5a8a8;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+		color: #454545;
+		text-shadow: 0 1px #ffffff;
+		background-color: #d3d7d7;
+	}
+
+.large-button {
+	font-size: 1.3rem;
+	line-height: 4rem;
+}
+
+
+
+
+/*
+ 1.2 CTA Button
+
+ ".*-cta" adds call-to-action styling to a button.
+
+ .down - to simulate an active state on mobile devices
+ .large-button - creates a large version of your button
+
+     <a class="dark-cta {{modifier}}">Button</a>
+     <a class="light-cta {{modifier}}">Button</a>
+
+*/
+.dark-cta,
+.light-cta {
+	border: 1px solid #143250;
+	background-color: #288edf;
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.36);
+	color: #ffffff;
+	font-weight: 500;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.36);
+}
+
+	/* CTA States */
+	.dark-cta:active,
+	.dark-cta.down {
+		background-color: #1976c3;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	}
+	.light-cta:active,
+	.light-cta.down {
+		background-color: #0380e8;
+	  	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	}
+
+
+
+
+/*
+ 1.3 Icon Button
+
+ Use ".icon" and ".large-icon" to add an icon to a button. Use the ".no-label" class if you need a button with an
+ icon but no text.
+
+	.large-button - creates a large version of your button and icon
+
+     <a class="dark-button {{modifier}}"><i class="icon"></i>Button</a>
+     <a class="light-button {{modifier}}"><i class="icon"></i>Button</a>
+
+     <a class="no-label dark-button {{modifier}}"><i class="icon"></i>Button</a>
+     <a class="no-label light-button {{modifier}}"><i class="icon"></i>Button</a>
+
+*/
+.dark-button.icon-button,
+.light-button.icon-button,
+.large-button.icon-button {
+	padding: 0 0.75rem;
+}
+
+.icon {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 24px;
+	height: 24px;
+	margin: .75rem .75rem 0 0;
+	background-color: #c0c0c0;
+	background-size: 24px;
+	text-indent: 100%;
+	vertical-align: top;
+}
+
+.large-button > .icon{
+	width: 40px;
+	height: 40px;
+}
+
+/* Use this class if you need a button with an icon but no text */
+.icon-button.no-label {
+	padding: 0 0 0 .75rem;
+}
+
+
+
+
+/*
+ 1.4 Button Bar
+
+ Wrap this class around a group of buttons to create a button bar.
+
+	<div class="button-bar">
+		<a class="dark-button">First</a>
+		<a class="dark-button">Second</a>
+		<a class="dark-button">Third</a>
+	</div>
+
+	<div class="button-bar">
+		<a class="large-button light-button">Demand</a>
+		<a class="large-button light-button">Moar</a>
+		<a class="large-button light-button">Cookies</a>
+	</div>
+*/
+.button-bar {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	margin: 5px 5px 5px 0;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+	.button-bar > .dark-button,
+	.button-bar > .light-button { word-wrap: break-word; }
+
+	/* First button in the button bar */
+	.button-bar > .dark-button:first-child,
+	.button-bar > .light-button:first-child {
+	  	border-radius: 6px 0 0 6px;
+	  	margin: 0;
+	}
+
+
+
+	/* Middle buttons in the button bar */
+	.button-bar > .dark-button:not(:first-child):not(:last-child),
+	.button-bar > .light-button:not(:first-child):not(:last-child) {
+		border-radius: 0;
+		margin: 0 -4px;
+	}
+
+
+	/* Last button in the button bar */
+	.button-bar > .dark-button:last-child,
+	.button-bar > .light-button:last-child {
+	  	border-radius: 0 6px 6px 0;
+	  	margin: 0;
+	}
+
+
+.button-bar.duo > .dark-button:last-child,
+.button-bar.duo > .light-button:last-child {
+	margin: 0 -4px;
+}
+
+
+/*
+ 2.1 Inputs - Single Line Text
+
+ Applying ".*-text-input" to text-based form input elements such as "text", "search", or
+ "email" input element adds base styling.
+
+	.large-text-input - larger-sized elements that match the height of a ".large-button".
+
+	<input type="text" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
+	<input type="text" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+	<input type="search" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
+	<input type="search" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+
+*/
+.dark-text-input,
+.light-text-input {
+	vertical-align: top;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0 20px;
+	border-radius: 6px;
+	margin: 5px;
+	height: 3em;
+	font: 1em "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+	outline: none;
+}
+
+.dark-search-input,
+.light-search-input {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 5px;
+	outline: none;
+	vertical-align: top;
+	-webkit-appearance: none;
+	padding: 0 0 0 2.7em;
+	border-radius: 30px;
+	background-image: url("../img/search-bg.png");
+	background-position: 1em center;
+	background-repeat: no-repeat;
+	height: 3em;
+	font: 1em "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+   	.dark-search-input,
+	.light-search-input {
+		background-image: url("../img/search-bg2x.png");
+		background-size: 20px;
+	}
+}
+
+	.dark-text-input,
+	.dark-search-input {
+		border: 1px solid #2f3233;
+		background-color: #424546;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+		color: #b9bbbc;
+	}
+
+	.light-text-input,
+	.light-search-input {
+		border: 1px solid #a5a8a8;
+		background-color: #f2f3f3;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+		color: #454545;
+	}
+
+		input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-decoration {
+			margin-right: 5px;
+		}
+
+
+.dark-text-input:focus,
+.dark-search-input:focus,
+.light-text-input:focus,
+.light-search-input:focus{
+	background-color: #ffffff;
+	color: #000;
+}
+
+.dark-text-input:focus::-webkit-input-placeholder,
+.dark-search-input:focus::-webkit-input-placeholder,
+.light-text-input:focus::-webkit-input-placeholder,
+.light-search-input:focus::-webkit-input-placeholder{
+	color: #C6C8C8;
+}
+
+
+.large-text-input {
+	height: 4rem;
+	font: 1.3rem "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+}
+
+	.dark-search-input.large-text-input,
+	.light-search-input.large-text-input {
+		padding-left: 2.8em;
+		border-radius: 40px;
+		background-position: 1.2em center;
+	}
+
+
+
+
+
+
+
+
+
+/*
+ 2.2 Inputs - Textareas
+
+ Base styles for textareas.
+
+ .large-textarea - apply this to create a large textarea
+
+	<textarea class="dark-textarea {{modifier}}" rows="6" cols="36"></textarea>
+	<textarea class="light-textarea {{modifier}}" rows="6" cols="36"></textarea>
+
+*/
+textarea {
+	vertical-align: top;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 10px 20px;
+	border-radius: 6px;
+	margin: 5px;
+	font: 1em "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+	line-height: 1.5em;
+	resize: none;
+	outline: none;
+}
+
+textarea:focus{
+	background-color: #ffffff;
+	color: #454545;
+}
+
+.dark-textarea {
+	border: 1px solid #2f3233;
+	background-color: #424546;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	color: #c6c8c8;
+}
+
+.light-textarea {
+	border: 1px solid #a5a8a8;
+	background-color: #eff1f1;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	color: #454545;
+}
+
+.large-textarea {
+	font: 1.3rem "Source Sans", helvetica, arial, sans-serif;
+	font-weight: 200;
+	line-height: 2rem;
+}
+
+
+
+
+/*
+ 2.3 Inputs - Checkboxes
+
+ Base styles for checkboxes. The <label> needs to be placed after the <input> element in the HTML. If
+ you are using .checkbox-right, make sure to set the width, so all the labels are the same width and the
+ controls line up vertically.
+
+ .checkbox-left - use if you want the control to appear before (to the left of) the label
+ .checkbox-right - use if you want the control to appear after (to the right of) the label
+
+	<input type="checkbox" id="checkbox" />
+	<label for="checkbox" class="{{modifier}}">Option</label>
+	<br />
+	<input type="checkbox" id="checkbox" checked />
+	<label for="checkbox" class="{{modifier}}">Option</label>
+
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.checkbox-left:before,
+.checkbox-right:after {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: -6px;
+	width: 35px;
+	height: 31px;
+	background-position: left -37px;
+	background-repeat: no-repeat;
+	background-size: 37px;
+}
+
+.checkbox-left:before {
+	float: left;
+	margin-right: 15px;
+}
+.checkbox-right:after {
+	float: right;
+}
+
+.dark-checkbox:before,
+.dark-checkbox:after {
+	background-image: url("../img/dark-sprites2x.png");
+}
+
+.light-checkbox:before,
+.light-checkbox:after {
+	background-image: url("../img/light-sprites2x.png");
+}
+
+.checkbox-left,
+.checkbox-right,
+.radio-left,
+.radio-right {
+	display: inline-block;
+	margin: 5px 0;
+	cursor: pointer;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.checkbox-right,
+.radio-right {
+	/*Set this width value to make sure all the labels line up*/
+	width: 200px;
+}
+
+input[type="checkbox"]:checked + .checkbox-left:before,
+input[type="checkbox"]:checked + .checkbox-right:after {
+  	background-position: left -2px;
+}
+
+input[type="checkbox"]:disabled + label {
+	opacity: 0.3;
+	cursor: default;
+  	pointer-events: none;
+}
+
+
+
+/*
+ 2.4 Inputs - Radio Buttons
+
+ Base styles for radio buttons. The <label> needs to be placed after the <input> element in the HTML. If
+ you are using .radio-right, make sure to set the width, so all the labels are the same width and the
+ controls line up vertically.
+
+ .radio-left - use if you want the control to appear before (to the left of) the label
+ .radio-right - use if you want the control to appear after (to the right of) the label
+
+	<input type="radio" id="radio" name="radiogroup" />
+	<label for="radio" class="dark-radio {{modifier}}">Option</label>
+	<br />
+	<input type="radio" id="radio" name="radiogroup" checked />
+	<label for="radio" class="dark-radio {{modifier}}">Option</label>
+
+	<input type="radio" id="radio" name="radiogroup" />
+	<label for="radio" class="light-radio {{modifier}}">Option</label>
+	<br />
+	<input type="radio" id="radio" name="radiogroup" checked />
+	<label for="radio" class="light-radio {{modifier}}">Option</label>
+
+*/
+.radio-left:before,
+.radio-right:after {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: -6px;
+	width: 35px;
+	height: 31px;
+	background-position: left -109px;
+	background-repeat: no-repeat;
+	background-size: 37px;
+}
+
+.radio-left:before {
+	float: left;
+	margin-right: 15px;
+}
+
+.radio-right:after {
+	float: right;
+}
+
+.dark-radio:before,
+.dark-radio:after {
+	background-image: url("../img/dark-sprites2x.png");
+}
+
+.light-radio:before,
+.light-radio:after {
+	background-image: url("../img/light-sprites2x.png");
+}
+
+
+@media
+(-webkit-min-device-pixel-ratio: 2) {
+
+	.dark-radio:before,
+	.dark-radio:after {
+		background-image: url("../img/dark-sprites2x.png");
+	}
+
+	.light-radio:before,
+	.light-radio:after {
+		background-image: url("../img/light-sprites2x.png");
+	}
+
+}
+
+input[type="radio"]:checked + .radio-left:before,
+input[type="radio"]:checked + .radio-right:after {
+  	background-position: left -74px;
+}
+
+input[type="radio"]:checked + .dark-radio {
+	color: #fff;
+}
+
+input[type="radio"]:disabled + label {
+	opacity: 0.3;
+	cursor: default;
+  	pointer-events: none;
+}
+
+
+/*
+ 2.5 Inputs - Switch
+
+ Create an on/off switch. DOM must be structured the same as below. Change "on" and "off" text states in the CSS.
+
+	<div class="slide-switch-container">
+	    <input type="checkbox" name="switch" id="slideswitch" checked>
+	    <label class="dark-slide-switch" for="slideswitch">
+	        <div class="on-off"></div>
+	        <div class="switch"></div>
+	    </label>
+	</div>
+
+	<div class="slide-switch-container">
+	    <input type="checkbox" name="switch" id="slideswitch" checked>
+	    <label class="light-slide-switch" for="slideswitch">
+	        <div class="on-off"></div>
+	        <div class="switch"></div>
+	    </label>
+	</div>
+
+*/
+.slide-switch-container {
+	position: relative;
+	width: 5.5em;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select: none;
+	margin-left: 10px;
+}
+
+.dark-slide-switch,
+.light-slide-switch {
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+	width: 5.5em;
+	border-radius: 6px;
+}
+
+.dark-slide-switch { border: 1px solid #2f3233; }
+.light-slide-switch { border: 1px solid #a5a8a8; }
+
+.on-off {
+	width: 200%;
+	margin-left: -100%;
+	-moz-transition: margin 0.2s ease-in 0s;
+	-webkit-transition: margin 0.2s ease-in 0s;
+	-o-transition: margin 0.2s ease-in 0s;
+	transition: margin 0.2s ease-in 0s;
+}
+
+	.on-off:before,
+	.on-off:after {
+		float: left;
+		width: 50%;
+		height: 3em;
+		padding: 0px;
+		border-radius: 4px;
+		line-height: 3em;
+		font-size: 16px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+	.on-off:before {
+	    content: "ON";
+	    padding-left: 1em;
+	}
+
+	.on-off:after {
+		content: "OFF";
+		padding-right: 1em;
+		text-align: right;
+	}
+
+
+		.dark-slide-switch .on-off:before {
+		    background-color: #404141;
+			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+			color: #5dc1ff;
+		}
+
+		.dark-slide-switch .on-off:after {
+		    background-color: #404141;
+			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+			color: #909090;
+		}
+
+		.light-slide-switch .on-off:before {
+		    background-color: #e0f0fa;
+			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+			color: #0083e8;
+			text-shadow: 0 1px #fff;
+		}
+		.light-slide-switch .on-off:after {
+		    background-color: #D3D7D7;
+			box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.06);
+			color: #909090;
+			text-shadow: 0 1px #fff;
+		}
+
+
+.slide-switch-container .switch {
+	width: 2em;
+	margin: 0px;
+	height: 3em;
+	border-radius: 6px;
+    position: absolute; top: 0; bottom: 0;
+	right: 3.4em;
+    -moz-transition: all 0.2s ease-in 0s; -webkit-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s; transition: all 0.2s ease-in 0s;
+}
+
+	.dark-slide-switch .switch {
+	    background: url("../img/dark-grips.png") center center no-repeat #595b5b;
+		background-size: 7px;
+	    border: 1px solid #2f3233;
+	  	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+	}
+
+	.light-slide-switch .switch {
+	    background: url("../img/light-grips.png") center center no-repeat #e5e9e8;
+		background-size: 7px;
+	    border: 1px solid #a5a8a8;
+	  	box-shadow: inset 0 1px 0 white;
+
+	}
+	.slide-switch-container input[type="checkbox"]:checked + label .on-off {
+	    margin-left: 0;
+	}
+	.slide-switch-container input[type="checkbox"]:checked + label .switch {
+	    right: -2px;
+	}
+
+
+
+
+/*
+ 2.6 Inputs - Slider
+
+ Apply to a range input to style a slider.
+
+	<input type="range" class="dark-slider">
+	<input type="range" class="light-slider">
+*/
+.dark-slider,
+.light-slider {
+	height: 1em;
+	border-radius: 12px;
+	margin: 2em;
+	-webkit-appearance: none !important;
+}
+
+.dark-slider {
+	border: 1px solid rgba(0, 0, 0, 0.36);
+	background-color: #404141;
+}
+	.dark-slider::-webkit-slider-thumb {
+		height: 3em;
+		width: 2em;
+		border: 1px solid rgba(0, 0, 0, 0.36);
+		border-radius: 4px;
+		background: url("../img/dark-grips.png") center center no-repeat #595b5b;
+		background-size: 7px 18px;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+		cursor: pointer;
+		-webkit-appearance: none !important;
+	}
+
+.light-slider {
+	height: 1em;
+	border: 1px solid #a5a8a8;
+	background-color: #d3d7d7;
+	-webkit-appearance: none !important;
+}
+
+	.light-slider::-webkit-slider-thumb {
+		height: 3em;
+		width: 2em;
+		border: 1px solid #a5a8a8;
+		border-radius: 4px;
+		background: url("../img/light-grips.png") center center no-repeat #e5e9e8;
+		background-size: 7px 18px;
+		box-shadow: inset 0 1px 0 #ffffff;
+		cursor: pointer;
+		-webkit-appearance: none !important;
+	}
+
+
+
+
+/*
+ 2.7 Inputs - Combo Box
+
+ Pick from a list of items without a default option.
+
+	<button class="dark-combo">
+*/
+.dark-combo,
+.light-combo {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	vertical-align: top;
+	padding: 0 60px 0 20px;
+	border-radius: 6px;
+	background-clip: padding-box;
+	line-height: 3rem;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.dark-combo {
+	border: 1px solid #2f3233;
+	background-color: #424546;
+	background-image: url('../img/dark-combo-box-bg.png');
+	background-position: 93% center;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	color: #b9bbbc;
+}
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
+		.spinner {
+			background: url("../img/dark-combo-box-bg2x.png") no-repeat;
+			background-size: 11px;
+		}
+	}
+
+.light-combo {
+	border: 1px solid #a5a8a8;
+	background-color: #f2f3f3;
+	background-image: url('../img/light-combo-box-bg.png');
+	background-position: 93% center;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	color: #b9bbbc;
+}
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
+		.spinner {
+			background: url("../img/light-combo-box-bg2x.png") no-repeat;
+			background-size: 11px;
+		}
+	}
+
+	.dark-combo-drop,
+	.light-combo-drop {
+		border-radius: 6px;
+		padding: 0 5px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+		list-style: none;
+	}
+		.dark-combo-drop li,
+		.light-combo-drop li {
+			padding: 15px;
+		}
+			.dark-combo-drop li:first-child,
+			.light-combo-drop li:first-child {
+				border-top: none;
+			}
+			.dark-combo-drop li.chosen {
+				position: relative;
+				z-index: 10;
+				padding-left: 20px;
+				border-top: none;
+				margin: 0 -5px -1px;
+				background-color: #45aeff;
+			}
+			.light-combo-drop li.chosen {
+				position: relative;
+				z-index: 10;
+				padding-left: 20px;
+				border-top: none;
+				margin: 0 -5px -1px;
+				background-color: #fff;
+			}
+
+	.dark-combo-drop{
+		background-color: #595b5b;
+		color: #fff;
+	}
+		.dark-combo-drop li {
+			border-top: 1px solid #484b4c;
+		}
+
+	.light-combo-drop{
+		background-color: #e5e9e9;
+		color: #454545;
+	}
+		.light-combo-drop li {
+			border-top: 1px solid #d3d7d7;
+		}
+
+
+
+/*
+ 3.1 Indicators - Progress Bar
+
+ .complete - use this class when you want the progress bar filled
+
+	<div class="dark-progress-bar">
+  		<span class="progress {{modifier}}"></span>
+	</div>
+	<div class="light-progress-bar">
+  		<span class="progress {{modifier}}"></span>
+	</div>
+*/
+.dark-progress-bar,
+.light-progress-bar {
+	overflow: hidden;
+	width: 250px;
+	height: 1.25em;
+	border-radius: 12px;
+	margin: 20px;
+}
+
+	.dark-progress-bar > .progress,
+	.light-progress-bar > .progress {
+		display: block;
+		height: 100%;
+		width: 45%;
+		border-radius: 12px 0 0 12px;
+	}
+
+.dark-progress-bar {
+	background-color: #404141;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+}
+	.dark-progress-bar > .progress {
+		background-color: #61c0ff;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
+	}
+
+.light-progress-bar {
+	background-color: #d3d7d7;
+	box-shadow: 0 1px rgba(255, 255, 255, 0.25), inset 0 1px rgba(0, 0, 0, 0.12);
+}
+	.light-progress-bar > .progress {
+		background-color: #e0f0fa;
+		box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+	}
+
+.complete { width: 100% }
+
+
+
+
+/*
+ 3.2 Indicators - Spinner
+
+	<div class="spinner"></div>
+	<div class="large-spinner"></div>
+
+*/
+.spinner {
+	width: 36px;
+	height: 36px;
+	background: url("../img/spinner.png") no-repeat;
+	margin: 5px;
+	display: inline-block;
+	-webkit-animation: spinner 1s infinite linear;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+	.spinner {
+		background: url("../img/spinner2x.png") no-repeat;
+		background-size: 36px;
+	}
+}
+
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+
+
+/*
+ 3.3 Indicators - Notification
+
+	<strong>Inbox</strong> <span class="notification">1</span>
+
+*/
+.notification {
+  display: inline-block;
+  padding: 0.15em 0.5em 0.2em;
+  border-radius: 2px;
+  background: #ec514e;
+  color: white;
+  /*change font size and margin to customize the notification badge*/
+
+  font-size: 0.875rem;
+  margin-left: 6px;
+}
+
+
+
+
+/*
+ 4.1 Navigation - Header Bar
+
+ Use this class as a header at the top of a mobile app. Use ".header-title"
+ to display and style the title. Add custom styles for any other elements,
+ such as back and settings buttons.
+
+	<div class="dark-header-bar">
+		<h1 class="header-title">Super Cool title</h1>
+	</div>
+	<div class="light-header-bar">
+		<h1 class="header-title">Super Cool title</h1>
+	</div>
+*/
+.dark-header-bar,
+.light-header-bar {
+	height: 3.9000000000000004rem;
+	width: 100%;
+	line-height: 3.9000000000000004rem;
+	text-align: center;
+}
+
+.dark-header-bar {
+	background-color: #595b5b;
+	color: #fff;
+	box-shadow: inset 0 -1px #333434 ,0 1px rgba(0,0,0,0.15);
+}
+
+.light-header-bar {
+	background-color: #e5e9e8;
+	color: #000;
+	box-shadow: inset 0 -1px #b9bcbc ,0 1px rgba(0,0,0,0.05);
+}
+
+	.dark-header-bar p,
+	.light-header-bar p { margin: 0; }
+
+
+	.header-bar-title{
+		font-size: 1.3rem;
+		text-align: center;
+	}
+
+
+
+
+/*
+ 4.2 Navigation - Tab Bar
+
+ Use this class as a tab bar of a mobile app. Set the width of each tab button by
+ applying a width to the "a" rule.
+
+	<ul class="dark-tab-bar">
+		<a>#1</a>
+		<a class="down">#2</a>
+		<a>#3</a>
+		<a>#4</a>
+		<a>#5</a>
+	</ul>
+	<ul class="light-tab-bar">
+		<a>#1</a>
+		<a class="down">#2</a>
+		<a>#3</a>
+		<a>#4</a>
+		<a>#5</a>
+	</ul>
+*/
+.dark-tab-bar,
+.light-tab-bar {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 56px;
+	padding: 0;
+	margin-bottom: 0;
+	line-height: 56px;
+	list-style: none;
+	text-align: center;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	vertical-align: top;
+}
+
+.dark-tab-bar {
+	border-top: 1px solid #2F3233;
+}
+
+.light-tab-bar {
+	border-top: 1px solid #a5a8a8;
+}
+
+	.dark-tab-bar a {
+		float: left;
+		/* Set the width of each tab button here 100%/5 = 20% */
+		width: 20%;
+		background-color: #595b5b;
+		box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
+		color: #c6c8c8;
+		text-decoration: none;
+		text-shadow: 0 -1px rgba(0, 0, 0, 0.69);
+	}
+	.light-tab-bar a {
+		float: left;
+		/* Set the width of each tab button here 100%/5 = 20% */
+		width: 20%;
+		background-color: #e5e9e8;
+		box-shadow: inset 0 1px #ffffff;
+		color: #454545;
+		text-decoration: none;
+		text-shadow: 0 1px #ffffff;
+	}
+		.dark-tab-bar a:first-child,
+		.light-tab-bar a:first-child { border: 0; }
+
+	.dark-tab-bar a.down,
+	.dark-tab-bar a:active {
+	  	background-color: #404141;
+		color: #5dc1ff;
+	  	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+	}
+
+	.light-tab-bar a.down,
+	.light-tab-bar a:active {
+		background-color: #e0f0fa;
+		color: #0083e8;
+	  	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+	}
+
+
+
+
+/*
+ 5.1 Lists
+
+	<ul class="dark-list">
+		<li>Item #1</li>
+		<li>Item #2</li>
+		<li>Item #3</li>
+	</ul>
+
+	<ul class="light-list">
+		<li>Item #1</li>
+		<li>Item #2</li>
+		<li>Item #3</li>
+	</ul>
+*/
+.dark-list,
+.light-list {
+	display: block;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+
+.dark-list {
+	border-top: 1px solid #2f3234;
+	border-bottom: 1px solid #5e6061;
+	color: #c6c8c8;
+}
+	.dark-list > li {
+		/* Editable padding variable */
+		padding: 20px;
+		border-top: 1px solid #5e6061;
+		border-bottom: 1px solid #2f3234;
+	}
+
+.light-list {
+	border-top: 1px solid #bcbfbf;
+	border-bottom: 1px solid #eff1f1;
+	color: #454545;
+}
+	.light-list > li {
+		/* Editable padding variable */
+		padding: 20px;
+		border-top: 1px solid #eff1f1;
+		border-bottom: 1px solid #bcbfbf;
+	}
+
+
+
+
+/*
+ 6.1 Structural - Well
+
+ Use this class to create a well that contains elements you want seperated from everything else.
+
+ 	<section class="dark-well">
+		<h2>Alex Trebek</h2>
+		<p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
+		<a href="#" class="dark-cta dark-button" role="button">Daily Double!</a>
+		<a href="#" class="dark-button" role="button">Unfriend</a>
+	</section>
+
+	<section class="light-well">
+		<h2>Alex Trebek</h2>
+		<p>Watch "Jeopardy!", Alex Trebek's fun TV quiz game.</p>
+		<a href="#" class="light-cta light-button" role="button">Daily Double!</a>
+		<a href="#" class="light-button" role="button">Unfriend</a>
+	</section>
+*/
+.dark-well,
+.light-well {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+	.dark-well h1,
+	.light-well h1 {
+		font-size: 1.5625rem;
+	}
+
+	.dark-well h1 {
+		color: #fff;
+	}
+
+	.light-well h1 {
+		color: #000;
+	}
+
+.dark-well {
+  	background-color: #404141;
+	color: #c6c8c8;
+}
+
+.light-well {
+	background-color: #fff;
+	color: ##444;
+}
+
+
+
+
+/*
+ 6.2 Structural - Dialog
+
+ Use this class to create a dialog element. Make sure to apply ".dialog-overlay" an empty div on the page as well,
+ so that the dialog is resting on a dark, transparent background
+
+	<aside class="dark-dialog">
+		<center>Are eagles nice?</center><br /><br />
+		<a href="#" class="dark-cta dark-button" role="button">Yes!</a>
+		<a href="#" class="dark-button" role="button">No</a>
+	</aside>
+	<aside class="light-dialog">
+		<center>Are eagles nice?</center><br /><br />
+		<a href="#" class="light-cta light-button" role="button">Yes!</a>
+		<a href="#" class="light-button" role="button">No</a>
+	</aside>
+*/
+.dark-dialog,
+.light-dialog {
+	width: 50%;
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+	z-index: 10;
+	padding: 20px 10px;
+	border-radius: 6px;
+	margin:25% 20%;
+	text-align: center;
+}
+
+		.dark-dialog h1,
+		.light-dialog h1 {
+			font-size: 1.1875rem;
+		}
+
+		.dark-dialog h1 {
+			color: #fff;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #505252;
+		}
+
+		.light-dialog h1 {
+			color: #484b4c;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #d3d7d7;
+		}
+
+.dark-dialog {
+	background-color: #595b5b;
+	border: 1px solid rgba(0, 0, 0, 0.36);
+}
+
+.light-dialog {
+  	background-color: #e5e9e8;
+  	border: 1px solid #a5a8a8;
+}
+.dialog-overlay {
+	position: absolute;
+	z-index: 5;
+	background-color: rgba(88, 90, 92, 0.7);
+	width: 350px;
+	height: 350px;
+	box-shadow: inset 0px 0px 115px 0px #000000;
+}
+
+.dialog-buttons {
+	margin-top: 20px;
+}
+
+.dialog-buttons .dark-button,
+.dialog-buttons .light-button {
+	margin: 5px;
+}
+
+
+
+
+/*
+ 6.2 Structural - Callout
+
+ Use this class to create a callout element.
+
+	<section class="dark-callout">
+			Light Callout Dummy Text
+	</section>
+	<section class="light-callout">
+			Light Callout Dummy Text
+	</section>
+*/
+.dark-callout,
+.light-callout {
+	display: inline-block;
+	padding: 1em;
+	border-radius: 6px;
+	margin: auto;
+	position: relative;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+	.dark-callout:after,
+	.light-callout:after {
+		content: " ";
+		position: absolute;
+		left: 50%;
+		bottom: -1em;
+		width: 0;
+		height: 0;
+		border-left: 1.5em solid transparent;
+		border-right: 1.5em solid transparent;
+		margin-left: -1.5em;
+	}
+
+.light-callout {
+  background: #e5e9e9;
+  color: #454545;
+}
+	.light-callout:after {
+	  border-top: 20px solid #e5e9e9;
+	}
+
+.dark-callout {
+  background: #595b5b;
+  color: #acadad;
+}
+	.dark-callout:after {
+	  border-top: 20px solid #595b5b;
+	}
+
+
+
+
+/* Styles for Mobile Index Page */
+#main td { font-weight: 200; }
+
+.bg-slategray {
+  background: #3a3f42 url("../img/bg_dark.png") repeat-x;
+  color: #c7c7c7;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.bg-light {
+	background-color: #DFE2E2;
+	font-size: 16px;
+}
+
+.mobile-tab-bar,
+.header-bar {
+	width: 80%;
+}
+
+.mobile-list {
+	width: 60%;
+}
+
+.dialog-zone {
+	position: relative;
+	width: 350px;
+	height: 350px;
+	background: url("../img/dialog-zone-bg.png") center center #fff;
+}
+
+.light-callout,
+.dark-callout {
+	margin-bottom: 1em;
+}
+
+
+
+
+/* Custom Well Styling */
+.light-well,
+.dark-well {
+	width: 273px;
+}
+
+.user-details {
+	position: relative;
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+.user-img {
+	float: left;
+	width: 50px;
+	margin-right: 20px;
+}
+
+.user-info {
+	position: absolute;
+	bottom: -5px;
+	left: 70px;
+	width: 173px;
+}
+
+	.user-info p {
+		margin: 0;
+	}
+
+	.user-info a {
+		color: #0083e8;
+		text-decoration: none;
+	}
+
+.user-friends {
+	float: left;
+	padding-left: 0;
+	margin-left: 120px;
+	list-style: none;
+}
+
+.following,
+.followers {
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.following {
+	margin-left: 70px;
+}
+
+.followers {
+	margin-left: 20px;
+}
+
+.dark-well dt {
+	margin-bottom: 5px;
+	color: #5dc1ff
+}
+
+.light-well dt {
+	margin-bottom: 5px;
+	color: #0083e8;
+}
+
+.following dd,
+.followers dd {
+	margin: 0;
+}
+
+
+/* Callout Styling */
+.dark-callout .icon{ background-color: #acadad; }
+.light-callout .icon{ background-color: #454545; }
+
+.inline-list {
+	overflow: hidden;
+	padding: 0;
+	margin: 0 -10px;
+	list-style: none;
+}
+
+	.inline-item {
+		float: left;
+	}
+
+	.dark-callout .inline-item + .inline-item{
+		border-left: 1px solid #474949;
+	}
+	.light-callout .inline-item + .inline-item{
+		border-left: 1px solid #d3d7d7;
+	}
+
+	.inline-list .icon {
+		padding: 5px;
+		margin: 5px 10px;
+		line-height: 0;
+		text-indent: -9999px;
+	}
