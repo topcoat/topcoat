@@ -85,12 +85,7 @@ module.exports = function(grunt) {
 
         cssmin: {
             minify: {
-                files: {
-                    'release/css/topcoat-mobile-light.min.css': 'release/css/topcoat-mobile-light.css',
-                    'release/css/topcoat-mobile-dark.min.css': 'release/css/topcoat-mobile-dark.css',
-                    'release/css/topcoat-desktop-light.min.css': 'release/css/topcoat-desktop-light.css',
-                    'release/css/topcoat-desktop-dark.min.css': 'release/css/topcoat-desktop-dark.css',
-                }
+                files: getMinificationData()
             }
         },
 
@@ -264,4 +259,14 @@ module.exports = function(grunt) {
         });
 
     });
+
+    var getMinificationData = function() {
+        return {
+                    'release/css/topcoat-mobile-light.min.css': 'release/css/topcoat-mobile-light.css',
+                    'release/css/topcoat-mobile-dark.min.css': 'release/css/topcoat-mobile-dark.css',
+                    'release/css/topcoat-desktop-light.min.css': 'release/css/topcoat-desktop-light.css',
+                    'release/css/topcoat-desktop-dark.min.css': 'release/css/topcoat-desktop-dark.css'
+                };
+
+    }
 };
