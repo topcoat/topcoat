@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 
         cssmin: {
             minify: {
-                files: getMinificationData()
+                files: getMinificationData(grunt)
             }
         },
 
@@ -260,13 +260,13 @@ module.exports = function(grunt) {
 
     });
 
-    var getMinificationData = function() {
-        return {
-                    'release/css/topcoat-mobile-light.min.css': 'release/css/topcoat-mobile-light.css',
-                    'release/css/topcoat-mobile-dark.min.css': 'release/css/topcoat-mobile-dark.css',
-                    'release/css/topcoat-desktop-light.min.css': 'release/css/topcoat-desktop-light.css',
-                    'release/css/topcoat-desktop-dark.min.css': 'release/css/topcoat-desktop-dark.css'
-                };
-
-    }
 };
+
+var getMinificationData = function(grunt) {
+        var minificationData = {}
+        files = grunt.file.expand('release/css/*.css');
+        grunt.util._.forEach(files, function(file) {
+            minificationData[file.split('.').join('.min.')] = file;
+        });
+        return minificationData;
+    };
