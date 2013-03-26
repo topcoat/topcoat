@@ -20,6 +20,7 @@
 #  - TestHelper.CHROMIUM_SRC: path to chromium src
 #  - DEVICE_NAME: a label to identify the machine running the tests when submitting results
 #  - CEF_HOME: path to CEF binaries (needed only if USE_CEF is set to True)
+#  - USE_CEF: if run with CEF, set this to 'True'
 #
 
 import os
@@ -33,20 +34,17 @@ class TestHelper():
     GRUNT        = "grunt"
     RESULTS_DIR  = "/tmp/topcoat-telemetry"
     BROWSER	     = "system"
+    BROWSER_EXEC = None
 
     CHROMIUM_SRC = os.environ.get("CHROMIUM_SRC")
     DEVICE_NAME  = os.environ.get("DEVICE_NAME")
+    CEF_HOME     = os.environ.get("CEF_HOME")
+    USE_CEF      = os.environ.get("USE_CEF")
 
     @staticmethod
     def init():
-        if TestHelper._getPlatform() == "Win":
-            TestHelper.GRUNT = "grunt.cmd"
-            TestHelper.RESULTS_DIR = "C:\\tmp\\topcoat-telemetry"
-
-        if TestHelper._getPlatform() == "Lin":
-            TestHelper.BROWSER = "android-chrome-beta"
-
         TestHelper._checkEnvVars()
+        TestHelper._prepareProperties()
         TestHelper._prepareResultsDir()
         TestHelper._prepareTelemetryTests()
 
@@ -63,7 +61,29 @@ class TestHelper():
             raise RuntimeError("Please set DEVICE_NAME env var (no spaces allowed yet)")
 
         if not TestHelper.CHROMIUM_SRC:
-            raise RuntimeError("Please set TestHelper.CHROMIUM_SRC env var.")
+            raise RuntimeError("Please set CHROMIUM_SRC env var.")
+
+        if not TestHelper.USE_CEF:
+            raise RuntimeError("Please set USE_CEF env var.")
+
+        if (TestHelper.USE_CEF == 'True') and (not TestHelper.CEF_HOME):
+            raise RuntimeError("Please set CEF_HOME if you set USE_CEF to True")
+
+    @staticmethod
+    def _prepareProperties():
+        p = TestHelper._getPlatform()
+
+        if p == "Win":
+            TestHelper.GRUNT = "grunt.cmd"
+            TestHelper.RESULTS_DIR = "C:\\tmp\\topcoat-telemetry"
+
+        if p == "Mac":
+            if TestHelper.USE_CEF:
+                TestHelper.BROWSER = "exact"
+                TestHelper.BROWSER_EXEC = "%s/app/cefclient.app/Contents/MacOS/cefclient" % TestHelper.CEF_HOME
+
+        if p == "Lin":
+            TestHelper.BROWSER = "android-chrome-beta"
 
     @staticmethod
     def _prepareResultsDir():
@@ -85,20 +105,27 @@ class TestHelper():
 
         topcoat_test_files = glob.glob(os.getcwd() + "/../perf/page_sets/*.json")
 
+        def genCmd():
+            cmd = [
+                "python",
+                TestHelper.CHROMIUM_SRC + "/tools/perf/run_multipage_benchmarks",
+                "--browser=" + TestHelper.BROWSER,
+                telemetry_test,
+                TestHelper.CHROMIUM_SRC + "tools/perf/page_sets/%s" % topcoat_test_file,
+                "-o", TestHelper.RESULTS_DIR + "/%s_%s.txt" % (telemetry_test, topcoat_test_name)
+            ]
+            if TestHelper.BROWSER_EXEC:
+                cmd.insert(3, "--browser-executable=" + TestHelper.BROWSER_EXEC)
+            return cmd
+
         for tf in topcoat_test_files:
             topcoat_test_file = tf.split(os.sep)[-1]
             topcoat_test_name = topcoat_test_file.split(".")[0]
             print "runAll.py: Running tests for %s" % topcoat_test_name
 
             for telemetry_test in telemetry_tests:
-                subprocess.call([
-                    "python",
-                    TestHelper.CHROMIUM_SRC + "/tools/perf/run_multipage_benchmarks",
-                    "--browser=" + TestHelper.BROWSER,
-                    telemetry_test,
-                    TestHelper.CHROMIUM_SRC + "tools/perf/page_sets/%s" % topcoat_test_file,
-                    "-o", TestHelper.RESULTS_DIR + "/%s_%s.txt" % (telemetry_test, topcoat_test_name)
-                ])
+                cmd = genCmd()
+                subprocess.call(cmd)
 
     @staticmethod
     def submitResults():
@@ -109,7 +136,7 @@ class TestHelper():
                 TestHelper.GRUNT,
                 "telemetry-submit",
                 "--path=" + rf,
-                "--deivce=" + TestHelper.DEVICE_NAME
+                "--device=" + TestHelper.DEVICE_NAME
             ])
 
 
