@@ -217,6 +217,7 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('dist', ['stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('docs', ['clean:docs', 'stylus', 'styleguide', 'copy:docs']);
 
     grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
