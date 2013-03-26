@@ -196,7 +196,7 @@ module.exports = function(grunt) {
         styleguide: {
             docs: {
                 files: {
-                    'docs/styleguide': 'release/css/*.css'
+                    'docs/styleguide': ['release/css/*.css', '!release/css/*.min.css']
                 }
             }
         }
