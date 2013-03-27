@@ -215,7 +215,7 @@ module.exports = function(grunt) {
     grunt.registerTask('telemetry-submit', 'Submit telemetry test results', function() {
 
         var exec = require("child_process").exec,
-            commandToBeExecuted = 'git log --pretty=format:"%H %ai" | head -n 1',
+            commandToBeExecuted = 'git log --pretty=format:"%H %ci" | head -n 1',
             done = this.async();
 
         exec(commandToBeExecuted, function(error, stdout, stderr) {
