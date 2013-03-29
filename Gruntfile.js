@@ -261,7 +261,7 @@ var getStylusPathData = function(grunt) {
     };
 
 var getStylusImportData = function(grunt, theme) {
-        var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.sty;'),
+        var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
             importData = mixinFiles.concat([theme]);
 
         debug("IMPORT:", importData);
