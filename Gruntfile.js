@@ -44,6 +44,16 @@ module.exports = function(grunt) {
             }
         },
 
+        cssmin: {
+            minify: {
+                    expand: true,
+                    cwd: 'release/css/',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'release/css/',
+                    ext: '.min.css'
+            }
+        },
+
         clean: {
             src: ['src'],
             release: ['release'],
@@ -169,9 +179,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-styleguide');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+    //Load local tasks
+    grunt.loadTasks('tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'initStylus', 'stylus', 'initCssmin', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'initStylus', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('dist', ['stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('docs', ['clean:docs', 'stylus', 'styleguide', 'copy:docs']);
 
@@ -217,75 +229,60 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('initStylus', 'Re-initializes task data for after assets are loaded', function() {
-        debug('INIT STYLUS:', getCompileData(grunt));
-        grunt.config('stylus', getCompileData(grunt));
-    });
 
-    grunt.registerTask('initCssmin', 'Initializes the cssmin task once files are present', function() {
-        debug('INIT CSSMIN:', getMinificationData(grunt));
-        grunt.config('cssmin', getMinificationData(grunt));
+        var getCompileData = function() {
+                var compileData = {},
+                    themeFiles = grunt.file.expand('src/**/src/theme-*.styl'),
+                    stylusPathData = getStylusPathData();
+
+                grunt.util._.forEach(themeFiles, function(theme) {
+                    compileData[theme] = {
+                        options: {
+                            paths: stylusPathData,
+                            import: getStylusImportData(theme),
+                            compress: false
+                        },
+                        files: getStylusFilesData(theme)
+                    }
+                });
+
+                debug('COMPILE:', compileData);
+
+                return compileData;
+            };
+
+        var getStylusPathData = function() {
+                var mixinPath = grunt.file.expand('src/controls/**/src/mixins');
+
+                debug("PATH:", mixinPath);
+
+                return mixinPath;
+            };
+
+        var getStylusImportData = function(theme) {
+                var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
+                    importData = mixinFiles.concat([theme]);
+
+                debug("IMPORT:", importData);
+
+                return importData;
+            };
+
+        var getStylusFilesData = function(theme) {
+                var fileData = {},
+                    releasePath = 'release/css',
+                    skinsPath = 'src/**/skins/**/src/*.styl';
+
+                var releaseFile = releasePath + theme.split('/')[3].split('.styl').join('.css'),
+                    files = [skinsPath, theme];
+
+                fileData['release/css/' + theme.split('/')[3].split('.styl').join('.css')] = files;
+
+                return fileData;
+            };
+
+        debug('INIT STYLUS:', getCompileData());
+        grunt.config('stylus', getCompileData());
     });
 
 };
-
-var getMinificationData = function(grunt) {
-        var minificationData = {};
-        files = grunt.file.expand('release/css/*.css', '!release/css/*.min.css');
-        grunt.util._.forEach(files, function(file) {
-            minificationData[file.split('.').join('.min.')] = file;
-        });
-
-        return minificationData;
-    };
-
-var getCompileData = function(grunt) {
-        var compileData = {},
-            themeFiles = grunt.file.expand('src/**/src/theme-*.styl'),
-            stylusPathData = getStylusPathData(grunt);
-
-
-        grunt.util._.forEach(themeFiles, function(theme) {
-            compileData[theme] = {
-                options: {
-                    paths: stylusPathData,
-                    import: getStylusImportData(grunt, theme),
-                    compress: false
-                },
-                files: getStylusFilesData(grunt, theme)
-            }
-        });
-
-        debug('COMPILE:', compileData);
-
-        return compileData;
-    };
-
-var getStylusPathData = function(grunt) {
-        var mixinPath = grunt.file.expand('src/controls/**/src/mixins');
-
-        debug("PATH:", mixinPath);
-
-        return mixinPath;
-    };
-
-var getStylusImportData = function(grunt, theme) {
-        var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
-            importData = mixinFiles.concat([theme]);
-
-        debug("IMPORT:", importData);
-
-        return importData;
-    };
-
-var getStylusFilesData = function(grunt, theme) {
-        var fileData = {},
-            releasePath = 'release/css',
-            skinsPath = 'src/**/skins/**/src/*.styl';
-
-        var releaseFile = releasePath + theme.split('/')[3].split('.styl').join('.css'),
-            files = [skinsPath, theme];
-
-        fileData['release/css/' + theme.split('/')[3].split('.styl').join('.css')] = files;
-
-        return fileData;
-    };
