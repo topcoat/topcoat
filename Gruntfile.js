@@ -16,6 +16,7 @@ limitations under the License.
 /*global module:false*/
 
 var path = require('path'),
+    debug = require('debug')('build'),
     chromiumSrc = process.env.CHROMIUM_SRC;
 
 module.exports = function(grunt) {
@@ -40,49 +41,7 @@ module.exports = function(grunt) {
                 dest: "src/"
             }
         },
-        stylus: {
-            compile_mobile_light_theme: {
-                options: {
-                    paths: grunt.file.expand('src/controls/**/src/mixins'),
-                    import: grunt.file.expand('src/**/src/theme-mobile-light.styl'),
-                    compress: false
-                },
-                files: {
-                    'release/css/topcoat-mobile-light.css': 'src/**/skins/**/src/*.styl'
-                }
-            },
-            compile_mobile_dark_theme: {
-                options: {
-                    paths: grunt.file.expand('src/controls/**/src/mixins'),
-                    import: grunt.file.expand('src/**/src/theme-mobile-dark.styl'),
-                    compress: false
-                },
-                files: {
-                    'release/css/topcoat-mobile-dark.css': 'src/**/skins/**/src/*.styl'
-                }
-            },
-            compile_desktop_light_theme: {
-                options: {
-                    paths: grunt.file.expand('src/controls/**/src/mixins'),
-                    import: grunt.file.expand('src/**/src/theme-desktop-light.styl'),
-                    compress: false
-                },
-                files: {
-                    'release/css/topcoat-desktop-light.css': 'src/**/skins/**/src/*.styl'
-                }
-            },
-            compile_desktop_dark_theme: {
-                options: {
-                    paths: grunt.file.expand('src/controls/**/src/mixins'),
-                    import: grunt.file.expand('src/**/src/theme-desktop-dark.styl'),
-                    compress: false
-                },
-                files: {
-                    'release/css/topcoat-desktop-dark.css': 'src/**/skins/**/src/*.styl'
-                }
-            }
-        },
-
+        stylus: getCompileData(grunt),
         cssmin: {
             minify: {
                 files: getMinificationData(grunt)
@@ -265,9 +224,60 @@ module.exports = function(grunt) {
 
 var getMinificationData = function(grunt) {
         var minificationData = {}
-        files = grunt.file.expand('release/css/*.css');
+        files = grunt.file.expand('release/css/*.css', '!release/css/*.min.css');
         grunt.util._.forEach(files, function(file) {
             minificationData[file.split('.').join('.min.')] = file;
         });
+
         return minificationData;
+    };
+
+var getCompileData = function(grunt) {
+        var compileData = {},
+            themeFiles = grunt.file.expand('src/**/src/theme-*.styl');
+
+        grunt.util._.forEach(themeFiles, function(theme) {
+            compileData[theme] = {
+                options: {
+                    paths: getStylusPathData(grunt),
+                    import: getStylusImportData(grunt, theme),
+                    compress: false
+                },
+                files: getStylusFilesData(grunt, theme)
+            }
+        });
+
+        debug('COMPILE:', compileData);
+
+        return compileData;
+    };
+
+var getStylusPathData = function(grunt) {
+        var mixinPath = grunt.file.expand('src/controls/**/src/mixins');
+
+        debug("PATH:", mixinPath);
+
+        return mixinPath;
+    };
+
+var getStylusImportData = function(grunt, theme) {
+        var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.sty;'),
+            importData = mixinFiles.concat([theme]);
+
+        debug("IMPORT:", importData);
+
+        return importData;
+    };
+
+var getStylusFilesData = function(grunt, theme) {
+        var fileData = {},
+            releasePath = 'release/css',
+            skinsPath = 'src/**/skins/**/src/*.styl';
+
+        var releaseFile = releasePath + theme.split('/')[3].split('.styl').join('.css'),
+            files = [skinsPath, theme];
+
+        fileData['release/css/' + theme.split('/')[3].split('.styl').join('.css')] = files;
+
+        return fileData;
     };

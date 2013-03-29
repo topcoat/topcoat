@@ -27,7 +27,8 @@
     "csv": "~0.2.9",
     "grunt-topcoat": "0.0.2",
     "grunt-styleguide": "~0.2.4",
-    "grunt-contrib-cssmin": "~0.5.0"
+    "grunt-contrib-cssmin": "~0.5.0",
+    "debug": "~0.7.2"
   },
   "scripts": {
     "test": "grunt test"

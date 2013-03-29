@@ -79,18 +79,18 @@ body {
   box-sizing: border-box;
   background-clip: padding-box;
   user-select: none;
-  padding: var-padding;
-  margin: var-margin;
-  font-size: var-font-size;
-  line-height: var-line-height;
-  letter-spacing: var-letter-spacing;
+  padding: 0 20px;
+  margin: 5px 10px 5px 0;
+  font-size: 16px;
+  line-height: 3rem;
+  letter-spacing: 1px;
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  vertical-align: var-vertical-align;
+  vertical-align: top;
   background-color: #595b5b;
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  border-radius: var-border-radius;
+  border-radius: 6px;
 }
 .topcoat-button:active,
 .topcoat-button.is-active,
@@ -161,8 +161,8 @@ body {
 */
 .topcoat-button--large,
 .topcoat-button--large--quiet {
-  font-size: var-font-size--large;
-  line-height: var-line-height--large;
+  font-size: 1.3rem;
+  line-height: 4rem;
 }
 .topcoat-button--large:disabled,
 .topcoat-button--large.is-disabled {
@@ -256,12 +256,87 @@ body {
     <a class="topcoat-button--large--cta is-disabled" >Button</a>
 */
 .topcoat-button--large--cta {
-  font-size: var-font-size--large;
-  line-height: var-line-height--large;
+  font-size: 1.3rem;
+  line-height: 4rem;
 }
 .topcoat-button--large-cta:disabled,
 .topcoat-button--large--cta.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
+}
+
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "source";
+  src: url("../font/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "source-l";
+  src: url("../font/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "source-sb";
+  src: url("../font/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "source";
+  src: url("../font/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "source-l";
+  src: url("../font/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "source-sb";
+  src: url("../font/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
 }
