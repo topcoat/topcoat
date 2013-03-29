@@ -23,6 +23,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
         topcoat: {
             download: {
                 options: {
@@ -31,6 +32,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         unzip: {
             controls: {
                 src: "src/controls/*.zip",
@@ -41,13 +43,14 @@ module.exports = function(grunt) {
                 dest: "src/"
             }
         },
-        stylus: getCompileData(grunt),
-        cssmin: {
-            minify: {
-                files: getMinificationData(grunt)
-            }
-        },
 
+
+        //     stylus: getCompileData(grunt),
+        //        cssmin: {
+        //            minify: {
+        //                files: getMinificationData(grunt)
+        //            }
+        //        },
         clean: {
             src: ['src'],
             release: ['release'],
@@ -175,7 +178,7 @@ module.exports = function(grunt) {
 
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'initStylus', 'stylus', 'initCssmin', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('dist', ['stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('docs', ['clean:docs', 'stylus', 'styleguide', 'copy:docs']);
 
@@ -220,10 +223,20 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.registerTask('initStylus', 'Re-initializes task data for after assets are loaded', function() {
+        debug('INIT STYLUS:', getCompileData(grunt));
+        grunt.config('stylus', getCompileData(grunt));
+    });
+
+    grunt.registerTask('initCssmin', 'Initializes the cssmin task once files are present', function() {
+        debug('INIT CSSMIN:', getMinificationData(grunt));
+        grunt.config('cssmin', getMinificationData(grunt));
+    });
+
 };
 
 var getMinificationData = function(grunt) {
-        var minificationData = {}
+        var minificationData = {};
         files = grunt.file.expand('release/css/*.css', '!release/css/*.min.css');
         grunt.util._.forEach(files, function(file) {
             minificationData[file.split('.').join('.min.')] = file;
@@ -234,12 +247,14 @@ var getMinificationData = function(grunt) {
 
 var getCompileData = function(grunt) {
         var compileData = {},
-            themeFiles = grunt.file.expand('src/**/src/theme-*.styl');
+            themeFiles = grunt.file.expand('src/**/src/theme-*.styl'),
+            stylusPathData = getStylusPathData(grunt);
+
 
         grunt.util._.forEach(themeFiles, function(theme) {
             compileData[theme] = {
                 options: {
-                    paths: getStylusPathData(grunt),
+                    paths: stylusPathData,
                     import: getStylusImportData(grunt, theme),
                     compress: false
                 },
