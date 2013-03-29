@@ -76,6 +76,8 @@ class TestHelper():
         if p == "Win":
             TestHelper.GRUNT = "grunt.cmd"
             TestHelper.RESULTS_DIR = "C:\\tmp\\topcoat-telemetry"
+            TestHelper.BROWSER = "exact"
+            TestHelper.BROWSER_EXEC = "%s\\app\\cefclient.exe" % TestHelper.CEF_HOME
 
         if p == "Mac":
             if TestHelper.USE_CEF:
