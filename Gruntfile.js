@@ -46,11 +46,11 @@ module.exports = function(grunt) {
 
         cssmin: {
             minify: {
-                    expand: true,
-                    cwd: 'release/css/',
-                    src: ['*.css', '!*.min.css'],
-                    dest: 'release/css/',
-                    ext: '.min.css'
+                expand: true,
+                cwd: 'release/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'release/css/',
+                ext: '.min.css'
             }
         },
 
@@ -184,105 +184,8 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'initStylus', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
-    grunt.registerTask('dist', ['stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
-    grunt.registerTask('docs', ['clean:docs', 'stylus', 'styleguide', 'copy:docs']);
-
-    grunt.registerTask('check_chromium_src', "Internal task to store CHROMIUM_SRC env var into chromiumSrc", function() {
-        if (!chromiumSrc) {
-            grunt.fail.warn("Please set the CHROMIUM_SRC env var to the root of your chromium sources(ends in /src)");
-        } else {
-            grunt.log.writeln("CHROMIUM_SRC points to " + chromiumSrc.cyan);
-        }
-    });
-
+    grunt.registerTask('dist', ['initStylus', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
+    grunt.registerTask('docs', ['clean:docs', 'initStylus', 'stylus', 'styleguide', 'copy:docs']);
     grunt.registerTask('telemetry', ['check_chromium_src', 'jade:telemetry', 'copy:telemetry']);
-    grunt.registerTask('telemetry-submit', 'Submit telemetry test results', function() {
-
-        var exec = require("child_process").exec,
-            commandToBeExecuted = 'git log --pretty=format:"%H %ai" | head -n 1',
-            done = this.async();
-
-        exec(commandToBeExecuted, function(error, stdout, stderr) {
-            if (error) {
-                grunt.log.error('Error');
-                console.log(error);
-                done();
-            } else {
-
-                var path = grunt.option('path'),
-                    device = grunt.option('device'),
-                    test = grunt.option('test');
-
-                if (!path) {
-                    console.log('No path file specified');
-                    console.log('Usage: grunt telemetry-submit --path=path_to_output_file [--test= Test name ] [--device= Device type ]');
-                } else {
-                    var submitData = require('./test / perf / telemetry / lib / submitData ');
-                    submitData(stdout, path, {
-                        device: device,
-                        test: test
-                    });
-                }
-            }
-        });
-
-    });
-
-    grunt.registerTask('initStylus', 'Re-initializes task data for after assets are loaded', function() {
-
-        var getCompileData = function() {
-                var compileData = {},
-                    themeFiles = grunt.file.expand('src/**/src/theme-*.styl'),
-                    stylusPathData = getStylusPathData();
-
-                grunt.util._.forEach(themeFiles, function(theme) {
-                    compileData[theme] = {
-                        options: {
-                            paths: stylusPathData,
-                            import: getStylusImportData(theme),
-                            compress: false
-                        },
-                        files: getStylusFilesData(theme)
-                    }
-                });
-
-                debug('COMPILE:', compileData);
-
-                return compileData;
-            };
-
-        var getStylusPathData = function() {
-                var mixinPath = grunt.file.expand('src/controls/**/src/mixins');
-
-                debug("PATH:", mixinPath);
-
-                return mixinPath;
-            };
-
-        var getStylusImportData = function(theme) {
-                var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
-                    importData = mixinFiles.concat([theme]);
-
-                debug("IMPORT:", importData);
-
-                return importData;
-            };
-
-        var getStylusFilesData = function(theme) {
-                var fileData = {},
-                    releasePath = 'release/css',
-                    skinsPath = 'src/**/skins/**/src/*.styl';
-
-                var releaseFile = releasePath + theme.split('/')[3].split('.styl').join('.css'),
-                    files = [skinsPath, theme];
-
-                fileData['release/css/' + theme.split('/')[3].split('.styl').join('.css')] = files;
-
-                return fileData;
-            };
-
-        debug('INIT STYLUS:', getCompileData());
-        grunt.config('stylus', getCompileData());
-    });
 
 };
