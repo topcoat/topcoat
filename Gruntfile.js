@@ -44,13 +44,6 @@ module.exports = function(grunt) {
             }
         },
 
-
-        //     stylus: getCompileData(grunt),
-        //        cssmin: {
-        //            minify: {
-        //                files: getMinificationData(grunt)
-        //            }
-        //        },
         clean: {
             src: ['src'],
             release: ['release'],
