@@ -4,6 +4,10 @@ var path = require('path'),
 module.exports = function(grunt) {
 
     grunt.registerTask('compile', 'Generates dynamic config and compiles css', function() {
+        var options = this.options(),
+            themename = options.themename || "";
+
+        debug("OPTIONS:", options);
 
         var getCompileData = function() {
                 var compileData = {},
@@ -52,7 +56,7 @@ module.exports = function(grunt) {
                 var releaseFile = releasePath + fileName,
                     files = [skinsPath, theme];
 
-                fileData['release/css/' + fileName] = files;
+                fileData['release/css/' + fileName.replace('theme-', themename + "-")] = files;
 
                 return fileData;
             };

@@ -33,6 +33,12 @@ module.exports = function(grunt) {
             }
         },
 
+        compile: {
+            options: {
+                themename: "<%= pkg.topcoat.themename %>"
+            }
+        },
+
         unzip: {
             controls: {
                 src: "src/controls/*.zip",

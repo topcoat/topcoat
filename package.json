@@ -4,6 +4,7 @@
   "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
   "main": "Gruntfile.js",
   "topcoat": {
+    "themename": "topcoat",
     "controls": {
       "topcoat/button-base": ""
     },
