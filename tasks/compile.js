@@ -1,4 +1,5 @@
-var debug = require('debug')('build');
+var path = require('path'),
+    debug = require('debug')('build');
 
 module.exports = function(grunt) {
 
@@ -45,12 +46,13 @@ module.exports = function(grunt) {
         var getStylusFilesData = function(theme) {
                 var fileData = {},
                     releasePath = 'release/css',
-                    skinsPath = 'src/skins/**/src/*.styl';
+                    skinsPath = 'src/skins/**/src/*.styl',
+                    fileName = path.basename(theme).split('.styl').join('.css');
 
-                var releaseFile = releasePath + theme.split('/')[3].split('.styl').join('.css'),
+                var releaseFile = releasePath + fileName,
                     files = [skinsPath, theme];
 
-                fileData['release/css/' + theme.split('/')[3].split('.styl').join('.css')] = files;
+                fileData['release/css/' + fileName] = files;
 
                 return fileData;
             };
