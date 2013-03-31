@@ -2,7 +2,7 @@ var debug = require('debug')('build');
 
 module.exports = function(grunt) {
 
-    grunt.registerTask('initStylus', 'Re-initializes task data for after assets are loaded', function() {
+    grunt.registerTask('compile', 'Generates dynamic config and compiles css', function() {
 
         var getCompileData = function() {
                 var compileData = {},
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         var getStylusFilesData = function(theme) {
                 var fileData = {},
                     releasePath = 'release/css',
-                    skinsPath = 'src/**/skins/**/src/*.styl';
+                    skinsPath = 'src/skins/**/src/*.styl';
 
                 var releaseFile = releasePath + theme.split('/')[3].split('.styl').join('.css'),
                     files = [skinsPath, theme];
@@ -55,7 +55,8 @@ module.exports = function(grunt) {
                 return fileData;
             };
 
-        debug('INIT STYLUS:', getCompileData());
+        debug('CONFIG DATA:', getCompileData());
         grunt.config('stylus', getCompileData());
+        grunt.task.run('stylus');
     });
 }

@@ -41,6 +41,10 @@ module.exports = function(grunt) {
             theme: {
                 src: "src/*.zip",
                 dest: "src/"
+            },
+            skins: {
+                src: "src/skins/*.zip",
+                dest: "src/skins"
             }
         },
 
@@ -58,7 +62,7 @@ module.exports = function(grunt) {
             src: ['src'],
             release: ['release'],
             docs: ['docs'],
-            zip: ['src/*.zip', 'src/controls/*.zip', 'src/**/skins/*.zip']
+            zip: ['src/*.zip', 'src/controls/*.zip', 'src/skins/*.zip']
         },
 
         copy: {
@@ -183,9 +187,9 @@ module.exports = function(grunt) {
     grunt.loadTasks('tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'unzip', 'clean:zip', 'initStylus', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
-    grunt.registerTask('dist', ['initStylus', 'stylus', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
-    grunt.registerTask('docs', ['clean:docs', 'initStylus', 'stylus', 'styleguide', 'copy:docs']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
+    grunt.registerTask('docs', ['clean:docs', 'compile', 'styleguide', 'copy:docs']);
     grunt.registerTask('telemetry', ['check_chromium_src', 'jade:telemetry', 'copy:telemetry']);
 
 };
