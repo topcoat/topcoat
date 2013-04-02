@@ -172,6 +172,9 @@ module.exports = function(grunt) {
             docs: {
                 files: {
                     'docs/styleguide': ['release/css/*.css', '!release/css/*.min.css']
+                },
+                options : {
+                    include : ['styleguide.js']
                 }
             }
         }
