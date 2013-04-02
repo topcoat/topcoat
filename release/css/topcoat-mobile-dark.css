@@ -79,7 +79,7 @@ body {
   box-sizing: border-box;
   background-clip: padding-box;
   user-select: none;
-  padding: 0 20px;
+  padding: 0 0.75rem;
   margin: 5px 10px 5px 0;
   font-size: 16px;
   line-height: 3rem;
