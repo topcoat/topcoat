@@ -28,6 +28,7 @@ component = { /* see https://github.com/component/component/wiki/Spec for a desc
     files: [],
 },
     _ = require('underscore'),
+    os = require('os'),
     fs = require('fs'),
     path = require('path'),
     chromiumSrc = process.env.CHROMIUM_SRC;
@@ -101,7 +102,8 @@ module.exports = function(grunt) {
                 options: {
                     data: {
                         debug: false,
-                        pretty: true
+                        pretty: true,
+                        target: os.platform() == 'linux' ? 'mobile' : 'desktop'
                     }
                 },
                 files: [{ //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
