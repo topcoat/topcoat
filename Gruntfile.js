@@ -33,16 +33,14 @@ module.exports = function(grunt) {
             }
         },
 
-        compile: {
-            options: {
-                themename: "<%= pkg.topcoat.themename %>"
-            }
-        },
-
         unzip: {
             controls: {
                 src: "src/controls/*.zip",
                 dest: "src/controls"
+            },
+            utils: {
+                src: "src/utils/*.zip",
+                dest: "src/utils"
             },
             theme: {
                 src: "src/*.zip",
@@ -68,7 +66,7 @@ module.exports = function(grunt) {
             src: ['src'],
             release: ['release'],
             docs: ['docs'],
-            zip: ['src/*.zip', 'src/controls/*.zip', 'src/skins/*.zip']
+            zip: ['src/*.zip', 'src/controls/*.zip', 'src/skins/*.zip', 'src/utils/*.zip']
         },
 
         copy: {
@@ -174,7 +172,7 @@ module.exports = function(grunt) {
                     'docs/styleguide': ['release/css/*.css', '!release/css/*.min.css']
                 },
                 options : {
-                    include : ['styleguide.js']
+                    include : ['build/styleguide.js', 'build/styleguide.css']
                 }
             }
         }
