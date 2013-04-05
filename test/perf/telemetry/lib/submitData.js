@@ -40,8 +40,8 @@ var submitData = function (stdout, path, args, destination) {
 
 		var version = stdout.split(' ');
 
-		post_data.commit = version[0];
-		post_data.date   = version[1];
+		post_data.commit = version.shift();
+		post_data.date   = version.join(' ');
 		post_data.test   = args.test || file(path);
 		post_data.device = args.device || 'device?';
 
