@@ -32,6 +32,7 @@ module.exports = function(grunt) {
 
         var getStylusPathData = function() {
                 var mixinPath = grunt.file.expand('src/controls/**/src/mixins');
+                mixinPath = mixinPath.concat(grunt.file.expand('src/utils/**/src/mixins'));
 
                 debug("PATH:", mixinPath);
 
@@ -39,8 +40,10 @@ module.exports = function(grunt) {
             };
 
         var getStylusImportData = function(theme) {
-                var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
-                    importData = mixinFiles.concat([theme]);
+                var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl');
+                mixinFiles = mixinFiles.concat(grunt.file.expand('src/utils/**/src/mixins/*.styl'));
+
+                var importData = mixinFiles.concat([theme]);
 
                 debug("IMPORT:", importData);
 
