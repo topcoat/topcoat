@@ -13,6 +13,9 @@
     },
     "skins": {
         "topcoat/button": ""
+    },
+    "utils":{
+        "topcoat/utils": ""
     }
   },
   "directories": {

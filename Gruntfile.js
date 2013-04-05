@@ -51,6 +51,10 @@ module.exports = function(grunt) {
             skins: {
                 src: "src/skins/*.zip",
                 dest: "src/skins"
+            },
+            utils: {
+                src: "src/utils/*.zip",
+                dest: "src/utils"
             }
         },
 
@@ -68,7 +72,7 @@ module.exports = function(grunt) {
             src: ['src'],
             release: ['release'],
             docs: ['docs'],
-            zip: ['src/*.zip', 'src/controls/*.zip', 'src/skins/*.zip']
+            zip: ['src/*.zip', 'src/controls/*.zip', 'src/skins/*.zip', 'src/utils/*.zip']
         },
 
         copy: {
