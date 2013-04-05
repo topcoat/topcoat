@@ -33,17 +33,18 @@ https://github.com/topcoat/topcoat/wiki/Running-TopCoat-Performance-Test-on-Andr
 
 # Pushing benchmark results to the server
 
-There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt --type=sha [--device] [--test]`
+There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt --type=sha|snapshot [--device] [--test]`
 
 Device is an optional parameter and sets the device on which the test ran.
 
 Type is either `sha` or `snapshot`.
-    * `sha` is for running the tests on a stable version
-    * `snapshot` is for running custom nightly builds of topcoat
+ * `sha` is for running the tests on a stable version
+ * `snapshot` is for running custom nightly builds of topcoat
 
 Test is an optional parameter and it overrides the default test name ( which is the name of the file from path ).
 
 There is a `settings.js` file located under `/test/perf/telemetry/lib/` where you can change the address where to submit. It is currently set for http://bench.topcoat.io/v2/benchmark
+
 If you set an `TOPCOAT_BENCHMARK_SERVER` and `TOPCOAT_BENCHMARK_PORT` env variables you can override the default settings.
 
 You can view the results at http://bench.topcoat.io
