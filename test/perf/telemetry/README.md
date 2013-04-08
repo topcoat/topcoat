@@ -36,10 +36,13 @@ https://github.com/topcoat/topcoat/wiki/Running-TopCoat-Performance-Test-on-Andr
 There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt --type=sha|snapshot [--device] [--test]`
 
 Device is an optional parameter and sets the device on which the test ran.
+For `type snapshot` you have to send in a date param as well. You have to use: `date -u +"%Y-%m-%dT%H:%M:%SZ"`
 
 Type is either `sha` or `snapshot`.
- * `sha` is for running the tests on a stable version
- * `snapshot` is for running custom nightly builds of topcoat
+
+ * `sha` is for running the tests on a stable version (in black)
+ * `snapshot` is for running custom nightly builds of topcoat (in red)
+ * ![x axis perf view](http://i.imgur.com/DrKxFlI.png)
 
 Test is an optional parameter and it overrides the default test name ( which is the name of the file from path ).
 
