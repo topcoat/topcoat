@@ -4,10 +4,6 @@ var path = require('path'),
 module.exports = function(grunt) {
 
     grunt.registerTask('compile', 'Generates dynamic config and compiles css', function() {
-        var options = this.options(),
-            themename = options.themename || "";
-
-        debug("OPTIONS:", options);
 
         var getCompileData = function() {
                 var compileData = {},
@@ -31,15 +27,18 @@ module.exports = function(grunt) {
             };
 
         var getStylusPathData = function() {
-                var mixinPath = grunt.file.expand('src/controls/**/src/mixins');
+                var mixinPath = grunt.file.expand('src/controls/**/src/mixins'),
+                    utilsPath = grunt.file.expand('src/utils/**/src/mixins'),
+                    pathData = mixinPath.concat(utilsPath);
 
-                debug("PATH:", mixinPath);
+                debug("PATH:", pathData);
 
-                return mixinPath;
+                return pathData;
             };
 
         var getStylusImportData = function(theme) {
                 var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
+                    utilFiles = grunt.file.expand('src/utils/**/src/mixins/*.styl'),
                     importData = mixinFiles.concat([theme]);
 
                 debug("IMPORT:", importData);
@@ -51,12 +50,13 @@ module.exports = function(grunt) {
                 var fileData = {},
                     releasePath = 'release/css',
                     skinsPath = 'src/skins/**/src/*.styl',
+                    includes = grunt.file.expand('src/**/src/includes/*.styl'),
                     fileName = path.basename(theme).split('.styl').join('.css');
 
                 var releaseFile = releasePath + fileName,
-                    files = [skinsPath, theme];
+                    files = includes.concat(skinsPath);
 
-                fileData['release/css/' + fileName.replace('theme-', themename + "-")] = files;
+                fileData['release/css/' + fileName.replace('theme-', "")] = files;
 
                 return fileData;
             };
