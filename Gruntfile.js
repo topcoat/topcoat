@@ -13,14 +13,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-/*global module:false*/
+/*global module:false, require:false, process:false*/
 
 var path = require('path'),
     debug = require('debug')('build'),
     chromiumSrc = process.env.CHROMIUM_SRC;
 
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
+    'use strict';
+    
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 

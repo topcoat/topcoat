@@ -5,7 +5,8 @@
   "main": "Gruntfile.js",
   "topcoat": {
     "controls": {
-      "topcoat/button-base": ""
+      "topcoat/button-base": "",
+      "topcoat/navigation-bar-base": ""
     },
     "utils": {
       "topcoat/utils": ""
@@ -15,7 +16,8 @@
     },
     "skins": {
       "topcoat/button": "",
-      "topcoat/icon-button": ""
+      "topcoat/icon-button": "",
+      "topcoat/navigation-bar": ""
     }
   },
   "directories": {
