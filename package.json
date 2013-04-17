@@ -6,7 +6,8 @@
   "topcoat": {
     "controls": {
       "topcoat/button-base": "",
-      "topcoat/navigation-bar-base": ""
+      "topcoat/navigation-bar-base": "",
+      "topcoat/input-base": ""
     },
     "utils": {
       "topcoat/utils": ""
@@ -17,7 +18,8 @@
     "skins": {
       "topcoat/button": "",
       "topcoat/icon-button": "",
-      "topcoat/navigation-bar": ""
+      "topcoat/navigation-bar": "",
+      "topcoat/text-input": ""
     }
   },
   "directories": {
