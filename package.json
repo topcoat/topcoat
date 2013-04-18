@@ -1,13 +1,14 @@
 {
   "name": "topcoat",
   "version": "0.2.5",
-  "description": "An Open Source UI Library for creating beautiful and responsive applications using web standards",
+  "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
   "topcoat": {
     "controls": {
       "topcoat/button-base": "",
       "topcoat/navigation-bar-base": "",
-      "topcoat/input-base": ""
+      "topcoat/input-base": "",
+      "topcoat/list-base": ""
     },
     "utils": {
       "topcoat/utils": ""
@@ -19,7 +20,8 @@
       "topcoat/button": "",
       "topcoat/icon-button": "",
       "topcoat/navigation-bar": "",
-      "topcoat/text-input": ""
+      "topcoat/text-input": "",
+      "topcoat/list": ""
     }
   },
   "directories": {
