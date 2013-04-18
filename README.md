@@ -1,5 +1,6 @@
 # TopCoat
-An Open Source UI Library for creating beautiful and responsive applications using web standards
+
+CSS for clean and fast web apps
 
 ---
 
@@ -10,7 +11,7 @@ An Open Source UI Library for creating beautiful and responsive applications usi
 * Copy all the contents of the release folder to your desired project.
 * Link the CSS into your page
 
-        <link rel="stylesheet" type="text/css" href="css/topcoat-desktop-min.css">
+        <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-min.css">
 
 _*Alternatively incorporate the css into your build process if you are so
 inclined._
@@ -19,8 +20,7 @@ inclined._
 
 ## Contributing
 
-Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/board). 
-To see the prioritized list of items just click on the blue arrow on the left (a panel called Backlog should slide in).
+Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/board).
 
 _*We use [Huboard](https://github.com/rauhryan/huboard) to keep our issues
 organized into a backlog._
