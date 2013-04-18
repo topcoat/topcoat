@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         var getStylusImportData = function(theme) {
                 var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
                     utilFiles = grunt.file.expand('src/utils/**/src/mixins/*.styl'),
-                    importData = mixinFiles.concat([theme]);
+                    importData = mixinFiles.concat([theme, 'nib']);
 
                 debug("IMPORT:", importData);
 

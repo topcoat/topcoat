@@ -39,6 +39,8 @@ body {
 
 .topcoat-icon--menu-stack {
   background: url("../img/hamburger_light.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
 }
 
@@ -72,7 +74,11 @@ body {
 }
 
 .reset-ui {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   position: relative;
   display: inline-block;
@@ -84,7 +90,11 @@ body {
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -115,7 +125,11 @@ body {
   position: relative;
   display: inline-block;
   vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   padding: 0;
   margin: 0;
@@ -124,7 +138,11 @@ body {
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -136,20 +154,23 @@ body {
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   vertical-align: var-vertical-align;
   background-color: #595b5b;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  border-radius: var-border-radius;
 }
 .topcoat-button:active,
 .topcoat-button.is-active,
 .topcoat-button--large:active,
 .topcoat-button--large.is-active {
   background-color: #404141;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 .topcoat-button:disabled,
 .topcoat-button.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -172,6 +193,7 @@ body {
 .topcoat-button--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .topcoat-button--quiet:active,
@@ -182,11 +204,14 @@ body {
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   background-color: #404141;
   border: 1px solid rgba(0,0,0,0.36);
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 .topcoat-button--quiet:disabled,
 .topcoat-button--quiet.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -214,6 +239,8 @@ body {
 .topcoat-button--large:disabled,
 .topcoat-button--large.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -237,11 +264,14 @@ body {
 .topcoat-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .topcoat-button--large--quiet:disabled,
 .topcoat-button--large--quiet.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -267,6 +297,7 @@ body {
 .topcoat-button--large--cta {
   border: 1px solid #143250;
   background-color: #288edf;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36);
   box-shadow: inset 0 1px rgba(255,255,255,0.36);
   color: #fff;
   font-weight: 500;
@@ -277,11 +308,14 @@ body {
 .topcoat-button--large--cta:active,
 .topcoat-button--large--cta.is-active {
   background-color: #1976c3;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
 .topcoat-button--cta:disabled,
 .topcoat-button--cta.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -308,6 +342,8 @@ body {
 .topcoat-button--large-cta:disabled,
 .topcoat-button--large--cta.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -358,7 +394,11 @@ limitations under the License.
   position: relative;
   display: inline-block;
   vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   padding: 0;
   margin: 0;
@@ -367,7 +407,11 @@ limitations under the License.
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -379,18 +423,21 @@ limitations under the License.
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   vertical-align: var-vertical-align;
   background-color: #595b5b;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  border-radius: var-border-radius;
 }
 .topcoat-icon-button:active,
 .topcoat-icon-button.is-active {
   background-color: #404141;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 .topcoat-icon-button:disabled,
 .topcoat-icon-button.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -421,6 +468,7 @@ limitations under the License.
 .topcoat-icon-button--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .topcoat-icon-button--quiet:active,
@@ -431,11 +479,14 @@ limitations under the License.
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   background-color: #404141;
   border: 1px solid rgba(0,0,0,0.36);
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 .topcoat-icon-button--quiet:disabled,
 .topcoat-icon-button--quiet.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -472,11 +523,14 @@ limitations under the License.
 .topcoat-icon-button--large:active,
 .topcoat-icon-button--large.is-active {
   background-color: #404141;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
 .topcoat-icon-button--large:disabled,
 .topcoat-icon-button--large.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -507,11 +561,14 @@ limitations under the License.
 .topcoat-icon-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .topcoat-icon-button--large--quiet:disabled,
 .topcoat-icon-button--large--quiet.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -573,6 +630,9 @@ limitations under the License.
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   border-top: 1px solid #2f3234;
   border-bottom: 1px solid #eff1f1;
@@ -649,10 +709,15 @@ limitations under the License.
   padding-right: var-padding--navigation-bar;
   background: #595b5b;
   color: #fff;
+  -webkit-box-shadow: inset 0 -1px #333434, 0 1px rgba(0,0,0,0.15);
   box-shadow: inset 0 -1px #333434, 0 1px rgba(0,0,0,0.15);
 }
 .topcoat-navigation-bar__item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   position: relative;
   display: inline-block;
@@ -668,6 +733,7 @@ limitations under the License.
   vertical-align: baseline;
 }
 .topcoat-navigation-bar__title {
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -705,8 +771,11 @@ TopCoat text input control
 .topcoat-text-input,
 .topcoat-text-input--large {
   vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 1.25rem;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   margin: 5px;
   height: 3rem;
@@ -715,6 +784,7 @@ TopCoat text input control
   outline: none;
   border: 1px solid rgba(0,0,0,0.36);
   background-color: #595b5b;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
   color: #c6c8c8;
 }
@@ -725,6 +795,8 @@ TopCoat text input control
 .topcoat-text-input:disabled,
 .topcoat-text-input.is-disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }
@@ -751,6 +823,8 @@ TopCoat large text input control
 .topcoat-text-input--large.is-disabled,
 .topcoat-text-input--large:disabled {
   opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   cursor: default;
   pointer-events: none;
 }

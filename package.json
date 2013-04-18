@@ -5,23 +5,23 @@
   "main": "Gruntfile.js",
   "topcoat": {
     "controls": {
-      "topcoat/button-base": "",
-      "topcoat/navigation-bar-base": "",
-      "topcoat/input-base": "",
-      "topcoat/list-base": ""
+      "topcoat/button-base": "0.2.0",
+      "topcoat/navigation-bar-base": "0.1.0",
+      "topcoat/input-base": "0.1.0",
+      "topcoat/list-base": "0.1.0"
     },
     "utils": {
-      "topcoat/utils": ""
+      "topcoat/utils": "0.1.0"
     },
     "theme": {
-      "topcoat/theme": ""
+      "topcoat/theme": "0.2.0"
     },
     "skins": {
-      "topcoat/button": "",
-      "topcoat/icon-button": "",
-      "topcoat/navigation-bar": "",
-      "topcoat/text-input": "",
-      "topcoat/list": ""
+      "topcoat/button": "0.2.0",
+      "topcoat/icon-button": "0.1.0",
+      "topcoat/navigation-bar": "0.1.0",
+      "topcoat/text-input": "0.1.0",
+      "topcoat/list": "0.1.0"
     }
   },
   "directories": {
