@@ -28,17 +28,29 @@ cd $CHROMIUM_SRC/tools/perf
 ``` 
 We store the benchmark output in a file - the next script will take this output and push it to the server
 
+For steps of running performance tests on Android:
+https://github.com/topcoat/topcoat/wiki/Running-TopCoat-Performance-Test-on-Android
+
 # Pushing benchmark results to the server
 
-There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt [--device] [--test]`
+There is a grunt task that automates the process `$ grunt telemetry-submit --path=test_results.txt --type=sha|snapshot [--device] [--test]`
 
 Device is an optional parameter and sets the device on which the test ran.
+For `type snapshot` you have to send in a date param as well. You have to use: `date -u +"%Y-%m-%dT%H:%M:%SZ"`
+
+Type is either `sha` or `snapshot`.
+
+ * `sha` is for running the tests on a stable version (in black)
+ * `snapshot` is for running custom nightly builds of topcoat (in red)
+ * ![x axis perf view](http://i.imgur.com/DrKxFlI.png)
 
 Test is an optional parameter and it overrides the default test name ( which is the name of the file from path ).
 
-There is a `settings.js` file located under `/test/perf/telemetry/lib/` where you can change the address where to submit. It is currently set for http://topcoat.herokuapp.com/v2/benchmark
+There is a `settings.js` file located under `/test/perf/telemetry/lib/` where you can change the address where to submit. It is currently set for http://bench.topcoat.io/v2/benchmark
 
-You can view the results at http://topcoat.herokuapp.com/v2/view/results
+If you set an `TOPCOAT_BENCHMARK_SERVER` and `TOPCOAT_BENCHMARK_PORT` env variables you can override the default settings.
+
+You can view the results at http://bench.topcoat.io
 
 # Running all tests
 There's also a handy script to run all the performance tests and push the results on the server. 
@@ -58,4 +70,7 @@ In the json file you can reference the test file to load using `file:///topcoat/
 
 From telemetry we're currently using loading and smoothness benchmarks. The runAll.sh script currently runs these two benchmarks on all the .json tests under page_sets. 
 
-Note: part of this will probably change when we switch to the new components/themes architecture.
+Note 1: runAll.sh uses CEF ([chromium embedding framework](https://code.google.com/p/chromiumembedded/)) to run the tests on desktop (Win and Mac) by default. This is because the target for TopCoat are web applications, not web sites, and CEF is the preferred way to develop web applications on desktop. 
+We're currently using a custom CEF build because telemetry does not work in CEF by default. A patch has been submitted to CEF upstream (https://code.google.com/p/chromiumembedded/issues/detail?id=917&sort=-id) to fix this. 
+
+Note 2: part of this will probably change when we switch to the new components/themes architecture.

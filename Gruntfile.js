@@ -21,7 +21,7 @@ var path = require('path'),
 
 module.exports = function (grunt) {
     'use strict';
-    
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -123,7 +123,8 @@ module.exports = function (grunt) {
                 options: {
                     data: {
                         debug: false,
-                        pretty: true
+                        pretty: true,
+                        target: os.platform() == 'linux' ? 'mobile' : 'desktop'
                     }
                 },
                 files: [{ //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
