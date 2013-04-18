@@ -17,6 +17,7 @@ limitations under the License.
 
 var path = require('path'),
     debug = require('debug')('build'),
+    os = require('os'),
     chromiumSrc = process.env.CHROMIUM_SRC;
 
 module.exports = function (grunt) {
