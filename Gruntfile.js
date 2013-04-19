@@ -97,43 +97,22 @@ module.exports = function (grunt) {
                     src: 'src/**/img/*',
                     dest: 'docs/img'
                 }]
-            }
-        },
-
-        /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
-        telemetry: {
-            files: [{
-                expand: true,
-                cwd: 'test/perf/telemetry/perf/',
-                src: ['**'],
-                dest: path.join(chromiumSrc, 'tools/perf/')
-            }, {
-                src: ['release/**'],
-                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
-            }, {
-                expand: true,
-                cwd: 'components/topcoat-button/',
-                src: ['release/**'],
-                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
-            }]
-        },
-
-
-        jade: {
+            },
+            /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
             telemetry: {
-                options: {
-                    data: {
-                        debug: false,
-                        pretty: true,
-                        target: os.platform() == 'linux' ? 'mobile' : 'desktop'
-                    }
-                },
-                files: [{ //todo see if expandMapping can be used instead of listing them all - https://github.com/gruntjs/grunt-contrib/issues/95
-                    dest: path.join(chromiumSrc, "tools/perf/page_sets/topcoat/topcoat_buttons.html"),
-                    src: "test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons.jade"
+                files: [{
+                    expand: true,
+                    cwd: 'test/perf/telemetry/perf/',
+                    src: ['**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/')
                 }, {
-                    dest: path.join(chromiumSrc, "tools/perf/page_sets/topcoat/topcoat_buttons_no_theme.html"),
-                    src: "test/perf/telemetry/perf/page_sets/topcoat/topcoat_buttons_no_theme.jade"
+                    src: ['release/**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
+                }, {
+                    expand: true,
+                    flatten: true,
+                    src: ['src/controls/**/release/**/*.css'],
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/releaseBase/')
                 }]
             }
         },
@@ -200,6 +179,10 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
     grunt.registerTask('docs', ['clean:docs', 'compile', 'styleguide', 'copy:docs']);
-    grunt.registerTask('telemetry', ['check_chromium_src', 'jade:telemetry', 'copy:telemetry']);
 
+    grunt.registerTask('telemetry', '', function(platform, theme){
+        grunt.task.run('check_chromium_src',
+            'perf:'.concat(platform||'mobile').concat(':').concat(theme||'light'),
+            'copy:telemetry');
+    });
 };
