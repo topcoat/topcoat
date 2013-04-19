@@ -1,0 +1,15 @@
+repeats = 200
+
+_css = (css == 'default') ? ("release/css/topcoat-" + platform + "-" + theme + ".css") : css
+
+doctype 5
+html
+    head
+        title #{name} test
+        |<link rel="stylesheet" type="text/css" href="#{_css}">
+
+    body
+        -while (repeats > 0)
+            -var repeats = repeats - 1
+            p
+                | !{componentHTML}
