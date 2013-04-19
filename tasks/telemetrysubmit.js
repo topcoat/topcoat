@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                     }
                     grunt.fail.warn('Usage: grunt telemetry-submit --path=path_to_output_file --type=SHA|snapshot [--test= Test name ] [--device= Device type ]');
                 } else {
-                    var submitData = require('./test/perf/telemetry/lib/submitData');
+                    var submitData = require('../test/perf/telemetry/lib/submitData');
                     if (snapshot)
                         stdout = 'snapshot ' + date;
 
