@@ -30,7 +30,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var-background-color--body;
+  background-color: #dfe2e2;
   color: #000;
   font: 16px "Source Sans", helvetica, arial, sans-serif;
   font-weight: 200;

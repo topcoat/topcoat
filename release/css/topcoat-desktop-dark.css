@@ -146,19 +146,17 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 1.25rem;
-  font-size: 16px;
-  line-height: 3rem;
-  letter-spacing: 1px;
+  padding: var-padding;
+  font-size: var-font-size;
+  line-height: var-line-height;
+  letter-spacing: var-letter-spacing;
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  vertical-align: top;
+  vertical-align: var-vertical-align;
   background-color: #595b5b;
   -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
 }
 .topcoat-button:active,
 .topcoat-button.is-active,
@@ -235,8 +233,8 @@ body {
 */
 .topcoat-button--large,
 .topcoat-button--large--quiet {
-  font-size: 1.3rem;
-  line-height: 4rem;
+  font-size: var-font-size--large;
+  line-height: var-line-height--large;
 }
 .topcoat-button--large:disabled,
 .topcoat-button--large.is-disabled {
@@ -338,8 +336,8 @@ body {
     <a class="topcoat-button--large--cta is-disabled" >Button</a>
 */
 .topcoat-button--large--cta {
-  font-size: 1.3rem;
-  line-height: 4rem;
+  font-size: var-font-size--large;
+  line-height: var-line-height--large;
 }
 .topcoat-button--large-cta:disabled,
 .topcoat-button--large--cta.is-disabled {
@@ -417,19 +415,17 @@ limitations under the License.
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 0.75rem;
-  font-size: 16px;
-  line-height: 3rem;
-  letter-spacing: 1px;
+  padding: var-padding--icon-button;
+  font-size: var-font-size;
+  line-height: var-line-height;
+  letter-spacing: var-letter-spacing;
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  vertical-align: top;
+  vertical-align: var-vertical-align;
   background-color: #595b5b;
   -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
 }
 .topcoat-icon-button:active,
 .topcoat-icon-button.is-active {
@@ -520,9 +516,9 @@ limitations under the License.
 */
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
-  width: 4rem;
-  height: 4rem;
-  line-height: 4rem;
+  width: var-width--icon-button--large;
+  height: var-height--icon-button--large;
+  line-height: var-line-height--icon-buton--large;
 }
 .topcoat-icon-button--large:active,
 .topcoat-icon-button--large.is-active {
@@ -582,13 +578,13 @@ limitations under the License.
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
-  width: 1.5rem;
-  height: 1.5rem;
-  vertical-align: middle;
+  width: var-width--icon;
+  height: var-height--icon;
+  vertical-align: var-vertical-align--icon;
 }
 .topcoat-icon--large {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var-width--large--icon;
+  height: var-height--large--icon;
 }
 
 /*
@@ -644,9 +640,9 @@ limitations under the License.
 }
 .topcoat-list__header {
   margin: 0;
-  padding: 4px 20px;
-  font-size: 0.9em;
-  font-weight: 400;
+  padding: var-padding--list-header;
+  font-size: var-font-size--list-header;
+  font-weight: var-font-weight--list-header;
   background-color: #3b3e40;
   color: #868888;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
@@ -664,7 +660,7 @@ limitations under the License.
 .topcoat-list__item--first {
   margin: 0;
   padding: 0;
-  padding: 1.25rem;
+  padding: var-padding--list-item;
   border-top: 1px solid #5e6061;
   border-bottom: 1px solid #2f3234;
 }
@@ -708,9 +704,9 @@ limitations under the License.
     </div>
 */
 .topcoat-navigation-bar {
-  height: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  height: var-height--large;
+  padding-left: var-padding--navigation-bar;
+  padding-right: var-padding--navigation-bar;
   background: #595b5b;
   color: #fff;
   -webkit-box-shadow: inset 0 -1px #333434, 0 1px rgba(0,0,0,0.15);
@@ -732,8 +728,8 @@ limitations under the License.
   color: inherit;
   background: transparent;
   border: none;
-  margin: 0;
-  line-height: 4rem;
+  margin: var-margin;
+  line-height: var-line-height--large;
   vertical-align: baseline;
 }
 .topcoat-navigation-bar__title {
@@ -741,7 +737,7 @@ limitations under the License.
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
+  margin: var-margin;
 }
 
 /*
@@ -817,8 +813,8 @@ TopCoat large text input control
     <input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="Text input goes here">
 */
 .topcoat-text-input--large {
-  height: 4rem;
-  font-size: 1.3rem;
+  height: var-height--large;
+  font-size: var-font-size--large;
 }
 .topcoat-text-input--large:focus {
   background-color: #fff;
