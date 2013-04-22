@@ -18,7 +18,7 @@ limitations under the License.
 var path = require('path'),
     debug = require('debug')('build'),
     os = require('os'),
-    chromiumSrc = process.env.CHROMIUM_SRC;
+    chromiumSrc = process.env.CHROMIUM_SRC || "";
 
 module.exports = function (grunt) {
     'use strict';
@@ -181,6 +181,8 @@ module.exports = function (grunt) {
     grunt.registerTask('docs', ['clean:docs', 'compile', 'styleguide', 'copy:docs']);
 
     grunt.registerTask('telemetry', '', function(platform, theme){
+        if (chromiumSrc === "")
+            grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
         grunt.task.run('check_chromium_src',
             'perf:'.concat(platform||'mobile').concat(':').concat(theme||'light'),
             'copy:telemetry');
