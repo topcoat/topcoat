@@ -4,3 +4,4 @@ tmp
 .DS_Store
 src/controls/*
 src/theme/*
+.tern-port
