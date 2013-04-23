@@ -52,7 +52,6 @@ var submitData = function (stdout, path, args, destination) {
 			var location = destination.host.split('/');
 
 			post_options.host = location.shift();
-			post_options.path = '/' + location.join('/');
 			post_options.port = destination.port;
 		}
 

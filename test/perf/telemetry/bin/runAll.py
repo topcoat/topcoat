@@ -24,6 +24,7 @@
 #
 
 import os
+import sys
 import shutil
 import subprocess
 import glob
@@ -35,87 +36,91 @@ class TestHelper():
     RESULTS_DIR  = "/tmp/topcoat-telemetry"
     BROWSER	     = "system"
     BROWSER_EXEC = None
-
+    SUBMIT_TYPE  = "SHA"
+    
     CHROMIUM_SRC = os.environ.get("CHROMIUM_SRC")
     DEVICE_NAME  = os.environ.get("DEVICE_NAME")
     CEF_HOME     = os.environ.get("CEF_HOME")
     USE_CEF      = os.environ.get("USE_CEF")
-
+    
     @staticmethod
-    def init():
+    def init(targetPlatform, targetTheme):
         TestHelper._checkEnvVars()
         TestHelper._prepareProperties()
         TestHelper._prepareResultsDir()
-        TestHelper._prepareTelemetryTests()
-
+        TestHelper._prepareTelemetryTests(targetPlatform, targetTheme)
+    
     @staticmethod
     def _getPlatform():
         p = platform.platform().lower()
         if p.find('windows') != -1: return "Win"
         if p.find('darwin')  != -1: return "Mac"
         if p.find('linux')   != -1: return "Lin"
-
+    
     @staticmethod
     def _checkEnvVars():
         if not TestHelper.DEVICE_NAME:
             raise RuntimeError("Please set DEVICE_NAME env var (no spaces allowed yet)")
-
+        
         if not TestHelper.CHROMIUM_SRC:
             raise RuntimeError("Please set CHROMIUM_SRC env var.")
-
+        
         if not TestHelper.USE_CEF:
             raise RuntimeError("Please set USE_CEF env var.")
-
+        
         if (TestHelper.USE_CEF == 'True') and (not TestHelper.CEF_HOME):
             raise RuntimeError("Please set CEF_HOME if you set USE_CEF to True")
-
+    
     @staticmethod
     def _prepareProperties():
         p = TestHelper._getPlatform()
-
+        
         if p == "Win":
             TestHelper.GRUNT = "grunt.cmd"
             TestHelper.RESULTS_DIR = "C:\\tmp\\topcoat-telemetry"
             TestHelper.BROWSER = "exact"
             TestHelper.BROWSER_EXEC = "%s\\app\\cefclient.exe" % TestHelper.CEF_HOME
-
+        
         if p == "Mac":
             if TestHelper.USE_CEF:
                 TestHelper.BROWSER = "exact"
                 TestHelper.BROWSER_EXEC = "%s/app/cefclient.app/Contents/MacOS/cefclient" % TestHelper.CEF_HOME
-
+        
         if p == "Lin":
             TestHelper.BROWSER = "android-chrome-beta"
-
+    
     @staticmethod
     def _prepareResultsDir():
         print "runAll.py: Preparing results dir %s" % TestHelper.RESULTS_DIR
         if os.path.isdir(TestHelper.RESULTS_DIR):
             shutil.rmtree(TestHelper.RESULTS_DIR)
         os.makedirs(TestHelper.RESULTS_DIR)
-
+    
     @staticmethod
-    def _prepareTelemetryTests():
+    def _prepareTelemetryTests(targetPlatform, targetTheme):
         print "runAll.py: Preparing telemetry tests"
-        subprocess.check_call([TestHelper.GRUNT, 'telemetry'])
-
+        subprocess.check_call([TestHelper.GRUNT, 'telemetry:'+targetPlatform+':'+targetTheme])
+    
     @staticmethod
-    def runTests():
+    def runTests(user_defined_test_list):
         print "runAll.py: Running telemetry tests, results in %s" % TestHelper.RESULTS_DIR
-
+        
         telemetry_tests = ["loading_benchmark", "smoothness_benchmark"]
 
-        topcoat_test_files = glob.glob(os.getcwd() + "/../perf/page_sets/*.json")
+        if user_defined_test_list and len(user_defined_test_list) != 0:
+            topcoat_test_files = user_defined_test_list
+        else:
+            topcoat_test_files = glob.glob(os.getcwd() + "/../perf/page_sets/*.json")
 
         def genCmd():
             cmd = [
-                "python",
-                TestHelper.CHROMIUM_SRC + "/tools/perf/run_multipage_benchmarks",
-                "--browser=" + TestHelper.BROWSER,
-                telemetry_test,
-                TestHelper.CHROMIUM_SRC + "tools/perf/page_sets/%s" % topcoat_test_file,
-                "-o", TestHelper.RESULTS_DIR + "/%s_%s.txt" % (telemetry_test, topcoat_test_name)
-            ]
+                   "python",
+                   TestHelper.CHROMIUM_SRC + "/tools/perf/run_multipage_benchmarks",
+                   "--browser=" + TestHelper.BROWSER,
+                   telemetry_test,
+                   TestHelper.CHROMIUM_SRC + "tools/perf/page_sets/%s" % topcoat_test_file,
+                   "-o", TestHelper.RESULTS_DIR + "/%s_%s.txt" % (telemetry_test, topcoat_test_name)
+                   ]
             if TestHelper.BROWSER_EXEC:
                 cmd.insert(3, "--browser-executable=" + TestHelper.BROWSER_EXEC)
             return cmd
@@ -127,22 +132,55 @@ class TestHelper():
 
             for telemetry_test in telemetry_tests:
                 cmd = genCmd()
-                subprocess.call(cmd)
-
+                subprocess.check_call(cmd)
+    
     @staticmethod
-    def submitResults():
+    def submitResults(git_cwd):
         print "runAll.py: Pushing telemetry data to the server"
         result_files = glob.glob(TestHelper.RESULTS_DIR + "/*.txt")
         for rf in result_files:
-            subprocess.call([
-                TestHelper.GRUNT,
-                "telemetry-submit",
-                "--path=" + rf,
-                "--device=" + TestHelper.DEVICE_NAME
-            ])
+            subprocess.check_call([
+                             TestHelper.GRUNT,
+                             "telemetry-submit:" + git_cwd,
+                             "--path="   + rf,
+                             "--device=" + TestHelper.DEVICE_NAME,
+                             "--type="   + TestHelper.SUBMIT_TYPE
+                             ])
 
 
 if __name__ == "__main__":
-    TestHelper.init()
-    TestHelper.runTests()
-    TestHelper.submitResults()
+
+    print "\nUsage:"
+    print "/python runAll.py --platform=VALUE --theme=VALUE [--gitCWD=VALUE] [--test=VALUE]"
+    print " --platform= desktop or mobile"
+    print " --theme= light or dark"
+    print " [optional] --gitCWD=PATH_WHERE_YOU_WANT_TO_RUN_GIT_LOG, e.g. src/skins/button"
+    print " [optional] --test=ONE_OR_MORE_TESTS_YOU_WANT_TO_RUN, e.g. topcoat_button.test.json"
+
+    platfrm = theme = git_cwd = test_list = None
+
+    args = sys.argv[1:]
+
+    for arg in args:
+        print arg
+        arg_key, arg_val = arg.split('=')
+        if arg_key == '--platform':
+            platfrm = arg_val
+        elif arg_key == '--theme':
+            theme = arg_val
+        elif arg_key == '--gitCWD':
+            git_cwd = arg_val
+        elif arg_key == '--test':
+            test_list = arg_val.split(',')
+        else:
+            print "%s is not recognized."
+
+    if not platform or not theme:
+        raise RuntimeError("ERROR: --platform and --theme must be set.")
+
+    if not git_cwd:
+        git_cwd = ''
+
+    TestHelper.init(platfrm, theme)
+    TestHelper.runTests(test_list)
+    TestHelper.submitResults(git_cwd)

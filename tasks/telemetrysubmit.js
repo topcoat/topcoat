@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
 
-    grunt.registerTask('telemetry-submit', 'Submit telemetry test results', function() {
+    grunt.registerTask('telemetry-submit', 'Submit telemetry test results', function(gitCWD) {
 
         var exec = require("child_process").exec,
             commandToBeExecuted = 'git log --pretty=format:"%H %ci" | head -n 1',
             done = this.async();
 
-        exec(commandToBeExecuted, function(error, stdout, stderr) {
+        exec(commandToBeExecuted, {cwd:gitCWD}, function(error, stdout, stderr) {
             if (error) {
                 grunt.log.error('Error');
                 console.log(error);
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                     }
                     grunt.fail.warn('Usage: grunt telemetry-submit --path=path_to_output_file --type=SHA|snapshot [--test= Test name ] [--device= Device type ]');
                 } else {
-                    var submitData = require('./test/perf/telemetry/lib/submitData');
+                    var submitData = require('../test/perf/telemetry/lib/submitData');
                     if (snapshot)
                         stdout = 'snapshot ' + date;
 
