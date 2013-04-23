@@ -107,7 +107,7 @@ class TestHelper():
         
         telemetry_tests = ["loading_benchmark", "smoothness_benchmark"]
 
-        if len(user_defined_test_list) != 0:
+        if user_defined_test_list and len(user_defined_test_list) != 0:
             topcoat_test_files = user_defined_test_list
         else:
             topcoat_test_files = glob.glob(os.getcwd() + "/../perf/page_sets/*.json")
@@ -132,16 +132,16 @@ class TestHelper():
 
             for telemetry_test in telemetry_tests:
                 cmd = genCmd()
-                subprocess.call(cmd)
+                subprocess.check_call(cmd)
     
     @staticmethod
-    def submitResults():
+    def submitResults(git_cwd):
         print "runAll.py: Pushing telemetry data to the server"
         result_files = glob.glob(TestHelper.RESULTS_DIR + "/*.txt")
         for rf in result_files:
-            subprocess.call([
+            subprocess.check_call([
                              TestHelper.GRUNT,
-                             "telemetry-submit",
+                             "telemetry-submit:" + git_cwd,
                              "--path="   + rf,
                              "--device=" + TestHelper.DEVICE_NAME,
                              "--type="   + TestHelper.SUBMIT_TYPE
@@ -150,16 +150,37 @@ class TestHelper():
 
 if __name__ == "__main__":
 
-    print "********************************************************"
-    print "NOTE: platform and theme MUST be specified!"
-    print "usage:\n./python runAll.py [platform] [theme] [option:test_name]"
-    print "e.g.\n./python runAll.py mobile dark topcoat_icon-button.test.json"
-    print "********************************************************"
+    print "\nUsage:"
+    print "/python runAll.py --platform=VALUE --theme=VALUE [--gitCWD=VALUE] [--test=VALUE]"
+    print " --platform= desktop or mobile"
+    print " --theme= light or dark"
+    print " [optional] --gitCWD=PATH_WHERE_YOU_WANT_TO_RUN_GIT_LOG, e.g. src/skins/button"
+    print " [optional] --test=ONE_OR_MORE_TESTS_YOU_WANT_TO_RUN, e.g. topcoat_button.test.json"
 
-    targetPlatform  = sys.argv[1]
-    targetTheme     = sys.argv[2]
-    test_list       = sys.argv[3:]
+    platfrm = theme = git_cwd = test_list = None
 
-    TestHelper.init(targetPlatform, targetTheme)
+    args = sys.argv[1:]
+
+    for arg in args:
+        print arg
+        arg_key, arg_val = arg.split('=')
+        if arg_key == '--platform':
+            platfrm = arg_val
+        elif arg_key == '--theme':
+            theme = arg_val
+        elif arg_key == '--gitCWD':
+            git_cwd = arg_val
+        elif arg_key == '--test':
+            test_list = arg_val.split(',')
+        else:
+            print "%s is not recognized."
+
+    if not platform or not theme:
+        raise RuntimeError("ERROR: --platform and --theme must be set.")
+
+    if not git_cwd:
+        git_cwd = ''
+
+    TestHelper.init(platfrm, theme)
     TestHelper.runTests(test_list)
-    TestHelper.submitResults()
+    TestHelper.submitResults(git_cwd)
