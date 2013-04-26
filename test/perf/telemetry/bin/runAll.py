@@ -102,7 +102,7 @@ class TestHelper():
         subprocess.check_call([TestHelper.GRUNT, 'telemetry:'+targetPlatform+':'+targetTheme])
     
     @staticmethod
-    def runTests(user_defined_test_list):
+    def runTests(user_defined_test_list, how_many_rounds_to_run_the_test):
         print "runAll.py: Running telemetry tests, results in %s" % TestHelper.RESULTS_DIR
         
         telemetry_tests = ["loading_benchmark", "smoothness_benchmark"]
@@ -119,7 +119,7 @@ class TestHelper():
                    "--browser=" + TestHelper.BROWSER,
                    telemetry_test,
                    TestHelper.CHROMIUM_SRC + "tools/perf/page_sets/%s" % topcoat_test_file,
-                   "-o", TestHelper.RESULTS_DIR + "/%s_%s.txt" % (telemetry_test, topcoat_test_name)
+                   "-o", TestHelper.RESULTS_DIR + "/%s_%s-%s.txt" % (telemetry_test, topcoat_test_name, test_round)
                    ]
             if TestHelper.BROWSER_EXEC:
                 cmd.insert(3, "--browser-executable=" + TestHelper.BROWSER_EXEC)
@@ -131,38 +131,41 @@ class TestHelper():
             print "runAll.py: Running tests for %s" % topcoat_test_name
 
             for telemetry_test in telemetry_tests:
-                cmd = genCmd()
-                subprocess.check_call(cmd)
+                for test_round in range(how_many_rounds_to_run_the_test):
+					cmd = genCmd()
+					subprocess.check_call(cmd)
     
     @staticmethod
     def submitResults(git_cwd):
         print "runAll.py: Pushing telemetry data to the server"
         result_files = glob.glob(TestHelper.RESULTS_DIR + "/*.txt")
         for rf in result_files:
-            subprocess.check_call([
+			subprocess.check_call([
                              TestHelper.GRUNT,
                              "telemetry-submit:" + git_cwd,
                              "--path="   + rf,
                              "--device=" + TestHelper.DEVICE_NAME,
+                             "--test="   + rf.split(os.sep)[-1][:-6],
                              "--type="   + TestHelper.SUBMIT_TYPE
                              ])
 
 
 if __name__ == "__main__":
 
-    print "\nUsage:"
-    print "/python runAll.py --platform=VALUE --theme=VALUE [--gitCWD=VALUE] [--test=VALUE]"
-    print " --platform= desktop or mobile"
-    print " --theme= light or dark"
-    print " [optional] --gitCWD=PATH_WHERE_YOU_WANT_TO_RUN_GIT_LOG, e.g. src/skins/button"
-    print " [optional] --test=ONE_OR_MORE_TESTS_YOU_WANT_TO_RUN, e.g. topcoat_button.test.json"
+    # Usage:
+	# ./python runAll.py --platform=VALUE --theme=VALUE [--gitCWD=VALUE] [--test=VALUE] [--round=VALUE]
+    #	--platform= desktop or mobile
+	#	--theme= light or dark
+	#	[optional] --gitCWD=PATH_WHERE_YOU_WANT_TO_RUN_GIT_LOG, e.g. src/skins/button
+	#	[optional] --test=ONE_OR_MORE_TESTS_YOU_WANT_TO_RUN, e.g. topcoat_button.test.json
+	#	[optional] --test=HOW_MANY_ROUNDS_TO_RUN_THE_TEST, default is 1.
 
     platfrm = theme = git_cwd = test_list = None
+    test_round = 1
 
     args = sys.argv[1:]
 
     for arg in args:
-        print arg
         arg_key, arg_val = arg.split('=')
         if arg_key == '--platform':
             platfrm = arg_val
@@ -172,6 +175,8 @@ if __name__ == "__main__":
             git_cwd = arg_val
         elif arg_key == '--test':
             test_list = arg_val.split(',')
+        elif arg_key == '--round':
+            test_round = int(arg_val)
         else:
             print "%s is not recognized."
 
@@ -182,5 +187,5 @@ if __name__ == "__main__":
         git_cwd = ''
 
     TestHelper.init(platfrm, theme)
-    TestHelper.runTests(test_list)
+    TestHelper.runTests(test_list, test_round)
     TestHelper.submitResults(git_cwd)
