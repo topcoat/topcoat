@@ -1,28 +1,28 @@
 {
   "name": "topcoat",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
   "topcoat": {
     "controls": {
-      "topcoat/button-base": "",
-      "topcoat/navigation-bar-base": "",
-      "topcoat/input-base": "",
-      "topcoat/list-base": ""
+      "topcoat/button-base": "0.3.0",
+      "topcoat/navigation-bar-base": "0.2.0",
+      "topcoat/input-base": "0.2.0",
+      "topcoat/list-base": "0.2.0"
     },
     "utils": {
-      "topcoat/utils": ""
+      "topcoat/utils": "0.1.0"
     },
     "theme": {
-      "topcoat/theme": ""
+      "topcoat/theme": "0.3.0"
     },
     "skins": {
-      "topcoat/button": "",
-      "topcoat/icon-button": "",
-      "topcoat/navigation-bar": "",
-      "topcoat/list": "",
-      "topcoat/text-input": "",
-      "topcoat/search-input": ""
+      "topcoat/button": "0.3.0",
+      "topcoat/icon-button": "0.2.0",
+      "topcoat/navigation-bar": "0.2.0",
+      "topcoat/list": "0.2.0",
+      "topcoat/text-input": "0.2.0",
+      "topcoat/search-input": "0.1.0"
     }
   },
   "directories": {
@@ -42,7 +42,7 @@
     "grunt-styleguide": "~0.2.4",
     "grunt-contrib-cssmin": "~0.5.0",
     "debug": "~0.7.2",
-    "grunt-topcoat": "0.0.6"
+    "grunt-topcoat": "0.0.6",
     "jade": "~0.28.2"
   },
   "scripts": {
