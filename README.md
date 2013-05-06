@@ -1,4 +1,4 @@
-# TopCoat
+# Topcoat
 
 CSS for clean and fast web apps
 
@@ -6,7 +6,7 @@ CSS for clean and fast web apps
 
 ## Usage
 
-* [Download TopCoat](http://github.com/topcoat/topcoat/tags)
+* [Download Topcoat](http://github.com/topcoat/topcoat/tags)
 
 * Copy all the contents of the release folder to your desired project.
 * Link the CSS into your page
@@ -52,7 +52,7 @@ For performance tests, see [test/perf/telemetry/README.md](https://github.com/to
 
 ### Building
 
-TopCoat uses [Grunt](http://gruntjs.com/) to build
+Topcoat uses [Grunt](http://gruntjs.com/) to build
 
 * Open the terminal from the topcoat directory
 
