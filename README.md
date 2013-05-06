@@ -11,7 +11,9 @@ CSS for clean and fast web apps
 * Copy all the contents of the release folder to your desired project.
 * Link the CSS into your page
 
-        <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-min.css">
+```css
+<link rel="stylesheet" type="text/css" href="css/topcoat-mobile-min.css">
+```
 
 _*Alternatively incorporate the css into your build process if you are so
 inclined._
@@ -67,7 +69,7 @@ _*comes packaged with node._
         npm install
 
 
-_*Topcoat uses Grunt 0.4.0 you might want to [read](http://gruntjs.com/getting-started) more on their website if you haven't upgraded since a lot has changed.._
+_*Topcoat uses Grunt 0.4.0. You might want to [read](http://gruntjs.com/getting-started) more on their website if you haven't upgraded since a lot has changed._
 
 * Type `grunt` in the command line to build the css.
 * The results will be built into the release folder.
