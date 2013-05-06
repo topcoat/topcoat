@@ -12,7 +12,7 @@ CSS for clean and fast web apps
 * Link the CSS into your page
 
 ```css
-<link rel="stylesheet" type="text/css" href="css/topcoat-mobile-min.css">
+<link rel="stylesheet" type="text/css" href="css/topcoat-mobile-light.min.css">
 ```
 
 _*Alternatively incorporate the css into your build process if you are so
