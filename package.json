@@ -31,6 +31,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.0",
     "grunt-contrib-stylus": "~0.4.0",
     "grunt-contrib-jade": "~0.4.0",
