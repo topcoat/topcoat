@@ -3,7 +3,7 @@ Performance tests based on chromium telemetry (see https://github.com/topcoat/to
 # Preparing to run the tests
 A few steps are required before you can run the telemetry tests. 
 
-First of all, you need to download chromium source code locally, as describen on http://www.chromium.org/developers/how-tos/get-the-code. No need to compile, just download it. 
+First of all, you need to download chromium source code locally, as described on http://www.chromium.org/developers/how-tos/get-the-code. No need to compile, just download it. 
 Then export the location for the 'src' folder in the CHROMIUM_SRC environment variable, like in
 ```
 export CHROMIUM_SRC = /Users/cataling/work/chromium/home/src_tarball/tarball/chromium/src/
@@ -58,7 +58,7 @@ It's located at `https://github.com/topcoat/topcoat/blob/master/test/perf/teleme
 Check out the script for details on how to run it.
  
 # Adding a new performance test
-Before adding new tests, you should make yourself confortable with the chromium telemetry framework and running telemetry tests in chrome.
+Before adding new tests, you should make yourself comfortable with the chromium telemetry framework and running telemetry tests in chrome.
 
 Topcoat performance tests are located in `test/perf/telemetry/perf/page_sets` (the folder convention matches the one from chromium telemetry tests). When building telemetry with `grunt telemetry` this folder is copied over `page_sets` in chromium src. There is one .json file that describes each test, its structure is as required by chromium telemetry framework. You will need to add a new json file to describe your test - just start from an existing ones. 
 
