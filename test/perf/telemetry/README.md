@@ -23,8 +23,8 @@ This does two things: generates test files based on grunt templates from `perf/p
 You can run a telemetry test with:
 ```
 cd $CHROMIUM_SRC/tools/perf
-./run_multipage_benchmarks --browser=system loading_benchmark page_sets/topcoat_buttons.json -o /tmp/loading_benchmark_topcoat_buttons.txt
-./run_multipage_benchmarks --browser=system smoothness_benchmark page_sets/topcoat_buttons.json -o /tmp/smoothness_benchmark_topcoat_buttons.txt
+./run_multipage_benchmarks --browser=system loading_benchmark page_sets/topcoat_buttons-base.test.json -o /tmp/loading_benchmark_topcoat_buttons-base.txt
+./run_multipage_benchmarks --browser=system smoothness_benchmark page_sets/topcoat_buttons-base.test.json -o /tmp/smoothness_benchmark_topcoat_buttons-base.txt
 ``` 
 We store the benchmark output in a file - the next script will take this output and push it to the server
 
