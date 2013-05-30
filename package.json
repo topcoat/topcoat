@@ -14,7 +14,7 @@
       "topcoat/utils": "0.1.0"
     },
     "theme": {
-      "topcoat/theme": "0.3.0"
+      "topcoat/theme": ""
     },
     "skins": {
       "topcoat/button": "0.3.0",

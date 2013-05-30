@@ -47,20 +47,24 @@ module.exports = function(grunt) {
             };
 
         var getStylusFilesData = function(theme) {
-                var fileData = {},
-                    releasePath = 'release/css',
+                var fileData = [],
+                    releasePath = 'release/css/',
                     skinsPath = 'src/skins/**/src/*.styl',
-                    includes = grunt.file.expand('src/**/src/includes/*.styl'),
+                    includes = 'src/**/src/includes/*.styl',
                     fileName = path.basename(theme).split('.styl').join('.css');
 
                 var releaseFile = releasePath + fileName,
                     files = includes.concat(skinsPath);
 
-                fileData['release/css/' + fileName.replace('theme-', "")] = files;
+                fileData.push({
+                    src:[includes, skinsPath],
+                    dest: releasePath + fileName.replace('theme-', "")
+                });
 
                 return fileData;
             };
 
+        console.log(">>>>>>>>> ", JSON.stringify(getCompileData(), null, 2));
         debug('CONFIG DATA:', getCompileData());
         grunt.config('stylus', getCompileData());
         grunt.task.run('stylus');
