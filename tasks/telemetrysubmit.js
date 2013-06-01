@@ -6,6 +6,34 @@ module.exports = function(grunt) {
             commandToBeExecuted = 'git log --pretty=format:"%H %ci" | head -n 1',
             done = this.async();
 
+        var part1 = {
+            properties: {
+                path: {
+                    message: 'Path to telemetry output',
+                    required: true
+                },
+                device: {
+                    message: 'Device',
+                    required: true
+                }
+            }
+        };
+
+        var part2 = {
+            properties: {
+                test: {
+                    message: 'Test name',
+                    required: true,
+                    default: ''
+                },
+                type: {
+                    message: 'Stable or test ?',
+                    required: true,
+                    default: 'test'
+                }
+            }
+        };
+
         exec(commandToBeExecuted, {cwd:gitCWD}, function(error, stdout, stderr) {
             if (error) {
                 grunt.log.error('Error');
@@ -22,24 +50,34 @@ module.exports = function(grunt) {
                 ,   type = grunt.option('type')
                 ,   date = grunt.option('date')
                 ,   snapshot
+                ,   submitData = require('../test/perf/telemetry/lib/submitData')
+                ,   fileName = require('../test/perf/telemetry/lib/extractFileName')
                 ;
 
-                if (type && type.match(/snapshot/))
-                    snapshot = true; // we're dealing with a snapshot
+                if (!path && !test) {
+                    // Dummy test to see if it was called without arguments
+                    // in this case we request the user for data
 
-                if (!path || !type || (snapshot && !date)) {
-                    if (!path) console.log('No path file specified.');
-                    if (!type) console.log('Type not specified. Use --type=SHA or --type=snapshot');
-                    if (snapshot && !date) {
-                      console.log('You can use: date -u +"%Y-%m-%dT%H:%M:%SZ"');
-                      console.log('No date specified. Use --date=<date> in ISO standard with type snapshot');
-                    }
-                    grunt.fail.warn('Usage: grunt telemetry-submit --path=path_to_output_file --type=SHA|snapshot [--test= Test name ] [--device= Device type ]');
+                    prompt.start();
+                    prompt.get(part1, function (err, result) {
+                        var options = result;
+
+                        part2.properties.test.default = fileName(result.path);
+
+                        prompt.get(part2, function (err, result) {
+                            for (var i in result)
+                                options[i] = result[i];
+
+                            if (options.type == 'test')
+                                options.date = 'snapshot ' + new Date().toISOString();
+                            else
+                                options.date = stdout;
+
+                            console.log(options);
+                        });
+                    });
                 } else {
-                    var submitData = require('../test/perf/telemetry/lib/submitData');
-                    if (snapshot)
-                        stdout = 'snapshot ' + date;
-
+                    // This is in case for automated tasks that submits the data
                     submitData(stdout, path, {
                         device: device,
                         test: test

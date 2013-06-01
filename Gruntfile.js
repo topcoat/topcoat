@@ -19,6 +19,7 @@ var path = require('path'),
     debug = require('debug')('build'),
     os = require('os'),
     chromiumSrc = process.env.CHROMIUM_SRC || "";
+    prompt = require('prompt');
 
 module.exports = function (grunt) {
     'use strict';
