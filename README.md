@@ -22,10 +22,7 @@ inclined._
 
 ## Contributing
 
-Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/board).
-
-_*We use [Huboard](https://github.com/rauhryan/huboard) to keep our issues
-organized into a backlog._
+Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/backlog). (Pls file issues against this repo.)
 
 * [Fill out the CLA here](http://topcoat.io/dev/topcoat-cla.html)
 * [fork](https://help.github.com/articles/fork-a-repo) the repo
