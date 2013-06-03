@@ -17,7 +17,10 @@ Next you can prepare the telemetry tests:
 ```
 grunt telemetry
 ```
-This does two things: generates test files based on grunt templates from `perf/page_sets`, and copies them to the right location in chromium telemetry tests. 
+This does few things: 
+* it generates html snippets based on grunt template from test/perf/topcoat-*.test.jade of each of Topcoat component. So make sure you build Topcoat first, by ```grunt default```, so that Topcoat components are downloaded into the src folder;
+* then it uses that html snippet to generate the actual test file from topcoat/test/perf /telemetry/perf/page_sets/topcoat/topcoat_telemetry.jade;
+* last, it copies those test files to the right location in chromium telemetry tests. 
 
 # Running performance tests locally
 You can run a telemetry test with:
@@ -54,7 +57,7 @@ You can view the results at http://bench.topcoat.io
 
 # Running all tests
 There's also a handy script to run all the performance tests and push the results on the server. 
-It's located at `https://github.com/topcoat/topcoat/blob/master/test/perf/telemetry/bin/runAll.sh`.
+It's located at `https://github.com/topcoat/topcoat/blob/master/test/perf/telemetry/bin/runAll.py`.
 Check out the script for details on how to run it.
  
 # Adding a new performance test
@@ -70,7 +73,7 @@ In the json file you can reference the test file to load using `file:///topcoat/
 
 From telemetry we're currently using loading and smoothness benchmarks. The runAll.sh script currently runs these two benchmarks on all the .json tests under page_sets. 
 
-Note 1: runAll.sh uses CEF ([chromium embedding framework](https://code.google.com/p/chromiumembedded/)) to run the tests on desktop (Win and Mac) by default. This is because the target for TopCoat are web applications, not web sites, and CEF is the preferred way to develop web applications on desktop. 
+Note 1: runAll.py uses CEF ([chromium embedding framework](https://code.google.com/p/chromiumembedded/)) to run the tests on desktop (Win and Mac) by default. This is because the target for TopCoat are web applications, not web sites, and CEF is the preferred way to develop web applications on desktop. 
 We're currently using a custom CEF build because telemetry does not work in CEF by default. A patch has been submitted to CEF upstream (https://code.google.com/p/chromiumembedded/issues/detail?id=917&sort=-id) to fix this. 
 
 Note 2: part of this will probably change when we switch to the new components/themes architecture.
