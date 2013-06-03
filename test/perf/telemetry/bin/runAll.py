@@ -29,6 +29,7 @@ import shutil
 import subprocess
 import glob
 import platform
+import shutil
 
 
 class TestHelper():
@@ -48,6 +49,7 @@ class TestHelper():
         TestHelper._checkEnvVars()
         TestHelper._prepareProperties()
         TestHelper._prepareResultsDir()
+        TestHelper._cleanTelemetryTests()
         TestHelper._prepareTelemetryTests(targetPlatform, targetTheme)
     
     @staticmethod
@@ -100,6 +102,13 @@ class TestHelper():
     def _prepareTelemetryTests(targetPlatform, targetTheme):
         print "runAll.py: Preparing telemetry tests"
         subprocess.check_call([TestHelper.GRUNT, 'telemetry:'+targetPlatform+':'+targetTheme])
+
+    @staticmethod
+    def _cleanTelemetryTests():
+        print "runAll.py: clean up CHROMIUM_SRC/tools/perf/page_sets/topcoat"
+        path = TestHelper.CHROMIUM_SRC + "tools/perf/page_sets/topcoat"
+        if os.path.exists(path):
+            shutil.rmtree(path)
     
     @staticmethod
     def runTests(user_defined_test_list, how_many_rounds_to_run_the_test):
