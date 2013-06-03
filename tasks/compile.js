@@ -1,5 +1,5 @@
 var path = require('path'),
-    debug = require('debug')('build');
+    debug = require('debug')('compile');
 
 module.exports = function(grunt) {
 
@@ -21,8 +21,6 @@ module.exports = function(grunt) {
                     }
                 });
 
-                debug('COMPILE:', compileData);
-
                 return compileData;
             };
 
@@ -31,8 +29,6 @@ module.exports = function(grunt) {
                     utilsPath = grunt.file.expand('src/utils/**/src/mixins'),
                     pathData = mixinPath.concat(utilsPath);
 
-                debug("PATH:", pathData);
-
                 return pathData;
             };
 
@@ -40,8 +36,6 @@ module.exports = function(grunt) {
                 var mixinFiles = grunt.file.expand('src/controls/**/src/mixins/*.styl'),
                     utilFiles = grunt.file.expand('src/utils/**/src/mixins/*.styl'),
                     importData = mixinFiles.concat([theme, 'nib']);
-
-                debug("IMPORT:", importData);
 
                 return importData;
             };
@@ -64,8 +58,8 @@ module.exports = function(grunt) {
                 return fileData;
             };
 
-        console.log(">>>>>>>>> ", JSON.stringify(getCompileData(), null, 2));
-        debug('CONFIG DATA:', getCompileData());
+        debug('CONFIG DATA:', JSON.stringify(getCompileData(), null, 2));
+
         grunt.config('stylus', getCompileData());
         grunt.task.run('stylus');
     });
