@@ -12,16 +12,15 @@ module.exports = function (grunt) {
         var perfJades = findAllPerfJadeFileInSrc();
 
         var targetPlatform = platform || 'mobile',
-            targetTheme    = theme    || 'light',
-            targetCSS      = 'default';
+            targetTheme    = theme    || 'light';
+
+        var targetCSS = prepareCSS(targetPlatform, targetTheme);
 
         var jadeCompileData = {};
 
         grunt.util._.forEach(perfJades, function (jadePath) {
 
             var jadeFileName = path.basename(jadePath).split('.')[0];
-
-            targetCSS = prepareCSS(jadeFileName);
 
             prepareJadeCompileData(jadeCompileData, jadePath,
                 jadeFileName, targetPlatform, targetTheme, targetCSS);
@@ -42,17 +41,9 @@ module.exports = function (grunt) {
         return jades;
     }
 
-    var prepareCSS = function(caseName) {
+    var prepareCSS = function(platform, theme) {
 
-        var isBaseControl = caseName.indexOf('base') != -1 ? true : false;
-        var css = 'default';
-
-        if (isBaseControl) {
-            var name = caseName.split('_')[1].slice(0, -5);
-            css = 'releaseBase/' + name + '.css'
-        }
-
-        return css;
+        return "release/css/topcoat-" + platform + "-" + theme + ".css";
     }
 
     var prepareJadeCompileData = function (jadeCompileData, jadePath,
