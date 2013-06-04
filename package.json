@@ -6,21 +6,21 @@
   "topcoat": {
     "controls": {
       "topcoat/button-base": "0.3.0",
-      "topcoat/navigation-bar-base": "0.2.0",
+      "topcoat/navigation-bar-base": "0.3.0",
       "topcoat/input-base": "0.2.0",
       "topcoat/list-base": "0.2.0"
     },
     "utils": {
-      "topcoat/utils": "0.1.0"
+      "topcoat/utils": "0.2.0"
     },
     "theme": {
-      "topcoat/theme": ""
+      "topcoat/theme": "0.4.0"
     },
     "skins": {
       "topcoat/button": "0.3.0",
       "topcoat/icon-button": "0.2.0",
-      "topcoat/navigation-bar": "0.2.0",
-      "topcoat/list": "0.2.0",
+      "topcoat/navigation-bar": "0.3.0",
+      "topcoat/list": "0.3.0",
       "topcoat/text-input": "0.2.0",
       "topcoat/search-input": "0.1.0"
     }
