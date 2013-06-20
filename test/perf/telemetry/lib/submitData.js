@@ -13,26 +13,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-var file = function (path) {
-    if (path.split('/').length > 1) {
-        sep = '/';
-    } else if (path.split('\\').length > 1) {
-        sep = '\\';
-    } else {
-        throw new Error('ERROR: the separator in test result file path is neither "/" nor "\\".');
-    }
-    return path.split(sep).pop().split('.')[0];
-};
-
 var submitData = function (stdout, path, args, destination) {
 	var querystring = require('querystring');
 	var http        = require('http');
 	var fs          = require('fs');
 	var parse       = require('./csvToJSON');
 	var postOptions = require('./settings');
+	var fileName	= require('./extractFileName.js');
 
 	var post_data = {};
-
+	console.log(path);
 	parse(path, function (j) {
 		post_data = {
 			resultName : j
@@ -42,11 +32,9 @@ var submitData = function (stdout, path, args, destination) {
 
 		post_data.commit = version.shift();
 		post_data.date   = version.join(' ');
-		post_data.test   = args.test || file(path);
+		post_data.test   = args.test || fileName(path);
 		post_data.device = args.device || 'device?';
-
 		post_data = querystring.stringify({data : JSON.stringify(post_data)});
-
 		post_options = postOptions(post_data.length);
 		if (destination.host && destination.port) {
 			var location = destination.host.split('/');
@@ -54,7 +42,6 @@ var submitData = function (stdout, path, args, destination) {
 			post_options.host = location.shift();
 			post_options.port = destination.port;
 		}
-
 		// Set up the request
 		var post_req = http.request(post_options, function(res) {
 			res.setEncoding('utf8');

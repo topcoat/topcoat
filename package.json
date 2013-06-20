@@ -29,7 +29,9 @@
     "doc": "doc",
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "prompt": "~0.2.9"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.0",
