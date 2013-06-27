@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                             compress: false
                         },
                         files: getStylusFilesData(theme)
-                    }
+                    };
                 });
 
                 return compileData;
@@ -63,4 +63,4 @@ module.exports = function(grunt) {
         grunt.config('stylus', getCompileData());
         grunt.task.run('stylus');
     });
-}
+};
