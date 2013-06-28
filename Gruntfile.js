@@ -98,6 +98,14 @@ module.exports = function (grunt) {
                     dest: 'docs/img'
                 }]
             },
+            copyright: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: 'src/skins/**/src/copyright.styl',
+                    dest: 'src/'
+                }]
+            },
             /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
             telemetry: {
                 files: [{
@@ -176,7 +184,7 @@ module.exports = function (grunt) {
     grunt.loadTasks('tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'copy:copyright', 'compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
     grunt.registerTask('docs', ['clean:docs', 'compile', 'styleguide', 'copy:docs']);
 
