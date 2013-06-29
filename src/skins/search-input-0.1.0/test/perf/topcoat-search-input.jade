@@ -1,0 +1,9 @@
+- var repeats = 200
+doctype 5
+html
+	head
+		title TopCoat search-input perf test
+		link(rel='stylesheet', type='text/css', href='../../release/css/topcoat-search-input.min.css')
+	body
+		- while (repeats--)
+			input(type='search', class='topcoat-search-input', placeholder='Small Search')

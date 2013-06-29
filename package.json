@@ -26,7 +26,7 @@
     }
   },
   "topdoc": {
-      "title": "Topcoat"
+    "title": "Topcoat"
   },
   "directories": {
     "doc": "doc",
@@ -35,13 +35,13 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-copy": "~0.4.0",
-    "grunt-contrib-stylus": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-stylus": "~0.4.1",
     "grunt-contrib-jade": "~0.4.0",
     "grunt-contrib-watch": "~0.1.4",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-exec": "~0.4.0",
-    "grunt-zip": "~0.5.0",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-exec": "~0.4.2",
+    "grunt-zip": "~0.5.1",
     "csv": "~0.2.9",
     "grunt-contrib-cssmin": "~0.5.0",
     "debug": "~0.7.2",

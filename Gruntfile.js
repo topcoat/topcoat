@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         topcoat: {
             options: {
                 repos: '<%= pkg.topcoat %>',
-                src: '../src',
+                src: 'src',
                 controlsPath: '<%= topcoat.options.src %>/controls',
                 skinsPath: '<%= topcoat.options.src %>/skins',
                 themePath: '<%= topcoat.options.src %>/theme',
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
                     themePrefix: 'theme',
                     download: false,
                     compile: true,
-                    releasePath: '../css'
+                    releasePath: 'css'
                 }
             }
         },
@@ -57,12 +57,13 @@ module.exports = function(grunt) {
             usageguides: {
                 options: {
                     source: '<%= topcoat.compile.releasePath %>',
-                    destination: '../',
+                    destination: '.',
                     template: 'http://github.com/topcoat/usage-guide-theme',
                     templateData: '<%= pkg.topdoc %>'
                 }
             }
         },
+
         unzip: {
             controls: {
                 src: '<%= topcoat.options.controlsPath %>/*.zip',
@@ -99,17 +100,17 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            dist: {
+            release: {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: '<%= topcoat.options.src %>/**/font/**',
-                    dest: '<%= topcoat.compile.options.releasePath %>/font'
+                    src: '<%= topcoat.options.themePath %>/**/font/**',
+                    dest: 'font'
                 }, {
                     expand: true,
                     flatten: true,
-                    src: '<%= topcoat.options.src %>/**/img/*',
-                    dest: '<%= topcoat.compile.options.releasePath %>/img'
+                    src: '<%= topcoat.options.themePath %>/**/img/*',
+                    dest: 'img'
                 }]
             }
         },
@@ -118,7 +119,7 @@ module.exports = function(grunt) {
         telemetry: {
             files: [{
                 expand: true,
-                cwd: 'test/perf/telemetry/perf/',
+                cwd: 'dev/test/perf/telemetry/perf/',
                 src: ['**'],
                 dest: path.join(chromiumSrc, 'tools/perf/')
             }, {
@@ -154,25 +155,15 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             },
             lib_test: {
-                src: ['lib/**/*.js', 'test/**/*.js']
+                src: ['dev/lib/**/*.js', 'dev/test/**/*.js']
             }
         },
 
         watch: {
             files: ['<%= topcoat.options.srcPath %>/**/*.styl'],
             tasks: ['compile']
-        },
-
-        styleguide: {
-            docs: {
-                files: {
-                    '': ['<%= topcoat.compile.options.releasePath %>/*.css', '!<%= topcoat.compile.options.releasePath %>/*.min.css']
-                },
-                options: {
-                    include: ['dev/build/styleguide.js', 'dev/build/styleguide.css']
-                }
-            }
         }
+
     });
 
     // These plugins provide necessary tasks.
@@ -190,8 +181,8 @@ module.exports = function(grunt) {
     grunt.loadTasks('tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'topdoc', 'copy:docs']);
-    grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'topdoc', 'copy:docs', 'clean:src']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'topdoc', 'copy']);
+    grunt.registerTask('release', ['compile', 'cssmin', 'topdoc', 'copy', 'clean:src']);
     grunt.registerTask('compile', ['compile', 'topdoc', 'copy']);
 
     grunt.registerTask('telemetry', '', function(platform, theme) {

@@ -1,0 +1,14 @@
+- var repeats = 200
+doctype 5
+html
+	head
+		title TopCoat textarea test
+		link(rel="stylesheet", href="../../release/css/topcoat-button.min.css")
+	body
+		- while (repeats--)
+			a(class="topcoat-button") Button
+			a(class="topcoat-button--quiet") Button
+			a(class="topcoat-button--large") Button
+			a(class="topcoat-button--large--quiet") Button
+			a(class="topcoat-button--cta") Button
+			a(class="topcoat-button--large--cta") Button
