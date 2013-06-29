@@ -20,55 +20,72 @@ var path = require('path'),
     os = require('os'),
     chromiumSrc = process.env.CHROMIUM_SRC || "";
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     'use strict';
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         topcoat: {
+            options: {
+                repos: '<%= pkg.topcoat %>',
+                src: 'src',
+                controlsPath: '<%= topcoat.options.src %>/controls',
+                skinsPath: '<%= topcoat.options.src %>/skins',
+                themePath: '<%= topcoat.options.src %>/theme',
+                utilsPath: '<%= topcoat.options.src %>/utils',
+            },
             download: {
                 options: {
-                    srcPath: "src/",
-                    repos: "<%= pkg.topcoat %>"
+                    hostname: 'https://github.com/',
+                    proxy: '',
+                    download: true,
+                    compile: false
+                }
+            },
+            compile: {
+                options: {
+                    themePrefix: 'theme',
+                    download: false,
+                    compile: true,
+                    releasePath: 'css'
                 }
             }
         },
 
         unzip: {
             controls: {
-                src: "src/controls/*.zip",
-                dest: "src/controls"
+                src: '<%= topcoat.options.controlsPath %>/*.zip',
+                dest: '<%= topcoat.options.controlsPath %>'
             },
             utils: {
-                src: "src/utils/*.zip",
-                dest: "src/utils"
+                src: '<%= topcoat.options.utilsPath %>/*.zip',
+                dest: '<%= topcoat.options.utilsPath %>'
             },
             theme: {
-                src: "src/*.zip",
-                dest: "src/"
+                src: '<%= topcoat.options.src %>/*.zip',
+                dest: '<%= topcoat.options.src %>/'
             },
             skins: {
-                src: "src/skins/*.zip",
-                dest: "src/skins"
+                src: '<%= topcoat.options.skinsPath %>/*.zip',
+                dest: '<%= topcoat.options.skinsPath %>/'
             }
         },
 
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'release/css/',
+                cwd: '<%= topcoat.compile.options.releasePath %>/',
                 src: ['*.css', '!*.min.css'],
-                dest: 'release/css/',
+                dest: '<%= topcoat.compile.options.releasePath %>/',
                 ext: '.min.css'
             }
         },
 
         clean: {
-            src: ['src'],
-            release: ['release'],
-            docs: ['docs'],
-            zip: ['src/*.zip', 'src/controls/*.zip', 'src/skins/*.zip', 'src/utils/*.zip']
+            src: ['<%= topcoat.options.src %>/'],
+            release: ['<%= topcoat.compile.options.releasePath %>/'],
+            zip: ['<%= topcoat.options.src %>/**/*.zip']
         },
 
         copy: {
@@ -76,45 +93,33 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: 'src/**/font/**',
-                    dest: 'release/font/'
+                    src: '<%= topcoat.options.src %>/**/font/**',
+                    dest: '<%= topcoat.compile.options.releasePath %>/font'
                 }, {
                     expand: true,
                     flatten: true,
-                    src: 'src/**/img/*',
-                    dest: 'release/img'
-                }]
-            },
-            docs: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: 'src/**/font/**',
-                    dest: 'docs/font/'
-                }, {
-                    expand: true,
-                    flatten: true,
-                    src: 'src/**/img/*',
-                    dest: 'docs/img'
-                }]
-            },
-            /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
-            telemetry: {
-                files: [{
-                    expand: true,
-                    cwd: 'test/perf/telemetry/perf/',
-                    src: ['**'],
-                    dest: path.join(chromiumSrc, 'tools/perf/')
-                }, {
-                    src: ['release/**'],
-                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
-                }, {
-                    expand: true,
-                    flatten: true,
-                    src: ['src/controls/**/release/**/*.css'],
-                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/releaseBase/')
+                    src: '<%= topcoat.options.src %>/**/img/*',
+                    dest: '<%= topcoat.compile.options.releasePath %>/img'
                 }]
             }
+        },
+
+        /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
+        telemetry: {
+            files: [{
+                expand: true,
+                cwd: 'test/perf/telemetry/perf/',
+                src: ['**'],
+                dest: path.join(chromiumSrc, 'tools/perf/')
+            }, {
+                src: ['<%= topcoat.compile.options.releasePath %>/**'],
+                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
+            }, {
+                expand: true,
+                flatten: true,
+                src: ['<%= topcoat.compile.options.controlsPath %>/**/release/**/*.css'],
+                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/releaseBase/')
+            }]
         },
 
         jshint: {
@@ -144,24 +149,23 @@ module.exports = function (grunt) {
         },
 
         watch: {
-            files: ['src/style/*.styl'],
-            tasks: ['stylus']
+            files: ['src/**/*.styl'],
+            tasks: ['compile']
         },
 
         styleguide: {
             docs: {
                 files: {
-                    'docs/styleguide': ['release/css/*.css', '!release/css/*.min.css']
+                    '': ['<%= topcoat.compile.options.releasePath %>/*.css', '!<%= topcoat.compile.options.releasePath %>/*.min.css']
                 },
-                options : {
-                    include : ['build/styleguide.js', 'build/styleguide.css']
+                options: {
+                    include: ['dev/build/styleguide.js', 'dev/build/styleguide.css']
                 }
             }
         }
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -178,13 +182,10 @@ module.exports = function (grunt) {
     // Default task.
     grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
     grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
-    grunt.registerTask('docs', ['clean:docs', 'compile', 'styleguide', 'copy:docs']);
+    grunt.registerTask('compile', ['compile', 'topdoc', 'copy']);
 
-    grunt.registerTask('telemetry', '', function(platform, theme){
-        if (chromiumSrc === "")
-            grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
-        grunt.task.run('check_chromium_src',
-            'perf:'.concat(platform||'mobile').concat(':').concat(theme||'light'),
-            'copy:telemetry');
+    grunt.registerTask('telemetry', '', function(platform, theme) {
+        if (chromiumSrc === "") grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
+        grunt.task.run('check_chromium_src', 'perf:'.concat(platform || 'mobile').concat(':').concat(theme || 'light'), 'copy:telemetry');
     });
 };

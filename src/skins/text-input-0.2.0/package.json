@@ -1,0 +1,46 @@
+{
+  "name": "text-input",
+  "version": "0.2.0",
+  "description": "TopCoat text input skin",
+  "directories": {
+    "test": "test"
+  },
+  "topcoat": {
+    "controls": {
+      "topcoat/input-base": "",
+      "topcoat/theme": ""
+    },
+    "utils": {
+      "topcoat/utils": ""
+    }
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/text-input.git"
+  },
+  "keywords": [
+    "text",
+    "input",
+    "css",
+    "topcoat",
+    "base",
+    "adobe"
+  ],
+  "author": "@an_rei Andrei Oprea",
+  "license": "Apache",
+  "devDependencies": {
+    "grunt-contrib-stylus": "~0.5.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-jade": "~0.5.0",
+    "grunt-zip": "~0.7.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-topcoat": "0.0.6",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "debug": "~0.7.2"
+  }
+}
