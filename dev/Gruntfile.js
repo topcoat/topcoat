@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         topcoat: {
             options: {
                 repos: '<%= pkg.topcoat %>',
-                src: 'src',
+                src: '../src',
                 controlsPath: '<%= topcoat.options.src %>/controls',
                 skinsPath: '<%= topcoat.options.src %>/skins',
                 themePath: '<%= topcoat.options.src %>/theme',
@@ -48,11 +48,21 @@ module.exports = function(grunt) {
                     themePrefix: 'theme',
                     download: false,
                     compile: true,
-                    releasePath: 'css'
+                    releasePath: '../css'
                 }
             }
         },
 
+        topdoc: {
+            usageguides: {
+                options: {
+                    source: '<%= topcoat.compile.releasePath %>',
+                    destination: '../',
+                    template: 'http://github.com/topcoat/usage-guide-theme',
+                    templateData: '<%= pkg.topdoc %>'
+                }
+            }
+        },
         unzip: {
             controls: {
                 src: '<%= topcoat.options.controlsPath %>/*.zip',
@@ -149,7 +159,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['src/**/*.styl'],
+            files: ['<%= topcoat.options.srcPath %>/**/*.styl'],
             tasks: ['compile']
         },
 
@@ -172,16 +182,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-topcoat');
+    grunt.loadNpmTasks('grunt-topdoc');
     grunt.loadNpmTasks('grunt-zip');
-    grunt.loadNpmTasks('grunt-styleguide');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //Load local tasks
     grunt.loadTasks('tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs']);
-    grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'styleguide', 'copy:docs', 'clean:src']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'copy:dist', 'topdoc', 'copy:docs']);
+    grunt.registerTask('release', ['compile', 'cssmin', 'copy:dist', 'topdoc', 'copy:docs', 'clean:src']);
     grunt.registerTask('compile', ['compile', 'topdoc', 'copy']);
 
     grunt.registerTask('telemetry', '', function(platform, theme) {
