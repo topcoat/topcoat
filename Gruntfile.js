@@ -56,8 +56,8 @@ module.exports = function(grunt) {
         topdoc: {
             usageguides: {
                 options: {
-                    source: '<%= topcoat.compile.releasePath %>',
-                    destination: '.',
+                    source: '<%= topcoat.compile.options.releasePath %>/',
+                    destination: './',
                     template: 'http://github.com/topcoat/usage-guide-theme',
                     templateData: '<%= pkg.topdoc %>'
                 }
@@ -178,12 +178,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //Load local tasks
-    grunt.loadTasks('tasks');
+    grunt.loadTasks('dev/tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'compile', 'cssmin', 'topdoc', 'copy']);
-    grunt.registerTask('release', ['compile', 'cssmin', 'topdoc', 'copy', 'clean:src']);
-    grunt.registerTask('compile', ['compile', 'topdoc', 'copy']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'cssmin', 'topdoc', 'copy']);
+    grunt.registerTask('release', ['default', 'clean:src']);
+    grunt.registerTask('compile', ['topcoat:compile', 'topdoc', 'copy']);
 
     grunt.registerTask('telemetry', '', function(platform, theme) {
         if (chromiumSrc === "") grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
