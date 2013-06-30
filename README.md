@@ -1,85 +1,13 @@
-# Topcoat
+#Usage Guide Theme
 
-CSS for clean and fast web apps
+A responsive [Topdoc](http://github.io/topcoat/topdoc) theme for the Topcoat Usage Guide.
 
----
+##Usage
 
-## Usage
+If the topcoat repo is cloned locally as a sibling of this repo, running the following command:
 
-* [Download Topcoat](http://github.com/topcoat/topcoat/tags)
-
-* Copy all the contents of the release folder to your desired project.
-* Link the CSS into your page
-
-```css
-<link rel="stylesheet" type="text/css" href="css/topcoat-mobile-light.min.css">
+```bash
+topdoc -s release/css/ -d topdocs -t ../usage-guide-theme/
 ```
 
-_*Alternatively incorporate the css into your build process if you are so
-inclined._
-
----
-
-## Contributing
-
-Start by checking out our [Backlog](http://huboard.com/topcoat/topcoat/backlog). (Pls file issues against this repo.)
-
-* [Fill out the CLA here](http://topcoat.io/dev/topcoat-cla.html)
-* [fork](https://help.github.com/articles/fork-a-repo) the repo
-* Create a branch
-
-        git checkout -b my_branch
-
-* Add your changes following the [coding guidelines](https://github.com/topcoat/topcoat/wiki/Coding-Guidelines)
-* Commit your changes
-
-        git commit -am "Added some awesome stuff"
-
-* Push your branch
-
-        git push origin my_branch
-
-* make a [pull request](https://help.github.com/articles/using-pull-requests)
-
-For the details see our [Engineering Practices](https://github.com/topcoat/topcoat/wiki/Engineering-Practices).
-
-### Testing
-
-For performance tests, see [test/perf/telemetry/README.md](https://github.com/topcoat/topcoat/blob/master/test/perf/telemetry/README.md).
-
-### Building
-
-Topcoat uses [Grunt](http://gruntjs.com/) to build
-
-* Open the terminal from the topcoat directory
-
-        cd topcoat
-
-* Install [npm](http://nodejs.org/download/)
-_*comes packaged with node._
-* Install its command line interface (CLI) globally
-
-        npm install -g grunt-cli
-
-* Install dependencies with npm
-
-        npm install
-
-
-_*Topcoat uses Grunt 0.4.0. You might want to [read](http://gruntjs.com/getting-started) more on their website if you haven't upgraded since a lot has changed._
-
-* Type `grunt` in the command line to build the css.
-* The results will be built into the release folder.
-* Alternatively type `grunt watch` to have the build run automatically when you make changes to
-source files.
-
----
-
-## Release notes
-See [Release Notes](https://github.com/topcoat/topcoat/wiki/Release-Notes) on the wiki.
-
----
-
-## License
-
-[Apache license](https://raw.github.com/topcoat/topcoat/master/LICENSE)
+Uses the template and generates the docs to a directory called `topdocs`.

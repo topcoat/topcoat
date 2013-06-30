@@ -26,7 +26,30 @@
     }
   },
   "topdoc": {
-    "title": "Topcoat"
+      "template": "https://github.com/topcoat/usage-guide-theme",
+      "templateData": {
+        "title": "Topcoat",
+        "subtitle": "CSS for clean and fast web apps",
+        "download": {
+          "url": "#",
+          "label": "Download version 0.4"
+          },
+        "homeURL": "http://topcoat.io",
+        "siteNav": [
+          {
+            "url": "http://www.garthdb.com",
+            "text": "Usage Guidelines"
+          },
+          {
+            "url": "http://bench.topcoat.io/",
+            "text": "Benchmarks"
+          },
+          {
+            "url": "http://topcoat.io/blog",
+            "text": "Blog"
+          }
+        ]
+      }
   },
   "directories": {
     "doc": "doc",
@@ -47,7 +70,7 @@
     "debug": "~0.7.2",
     "grunt-topcoat": "0.0.9",
     "jade": "~0.28.2",
-    "grunt-topdoc": "0.0.0"
+    "grunt-topdoc": "0.0.1"
   },
   "scripts": {
     "test": "grunt test"
