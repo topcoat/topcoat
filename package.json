@@ -1,6 +1,6 @@
 {
   "name": "topcoat",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
   "topcoat": {
@@ -8,10 +8,9 @@
       "topcoat/button-base": "0.3.0",
       "topcoat/navigation-bar-base": "0.3.0",
       "topcoat/input-base": "0.2.0",
-      "topcoat/radio-input-base": "",
       "topcoat/list-base": "0.2.0",
-      "topcoat/textarea-base": "",
-      "topcoat/overlay-base": ""
+      "topcoat/textarea-base": "0.1.0",
+      "topcoat/overlay-base": "0.1.0"
     },
     "utils": {
       "topcoat/utils": "0.2.0"
@@ -25,9 +24,9 @@
       "topcoat/navigation-bar": "0.3.0",
       "topcoat/list": "0.3.0",
       "topcoat/text-input": "0.2.0",
-      "topcoat/textarea": "",
+      "topcoat/textarea": "0.1.0",
       "topcoat/search-input": "0.1.0",
-      "topcoat/overlay": ""
+      "topcoat/overlay": "0.1.0"
     }
   },
   "topdoc": {
