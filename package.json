@@ -60,7 +60,8 @@
     "test": "test"
   },
   "dependencies": {
-    "prompt": "~0.2.9"
+    "prompt": "~0.2.9",
+    "grunt-contrib-stylus": "~0.5.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
