@@ -74,8 +74,8 @@ module.exports = function(grunt) {
                 dest: '<%= topcoat.options.utilsPath %>'
             },
             theme: {
-                src: '<%= topcoat.options.src %>/*.zip',
-                dest: '<%= topcoat.options.src %>/'
+                src: '<%= topcoat.options.themePath %>/*.zip',
+                dest: '<%= topcoat.options.themePath %>/'
             },
             skins: {
                 src: '<%= topcoat.options.skinsPath %>/*.zip',
