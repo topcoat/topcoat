@@ -35,8 +35,8 @@
       "title": "Topcoat",
       "subtitle": "CSS for clean and fast web apps",
       "download": {
-        "url": "#",
-        "label": "Download version 0.4"
+        "url": "https://github.com/topcoat/topcoat/archive/0.5.0.zip",
+        "label": "Download version 0.5"
       },
       "homeURL": "http://topcoat.io",
       "siteNav": [
