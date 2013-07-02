@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Topcoat</title>
     <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
-    <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-dark.css">
+    <link rel="stylesheet" type="text/css" href="css/topcoat-desktop-dark.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -24,9 +24,12 @@
           </nav>
           <div class="combo">
             <select class="docNav">
-              <option value="index.html">Topcoat Desktop Dark</option>
+              <option value="index.html">Brackets</option>
+              <option value="main.html">Main</option>
+              <option value="theme.html">Theme</option>
+              <option value="topcoat-desktop-dark.html" selected="selected">Topcoat Desktop Dark</option>
               <option value="topcoat-desktop-light.html">Topcoat Desktop Light</option>
-              <option value="topcoat-mobile-dark.html" selected="selected">Topcoat Mobile Dark</option>
+              <option value="topcoat-mobile-dark.html">Topcoat Mobile Dark</option>
               <option value="topcoat-mobile-light.html">Topcoat Mobile Light</option>
             </select>
           </div>
@@ -120,9 +123,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 1.25rem;
-  font-size: 16px;
-  line-height: 3rem;
+  padding: 0 1.16rem;
+  font-size: 12px;
+  line-height: 2rem;
   letter-spacing: 1px;
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
@@ -131,8 +134,8 @@
   -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .topcoat-button:active,
 .topcoat-button.is-active,
@@ -217,8 +220,8 @@
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-button--large,
 .topcoat-button--large--quiet {
-  font-size: 1.3rem;
-  line-height: 4rem;
+  font-size: 1.167rem;
+  line-height: 2.6rem;
 }
 .topcoat-button--large:disabled,
 .topcoat-button--large.is-disabled {
@@ -329,8 +332,8 @@
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-button--large--cta {
-  font-size: 1.3rem;
-  line-height: 4rem;
+  font-size: 1.167rem;
+  line-height: 2.6rem;
 }
 .topcoat-button--large-cta:disabled,
 .topcoat-button--large--cta.is-disabled {
@@ -420,8 +423,8 @@ limitations under the License.
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 0.75rem;
-  line-height: 3rem;
+  padding: 0 0.5rem;
+  line-height: 2rem;
   letter-spacing: 1px;
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
@@ -430,8 +433,8 @@ limitations under the License.
   -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
   box-shadow: inset 0 1px rgba(255,255,255,0.12);
   border: 1px solid rgba(0,0,0,0.36);
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .topcoat-icon-button:active,
 .topcoat-icon-button.is-active {
@@ -546,9 +549,9 @@ limitations under the License.
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
-  width: 4rem;
-  height: 4rem;
-  line-height: 4rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
 }
 .topcoat-icon-button--large:active,
 .topcoat-icon-button--large.is-active {
@@ -618,13 +621,13 @@ limitations under the License.
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   vertical-align: middle;
 }
 .topcoat-icon--large {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 /*
@@ -706,7 +709,7 @@ Item
 }
 .topcoat-list__header {
   margin: 0;
-  padding: 4px 20px;
+  padding: 0.3rem 1.6rem;
   font-size: 0.9em;
   font-weight: 400;
   background-color: #3b3e40;
@@ -725,7 +728,7 @@ Item
 .topcoat-list__item {
   margin: 0;
   padding: 0;
-  padding: 1.25rem;
+  padding: 1.16rem;
   border-top: 1px solid #5e6061;
   border-bottom: 1px solid #2f3234;
 }
@@ -815,7 +818,7 @@ limitations under the License.
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  height: 4rem;
+  height: 2.6rem;
   padding-left: 1rem;
   padding-right: 1rem;
   background: #595b5b;
@@ -840,7 +843,7 @@ limitations under the License.
   background: transparent;
   border: none;
   margin: var-margin;
-  line-height: 4rem;
+  line-height: 2.6rem;
   vertical-align: top;
 }
 .topcoat-navigation-bar__title {
@@ -854,7 +857,7 @@ limitations under the License.
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 1.3rem;
+  font-size: 1.167rem;
   font-weight: 400;
   color: #fff;
 }
@@ -898,8 +901,8 @@ so that the dialog is resting on a dark, transparent background
   z-index: 10;
   margin: 20%;
   padding: var-overlay-padding;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   background-color: var-bg-color;
   border: 1px solid rgba(0,0,0,0.36);
   text-align: center;
@@ -981,14 +984,14 @@ limitations under the License.
   color: #c6c8c8;
   -webkit-appearance: none;
   padding: 0 0 0 2.7em;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
   background-image: url(&quot;../img/search_light.svg&quot;);
   background-position: 1em center;
   background-repeat: no-repeat;
-  -webkit-background-size: 16px;
-  -moz-background-size: 16px;
-  background-size: 16px;
+  -webkit-background-size: 12px;
+  -moz-background-size: 12px;
+  background-size: 12px;
 }
 .topcoat-search-input:focus,
 .topcoat-search-input--large:focus {
@@ -1030,16 +1033,16 @@ limitations under the License.
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-search-input--large {
-  height: 4rem;
-  font-size: 1.3rem;
+  height: 2.6rem;
+  font-size: 1.167rem;
   font-weight: 200;
   padding-left: 2.8em;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
   background-position: 1.2em center;
-  -webkit-background-size: 1.3rem;
-  -moz-background-size: 1.3rem;
-  background-size: 1.3rem;
+  -webkit-background-size: 1.167rem;
+  -moz-background-size: 1.167rem;
+  background-size: 1.167rem;
 }
 .topcoat-search-input--large:disabled,
 .topcoat-search-input--large.is-disabled {
@@ -1134,8 +1137,8 @@ limitations under the License.
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">.topcoat-text-input--large {
-  height: 4rem;
-  font-size: 1.3rem;
+  height: 2.6rem;
+  font-size: 1.167rem;
 }
 .topcoat-text-input--large:focus {
   background-color: #fff;
@@ -1189,13 +1192,13 @@ limitations under the License.
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 1.25rem;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  padding: 0 1.16rem;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   margin: var-margin;
   font: var-font;
   font-weight: 200;
-  line-height: 3rem;
+  line-height: 2rem;
   resize: none;
   outline: none;
   border: 1px solid rgba(0,0,0,0.36);
@@ -1230,7 +1233,7 @@ limitations under the License.
                   <pre class="css"><code data-language="css">.topcoat-textarea--large {
   font: var-font--large;
   font-weight: 200;
-  line-height: 4rem;
+  line-height: 2.6rem;
 }
 </code></pre>
                 </div>
