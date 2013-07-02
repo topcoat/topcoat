@@ -60,8 +60,7 @@
     "test": "test"
   },
   "dependencies": {
-    "prompt": "~0.2.9",
-    "grunt-contrib-stylus": "~0.5.1"
+    "prompt": "~0.2.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -74,7 +73,7 @@
     "csv": "~0.2.9",
     "grunt-contrib-cssmin": "~0.5.0",
     "debug": "~0.7.2",
-    "grunt-topcoat": "0.0.9",
+    "grunt-topcoat": "0.0.10",
     "jade": "~0.28.2",
     "grunt-topdoc": "0.0.1"
   },
