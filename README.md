@@ -48,7 +48,7 @@ For the details see our [Engineering Practices](https://github.com/topcoat/topco
 
 ### Testing
 
-For performance tests, see [test/perf/telemetry/README.md](https://github.com/topcoat/topcoat/blob/master/test/perf/telemetry/README.md).
+For performance tests, see [dev/test/perf/telemetry/](https://github.com/topcoat/topcoat/tree/master/dev/test/perf/telemetry).
 
 ### Building
 
