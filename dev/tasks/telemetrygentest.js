@@ -4,7 +4,7 @@ var fs   = require("fs"),
 
 module.exports = function (grunt) {
 
-    var TELEMETRY_DIR = 'test/perf/telemetry/perf/page_sets/',
+    var TELEMETRY_DIR = 'dev/test/perf/telemetry/perf/page_sets/',
         MASTER_JADE   = 'topcoat_telemetry.jade';
 
     grunt.registerTask('perf', 'Generates performance test', function (platform, theme) {
