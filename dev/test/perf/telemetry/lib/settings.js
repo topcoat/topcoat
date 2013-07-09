@@ -15,7 +15,7 @@ limitations under the License.
 
 function settings (contentLength) {
 	var post_options = {
-		host: 'http://localhost',
+		host: 'localhost',
 		port: '3000',
 		path: '/v2/benchmark',
 		method: 'POST',
