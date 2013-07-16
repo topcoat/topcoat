@@ -112,25 +112,18 @@ module.exports = function(grunt) {
                     src: '<%= topcoat.options.themePath %>/**/img/*',
                     dest: 'img'
                 }]
+            },
+            telemetry: {
+                files: [{
+                    expand: true,
+                    cwd: 'dev/test/perf/telemetry/perf/',
+                    src: ['**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/')
+                }, {
+                    src: ['<%= topcoat.compile.options.releasePath %>/**'],
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/')
+                }]
             }
-        },
-
-        /* telemetry task, added here because grunt.js file in subfolder can't load Npm tasks */
-        telemetry: {
-            files: [{
-                expand: true,
-                cwd: 'dev/test/perf/telemetry/perf/',
-                src: ['**'],
-                dest: path.join(chromiumSrc, 'tools/perf/')
-            }, {
-                src: ['<%= topcoat.compile.options.releasePath %>/**'],
-                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/')
-            }, {
-                expand: true,
-                flatten: true,
-                src: ['<%= topcoat.compile.options.controlsPath %>/**/release/**/*.css'],
-                dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/releaseBase/')
-            }]
         },
 
         jshint: {
@@ -181,9 +174,9 @@ module.exports = function(grunt) {
     grunt.loadTasks('dev/tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'cssmin', 'topdoc', 'copy']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'cssmin', 'topdoc', 'copy:release']);
     grunt.registerTask('release', ['default', 'clean:src']);
-    grunt.registerTask('compile', ['topcoat:compile', 'topdoc', 'copy']);
+    grunt.registerTask('compile', ['topcoat:compile', 'topdoc', 'copy:release']);
 
     grunt.registerTask('telemetry', '', function(platform, theme) {
         if (chromiumSrc === "") grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
