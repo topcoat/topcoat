@@ -76,8 +76,7 @@
     "grunt-topcoat": "0.0.10",
     "jade": "~0.28.2",
     "grunt-topdoc": "0.0.1",
-    "prompt": "~0.2.11",
-    "grunt-contrib-stylus": "~0.5.1"
+    "prompt": "~0.2.11"
   },
   "scripts": {
     "test": "grunt test"
