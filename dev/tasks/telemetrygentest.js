@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                                            caseName, platform, theme, css) {
 
         var jadeContent = fs.readFileSync(jadePath, "utf8"),
-            getHtml = jade.compile(jadeContent, {pretty: true});
+            getHtml = jade.compile(jadeContent);
 
         jadeCompileData[caseName] = {
             options: {
