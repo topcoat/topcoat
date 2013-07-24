@@ -93,6 +93,21 @@ module.exports = function(grunt) {
             }
         },
 
+        htmlmin: {
+            telemetry: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files:[{
+                    expand: true,
+                    src: ['dev/test/**/topcoat/*.html'],
+                    dest: '',
+                    ext: '.test.html',
+                }],
+            },
+        },
+
         clean: {
             src: ['<%= topcoat.options.src %>/'],
             release: ['<%= topcoat.compile.options.releasePath %>/'],
@@ -169,6 +184,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-topdoc');
     grunt.loadNpmTasks('grunt-zip');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     //Load local tasks
     grunt.loadTasks('dev/tasks');
@@ -180,6 +196,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('telemetry', '', function(platform, theme) {
         if (chromiumSrc === "") grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
-        grunt.task.run('check_chromium_src', 'perf:'.concat(platform || 'mobile').concat(':').concat(theme || 'light'), 'copy:telemetry');
+        grunt.task.run('check_chromium_src', 'perf:'.concat(platform || 'mobile').concat(':').concat(theme || 'light'), 'htmlmin:telemetry', 'copy:telemetry');
     });
 };
