@@ -1,6 +1,6 @@
 var fs   = require("fs"),
     jade = require("jade"),
-    path = require("path")
+    path = require("path");
 
 module.exports = function (grunt) {
 
@@ -34,17 +34,17 @@ module.exports = function (grunt) {
 
         var jades = grunt.file.expand('src/**/test/**/topcoat_*.test.jade');
 
-        if (jades.length == 0){
+        if (jades.length === 0){
             throw new Error("ERROR: No jade file is found in src/../test/perf/");
         }
 
         return jades;
-    }
+    };
 
     var prepareCSS = function(platform, theme) {
 
-        return "release/css/topcoat-" + platform + "-" + theme + ".css";
-    }
+        return "release/css/topcoat-" + platform + "-" + theme + ".min.css";
+    };
 
     var prepareJadeCompileData = function (jadeCompileData, jadePath,
                                            caseName, platform, theme, css) {
@@ -64,8 +64,8 @@ module.exports = function (grunt) {
             },
             src:  TELEMETRY_DIR + "topcoat/" + MASTER_JADE,
             dest: TELEMETRY_DIR + "topcoat/" + caseName + ".test.html"
-        }
-    }
+        };
+    };
 
     var createTelemetryJSON = function (caseName) {
 
@@ -80,20 +80,18 @@ module.exports = function (grunt) {
                     }
                 }
             ]
-        }
+        };
 
         var jsonFilePATH = TELEMETRY_DIR + caseName + '.test.json';
 
         fs.writeFileSync(
             jsonFilePATH,
             JSON.stringify(jsonContent, null, 4),
-            'utf8')
-
-        console.log("File " + jsonFilePATH + " created.")
-    }
+            'utf8');
+    };
 
     var batchCompileJade = function(data){
         grunt.config('jade', data);
         grunt.task.run('jade');
-    }
-}
+    };
+};
