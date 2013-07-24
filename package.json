@@ -1,6 +1,6 @@
 {
   "name": "topcoat",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
   "topcoat": {
@@ -73,11 +73,11 @@
     "csv": "~0.2.9",
     "grunt-contrib-cssmin": "~0.5.0",
     "debug": "~0.7.2",
-    "grunt-topcoat": "0.0.10",
     "jade": "~0.28.2",
     "grunt-topdoc": "0.0.1",
     "prompt": "~0.2.11",
-    "grunt-contrib-stylus": "~0.5.1"
+    "grunt-topcoat": "0.0.11",
+    "grunt-contrib-stylus": "~0.6.0"
   },
   "scripts": {
     "test": "grunt test"
