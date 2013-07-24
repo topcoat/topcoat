@@ -1,0 +1,27 @@
+pre, code {
+    color: #FFF;
+}
+
+pre .css-property {
+    color: #AD70DD;
+}
+
+pre .string, pre .support.value  {
+    color: #AD70DD;
+}
+
+pre .regexp {
+    color: #FFF;
+}
+
+pre .vendor-prefix {
+    color: #FFF;
+}
+
+pre .constant.numeric, pre .keyword.unit {
+    color: #88D527;
+}
+
+pre .attribute, pre .variable {
+    color: #88D527;
+}
