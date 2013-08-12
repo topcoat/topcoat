@@ -30,7 +30,7 @@
     }
   },
   "topdoc": {
-    "template": "https://github.com/topcoat/usage-guide-theme",
+    "template": "https://github.com/topcoat/topdoc-theme",
     "templateData": {
       "title": "Topcoat",
       "subtitle": "CSS for clean and fast web apps",
@@ -42,7 +42,7 @@
       "siteNav": [
         {
           "url": "http://topcoat.io/topcoat",
-          "text": "Usage Guidelines"
+          "text": "Demo"
         },
         {
           "url": "http://bench.topcoat.io/",
