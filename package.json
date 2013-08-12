@@ -4,7 +4,7 @@
   "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
   "topdoc": {
-    "template": "https://github.com/topcoat/usage-guide-theme",
+    "template": "https://github.com/topcoat/topdoc-theme",
     "templateData": {
       "title": "Topcoat",
       "subtitle": "CSS for clean and fast web apps",

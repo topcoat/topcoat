@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
         stylus: {
             options: {
-                paths: grunt.file.expand('node_modules/topcoat-*/src')
+                paths: grunt.file.expand(__dirname + '/node_modules/topcoat-*/src/')
                         /*
                          * FIXME: We need to refactor all components to
                          * remove mixins directory *See button & button-base
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
                 options: {
                     source: 'css',
                     destination: './',
-                    template: 'https://github.com/topcoat/usage-guide-theme',
+                    template: '<%= pkg.topdoc.template %>',
                     templateData: '<%= pkg.topdoc.templateData %>'
                 }
             }
