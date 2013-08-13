@@ -135,7 +135,9 @@ module.exports = function(grunt) {
                     src: ['**'],
                     dest: path.join(chromiumSrc, 'tools/perf/')
                 }, {
-                    src: ['<%= topcoat.compile.options.releasePath %>/**'],
+                    expand: true,
+                    cwd: '<%= topcoat.compile.options.releasePath %>',
+                    src: ['**'],
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/')
                 }]
             }
