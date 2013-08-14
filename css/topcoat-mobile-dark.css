@@ -13,6 +13,11 @@
   font-weight: 600;
 }
 
+/*preload search background*/
+html{
+    background: url( "../img/search_dark.svg") no-repeat -9999px -9999px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -880,6 +885,7 @@ limitations under the License.
 .topcoat-search-input--large:focus {
   background-color: #fff;
   color: var-color-focus;
+  background-image: url("../img/search_dark.svg");
 }
 .topcoat-search-input::-webkit-search-cancel-button,
 .topcoat-search-input::-webkit-search-decoration {
