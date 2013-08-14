@@ -148,12 +148,12 @@ module.exports = function(grunt) {
                     expand: true,
                     flatten: true,
                     src: 'node_modules/topcoat-theme/font/**',
-                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/font')
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/font')
                 }, {
                     expand: true,
                     flatten: true,
                     src: 'node_modules/topcoat-theme/img/*',
-                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/img')
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/img')
                 }, {
                     src: ['css/**'],
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/')
