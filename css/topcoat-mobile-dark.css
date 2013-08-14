@@ -880,6 +880,7 @@ limitations under the License.
 .topcoat-search-input--large:focus {
   background-color: #fff;
   color: var-color-focus;
+  background-image: url("../img/search_dark.svg");
 }
 .topcoat-search-input::-webkit-search-cancel-button,
 .topcoat-search-input::-webkit-search-decoration {
