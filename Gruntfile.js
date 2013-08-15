@@ -16,9 +16,9 @@ limitations under the License.
 /*global module:false, require:false, process:false*/
 
 var path = require('path'),
-    debug = require('debug')('build'),
     os = require('os'),
     chromiumSrc = process.env.CHROMIUM_SRC || "";
+
 
 module.exports = function(grunt) {
     'use strict';
@@ -26,37 +26,68 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        topcoat: {
+        stylus: {
             options: {
-                repos: '<%= pkg.topcoat %>',
-                src: 'src',
-                controlsPath: '<%= topcoat.options.src %>/controls',
-                skinsPath: '<%= topcoat.options.src %>/skins',
-                themePath: '<%= topcoat.options.src %>/theme',
-                utilsPath: '<%= topcoat.options.src %>/utils',
+                paths: grunt.file.expand(__dirname + '/node_modules/topcoat-*/src/')
+                        /*
+                         * FIXME: We need to refactor all components to
+                         * remove mixins directory *See button & button-base
+                         */
+                         .concat(grunt.file.expand('node_modules/topcoat-*/src/mixins')),
             },
-            download: {
+
+            mobilelight: {
                 options: {
-                    hostname: 'https://github.com/',
-                    proxy: '',
-                    download: true,
-                    compile: false
-                }
+                    import: ['theme-topcoat-mobile-light', 'nib'],
+                    compress: false
+                },
+
+                files: [{
+                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    dest: 'css/topcoat-mobile-light.css'
+                }]
             },
-            compile: {
+
+            mobiledark: {
                 options: {
-                    themePrefix: 'theme',
-                    download: false,
-                    compile: true,
-                    releasePath: 'css'
-                }
+                    import: ['theme-topcoat-mobile-dark', 'nib'],
+                    compress: false
+                },
+
+                files: [{
+                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    dest: 'css/topcoat-mobile-dark.css'
+                }]
+            },
+
+            desktoplight: {
+                options: {
+                    import: ['theme-topcoat-desktop-light', 'nib'],
+                    compress: false
+                },
+                files: [{
+                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    dest: 'css/topcoat-desktop-light.css'
+                }]
+            },
+
+            desktopdark: {
+                options: {
+                    import: ['theme-topcoat-desktop-dark', 'nib'],
+                    compress: false
+                },
+
+                files: [{
+                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    dest: 'css/topcoat-desktop-dark.css'
+                }]
             }
         },
 
         topdoc: {
             usageguides: {
                 options: {
-                    source: '<%= topcoat.compile.options.releasePath %>/',
+                    source: 'css',
                     destination: './',
                     template: '<%= pkg.topdoc.template %>',
                     templateData: '<%= pkg.topdoc.templateData %>'
@@ -64,31 +95,12 @@ module.exports = function(grunt) {
             }
         },
 
-        unzip: {
-            controls: {
-                src: '<%= topcoat.options.controlsPath %>/*.zip',
-                dest: '<%= topcoat.options.controlsPath %>'
-            },
-            utils: {
-                src: '<%= topcoat.options.utilsPath %>/*.zip',
-                dest: '<%= topcoat.options.utilsPath %>'
-            },
-            theme: {
-                src: '<%= topcoat.options.themePath %>/*.zip',
-                dest: '<%= topcoat.options.themePath %>/'
-            },
-            skins: {
-                src: '<%= topcoat.options.skinsPath %>/*.zip',
-                dest: '<%= topcoat.options.skinsPath %>/'
-            }
-        },
-
         cssmin: {
             minify: {
                 expand: true,
-                cwd: '<%= topcoat.compile.options.releasePath %>/',
+                cwd: 'css',
                 src: ['*.css', '!*.min.css'],
-                dest: '<%= topcoat.compile.options.releasePath %>/',
+                dest: 'css',
                 ext: '.min.css'
             }
         },
@@ -99,7 +111,7 @@ module.exports = function(grunt) {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files:[{
+                files: [{
                     expand: true,
                     src: ['dev/test/**/topcoat/*.html'],
                     dest: '',
@@ -109,9 +121,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            src: ['<%= topcoat.options.src %>/'],
-            release: ['<%= topcoat.compile.options.releasePath %>/'],
-            zip: ['<%= topcoat.options.src %>/**/*.zip']
+            release: ['css']
         },
 
         copy: {
@@ -119,12 +129,12 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: '<%= topcoat.options.themePath %>/**/font/**',
+                    src: 'node_modules/topcoat-theme/font/**',
                     dest: 'font'
                 }, {
                     expand: true,
                     flatten: true,
-                    src: '<%= topcoat.options.themePath %>/**/img/*',
+                    src: 'node_modules/topcoat-theme/img/*',
                     dest: 'img'
                 }]
             },
@@ -135,7 +145,17 @@ module.exports = function(grunt) {
                     src: ['**'],
                     dest: path.join(chromiumSrc, 'tools/perf/')
                 }, {
-                    src: ['<%= topcoat.compile.options.releasePath %>/**'],
+                    expand: true,
+                    flatten: true,
+                    src: 'node_modules/topcoat-theme/font/**',
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/font')
+                }, {
+                    expand: true,
+                    flatten: true,
+                    src: 'node_modules/topcoat-theme/img/*',
+                    dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/img')
+                }, {
+                    src: ['css/**'],
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/')
                 }]
             }
@@ -168,7 +188,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['<%= topcoat.options.srcPath %>/**/*.styl'],
+            files: ['src/**/*.styl'],
             tasks: ['compile']
         }
 
@@ -177,12 +197,11 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-topdoc');
-    grunt.loadNpmTasks('grunt-zip');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
@@ -190,7 +209,7 @@ module.exports = function(grunt) {
     grunt.loadTasks('dev/tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'topcoat', 'cssmin', 'topdoc', 'copy:release']);
+    grunt.registerTask('default', ['clean', 'stylus', 'cssmin', 'topdoc', 'copy:release']);
     grunt.registerTask('release', ['default', 'clean:src']);
     grunt.registerTask('compile', ['topcoat:compile', 'topdoc', 'copy:release']);
 

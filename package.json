@@ -1,42 +1,16 @@
 {
   "name": "topcoat",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
-  "topcoat": {
-    "controls": {
-      "topcoat/button-base": "0.3.0",
-      "topcoat/navigation-bar-base": "0.3.0",
-      "topcoat/input-base": "0.2.0",
-      "topcoat/list-base": "0.2.0",
-      "topcoat/textarea-base": "0.1.0",
-      "topcoat/overlay-base": "0.1.0"
-    },
-    "utils": {
-      "topcoat/utils": "0.2.0"
-    },
-    "theme": {
-      "topcoat/theme": "0.4.0"
-    },
-    "skins": {
-      "topcoat/button": "0.3.0",
-      "topcoat/icon-button": "0.2.0",
-      "topcoat/navigation-bar": "0.3.0",
-      "topcoat/list": "0.3.0",
-      "topcoat/text-input": "0.2.0",
-      "topcoat/textarea": "0.1.0",
-      "topcoat/search-input": "0.1.0",
-      "topcoat/overlay": "0.1.0"
-    }
-  },
   "topdoc": {
     "template": "https://github.com/topcoat/topdoc-theme",
     "templateData": {
       "title": "Topcoat",
       "subtitle": "CSS for clean and fast web apps",
       "download": {
-        "url": "https://github.com/topcoat/topcoat/archive/0.5.1.zip",
-        "label": "Download version 0.5.1"
+        "url": "https://github.com/topcoat/topcoat/archive/0.6.0.zip",
+        "label": "Download version 0.6.0"
       },
       "homeURL": "http://topcoat.io",
       "siteNav": [
@@ -60,7 +34,23 @@
     "test": "test"
   },
   "dependencies": {
-    "prompt": "~0.2.9"
+    "topcoat-utils": "~0.1.3",
+    "topcoat-radio-button-base": "~0.1.1",
+    "topcoat-checkbox-base": "~0.1.3",
+    "topcoat-input-base": "~0.3.0",
+    "topcoat-textarea-base": "~0.2.0",
+    "topcoat-button-base": "~0.6.0",
+    "topcoat-list-base": "~0.3.0",
+    "topcoat-checkbox": "~0.3.4",
+    "topcoat-radio-button": "~0.1.1",
+    "topcoat-theme": "~0.5.4",
+    "topcoat-list": "~0.4.0",
+    "topcoat-navigation-bar-base": "~0.4.0",
+    "topcoat-navigation-bar": "~0.4.0",
+    "topcoat-button": "~0.5.0",
+    "topcoat-search-input": "~0.2.0",
+    "topcoat-textarea": "~0.2.0",
+    "topcoat-text-input": "~0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -69,19 +59,15 @@
     "grunt-contrib-watch": "~0.1.4",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-exec": "~0.4.2",
-    "grunt-zip": "~0.5.1",
-    "csv": "~0.2.9",
     "grunt-contrib-cssmin": "~0.5.0",
-    "debug": "~0.7.2",
     "jade": "~0.28.2",
     "grunt-topdoc": "0.0.1",
-    "prompt": "~0.2.11",
-    "grunt-topcoat": "0.0.11",
     "grunt-contrib-stylus": "~0.6.0",
     "grunt-contrib-htmlmin": "~0.1.3"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "grunt"
   },
   "repository": {
     "type": "git",
