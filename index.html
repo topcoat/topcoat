@@ -1184,6 +1184,11 @@ input[type=&quot;radio&quot;] {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
+.radio-button--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 
 /**
 *
@@ -1285,6 +1290,13 @@ input[type=&quot;radio&quot;] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
+}
+.radio-button--disabled,
+.topcoat-radio-button__label:disabled,
+.topcoat-radio-button__label.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }</code></pre>
                 </div>
               </section>
@@ -1294,23 +1306,19 @@ input[type=&quot;radio&quot;] {
             <header>
               <h2>Radio Button</h2>
             </header>
-            <section class="component">:disabled Disabled state
-.is-disabled Simulates a disabled state on mobile devices
-.topcoat-radio-label
-
-<!-- NO LABEL -->
+            <section class="component"><!-- NO LABEL -->
 <label class="topcoat-radio-button__label">
 <input type="radio" name="topcoat">
 <div class="topcoat-radio-button"></div>
 </label>
-
+<br>
 <!-- LEFT LABEL -->
 <label class="topcoat-radio-button__label">
 Left label
 <input type="radio" name="topcoat">
 <div class="topcoat-radio-button"></div>
 </label>
-
+<br>
 <!-- RIGHT LABEL -->
 <label class="topcoat-radio-button__label">
 <input type="radio" name="topcoat">
@@ -1322,23 +1330,19 @@ Right label
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">:disabled Disabled state
-.is-disabled Simulates a disabled state on mobile devices
-.topcoat-radio-label
-
-&lt;!-- NO LABEL --&gt;
+                  <pre class="html"><code data-language="html">&lt;!-- NO LABEL --&gt;
 &lt;label class=&quot;topcoat-radio-button__label&quot;&gt;
 &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;
 &lt;div class=&quot;topcoat-radio-button&quot;&gt;&lt;/div&gt;
 &lt;/label&gt;
-
+&lt;br&gt;
 &lt;!-- LEFT LABEL --&gt;
 &lt;label class=&quot;topcoat-radio-button__label&quot;&gt;
 Left label
 &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;
 &lt;div class=&quot;topcoat-radio-button&quot;&gt;&lt;/div&gt;
 &lt;/label&gt;
-
+&lt;br&gt;
 &lt;!-- RIGHT LABEL --&gt;
 &lt;label class=&quot;topcoat-radio-button__label&quot;&gt;
 &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;
@@ -1385,7 +1389,8 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button:after {
   -webkit-box-shadow: 0 1px rgba(255,255,255,0.5);
   box-shadow: 0 1px rgba(255,255,255,0.5);
 }
-input[type=&quot;radio&quot;]:focus + .topcoat-radio-button:before {
+input[type=&quot;radio&quot;]:focus + .topcoat-radio-button:before,
+.topcoat-radio-button__label.is-focused &gt; .topcoat-radio-button:before {
   border: 1px solid #0940fd;
   -webkit-box-shadow: 0 0 0 2px #6fb5f1;
   box-shadow: 0 0 0 2px #6fb5f1;
