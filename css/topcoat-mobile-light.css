@@ -1,74 +1,30 @@
-@font-face {
-  font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Regular.otf");
-}
-@font-face {
-  font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Light.otf");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Semibold.otf");
-  font-weight: 600;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #dfe2e2;
-  color: #000;
-  font: 16px "Source Sans", helvetica, arial, sans-serif;
-  font-weight: 200;
-  text-rendering: optimizeLegibility;
-}
-
-.topcoat-icon--menu-stack {
-  background: url("../img/hamburger_dark.svg") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-}
-
-.quarter {
-  width: 25%;
-}
-.half {
-  width: 50%;
-}
-.three-quarters {
-  width: 75%;
-}
-.third {
-  width: 33.333%;
-}
-.two-thirds {
-  width: 66.666%;
-}
-.full {
-  width: 100%;
-}
-
-.left {
-  text-align: left;
-}
-.center {
-  text-align: center;
-}
-.right {
-  text-align: right;
-}
-
-.reset-ui {
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
   padding: 0;
   margin: 0;
   font: inherit;
@@ -84,39 +40,74 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-decoration: none;
+}
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.button--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
-/*
- Button
- ------
-
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
-    <a class="topcoat-button">Button</a>
-    <a class="topcoat-button is-active">Button</a>
-    <a class="topcoat-button is-disabled">Button</a>
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.button,
 .topcoat-button,
 .topcoat-button--quiet,
 .topcoat-button--large,
@@ -147,6 +138,53 @@ limitations under the License.
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-decoration: none;
+}
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.button--disabled,
+.topcoat-button:disabled,
+.topcoat-button.is-disabled,
+.topcoat-button--quiet:disabled,
+.topcoat-button--quiet.is-disabled,
+.topcoat-button--large:disabled,
+.topcoat-button--large.is-disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--large--quiet.is-disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--cta.is-disabled,
+.topcoat-button--large-cta:disabled,
+.topcoat-button--large--cta.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+/*
+ Button
+ ------
+
+ :active - Active state
+
+ .is-active - Simulates an active state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+    <button class="topcoat-button">Button</button>
+    <button class="topcoat-button is-active">Button</button>
+    <button class="topcoat-button is-disabled">Button</button>
+*/
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
   padding: 0 1.25rem;
   font-size: 16px;
   line-height: 3rem;
@@ -169,12 +207,6 @@ limitations under the License.
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button:disabled,
-.topcoat-button.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
 /*
  Quiet Button
  ------------
@@ -187,9 +219,9 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--quiet">Button</a>
-    <a class="topcoat-button--quiet is-active">Button</a>
-    <a class="topcoat-button--quiet is-disabled">Button</a>
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet is-active">Button</button>
+    <button class="topcoat-button--quiet is-disabled">Button</button>
 */
 .topcoat-button--quiet {
   background: transparent;
@@ -208,12 +240,6 @@ limitations under the License.
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button--quiet:disabled,
-.topcoat-button--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
 /*
  Large Button
  ------------
@@ -226,20 +252,14 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large" >Button</a>
-    <a class="topcoat-button--large is-active" >Button</a>
-    <a class="topcoat-button--large is-disabled" >Button</a>
+    <button class="topcoat-button--large" >Button</button>
+    <button class="topcoat-button--large is-active" >Button</button>
+    <button class="topcoat-button--large is-disabled" >Button</button>
 */
 .topcoat-button--large,
 .topcoat-button--large--quiet {
   font-size: 1.3rem;
   line-height: 4rem;
-}
-.topcoat-button--large:disabled,
-.topcoat-button--large.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 /*
  Large Quiet Button
@@ -254,21 +274,15 @@ limitations under the License.
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--large--quiet" >Button</a>
-    <a class="topcoat-button--large--quiet is-active" >Button</a>
-    <a class="topcoat-button--large--quiet is-disabled" >Button</a>
+    <button class="topcoat-button--large--quiet" >Button</button>
+    <button class="topcoat-button--large--quiet is-active" >Button</button>
+    <button class="topcoat-button--large--quiet is-disabled" >Button</button>
 */
 .topcoat-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--large--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 /*
  Call To Action Button
@@ -283,9 +297,9 @@ limitations under the License.
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--cta" >Button</a>
-    <a class="topcoat-button--cta is-active" >Button</a>
-    <a class="topcoat-button--cta is-disabled" >Button</a>
+    <button class="topcoat-button--cta" >Button</button>
+    <button class="topcoat-button--cta is-active" >Button</button>
+    <button class="topcoat-button--cta is-disabled" >Button</button>
 
 */
 .topcoat-button--cta,
@@ -306,12 +320,6 @@ limitations under the License.
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button--cta:disabled,
-.topcoat-button--cta.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
 /*
  Large Call To Action Button
  ---------------------------
@@ -324,73 +332,409 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large--cta" >Button</a>
-    <a class="topcoat-button--large--cta is-active" >Button</a>
-    <a class="topcoat-button--large--cta is-disabled" >Button</a>
+    <button class="topcoat-button--large--cta" >Button</button>
+    <button class="topcoat-button--large--cta is-active" >Button</button>
+    <button class="topcoat-button--large--cta is-disabled" >Button</button>
 */
 .topcoat-button--large--cta {
   font-size: 1.3rem;
   line-height: 4rem;
 }
-.topcoat-button--large-cta:disabled,
-.topcoat-button--large--cta.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
-
-/*
- Icon Button
- -----------
-
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
-    <a class="topcoat-icon-button">
-        <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button is-active">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button is-disabled">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-*/
-.topcoat-icon-button,
-.topcoat-icon-button--quiet,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
-  position: relative;
-  display: inline-block;
+input[type="checkbox"] {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
   vertical-align: top;
+  outline: none;
+}
+.checkbox {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.checkbox:before,
+.checkbox:after {
+  content: '';
+  position: absolute;
+}
+.checkbox:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+input[type="checkbox"] {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+.checkbox,
+.topcoat-checkbox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox__label,
+.topcoat-checkbox__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox--disabled,
+.topcoat-checkbox__label:disabled,
+.topcoat-checkbox__label.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.checkbox:before,
+.checkbox:after,
+.topcoat-checkbox:before,
+.topcoat-checkbox:after {
+  content: '';
+  position: absolute;
+}
+.checkbox:before,
+.topcoat-checkbox:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/*
+ Checkbox
+ --------
+
+ :focus - Focus state
+
+ .is-focused - Simulates an focus state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+     <label class="topcoat-checkbox__label">
+         <input type="checkbox">
+         <div class="topcoat-checkbox"></div>
+         Default
+     </label>
+
+     <br>
+     <br>
+
+     <label class="topcoat-checkbox__label is-active">
+         <input type="checkbox">
+         <div class="topcoat-checkbox"></div>
+         Active
+     </label>
+
+     <br>
+     <br>
+
+     <label class="topcoat-checkbox__label is-focused">
+         <input type="checkbox">
+         <div class="topcoat-checkbox"></div>
+         Focused
+     </label>
+
+     <br>
+     <br>
+
+     <label class="topcoat-checkbox__label is-disabled">
+         <input type="checkbox">
+         <div class="topcoat-checkbox"></div>
+         Disabled
+     </label>
+*/
+.topcoat-checkbox {
+  height: 2rem;
+}
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0;
+  margin-right: -2rem;
+  margin-bottom: -2rem;
+  margin-left: 0;
+}
+input[type="checkbox"]:checked + .topcoat-checkbox:after,
+.topcoat-checkbox__label.is-active > .topcoat-checkbox:after {
+  opacity: 1;
+}
+.topcoat-checkbox__label {
+  line-height: 2rem;
+}
+.topcoat-checkbox:before {
+  width: 2rem;
+  height: 2rem;
+  background: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
+}
+.topcoat-checkbox {
+  width: 2rem;
+  height: 2rem;
+}
+.topcoat-checkbox:after {
+  top: 0;
+  opacity: 0;
+  width: 28px;
+  height: 11px;
+  background: transparent;
+  border: 3px solid #666;
+  border-width: 7px;
+  border-top: none;
+  border-right: none;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -o-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+}
+input[type="checkbox"]:focus + .topcoat-checkbox:before,
+.topcoat-checkbox__label.is-focused > .topcoat-checkbox:before {
+  border: 1px solid #0940fd;
+  -webkit-box-shadow: 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.input {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  vertical-align: top;
+  outline: none;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.list-container {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -402,190 +746,55 @@ limitations under the License.
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0 0.75rem;
-  line-height: 3rem;
-  letter-spacing: 1px;
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  vertical-align: baseline;
-  background-color: #e5e9e8;
-  -webkit-box-shadow: inset 0 1px #fff;
-  box-shadow: inset 0 1px #fff;
-  border: 1px solid #a5a8a8;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
-.topcoat-icon-button:active,
-.topcoat-icon-button.is-active {
-  background-color: #d3d7d7;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
-.topcoat-icon-button:disabled,
-.topcoat-icon-button.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-/*
- Quiet Icon Button
- -----------------
-
- :active - Button active state
-
- .is-active - Simulates active state for a button on touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-    <a class="topcoat-icon-button--quiet">
-        <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button--quiet is-active">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button--quiet is-disabled">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-*/
-.topcoat-icon-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.topcoat-icon-button--quiet:active,
-.topcoat-icon-button--quiet.is-active,
-.topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet.is-active {
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  background-color: #d3d7d7;
-  border: 1px solid #a5a8a8;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-.topcoat-icon-button--quiet:disabled,
-.topcoat-icon-button--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-/*
- Large Icon Button
- -----------------
-
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
-    <a class="topcoat-icon-button--large">
-        <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button--large is-active">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button--large is-disabled">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
-    </a>
-*/
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
-  width: 4rem;
-  height: 4rem;
-  line-height: 4rem;
-}
-.topcoat-icon-button--large:active,
-.topcoat-icon-button--large.is-active {
-  background-color: #d3d7d7;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-.topcoat-icon-button--large:disabled,
-.topcoat-icon-button--large.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-/*
- Large Quiet Icon Button
- -----------------------
-
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
-    <a class="topcoat-icon-button--large--quiet">
-        <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button--large--quiet is-active">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="topcoat-icon-button--large--quiet is-disabled">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
-    </a>
-*/
-.topcoat-icon-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.topcoat-icon-button--large--quiet:disabled,
-.topcoat-icon-button--large--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-.topcoat-icon,
-.topcoat-icon--large {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
-  width: 1.5rem;
-  height: 1.5rem;
-  vertical-align: middle;
-}
-.topcoat-icon--large {
-  width: 2.5rem;
-  height: 2.5rem;
+.list-item {
+  margin: 0;
+  padding: 0;
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 /*
  List
  ------------
@@ -653,38 +862,153 @@ limitations under the License.
   border-top: 1px solid rgba(0,0,0,0.05);
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.navigation-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  white-space: nowrap;
+  overflow: hidden;
+  word-spacing: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.navigation-bar__item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+.navigation-bar__title {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 /*
 Navigation Bar
 --------------
 
     <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet">
-              <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-            </a>
-        </div>
-        <div class="topcoat-navigation-bar__item center half">
+        <div class="topcoat-navigation-bar__item center full">
             <h1 class="topcoat-navigation-bar__title">Header</h1>
-        </div>
-        <div class="topcoat-navigation-bar__item right quarter">
-            <a class="topcoat-icon-button--quiet">
-              <span class="topcoat-icon topcoat-icon--edit"></span>
-            </a>
         </div>
     </div>
 */
@@ -714,8 +1038,8 @@ Navigation Bar
   padding-right: 1rem;
   background: #e5e9e8;
   color: #000;
-  -webkit-box-shadow: inset 0 -1 #b9bcbc, 0 1px rgba(0,0,0,0.95);
-  box-shadow: inset 0 -1 #b9bcbc, 0 1px rgba(0,0,0,0.95);
+  -webkit-box-shadow: inset 0 -1px #b9bcbc, 0 1px rgba(0,0,0,0.95);
+  box-shadow: inset 0 -1px #b9bcbc, 0 1px rgba(0,0,0,0.95);
 }
 .topcoat-navigation-bar__item {
   -webkit-box-sizing: border-box;
@@ -733,7 +1057,7 @@ Navigation Bar
   color: inherit;
   background: transparent;
   border: none;
-  margin: var-margin;
+  margin: 0;
   line-height: 4rem;
   vertical-align: top;
 }
@@ -753,87 +1077,322 @@ Navigation Bar
   color: #000;
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
-/*
-
-
-Use this class to create a dialog element. Make sure to apply ".topcoat-overlay-bg" an empty div on the page as well,
-so that the dialog is resting on a dark, transparent background
-
-	<div class="topcoat-overlay-bg"></div>
-	<aside class="topcoat-overlay">
-		<h1>Are eagles nice ?</h1>
-		<div class="topcoat-overlay-buttons">
-			<button role="button" class="topcoat-button">No</button>
-			<button role="button" class="topcoat-button--cta">Yes</button>
-		</div>
-	</aside>
-
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
-.topcoat-overlay {
-  width: 50%;
-  height: auto;
+input[type="radio"] {
+  position: absolute;
   overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+.radio-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-button__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-button:before,
+.radio-button:after {
+  content: '';
   position: absolute;
-  z-index: 10;
-  margin: 20%;
-  padding: var-overlay-padding;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  background-color: var-bg-color;
-  border: 1px solid #a5a8a8;
-  text-align: center;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
 }
-.topcoat-overlay h1 {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #d3d7d7;
+.radio-button:after {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.topcoat-overlay-bg {
-  position: absolute;
-  z-index: 5;
-  background-color: var-overlay-bg-color;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: var-bg-box-shadow;
-  box-shadow: var-bg-box-shadow;
+.radio-button:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
-.topcoat-overlay-buttons {
-  margin-top: 20px;
-}
-.topcoat-overlay-buttons .topcoat-button,
-.topcoat-overlay-buttons .topcoat-button--cta {
-  margin: 5px;
+.radio-button--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+input[type="radio"] {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+.radio-button,
+.topcoat-radio-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-button__label,
+.topcoat-radio-button__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-button:before,
+.radio-button:after,
+.topcoat-radio-button:before,
+.topcoat-radio-button:after {
+  content: '';
+  position: absolute;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.radio-button:after,
+.topcoat-radio-button:after {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.radio-button:before,
+.topcoat-radio-button:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.radio-button--disabled,
+.topcoat-radio-button__label:disabled,
+.topcoat-radio-button__label.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+/*
+ Radio Button
+ -----------
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+    <!-- NO LABEL -->
+    <label class="topcoat-radio-button__label">
+        <input type="radio" name="topcoat">
+        <div class="topcoat-radio-button"></div>
+    </label>
+    <br>
+    <!-- LEFT LABEL -->
+    <label class="topcoat-radio-button__label">
+        Left label
+        <input type="radio" name="topcoat">
+        <div class="topcoat-radio-button"></div>
+    </label>
+    <br>
+    <!-- RIGHT LABEL -->
+    <label class="topcoat-radio-button__label">
+        <input type="radio" name="topcoat">
+        <div class="topcoat-radio-button"></div>
+        Right label
+    </label>
+*/
+input[type="radio"] {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0;
+  margin-right: -2rem;
+  margin-bottom: -2rem;
+  margin-left: 0;
+}
+input[type="radio"]:checked + .topcoat-radio-button:after {
+  opacity: 1;
+}
+.topcoat-radio-button__label {
+  color: #454545;
+  line-height: 2rem;
+}
+.topcoat-radio-button:before {
+  width: 2rem;
+  height: 2rem;
+  background: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
+}
+.topcoat-radio-button {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+.topcoat-radio-button:after {
+  opacity: 0;
+  width: 1rem;
+  height: 1rem;
+  background: #666;
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px rgba(255,255,255,0.5);
+  box-shadow: 0 1px rgba(255,255,255,0.5);
+}
+input[type="radio"]:focus + .topcoat-radio-button:before,
+.topcoat-radio-button__label.is-focused > .topcoat-radio-button:before {
+  border: 1px solid #0940fd;
+  -webkit-box-shadow: 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 /*
  Search Input
  ------------
@@ -848,18 +1407,21 @@ limitations under the License.
  */
 .topcoat-search-input,
 .topcoat-search-input--large {
-  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 1.25rem;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  margin: 5px;
-  height: 3rem;
-  font: inherit;
-  font-weight: 200;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  vertical-align: top;
   outline: none;
+  height: 3rem;
   border: 1px solid #a5a8a8;
   background-color: #e5e9e8;
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
@@ -879,7 +1441,7 @@ limitations under the License.
 .topcoat-search-input:focus,
 .topcoat-search-input--large:focus {
   background-color: #fff;
-  color: var-color-focus;
+  color: #000;
 }
 .topcoat-search-input::-webkit-search-cancel-button,
 .topcoat-search-input::-webkit-search-decoration {
@@ -926,21 +1488,41 @@ limitations under the License.
   pointer-events: none;
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 /*
  Text Input
  ----------
@@ -954,19 +1536,25 @@ limitations under the License.
 */
 .topcoat-text-input,
 .topcoat-text-input--large {
-  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  vertical-align: top;
+  outline: none;
+  height: 3rem;
   padding: 0 1.25rem;
+  border: 1px solid #a5a8a8;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  margin: 5px;
-  height: 3rem;
-  font: inherit;
-  font-weight: 200;
-  outline: none;
-  border: 1px solid #a5a8a8;
   background-color: #e5e9e8;
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
@@ -1007,65 +1595,307 @@ limitations under the License.
   pointer-events: none;
 }
 
-/*
-Copyright 2012 Adobe Systems Inc.;
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  vertical-align: top;
+  resize: none;
+  outline: none;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 /*
- TopCoat Textarea
- ------------------------
+Textarea
+------------------------
 
     <textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea>
 
  */
 .topcoat-textarea,
 .topcoat-textarea--large {
-  vertical-align: top;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 1.25rem;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  margin: var-margin;
-  font: var-font;
-  font-weight: 200;
-  line-height: 3rem;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  vertical-align: top;
   resize: none;
   outline: none;
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: 200;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  line-height: 3rem;
   border: 1px solid #a5a8a8;
   background-color: #e5e9e8;
-  -webkit-box-shadow: inset 0 1px #fff;
-  box-shadow: inset 0 1px #fff;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
   color: #454545;
 }
 .topcoat-textarea:focus,
 .topcoat-textarea--large:focus {
-  background-color: var-background--focus;
+  background-color: #fff;
   color: #000;
 }
 /*
-Topcoat Large Textarea
- ------------------------
+Large Textarea
+------------------------
 
-	<textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea"></textarea>
+    <textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea"></textarea>
 
 */
 .topcoat-textarea--large {
-  font: var-font--large;
-  font-weight: 200;
+  font-size: 3rem;
   line-height: 4rem;
 }
+
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #dfe2e2;
+  color: #000;
+  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+}
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.topcoat-icon--menu-stack {
+  background: url("../img/hamburger_dark.svg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.quarter {
+  width: 25%;
+}
+.half {
+  width: 50%;
+}
+.three-quarters {
+  width: 75%;
+}
+.third {
+  width: 33.333%;
+}
+.two-thirds {
+  width: 66.666%;
+}
+.full {
+  width: 100%;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.reset-ui {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+
+
+/* Call To Action */
+/* Icons */
+/* Navigation Bar */
+/* Text Input */
+/* Search Input */
+/* List */
+/* Checkbox */
+/* Overlay */
+/* Progress bar */
+/* Checkbox */
+/* Radio Button */
+
+/* Icon Button */
+/* Navigation bar */
+/* List */
+/* Search Input */
+/* Topcoat icon large */
+/* otherwise the icon is off-center */
+/* Checkbox */
+/* Radio */
+
+/* Call To Action */
+/* Icons */
+/* Navigation Bar */
+/* Text Input */
+/* List */
+/* Overlay */
+/* Progress bar */
+/* Checkbox */
+/* Radio Button */
+/* Range input */
+
+/* Containers */
+/* Icon Button */
+/* Navigation bar */
+/* List */
+/* Search Input */
+/* Text Area */
+/* Checkbox */
+/* Radio */
+/* Range input */
+
+/* Text Input */
+/* Radio input */
+/* Overlay */
+/* Textarea */
+/* Progress bar container */
+/* Progress bar progress */
+
