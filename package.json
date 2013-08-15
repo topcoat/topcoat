@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "topcoat-utils": "~0.1.3",
-    "topcoat-radio-button-base": "~0.1.0",
+    "topcoat-radio-button-base": "~0.1.1",
     "topcoat-checkbox-base": "~0.1.3",
     "topcoat-input-base": "~0.3.0",
     "topcoat-textarea-base": "~0.2.0",
