@@ -9,8 +9,8 @@
       "title": "Topcoat",
       "subtitle": "CSS for clean and fast web apps",
       "download": {
-        "url": "https://github.com/topcoat/topcoat/archive/0.5.1.zip",
-        "label": "Download version 0.5.1"
+        "url": "https://github.com/topcoat/topcoat/archive/0.6.0.zip",
+        "label": "Download version 0.6.0"
       },
       "homeURL": "http://topcoat.io",
       "siteNav": [
@@ -42,7 +42,7 @@
     "topcoat-button-base": "~0.6.0",
     "topcoat-list-base": "~0.3.0",
     "topcoat-checkbox": "~0.3.4",
-    "topcoat-radio-button": "~0.1.0",
+    "topcoat-radio-button": "~0.1.1",
     "topcoat-theme": "~0.5.4",
     "topcoat-list": "~0.4.0",
     "topcoat-navigation-bar-base": "~0.4.0",
