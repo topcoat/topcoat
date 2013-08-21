@@ -87,5 +87,3 @@ See [Release Notes](https://github.com/topcoat/topcoat/wiki/Release-Notes) on th
 
 [Apache license](https://raw.github.com/topcoat/topcoat/master/LICENSE)
 
-A responsive [Topdoc](http://github.io/topcoat/topdoc) theme for the Topcoat Usage Guide.
-
