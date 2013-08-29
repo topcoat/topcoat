@@ -187,6 +187,15 @@ module.exports = function(grunt) {
             }
         },
 
+        simplemocha: {
+            all: {
+                src: ['test/*.test.js']
+            },
+            options: {
+                timeout: 5000
+            }
+        },
+
         watch: {
             files: ['src/**/*.styl'],
             tasks: ['compile']
@@ -204,6 +213,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-topdoc');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-simple-mocha');
 
     //Load local tasks
     grunt.loadTasks('dev/tasks');
