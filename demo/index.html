@@ -88,7 +88,8 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-button,
+                  <pre class="css"><code data-language="css">
+.topcoat-button,
 .topcoat-button--quiet,
 .topcoat-button--large,
 .topcoat-button--large--quiet,
@@ -106,11 +107,13 @@
   border: 1px solid #303233;
   border-radius: 4px;
 }
+
 .topcoat-button:active,
 .topcoat-button--large:active {
   background-color: #404141;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -129,11 +132,13 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-button--quiet {
+                  <pre class="css"><code data-language="css">
+.topcoat-button--quiet {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
+
 .topcoat-button--quiet:active,
 .topcoat-button--large--quiet:active {
   color: #c6c8c8;
@@ -141,7 +146,8 @@
   background-color: #404141;
   border: 1px solid #303233;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -160,13 +166,15 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-button--large,
+                  <pre class="css"><code data-language="css">
+.topcoat-button--large,
 .topcoat-button--large--quiet {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.688rem;
   padding: 0 0.875rem;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -185,11 +193,13 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-button--large--quiet {
+                  <pre class="css"><code data-language="css">
+.topcoat-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -208,7 +218,8 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-button--cta,
+                  <pre class="css"><code data-language="css">
+.topcoat-button--cta,
 .topcoat-button--large--cta {
   border: 1px solid #143250;
   background-color: #288edf;
@@ -217,11 +228,13 @@
   font-weight: 500;
   text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
+
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active {
   background-color: #1976c3;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -240,7 +253,8 @@
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-button--large--cta {
+                  <pre class="css"><code data-language="css">
+.topcoat-button--large--cta {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.688rem;
@@ -264,6 +278,7 @@
 * limitations under the License.
 *
 */
+
 input[type=&quot;checkbox&quot;] {
   position: absolute;
   overflow: hidden;
@@ -274,33 +289,46 @@ input[type=&quot;checkbox&quot;] {
   vertical-align: top;
   outline: none;
 }
+
 .checkbox {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .checkbox__label {
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .checkbox--disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
+
 .checkbox:before,
 .checkbox:after {
   content: '';
   position: absolute;
 }
+
 .checkbox:before {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
@@ -358,6 +386,7 @@ input[type=&quot;checkbox&quot;] {
 * limitations under the License.
 *
 */
+
 input[type=&quot;checkbox&quot;] {
   position: absolute;
   overflow: hidden;
@@ -368,30 +397,41 @@ input[type=&quot;checkbox&quot;] {
   vertical-align: top;
   outline: none;
 }
+
 .checkbox,
 .topcoat-checkbox__checkmark {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .checkbox__label,
 .topcoat-checkbox {
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .checkbox--disabled,
 input[type=&quot;checkbox&quot;]:disabled + .topcoat-checkbox__checkmark {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
+
 .checkbox:before,
 .checkbox:after,
 .topcoat-checkbox__checkmark:before,
@@ -399,11 +439,14 @@ input[type=&quot;checkbox&quot;]:disabled + .topcoat-checkbox__checkmark {
   content: '';
   position: absolute;
 }
+
 .checkbox:before,
 .topcoat-checkbox__checkmark:before {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -428,9 +471,11 @@ input[type=&quot;checkbox&quot;]:disabled + .topcoat-checkbox__checkmark {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-checkbox__checkmark {
+                  <pre class="css"><code data-language="css">
+.topcoat-checkbox__checkmark {
   height: 1rem;
 }
+
 input[type=&quot;checkbox&quot;] {
   height: 1rem;
   width: 1rem;
@@ -439,12 +484,15 @@ input[type=&quot;checkbox&quot;] {
   margin-bottom: -1rem;
   margin-left: 0;
 }
+
 input[type=&quot;checkbox&quot;]:checked + .topcoat-checkbox__checkmark:after {
   opacity: 1;
 }
+
 .topcoat-checkbox {
   line-height: 1rem;
 }
+
 .topcoat-checkbox__checkmark:before {
   width: 1rem;
   height: 1rem;
@@ -453,10 +501,12 @@ input[type=&quot;checkbox&quot;]:checked + .topcoat-checkbox__checkmark:after {
   border-radius: 3px;
   box-shadow: inset 0 1px #727373;
 }
+
 .topcoat-checkbox__checkmark {
   width: 1rem;
   height: 1rem;
 }
+
 .topcoat-checkbox__checkmark:after {
   top: 2px;
   left: 1px;
@@ -469,8 +519,11 @@ input[type=&quot;checkbox&quot;]:checked + .topcoat-checkbox__checkmark:after {
   border-top: none;
   border-right: none;
   border-radius: 1px;
+  -webkit-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
   transform: rotate(-50deg);
 }
+
 input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
@@ -511,6 +564,7 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 * limitations under the License.
 *
 */
+
 .input {
   padding: 0;
   margin: 0;
@@ -518,11 +572,13 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   color: inherit;
   background: transparent;
   border: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   vertical-align: top;
   outline: none;
 }
+
 .input:disabled {
   opacity: 0.3;
   cursor: default;
@@ -564,6 +620,7 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 * limitations under the License.
 *
 */
+
 .list {
   padding: 0;
   margin: 0;
@@ -572,18 +629,24 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 .list__header {
   margin: 0;
 }
+
 .list__container {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
+
 .list__item {
   margin: 0;
   padding: 0;
@@ -642,7 +705,9 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 * limitations under the License.
 *
 */
+
 .navigation-bar {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   white-space: nowrap;
@@ -655,9 +720,14 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .navigation-bar__item {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   position: relative;
@@ -670,6 +740,7 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background: transparent;
   border: none;
 }
+
 .navigation-bar__title {
   padding: 0;
   margin: 0;
@@ -717,6 +788,7 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 * limitations under the License.
 *
 */
+
 input[type=&quot;radio&quot;] {
   position: absolute;
   overflow: hidden;
@@ -727,37 +799,53 @@ input[type=&quot;radio&quot;] {
   vertical-align: top;
   outline: none;
 }
+
 .radio-button {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .radio-button__label {
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .radio-button:before,
 .radio-button:after {
   content: '';
   position: absolute;
   border-radius: 100%;
 }
+
 .radio-button:after {
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .radio-button:before {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
+
 .radio-button--disabled {
   opacity: 0.3;
   cursor: default;
@@ -799,6 +887,7 @@ input[type=&quot;radio&quot;] {
 * limitations under the License.
 *
 */
+
 input[type=&quot;radio&quot;] {
   position: absolute;
   overflow: hidden;
@@ -809,24 +898,34 @@ input[type=&quot;radio&quot;] {
   vertical-align: top;
   outline: none;
 }
+
 .radio-button,
 .topcoat-radio-button__checkmark {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .radio-button__label,
 .topcoat-radio-button {
   position: relative;
   display: inline-block;
   vertical-align: top;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .radio-button:before,
 .radio-button:after,
 .topcoat-radio-button__checkmark:before,
@@ -835,23 +934,30 @@ input[type=&quot;radio&quot;] {
   position: absolute;
   border-radius: 100%;
 }
+
 .radio-button:after,
 .topcoat-radio-button__checkmark:after {
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .radio-button:before,
 .topcoat-radio-button__checkmark:before {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
+
 .radio-button--disabled,
 input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -876,7 +982,8 @@ input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">input[type=&quot;radio&quot;] {
+                  <pre class="css"><code data-language="css">
+input[type=&quot;radio&quot;] {
   height: 1.063rem;
   width: 1.063rem;
   margin-top: 0;
@@ -884,13 +991,16 @@ input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
   margin-bottom: -1.063rem;
   margin-left: 0;
 }
+
 input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
   opacity: 1;
 }
+
 .topcoat-radio-button {
   color: #c6c8c8;
   line-height: 1.063rem;
 }
+
 .topcoat-radio-button__checkmark:before {
   width: 1.063rem;
   height: 1.063rem;
@@ -898,11 +1008,13 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
   border: 1px solid #303233;
   box-shadow: inset 0 1px #727373;
 }
+
 .topcoat-radio-button__checkmark {
   position: relative;
   width: 1.063rem;
   height: 1.063rem;
 }
+
 .topcoat-radio-button__checkmark:after {
   opacity: 0;
   width: 0.313rem;
@@ -910,10 +1022,13 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
   background: #fff;
   border: 1px solid rgba(255,255,255,0.1);
   box-shadow: 0 1px rgba(255,255,255,0.5);
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
   top: 0.313rem;
   left: 0.313rem;
 }
+
 input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
@@ -953,7 +1068,8 @@ input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
-*/</code></pre>
+*/
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -972,22 +1088,26 @@ input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.search-input {
+                  <pre class="css"><code data-language="css">
+.search-input {
   padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
   background: transparent;
   border: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   vertical-align: top;
   outline: none;
   -webkit-appearance: none;
 }
+
 input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+
 .search-input:disabled {
   opacity: 0.3;
   cursor: default;
@@ -1029,6 +1149,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 * limitations under the License.
 *
 */
+
 .search-input,
 .topcoat-search-input,
 .topcoat-search-input--large {
@@ -1038,22 +1159,26 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   color: inherit;
   background: transparent;
   border: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   vertical-align: top;
   outline: none;
   -webkit-appearance: none;
 }
+
 input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+
 .search-input:disabled,
 .topcoat-search-input:disabled,
 .topcoat-search-input--large:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -1072,7 +1197,8 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-search-input,
+                  <pre class="css"><code data-language="css">
+.topcoat-search-input,
 .topcoat-search-input--large {
   line-height: 1.313rem;
   font-size: 12px;
@@ -1087,6 +1213,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   background-repeat: no-repeat;
   background-size: 12px;
 }
+
 .topcoat-search-input:focus,
 .topcoat-search-input--large:focus {
   background-image: url(&quot;../img/search_dark.svg&quot;);
@@ -1095,25 +1222,31 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
+
 .topcoat-search-input::-webkit-search-cancel-button,
 .topcoat-search-input::-webkit-search-decoration,
 .topcoat-search-input--large::-webkit-search-cancel-button,
 .topcoat-search-input--large::-webkit-search-decoration {
   margin-right: 5px;
 }
+
 .topcoat-search-input:focus::-webkit-input-placeholder,
 .topcoat-search-input:focus::-webkit-input-placeholder {
   color: #c6c8c8;
 }
+
 .topcoat-search-input:disabled::-webkit-input-placeholder {
   color: #fff;
 }
+
 .topcoat-search-input:disabled::-moz-placeholder {
   color: #fff;
 }
+
 .topcoat-search-input:disabled:-ms-input-placeholder {
   color: #fff;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -1132,7 +1265,8 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-search-input--large {
+                  <pre class="css"><code data-language="css">
+.topcoat-search-input--large {
   line-height: 1.688rem;
   font-size: 0.875rem;
   font-weight: 400;
@@ -1141,15 +1275,19 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   background-position: 1.2em center;
   background-size: 0.875rem;
 }
+
 .topcoat-search-input--large:disabled {
   color: #fff;
 }
+
 .topcoat-search-input--large:disabled::-webkit-input-placeholder {
   color: #fff;
 }
+
 .topcoat-search-input--large:disabled::-moz-placeholder {
   color: #fff;
 }
+
 .topcoat-search-input--large:disabled:-ms-input-placeholder {
   color: #fff;
 }
@@ -1189,6 +1327,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 * limitations under the License.
 *
 */
+
 .input,
 .topcoat-text-input,
 .topcoat-text-input--large {
@@ -1198,18 +1337,21 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   color: inherit;
   background: transparent;
   border: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   vertical-align: top;
   outline: none;
 }
+
 .input:disabled,
 .topcoat-text-input:disabled,
 .topcoat-text-input--large:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -1228,7 +1370,8 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-text-input,
+                  <pre class="css"><code data-language="css">
+.topcoat-text-input,
 .topcoat-text-input--large {
   line-height: 1.313rem;
   font-size: 12px;
@@ -1241,6 +1384,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   color: #c6c8c8;
   vertical-align: top;
 }
+
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus {
   background-color: #646666;
@@ -1248,15 +1392,19 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
+
 .topcoat-text-input:disabled::-webkit-input-placeholder {
   color: #fff;
 }
+
 .topcoat-text-input:disabled::-moz-placeholder {
   color: #fff;
 }
+
 .topcoat-text-input:disabled:-ms-input-placeholder {
   color: #fff;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </section>
             </footer>
@@ -1275,19 +1423,24 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
                 </div>
                 <div>
                   <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">.topcoat-text-input--large {
+                  <pre class="css"><code data-language="css">
+.topcoat-text-input--large {
   line-height: 1.688rem;
   font-size: 0.875rem;
 }
+
 .topcoat-text-input--large:disabled {
   color: #fff;
 }
+
 .topcoat-text-input--large:disabled::-webkit-input-placeholder {
   color: #fff;
 }
+
 .topcoat-text-input--large:disabled::-moz-placeholder {
   color: #fff;
 }
+
 .topcoat-text-input--large:disabled:-ms-input-placeholder {
   color: #fff;
 }
@@ -1345,7 +1498,9 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 * limitations under the License.
 *
 */
+
 .textarea {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   padding: 0;
@@ -1394,6 +1549,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 * limitations under the License.
 *
 */
+
 /*
 Textarea
 ------------------------
@@ -1401,8 +1557,10 @@ Textarea
     &lt;textarea class=&quot;topcoat-textarea&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
 
  */
+
 .topcoat-textarea,
 .topcoat-textarea--large {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   padding: 0;
@@ -1424,11 +1582,13 @@ Textarea
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
   color: #c6c8c8;
 }
+
 .topcoat-textarea:focus,
 .topcoat-textarea--large:focus {
   background-color: var-background-color--focus;
   color: #fff;
 }
+
 /*
 Large Textarea
 ------------------------
@@ -1436,6 +1596,7 @@ Large Textarea
     &lt;textarea class=&quot;topcoat-textarea--large&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
 
 */
+
 .topcoat-textarea--large {
   font-size: 1.3rem;
   line-height: 1.688rem;
@@ -1445,11 +1606,13 @@ Large Textarea
   font-family: &quot;Source Sans&quot;;
   src: url(&quot;../font/SourceSansPro-Regular.otf&quot;);
 }
+
 @font-face {
   font-family: &quot;Source Sans&quot;;
   src: url(&quot;../font/SourceSansPro-Light.otf&quot;);
   font-weight: 200;
 }
+
 @font-face {
   font-family: &quot;Source Sans&quot;;
   src: url(&quot;../font/SourceSansPro-Semibold.otf&quot;);
@@ -1465,6 +1628,7 @@ body {
   font-weight: 200;
   text-rendering: optimizeLegibility;
 }
+
 :focus {
   outline-color: transparent;
   outline-style: none;
@@ -1478,18 +1642,23 @@ body {
 .quarter {
   width: 25%;
 }
+
 .half {
   width: 50%;
 }
+
 .three-quarters {
   width: 75%;
 }
+
 .third {
   width: 33.333%;
 }
+
 .two-thirds {
   width: 66.666%;
 }
+
 .full {
   width: 100%;
 }
@@ -1497,14 +1666,17 @@ body {
 .left {
   text-align: left;
 }
+
 .center {
   text-align: center;
 }
+
 .right {
   text-align: right;
 }
 
 .reset-ui {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   position: relative;
@@ -1517,67 +1689,104 @@ body {
   background: transparent;
   border: none;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-
-
-
-
 /* Call To Action */
+
 /* Icons */
+
 /* Navigation Bar */
+
 /* Text Input */
+
 /* Search Input */
+
 /* List */
+
 /* Checkbox */
+
 /* Overlay */
+
 /* Progress bar */
+
 /* Checkbox */
+
 /* Radio Button */
 
 /* Icon Button */
+
 /* Navigation bar */
+
 /* List */
+
 /* Search Input */
+
 /* Textarea */
+
 /* Checkbox */
+
 /* Radio */
+
 /* Search Input */
 
 /* Call To Action */
+
 /* Icons */
+
 /* Navigation Bar */
+
 /* Text Input */
+
 /* List */
+
 /*Overlay*/
+
 /* Progress bar */
+
 /* Checkbox */
+
 /* Range input */
 
 /* Containers */
+
 /* Icon Button */
+
 /* Navigation bar */
+
 /* List */
+
 /* Search Input */
+
 /* Text Area */
+
 /* Checkbox */
+
 /* Radio */
+
 /* Range input */
+
 /* Search Input */
 
 /* Text Input */
-/* Radio input */
-/* Overlay */
-/* Textarea */
-/* Progress bar container */
-/* Progress bar progress */
-/* Search input */
 
-</code></pre>
+/* Radio input */
+
+/* Overlay */
+
+/* Textarea */
+
+/* Progress bar container */
+
+/* Progress bar progress */
+
+/* Search input */</code></pre>
                 </div>
               </section>
             </footer>
