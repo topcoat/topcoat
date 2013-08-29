@@ -29,16 +29,15 @@ module.exports = function(grunt) {
         stylus: {
             options: {
                 paths: grunt.file.expand(__dirname + '/node_modules/topcoat-*/src/')
-                        /*
-                         * FIXME: We need to refactor all components to
-                         * remove mixins directory *See button & button-base
-                         */
-                         .concat(grunt.file.expand('node_modules/topcoat-*/src/mixins')),
+                  /* FIXME: Utils is the last needing to be moved out of mixins
+                   * folder
+                   */
+                  .concat(grunt.file.expand(__dirname + '/node_modules/topcoat-utils/src/mixins/'))
             },
 
             mobilelight: {
                 options: {
-                    import: ['theme-topcoat-mobile-light', 'nib'],
+                    import: ['theme-topcoat-mobile-light', 'utils'],
                     compress: false
                 },
 
@@ -50,7 +49,7 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    import: ['theme-topcoat-mobile-dark', 'nib'],
+                    import: ['theme-topcoat-mobile-dark', 'utils'],
                     compress: false
                 },
 
@@ -62,23 +61,31 @@ module.exports = function(grunt) {
 
             desktoplight: {
                 options: {
-                    import: ['theme-topcoat-desktop-light', 'nib'],
+                    import: ['theme-topcoat-desktop-light', 'utils'],
                     compress: false
                 },
                 files: [{
-                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    src: [
+                      'node_modules/topcoat-*/src/**/*.styl',
+                      '!node_modules/topcoat-navigation-bar/src/*.styl',
+                      '!node_modules/topcoat-list/src/*.styl'
+                    ],
                     dest: 'css/topcoat-desktop-light.css'
                 }]
             },
 
             desktopdark: {
                 options: {
-                    import: ['theme-topcoat-desktop-dark', 'nib'],
+                    import: ['theme-topcoat-desktop-dark', 'utils'],
                     compress: false
                 },
 
                 files: [{
-                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    src: [
+                      'node_modules/topcoat-*/src/**/*.styl',
+                      '!node_modules/topcoat-navigation-bar/src/*.styl',
+                      '!node_modules/topcoat-list/src/*.styl'
+                    ],
                     dest: 'css/topcoat-desktop-dark.css'
                 }]
             }
@@ -88,9 +95,31 @@ module.exports = function(grunt) {
             usageguides: {
                 options: {
                     source: 'css',
-                    destination: './',
-                    template: '<%= pkg.topdoc.template %>',
-                    templateData: '<%= pkg.topdoc.templateData %>'
+                    destination: 'demo',
+                    template: 'node_modules/topdoc-theme/',
+                    templateData: {
+                        "title": "Topcoat",
+                        "subtitle": "CSS for clean and fast web apps",
+                        "download": {
+                            "url": "https://github.com/topcoat/topcoat/archive/0.7.0.zip",
+                            "label": "Download"
+                        },
+                        "homeURL": "http://topcoat.io",
+                        "siteNav": [
+                            {
+                            "url": "http://topcoat.io/topcoat",
+                            "text": "Demo"
+                        },
+                            {
+                            "url": "http://bench.topcoat.io/",
+                            "text": "Benchmarks"
+                        },
+                            {
+                            "url": "http://topcoat.io/blog",
+                            "text": "Blog"
+                        }
+                        ]
+                    }
                 }
             }
         },
@@ -138,6 +167,7 @@ module.exports = function(grunt) {
                     dest: 'img'
                 }]
             },
+
             telemetry: {
                 files: [{
                     expand: true,

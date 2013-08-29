@@ -1,0 +1,44 @@
+{
+  "name": "topdoc-theme",
+  "version": "0.2.7",
+  "description": "Topdoc Theme for the Topcoat Demo documentation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/topdoc-theme.git"
+  },
+  "keywords": [
+    "topdoc",
+    "topcoat",
+    "theme",
+    "template",
+    "css",
+    "documentation"
+  ],
+  "author": {
+    "name": "Garth Braithwaite",
+    "email": "garthdb@gmail.com",
+    "url": "http://www.garthdb.com"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "gitHead": "58eac60122954fff276592dace1f8fe7d444600b",
+  "bugs": {
+    "url": "https://github.com/topcoat/topdoc-theme/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.11.0",
+    "should": "~1.2.2",
+    "jade": "~0.31.2"
+  },
+  "readme": "#Topdoc Demo Theme\n\nA responsive [Topdoc](https://github.com/topcoat/topdoc) theme for the Topcoat Demos.\n\n\n##Usage\n\nIf the topcoat repo is cloned locally as a sibling of this repo, running the following command:\n\n```bash\ntopdoc -s release/css/ -d topdocs -t ../topdoc-theme/\n```\n\nUses the template and generates the docs to a directory called `topdocs`.\n",
+  "_id": "topdoc-theme@0.2.7",
+  "_from": "topdoc-theme@"
+}
