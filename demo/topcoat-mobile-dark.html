@@ -33,6 +33,8 @@
           </div>
           <div id="pageNav">
             <ul>
+              <li><a href="#button-bar">Button Bar</a></li>
+              <li><a href="#large-buttonbar">Large Button Bar</a></li>
               <li><a href="#button">Button</a></li>
               <li><a href="#quiet-button">Quiet Button</a></li>
               <li><a href="#large-button">Large Button</a></li>
@@ -52,6 +54,8 @@
               <li><a href="#large-searchinput">Large Search Input</a></li>
               <li><a href="#text-input">Text input</a></li>
               <li><a href="#large-textinput">Large Text Input</a></li>
+              <li><a href="#textarea">Textarea</a></li>
+              <li><a href="#large-textarea">Large Textarea</a></li>
             </ul>
           </div>
         </div>
@@ -74,6 +78,239 @@
           </div>
         </header>
         <div id="content" class="max-width">
+          <article id="button-bar" class="component">
+            <header>
+              <h2>Button Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-button-bar">  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">One</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Two</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Three</button>  </div></div></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/kdKyg">mobile button bar</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-button-bar&quot;&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-button-bar &gt; .topcoat-button-bar__item:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.topcoat-button-bar &gt; .topcoat-button-bar__item:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.topcoat-button-bar__item:first-child &gt; .topcoat-button-bar__button,
+.topcoat-button-bar__item:first-child &gt; .topcoat-button-bar__button--large {
+  border-right: none;
+}
+
+.topcoat-button-bar__item:last-child &gt; .topcoat-button-bar__button,
+.topcoat-button-bar__item:last-child &gt; .topcoat-button-bar__button--large {
+  border-left: none;
+}
+
+.topcoat-button-bar__button {
+  border-radius: inherit;
+}
+
+.topcoat-button-bar__button:focus,
+.topcoat-button-bar__button--large:focus {
+  z-index: 1;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-buttonbar" class="component">
+            <header>
+              <h2>Large Button Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-button-bar">  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button--large">One</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button--large">Two</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button--large">Three</button>  </div></div></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-button-bar&quot;&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button--large&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button--large&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button--large&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-button-bar__button--large {
+  border-radius: inherit;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.button--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.button,
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.button--disabled,
+.topcoat-button:disabled,
+.topcoat-button--quiet:disabled,
+.topcoat-button--large:disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--large--cta:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
           <article id="button" class="component">
             <header>
               <h2>Button</h2>
@@ -262,7 +499,7 @@
 
 .topcoat-button--cta:hover,
 .topcoat-button--large--cta:hover {
-  background-color: var-background-color--cta--hover;
+  background-color: #509bef;
 }
 
 .topcoat-button--cta:active,
@@ -2016,24 +2253,6 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 *
 */
 
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
 .textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2049,23 +2268,11 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   outline: none;
 }
 
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
+.textarea:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 
 /**
 *
@@ -2085,14 +2292,25 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 *
 */
 
-/*
-Textarea
-------------------------
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 
-    &lt;textarea class=&quot;topcoat-textarea&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
-
- */
-
+.textarea,
 .topcoat-textarea,
 .topcoat-textarea--large {
   -moz-box-sizing: border-box;
@@ -2107,34 +2325,107 @@ Textarea
   vertical-align: top;
   resize: none;
   outline: none;
+}
+
+.textarea:disabled,
+.topcoat-textarea:disabled,
+.topcoat-textarea--large:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="textarea" class="component">
+            <header>
+              <h2>Textarea</h2>
+            </header>
+            <section class="component"><textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea><br><br><textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea" disabled></textarea></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;textarea class=&quot;topcoat-textarea&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;&lt;textarea class=&quot;topcoat-textarea&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot; disabled&gt;&lt;/textarea&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-textarea,
+.topcoat-textarea--large {
   padding: 2rem;
   font-size: 2.5rem;
   font-weight: 200;
   border-radius: 6px;
   line-height: 3rem;
   border: 1px solid #303233;
-  background-color: #595b5b;
+  background-color: #404141;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
   color: #c6c8c8;
+  letter-spacing: 1px;
 }
 
 .topcoat-textarea:focus,
 .topcoat-textarea--large:focus {
-  background-color: var-background-color--focus;
+  background-color: #646666;
+  color: #fff;
+  border: 1px solid #0940fd;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+.topcoat-textarea:disabled::-webkit-input-placeholder {
   color: #fff;
 }
 
-/*
-Large Textarea
-------------------------
+.topcoat-textarea:disabled::-moz-placeholder {
+  color: #fff;
+}
 
-    &lt;textarea class=&quot;topcoat-textarea--large&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
-
-*/
-
+.topcoat-textarea:disabled:-ms-input-placeholder {
+  color: #fff;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-textarea" class="component">
+            <header>
+              <h2>Large Textarea</h2>
+            </header>
+            <section class="component"><textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea"></textarea><br><br><textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea" disabled></textarea></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;textarea class=&quot;topcoat-textarea--large&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;&lt;textarea class=&quot;topcoat-textarea--large&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot; disabled&gt;&lt;/textarea&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-textarea--large {
   font-size: 3rem;
   line-height: 4.375rem;
+}
+
+.topcoat-textarea--large:disabled {
+  color: #fff;
+}
+
+.topcoat-textarea--large:disabled::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.topcoat-textarea--large:disabled::-moz-placeholder {
+  color: #fff;
+}
+
+.topcoat-textarea--large:disabled:-ms-input-placeholder {
+  color: #fff;
 }
 
 @font-face {
