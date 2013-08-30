@@ -1,6 +1,6 @@
 {
   "name": "topcoat",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "CSS for clean and fast web apps",
   "main": "Gruntfile.js",
   "directories": {
