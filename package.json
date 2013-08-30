@@ -16,7 +16,6 @@
     "topcoat-theme": "~0.5.13",
     "topcoat-navigation-bar-base": "~0.4.0",
     "topcoat-navigation-bar": "~0.4.2",
-    "topcoat-button": "~0.5.1",
     "topcoat-textarea": "~0.2.0",
     "topcoat-text-input": "~0.3.2",
     "topcoat-input-base": "~0.4.1",
@@ -25,7 +24,8 @@
     "topcoat-search-input": "~0.3.0",
     "topcoat-search-input-base": "~0.1.1",
     "topcoat-checkbox": "~0.4.0",
-    "topcoat-checkbox-base": "~0.1.3"
+    "topcoat-checkbox-base": "~0.1.3",
+    "topcoat-button": "~0.5.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
