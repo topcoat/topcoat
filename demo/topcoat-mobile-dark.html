@@ -1,363 +1,120 @@
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-.button-bar {
-  display: table;
-  table-layout: fixed;
-  white-space: no-wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.button-bar__item {
-  display: table-cell;
-  width: auto;
-  border-radius: 0;
-}
-
-.button_bar__item > input {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-.button-bar__button {
-  border-radius: inherit;
-}
-
-.button-bar__item:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.button--disabled,
-.topcoat-button:disabled,
-.topcoat-button--quiet:disabled,
-.topcoat-button--large:disabled,
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--cta:disabled,
-.topcoat-button--large--cta:disabled,
-.topcoat-button-bar__button:disabled,
-.topcoat-button-bar__button--large:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
-  padding: 0 1.25rem;
-  font-size: 16px;
-  line-height: 3rem;
-  letter-spacing: 1px;
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  vertical-align: top;
-  background-color: #595b5b;
-  box-shadow: inset 0 1px #727373;
-  border: 1px solid #303233;
-  border-radius: 6px;
-}
-
-.topcoat-button:hover,
-.topcoat-button--quiet:hover,
-.topcoat-button--large:hover,
-.topcoat-button--large--quiet:hover,
-.topcoat-button-bar__button:hover,
-.topcoat-button-bar__button--large:hover {
-  background-color: #646666;
-}
-
-.topcoat-button:active,
-.topcoat-button--large:active,
-.topcoat-button-bar__button:active,
-.topcoat-button-bar__button--large:active,
-:checked + .topcoat-button-bar__button {
-  background-color: #404141;
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}
-
-.topcoat-button:focus,
-.topcoat-button--quiet:focus,
-.topcoat-button--large:focus,
-.topcoat-button--large--quiet:focus,
-.topcoat-button--cta:focus,
-.topcoat-button--large--cta:focus,
-.topcoat-button-bar__button:focus,
-.topcoat-button-bar__button--large:focus {
-  border: 1px solid #0940fd;
-  box-shadow: 0 0 0 2px #6fb5f1;
-  outline: 0;
-}
-
-.topcoat-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.topcoat-button--quiet:hover,
-.topcoat-button--large--quiet:hover {
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #303233;
-  box-shadow: inset 0 1px #727373;
-}
-
-.topcoat-button--quiet:active,
-.topcoat-button--large--quiet:active {
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #404141;
-  border: 1px solid #303233;
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}
-
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button-bar__button--large {
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 4.375rem;
-  padding: 0 1.25rem;
-}
-
-.topcoat-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.topcoat-button--cta,
-.topcoat-button--large--cta {
-  border: 1px solid #143250;
-  background-color: #288edf;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36);
-  color: #fff;
-  font-weight: 500;
-  text-shadow: 0 -1px rgba(0,0,0,0.36);
-}
-
-.topcoat-button--cta:hover,
-.topcoat-button--large--cta:hover {
-  background-color: #509bef;
-}
-
-.topcoat-button--cta:active,
-.topcoat-button--large--cta:active {
-  background-color: #1976c3;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-
-.topcoat-button--large--cta {
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 4.375rem;
-  padding: 0 1.25rem;
-}
-
-.button-bar,
-.topcoat-button-bar {
-  display: table;
-  table-layout: fixed;
-  white-space: no-wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.button-bar__item,
-.topcoat-button-bar__item {
-  display: table-cell;
-  width: auto;
-  border-radius: 0;
-}
-
-.button_bar__item > input,
-.topcoat-button-bar__item > input {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-.button-bar__button {
-  border-radius: inherit;
-}
-
-.button-bar__item:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-/* topdoc
-  name: Button Bar
-  description: Component of grouped buttons
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <div class="topcoat-button-bar">
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">One</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Topcoat</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/topcoat-mobile-dark.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body class="dark">
+    <div id="wrapper">
+      <div class="max-width">
+        <div id="sideNav">
+          <nav class="site">
+            <ul>
+              <li><a href="http://topcoat.io">Home</a></li>
+              <li class="selected"><a href="http://topcoat.io/topcoat">Demo</a></li>
+              <li><a href="http://bench.topcoat.io/">Benchmarks</a></li>
+              <li><a href="http://topcoat.io/blog">Blog</a></li>
+            </ul>
+          </nav>
+          <div class="combo">
+            <select class="docNav">
+              <option value="index.html">Topcoat Desktop Dark</option>
+              <option value="topcoat-desktop-light.html">Topcoat Desktop Light</option>
+              <option value="topcoat-mobile-dark.html" selected="selected">Topcoat Mobile Dark</option>
+              <option value="topcoat-mobile-light.html">Topcoat Mobile Light</option>
+            </select>
+          </div>
+          <div id="pageNav">
+            <ul>
+              <li><a href="#button-bar">Button Bar</a></li>
+              <li><a href="#large-buttonbar">Large Button Bar</a></li>
+              <li><a href="#button">Button</a></li>
+              <li><a href="#quiet-button">Quiet Button</a></li>
+              <li><a href="#large-button">Large Button</a></li>
+              <li><a href="#large-quietbutton">Large Quiet Button</a></li>
+              <li><a href="#call-toaction button">Call To Action Button</a></li>
+              <li><a href="#large-callto action button">Large Call To Action Button</a></li>
+              <li><a href="#checkbox">Checkbox</a></li>
+              <li><a href="#icon-button">Icon Button</a></li>
+              <li><a href="#quiet-iconbutton">Quiet Icon Button</a></li>
+              <li><a href="#large-iconbutton">Large Icon Button</a></li>
+              <li><a href="#large-quieticon button">Large Quiet Icon Button</a></li>
+              <li><a href="#list">List</a></li>
+              <li><a href="#navigation-bar">Navigation Bar</a></li>
+              <li><a href="#radio-button">Radio Button</a></li>
+              <li><a href="#search-input">Search Input</a></li>
+              <li><a href="#large-searchinput">Large Search Input</a></li>
+              <li><a href="#text-input">Text input</a></li>
+              <li><a href="#large-textinput">Large Text Input</a></li>
+              <li><a href="#textarea">Textarea</a></li>
+              <li><a href="#large-textarea">Large Textarea</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">Two</button>
-      </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">Three</button>
-      </div>
-    </div>
-  examples:
-    mobile button bar: http://codepen.io/Topcoat/pen/kdKyg
-  tags:
-    - desktop
-    - light
-    - dark
-    - mobile
-    - button
-    - group
-    - bar
-*/
-
-.topcoat-button-bar > .topcoat-button-bar__item:first-child {
+      <div id="site">
+        <header id="main-header">
+          <div class="max-width">
+            <hgroup>
+              <h1><a href="http://topcoat.io">Topcoat</a></h1>
+              <p>CSS for clean and fast web apps</p>
+            </hgroup>
+            <nav>
+              <ul>
+                <li class="selected"><a href="http://topcoat.io/topcoat">Demo</a></li>
+                <li><a href="http://bench.topcoat.io/">Benchmarks</a></li>
+                <li><a href="http://topcoat.io/blog">Blog</a></li>
+                <li><a id="download-btn" href="https://github.com/topcoat/topcoat/archive/0.7.0.zip" onclick="_gaq.push(['_trackEvent', 'download', 'click',,, false]);">Download</a></li>
+              </ul>
+            </nav><a id="slide-menu-button" class="topcoat-icon-button--large--quiet"><span class="topcoat-icon--large topcoat-icon--menu-stack"></span></a>
+          </div>
+        </header>
+        <div id="content" class="max-width">
+          <article id="button-bar" class="component">
+            <header>
+              <h2>Button Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-button-bar">  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">One</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Two</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Three</button>  </div></div></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/kdKyg">mobile button bar</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-button-bar&quot;&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-button-bar &gt; .topcoat-button-bar__item:first-child {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 
-.topcoat-button-bar > .topcoat-button-bar__item:last-child {
+.topcoat-button-bar &gt; .topcoat-button-bar__item:last-child {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 
-.topcoat-button-bar__item:first-child > .topcoat-button-bar__button,
-.topcoat-button-bar__item:first-child > .topcoat-button-bar__button--large {
+.topcoat-button-bar__item:first-child &gt; .topcoat-button-bar__button,
+.topcoat-button-bar__item:first-child &gt; .topcoat-button-bar__button--large {
   border-right: none;
 }
 
-.topcoat-button-bar__item:last-child > .topcoat-button-bar__button,
-.topcoat-button-bar__item:last-child > .topcoat-button-bar__button--large {
+.topcoat-button-bar__item:last-child &gt; .topcoat-button-bar__button,
+.topcoat-button-bar__item:last-child &gt; .topcoat-button-bar__button--large {
   border-left: none;
 }
 
@@ -369,35 +126,26 @@
 .topcoat-button-bar__button--large:focus {
   z-index: 1;
 }
-
-/* topdoc
-  name: Large Button Bar
-  description: A button bar, only larger
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <div class="topcoat-button-bar">
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">One</button>
-      </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">Two</button>
-      </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">Three</button>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - dark
-    - mobile
-    - button
-    - group
-    - bar
-    - large
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-buttonbar" class="component">
+            <header>
+              <h2>Large Button Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-button-bar">  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button--large">One</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button--large">Two</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button--large">Three</button>  </div></div></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-button-bar&quot;&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button--large&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button--large&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button--large&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button-bar__button--large {
   border-radius: inherit;
 }
@@ -406,14 +154,14 @@
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -460,14 +208,14 @@
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -478,14 +226,14 @@
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -496,14 +244,14 @@
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -557,27 +305,32 @@
   cursor: default;
   pointer-events: none;
 }
-
-/* topdoc
-  name: Button
-  description: A simple button
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button">Button</button>
-    <button class="topcoat-button" disabled>Button</button>
-  examples:
-    mobile button: http://codepen.io/Topcoat/pen/DpKtf
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="button" class="component">
+            <header>
+              <h2>Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-button">Button</button><button class="topcoat-button" disabled>Button</button></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/DpKtf">mobile button</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button,
 .topcoat-button--quiet,
 .topcoat-button--large,
@@ -620,26 +373,26 @@
   box-shadow: 0 0 0 2px #6fb5f1;
   outline: 0;
 }
-
-/* topdoc
-  name: Quiet Button
-  description: A simple, yet quiet button
-  modifiers:
-    :active: Quiet button active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button--quiet">Button</button>
-    <button class="topcoat-button--quiet" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - quiet
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="quiet-button" class="component">
+            <header>
+              <h2>Quiet Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-button--quiet">Button</button><button class="topcoat-button--quiet" disabled>Button</button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--quiet&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button--quiet&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button--quiet {
   background: transparent;
   border: 1px solid transparent;
@@ -661,26 +414,26 @@
   border: 1px solid #303233;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
-
-/* topdoc
-  name: Large Button
-  description: A big ol button
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button--large" >Button</button>
-    <button class="topcoat-button--large" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - large
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-button" class="component">
+            <header>
+              <h2>Large Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-button--large" >Button</button><button class="topcoat-button--large" disabled>Button</button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--large&quot; &gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button--large&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button--large,
 .topcoat-button--large--quiet {
   font-size: 1.3rem;
@@ -688,52 +441,51 @@
   line-height: 4.375rem;
   padding: 0 1.25rem;
 }
-
-/* topdoc
-  name: Large Quiet Button
-  description: A large, yet quiet button
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button--large--quiet" >Button</button>
-    <button class="topcoat-button--large--quiet" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - large
-    - quiet
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-quietbutton" class="component">
+            <header>
+              <h2>Large Quiet Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-button--large--quiet" >Button</button><button class="topcoat-button--large--quiet" disabled>Button</button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--large--quiet&quot; &gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button--large--quiet&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
-
-/* topdoc
-  name: Call To Action Button
-  description: A CALL TO ARMS, er, ACTION!
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button--cta" >Button</button>
-    <button class="topcoat-button--cta" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - call to action
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="call-toaction button" class="component">
+            <header>
+              <h2>Call To Action Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-button--cta" >Button</button><button class="topcoat-button--cta" disabled>Button</button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--cta&quot; &gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button--cta&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button--cta,
 .topcoat-button--large--cta {
   border: 1px solid #143250;
@@ -754,27 +506,26 @@
   background-color: #1976c3;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-
-/* topdoc
-  name: Large Call To Action Button
-  description: Like call to action, but bigger
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button--large--cta" >Button</button>
-    <button class="topcoat-button--large--cta" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - large
-    - call to action
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-callto action button" class="component">
+            <header>
+              <h2>Large Call To Action Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-button--large--cta" >Button</button><button class="topcoat-button--large--cta" disabled>Button</button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-button--large--cta&quot; &gt;Button&lt;/button&gt;&lt;button class=&quot;topcoat-button--large--cta&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-button--large--cta {
   font-size: 1.3rem;
   font-weight: 400;
@@ -786,21 +537,21 @@
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
 */
 
-input[type="checkbox"] {
+input[type=&quot;checkbox&quot;] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -858,14 +609,14 @@ input[type="checkbox"] {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -876,14 +627,14 @@ input[type="checkbox"] {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -894,21 +645,21 @@ input[type="checkbox"] {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
 */
 
-input[type="checkbox"] {
+input[type=&quot;checkbox&quot;] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -947,7 +698,7 @@ input[type="checkbox"] {
 }
 
 .checkbox--disabled,
-input[type="checkbox"]:disabled + .topcoat-checkbox__checkmark {
+input[type=&quot;checkbox&quot;]:disabled + .topcoat-checkbox__checkmark {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -967,40 +718,37 @@ input[type="checkbox"]:disabled + .topcoat-checkbox__checkmark {
   box-sizing: border-box;
   background-clip: padding-box;
 }
-
-/* topdoc
-  name: Checkbox
-  description: Default skin for Topcoat checkbox
-  modifiers:
-    :focus: Focus state
-    :disabled: Disabled state
-  markup:
-    <label class="topcoat-checkbox">
-      <input type="checkbox">
-      <div class="topcoat-checkbox__checkmark"></div>
-      Default
-    </label>
-    <br>
-    <br>
-    <label class="topcoat-checkbox">
-      <input type="checkbox" disabled>
-      <div class="topcoat-checkbox__checkmark"></div>
-      Disabled
-    </label>
-  examples:
-    mobile checkbox: http://codepen.io/Topcoat/pen/piHcs
-  tags:
-    - desktop
-    - light
-    - mobile
-    - checkbox
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="checkbox" class="component">
+            <header>
+              <h2>Checkbox</h2>
+            </header>
+            <section class="component"><label class="topcoat-checkbox">  <input type="checkbox">  <div class="topcoat-checkbox__checkmark"></div>  Default</label><br><br><label class="topcoat-checkbox">  <input type="checkbox" disabled>  <div class="topcoat-checkbox__checkmark"></div>  Disabled</label></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/piHcs">mobile checkbox</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;label class=&quot;topcoat-checkbox&quot;&gt;  &lt;input type=&quot;checkbox&quot;&gt;  &lt;div class=&quot;topcoat-checkbox__checkmark&quot;&gt;&lt;/div&gt;  Default&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-checkbox&quot;&gt;  &lt;input type=&quot;checkbox&quot; disabled&gt;  &lt;div class=&quot;topcoat-checkbox__checkmark&quot;&gt;&lt;/div&gt;  Disabled&lt;/label&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-checkbox__checkmark {
   height: 2rem;
 }
 
-input[type="checkbox"] {
+input[type=&quot;checkbox&quot;] {
   height: 2rem;
   width: 2rem;
   margin-top: 0;
@@ -1009,7 +757,7 @@ input[type="checkbox"] {
   margin-left: 0;
 }
 
-input[type="checkbox"]:checked + .topcoat-checkbox__checkmark:after {
+input[type=&quot;checkbox&quot;]:checked + .topcoat-checkbox__checkmark:after {
   opacity: 1;
 }
 
@@ -1048,7 +796,7 @@ input[type="checkbox"]:checked + .topcoat-checkbox__checkmark:after {
   transform: rotate(-50deg);
 }
 
-input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
+input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
@@ -1057,14 +805,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1075,14 +823,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1132,30 +880,26 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   cursor: default;
   pointer-events: none;
 }
-
-/* topdoc
-  name: Icon Button
-  description: Like button, but it has an icon.
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-icon-button">
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
-    </button>
-    <button class="topcoat-icon-button" disabled>
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
-    </button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - icon
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="icon-button" class="component">
+            <header>
+              <h2>Icon Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-icon-button">  <span class="topcoat-icon" style="background-color:#A5A7A7;"></span></button><button class="topcoat-icon-button" disabled>  <span class="topcoat-icon" style="background-color:#A5A7A7;"></span></button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-icon-button&quot;&gt;  &lt;span class=&quot;topcoat-icon&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;topcoat-icon-button&quot; disabled&gt;  &lt;span class=&quot;topcoat-icon&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-icon-button,
 .topcoat-icon-button--quiet,
 .topcoat-icon-button--large,
@@ -1194,31 +938,26 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   box-shadow: 0 0 0 2px #6fb5f1;
   outline: 0;
 }
-
-/* topdoc
-  name: Quiet Icon Button
-  description: Like quiet button, but it has an icon.
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-icon-button--quiet">
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
-    </button>
-    <button class="topcoat-icon-button--quiet" disabled>
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
-    </button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - icon
-    - quiet
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="quiet-iconbutton" class="component">
+            <header>
+              <h2>Quiet Icon Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-icon-button--quiet">  <span class="topcoat-icon" style="background-color:#A5A7A7;"></span></button><button class="topcoat-icon-button--quiet" disabled>  <span class="topcoat-icon" style="background-color:#A5A7A7;"></span></button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-icon-button--quiet&quot;&gt;  &lt;span class=&quot;topcoat-icon&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;topcoat-icon-button--quiet&quot; disabled&gt;  &lt;span class=&quot;topcoat-icon&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-icon-button--quiet {
   background: transparent;
   border: 1px solid transparent;
@@ -1240,31 +979,26 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   border: 1px solid #303233;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
-
-/* topdoc
-  name: Large Icon Button
-  description: Like large button, but it has an icon.
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-icon-button--large">
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
-    </button>
-    <button class="topcoat-icon-button--large" disabled>
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
-    </button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - icon
-    - large
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-iconbutton" class="component">
+            <header>
+              <h2>Large Icon Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-icon-button--large">  <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span></button><button class="topcoat-icon-button--large" disabled>  <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span></button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-icon-button--large&quot;&gt;  &lt;span class=&quot;topcoat-icon--large&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;topcoat-icon-button--large&quot; disabled&gt;  &lt;span class=&quot;topcoat-icon--large&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
   width: 4.375rem;
@@ -1276,31 +1010,26 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #404141;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }
-
-/* topdoc
-  name: Large Quiet Icon Button
-  description: Like large button, but it has an icon and this one is quiet.
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-  markup:
-    <button class="topcoat-icon-button--large--quiet">
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
-    </button>
-    <button class="topcoat-icon-button--large--quiet" disabled>
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
-    </button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-    - icon
-    - large
-    - quiet
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-quieticon button" class="component">
+            <header>
+              <h2>Large Quiet Icon Button</h2>
+            </header>
+            <section class="component"><button class="topcoat-icon-button--large--quiet">  <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span></button><button class="topcoat-icon-button--large--quiet" disabled>  <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span></button></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;button class=&quot;topcoat-icon-button--large--quiet&quot;&gt;  &lt;span class=&quot;topcoat-icon--large&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;topcoat-icon-button--large--quiet&quot; disabled&gt;  &lt;span class=&quot;topcoat-icon--large&quot; style=&quot;background-color:#A5A7A7;&quot;&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-icon-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
@@ -1329,14 +1058,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1347,14 +1076,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1385,14 +1114,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1403,14 +1132,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1452,14 +1181,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1470,14 +1199,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1518,30 +1247,26 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   margin: 0;
   padding: 0;
 }
-
-/* topdoc
-  name: List
-  description: Topcoat default list skin
-  markup:
-    <div class="topcoat-list">
-      <h3 class="topcoat-list__header">Category</h3>
-      <ul class="topcoat-list__container">
-        <li class="topcoat-list__item">
-          Item
-        </li>
-        <li class="topcoat-list__item">
-          Item
-        </li>
-        <li class="topcoat-list__item">
-          Item
-        </li>
-      </ul>
-    </div>
-  tags:
-    - mobile
-    - list
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="list" class="component">
+            <header>
+              <h2>List</h2>
+            </header>
+            <section class="component"><div class="topcoat-list">  <h3 class="topcoat-list__header">Category</h3>  <ul class="topcoat-list__container">    <li class="topcoat-list__item">      Item    </li>    <li class="topcoat-list__item">      Item    </li>    <li class="topcoat-list__item">      Item    </li>  </ul></div></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-list&quot;&gt;  &lt;h3 class=&quot;topcoat-list__header&quot;&gt;Category&lt;/h3&gt;  &lt;ul class=&quot;topcoat-list__container&quot;&gt;    &lt;li class=&quot;topcoat-list__item&quot;&gt;      Item    &lt;/li&gt;    &lt;li class=&quot;topcoat-list__item&quot;&gt;      Item    &lt;/li&gt;    &lt;li class=&quot;topcoat-list__item&quot;&gt;      Item    &lt;/li&gt;  &lt;/ul&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-list {
   border-top: 1px solid #2f3234;
   border-bottom: 1px solid #5e6061;
@@ -1578,14 +1303,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1596,14 +1321,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1614,14 +1339,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1679,14 +1404,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1697,14 +1422,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1760,24 +1485,26 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   white-space: nowrap;
   overflow: hidden;
 }
-
-/* topdoc
-  name: Navigation Bar
-  description: A place where navigation goes to drink
-  markup:
-    <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item center full">
-            <h1 class="topcoat-navigation-bar__title">Header</h1>
-        </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - navigation
-    - bar
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="navigation-bar" class="component">
+            <header>
+              <h2>Navigation Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-navigation-bar">    <div class="topcoat-navigation-bar__item center full">        <h1 class="topcoat-navigation-bar__title">Header</h1>    </div></div></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-navigation-bar&quot;&gt;    &lt;div class=&quot;topcoat-navigation-bar__item center full&quot;&gt;        &lt;h1 class=&quot;topcoat-navigation-bar__title&quot;&gt;Header&lt;/h1&gt;    &lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-navigation-bar {
   height: 4.375rem;
   padding-left: 1rem;
@@ -1803,14 +1530,14 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1821,21 +1548,21 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
 */
 
-input[type="radio"] {
+input[type=&quot;radio&quot;] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -1902,14 +1629,14 @@ input[type="radio"] {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -1920,21 +1647,21 @@ input[type="radio"] {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
 */
 
-input[type="radio"] {
+input[type=&quot;radio&quot;] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -1998,56 +1725,38 @@ input[type="radio"] {
 }
 
 .radio-button--disabled,
-input[type="radio"]:disabled + .topcoat-radio-button__checkmark {
+input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
-
-/* topdoc
-  name: Radio Button
-  description: A button that can play music, but usually just plays ads.
-  modifiers:
-  markup:
-    <!-- NO LABEL -->
-    <label class="topcoat-radio-button">
-      <input type="radio" name="topcoat">
-      <div class="topcoat-radio-button__checkmark"></div>
-    </label>
-    <br>
-    <br>
-    <!-- LEFT LABEL -->
-    <label class="topcoat-radio-button">
-      Left label
-      <input type="radio" name="topcoat">
-      <div class="topcoat-radio-button__checkmark"></div>
-    </label>
-    <br>
-    <br>
-    <!-- RIGHT LABEL -->
-    <label class="topcoat-radio-button">
-      <input type="radio" name="topcoat">
-      <div class="topcoat-radio-button__checkmark"></div>
-      Right label
-    </label>
-    <br>
-    <br>
-    <!-- DISABLED -->
-    <label class="topcoat-radio-button">
-      <input type="radio" name="topcoat" Disabled>
-      <div class="topcoat-radio-button__checkmark"></div>
-      Disabled
-    </label>
-  examples:
-    Mobile Radio Button: http://codepen.io/Topcoat/pen/HDcJj
-  tags:
-    - desktop
-    - light
-    - mobile
-    - Radio
-*/
-
-input[type="radio"] {
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="radio-button" class="component">
+            <header>
+              <h2>Radio Button</h2>
+            </header>
+            <section class="component"><!-- NO LABEL --><label class="topcoat-radio-button">  <input type="radio" name="topcoat">  <div class="topcoat-radio-button__checkmark"></div></label><br><br><!-- LEFT LABEL --><label class="topcoat-radio-button">  Left label  <input type="radio" name="topcoat">  <div class="topcoat-radio-button__checkmark"></div></label><br><br><!-- RIGHT LABEL --><label class="topcoat-radio-button">  <input type="radio" name="topcoat">  <div class="topcoat-radio-button__checkmark"></div>  Right label</label><br><br><!-- DISABLED --><label class="topcoat-radio-button">  <input type="radio" name="topcoat" Disabled>  <div class="topcoat-radio-button__checkmark"></div>  Disabled</label></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/HDcJj">Mobile Radio Button</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;!-- NO LABEL --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- LEFT LABEL --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  Left label  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- RIGHT LABEL --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;  Right label&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- DISABLED --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot; Disabled&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;  Disabled&lt;/label&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+input[type=&quot;radio&quot;] {
   height: 1.875rem;
   width: 1.875rem;
   margin-top: 0;
@@ -2056,7 +1765,7 @@ input[type="radio"] {
   margin-left: 0;
 }
 
-input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
+input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
   opacity: 1;
 }
 
@@ -2093,7 +1802,7 @@ input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
   left: 7px;
 }
 
-input[type="radio"]:focus + .topcoat-radio-button__checkmark:before {
+input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
@@ -2102,14 +1811,14 @@ input[type="radio"]:focus + .topcoat-radio-button__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2120,14 +1829,14 @@ input[type="radio"]:focus + .topcoat-radio-button__checkmark:before {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2149,7 +1858,7 @@ input[type="radio"]:focus + .topcoat-radio-button__checkmark:before {
   -webkit-appearance: none;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -2163,14 +1872,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2181,14 +1890,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2212,7 +1921,7 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -2223,25 +1932,26 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: default;
   pointer-events: none;
 }
-
-/* topdoc
-  name: Search Input
-  description: A text input designed for searching.
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <input type="search" value="" placeholder="search" class="topcoat-search-input">
-    <input type="search" value="" placeholder="search" class="topcoat-search-input" disabled>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - text
-    - input
-    - search
-    - form
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="search-input" class="component">
+            <header>
+              <h2>Search Input</h2>
+            </header>
+            <section class="component"><input type="search" value="" placeholder="search" class="topcoat-search-input"><input type="search" value="" placeholder="search" class="topcoat-search-input" disabled></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;search&quot; value=&quot;&quot; placeholder=&quot;search&quot; class=&quot;topcoat-search-input&quot;&gt;&lt;input type=&quot;search&quot; value=&quot;&quot; placeholder=&quot;search&quot; class=&quot;topcoat-search-input&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-search-input,
 .topcoat-search-input--large {
   line-height: 3rem;
@@ -2252,7 +1962,7 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #c6c8c8;
   padding: 0 0 0 2rem;
   border-radius: 30px;
-  background-image: url("../img/search.svg");
+  background-image: url(&quot;../img/search.svg&quot;);
   background-position: 1em center;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -2260,7 +1970,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .topcoat-search-input:focus,
 .topcoat-search-input--large:focus {
-  background-image: url("../img/search_dark.svg");
+  background-image: url(&quot;../img/search_dark.svg&quot;);
   background-color: #646666;
   color: #fff;
   border: 1px solid #0940fd;
@@ -2290,26 +2000,26 @@ input[type="search"]::-webkit-search-cancel-button {
 .topcoat-search-input:disabled:-ms-input-placeholder {
   color: #fff;
 }
-
-/* topdoc
-  name: Large Search Input
-  description: A large text input designed for searching.
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <input type="search" value="" placeholder="search" class="topcoat-search-input--large">
-    <input type="search" value="" placeholder="search" class="topcoat-search-input--large" disabled>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - text
-    - input
-    - search
-    - form
-    - large
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-searchinput" class="component">
+            <header>
+              <h2>Large Search Input</h2>
+            </header>
+            <section class="component"><input type="search" value="" placeholder="search" class="topcoat-search-input--large"><input type="search" value="" placeholder="search" class="topcoat-search-input--large" disabled></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;search&quot; value=&quot;&quot; placeholder=&quot;search&quot; class=&quot;topcoat-search-input--large&quot;&gt;&lt;input type=&quot;search&quot; value=&quot;&quot; placeholder=&quot;search&quot; class=&quot;topcoat-search-input--large&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-search-input--large {
   line-height: 4.375rem;
   font-size: 1.3rem;
@@ -2340,14 +2050,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2358,14 +2068,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2395,22 +2105,26 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: default;
   pointer-events: none;
 }
-
-/* topdoc
-  name: Text input
-  description: Topdoc text input
-  markup:
-    <input type="text" class="topcoat-text-input" placeholder="text" value="">
-    <br>
-    <br>
-    <input type="text" class="topcoat-text-input" placeholder="text" value="" disabled>
-  tags:
-    - desktop
-    - mobile
-    - text
-    - input
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="text-input" class="component">
+            <header>
+              <h2>Text input</h2>
+            </header>
+            <section class="component"><input type="text" class="topcoat-text-input" placeholder="text" value=""><br><br><input type="text" class="topcoat-text-input" placeholder="text" value="" disabled></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-text-input,
 .topcoat-text-input--large {
   line-height: 3rem;
@@ -2444,26 +2158,26 @@ input[type="search"]::-webkit-search-cancel-button {
 .topcoat-text-input:disabled:-ms-input-placeholder {
   color: #fff;
 }
-
-/* topdoc
-  name: Large Text Input
-  description: A bigger input, still for text.
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <input type="text" class="topcoat-text-input--large" value="" placeholder="text">
-    <br>
-    <br>
-    <input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - form
-    - input
-    - large
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-textinput" class="component">
+            <header>
+              <h2>Large Text Input</h2>
+            </header>
+            <section class="component"><input type="text" class="topcoat-text-input--large" value="" placeholder="text"><br><br><input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-text-input--large {
   line-height: 4.375rem;
   font-size: 1.3rem;
@@ -2489,14 +2203,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2507,14 +2221,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2546,14 +2260,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2564,14 +2278,14 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 * Copyright 2012 Adobe Systems Inc.;
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 * See the License for the specific language governing permissions and
 * limitations under the License.
@@ -2602,26 +2316,26 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: default;
   pointer-events: none;
 }
-
-/* topdoc
-  name: Textarea
-  description: A whole area, just for text.
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea>
-    <br>
-    <br>
-    <textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea" disabled></textarea>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - form
-    - input
-    - textarea
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="textarea" class="component">
+            <header>
+              <h2>Textarea</h2>
+            </header>
+            <section class="component"><textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea><br><br><textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea" disabled></textarea></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;textarea class=&quot;topcoat-textarea&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;&lt;textarea class=&quot;topcoat-textarea&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot; disabled&gt;&lt;/textarea&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-textarea,
 .topcoat-textarea--large {
   padding: 2rem;
@@ -2655,26 +2369,26 @@ input[type="search"]::-webkit-search-cancel-button {
 .topcoat-textarea:disabled:-ms-input-placeholder {
   color: #fff;
 }
-
-/* topdoc
-  name: Large Textarea
-  description: A whole area, just for text; now available in large.
-  modifiers:
-    :disabled: Disabled state
-  markup:
-    <textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea"></textarea>
-    <br>
-    <br>
-    <textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea" disabled></textarea>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - form
-    - input
-    - textarea
-*/
-
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="large-textarea" class="component">
+            <header>
+              <h2>Large Textarea</h2>
+            </header>
+            <section class="component"><textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea"></textarea><br><br><textarea class="topcoat-textarea--large" rows="6" cols="36" placeholder="Textarea" disabled></textarea></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;textarea class=&quot;topcoat-textarea--large&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;&lt;textarea class=&quot;topcoat-textarea--large&quot; rows=&quot;6&quot; cols=&quot;36&quot; placeholder=&quot;Textarea&quot; disabled&gt;&lt;/textarea&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
 .topcoat-textarea--large {
   font-size: 3rem;
   line-height: 4.375rem;
@@ -2697,19 +2411,19 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 @font-face {
-  font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Regular.otf");
+  font-family: &quot;Source Sans&quot;;
+  src: url(&quot;../font/SourceSansPro-Regular.otf&quot;);
 }
 
 @font-face {
-  font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Light.otf");
+  font-family: &quot;Source Sans&quot;;
+  src: url(&quot;../font/SourceSansPro-Light.otf&quot;);
   font-weight: 200;
 }
 
 @font-face {
-  font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Semibold.otf");
+  font-family: &quot;Source Sans&quot;;
+  src: url(&quot;../font/SourceSansPro-Semibold.otf&quot;);
   font-weight: 600;
 }
 
@@ -2718,7 +2432,7 @@ body {
   padding: 0;
   background: #4b4d4e;
   color: #000;
-  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font: 16px &quot;Source Sans&quot;, helvetica, arial, sans-serif;
   font-weight: 200;
   text-rendering: optimizeLegibility;
 }
@@ -2729,7 +2443,7 @@ body {
 }
 
 .topcoat-icon--menu-stack {
-  background: url("../img/hamburger_light.svg") no-repeat;
+  background: url(&quot;../img/hamburger_light.svg&quot;) no-repeat;
   background-size: cover;
 }
 
@@ -2880,4 +2594,16 @@ body {
 
 /* Progress bar progress */
 
-/* Search input */
+/* Search input */</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+        </div>
+        <footer></footer>
+      </div>
+    </div>
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
