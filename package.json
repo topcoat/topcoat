@@ -25,7 +25,8 @@
     "topcoat-search-input-base": "~0.1.1",
     "topcoat-checkbox": "~0.4.0",
     "topcoat-checkbox-base": "~0.1.3",
-    "topcoat-button": "~0.5.2"
+    "topcoat-button": "~0.5.2",
+    "topcoat-icon-button": "~0.3.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
