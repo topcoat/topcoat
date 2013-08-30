@@ -1172,11 +1172,6 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   border-radius: 4px;
 }
 
-.topcoat-icon-button:active {
-  background-color: #404141;
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}
-
 .topcoat-icon-button:hover,
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large:hover,
@@ -1184,10 +1179,17 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #646666;
 }
 
+.topcoat-icon-button:active {
+  background-color: #404141;
+  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+}
+
 .topcoat-icon-button:focus,
 .topcoat-icon-button--quiet:focus,
+.topcoat-icon-button--quiet:hover:focus,
 .topcoat-icon-button--large:focus,
-.topcoat-icon-button--large--quiet:focus {
+.topcoat-icon-button--large--quiet:focus,
+.topcoat-icon-button--large--quiet:hover:focus {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
   outline: 0;
@@ -1223,6 +1225,13 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   box-shadow: none;
 }
 
+.topcoat-icon-button--quiet:hover,
+.topcoat-icon-button--large--quiet:hover {
+  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  border: 1px solid #303233;
+  box-shadow: inset 0 1px #727373;
+}
+
 .topcoat-icon-button--quiet:active,
 .topcoat-icon-button--large--quiet:active {
   color: #c6c8c8;
@@ -1230,13 +1239,6 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #404141;
   border: 1px solid #303233;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}
-
-.topcoat-icon-button--quiet:hover,
-.topcoat-icon-button--large--quiet:hover {
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #303233;
-  box-shadow: inset 0 1px #727373;
 }
 
 /* topdoc
@@ -1880,14 +1882,6 @@ input[type="radio"]:focus + .topcoat-radio-button__checkmark:before {
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *
-*/
-
-/* topdoc
-  name: Search Input base
-  markup:
-    <input type="search" class="search-input" placeholder="search">
-  example:
-    http://codepen.io/Topcoat/pen/Kgbtn
 */
 
 .search-input {

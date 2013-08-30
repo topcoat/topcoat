@@ -47,7 +47,6 @@
               <li><a href="#large-iconbutton">Large Icon Button</a></li>
               <li><a href="#large-quieticon button">Large Quiet Icon Button</a></li>
               <li><a href="#radio-button">Radio Button</a></li>
-              <li><a href="#search-inputbase">Search Input base</a></li>
               <li><a href="#search-input">Search Input</a></li>
               <li><a href="#large-searchinput">Large Search Input</a></li>
               <li><a href="#text-input">Text input</a></li>
@@ -915,11 +914,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   border-radius: 4px;
 }
 
-.topcoat-icon-button:active {
-  background-color: #404141;
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}
-
 .topcoat-icon-button:hover,
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large:hover,
@@ -927,10 +921,17 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #646666;
 }
 
+.topcoat-icon-button:active {
+  background-color: #404141;
+  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+}
+
 .topcoat-icon-button:focus,
 .topcoat-icon-button--quiet:focus,
+.topcoat-icon-button--quiet:hover:focus,
 .topcoat-icon-button--large:focus,
-.topcoat-icon-button--large--quiet:focus {
+.topcoat-icon-button--large--quiet:focus,
+.topcoat-icon-button--large--quiet:hover:focus {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
   outline: 0;
@@ -961,6 +962,13 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   box-shadow: none;
 }
 
+.topcoat-icon-button--quiet:hover,
+.topcoat-icon-button--large--quiet:hover {
+  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  border: 1px solid #303233;
+  box-shadow: inset 0 1px #727373;
+}
+
 .topcoat-icon-button--quiet:active,
 .topcoat-icon-button--large--quiet:active {
   color: #c6c8c8;
@@ -968,13 +976,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #404141;
   border: 1px solid #303233;
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
-}
-
-.topcoat-icon-button--quiet:hover,
-.topcoat-icon-button--large--quiet:hover {
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #303233;
-  box-shadow: inset 0 1px #727373;
 }
 </code></pre>
                 </div>
@@ -1591,26 +1592,7 @@ input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
 * limitations under the License.
 *
 */
-</code></pre>
-                </div>
-              </section>
-            </footer>
-          </article>
-          <article id="search-inputbase" class="component">
-            <header>
-              <h2>Search Input base</h2>
-            </header>
-            <section class="component"><input type="search" class="search-input" placeholder="search"></section>
-            <footer>
-              <div class="showcode"><a href="#">Show code snippets</a></div>
-              <section class="code">
-                <div>
-                  <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;input type=&quot;search&quot; class=&quot;search-input&quot; placeholder=&quot;search&quot;&gt;</code></pre>
-                </div>
-                <div>
-                  <h3>CSS</h3>
-                  <pre class="css"><code data-language="css">
+
 .search-input {
   padding: 0;
   margin: 0;
