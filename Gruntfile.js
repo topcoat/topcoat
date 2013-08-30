@@ -29,17 +29,16 @@ module.exports = function(grunt) {
         stylus: {
             options: {
                 paths: grunt.file.expand(__dirname + '/node_modules/topcoat-*/src/')
-                        /*
-                         * FIXME: We need to refactor all components to
-                         * remove mixins directory *See button & button-base
-                         */
-                         .concat(grunt.file.expand('node_modules/topcoat-*/src/mixins')),
+                /* FIXME: Utils is the last needing to be moved out of mixins
+                 * folder
+                 */
+                .concat(grunt.file.expand(__dirname + '/node_modules/topcoat-utils/src/mixins/')),
+                compress: false
             },
 
             mobilelight: {
                 options: {
-                    import: ['theme-topcoat-mobile-light', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-light', 'utils']
                 },
 
                 files: [{
@@ -50,8 +49,7 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    import: ['theme-topcoat-mobile-dark', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-dark', 'utils']
                 },
 
                 files: [{
@@ -62,23 +60,29 @@ module.exports = function(grunt) {
 
             desktoplight: {
                 options: {
-                    import: ['theme-topcoat-desktop-light', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-desktop-light', 'utils']
                 },
                 files: [{
-                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    src: [
+                        'node_modules/topcoat-*/src/**/*.styl',
+                        '!node_modules/topcoat-navigation-bar/src/*.styl',
+                        '!node_modules/topcoat-list/src/*.styl'
+                        ],
                     dest: 'css/topcoat-desktop-light.css'
                 }]
             },
 
             desktopdark: {
                 options: {
-                    import: ['theme-topcoat-desktop-dark', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-desktop-dark', 'utils']
                 },
 
                 files: [{
-                    src: 'node_modules/topcoat-*/src/**/*.styl',
+                    src: [
+                        'node_modules/topcoat-*/src/**/*.styl',
+                        '!node_modules/topcoat-navigation-bar/src/*.styl',
+                        '!node_modules/topcoat-list/src/*.styl'
+                        ],
                     dest: 'css/topcoat-desktop-dark.css'
                 }]
             }
@@ -88,11 +92,62 @@ module.exports = function(grunt) {
             usageguides: {
                 options: {
                     source: 'css',
-                    destination: './',
-                    template: '<%= pkg.topdoc.template %>',
-                    templateData: '<%= pkg.topdoc.templateData %>'
+                    destination: 'demo',
+                    template: 'node_modules/topdoc-theme/',
+                    templateData: {
+                        "title": "Topcoat",
+                        "subtitle": "CSS for clean and fast web apps",
+                        "download": {
+                            "url": "https://github.com/topcoat/topcoat/archive/0.7.0.zip",
+                            "label": "Download"
+                        },
+                        "homeURL": "http://topcoat.io",
+                        "siteNav": [
+                            {
+                            "url": "http://topcoat.io/topcoat",
+                            "text": "Demo"
+                        },
+                            {
+                            "url": "http://bench.topcoat.io/",
+                            "text": "Benchmarks"
+                        },
+                            {
+                            "url": "http://topcoat.io/blog",
+                            "text": "Blog"
+                        }
+                        ]
+                    }
                 }
             }
+        },
+
+        autoprefixer: {
+            dist: {
+                options: {
+                    /*
+                     * Add target browsers here
+                     * https://github.com/ai/autoprefixer#browsers
+                     * browsers: ['android 4']
+                     */
+                },
+                files: [{
+                    src: 'css/topcoat-desktop-dark.css',
+                    dest: 'css/topcoat-desktop-dark.css'
+                },
+                                    {
+                    src: 'css/topcoat-desktop-light.css',
+                    dest: 'css/topcoat-desktop-light.css'
+                },
+                                    {
+                    src: 'css/topcoat-mobile-dark.css',
+                    dest: 'css/topcoat-mobile-dark.css'
+                },
+                                    {
+                    src: 'css/topcoat-mobile-light.css',
+                    dest: 'css/topcoat-mobile-light.css'
+                }]
+            }
+
         },
 
         cssmin: {
@@ -138,6 +193,7 @@ module.exports = function(grunt) {
                     dest: 'img'
                 }]
             },
+
             telemetry: {
                 files: [{
                     expand: true,
@@ -204,12 +260,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-topdoc');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     //Load local tasks
     grunt.loadTasks('dev/tasks');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'stylus', 'cssmin', 'topdoc', 'copy:release']);
+    grunt.registerTask('default', ['clean', 'stylus', 'autoprefixer', 'cssmin', 'topdoc', 'copy:release']);
     grunt.registerTask('release', ['default', 'clean:src']);
     grunt.registerTask('compile', ['topcoat:compile', 'topdoc', 'copy:release']);
 
