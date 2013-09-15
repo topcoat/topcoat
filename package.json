@@ -26,6 +26,7 @@
     "topcoat-icon-button": "~0.3.3",
     "topcoat-button-bar-base": "~0.1.1",
     "topcoat-button-bar": "~0.1.0",
+    "topcoat-button-list": "https://github.com/fabricematrat/button-list/tarball/master",
     "topcoat-textarea": "~0.3.0",
     "topcoat-theme": "~0.5.17",
     "topcoat-textarea-base": "~0.3.2"
@@ -54,7 +55,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/topcoat/topcoat.git"
-  },
+  },  
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
   },
