@@ -10,7 +10,7 @@
   "dependencies": {
     "topcoat-utils": "~0.1.3",
     "topcoat-radio-button-base": "~0.1.1",
-    "topcoat-button-base": "~0.6.0",
+    "topcoat-button-base": "~0.6.1",
     "topcoat-radio-button": "~0.1.2",
     "topcoat-navigation-bar-base": "~0.4.0",
     "topcoat-navigation-bar": "~0.4.2",
@@ -23,12 +23,13 @@
     "topcoat-checkbox": "~0.4.0",
     "topcoat-checkbox-base": "~0.1.3",
     "topcoat-button": "~0.5.3",
-    "topcoat-icon-button": "~0.3.3",
-    "topcoat-button-bar-base": "~0.1.1",
-    "topcoat-button-bar": "~0.1.0",
+    "topcoat-icon-button": "~0.3.4",
+    "topcoat-button-bar-base": "~0.1.3",
+    "topcoat-button-bar": "~0.1.1",
     "topcoat-textarea": "~0.3.0",
-    "topcoat-theme": "~0.5.17",
-    "topcoat-textarea-base": "~0.3.2"
+    "topcoat-theme": "~0.5.20",
+    "topcoat-textarea-base": "~0.3.2",
+    "topcoat-tab-bar": "~0.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
