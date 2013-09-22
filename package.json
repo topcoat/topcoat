@@ -27,8 +27,10 @@
     "topcoat-button-bar": "~0.1.0",
     "topcoat-textarea": "~0.3.0",
     "topcoat-theme": "~0.5.17",
+    "topcoat-text-input": "~0.3.4",
     "topcoat-textarea-base": "~0.3.2",
-    "topcoat-text-input": "~0.3.2"
+    "topcoat-notification": "~0.1.0",
+    "topcoat-notification-base": "0.0.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

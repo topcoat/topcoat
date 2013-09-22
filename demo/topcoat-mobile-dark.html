@@ -2114,13 +2114,13 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
             <header>
               <h2>Text input</h2>
             </header>
-            <section class="component"><input type="text" class="topcoat-text-input" placeholder="text" value=""><br><br><input type="text" class="topcoat-text-input" placeholder="text" value="" disabled></section>
+            <section class="component"><input type="text" class="topcoat-text-input" placeholder="text" value=""><br><br><input type="text" class="topcoat-text-input" placeholder="text" value="" disabled><br><br><input type="text" class="topcoat-text-input" placeholder="text" value="fail" pattern="not-fail"></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;&quot; disabled&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;&quot; disabled&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; placeholder=&quot;text&quot; value=&quot;fail&quot; pattern=&quot;not-fail&quot;&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -2158,6 +2158,10 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 .topcoat-text-input:disabled:-ms-input-placeholder {
   color: #fff;
 }
+
+.topcoat-text-input:invalid {
+  border: 1px solid #d83b75;
+}
 </code></pre>
                 </div>
               </section>
@@ -2167,13 +2171,13 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
             <header>
               <h2>Large Text Input</h2>
             </header>
-            <section class="component"><input type="text" class="topcoat-text-input--large" value="" placeholder="text"><br><br><input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled></section>
+            <section class="component"><input type="text" class="topcoat-text-input--large" value="" placeholder="text"><br><br><input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled><br><br><input type="text" class="topcoat-text-input--large" placeholder="text" value="fail" pattern="not-fail"></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot; disabled&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot; disabled&gt;&lt;br&gt;&lt;br&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; placeholder=&quot;text&quot; value=&quot;fail&quot; pattern=&quot;not-fail&quot;&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -2197,6 +2201,10 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 
 .topcoat-text-input--large:disabled:-ms-input-placeholder {
   color: #fff;
+}
+
+.topcoat-text-input--large:invalid {
+  border: 1px solid #d83b75;
 }
 
 /**
