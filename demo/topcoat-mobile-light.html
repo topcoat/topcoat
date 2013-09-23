@@ -50,9 +50,10 @@
               <li><a href="#navigation-bar">Navigation Bar</a></li>
               <li><a href="#notification">Notification</a></li>
               <li><a href="#radio-button">Radio Button</a></li>
+              <li><a href="#range">Range</a></li>
               <li><a href="#search-input">Search Input</a></li>
               <li><a href="#large-searchinput">Large Search Input</a></li>
-              <li><a href="#switch">switch</a></li>
+              <li><a href="#switch">Switch</a></li>
               <li><a href="#tab-bar">Tab Bar</a></li>
               <li><a href="#text-input">Text input</a></li>
               <li><a href="#large-textinput">Large Text Input</a></li>
@@ -1665,7 +1666,6 @@ limitations under the License.
                   <pre class="css"><code data-language="css">
 .topcoat-notification {
   padding: 0.15em 0.5em 0.2em;
-  margin-left: 5px;
   border-radius: 2px;
   background-color: #ec514e;
   color: #fff;
@@ -1948,6 +1948,199 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
 }
 
 input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
+  border: 1px solid #0940fd;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+.range {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  vertical-align: top;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.range__thumb {
+  cursor: pointer;
+}
+
+.range__thumb--webkit {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.range:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+.range,
+.topcoat-range {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  vertical-align: top;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.range__thumb,
+.topcoat-range::-moz-range-thumb {
+  cursor: pointer;
+}
+
+.range__thumb--webkit,
+.topcoat-range::-webkit-slider-thumb {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.range:disabled,
+.topcoat-range:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="range" class="component">
+            <header>
+              <h2>Range</h2>
+            </header>
+            <section class="component"><input type="range" class="topcoat-range"><input type="range" class="topcoat-range" disabled></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/BskEn">mobile range</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;range&quot; class=&quot;topcoat-range&quot;&gt;&lt;input type=&quot;range&quot; class=&quot;topcoat-range&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-range {
+  border-radius: 6px;
+  border: 1px solid #a5a8a8;
+  background-color: #d3d7d7;
+  height: 1rem;
+  border-radius: 30px;
+}
+
+.topcoat-range::-moz-range-track {
+  border-radius: 6px;
+  border: 1px solid #a5a8a8;
+  background-color: #d3d7d7;
+  height: 1rem;
+  border-radius: 30px;
+}
+
+.topcoat-range::-webkit-slider-thumb {
+  height: 3rem;
+  width: 2rem;
+  background-color: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  border-radius: 6px;
+  box-shadow: inset 0 1px #fff;
+}
+
+.topcoat-range::-moz-range-thumb {
+  height: 3rem;
+  width: 2rem;
+  background-color: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  border-radius: 6px;
+  box-shadow: inset 0 1px #fff;
+}
+
+.topcoat-range:focus::-webkit-slider-thumb {
+  border: 1px solid #0940fd;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+.topcoat-range:focus::-moz-range-thumb {
   border: 1px solid #0940fd;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
@@ -2375,7 +2568,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 }
 
 .switch--disabled,
-.topcoat-switch:disabled {
+.topcoat-switch__input:disabled + .topcoat-switch__toggle {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -2387,9 +2580,9 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
           </article>
           <article id="switch" class="component">
             <header>
-              <h2>switch</h2>
+              <h2>Switch</h2>
             </header>
-            <section class="component"><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label><br><br><label class="topcoat-switch" disabled>  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label></section>
+            <section class="component"><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label><br><br><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input" checked>  <div class="topcoat-switch__toggle"></div></label><br><br><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input" disabled>  <div class="topcoat-switch__toggle"></div></label></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -2401,7 +2594,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-switch&quot; disabled&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot; checked&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot; disabled&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -2417,7 +2610,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 
 .topcoat-switch__toggle:before,
 .topcoat-switch__toggle:after {
-  top: -1;
+  top: -1px;
   width: 5rem;
 }
 
