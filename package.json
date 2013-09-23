@@ -30,7 +30,10 @@
     "topcoat-text-input": "~0.3.4",
     "topcoat-textarea-base": "~0.3.2",
     "topcoat-notification": "~0.1.0",
-    "topcoat-notification-base": "0.0.1"
+    "topcoat-notification-base": "0.0.1",
+    "topcoat-tab-bar": "~0.1.0",
+    "topcoat-switch": "~0.1.1",
+    "topcoat-switch-base": "~0.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -50,6 +50,8 @@
               <li><a href="#radio-button">Radio Button</a></li>
               <li><a href="#search-input">Search Input</a></li>
               <li><a href="#large-searchinput">Large Search Input</a></li>
+              <li><a href="#switch">switch</a></li>
+              <li><a href="#tab-bar">Tab Bar</a></li>
               <li><a href="#text-input">Text input</a></li>
               <li><a href="#large-textinput">Large Text Input</a></li>
               <li><a href="#textarea">Textarea</a></li>
@@ -1937,6 +1939,440 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 
 .topcoat-search-input--large:disabled:-ms-input-placeholder {
   color: #000;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.switch__input {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+
+.switch__toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.switch__toggle:before,
+.switch__toggle:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.switch--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.switch,
+.topcoat-switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.switch__input,
+.topcoat-switch__input {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+
+.switch__toggle,
+.topcoat-switch__toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.switch__toggle:before,
+.switch__toggle:after,
+.topcoat-switch__toggle:before,
+.topcoat-switch__toggle:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.switch--disabled,
+.topcoat-switch:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="switch" class="component">
+            <header>
+              <h2>switch</h2>
+            </header>
+            <section class="component"><label class="topcoat-switch">  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label><br><br><label class="topcoat-switch" disabled>  <input type="checkbox" class="topcoat-switch__input">  <div class="topcoat-switch__toggle"></div></label></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/upxds">mobile switch</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;label class=&quot;topcoat-switch&quot;&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label class=&quot;topcoat-switch&quot; disabled&gt;  &lt;input type=&quot;checkbox&quot; class=&quot;topcoat-switch__input&quot;&gt;  &lt;div class=&quot;topcoat-switch__toggle&quot;&gt;&lt;/div&gt;&lt;/label&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-switch {
+  font-size: 12px;
+  padding: 0 0.563rem;
+  border-radius: 4px;
+  border: 1px solid #a5a8a8;
+  overflow: hidden;
+  width: 3.5rem;
+}
+
+.topcoat-switch__toggle:before,
+.topcoat-switch__toggle:after {
+  top: -1;
+  width: 2.6rem;
+}
+
+.topcoat-switch__toggle:before {
+  content: 'ON';
+  color: #0083e8;
+  background-color: #e0f0fa;
+  right: 0.8rem;
+  padding-left: 0.75rem;
+}
+
+.topcoat-switch__toggle {
+  line-height: 1.313rem;
+  height: 1.313rem;
+  width: 1rem;
+  border-radius: 4px;
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  background-color: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  margin-left: -0.6rem;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  box-shadow: inset 0 1px #fff;
+  -webkit-transition: transition margin-left 0.05s ease-in-out;
+  transition: transition margin-left 0.05s ease-in-out;
+}
+
+.topcoat-switch__toggle:after {
+  content: 'OFF';
+  background-color: #d3d7d7;
+  left: 0.8rem;
+  padding-left: 0.6rem;
+}
+
+.topcoat-switch__input:checked + .topcoat-switch__toggle {
+  margin-left: 1.85rem;
+}
+
+.topcoat-switch__input:focus + .topcoat-switch__toggle {
+  border: 1px solid #0940fd;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.button,
+.topcoat-tab-bar__button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.button--disabled,
+.topcoat-tab-bar__button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.button-bar,
+.topcoat-tab-bar {
+  display: table;
+  table-layout: fixed;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.button-bar__item,
+.topcoat-tab-bar__item {
+  display: table-cell;
+  width: auto;
+  border-radius: 0;
+}
+
+.button-bar__item &gt; input,
+.topcoat-tab-bar__item &gt; input {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+
+.button-bar__button {
+  border-radius: inherit;
+}
+
+.button-bar__item:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="tab-bar" class="component">
+            <header>
+              <h2>Tab Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-tab-bar">  <label class="topcoat-tab-bar__item">    <input type="radio" name="tab-bar">    <button class="topcoat-tab-bar__button">One</button>  </label>  <label class="topcoat-tab-bar__item">    <input type="radio" name="tab-bar">    <button class="topcoat-tab-bar__button">Two</button>  </label>  <label class="topcoat-tab-bar__item">    <input type="radio" name="tab-bar">    <button class="topcoat-tab-bar__button">Three</button>  </label></div></section>
+            <section class="examples">
+              <h4>Examples</h4>
+              <ul>
+                <li><a href="http://codepen.io/Topcoat/pen/rJICF">mobile tab bar</a></li>
+              </ul>
+            </section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-tab-bar&quot;&gt;  &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;One&lt;/button&gt;  &lt;/label&gt;  &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Two&lt;/button&gt;  &lt;/label&gt;  &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Three&lt;/button&gt;  &lt;/label&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-tab-bar__button {
+  padding: 0 0.563rem;
+  height: 1.313rem;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  vertical-align: top;
+  background-color: #e5e9e8;
+  box-shadow: inset 0 1px #fff;
+  border-top: 1px solid #a5a8a8;
+}
+
+.topcoat-tab-bar__button:active,
+.topcoat-tab-bar__button--large:active,
+:checked + .topcoat-tab-bar__button {
+  color: #0083e8;
+  background-color: #e0f0fa;
+  box-shadow: inset 0 0 2px #c0ced8;
+}
+
+.topcoat-tab-bar__button:focus,
+.topcoat-tab-bar__button--large:focus {
+  z-index: 1;
 }
 
 /**
