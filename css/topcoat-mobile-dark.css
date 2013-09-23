@@ -19,7 +19,7 @@
 .button-bar {
   display: table;
   table-layout: fixed;
-  white-space: no-wrap;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +30,7 @@
   border-radius: 0;
 }
 
-.button_bar__item > input {
+.button-bar__item > input {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -278,7 +278,7 @@
 .topcoat-button-bar {
   display: table;
   table-layout: fixed;
-  white-space: no-wrap;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
 }
@@ -290,7 +290,7 @@
   border-radius: 0;
 }
 
-.button_bar__item > input,
+.button-bar__item > input,
 .topcoat-button-bar__item > input {
   position: absolute;
   overflow: hidden;
@@ -1799,6 +1799,141 @@ input[type="checkbox"]:focus + .topcoat-checkbox__checkmark:before {
   color: #fff;
 }
 
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.notification {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.notification,
+.topcoat-notification {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* topdoc
+  name: Notification
+  description: Notification badge
+  markup:
+    <span class="topcoat-notification">1</span>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - notification
+*/
+
+.topcoat-notification {
+  padding: 0.15em 0.5em 0.2em;
+  margin-left: 5px;
+  border-radius: 2px;
+  background-color: #ec514e;
+  color: #fff;
+}
+
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -2740,7 +2875,6 @@ body {
   color: #000;
   font: 16px "Source Sans", helvetica, arial, sans-serif;
   font-weight: 200;
-  text-rendering: optimizeLegibility;
 }
 
 :focus {
@@ -2812,6 +2946,8 @@ body {
   overflow: hidden;
 }
 
+/* This file should include color and image variables corresponding to the dark theme */
+
 /* Call To Action */
 
 /* Icons */
@@ -2834,6 +2970,10 @@ body {
 
 /* Radio Button */
 
+/* Tab bar */
+
+/* Switch */
+
 /* Icon Button */
 
 /* Navigation bar */
@@ -2848,7 +2988,13 @@ body {
 
 /* Radio */
 
+/* Range input */
+
 /* Search Input */
+
+/* Switch */
+
+/* This file should include color and image variables corresponding to the light theme */
 
 /* Call To Action */
 
@@ -2860,13 +3006,19 @@ body {
 
 /* List */
 
-/*Overlay*/
+/* Overlay */
 
 /* Progress bar */
 
 /* Checkbox */
 
 /* Range input */
+
+/* Radio Button */
+
+/* Tab bar */
+
+/* Switch */
 
 /* Containers */
 
@@ -2888,6 +3040,8 @@ body {
 
 /* Search Input */
 
+/* Switch */
+
 /* Text Input */
 
 /* Radio input */
@@ -2901,3 +3055,7 @@ body {
 /* Progress bar progress */
 
 /* Search input */
+
+/* Switch */
+
+/* Notification */

@@ -46,6 +46,7 @@
               <li><a href="#quiet-iconbutton">Quiet Icon Button</a></li>
               <li><a href="#large-iconbutton">Large Icon Button</a></li>
               <li><a href="#large-quieticon button">Large Quiet Icon Button</a></li>
+              <li><a href="#notification">Notification</a></li>
               <li><a href="#radio-button">Radio Button</a></li>
               <li><a href="#search-input">Search Input</a></li>
               <li><a href="#large-searchinput">Large Search Input</a></li>
@@ -1276,6 +1277,148 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   overflow: hidden;
 }
 
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.notification {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/*
+Copyright 2012 Adobe Systems Inc.;
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.notification,
+.topcoat-notification {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="notification" class="component">
+            <header>
+              <h2>Notification</h2>
+            </header>
+            <section class="component"><span class="topcoat-notification">1</span></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;span class=&quot;topcoat-notification&quot;&gt;1&lt;/span&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">
+.topcoat-notification {
+  padding: 0.15em 0.5em 0.2em;
+  margin-left: 5px;
+  border-radius: 2px;
+  background-color: #ec514e;
+  color: #fff;
+}
+
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -2192,7 +2335,6 @@ body {
   color: #000;
   font: 16px &quot;Source Sans&quot;, helvetica, arial, sans-serif;
   font-weight: 200;
-  text-rendering: optimizeLegibility;
 }
 
 :focus {
@@ -2264,6 +2406,8 @@ body {
   overflow: hidden;
 }
 
+/* This file should include color and image variables corresponding to the dark theme */
+
 /* Call To Action */
 
 /* Icons */
@@ -2286,6 +2430,10 @@ body {
 
 /* Radio Button */
 
+/* Tab bar */
+
+/* Switch */
+
 /* Icon Button */
 
 /* Navigation bar */
@@ -2300,7 +2448,13 @@ body {
 
 /* Radio */
 
+/* Range input */
+
 /* Search Input */
+
+/* Switch */
+
+/* This file should include color and image variables corresponding to the light theme */
 
 /* Call To Action */
 
@@ -2312,13 +2466,19 @@ body {
 
 /* List */
 
-/*Overlay*/
+/* Overlay */
 
 /* Progress bar */
 
 /* Checkbox */
 
 /* Range input */
+
+/* Radio Button */
+
+/* Tab bar */
+
+/* Switch */
 
 /* Containers */
 
@@ -2340,6 +2500,8 @@ body {
 
 /* Search Input */
 
+/* Switch */
+
 /* Text Input */
 
 /* Radio input */
@@ -2352,7 +2514,11 @@ body {
 
 /* Progress bar progress */
 
-/* Search input */</code></pre>
+/* Search input */
+
+/* Switch */
+
+/* Notification */</code></pre>
                 </div>
               </section>
             </footer>
