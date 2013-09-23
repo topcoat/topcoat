@@ -2935,6 +2935,11 @@ input[type="search"]::-webkit-search-cancel-button {
   box-shadow: 0 0 0 2px #6fb5f1;
 }
 
+.topcoat-switch__input:disabled + .topcoat-switch__toggle:after,
+.topcoat-switch__input:disabled + .topcoat-switch__toggle:before {
+  background: transparent;
+}
+
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
