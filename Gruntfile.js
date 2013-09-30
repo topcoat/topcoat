@@ -131,20 +131,10 @@ module.exports = function(grunt) {
                      */
                 },
                 files: [{
-                    src: 'css/topcoat-desktop-dark.css',
-                    dest: 'css/topcoat-desktop-dark.css'
-                },
-                {
-                    src: 'css/topcoat-desktop-light.css',
-                    dest: 'css/topcoat-desktop-light.css'
-                },
-                {
-                    src: 'css/topcoat-mobile-dark.css',
-                    dest: 'css/topcoat-mobile-dark.css'
-                },
-                {
-                    src: 'css/topcoat-mobile-light.css',
-                    dest: 'css/topcoat-mobile-light.css'
+                    expand: true,
+                    cwd: 'css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'css/'
                 }]
             }
 
