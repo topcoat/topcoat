@@ -2585,7 +2585,7 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 16px;
   border: 1px solid #9daca9;
   background-color: #fff;
-  box-shadow: inset 0 1px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.23);
   color: #454545;
   padding: 0 0 0 2rem;
   border-radius: 30px;
@@ -2597,11 +2597,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .topcoat-search-input:focus,
 .topcoat-search-input--large:focus {
-  background-image: var-background-image-alt--search-input;
   background-color: #fff;
   color: #454545;
   border: 1px solid #0036ff;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.23), 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-search-input::-webkit-search-cancel-button,
