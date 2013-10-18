@@ -32,10 +32,10 @@
     "topcoat-switch": "~0.1.4",
     "topcoat-switch-base": "~0.1.0",
     "topcoat-range-base": "0.0.3",
-    "topcoat-range": "~0.1.0",
-    "topcoat-search-input": "~0.3.3",
     "topcoat-theme": "~0.6.4",
-    "topcoat-utils": "~0.2.0"
+    "topcoat-utils": "~0.2.0",
+    "topcoat-search-input": "~0.3.3",
+    "topcoat-range": "~0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

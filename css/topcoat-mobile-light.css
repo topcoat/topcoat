@@ -2426,12 +2426,22 @@ limitations under the License.
 
 .topcoat-range:focus::-webkit-slider-thumb {
   border: 1px solid #0036ff;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-range:focus::-moz-range-thumb {
   border: 1px solid #0036ff;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+}
+
+.topcoat-range:active::-webkit-slider-thumb {
+  border: 1px solid #9daca9;
+  box-shadow: inset 0 1px #fff;
+}
+
+.topcoat-range:active::-moz-range-thumb {
+  border: 1px solid #9daca9;
+  box-shadow: inset 0 1px #fff;
 }
 
 /**
