@@ -359,21 +359,24 @@
   background-color: #626465;
 }
 
-.topcoat-button:active,
-.topcoat-button--large:active {
-  background-color: #3f4041;
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
-}
-
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
+.topcoat-button--quiet:hover:focus,
 .topcoat-button--large:focus,
 .topcoat-button--large--quiet:focus,
+.topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+
+.topcoat-button:active,
+.topcoat-button--large:active {
+  border: 1px solid #333434;
+  background-color: #3f4041;
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 </code></pre>
                 </div>
@@ -409,7 +412,9 @@
 }
 
 .topcoat-button--quiet:active,
-.topcoat-button--large--quiet:active {
+.topcoat-button--quiet:focus:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet:focus:active {
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   background-color: #3f4041;
@@ -803,6 +808,18 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
+input[type=&quot;checkbox&quot;]:active + .topcoat-checkbox__checkmark:before {
+  border: 1px solid #333434;
+  background-color: #3f4041;
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
+}
+
+input[type=&quot;checkbox&quot;]:disabled:active + .topcoat-checkbox__checkmark:before {
+  border: 1px solid #333434;
+  background: #595b5b;
+  box-shadow: inset 0 1px #737373;
+}
+
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -925,11 +942,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #626465;
 }
 
-.topcoat-icon-button:active {
-  background-color: #3f4041;
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
-}
-
 .topcoat-icon-button:focus,
 .topcoat-icon-button--quiet:focus,
 .topcoat-icon-button--quiet:hover:focus,
@@ -939,6 +951,13 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+
+.topcoat-icon-button:active,
+.topcoat-icon-button--large:active {
+  border: 1px solid #333434;
+  background-color: #3f4041;
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 </code></pre>
                 </div>
@@ -974,7 +993,9 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 }
 
 .topcoat-icon-button--quiet:active,
-.topcoat-icon-button--large--quiet:active {
+.topcoat-icon-button--quiet:focus:active,
+.topcoat-icon-button--large--quiet:active,
+.topcoat-icon-button--large--quiet:focus:active {
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   background-color: #3f4041;
@@ -1006,11 +1027,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   width: 1.688rem;
   height: 1.688rem;
   line-height: 1.688rem;
-}
-
-.topcoat-icon-button--large:active {
-  background-color: #3f4041;
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 </code></pre>
                 </div>
@@ -1178,24 +1194,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   margin: 0;
   padding: 0;
 }
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
 
 /**
 *
@@ -1702,6 +1700,18 @@ input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
+input[type=&quot;radio&quot;]:active + .topcoat-radio-button__checkmark:before {
+  border: 1px solid #333434;
+  background-color: #3f4041;
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
+}
+
+input[type=&quot;radio&quot;]:disabled:active + .topcoat-radio-button__checkmark:before {
+  border: 1px solid #333434;
+  background: #595b5b;
+  box-shadow: inset 0 1px #737373;
+}
+
 /*
 Copyright 2012 Adobe Systems Inc.;
 Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -1887,12 +1897,12 @@ limitations under the License.
 
 .topcoat-range:focus::-webkit-slider-thumb {
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-range:focus::-moz-range-thumb {
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 /**
@@ -2060,10 +2070,10 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 .topcoat-search-input:focus,
 .topcoat-search-input--large:focus {
   background-image: var-background-image-alt--search-input;
-  background-color: #454646;
-  color: #c6c8c8;
+  background-color: #595b5b;
+  color: #fff;
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-search-input::-webkit-search-cancel-button,
@@ -2079,15 +2089,15 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 }
 
 .topcoat-search-input:disabled::-webkit-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-search-input:disabled::-moz-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-search-input:disabled:-ms-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 </code></pre>
                 </div>
@@ -2121,19 +2131,19 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 }
 
 .topcoat-search-input--large:disabled {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-search-input--large:disabled::-webkit-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-search-input--large:disabled::-moz-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-search-input--large:disabled:-ms-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 /**
@@ -2402,9 +2412,14 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   margin-left: 1.85rem;
 }
 
+.topcoat-switch__input:active + .topcoat-switch__toggle {
+  border: 1px solid #333434;
+  box-shadow: inset 0 1px #737373;
+}
+
 .topcoat-switch__input:focus + .topcoat-switch__toggle {
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:after,
@@ -2573,6 +2588,8 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 .topcoat-tab-bar__button:focus,
 .topcoat-tab-bar__button--large:focus {
   z-index: 1;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  outline: 0;
 }
 
 /**
@@ -2670,22 +2687,22 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus {
-  background-color: #454646;
-  color: #c6c8c8;
+  background-color: #595b5b;
+  color: #fff;
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-text-input:disabled::-webkit-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input:disabled::-moz-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input:disabled:-ms-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input:invalid {
@@ -2717,19 +2734,19 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 }
 
 .topcoat-text-input--large:disabled {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input--large:disabled::-webkit-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input--large:disabled::-moz-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input--large:disabled:-ms-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-text-input--large:invalid {
@@ -2889,22 +2906,22 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 
 .topcoat-textarea:focus,
 .topcoat-textarea--large:focus {
-  background-color: #454646;
-  color: #c6c8c8;
+  background-color: #595b5b;
+  color: #fff;
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-textarea:disabled::-webkit-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-textarea:disabled::-moz-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-textarea:disabled:-ms-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 </code></pre>
                 </div>
@@ -2932,19 +2949,19 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 }
 
 .topcoat-textarea--large:disabled {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-textarea--large:disabled::-webkit-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-textarea--large:disabled::-moz-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 .topcoat-textarea--large:disabled:-ms-input-placeholder {
-  color: #c6c8c8;
+  color: #fff;
 }
 
 @font-face {
@@ -3109,6 +3126,8 @@ body {
 /* ---------- alphas ---------- */
 
 /* ---------- thickness ---------- */
+
+/* ---------- shadows ---------- */
 
 /* Secondary colors (based on colors above)
 

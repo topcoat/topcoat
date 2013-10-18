@@ -346,7 +346,7 @@
   line-height: 3rem;
   letter-spacing: 1px;
   color: #454545;
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   vertical-align: top;
   background-color: #e5e9e8;
   box-shadow: inset 0 1px #fff;
@@ -361,21 +361,24 @@
   background-color: #eff1f1;
 }
 
-.topcoat-button:active,
-.topcoat-button--large:active {
-  background-color: #d2d6d6;
-  box-shadow: inset 0 1px rgba(0,0,0,0.1);
-}
-
 .topcoat-button:focus,
 .topcoat-button--quiet:focus,
+.topcoat-button--quiet:hover:focus,
 .topcoat-button--large:focus,
 .topcoat-button--large--quiet:focus,
+.topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+
+.topcoat-button:active,
+.topcoat-button--large:active {
+  border: 1px solid #9daca9;
+  background-color: #d2d6d6;
+  box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 </code></pre>
                 </div>
@@ -405,15 +408,17 @@
 
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
 .topcoat-button--quiet:active,
-.topcoat-button--large--quiet:active {
+.topcoat-button--quiet:focus:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet:focus:active {
   color: #454545;
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   background-color: #d2d6d6;
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
@@ -805,6 +810,18 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
+input[type=&quot;checkbox&quot;]:active + .topcoat-checkbox__checkmark:before {
+  border: 1px solid #9daca9;
+  background-color: #d2d6d6;
+  box-shadow: inset 0 1px rgba(0,0,0,0.1);
+}
+
+input[type=&quot;checkbox&quot;]:disabled:active + .topcoat-checkbox__checkmark:before {
+  border: 1px solid #9daca9;
+  background: #e5e9e8;
+  box-shadow: inset 0 1px #fff;
+}
+
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -912,7 +929,7 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   line-height: 3rem;
   letter-spacing: 1px;
   color: #454545;
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   vertical-align: baseline;
   background-color: #e5e9e8;
   box-shadow: inset 0 1px #fff;
@@ -927,11 +944,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   background-color: #eff1f1;
 }
 
-.topcoat-icon-button:active {
-  background-color: #d2d6d6;
-  box-shadow: inset 0 1px rgba(0,0,0,0.1);
-}
-
 .topcoat-icon-button:focus,
 .topcoat-icon-button--quiet:focus,
 .topcoat-icon-button--quiet:hover:focus,
@@ -941,6 +953,13 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+
+.topcoat-icon-button:active,
+.topcoat-icon-button--large:active {
+  border: 1px solid #9daca9;
+  background-color: #d2d6d6;
+  box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 </code></pre>
                 </div>
@@ -970,15 +989,17 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large--quiet:hover {
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
 .topcoat-icon-button--quiet:active,
-.topcoat-icon-button--large--quiet:active {
+.topcoat-icon-button--quiet:focus:active,
+.topcoat-icon-button--large--quiet:active,
+.topcoat-icon-button--large--quiet:focus:active {
   color: #454545;
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   background-color: #d2d6d6;
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
@@ -1008,11 +1029,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
   width: 4.375rem;
   height: 4.375rem;
   line-height: 4.375rem;
-}
-
-.topcoat-icon-button--large:active {
-  background-color: #d2d6d6;
-  box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 </code></pre>
                 </div>
@@ -1302,24 +1318,6 @@ input[type=&quot;checkbox&quot;]:focus + .topcoat-checkbox__checkmark:before {
 .topcoat-list__item:first-child {
   border-top: 1px solid #d6dcdb;
 }
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
 
 /**
 *
@@ -1952,6 +1950,18 @@ input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
+input[type=&quot;radio&quot;]:active + .topcoat-radio-button__checkmark:before {
+  border: 1px solid #9daca9;
+  background-color: #d2d6d6;
+  box-shadow: inset 0 1px rgba(0,0,0,0.1);
+}
+
+input[type=&quot;radio&quot;]:disabled:active + .topcoat-radio-button__checkmark:before {
+  border: 1px solid #9daca9;
+  background: #e5e9e8;
+  box-shadow: inset 0 1px #fff;
+}
+
 /*
 Copyright 2012 Adobe Systems Inc.;
 Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -2137,12 +2147,12 @@ limitations under the License.
 
 .topcoat-range:focus::-webkit-slider-thumb {
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-range:focus::-moz-range-thumb {
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 /**
@@ -2313,7 +2323,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   background-color: #fff;
   color: #454545;
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-search-input::-webkit-search-cancel-button,
@@ -2630,7 +2640,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   width: 2rem;
   border-radius: 6px;
   color: #454545;
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   background-color: #e5e9e8;
   border: 1px solid #9daca9;
   margin-left: -1.3rem;
@@ -2652,9 +2662,14 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   margin-left: 2.7rem;
 }
 
+.topcoat-switch__input:active + .topcoat-switch__toggle {
+  border: 1px solid #9daca9;
+  box-shadow: inset 0 1px #fff;
+}
+
 .topcoat-switch__input:focus + .topcoat-switch__toggle {
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-switch__input:disabled + .topcoat-switch__toggle:after,
@@ -2805,7 +2820,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   line-height: 3rem;
   letter-spacing: 1px;
   color: #454545;
-  text-shadow: 0 1px var-shadow--bevel;
+  text-shadow: 0 1px #fff;
   vertical-align: top;
   background-color: #e5e9e8;
   box-shadow: inset 0 1px #fff;
@@ -2823,6 +2838,8 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 .topcoat-tab-bar__button:focus,
 .topcoat-tab-bar__button--large:focus {
   z-index: 1;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  outline: 0;
 }
 
 /**
@@ -2923,7 +2940,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   background-color: #fff;
   color: #454545;
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-text-input:disabled::-webkit-input-placeholder {
@@ -3142,7 +3159,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   background-color: #fff;
   color: #454545;
   border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
 }
 
 .topcoat-textarea:disabled::-webkit-input-placeholder {
@@ -3359,6 +3376,8 @@ body {
 /* ---------- alphas ---------- */
 
 /* ---------- thickness ---------- */
+
+/* ---------- shadows ---------- */
 
 /* Secondary colors (based on colors above)
 
