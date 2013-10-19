@@ -28,17 +28,14 @@ module.exports = function(grunt) {
 
         stylus: {
             options: {
-                paths: grunt.file.expand(__dirname + '/node_modules/topcoat-*/src/')
-                /* FIXME: Utils is the last needing to be moved out of mixins
-                 * folder
-                 */
-                .concat(grunt.file.expand(__dirname + '/node_modules/topcoat-utils/src/mixins/')),
+                paths: grunt.file.expand(__dirname + '/node_modules/topcoat-*/src/'),
+                import: ['utils'],
                 compress: false
             },
 
             mobilelight: {
                 options: {
-                    import: ['theme-topcoat-mobile-light', 'utils']
+                    import: ['theme-topcoat-mobile-light']
                 },
 
                 files: [{
@@ -49,7 +46,7 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    import: ['theme-topcoat-mobile-dark', 'utils']
+                    import: ['theme-topcoat-mobile-dark']
                 },
 
                 files: [{
@@ -60,7 +57,7 @@ module.exports = function(grunt) {
 
             desktoplight: {
                 options: {
-                    import: ['theme-topcoat-desktop-light', 'utils']
+                    import: ['theme-topcoat-desktop-light']
                 },
                 files: [{
                     src: [
@@ -74,7 +71,7 @@ module.exports = function(grunt) {
 
             desktopdark: {
                 options: {
-                    import: ['theme-topcoat-desktop-dark', 'utils']
+                    import: ['theme-topcoat-desktop-dark']
                 },
 
                 files: [{
