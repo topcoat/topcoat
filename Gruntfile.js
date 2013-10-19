@@ -95,7 +95,7 @@ module.exports = function(grunt) {
                         "title": "Topcoat",
                         "subtitle": "CSS for clean and fast web apps",
                         "download": {
-                            "url": "https://github.com/topcoat/topcoat/archive/v0.7.0.zip",
+                            "url": "https://github.com/topcoat/topcoat/archive/v0.8.0.zip",
                             "label": "Download"
                         },
                         "homeURL": "http://topcoat.io",
