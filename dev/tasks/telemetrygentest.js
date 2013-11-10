@@ -32,8 +32,7 @@ module.exports = function (grunt) {
 
     var findAllPerfJadeFileInSrc = function () {
 
-        var jades = grunt.file.expand('node_modules/topcoat-*/test/perf/topcoat_*.jade')
-                    .concat('node_modules/topcoat-checkbox/test/perf/checkbox-test.jade');
+        var jades = grunt.file.expand('node_modules/topcoat-*/test/perf/topcoat_*.jade');
 
         if (jades.length === 0){
             throw new Error("ERROR: No jade file is found in src/../test/perf/");
