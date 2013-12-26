@@ -198,6 +198,7 @@ module.exports = function(grunt) {
                     src: 'node_modules/topcoat-theme/img/*',
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/img')
                 }, {
+                    expand: true,
                     src: ['css/**'],
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/')
                 }]
@@ -229,7 +230,37 @@ module.exports = function(grunt) {
                 src: ['dev/lib/**/*.js', 'dev/test/**/*.js']
             }
         },
+        connect: {
+            all: {
+                options: {
+                    base: [chromiumSrc],
+                    hostname: '*',
+                    port: 9000
+                }
+            }
+        },
 
+        'telemetry-run': {
+            all: {
+                options: {
+                    base: chromiumSrc,
+                    tunneled: true,
+                    selenium: {
+                        "hostname": "ondemand.saucelabs.com",
+                        "port": 80,
+                        "user": process.env.SAUCE_USERNAME,
+                        "pwd": process.env.SAUCE_ACCESSKEY
+                    },
+                    browsers: [{
+                        "browserName": "chrome",
+                        "platform": "Windows 8",
+                        "version": "28"
+                    }]
+                },
+                src: [chromiumSrc + '/**/topcoat/**/*.html']
+            }
+        },
+        
         watch: {
             files: ['src/**/*.styl'],
             tasks: ['compile']
@@ -248,6 +279,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     //Load local tasks
     grunt.loadTasks('dev/tasks');
