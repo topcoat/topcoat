@@ -31,12 +31,12 @@ module.exports = function(grunt) {
             options: {
                 browsers: ['last 2 versions'],
                 namespace: 'topcoat',
-                license: grunt.file.read('test/fixtures/license.txt')
+                license: grunt.file.read('src/license.txt')
             },
             compile: {
                 files: [{
                         expand: true,
-                        cwd: 'test/fixtures',
+                        cwd: 'src',
                         src: ['*.css'],
                         dest: 'css/',
                         ext: '.css'
