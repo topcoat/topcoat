@@ -9,21 +9,21 @@
     "test": "test"
   },
   "dependencies": {
-    "topcoat-radio-button": "git://github.com/topcoat/radio-button.git#resin",
     "topcoat-navigation-bar": "0.6.0",
     "topcoat-list": "0.6.0",
-    "topcoat-checkbox": "0.6.0",
     "topcoat-button": "0.6.2",
     "topcoat-button-bar": "0.3.0",
     "topcoat-textarea": "0.4.0",
     "topcoat-text-input": "git://github.com/topcoat/text-input.git#resin",
     "topcoat-notification": "git://github.com/topcoat/notification.git#resin",
-    "topcoat-tab-bar": "git://github.com/topcoat/tab-bar.git#resin",
     "topcoat-switch": "0.2.0",
-    "topcoat-search-input": "git://github.com/topcoat/search-input.git#resin",
     "topcoat-button-list": "git://github.com/topcoat/button-list.git#resin",
     "topcoat-range": "git://github.com/topcoat/range.git#resin",
-    "topcoat-icon-button": "~0.4.0"
+    "topcoat-icon-button": "~0.4.0",
+    "topcoat-checkbox": "0.6.0",
+    "topcoat-search-input": "0.4.0",
+    "topcoat-tab-bar": "0.3.0",
+    "topcoat-radio-button": "0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -33,7 +33,7 @@
     "grunt-topcoat": "~0.1.3",
     "grunt-topdoc": "~0.2.0",
     "topdoc-theme": "~0.4.4",
-    "topcoat-theme-mobile-dark": "~0.1.8",
+    "topcoat-theme-mobile-dark": "~0.1.9",
     "topcoat-theme-mobile-light": "~0.1.7",
     "topcoat-theme-desktop-light": "~0.1.9",
     "topcoat-theme-desktop-dark": "~0.1.7"

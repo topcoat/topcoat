@@ -7340,6 +7340,15 @@ input[type="checkbox"]:disabled + .topcoat-checkbox__checkmark,
   pointer-events: none;
 }
 
+.topcoat-search-input,
+.topcoat-search-input--large {
+  -webkit-appearance: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 .topcoat-navigation-bar,
 .topcoat-navigation-bar__item,
 .topcoat-navigation-bar__title,
