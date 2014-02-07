@@ -12,7 +12,6 @@
     "topcoat-navigation-bar": "0.6.0",
     "topcoat-list": "0.6.0",
     "topcoat-button": "0.6.2",
-    "topcoat-button-bar": "0.3.0",
     "topcoat-textarea": "0.4.0",
     "topcoat-switch": "0.2.1",
     "topcoat-icon-button": "~0.4.0",
@@ -24,7 +23,8 @@
     "topcoat-notification": "~0.2.0",
     "topcoat-button-list": "~0.1.0",
     "topcoat-range": "~0.3.0",
-    "topcoat-select": "0.0.2"
+    "topcoat-select": "0.0.2",
+    "topcoat-button-bar": "~0.2.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
