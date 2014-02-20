@@ -24,20 +24,21 @@
     "topcoat-button-list": "~0.1.0",
     "topcoat-range": "~0.3.0",
     "topcoat-select": "0.0.2",
-    "topcoat-button-bar": "~0.2.1"
+    "topcoat-button-bar": "~0.2.1",
+    "topcoat-overlay": "0.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-topdoc": "~0.2.0",
-    "topdoc-theme": "~0.4.4",
-    "grunt-topcoat": "~0.2.1",
-    "topcoat-theme-desktop-light": "~0.1.12",
-    "topcoat-theme-desktop-dark": "~0.1.10",
-    "topcoat-theme-mobile-dark": "~0.1.12",
-    "topcoat-theme-mobile-light": "~0.1.10"
+    "grunt-topdoc": "0.3.0",
+    "grunt-topcoat": "0.2.1",
+    "topdoc-theme": "0.5.0",
+    "topcoat-theme-mobile-dark": "0.2.3",
+    "topcoat-theme-mobile-light": "0.2.3",
+    "topcoat-theme-desktop-light": "0.2.4",
+    "topcoat-theme-desktop-dark": "0.2.3"
   },
   "scripts": {
     "test": "grunt test",

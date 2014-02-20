@@ -1,0 +1,171 @@
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+.topcoat-select {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-select {
+  vertical-align: top;
+  outline: none;
+}
+
+.topcoat-select {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-select {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-select {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-select:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.topcoat-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.topcoat-select::-ms-expand {
+  display: none;
+}
+
+/* topdoc
+  name: Topcoat Select
+  description: A component that lets you select things
+  modifiers:
+    :disabled: Disabled state
+    :focus: Focused
+    :invalid: Hover state
+  markup:
+    <select class="topcoat-select">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <select class="topcoat-select" disabled>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  tags:
+    - desktop
+    - mobile
+    - text
+    - input
+*/
+
+.topcoat-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  appearance: button;
+  text-indent: 0.01px;
+  text-overflow: '';
+  padding: .06rem 1.4rem .06rem 0.4rem;
+  font-size: 12px;
+  font-weight: 400;
+  height: 1.313rem;
+  letter-spacing: 0;
+  color: hsla(0, 0%, 27%, 1);
+  text-shadow: 0 1px hsla(0, 100%, 100%, 1);
+  border-radius: 4px;
+  background-color: hsla(165, 8%, 91%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
+  border: 1px solid hsla(168, 8%, 65%, 1);
+  background-image: url('img/dropdown.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  min-width: 3.4rem;
+}
+
+.topcoat-select:hover {
+  background-color: hsla(180, 7%, 94%, 1);
+}
+
+.topcoat-select:active {
+  background-color: hsla(180, 5%, 83%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.1);
+}
+
+.topcoat-select:focus {
+  border: 1px solid hsla(227, 100%, 50%, 1);
+  box-shadow: 0 0 0 2px hsla(208, 82%, 69%, 1);
+  outline: 0;
+}
+.dark .topcoat-select {
+  color: hsla(180, 2%, 78%, 1);
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.69);
+  background-color: hsla(180, 1%, 35%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 45%, 1);
+  border: 1px solid hsla(180, 1%, 20%, 1);
+}
+.dark .topcoat-select:hover {
+  background-color: hsla(200, 2%, 39%, 1);
+}
+.dark .topcoat-select:active {
+  background-color: hsla(210, 2%, 25%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.05);
+}
+@media screen and (max-width: 650px) {
+  .topcoat-select {
+    color: hsla(180, 2%, 78%, 1);
+    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.69);
+    background-color: hsla(180, 1%, 35%, 1);
+    box-shadow: inset 0 1px hsla(0, 0%, 45%, 1);
+    border: 1px solid hsla(180, 1%, 20%, 1);
+    padding: 0.7rem 1.4rem 0.7rem 1rem;
+    font-size: 16px;
+    height: 3rem;
+    letter-spacing: 1px;
+    border-radius: 6px;
+  }
+  .topcoat-select:hover {
+    background-color: hsla(200, 2%, 39%, 1);
+  }
+  .topcoat-select:active {
+    background-color: hsla(210, 2%, 25%, 1);
+    box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.05);
+  }
+}
+
+
+

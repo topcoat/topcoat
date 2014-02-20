@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             options: {
                 browsers: ['last 2 versions'],
                 namespace: 'topcoat',
-                license: grunt.file.read('src/license.txt')
+                license: 'src/license.txt'
             },
             compile: {
                 files: [{

@@ -24,7 +24,7 @@ window.onload = function(){
 			cl.add('open');
 		}
 	};
-	var docNavs = document.getElementsByClassName('docNav');
+	var docNavs = document.getElementsByClassName('topcoat-select');
 	for (var j = docNavs.length - 1; j >= 0; j--) {
 		docNavs[j].onchange = function(e){
 			window.location.href = e.target[e.target.selectedIndex].value;
