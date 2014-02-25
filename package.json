@@ -35,10 +35,10 @@
     "grunt-topdoc": "0.3.0",
     "grunt-topcoat": "0.2.1",
     "topdoc-theme": "0.5.0",
-    "topcoat-theme-mobile-dark": "0.2.4",
-    "topcoat-theme-mobile-light": "0.2.4",
-    "topcoat-theme-desktop-light": "0.2.7",
-    "topcoat-theme-desktop-dark": "~0.2.5"
+    "topcoat-theme-desktop-dark": "0.2.6",
+    "topcoat-theme-mobile-light": "0.2.5",
+    "topcoat-theme-desktop-light": "0.2.8",
+    "topcoat-theme-mobile-dark": "0.2.5"
   },
   "scripts": {
     "test": "grunt test",
