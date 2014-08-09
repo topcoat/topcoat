@@ -16,7 +16,7 @@
 *
 */
 
-.button-bar {
+[_ButtonBar] {
   display: table;
   table-layout: fixed;
   white-space: nowrap;
@@ -24,13 +24,13 @@
   padding: 0;
 }
 
-.button-bar__item {
+[_ButtonBar-Item] {
   display: table-cell;
   width: auto;
   border-radius: 0;
 }
 
-.button-bar__item > input {
+[_ButtonBar-Item] > input {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -41,11 +41,7 @@
   outline: none;
 }
 
-.button-bar__button {
-  border-radius: inherit;
-}
-
-.button-bar__item:disabled {
+[_ButtonBar-Item]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -105,217 +101,9 @@
 *
 */
 
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-}
+/*@import topcoat-button*/
 
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.button--disabled,
-.topcoat-button:disabled,
-.topcoat-button--quiet:disabled,
-.topcoat-button--large:disabled,
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--cta:disabled,
-.topcoat-button--large--cta:disabled,
-.topcoat-button-bar__button:disabled,
-.topcoat-button-bar__button--large:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
-  padding: 0 0.563rem;
-  font-size: 12px;
-  line-height: 1.313rem;
-  letter-spacing: 0;
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  vertical-align: top;
-  background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
-  border: 1px solid #9daca9;
-  border-radius: 4px;
-}
-
-.topcoat-button:hover,
-.topcoat-button--quiet:hover,
-.topcoat-button--large:hover,
-.topcoat-button--large--quiet:hover,
-.topcoat-button-bar__button:hover,
-.topcoat-button-bar__button--large:hover {
-  background-color: #eff1f1;
-}
-
-.topcoat-button:focus,
-.topcoat-button--quiet:focus,
-.topcoat-button--quiet:hover:focus,
-.topcoat-button--large:focus,
-.topcoat-button--large--quiet:focus,
-.topcoat-button--large--quiet:hover:focus,
-.topcoat-button--cta:focus,
-.topcoat-button--large--cta:focus,
-.topcoat-button-bar__button:focus,
-.topcoat-button-bar__button--large:focus {
-  border: 1px solid #0036ff;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
-  outline: 0;
-}
-
-.topcoat-button:active,
-.topcoat-button--large:active,
-.topcoat-button-bar__button:active,
-.topcoat-button-bar__button--large:active,
-:checked + .topcoat-button-bar__button {
-  border: 1px solid #9daca9;
-  background-color: #d2d6d6;
-  box-shadow: inset 0 1px rgba(0,0,0,0.1);
-}
-
-.topcoat-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.topcoat-button--quiet:hover,
-.topcoat-button--large--quiet:hover {
-  text-shadow: 0 1px #fff;
-  border: 1px solid #9daca9;
-  box-shadow: inset 0 1px #fff;
-}
-
-.topcoat-button--quiet:active,
-.topcoat-button--quiet:focus:active,
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet:focus:active {
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  background-color: #d2d6d6;
-  border: 1px solid #9daca9;
-  box-shadow: inset 0 1px rgba(0,0,0,0.1);
-}
-
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button-bar__button--large {
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.688rem;
-  padding: 0 0.875rem;
-}
-
-.topcoat-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.topcoat-button--cta,
-.topcoat-button--large--cta {
-  border: 1px solid #134f7f;
-  background-color: #288edf;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36);
-  color: #fff;
-  font-weight: 500;
-  text-shadow: 0 -1px rgba(0,0,0,0.36);
-}
-
-.topcoat-button--cta:hover,
-.topcoat-button--large--cta:hover {
-  background-color: #4ca1e4;
-}
-
-.topcoat-button--cta:active,
-.topcoat-button--large--cta:active {
-  background-color: #1e7dc8;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-}
-
-.topcoat-button--large--cta {
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.688rem;
-  padding: 0 0.875rem;
-}
-
-.button-bar,
-.topcoat-button-bar {
-  display: table;
-  table-layout: fixed;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-}
-
-.button-bar__item,
-.topcoat-button-bar__item {
-  display: table-cell;
-  width: auto;
-  border-radius: 0;
-}
-
-.button-bar__item > input,
-.topcoat-button-bar__item > input {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-.button-bar__button {
-  border-radius: inherit;
-}
-
-.button-bar__item:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import button-bar*/
 
 /* topdoc
   name: Button Bar
@@ -323,15 +111,15 @@
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-button-bar">
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">One</button>
+    <div _ButtonBar>
+      <div _ButtonBar-Item>
+        <button _Button>One</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">Two</button>
+      <div _ButtonBar-Item>
+        <button _Button>Two</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">Three</button>
+      <div _ButtonBar-Item>
+        <button _Button>Three</button>
       </div>
     </div>
   examples:
@@ -346,32 +134,29 @@
     - bar
 */
 
-.topcoat-button-bar > .topcoat-button-bar__item:first-child {
+[_ButtonBar] > [_ButtonBar-Item]:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.topcoat-button-bar > .topcoat-button-bar__item:last-child {
+[_ButtonBar] > [_ButtonBar-Item]:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-.topcoat-button-bar__item:first-child > .topcoat-button-bar__button,
-.topcoat-button-bar__item:first-child > .topcoat-button-bar__button--large {
+[_ButtonBar-Item]:first-child > [_Button] {
   border-right: none;
 }
 
-.topcoat-button-bar__item:last-child > .topcoat-button-bar__button,
-.topcoat-button-bar__item:last-child > .topcoat-button-bar__button--large {
+[_ButtonBar-Item]:last-child > [_Button] {
   border-left: none;
 }
 
-.topcoat-button-bar__button {
+[_ButtonBar-Item] > [_Button] {
   border-radius: inherit;
 }
 
-.topcoat-button-bar__button:focus,
-.topcoat-button-bar__button--large:focus {
+[_ButtonBar-Item] > [_Button]:focus {
   z-index: 1;
 }
 
@@ -381,15 +166,15 @@
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-button-bar">
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">One</button>
+    <div _ButtonBar>
+      <div _ButtonBar-Item>
+        <button _Button="large">One</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">Two</button>
+      <div _ButtonBar-Item>
+        <button _Button="large">Two</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">Three</button>
+      <div _ButtonBar-Item>
+        <button _Button="large">Three</button>
       </div>
     </div>
   tags:
@@ -403,10 +188,6 @@
     - large
 */
 
-.topcoat-button-bar__button--large {
-  border-radius: inherit;
-}
-
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -425,7 +206,7 @@
 *
 */
 
-.button {
+[_Button] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -447,148 +228,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
-}
-
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.button--disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.button--disabled,
-.topcoat-button:disabled,
-.topcoat-button--quiet:disabled,
-.topcoat-button--large:disabled,
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--cta:disabled,
-.topcoat-button--large--cta:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-/* topdoc
-  name: Button
-  description: A simple button
-  modifiers:
-    :active: Active state
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button class="topcoat-button">Button</button>
-    <button class="topcoat-button" disabled>Button</button>
-  examples:
-    mobile button: http://codepen.io/Topcoat/pen/DpKtf
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta {
   padding: 0 0.563rem;
   font-size: 12px;
   line-height: 1.313rem;
@@ -602,28 +241,106 @@
   border-radius: 4px;
 }
 
-.topcoat-button:hover,
-.topcoat-button--quiet:hover,
-.topcoat-button--large:hover,
-.topcoat-button--large--quiet:hover {
+[_Button~="quiet"] {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+[_Button]:disabled,
+[_Button~="disabled"] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/*@import button*/
+
+/* topdoc
+  name: Button
+  description: A simple button
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button _Button>Button</button>
+    <button _Button disabled>Button</button>
+  examples:
+    mobile button: http://codepen.io/Topcoat/pen/DpKtf
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+[_Button]:hover {
   background-color: #eff1f1;
 }
 
-.topcoat-button:focus,
-.topcoat-button--quiet:focus,
-.topcoat-button--quiet:hover:focus,
-.topcoat-button--large:focus,
-.topcoat-button--large--quiet:focus,
-.topcoat-button--large--quiet:hover:focus,
-.topcoat-button--cta:focus,
-.topcoat-button--large--cta:focus {
+[_Button]:focus {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
 }
 
-.topcoat-button:active,
-.topcoat-button--large:active {
+[_Button]:active {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
@@ -638,8 +355,8 @@
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-button--quiet">Button</button>
-    <button class="topcoat-button--quiet" disabled>Button</button>
+    <button _Button="quiet">Button</button>
+    <button _Button="quiet" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -648,23 +365,14 @@
     - quiet
 */
 
-.topcoat-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.topcoat-button--quiet:hover,
-.topcoat-button--large--quiet:hover {
+[_Button~="quiet"]:hover {
   text-shadow: 0 1px #fff;
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-button--quiet:active,
-.topcoat-button--quiet:focus:active,
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet:focus:active {
+[_Button~="quiet"]:active,
+[_Button~="quiet"]:focus:active {
   color: #454545;
   text-shadow: 0 1px #fff;
   background-color: #d2d6d6;
@@ -681,8 +389,8 @@
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-button--large" >Button</button>
-    <button class="topcoat-button--large" disabled>Button</button>
+    <button _Button="large" >Button</button>
+    <button _Button="large" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -691,8 +399,7 @@
     - large
 */
 
-.topcoat-button--large,
-.topcoat-button--large--quiet {
+[_Button~="large"] {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.688rem;
@@ -708,8 +415,8 @@
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-button--large--quiet" >Button</button>
-    <button class="topcoat-button--large--quiet" disabled>Button</button>
+    <button _Button="large quiet" >Button</button>
+    <button _Button="large quiet" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -718,12 +425,6 @@
     - large
     - quiet
 */
-
-.topcoat-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
 
 /* topdoc
   name: Call To Action Button
@@ -734,8 +435,8 @@
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-button--cta" >Button</button>
-    <button class="topcoat-button--cta" disabled>Button</button>
+    <button _Button="cta" >Button</button>
+    <button _Button="cta" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -744,8 +445,7 @@
     - call to action
 */
 
-.topcoat-button--cta,
-.topcoat-button--large--cta {
+[_Button~="cta"] {
   border: 1px solid #134f7f;
   background-color: #288edf;
   box-shadow: inset 0 1px rgba(255,255,255,0.36);
@@ -754,13 +454,11 @@
   text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
 
-.topcoat-button--cta:hover,
-.topcoat-button--large--cta:hover {
+[_Button~="cta"]:hover {
   background-color: #4ca1e4;
 }
 
-.topcoat-button--cta:active,
-.topcoat-button--large--cta:active {
+[_Button~="cta"]:active {
   background-color: #1e7dc8;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
@@ -774,8 +472,8 @@
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-button--large--cta" >Button</button>
-    <button class="topcoat-button--large--cta" disabled>Button</button>
+    <button _Button="large cta" >Button</button>
+    <button _Button="large cta" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -784,13 +482,6 @@
     - large
     - call to action
 */
-
-.topcoat-button--large--cta {
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.688rem;
-  padding: 0 0.875rem;
-}
 
 /**
 *
@@ -1111,50 +802,6 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
 *
 */
 
-.button,
-.topcoat-icon-button,
-.topcoat-icon-button--quiet,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.button--disabled,
-.topcoat-icon-button:disabled,
-.topcoat-icon-button--quiet:disabled,
-.topcoat-icon-button--large:disabled,
-.topcoat-icon-button--large--quiet:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
 /* topdoc
   name: Icon Button
   description: Like button, but it has an icon.
@@ -1164,11 +811,11 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-icon-button">
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon">
+      <span _Icon style="background-color:#A5A7A7;"></span>
     </button>
-    <button class="topcoat-icon-button" disabled>
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon" disabled>
+      <span _Icon style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -1178,10 +825,7 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     - icon
 */
 
-.topcoat-icon-button,
-.topcoat-icon-button--quiet,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
+[_Button~="icon"] {
   padding: 0 0.25rem;
   line-height: 1.313rem;
   letter-spacing: 0;
@@ -1194,26 +838,17 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
   border-radius: 4px;
 }
 
-.topcoat-icon-button:hover,
-.topcoat-icon-button--quiet:hover,
-.topcoat-icon-button--large:hover,
-.topcoat-icon-button--large--quiet:hover {
+[_Button~="icon"]:hover {
   background-color: #eff1f1;
 }
 
-.topcoat-icon-button:focus,
-.topcoat-icon-button--quiet:focus,
-.topcoat-icon-button--quiet:hover:focus,
-.topcoat-icon-button--large:focus,
-.topcoat-icon-button--large--quiet:focus,
-.topcoat-icon-button--large--quiet:hover:focus {
+[_Button~="icon"]:focus {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
 }
 
-.topcoat-icon-button:active,
-.topcoat-icon-button--large:active {
+[_Button~="icon"]:active {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
@@ -1228,11 +863,11 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-icon-button--quiet">
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon quiet">
+      <span _Icon style="background-color:#A5A7A7;"></span>
     </button>
-    <button class="topcoat-icon-button--quiet" disabled>
-      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon quiet" disabled>
+      <span _Icon style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -1243,23 +878,20 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     - quiet
 */
 
-.topcoat-icon-button--quiet {
+[_Button~="icon"][_Button~="quiet"] {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
 
-.topcoat-icon-button--quiet:hover,
-.topcoat-icon-button--large--quiet:hover {
+[_Button~="icon"][_Button~="quiet"]:hover {
   text-shadow: 0 1px #fff;
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-icon-button--quiet:active,
-.topcoat-icon-button--quiet:focus:active,
-.topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet:focus:active {
+[_Button~="icon"][_Button~="quiet"]:active,
+[_Button~="icon"][_Button~="quiet"]:focus:active {
   color: #454545;
   text-shadow: 0 1px #fff;
   background-color: #d2d6d6;
@@ -1276,11 +908,11 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     :hover: Hover state
     :focus: Focused
   markup:
-    <button class="topcoat-icon-button--large">
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon large">
+      <span _Icon="large" style="background-color:#A5A7A7;"></span>
     </button>
-    <button class="topcoat-icon-button--large" disabled>
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon large" disabled>
+      <span _Icon="large" style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -1291,8 +923,7 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     - large
 */
 
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
+[_Button~="icon"][_Button~="large"] {
   width: 1.688rem;
   height: 1.688rem;
   line-height: 1.688rem;
@@ -1306,11 +937,11 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     :disabled: Disabled state
     :hover: Hover state
   markup:
-    <button class="topcoat-icon-button--large--quiet">
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon large quiet">
+      <span _Icon="large" style="background-color:#A5A7A7;"></span>
     </button>
-    <button class="topcoat-icon-button--large--quiet" disabled>
-      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
+    <button _Button="icon large quiet" disabled>
+      <span _Icon="large" style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -1322,14 +953,7 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
     - quiet
 */
 
-.topcoat-icon-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.topcoat-icon,
-.topcoat-icon--large {
+[_Icon] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1340,7 +964,7 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
   top: -1px;
 }
 
-.topcoat-icon--large {
+[_Icon~="large"] {
   width: 1.06344rem;
   height: 1.06344rem;
   top: -2px;
@@ -1585,7 +1209,7 @@ limitations under the License.
 *
 */
 
-.notification {
+[_Notification] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1642,36 +1266,13 @@ limitations under the License.
 *
 */
 
-.notification,
-.topcoat-notification {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-}
+/*@import notification*/
 
 /* topdoc
   name: Notification
   description: Notification badge
   markup:
-    <span class="topcoat-notification">1</span>
+    <span _Notification>1</span>
   tags:
     - desktop
     - light
@@ -1679,7 +1280,7 @@ limitations under the License.
     - notification
 */
 
-.topcoat-notification {
+[_Notification] {
   padding: 0.15em 0.5em 0.2em;
   border-radius: 2px;
   background-color: #ec514e;
@@ -1722,7 +1323,7 @@ limitations under the License.
 *
 */
 
-input[type="radio"] {
+[_input~="radio"] input[type="radio"] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -1733,7 +1334,7 @@ input[type="radio"] {
   outline: none;
 }
 
-.radio-button {
+[_input~="checkmark"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
@@ -1747,7 +1348,7 @@ input[type="radio"] {
   user-select: none;
 }
 
-.radio-button__label {
+[_input~="radio"] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1758,14 +1359,14 @@ input[type="radio"] {
   user-select: none;
 }
 
-.radio-button:before,
-.radio-button:after {
+[_input~="checkmark"]:before,
+[_input~="checkmark"]:after {
   content: '';
   position: absolute;
   border-radius: 100%;
 }
 
-.radio-button:after {
+[_input~="checkmark"]:after {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1773,13 +1374,13 @@ input[type="radio"] {
   transform: translate(-50%, -50%);
 }
 
-.radio-button:before {
+[_input~="checkmark"]:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
 
-.radio-button--disabled {
+[_input~="checkmark"]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1821,75 +1422,7 @@ input[type="radio"] {
 *
 */
 
-input[type="radio"] {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-.radio-button,
-.topcoat-radio-button__checkmark {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.radio-button__label,
-.topcoat-radio-button {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.radio-button:before,
-.radio-button:after,
-.topcoat-radio-button__checkmark:before,
-.topcoat-radio-button__checkmark:after {
-  content: '';
-  position: absolute;
-  border-radius: 100%;
-}
-
-.radio-button:after,
-.topcoat-radio-button__checkmark:after {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.radio-button:before,
-.topcoat-radio-button__checkmark:before {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-}
-
-.radio-button--disabled,
-input[type="radio"]:disabled + .topcoat-radio-button__checkmark {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import radio-button*/
 
 /* topdoc
   name: Radio Button
@@ -1897,32 +1430,32 @@ input[type="radio"]:disabled + .topcoat-radio-button__checkmark {
   modifiers:
   markup:
     <!-- NO LABEL -->
-    <label class="topcoat-radio-button">
+    <label _input="radio">
       <input type="radio" name="topcoat">
-      <div class="topcoat-radio-button__checkmark"></div>
+      <div _input="checkmark"></div>
     </label>
     <br>
     <br>
     <!-- LEFT LABEL -->
-    <label class="topcoat-radio-button">
+    <label _input="radio">
       Left label
       <input type="radio" name="topcoat">
-      <div class="topcoat-radio-button__checkmark"></div>
+      <div _input="checkmark"></div>
     </label>
     <br>
     <br>
     <!-- RIGHT LABEL -->
-    <label class="topcoat-radio-button">
+    <label _input="radio">
       <input type="radio" name="topcoat">
-      <div class="topcoat-radio-button__checkmark"></div>
+      <div _input="checkmark"></div>
       Right label
     </label>
     <br>
     <br>
     <!-- DISABLED -->
-    <label class="topcoat-radio-button">
+    <label _input="radio">
       <input type="radio" name="topcoat" Disabled>
-      <div class="topcoat-radio-button__checkmark"></div>
+      <div _input="checkmark"></div>
       Disabled
     </label>
   examples:
@@ -1934,7 +1467,7 @@ input[type="radio"]:disabled + .topcoat-radio-button__checkmark {
     - Radio
 */
 
-input[type="radio"] {
+[_input~="radio"] input[type="radio"] {
   height: 1.063rem;
   width: 1.063rem;
   margin-top: 0;
@@ -1943,16 +1476,16 @@ input[type="radio"] {
   margin-left: 0;
 }
 
-input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
+input[type="radio"]:checked + [_input~="checkmark"]:after {
   opacity: 1;
 }
 
-.topcoat-radio-button {
+[_input="radio"] {
   color: #454545;
   line-height: 1.063rem;
 }
 
-.topcoat-radio-button__checkmark:before {
+[_input~="checkmark"]:before {
   width: 1.063rem;
   height: 1.063rem;
   background: #e5e9e8;
@@ -1960,14 +1493,14 @@ input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-radio-button__checkmark {
+[_input~="checkmark"] {
   position: relative;
   width: 1.063rem;
   height: 1.063rem;
 }
 
-.topcoat-radio-button__checkmark:after {
-  opacity: 0;
+[_input~="checkmark"]:after {
+  opacity: 0.1234567;
   width: 0.313rem;
   height: 0.313rem;
   background: #454545;
@@ -1980,18 +1513,24 @@ input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
   left: 0.313rem;
 }
 
-input[type="radio"]:focus + .topcoat-radio-button__checkmark:before {
+input[type="radio"]:focus + [_input~="checkmark"]:before {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-input[type="radio"]:active + .topcoat-radio-button__checkmark:before {
+input[type="radio"]:active + [_input~="checkmark"]:before {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 
-input[type="radio"]:disabled:active + .topcoat-radio-button__checkmark:before {
+input[type="radio"]:disabled + [_input~="checkmark"] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+input[type="radio"]:disabled:active + [_input~="checkmark"]:before {
   border: 1px solid #9daca9;
   background: #e5e9e8;
   box-shadow: inset 0 1px #fff;
@@ -2027,7 +1566,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-.range {
+[_input~="range"] {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -2042,16 +1581,7 @@ limitations under the License.
   -webkit-appearance: none;
 }
 
-.range__thumb {
-  cursor: pointer;
-}
-
-.range__thumb--webkit {
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-
-.range:disabled {
+[_input~="range"]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -2087,39 +1617,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-.range,
-.topcoat-range {
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  vertical-align: top;
-  outline: none;
-  -webkit-appearance: none;
-}
-
-.range__thumb,
-.topcoat-range::-moz-range-thumb {
-  cursor: pointer;
-}
-
-.range__thumb--webkit,
-.topcoat-range::-webkit-slider-thumb {
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-
-.range:disabled,
-.topcoat-range:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import range*/
 
 /* topdoc
   name: Range
@@ -2130,8 +1628,8 @@ limitations under the License.
     :hover: Hover state
     :focus: Focused
   markup:
-    <input type="range" class="topcoat-range">
-    <input type="range" class="topcoat-range" disabled>
+    <input type="range" _input="range">
+    <input type="range" _input="range" disabled>
   examples:
     mobile range: http://codepen.io/Topcoat/pen/BskEn
   tags:
@@ -2140,7 +1638,7 @@ limitations under the License.
     - range
 */
 
-.topcoat-range {
+[_input~="range"] {
   border-radius: 4px;
   border: 1px solid #9daca9;
   background-color: #d6dcdb;
@@ -2148,7 +1646,7 @@ limitations under the License.
   border-radius: 15px;
 }
 
-.topcoat-range::-moz-range-track {
+[_input~="range"]::-moz-range-track {
   border-radius: 4px;
   border: 1px solid #9daca9;
   background-color: #d6dcdb;
@@ -2156,7 +1654,9 @@ limitations under the License.
   border-radius: 15px;
 }
 
-.topcoat-range::-webkit-slider-thumb {
+[_input~="range"]::-webkit-slider-thumb {
+  cursor: pointer;
+  -webkit-appearance: none;
   height: 1.313rem;
   width: 0.75rem;
   background-color: #e5e9e8;
@@ -2165,7 +1665,8 @@ limitations under the License.
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-range::-moz-range-thumb {
+[_input~="range"]::-moz-range-thumb {
+  cursor: pointer;
   height: 1.313rem;
   width: 0.75rem;
   background-color: #e5e9e8;
@@ -2174,22 +1675,22 @@ limitations under the License.
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-range:focus::-webkit-slider-thumb {
+[_input~="range"]:focus::-webkit-slider-thumb {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-.topcoat-range:focus::-moz-range-thumb {
+[_input~="range"]:focus::-moz-range-thumb {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-.topcoat-range:active::-webkit-slider-thumb {
+[_input~="range"]:active::-webkit-slider-thumb {
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-range:active::-moz-range-thumb {
+[_input~="range"]:active::-moz-range-thumb {
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
@@ -2757,81 +2258,9 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 */
 
-.button,
-.topcoat-tab-bar__button {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-}
+/*@import button*/
 
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-.button--disabled,
-.topcoat-tab-bar__button:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-.button-bar,
-.topcoat-tab-bar {
-  display: table;
-  table-layout: fixed;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-}
-
-.button-bar__item,
-.topcoat-tab-bar__item {
-  display: table-cell;
-  width: auto;
-  border-radius: 0;
-}
-
-.button-bar__item > input,
-.topcoat-tab-bar__item > input {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-.button-bar__button {
-  border-radius: inherit;
-}
-
-.button-bar__item:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import button-bar*/
 
 /* topdoc
   name: Tab Bar
@@ -2839,18 +2268,18 @@ input[type="search"]::-webkit-search-cancel-button {
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-tab-bar">
-      <label class="topcoat-tab-bar__item">
+    <div _ButtonBar="tab">
+      <label _ButtonBar-Item>
         <input type="radio" name="tab-bar">
-        <button class="topcoat-tab-bar__button">One</button>
+        <button _Button>One</button>
       </label>
-      <label class="topcoat-tab-bar__item">
+      <label _ButtonBar-Item>
         <input type="radio" name="tab-bar">
-        <button class="topcoat-tab-bar__button">Two</button>
+        <button _Button>Two</button>
       </label>
-      <label class="topcoat-tab-bar__item">
+      <label _ButtonBar-Item>
         <input type="radio" name="tab-bar">
-        <button class="topcoat-tab-bar__button">Three</button>
+        <button _Button>Three</button>
       </label>
     </div>
   examples:
@@ -2865,7 +2294,7 @@ input[type="search"]::-webkit-search-cancel-button {
     - bar
 */
 
-.topcoat-tab-bar__button {
+[_ButtonBar~="tab"] [_ButtonBar-Item] {
   padding: 0 0.563rem;
   height: 1.313rem;
   line-height: 1.313rem;
@@ -2878,16 +2307,14 @@ input[type="search"]::-webkit-search-cancel-button {
   border-top: 1px solid #9daca9;
 }
 
-.topcoat-tab-bar__button:active,
-.topcoat-tab-bar__button--large:active,
-:checked + .topcoat-tab-bar__button {
+[_ButtonBar~="tab"] [_Button]:active,
+[_ButtonBar~="tab"] :checked + [_Button] {
   color: #288edf;
   background-color: #e5f1fb;
   box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
 }
 
-.topcoat-tab-bar__button:focus,
-.topcoat-tab-bar__button--large:focus {
+[_ButtonBar~="tab"] [_Button]:focus {
   z-index: 1;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;

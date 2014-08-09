@@ -32,28 +32,28 @@ module.exports = function(grunt) {
                 import: ['utils'],
                 compress: false
             },
-
-            mobilelight: {
-                options: {
-                    import: ['theme-topcoat-mobile-light']
-                },
-
-                files: [{
-                    src: 'node_modules/topcoat-*/src/**/*.styl',
-                    dest: 'css/topcoat-mobile-light.css'
-                }]
-            },
-
-            mobiledark: {
-                options: {
-                    import: ['theme-topcoat-mobile-dark']
-                },
-
-                files: [{
-                    src: 'node_modules/topcoat-*/src/**/*.styl',
-                    dest: 'css/topcoat-mobile-dark.css'
-                }]
-            },
+//
+//            mobilelight: {
+//                options: {
+//                    import: ['theme-topcoat-mobile-light']
+//                },
+//
+//                files: [{
+//                    src: 'node_modules/topcoat-*/src/**/*.styl',
+//                    dest: 'css/topcoat-mobile-light.css'
+//                }]
+//            },
+//
+//            mobiledark: {
+//                options: {
+//                    import: ['theme-topcoat-mobile-dark']
+//                },
+//
+//                files: [{
+//                    src: 'node_modules/topcoat-*/src/**/*.styl',
+//                    dest: 'css/topcoat-mobile-dark.css'
+//                }]
+//            },
 
             desktoplight: {
                 options: {
@@ -67,21 +67,21 @@ module.exports = function(grunt) {
                         ],
                     dest: 'css/topcoat-desktop-light.css'
                 }]
-            },
-
-            desktopdark: {
-                options: {
-                    import: ['theme-topcoat-desktop-dark']
-                },
-
-                files: [{
-                    src: [
-                        'node_modules/topcoat-*/src/**/*.styl',
-                        '!node_modules/topcoat-navigation-bar/src/*.styl',
-                        '!node_modules/topcoat-list/src/*.styl'
-                        ],
-                    dest: 'css/topcoat-desktop-dark.css'
-                }]
+//            },
+//
+//            desktopdark: {
+//                options: {
+//                    import: ['theme-topcoat-desktop-dark']
+//                },
+//
+//                files: [{
+//                    src: [
+//                        'node_modules/topcoat-*/src/**/*.styl',
+//                        '!node_modules/topcoat-navigation-bar/src/*.styl',
+//                        '!node_modules/topcoat-list/src/*.styl'
+//                        ],
+//                    dest: 'css/topcoat-desktop-dark.css'
+//                }]
             }
         },
 
@@ -231,7 +231,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['src/**/*.styl'],
+            files: ['src/**/*.styl', 'node_modules/**/*.styl'],
             tasks: ['compile']
         }
 
@@ -255,7 +255,7 @@ module.exports = function(grunt) {
     // Default task.
     grunt.registerTask('default', ['clean', 'stylus', 'autoprefixer', 'cssmin', 'topdoc', 'copy:release']);
     grunt.registerTask('release', ['default', 'clean:src']);
-    grunt.registerTask('compile', ['topcoat:compile', 'topdoc', 'copy:release']);
+    grunt.registerTask('compile', ['stylus', 'autoprefixer', 'cssmin', 'topdoc', 'copy:release']);
 
     grunt.registerTask('telemetry', '', function(platform, theme) {
         if (chromiumSrc === "") grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");

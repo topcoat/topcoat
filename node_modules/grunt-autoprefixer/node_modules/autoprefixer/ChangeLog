@@ -1,0 +1,136 @@
+== 0.7 (We Do Not Sow)
+* Add vendor prefixes to selectors.
+* Add ::selection and ::placeholder selectors support.
+* Allow to load support data from Can I Use pull requests.
+* Remove deprecated API.
+
+20130806:
+* Add hyphens support.
+
+20130807:
+* Add tab-size support.
+* Add :fullscreen support.
+
+20130808:
+* Allow to select browser versions by > and >= operator.
+* Fix flex properties in transition.
+
+20130810:
+* Add Firefox 25 data.
+
+20130824:
+* Add Chrome 31 and 30 data.
+* Fix CSS comments parsing (by vladkens).
+
+== 0.6 (As High As Honor)
+* New faster API, which cache preprocessed data. Old API is deprecated.
+* A lot of perfomance improvements.
+* Add Opera 15 -webkit- prefix support.
+* Update Chrome 29 and Safari 7 prefixes data.
+* Add minor browsers in popularity select.
+* Better syntax error messages.
+
+20130721:
+* Add Chrome 30 data.
+
+20130728:
+* Don’t remove non-standard -webkit-background-clip: text.
+* Don’t remove IE hack on CSS parse.
+
+20130729:
+* Add Opera 16 data.
+* Fix “Invalid range in character class” error on Firefox.
+
+20130730:
+* Fix correct clone comments inside keyframes (by Alexey Plutalov).
+* Fix angle recalculation in gradients (by Roman Komarov).
+
+20130731:
+* Add border-image support.
+
+== 0.5 (Ours is the Fury)
+* Rewrite Autoprefixer to be more flexible.
+* Use css, instead of Rework, to fix CSS parsing errors faster.
+* Fix a lot of CSS parsing errors.
+
+20130616:
+* More useful message for CSS parsing errors.
+* Remove old WebKit gradient syntax.
+* Fix parsing error on comment with braces.
+
+20130617:
+* Remove old Mozilla border-radius.
+* Don’t prefix old IE filter.
+* Remove old background-clip, background-size and background-origin prefixes.
+* Speed up regexps in values.
+* Allow to hack property declarations.
+
+20130625:
+* Convert flexbox properties to 2009 and 2012 specifications.
+* Improve messages on syntax errors.
+
+20130626:
+* Add Firefox 24 data.
+* Add prefixes for font-feature-settings.
+
+20130629:
+* Fix convert flex properties to old box-flex.
+
+== 0.4 (Winter Is Coming)
+* Remove outdated prefixes.
+* Add border-radius and box-shadow properties to database.
+* Change degrees in webkit gradients.
+
+20130515:
+* Add old syntax in gradient direction.
+* Add old syntax for display: flex.
+* Update browser global usage statistics.
+
+20130521:
+* Add Firefox 23 data.
+
+20130524:
+* Add Chrome 29 data.
+
+20130528:
+* Fix compatibilty with Rework from git master.
+* Add minor browsers to data, which can be selected only directly.
+
+20130530:
+* Add Opera 15 and iOS 6.1 data.
+* Fix iOS versions in properties and values data.
+
+20130603:
+* Use latest Rework 0.15 with a lot of CSS parsing fixes.
+* Update browsers usage statistics.
+
+== 0.3 (Growing Strong)
+* Rename `autoprefixer.filter()` to `autoprefixer.rework()`.
+* Use own filters instead of Rework’s `prefix` and `prefixValue`.
+* Smarter value prefixer without false match “order” in “border”.
+* 40% faster.
+* Don’t add unnecessary properties instead of Rework’s `prefixValue`.
+* Don’t change properties order.
+* Sort properties and values in inspect output.
+* Add main to component config (by Jonathan Ong).
+* Fix documentation (by Sergey Leschina and Mark Vasilkov).
+
+20130424:
+* Fix value override in prefixer.
+
+20130427:
+* Prefix several same values in one property.
+* Fix Windows support in binary.
+* Improve print errors in binary.
+
+20130502:
+* Don’t add -webkit- prefix to IE filter.
+* Don’t duplicate prefixes on second run.
+
+== 0.2 (Hear Me Roar!)
+* Update parse libraries.
+* Use component package manager to build standalone script.
+* Add inspect to standalone script.
+
+== 0.1 (Fire and Blood)
+* Initial release.
