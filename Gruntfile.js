@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         topcoat: {
             options: {
                 browsers: ['last 2 versions'],
-                namespace: 'topcoat',
+                namespace: 'topcoatsss',
                 license:  grunt.file.read('src/license.txt')
             },
             compile: {
