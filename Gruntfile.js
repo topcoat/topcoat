@@ -121,11 +121,7 @@ module.exports = function(grunt) {
         autoprefixer: {
             dist: {
                 options: {
-                    /*
-                     * Add target browsers here
-                     * https://github.com/ai/autoprefixer#browsers
-                     * browsers: ['android 4']
-                     */
+                    browsers: ['last 2 versions', 'ie >= 8', '> 1%']									
                 },
                 files: [{
                     expand: true,
