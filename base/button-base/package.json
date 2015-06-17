@@ -3,6 +3,7 @@
   "version": "0.8.0",
   "description": "Topcoat button base. Reset styles for buttons.",
   "main": "index.html",
+  "style": "src/button.css",
   "directories": {
     "test": "test"
   },
