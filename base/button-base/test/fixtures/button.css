@@ -1,4 +1,4 @@
-@import "./src/button.css";
+@import "../../src/button";
 
 .button {
   extend: %button;

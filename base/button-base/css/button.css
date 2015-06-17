@@ -16,7 +16,7 @@
 *
 */
 
-%reset-base {
+.button {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -25,87 +25,43 @@
   border: none;
 }
 
-%reset-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-%reset-quiet {
+.button--quiet {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
 
-%reset-input {
-  extend: %reset-base;
-  extend: %reset-box-model;
-  vertical-align: top;
-  outline: none;
-}
-
-%hide-input {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-%reset-cursor {
+.button {
   cursor: default;
   user-select: none;
 }
 
-%reset-box-model {
+.button {
   box-sizing: border-box;
   background-clip: padding-box;
 }
 
-%reset-overflow {
+.button {
   white-space: nowrap;
   overflow: hidden;
 }
 
-%reset-container {
-  extend: %reset-box-model;
-  extend: %reset-overflow;
-  word-spacing: 0;
-}
-
-%inline-block {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
 }
 
-%ellipsis {
+.button {
   text-overflow: ellipsis;
-  extend: %reset-overflow;
 }
 
-%disabled {
+.button--disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
 
-%button {
-  extend: %inline-block;
-  extend: %reset-box-model;
-  extend: %reset-base;
-  extend: %reset-cursor;
-  extend: %ellipsis;
+.button {
   text-decoration: none;
-}
-
-%button--quiet {
-  extend: %reset-quiet;
-}
-
-%button--disabled {
-  extend: %disabled;
 }
