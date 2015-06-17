@@ -1,0 +1,46 @@
+{
+  "name": "topcoat-button-base",
+  "version": "0.8.0",
+  "description": "Topcoat button base. Reset styles for buttons.",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/button-base.git"
+  },
+  "keywords": [
+    "button",
+    "css",
+    "topcoat",
+    "base",
+    "reset"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+    "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
+  ],
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "homepage": "https://github.com/topcoat/button-base",
+  "dependencies": {
+    "postcss-simple-extend": "^0.3.1",
+    "topcoat-utils": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "postcss": "^4.1.11",
+    "postcss-css-variables": "^0.3.8",
+    "postcss-import": "^5.2.2",
+    "rework": "^1.0.1",
+    "rework-inherit": "^0.2.3",
+    "rework-npm": "^1.0.0"
+  }
+}

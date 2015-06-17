@@ -1,0 +1,32 @@
+{
+  "name": "topcoat-button-bar-base",
+  "version": "0.2.0",
+  "description": "Topcoat Button Bar Base",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt test",
+    "prepublish": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/button-bar-base.git"
+  },
+  "keywords": [
+    "button",
+    "bar",
+    "css",
+    "topcoat",
+    "base",
+    "reset"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+    "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
+  ],
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "homepage": "https://github.com/topcoat/button-bar-base"
+}

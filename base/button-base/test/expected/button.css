@@ -1,0 +1,53 @@
+.button {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.button {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.button {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.button {
+  text-overflow: ellipsis;
+}
+
+.button--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.button {
+  text-decoration: none;
+}
