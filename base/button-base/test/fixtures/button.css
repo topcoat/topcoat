@@ -1,20 +1,13 @@
-@define-placeholder button {
-  extend: %inline-block;
-  extend: %reset-box-model;
-  extend: %reset-base;
-  extend: %reset-cursor;
-  extend: %ellipsis;
-  text-decoration: none;
-}
+@import "./src/button.css";
 
 .button {
-  @extend button;
+  extend: %button;
 }
 
 .button--quiet {
-  @extend %button--quiet;
+  extend: %button--quiet;
 }
 
 .button--disabled {
-  @extend %button--disabled;
+  extend: %button--disabled;
 }

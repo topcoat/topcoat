@@ -1,14 +1,20 @@
 var fs = require("fs");
-var rework = require('rework');
-var reworkInherit = require('rework-inherit');
-var reworkNPM = require('rework-npm');
+var postcss = require('postcss');
+var inherit = require('postcss-inherit');
+var atImport = require("postcss-import");
 
 var css = fs.readFileSync('./test/fixtures/button.css', 'utf-8');
 // console.log(css);
 
-var output = rework(css)
-  .use(reworkNPM())
-  .use(reworkInherit())
-  .toString();
+var output = postcss()
+  .use(atImport())
+  .process(css, {})
+  .css;
 
-console.log(output);
+var newOutput = postcss()
+  .use(inherit())
+  .process(output, {})
+  .css;
+
+
+console.log(newOutput);
