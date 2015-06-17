@@ -40,7 +40,7 @@
     "postcss-css-variables": "^0.3.8",
     "postcss-import": "^5.2.2",
     "postcss-inherit": "0.0.1",
-    "topcoat-utils": "^0.3.0"
+    "topcoat-utils": "^0.4.0"
   },
   "devDependencies": {
     "mocha": "^2.2.5"
