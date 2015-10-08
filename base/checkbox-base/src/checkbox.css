@@ -1,0 +1,29 @@
+@import "topcoat-utils";
+
+input[type="checkbox"] {
+  extend: %hide-input;
+}
+
+%checkbox {
+  extend: %reset-box-model;
+  extend: %inline-block;
+  extend: %reset-cursor;
+}
+
+%checkbox__label {
+  extend: %inline-block;
+  extend: %reset-cursor;
+}
+
+%checkbox--disabled {
+  extend: %disabled;
+}
+
+%checkbox__pseudo {
+  content: '';
+  position: absolute;
+}
+
+%checkbox__pseudo--before {
+  extend: %reset-box-model;
+}

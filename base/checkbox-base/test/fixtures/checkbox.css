@@ -1,0 +1,22 @@
+@import "../../src/checkbox.css";
+
+.checkbox {
+    extend: %checkbox;
+}
+
+.checkbox__label {
+    extend: %checkbox__label
+}
+
+.checkbox--disabled {
+    extend: %checkbox--disabled;
+}
+
+.checkbox:before,
+.checkbox:after {
+    extend: %checkbox__pseudo;
+}
+
+.checkbox:before {
+    extend: %checkbox__pseudo--before;
+}

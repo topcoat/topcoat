@@ -1,0 +1,49 @@
+{
+  "name": "topcoat-checkbox-base",
+  "version": "0.3.0",
+  "description": "Topcoat checkbox base. Reset styles for checkboxes.",
+  "main": "index.html",
+  "style": "src/checkbox.css",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/",
+    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/checkbox.css -o ./css/checkbox.css",
+    "pretest": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/topcoat.git"
+  },
+  "keywords": [
+    "checkbox",
+    "css",
+    "topcoat",
+    "base",
+    "reset",
+    "adobe"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+    "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
+  ],
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "homepage": "https://github.com/topcoat/checkbox-base",
+  "dependencies": {
+    "topcoat-utils": "^0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "autoprefixer": "^5.2.0",
+    "postcss": "^4.1.11",
+    "postcss-cli": "^1.3.1",
+    "postcss-css-variables": "^0.3.8",
+    "postcss-import": "^5.2.2",
+    "postcss-inherit": "0.0.2"
+  }
+}
