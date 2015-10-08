@@ -1,0 +1,25 @@
+@import "../../src/button-bar";
+
+.button-bar {
+  extend: %button-bar;
+}
+
+.button-bar__item {
+  extend: %button-bar__item;
+}
+
+.button-bar__item--disabled {
+  extend: %button-bar__item--disabled;
+}
+
+.button-bar__item__input {
+  extend: %button-bar__item__input;
+}
+
+.button-bar__button {
+  extend: %button-bar__button;
+}
+
+.button-bar__button--focus {
+  extend: %button-bar__button--focus;
+}

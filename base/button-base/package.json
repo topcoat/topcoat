@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/button-base.git"
+    "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
     "button",
