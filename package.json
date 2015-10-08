@@ -41,7 +41,7 @@
     "topcoat-theme-mobile-dark": "0.2.5"
   },
   "scripts": {
-    "test": "find ./base -maxdepth 1 ! -name \".DS_Store\" ! -name \"base\" -type d -exec sh -c 'cd {} && npm test' ';'"
+    "test": "find ./base -maxdepth 1 -mindepth 1 ! -name \".*\" -type d -exec sh -c 'cd {}; npm install; npm test' ';'"
   },
   "repository": {
     "type": "git",
