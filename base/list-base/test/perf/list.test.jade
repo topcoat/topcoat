@@ -1,0 +1,16 @@
+-var repeats = 200
+!!!
+html
+    head
+        title TopCoat list base test
+        |<link rel="stylesheet" type="text/css" href="../../release/css/list.min.css">
+    body
+        -while (repeats > 0)
+            -var repeats = repeats - 1
+            div.list-container
+                ul.list
+                    li.list-item Item
+                    li.list-item Item
+                    li.list-item Item
+                    li.list-item Item
+
