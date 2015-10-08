@@ -1,0 +1,5 @@
+@import "../../src/notification";
+
+.notification {
+  extend: %notification;
+}

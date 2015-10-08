@@ -1,0 +1,13 @@
+@import "topcoat-utils";
+
+%textarea {
+  extend: %reset-box-model;
+  extend: %reset-base;
+  vertical-align: top;
+  resize: none;
+  outline: none;
+}
+
+%textarea--disabled {
+  extend: %disabled;
+}

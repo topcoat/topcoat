@@ -1,0 +1,8 @@
+@import "topcoat-utils";
+
+%overlay {
+  extend: %reset-base;
+  extend: %reset-cursor;
+  extend: %reset-box-model;
+  overflow: hidden;
+}

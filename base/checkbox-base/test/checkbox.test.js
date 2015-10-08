@@ -5,7 +5,7 @@ function read(file) {
     return fs.readFileSync(file, 'utf8');
 }
 
-describe('checkbox-base', function() {
+describe('Topcoat Checkbox Base', function() {
     'use strict';
 
     it('should create expected css file', function() {

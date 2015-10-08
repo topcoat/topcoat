@@ -5,12 +5,11 @@ function read(file) {
     return fs.readFileSync(file, 'utf8');
 }
 
-describe('Topcoat Input Base', function() {
-    'use strict';
+describe('Topcoat Notification Base', function() {
 
     it('should create expected css file', function() {
-        var actual = read('css/input.css').trim();
-        var expected = read('test/expected/input.css').trim();
+        var actual = read('css/notification.css').trim();
+        var expected = read('test/expected/notification.css').trim();
         assert.equal(actual, expected, 'should generate correct css');
     });
 

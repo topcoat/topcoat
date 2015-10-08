@@ -1,15 +1,14 @@
 {
-  "name": "topcoat-button-bar-base",
-  "version": "0.3.0",
-  "description": "Topcoat Button Bar Base. Reset styles for button bar.",
-  "main": "index.html",
-  "style": "src/button-bar.css",
+  "name": "topcoat-radio-button-base",
+  "version": "0.2.0",
+  "description": "Topcoat radio button base. Reset styles for radio buttons.",
+  "style": "src/radio-button.css",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha test/",
-    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/button-bar.css -o ./css/button-bar.css",
+    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/radio-button.css -o ./css/radio-button.css",
     "pretest": "npm run build"
   },
   "repository": {
@@ -17,12 +16,12 @@
     "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
-    "button",
-    "bar",
+    "radio",
+    "input",
     "css",
     "topcoat",
     "base",
-    "reset"
+    "adobe"
   ],
   "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
   "contributors": [
@@ -33,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
   },
-  "homepage": "https://github.com/topcoat/button-bar-base",
+  "homepage": "http://topcoat.io",
   "dependencies": {
     "topcoat-utils": "^0.4.0"
   },

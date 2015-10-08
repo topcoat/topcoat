@@ -1,0 +1,36 @@
+@import "topcoat-utils";
+
+input[type="radio"] {
+  extend: %hide-input;
+}
+
+%radio-button {
+  extend: %reset-box-model;
+  extend: %inline-block;
+  extend: %reset-cursor;
+}
+
+%radio-button__label {
+  extend: %inline-block;
+  extend: %reset-cursor;
+}
+
+%radio-button--before {
+  extend: %reset-box-model;
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+}
+
+%radio-button--after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%radio-button--disabled {
+  extend: %disabled;
+}

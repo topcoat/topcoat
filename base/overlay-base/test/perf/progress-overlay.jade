@@ -1,0 +1,14 @@
+- var repeats = 2
+doctype 5
+html
+	head
+		title Topcoat overlay base
+		link(rel='stylesheet', type='text/css', href='../../release/css/overlay-base.min.css')
+	body
+		- while (--repeats)
+			.topcoat-overlay-bg
+			aside.overlay-base
+				h1 Are eagles nice ?
+				.topcoat-overlay-buttons
+					button(class="topcoat-button", role="button") No
+					button(class="topcoat-button--cta", role="button") Yes

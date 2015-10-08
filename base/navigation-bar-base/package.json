@@ -1,15 +1,15 @@
 {
-  "name": "topcoat-button-bar-base",
-  "version": "0.3.0",
-  "description": "Topcoat Button Bar Base. Reset styles for button bar.",
+  "name": "topcoat-navigation-bar-base",
+  "version": "0.6.0",
+  "description": "Topcoat navigation bar base. Reset styles for navigation bar.",
   "main": "index.html",
-  "style": "src/button-bar.css",
+  "style": "src/navigation-bar.css",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha test/",
-    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/button-bar.css -o ./css/button-bar.css",
+    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/navigation-bar.css -o ./css/navigation-bar.css",
     "pretest": "npm run build"
   },
   "repository": {
@@ -17,12 +17,12 @@
     "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
-    "button",
+    "navigation",
     "bar",
     "css",
     "topcoat",
     "base",
-    "reset"
+    "adobe"
   ],
   "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
   "contributors": [
@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
   },
-  "homepage": "https://github.com/topcoat/button-bar-base",
+  "homepage": "http://topcoat.io",
   "dependencies": {
     "topcoat-utils": "^0.4.0"
   },

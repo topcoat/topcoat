@@ -1,0 +1,14 @@
+@import "topcoat-utils";
+
+%select {
+  extend: %reset-input;
+  appearance: none;
+  extend: %inline-block;
+  extend: %reset-cursor;
+}
+%select--ms {
+  display: none;
+}
+%select--disabled {
+  extend: %disabled;
+}

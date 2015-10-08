@@ -1,0 +1,5 @@
+@import "../../src/overlay.css";
+
+.overlay {
+  extend: %overlay;
+}

@@ -1,32 +1,29 @@
 {
-  "name": "topcoat-button-base",
-  "version": "0.9.1",
-  "description": "Topcoat button base. Reset styles for buttons.",
-  "style": "src/button.css",
+  "name": "topcoat-notification-base",
+  "version": "0.1.1",
+  "description": "Topcoat notification base. Reset styles for notifications.",
+  "main": "index.html",
+  "style": "src/notification.css",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha test/",
-    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/button.css -o ./css/button.css",
+    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/notification.css -o ./css/notification.css",
     "pretest": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/topcoat.git"
+    "url": "git://github.com/topcoat/notification-base.git"
   },
   "keywords": [
-    "button",
+    "notification",
+    "base",
     "css",
     "topcoat",
-    "base",
-    "reset"
+    "adobe"
   ],
-  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
-  "contributors": [
-    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
-    "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
-  ],
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com/)",
   "license": "Apache2",
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"

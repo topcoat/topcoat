@@ -1,0 +1,50 @@
+input[type="radio"] {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: 0.001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+
+.radio-button,
+.radio-button__label {
+  cursor: default;
+  user-select: none;
+}
+
+.radio-button,
+.radio-button:before {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.radio-button,
+.radio-button__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.radio-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.radio-button:before {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+}
+
+.radio-button:after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

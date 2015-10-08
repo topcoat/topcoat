@@ -1,15 +1,14 @@
 {
-  "name": "topcoat-button-bar-base",
-  "version": "0.3.0",
-  "description": "Topcoat Button Bar Base. Reset styles for button bar.",
-  "main": "index.html",
-  "style": "src/button-bar.css",
+  "name": "topcoat-select-base",
+  "version": "0.0.4",
+  "description": "Topcoat select base. Reset styles for buttons.",
+  "style": "src/select.css",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha test/",
-    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/button-bar.css -o ./css/button-bar.css",
+    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/select.css -o ./css/select.css",
     "pretest": "npm run build"
   },
   "repository": {
@@ -17,23 +16,22 @@
     "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
-    "button",
-    "bar",
+    "input",
     "css",
     "topcoat",
     "base",
-    "reset"
+    "adobe"
   ],
-  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "author": "Garth Braithwaite (http://garthdb.com/)",
   "contributors": [
-    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
-    "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
+    "Kristofer Joseph (http://twitter.com/dam)",
+    "Garth Braithwaite (http://garthdb.com/)"
   ],
   "license": "Apache2",
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
   },
-  "homepage": "https://github.com/topcoat/button-bar-base",
+  "homepage": "http://topcoat.io",
   "dependencies": {
     "topcoat-utils": "^0.4.0"
   },

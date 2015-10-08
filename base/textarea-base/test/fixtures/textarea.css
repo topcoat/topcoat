@@ -1,0 +1,9 @@
+@import "../../src/textarea.css";
+
+.textarea {
+  extend: %textarea;
+}
+
+.textarea:disabled {
+  extend: %textarea--disabled;
+}

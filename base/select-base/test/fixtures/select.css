@@ -1,0 +1,11 @@
+@import "../../src/select.css";
+
+.select {
+  extend: %select;
+}
+.select::-ms-expand {
+  extend: %select--ms;
+}
+.select:disabled {
+  extend: %select--disabled;
+}

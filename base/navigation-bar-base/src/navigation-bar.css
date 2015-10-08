@@ -1,0 +1,18 @@
+@import "topcoat-utils";
+
+%navigation-bar {
+  extend: %reset-container;
+  extend: %reset-base;
+  extend: %reset-cursor;
+}
+
+%navigation-bar__item {
+  extend: %reset-box-model;
+  extend: %inline-block;
+  extend: %reset-base;
+}
+
+%navigation-bar__title {
+  extend: %reset-base;
+  extend: %ellipsis;
+}

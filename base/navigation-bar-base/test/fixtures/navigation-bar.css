@@ -1,0 +1,14 @@
+
+@import "../../src/navigation-bar.css";
+
+.navigation-bar {
+    extend: %navigation-bar;
+}
+
+.navigation-bar__item {
+    extend: %navigation-bar__item;
+}
+
+.navigation-bar__title {
+    extend: %navigation-bar__title;
+}

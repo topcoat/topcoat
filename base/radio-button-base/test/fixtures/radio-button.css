@@ -1,0 +1,21 @@
+@import "../../src/radio-button.css";
+
+.radio-button {
+  extend: %radio-button;
+}
+
+.radio-button__label {
+  extend: %radio-button__label;
+}
+
+.radio-button:before{
+  extend: %radio-button--before;
+}
+
+.radio-button:after {
+  extend: %radio-button--after;
+}
+
+.radio-button:disabled {
+  extend: %radio-button--disabled;
+}

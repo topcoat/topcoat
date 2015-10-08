@@ -1,0 +1,41 @@
+.navigation-bar,
+.navigation-bar__item,
+.navigation-bar__title {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.navigation-bar {
+  cursor: default;
+  user-select: none;
+}
+
+.navigation-bar,
+.navigation-bar__item {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.navigation-bar,
+.navigation-bar__title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.navigation-bar {
+  word-spacing: 0;
+}
+
+.navigation-bar__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navigation-bar__title {
+  text-overflow: ellipsis;
+}

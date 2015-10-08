@@ -1,0 +1,10 @@
+@import "topcoat-utils";
+
+%notification {
+  extend: %inline-block;
+  extend: %reset-box-model;
+  extend: %reset-base;
+  extend: %reset-cursor;
+  extend: %ellipsis;
+  text-decoration: none;
+}

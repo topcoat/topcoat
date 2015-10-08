@@ -41,8 +41,7 @@
     "topcoat-theme-mobile-dark": "0.2.5"
   },
   "scripts": {
-    "test": "grunt test",
-    "prepublish": "grunt"
+    "test": "find ./base -maxdepth 1 ! -name \".DS_Store\" ! -name \"base\" -type d -exec sh -c 'cd {} && npm test' ';'"
   },
   "repository": {
     "type": "git",

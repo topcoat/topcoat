@@ -5,7 +5,7 @@ function read(file) {
     return fs.readFileSync(file, 'utf8');
 }
 
-describe('button-bar-base', function() {
+describe('Topcoat Button Base', function() {
     'use strict';
 
     it('should create expected css file', function() {

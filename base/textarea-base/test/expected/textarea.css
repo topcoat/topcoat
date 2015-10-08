@@ -1,0 +1,25 @@
+.textarea {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.textarea {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.textarea:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.textarea {
+  vertical-align: top;
+  resize: none;
+  outline: none;
+}
