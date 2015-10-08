@@ -1,0 +1,8 @@
+@import "topcoat-utils";
+
+%input {
+  extend: %reset-input;
+}
+%input--disabled {
+  extend: %disabled;
+}

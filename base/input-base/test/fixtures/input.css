@@ -1,0 +1,8 @@
+@import "../../src/input.css";
+
+.input {
+  extend: %input;
+}
+.input:disabled {
+  extend: %input--disabled;
+}
