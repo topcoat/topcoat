@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
   },
-  "homepage": "https://github.com/topcoat/button-base",
+  "homepage": "https://github.com/topcoat/input-base",
   "dependencies": {
     "topcoat-utils": "^0.4.0"
   },
