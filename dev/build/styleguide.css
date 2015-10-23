@@ -215,7 +215,6 @@ header a:hover {
 
 header a:focus {
     border: 1px solid #0940fd;
-    -webkit-box-shadow: 0 0 4px #0088ff;
     box-shadow: 0 0 4px #0088ff;
     outline: none;
     margin-left: 4px;
@@ -237,11 +236,6 @@ h4:target span {
   -moz-animation: highlight 5s ease;    
 }
 
-	@-webkit-keyframes highlight {
-	  0% { color: #0083E8; 	text-shadow: 0 0 4px rgba(0,136,255,.69); }
-	  100% { color: #000; text-shadow: none; }
-	}
-
 .preview {
     border-spacing: 0;
     width: auto;
@@ -250,10 +244,7 @@ h4:target span {
 .preview td {
 	padding: 15px 30px;
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;
 	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;	
 }
 
@@ -294,10 +285,7 @@ h4:target span {
 
 header {
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;
 	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 }
 
@@ -345,7 +333,6 @@ header {
 	z-index: 10000;
 
 	/* Transition opacity on open */
-	-webkit-transition: opacity 200ms ease-in;
 	transition: opacity 200ms ease-in;
 
 	/* Hide for now */
@@ -353,10 +340,7 @@ header {
 	pointer-events: none;
 
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;
 	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;	
 }
 
@@ -398,44 +382,6 @@ header {
 .modal h1 {
 	font-size: 24px;
 	padding: 0 0 10px;
-}
-
-@-webkit-keyframes bounce {
-	0% {
-		-webkit-transform: scale3d(1,1,1);
-	}
-	55% {
-		-webkit-transform: scale3d(1,1,1);
-	}
-	100% {
-		-webkit-transform: scale3d(1,1,1);
-	}
-/*	0% {
-		-webkit-transform: scale3d(0.1,0.1,1);
-		box-shadow: 0 3px 20px rgba(0,0,0,0.9);
-	}
-	55% {
-		-webkit-transform: scale3d(1,1,1);
-		box-shadow: 0 10px 20px rgba(0,0,0,0);
-	}
-	75% {
-		-webkit-transform: scale3d(0.95,0.95,1);
-		box-shadow: 0 0 20px rgba(0,0,0,0.9);
-	}
-	100% {
-		-webkit-transform: scale3d(1,1,1);
-		box-shadow: 0 3px 20px rgba(0,0,0,0.9);
-	}
-*/
-}
-
-@-webkit-keyframes minimise {
-	0% {
-		-webkit-transform: scale3d(1,1,1);
-	}
-	100% {
-		-webkit-transform: scale3d(0.1,0.1,1);
-	}
 }
 
 /* Modal close link */
