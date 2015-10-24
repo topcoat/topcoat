@@ -78,6 +78,17 @@ source files.
 
 ---
 
+## Browser support
+
+* Chrome (latest 2)
+* Edge (latest 2)
+* Firefox (latest 2)
+* Internet Explorer 8+
+* Opera (latest 2)
+* Safari (latest 2)
+
+---
+
 ## Release notes
 See [Release Notes](https://github.com/topcoat/topcoat/releases/).
 
