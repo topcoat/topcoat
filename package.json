@@ -55,7 +55,7 @@
     "grunt-autoprefixer": "~0.4.0"
   },
   "scripts": {
-    "test": "grunt test",
+    "test": "grunt",
     "prepublish": "grunt"
   },
   "repository": {
