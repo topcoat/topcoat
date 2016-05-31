@@ -25,6 +25,7 @@ Pros:
 Cons:
 
 * Concepts that affect child elements (such as `.button--square .icon`) can't be captured with nesting and need to be separate concepts completely (i.e. `$button--square-icon`)
+* Theme files are more complex, require nesting, lots of `@extends`
 
 
 ### 2. Interpolation: Use variable interpolation to change classnames
