@@ -13,8 +13,6 @@ open dist
 
 ## Mechanism: Create a variable for each concept, allow consumers to extend with their own classnames
 
-See [poc/extends](poc/extends/).
-
 Pros:
 
 * Very direct
