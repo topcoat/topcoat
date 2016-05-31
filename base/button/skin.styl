@@ -1,0 +1,214 @@
+@require '../commons'
+
+$spectrum-button-skinned {
+  color: $spectrum-button-color-text
+
+  &:focus {
+    border-color: $spectrum-button-color-focus
+
+    box-shadow: 0 0 0 1*$px $spectrum-button-color-focus;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+$spectrum-button-skinned--pretty {
+  &:disabled,
+  &[disabled] {
+    background: $spectrum-button-color-disabled
+
+    border-color: $spectrum-button-color-disabled
+
+    color: $spectrum-button-color-disabled-text
+  }
+}
+
+$spectrum-button-skinned--cta {
+  background: $spectrum-button-color-cta;
+
+  border-color: $spectrum-button-color-cta;
+
+  color: white;
+
+  &:focus {
+    background: $spectrum-button-color-focus
+  }
+
+  &:hover {
+    background: $spectrum-button-color-cta-hover
+
+    border-color: $spectrum-button-color-cta-hover
+  }
+
+  &:active {
+    background: $spectrum-button-color-cta-active
+
+    border-color: $spectrum-button-color-cta-active
+  }
+
+  @extends $spectrum-button-skinned--pretty
+}
+
+$spectrum-button-skinned--primary {
+  background: transparent
+
+  border-color: $spectrum-button-color-primary
+
+  color: $spectrum-button-color-primary
+
+  &:focus {
+    background: $spectrum-button-color-focus
+
+    color: $spectrum-button-color-primary-focus-text
+  }
+
+  &:hover {
+    background: $spectrum-button-color-primary-hover
+
+    border-color: $spectrum-button-color-primary-hover
+
+    color: $spectrum-button-color-primary-hover-text
+  }
+
+  &:active {
+    background: $spectrum-button-color-primary-active
+
+    border-color: $spectrum-button-color-primary-active
+
+    color: $spectrum-button-color-primary-active-text
+  }
+
+  @extends $spectrum-button-skinned--pretty
+}
+
+$spectrum-button-skinned--secondary {
+  background: transparent
+
+  border-color: $spectrum-button-color-secondary
+
+  color: $spectrum-button-color-secondary
+
+  &:focus {
+    background: $spectrum-button-color-focus
+
+    color: $spectrum-button-color-secondary-focus-text
+  }
+
+  &:hover {
+    background: $spectrum-button-color-secondary-hover
+
+    border-color: $spectrum-button-color-secondary-hover
+
+    color: $spectrum-button-color-secondary-hover-text
+  }
+
+  &:active {
+    background: $spectrum-button-color-secondary-active
+
+    border-color: $spectrum-button-color-secondary-active
+
+    color: $spectrum-button-color-secondary-active-text
+  }
+
+  @extends $spectrum-button-skinned--pretty
+}
+
+$spectrum-button-skinned--warning {
+  background-color: transparent;
+
+  border-color: $spectrum-button-color-warning
+
+  color: $spectrum-button-color-warning
+
+  &:focus {
+    background: $spectrum-button-color-focus
+
+    color: $spectrum-button-color-warning-focus-text
+  }
+
+  &:hover {
+    background: $spectrum-button-color-warning-hover
+
+    border-color: $spectrum-button-color-warning-hover
+
+    color: $spectrum-button-color-warning-hover-text
+  }
+
+  &:active {
+    background: $spectrum-button-color-warning-active
+
+    border-color: $spectrum-button-color-warning-active
+
+    color: $spectrum-button-color-warning-active-text
+  }
+
+  @extends $spectrum-button-skinned--pretty
+}
+
+
+// Quiet primary and secondary
+$spectrum-button-skinned--quietBase {
+  &:disabled,
+  &[disabled] {
+    color: $spectrum-button-color-disabled-text
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// Quiet primary
+$spectrum-button-skinned--quietPrimary {
+  background-color: transparent;
+
+  border-color: transparent;
+
+  color: $spectrum-button-color-primaryquiet
+
+  &:focus {
+    color: $spectrum-button-color-focus
+  }
+
+  &:hover {
+    color: $spectrum-button-color-primaryquiet-hover
+    border-color: transparent;
+  }
+
+  &:active {
+    color: $spectrum-button-color-primaryquiet-active
+
+    border-color: transparent;
+  }
+
+  @extends $spectrum-button-skinned--quietBase;
+}
+
+// Quiet secondary
+$spectrum-button-skinned--quietSecondary {
+  background-color: transparent;
+
+  border-color: transparent;
+
+  color: $spectrum-button-color-secondaryquiet
+
+  &:focus {
+    color: $spectrum-button-color-focus
+  }
+
+  &:hover {
+    color: $spectrum-button-color-secondaryquiet-hover
+    border-color: transparent;
+  }
+
+  &:active {
+    color: $spectrum-button-color-secondaryquiet-active
+
+    border-color: transparent;
+  }
+
+  @extends $spectrum-button-skinned--quietBase;
+}

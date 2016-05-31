@@ -2,19 +2,15 @@
   "name": "spectrum",
   "version": "0.1.0",
   "scripts": {
-    "build": "npm run clean && npm run build-coral && npm run build-bootstrap",
+    "build": "npm run clean && npm run build-coral",
     "clean": "rm -rf dist && mkdir dist",
-    "build-bootstrap": "npm run poc-bootstrap-interpolation && npm run poc-bootstrap-extends",
-    "build-coral": "npm run poc-coral-interpolation && npm run poc-coral-extends",
-    "poc-bootstrap-interpolation": "stylus poc/extends/bootstrap.styl -o dist/bootstrap.extends.css",
-    "poc-bootstrap-extends": "stylus poc/interpolation/bootstrap.styl -o dist/bootstrap.interpolation.css",
-    "poc-coral-interpolation": "stylus poc/extends/coral.styl -o dist/coral.extends.css",
-    "poc-coral-extends": "stylus poc/interpolation/coral.styl -o dist/coral.interpolation.css"
+    "build-coral": "stylus coral/index.styl -o dist/coral.css"
   },
   "bin": {
     "stylus": "./node_modules/.bin/stylus"
   },
   "devDependencies": {
+    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.7",
     "stylus": "^0.54.5"
   }
 }
