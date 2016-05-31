@@ -1,6 +1,16 @@
 # spectrum
 > SSOT Spectrum theme POC
 
+## Usage
+
+```sh
+git clone git@git.corp.adobe.com:lawdavis/spectrum.git
+cd spectrum
+npm install
+npm run build
+open dist
+```
+
 ## Methods
 
 ### 1. Extends: Create a variable for each concept, allow consumers to extend with their own classnames
