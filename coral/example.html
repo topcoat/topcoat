@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spectrum.Coral Example</title>
+  <link rel="stylesheet" href="coral.css">
+  <script>
+    window.onload = function() {
+      var light = true;
+      var switcher = document.querySelector('#theme-switcher');
+      switcher.addEventListener('click', function() {
+        document.body.classList.remove('coral--'+ (light ? 'dark' : 'light'));
+        document.body.classList.add('coral--'+ (light ? 'light' : 'dark'));
+        light = !light;
+        setSwitcherInnerHTML();
+      });
+      function setSwitcherInnerHTML() {
+        switcher.innerHTML = light ? 'Dark' : 'Light';
+      }
+      setSwitcherInnerHTML();
+    };
+  </script>
+  <style>
+    #theme-switcher {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body class="coral--light">
+  <a id="theme-switcher" href="#"></a>

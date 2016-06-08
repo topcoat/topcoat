@@ -5,7 +5,8 @@
     "build": "npm run clean && npm run build-coral && npm run postcss && npm run stats",
     "clean": "rm -rf dist && mkdir dist",
     "postcss": "postcss --use autoprefixer -c postcss.json -o dist/coral.css dist/coral.css",
-    "build-coral": "stylus coral/index.styl -o dist/coral.css",
+    "build-coral": "stylus coral/index.styl -o dist/coral.css && npm run copy-coral-examples",
+    "copy-coral-examples": "cat coral/example.html coral/*/examples/* > dist/coral.example.html",
     "stats": "stylestats dist/coral.css"
   },
   "bin": {
