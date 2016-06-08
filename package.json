@@ -2,8 +2,9 @@
   "name": "spectrum",
   "version": "0.1.0",
   "scripts": {
-    "build": "npm run clean && npm run build-coral && npm run stats",
+    "build": "npm run clean && npm run build-coral && npm run postcss && npm run stats",
     "clean": "rm -rf dist && mkdir dist",
+    "postcss": "postcss --use autoprefixer -c postcss.json -o dist/coral.css dist/coral.css",
     "build-coral": "stylus coral/index.styl -o dist/coral.css",
     "stats": "stylestats dist/coral.css"
   },
@@ -12,6 +13,8 @@
     "stylus": "./node_modules/.bin/stylus"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "postcss-cli": "^2.5.2",
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.9",
     "stylestats": "^6.3.0",
     "stylus": "^0.54.5"
