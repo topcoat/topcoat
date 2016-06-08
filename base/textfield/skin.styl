@@ -1,0 +1,84 @@
+@require '../commons'
+
+$spectrum-textfield--focused {
+  border-color: $spectrum-color-input-border-focus;
+  box-shadow: 0 0 0 1*$px $spectrum-color-input-border-focus;
+}
+
+$spectrum-textfield--disabled {
+  placeholder(color $spectrum-color-input-placeholder-disabled);
+  background-color: $spectrum-color-input-background-disabled;
+  border-color: $spectrum-color-input-border-disabled;
+  color: $spectrum-color-input-text-disabled;
+
+  /* For safari mobile browser */
+  -webkit-text-fill-color: $spectrum-color-input-text-disabled;
+}
+
+$spectrum-textfield--invalid {
+  border-color: $spectrum-color-input-border-invalid;
+
+  &:focus { /* might break things due to pre-defined focus */
+    box-shadow: 0 0 0 1*$px $spectrum-color-input-border-invalid;
+  }
+}
+
+
+$spectrum-textfield {
+  placeholder(color $spectrum-color-input-placeholder);
+  border-color: $spectrum-color-input-border;
+  background-color: $spectrum-color-input-background;
+  color: $spectrum-color-input-text;
+
+  &:hover {
+    placeholder(color $spectrum-color-input-placeholder-hover);
+  }
+  
+  &:focus {
+    @extends $spectrum-textfield--focused
+  }
+
+  &:disabled {
+    @extends $spectrum-textfield--disabled
+  }
+
+  &:invalid {
+    @extends $spectrum-textfield--invalid
+  }
+}
+
+
+$spectrum-textfield--quiet--focus {
+  box-shadow: 0 1*$px 0 $spectrum-color-input-border-focus;
+}
+
+$spectrum-textfield--quiet--disabled {
+  border-color:  $spectrum-color-input-border-disabled-quiet;
+  background-color: transparent;
+}
+
+$spectrum-textfield--quiet--invalid {
+  border-color: $spectrum-color-input-border-invalid;
+
+  &:focus {
+    box-shadow: 0 1*$px 0 $spectrum-color-input-border-invalid;
+  }
+}
+
+$spectrum-textfield--quiet {
+  background-color: transparent;
+  border-color: $spectrum-color-input-border;
+  color: $spectrum-color-input-text;
+
+  &:focus {
+    @extends $spectrum-textfield--quiet--focus
+  }
+
+  &:disabled {
+    @extends $spectrum-textfield--quiet--disabled
+  }
+
+  &:invalid {
+    @extends $spectrum-textfield--quiet--invalid
+  }
+}
