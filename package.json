@@ -5,7 +5,7 @@
     "build": "npm run clean && npm run build-coral && npm run postcss && npm run stats",
     "clean": "rm -rf dist && mkdir dist",
     "postcss": "postcss --use autoprefixer -c postcss.json -o dist/coral.css dist/coral.css",
-    "build-coral": "stylus coral/index.styl -o dist/coral.css && npm run copy-coral-examples",
+    "build-coral": "stylus -u svg-stylus coral/index.styl -o dist/coral.css && npm run copy-coral-examples",
     "copy-coral-examples": "cat coral/example.html coral/*/examples/* > dist/coral.example.html",
     "stats": "stylestats dist/coral.css"
   },
@@ -18,6 +18,7 @@
     "postcss-cli": "^2.5.2",
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.11",
     "stylestats": "^6.3.0",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "svg-stylus": "0.0.2"
   }
 }

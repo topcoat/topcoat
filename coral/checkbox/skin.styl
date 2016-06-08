@@ -1,0 +1,42 @@
+.coral-Checkbox-description {
+  @extend $spectrum-checkbox-description
+}
+
+.coral-Checkbox-checkmark {
+  @extend $spectrum-checkbox-checkmark
+}
+
+.coral-Checkbox-input {
+  &:checked + .coral-Radio-checkmark {
+    @extend $spectrum-checkbox--checked-checkmark;
+  }
+
+  &:focus + .coral-Checkbox-checkmark {
+    @extend $spectrum-checkbox--focus-checkmark;
+  }
+}
+
+.coral-Checkbox {
+  &:hover {
+    .coral-Checkbox-checkmark {
+      @extend $spectrum-checkbox--hover-checkmark;
+    }
+  }
+
+  &:active {
+    .coral-Checkbox-checkmark {
+      @extend $spectrum-checkbox--active-checkmark;
+    }
+  }
+
+  &:disabled,
+  &.is-disabled {
+    .coral-Checkbox-checkmark {
+      @extend $spectrum-checkbox--disabled-checkmark;
+    }
+
+    .coral-Checkbox-description {
+      @extend $spectrum-checkbox--disabled-description;
+    }
+  }
+}

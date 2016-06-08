@@ -1,0 +1,28 @@
+@import '../../base/checkbox/index.styl'
+
+.coral-Checkbox {
+  @extends $spectrum-checkbox
+}
+
+.coral-Checkbox-checkmark {
+  @extends $spectrum-checkbox-checkmark
+}
+
+.coral-Checkbox-input {
+  @extends $spectrum-checkbox-input
+
+  &:checked + .coral-Checkbox-checkmark {
+    @extends $spectrum-checkbox--checked-checkmark
+  }
+}
+
+.coral-Checkbox[indeterminate] .coral-Checkbox-checkmark {
+  @extends $spectrum-checkbox--indeterminate-checkmark
+}
+
+.coral-Checkbox-description {
+  @extends $spectrum-checkbox-description
+}
+
+@import 'light.styl'
+@import 'dark.styl'
