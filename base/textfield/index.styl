@@ -2,12 +2,10 @@
 
 $spectrum-textfield {
   &::placeholder {
-    font-weight: normal
-    font-style: italic
-    transition: color
-    $spectrum-transition-time: ease-in-out
+    font-weight: normal;
+    font-style: italic;
+    transition: color $spectrum-transition-time ease-in-out;
   }
-  placeholder(font-weight normal, font-style italic, transition color $spectrum-transition-time ease-in-out);
   -webkit-appearance: none;
   // removes the native spin buttons in firefox. -mox-appearance: none has no effect
   // http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
@@ -36,13 +34,13 @@ $spectrum-textfield {
 
   &:hover {
     &::placeholder {
-      font-weight: normal
+      font-weight: normal;
     }
   }
 
   &:disabled {
     &::placeholder {
-      font-weight: normal
+      font-weight: normal;
     }
     /* The opacity must be set to 1 */
     -webkit-opacity: 1;
