@@ -1,5 +1,19 @@
 @require '../commons'
 
+$spectrum-button {
+  &:focus {
+    box-shadow-color: $spectrum-color-button-border-focus
+  }
+
+  &:hover {
+    box-shadow: none
+  }
+
+  &:active {
+    box-shadow: none
+  }
+}
+
 $spectrum-button-icon {
   color: $spectrum-color-button-icon
 }
@@ -29,8 +43,6 @@ $spectrum-button--primary {
     color: $spectrum-color-button-text-focus
 
     border-color: $spectrum-color-button-border-focus
-
-    box-shadow: 0 0 0 1*$px $spectrum-color-button-border-focus;
   }
 
   &:hover {
@@ -39,8 +51,6 @@ $spectrum-button--primary {
     border-color: $spectrum-color-button-border-hover
 
     color: $spectrum-color-button-text-hover
-
-    box-shadow: none
   }
 
   &:active {
@@ -49,8 +59,6 @@ $spectrum-button--primary {
     border-color: $spectrum-color-button-border-active
 
     color: $spectrum-color-button-text-active
-
-    box-shadow: none
   }
 
   &:disabled,
@@ -76,8 +84,6 @@ $spectrum-button--secondary {
     color: $spectrum-color-button-secondary-text-focus
 
     border-color: $spectrum-color-button-secondary-border-focus
-
-    box-shadow: 0 0 0 1*$px $spectrum-color-button-border-focus
   }
 
   &:hover {
@@ -86,8 +92,6 @@ $spectrum-button--secondary {
     border-color: $spectrum-color-button-secondary-border-hover
 
     color: $spectrum-color-button-secondary-text-hover
-
-    box-shadow: none
   }
 
   &:active {
@@ -96,8 +100,6 @@ $spectrum-button--secondary {
     border-color: $spectrum-color-button-secondary-border-active
 
     color: $spectrum-color-button-secondary-text-active
-
-    box-shadow: none
   }
 
   &:disabled,
@@ -123,8 +125,6 @@ $spectrum-button--cta {
     color: $spectrum-color-button-cta-text-focus
 
     border-color: $spectrum-color-button-cta-border-focus
-
-    box-shadow: 0 0 0 1*$px $spectrum-color-button-border-focus
   }
 
   &:hover {
@@ -133,8 +133,6 @@ $spectrum-button--cta {
     border-color: $spectrum-color-button-cta-border-hover
 
     color: $spectrum-color-button-cta-text-hover
-
-    box-shadow: none
   }
 
   &:active {
@@ -143,8 +141,6 @@ $spectrum-button--cta {
     border-color: $spectrum-color-button-cta-border-active
 
     color: $spectrum-color-button-cta-text-active
-
-    box-shadow: none
   }
 
   &:disabled,
@@ -170,8 +166,6 @@ $spectrum-button--warning {
     color: $spectrum-color-button-warning-text-focus
 
     border-color: $spectrum-color-button-warning-border-focus
-
-    box-shadow: 0 0 0 1*$px $spectrum-color-button-border-focus
   }
 
   &:hover {
@@ -180,8 +174,6 @@ $spectrum-button--warning {
     border-color: $spectrum-color-button-warning-border-hover
 
     color: $spectrum-color-button-warning-text-hover
-
-    box-shadow: none
   }
 
   &:active {
@@ -190,8 +182,6 @@ $spectrum-button--warning {
     border-color: $spectrum-color-button-warning-border-active
 
     color: $spectrum-color-button-warning-text-active
-
-    box-shadow: none
   }
 
   &:disabled,
