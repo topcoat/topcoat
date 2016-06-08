@@ -16,7 +16,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "postcss-cli": "^2.5.2",
-    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.9",
+    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.11",
     "stylestats": "^6.3.0",
     "stylus": "^0.54.5"
   }
