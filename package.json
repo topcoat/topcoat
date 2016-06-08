@@ -2,15 +2,18 @@
   "name": "spectrum",
   "version": "0.1.0",
   "scripts": {
-    "build": "npm run clean && npm run build-coral",
+    "build": "npm run clean && npm run build-coral && npm run stats",
     "clean": "rm -rf dist && mkdir dist",
-    "build-coral": "stylus coral/index.styl -o dist/coral.css"
+    "build-coral": "stylus coral/index.styl -o dist/coral.css",
+    "stats": "stylestats dist/coral.css"
   },
   "bin": {
+    "stylestats": "./node_modules/.bin/stylestats",
     "stylus": "./node_modules/.bin/stylus"
   },
   "devDependencies": {
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.9",
+    "stylestats": "^6.3.0",
     "stylus": "^0.54.5"
   }
 }
