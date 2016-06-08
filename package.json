@@ -10,7 +10,7 @@
     "stylus": "./node_modules/.bin/stylus"
   },
   "devDependencies": {
-    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.7",
+    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.9",
     "stylus": "^0.54.5"
   }
 }
