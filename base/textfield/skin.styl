@@ -1,12 +1,20 @@
 @require '../commons'
 
+$spectrum-textfield--hovered {
+  &::placeholder {
+    color: $spectrum-color-input-placeholder-hover
+  }
+}
+
 $spectrum-textfield--focused {
   border-color: $spectrum-color-input-border-focus;
   box-shadow: 0 0 0 1*$px $spectrum-color-input-border-focus;
 }
 
 $spectrum-textfield--disabled {
-  placeholder(color $spectrum-color-input-placeholder-disabled);
+  &::placeholder {
+    color: $spectrum-color-input-placeholder-disabled
+  }
   background-color: $spectrum-color-input-background-disabled;
   border-color: $spectrum-color-input-border-disabled;
   color: $spectrum-color-input-text-disabled;
@@ -25,13 +33,15 @@ $spectrum-textfield--invalid {
 
 
 $spectrum-textfield {
-  placeholder(color $spectrum-color-input-placeholder);
+  &::placeholder {
+    color: $spectrum-color-input-placeholder
+  }
   border-color: $spectrum-color-input-border;
   background-color: $spectrum-color-input-background;
   color: $spectrum-color-input-text;
 
   &:hover {
-    placeholder(color $spectrum-color-input-placeholder-hover);
+    @extends $spectrum-textfield--hovered
   }
   
   &:focus {

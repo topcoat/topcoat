@@ -1,6 +1,12 @@
 @require '../commons'
 
 $spectrum-textfield {
+  &::placeholder {
+    font-weight: normal
+    font-style: italic
+    transition: color
+    $spectrum-transition-time: ease-in-out
+  }
   placeholder(font-weight normal, font-style italic, transition color $spectrum-transition-time ease-in-out);
   -webkit-appearance: none;
   // removes the native spin buttons in firefox. -mox-appearance: none has no effect
@@ -28,13 +34,16 @@ $spectrum-textfield {
 
   transition: border-color $spectrum-transition-time ease-in-out, box-shadow $spectrum-transition-time ease-in-out;
 
-
   &:hover {
-    placeholder(font-weight normal);
+    &::placeholder {
+      font-weight: normal
+    }
   }
 
   &:disabled {
-    placeholder(font-weight normal);
+    &::placeholder {
+      font-weight: normal
+    }
     /* The opacity must be set to 1 */
     -webkit-opacity: 1;
   }
