@@ -1,0 +1,27 @@
+@import '../../base/alert/index.styl'
+
+.coral3-Alert {
+  @extends $spectrum-alert
+}
+
+.coral3-Alert-typeIcon {
+  @extends $spectrum-alert-typeIcon
+}
+
+.coral3-Alert-header {
+  @extends $spectrum-alert-header
+}
+
+.coral3-Alert-content {
+  @extends $spectrum-alert-content
+}
+
+.coral3-Alert-footer {
+  @extends $spectrum-alert-footer
+  .coral-Button {
+    @extends $spectrum-alert-footer-button
+  }
+}
+
+@import 'light.styl'
+@import 'dark.styl'
