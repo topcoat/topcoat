@@ -1,17 +1,6 @@
 @require '../commons'
 
 $spectrum-textfield {
-  font-family: $spectrum-font-base-family;
-  &::placeholder {
-    font-weight: normal;
-    font-style: italic;
-    transition: color $spectrum-transition-time ease-in-out;
-  }
-  -webkit-appearance: none;
-  // removes the native spin buttons in firefox. -mox-appearance: none has no effect
-  // http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
-  -moz-appearance: textfield;
-
   // box
   box-sizing: border-box;
   border: 1*$px solid;
@@ -21,17 +10,29 @@ $spectrum-textfield {
   height: $spectrum-component-single-line-height;
   width: $spectrum-component-single-line-width;
 
-  text-indent: $spectrum-padding;
-
   outline: none;
 
   // text
   normal-text();
   vertical-align: top; // used to align them correctly in forms.
+
+  font-family: $spectrum-font-base-family;
   font-size: $spectrum-font-size;
   line-height: $spectrum-text-body-line-height;
+  text-indent: $spectrum-padding;
 
   transition: border-color $spectrum-transition-time ease-in-out, box-shadow $spectrum-transition-time ease-in-out;
+
+  -webkit-appearance: none;
+  // removes the native spin buttons in firefox. -mox-appearance: none has no effect
+  // http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
+  -moz-appearance: textfield;
+
+  &::placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color $spectrum-transition-time ease-in-out;
+  }
 
   &:hover {
     &::placeholder {
