@@ -2,20 +2,28 @@
   "name": "spectrum",
   "version": "0.1.0",
   "scripts": {
-    "build": "npm run clean && npm run build-coral && npm run postcss && npm run stats",
-    "clean": "rm -rf dist && mkdir dist",
-    "postcss": "postcss --use autoprefixer -c postcss.json -o dist/coral.css dist/coral.css",
-    "build-coral": "stylus -u svg-stylus coral/index.styl -o dist/coral.css && npm run copy-coral-examples",
-    "copy-coral-examples": "cat coral/example.html coral/*/examples/* > dist/coral.example.html",
+    "build": "gulp build",
     "stats": "stylestats dist/coral.css"
   },
   "bin": {
-    "stylestats": "./node_modules/.bin/stylestats",
-    "stylus": "./node_modules/.bin/stylus"
+    "stylestats": "./node_modules/.bin/stylestats"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "postcss-cli": "^2.5.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.0.0",
+    "gulp-git": "^1.7.2",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.4.0",
+    "gulp-util": "^3.0.7",
+    "gulp-wrap": "^0.13.0",
+    "inquirer": "^1.0.3",
+    "run-sequence": "^1.2.1",
+    "semver": "^5.1.0",
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.11",
     "stylestats": "^6.3.0",
     "stylus": "^0.54.5",
