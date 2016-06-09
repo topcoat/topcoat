@@ -12,15 +12,16 @@ $spectrum-textfield--focused {
 }
 
 $spectrum-textfield--disabled {
-  &::placeholder {
-    color: $spectrum-color-input-placeholder-disabled
-  }
   background-color: $spectrum-color-input-background-disabled;
   border-color: $spectrum-color-input-border-disabled;
   color: $spectrum-color-input-text-disabled;
 
   /* For safari mobile browser */
   -webkit-text-fill-color: $spectrum-color-input-text-disabled;
+
+  &::placeholder {
+    color: $spectrum-color-input-placeholder-disabled
+  }
 }
 
 $spectrum-textfield--invalid {
@@ -31,19 +32,19 @@ $spectrum-textfield--invalid {
   }
 }
 
-
 $spectrum-textfield {
-  &::placeholder {
-    color: $spectrum-color-input-placeholder
-  }
   border-color: $spectrum-color-input-border;
   background-color: $spectrum-color-input-background;
   color: $spectrum-color-input-text;
 
+  &::placeholder {
+    color: $spectrum-color-input-placeholder
+  }
+
   &:hover {
     @extends $spectrum-textfield--hovered
   }
-  
+
   &:focus {
     @extends $spectrum-textfield--focused
   }
@@ -56,7 +57,6 @@ $spectrum-textfield {
     @extends $spectrum-textfield--invalid
   }
 }
-
 
 $spectrum-textfield--quiet--focus {
   box-shadow: 0 1*$px 0 $spectrum-color-input-border-focus;
