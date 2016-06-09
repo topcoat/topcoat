@@ -197,7 +197,7 @@ module.exports = function(gulp) {
     }
   });
 
-  gulp.task('gh-pages', ['build', 'zip'], function(cb) {
+  gulp.task('gh-pages', ['build'], function(cb) {
     var package = getPackage();
 
     git.checkout('gh-pages', function(err) {
