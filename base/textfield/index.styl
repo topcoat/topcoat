@@ -10,8 +10,6 @@ $spectrum-textfield {
   height: $spectrum-component-single-line-height;
   width: $spectrum-component-single-line-width;
 
-  outline: none;
-
   // text
   normal-text();
   vertical-align: top; // used to align them correctly in forms.
@@ -23,10 +21,12 @@ $spectrum-textfield {
 
   transition: border-color $spectrum-transition-time ease-in-out, box-shadow $spectrum-transition-time ease-in-out;
 
-  -webkit-appearance: none;
+  outline: none;
+
   // removes the native spin buttons in firefox. -mox-appearance: none has no effect
   // http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
   -moz-appearance: textfield;
+  -webkit-appearance: none;
 
   &::placeholder {
     font-weight: normal;
