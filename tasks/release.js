@@ -12,8 +12,7 @@ module.exports = function(gulp) {
   var runSequence = require('run-sequence').use(gulp);
 
   function getPackage() {
-    // @todo get the project regardless of cwd
-    return JSON.parse(fs.readFileSync('../package.json', 'utf8'));
+    return JSON.parse(fs.readFileSync('package.json', 'utf8'));
   }
 
   gulp.task('do-release', function(cb) {

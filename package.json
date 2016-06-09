@@ -1,6 +1,6 @@
 {
   "name": "spectrum",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "scripts": {
     "build": "gulp build",
     "stats": "stylestats dist/coral.css"
