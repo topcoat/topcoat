@@ -1,0 +1,164 @@
+importComponent('progress')
+
+.coral-Progress {
+  @extends $spectrum-progress
+}
+
+.coral-Progress-bar {
+  @extends $spectrum-progress-bar
+}
+
+.coral-Progress-status {
+  @extends $spectrum-progress-status
+}
+
+.coral-Progress-label {
+  @extends $spectrum-progress-label
+}
+
+.coral-Progress--indeterminate {
+  @extends $spectrum-progress--indeterminate
+
+  .coral-Progress-status {
+    @extends $spectrum-progress--indeterminate-status
+  }
+
+  .coral-Progress-bar {
+    @extends $spectrum-progress--indeterminate-bar
+  }
+}
+
+.coral-Progress--leftLabel {
+  @extends $spectrum-progress--leftLabel
+
+  .coral-Progress-label {
+    @extends $spectrum-progress--leftLabel-label
+  }
+  .coral-Progress-bar {
+    @extends $spectrum-progress--leftLabel-bar
+  }
+}
+
+.coral-Progress--bottomLabel {
+  @extends $spectrum-progress--bottomLabel
+
+  .coral-Progress-label {
+    @extends $spectrum-progress--bottomLabel-label
+  }
+
+  .coral-Progress-bar {
+    @extends $spectrum-progress--bottomLabel-bar
+  }
+}
+
+.coral-Progress--noLabel {
+  @extends $spectrum-progress--noLabel
+
+  .coral-Progress-label {
+    @extends $spectrum-progress--noLabel-label
+  }
+
+  .coral-Progress-bar {
+    @extends $spectrum-progress--noLabel-bar
+  }
+}
+
+.coral-Progress--small {
+  @extends $spectrum-progress--small
+
+  .coral-Progress-label {
+    @extends $spectrum-progress--small-label
+  }
+
+  .coral-Progress-status {
+    @extends $spectrum-progress--small-label
+  }
+
+  .coral-Progress-bar {
+    @extends $spectrum-progress--small-bar
+  }
+
+  &.coral-Progress--bottomLabel {
+    @extends $spectrum-progress--small--bottomLabel
+
+    .coral-Progress-label {
+      @extends $spectrum-progress--small--bottomLabel-label
+    }
+  }
+
+  &.coral-Progress--leftLabel,
+  &.coral-Progress--rightLabel {
+    @extends $spectrum-progress--leftLabel
+
+    // Move the bar to the vertical center
+    .coral-Progress-bar {
+      @extends $spectrum-progress--leftLabel-bar
+    }
+
+    .coral-Progress-label {
+      @extends $spectrum-progress--leftLabel-label
+    }
+  }
+}
+
+.coral-Progress--medium {
+  @extends $spectrum-progress--medium
+  .coral-Progress-bar {
+    @extends $spectrum-progress--medium-bar
+  }
+
+  &.coral-Progress--leftLabel,
+  &.coral-Progress--rightLabel {
+    @extends $spectrum-progress--medium--leftLabel
+
+    // Move the bar to the vertical center
+    .coral-Progress-bar {
+      @extends $spectrum-progress--medium--leftLabel-bar
+    }
+
+    .coral-Progress-label {
+      @extends $spectrum-progress--medium--leftLabel-label
+    }
+  }
+}
+
+.coral-Progress--large {
+  @extends $spectrum-progress--large
+
+  .coral-Progress-label {
+    @extends $spectrum-progress--large-label
+  }
+
+  .coral-Progress-status {
+    @extends $spectrum-progress--large-status
+  }
+
+  .coral-Progress-bar {
+    @extends $spectrum-progress--large-bar
+  }
+
+  &.coral-Progress--bottomLabel {
+    @extends $spectrum-progress--large--bottomLabel
+
+    .coral-Progress-label {
+      @extends $spectrum-progress--large--bottomLabel-label
+    }
+  }
+
+  &.coral-Progress--leftLabel,
+  &.coral-Progress--rightLabel {
+    @extends $spectrum-progress--large--leftLabel
+
+    // Move the bar to the vertical center
+    .coral-Progress-bar {
+      @extends $spectrum-progress--large--leftLabel-bar
+    }
+
+    .coral-Progress-label {
+      @extends $spectrum-progress--large--leftLabel-label
+    }
+  }
+}
+
+@require 'light.styl'
+@require 'dark.styl'
