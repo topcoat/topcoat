@@ -1,0 +1,21 @@
+<button variant="primary" class="coral-Button coral-Button--primary dialog-opener">Open Dialog</button>
+<div class="coral-Dialog" id="defaultDialog">
+  <div class="coral-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="coral-Dialog-header">
+      <div class="coral-Icon coral-Dialog-typeIcon coral-Icon--sizeS" icon="" size="S" handle="icon"></div>
+      <h2 handle="headerContent" class=" coral-Dialog-title coral-Heading coral-Heading--2">
+        <div class="coral-Dialog-header">Default Dialog</div>
+      </h2>
+      <button is="coral-button" class="coral-Button coral-Dialog-closeButton coral-Button--minimal coral-Button--square" size="M" handle="closeButton" type="button" variant="minimal" icon="close" iconsize="XS" aria-label="Close" coral-close="" style="display: none;">
+        <div class="coral-Icon coral-Icon--close coral-Icon--sizeXS" icon="close" size="XS" role="img" aria-label="close"></div>
+        <div class="coral-Button-label"></div>
+      </button>
+    </div>
+    <div class="coral-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="coral-Dialog-footer">
+      <button variant="primary" class="coral-Button coral-Button--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>

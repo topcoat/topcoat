@@ -20,6 +20,14 @@
         switcher.innerHTML = light ? 'Dark' : 'Light';
       }
       setSwitcherInnerHTML();
+  
+      var dialogBtns = document.querySelectorAll('.dialog-opener');
+      for (var i = 0; i < dialogBtns.length; i++) {
+        dialogBtns[i].addEventListener('click', function() {
+          var dialog = this.nextElementSibling;
+          dialog.classList.add('is-open');
+        });
+      }
     };
   </script>
   <style>
