@@ -1,0 +1,61 @@
+.coral-Radio-input {
+  @extends $spectrum-radio-input
+
+  &:checked + .coral-Radio-checkmark {
+    @extends $spectrum-radio--checked-checkmark
+  }
+
+  &:focus + .coral-Radio-checkmark {
+    @extends $spectrum-radio--focus-checkmark
+  }
+
+  &:disabled {
+    @extends $spectrum-radio--disabled-checkmark
+  }
+
+  &:disabled ~ .coral-Radio-description {
+    @extends $spectrum-radio--disabled-description
+  }
+}
+
+.coral-Radio {
+  @extends $spectrum-radio
+
+  .coral-Radio-description {
+    @extends $spectrum-radio-description
+  }
+
+  .coral-Radio-checkmark {
+    @extends $spectrum-radio-checkmark
+  }
+
+  &:hover {
+    .coral-Radio-checkmark {
+      @extends $spectrum-radio-checkmark--hover
+    }
+
+    .coral-Radio-description {
+      @extends $spectrum-radio-description--hover
+    }
+  }
+
+  &:active {
+    .coral-Radio-checkmark {
+      @extends $spectrum-radio-checkmark--active
+    }
+
+    .coral-Radio-description {
+      @extends $spectrum-radio-description--active
+    }
+  }
+
+  &[disabled] {
+    .coral-Radio-checkmark {
+      @extends $spectrum-radio-checkmark--disabled
+    }
+
+    .coral-Radio-description {
+      @extends $spectrum-radio-description--disabled
+    }
+  }
+}

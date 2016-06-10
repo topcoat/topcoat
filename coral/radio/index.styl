@@ -1,0 +1,24 @@
+importComponent('radio')
+
+.coral-Radio {
+  @extends $spectrum-radio
+}
+
+.coral-Radio-input {
+  @extends $spectrum-radio-input
+
+  &:checked + .coral-Radio-checkmark {
+    @extends $spectrum-radio--checked-checkmark
+  }
+}
+
+.coral-Radio-description {
+  @extends $spectrum-radio-description
+}
+
+.coral-Radio-checkmark {
+  @extends $spectrum-radio-checkmark
+}
+
+@import 'light.styl'
+@import 'dark.styl'
