@@ -18,44 +18,45 @@
 .coral-Dialog {
   @extends $spectrum-dialog
 
-  &.coral-Dialog--error {
-    .coral-Dialog-title {
-      @extends $spectrum-dialog-title--error
-    }
+}
 
-    .coral-Dialog-typeIcon {
-      @extends $spectrum-dialog-title--error
-    }
+.coral-Dialog--error {
+  .coral-Dialog-title {
+    @extends $spectrum-dialog-title--error
   }
 
-  &.coral-Dialog--warning {
-    .coral-Dialog-title {
-      @extends $spectrum-dialog-title--warning
-    }
+  .coral-Dialog-typeIcon {
+    @extends $spectrum-dialog-title--error
+  }
+}
 
-    .coral-Dialog-typeIcon {
-      @extends $spectrum-dialog-title--warning
-    }
+.coral-Dialog--warning {
+  .coral-Dialog-title {
+    @extends $spectrum-dialog-title--warning
   }
 
-  &.coral-Dialog--help, &.coral-Dialog--info {
-    .coral-Dialog-title {
-      @extends $spectrum-dialog-title--info
-    }
+  .coral-Dialog-typeIcon {
+    @extends $spectrum-dialog-title--warning
+  }
+}
 
-    .coral-Dialog-typeIcon {
-      @extends $spectrum-dialog-title--info
-    }
+.coral-Dialog--help, &.coral-Dialog--info {
+  .coral-Dialog-title {
+    @extends $spectrum-dialog-title--info
   }
 
-  &.coral-Dialog--success {
-    .coral-Dialog-title {
-      @extends $spectrum-dialog-title--success
-    }
+  .coral-Dialog-typeIcon {
+    @extends $spectrum-dialog-title--info
+  }
+}
 
-    .coral-Dialog-typeIcon {
-      @extends $spectrum-dialog-title--success
-    }
+.coral-Dialog--success {
+  .coral-Dialog-title {
+    @extends $spectrum-dialog-title--success
+  }
+
+  .coral-Dialog-typeIcon {
+    @extends $spectrum-dialog-title--success
   }
 }
 

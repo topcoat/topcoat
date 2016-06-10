@@ -21,14 +21,14 @@
 
 .coral-Dialog-footer {
   @extends $spectrum-dialog-footer
+
+  .coral-Button {
+    @extends $spectrum-dialog-footer-button
+  }
 }
 
 .coral-Dialog-wrapper {
   @extends $spectrum-dialog-wrapper
-}
-
-.coral-Dialog-header {
-  @extends $spectrum-dialog-header
 }
 
 .coral-Dialog-title {
@@ -43,18 +43,6 @@
   @extends $spectrum-dialog-closeButton
 }
 
-.coral-Dialog-content {
-  @extends $spectrum-dialog-content
-}
-
-.coral-Dialog-footer {
-  @extends $spectrum-dialog-footer
-
-  .coral-Button {
-    @extends $spectrum-dialog-footer-button
-  }
-}
-
 .coral-Dialog--fullscreen {
   .coral-Dialog-wrapper {
     @extends $spectrum-dialog--fullscreen-wrapper
@@ -66,10 +54,6 @@
 
   .coral-Dialog-typeIcon {
     @extends $spectrum-dialog--fullscreen-typeIcon
-  }
-
-  .coral-Dialog-footer {
-    @extends $spectrum-dialog--fullscreen-footer
   }
 
   .coral-Dialog-footer,
