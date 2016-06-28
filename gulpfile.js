@@ -32,6 +32,17 @@ gulp.task('build-css', function(cb) {
   );
 });
 
+gulp.task('copy-icons', function() {
+  return gulp.src([
+    'node_modules/spectrum-icons/font/**/*',
+    '!**/*.json',
+    '!**/*.css',
+    '!**/*.styl',
+    '!**/*.html'
+  ])
+    .pipe(gulp.dest('dist/coral/icons/'))
+});
+
 gulp.task('dev', ['build'], function() {
   connect.server({
     root: 'dist',
@@ -61,6 +72,7 @@ gulp.task('build', function(cb) {
     'clean',
     [
       'build-css',
+      'copy-icons',
       'build-examples'
     ],
     cb
