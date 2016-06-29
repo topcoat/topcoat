@@ -3,7 +3,7 @@
   "version": "1.0.0-pre.1",
   "scripts": {
     "build": "gulp build",
-    "stats": "stylestats dist/coral.css"
+    "stats": "stylestats dist/reference/spectrum.css"
   },
   "bin": {
     "stylestats": "./node_modules/.bin/stylestats"

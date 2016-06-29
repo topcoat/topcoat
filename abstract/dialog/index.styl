@@ -94,12 +94,9 @@ $spectrum-dialog-title {
   padding-left: 0;
   padding-right: 15*$px;
 
-  outline: none; // Hide focus outline
+  margin: 0 !important; // Undo margin from heading rules
 
-  &,
-  &:not(:first-child) { // Undo margin from.coral-Heading--2:not(:first-child)
-    margin: 0;
-  }
+  outline: none; // Hide focus outline
 }
 
 $spectrum-dialog-typeIcon {
@@ -140,7 +137,7 @@ $spectrum-dialog-footer {
     clear: both;
   }
 
-  border-radius: 0 0 $coral-dialog-border-radius $coral-dialog-border-radius;
+  border-radius: 0 0 $spectrum-dialog-border-radius $spectrum-dialog-border-radius;
 
   text-align: right; // right align buttons
 

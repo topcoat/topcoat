@@ -1,11 +1,11 @@
-.coral-Radio-input {
+.spectrum-Radio-input {
   @extends $spectrum-radio-input
 
-  &:checked + .coral-Radio-checkmark {
+  &:checked + .spectrum-Radio-checkmark {
     @extends $spectrum-radio--checked-checkmark
   }
 
-  &:focus + .coral-Radio-checkmark {
+  &:focus + .spectrum-Radio-checkmark {
     @extends $spectrum-radio--focus-checkmark
   }
 
@@ -13,48 +13,48 @@
     @extends $spectrum-radio--disabled-checkmark
   }
 
-  &:disabled ~ .coral-Radio-description {
+  &:disabled ~ .spectrum-Radio-description {
     @extends $spectrum-radio--disabled-description
   }
 }
 
-.coral-Radio {
+.spectrum-Radio {
   @extends $spectrum-radio
 
-  .coral-Radio-description {
+  .spectrum-Radio-description {
     @extends $spectrum-radio-description
   }
 
-  .coral-Radio-checkmark {
+  .spectrum-Radio-checkmark {
     @extends $spectrum-radio-checkmark
   }
 
   &:hover {
-    .coral-Radio-checkmark {
+    .spectrum-Radio-checkmark {
       @extends $spectrum-radio-checkmark--hover
     }
 
-    .coral-Radio-description {
+    .spectrum-Radio-description {
       @extends $spectrum-radio-description--hover
     }
   }
 
   &:active {
-    .coral-Radio-checkmark {
+    .spectrum-Radio-checkmark {
       @extends $spectrum-radio-checkmark--active
     }
 
-    .coral-Radio-description {
+    .spectrum-Radio-description {
       @extends $spectrum-radio-description--active
     }
   }
 
   &[disabled] {
-    .coral-Radio-checkmark {
+    .spectrum-Radio-checkmark {
       @extends $spectrum-radio-checkmark--disabled
     }
 
-    .coral-Radio-description {
+    .spectrum-Radio-description {
       @extends $spectrum-radio-description--disabled
     }
   }

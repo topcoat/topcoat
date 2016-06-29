@@ -11,8 +11,8 @@
       var light = true;
       var switcher = document.querySelector('#theme-switcher');
       switcher.addEventListener('click', function() {
-        document.body.classList.remove('coral--'+ (light ? 'light' : 'dark'));
-        document.body.classList.add('coral--'+ (light ? 'dark' : 'light'));
+        document.body.classList.remove('spectrum--'+ (light ? 'light' : 'dark'));
+        document.body.classList.add('spectrum--'+ (light ? 'dark' : 'light'));
         light = !light;
         setSwitcherInnerHTML();
       });
@@ -38,7 +38,7 @@
     }
   </style>
 </head>
-<body class="coral--light">
+<body class="spectrum--light">
   <a id="theme-switcher" href="#"></a>
   <%= contents %>
 </body>

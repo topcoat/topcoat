@@ -2,65 +2,65 @@ importComponent('dialog')
 
 // The full screen container in which the dialog resides
 // Because of this contain, clicks will never fall though when a dialog is visible
-.coral-Dialog {
+.spectrum-Dialog {
   @extends $spectrum-dialog
 }
 
-.coral-Dialog.is-open {
+.spectrum-Dialog.is-open {
   @extends $spectrum-dialog--open
 }
 
-.coral-Dialog-header {
+.spectrum-Dialog-header {
   @extends $spectrum-dialog-header
 }
 
-.coral-Dialog-content {
+.spectrum-Dialog-content {
   @extends $spectrum-dialog-content
 }
 
-.coral-Dialog-footer {
+.spectrum-Dialog-footer {
   @extends $spectrum-dialog-footer
 
-  .coral-Button {
+  .spectrum-Button {
     @extends $spectrum-dialog-footer-button
   }
 }
 
-.coral-Dialog-wrapper {
+.spectrum-Dialog-wrapper {
   @extends $spectrum-dialog-wrapper
 }
 
-.coral-Dialog-title {
+.spectrum-Dialog-title {
   @extends $spectrum-dialog-title
 }
 
-.coral-Dialog-typeIcon {
+.spectrum-Dialog-typeIcon {
   @extends $spectrum-dialog-typeIcon
 }
 
-.coral-Dialog-closeButton {
+.spectrum-Dialog-closeButton {
   @extends $spectrum-dialog-closeButton
 }
 
-.coral-Dialog--fullscreen {
-  .coral-Dialog-wrapper {
+.spectrum-Dialog--fullscreen {
+  .spectrum-Dialog-wrapper {
     @extends $spectrum-dialog--fullscreen-wrapper
   }
 
-  .coral-Dialog-header {
+  .spectrum-Dialog-header {
     @extends $spectrum-dialog--fullscreen-header
   }
 
-  .coral-Dialog-typeIcon {
+  .spectrum-Dialog-typeIcon {
     @extends $spectrum-dialog--fullscreen-typeIcon
   }
 
-  .coral-Dialog-footer,
-  .coral-Dialog-header {
+  .spectrum-Dialog-footer,
+  .spectrum-Dialog-header {
     @extends $spectrum-dialog--fullscreen-footer
   }
 
-  .coral-Dialog-content {
+  .spectrum-Dialog-content {
     @extends $spectrum-dialog--fullscreen-content
   }
 }
