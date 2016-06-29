@@ -4,7 +4,6 @@ module.exports = function(gulp) {
   var svgstylus = require('svg-stylus');
 
   var stylusConfig = {
-    'resolve url': true,
     use: [
       svgstylus()
     ],

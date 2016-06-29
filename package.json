@@ -28,6 +28,6 @@
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
     "stylestats": "^6.3.0",
     "stylus": "^0.54.5",
-    "svg-stylus": "git+https://github.com/Aaronius/svg-stylus.git"
+    "svg-stylus": "git+https://github.com/lazd/svg-stylus.git"
   }
 }

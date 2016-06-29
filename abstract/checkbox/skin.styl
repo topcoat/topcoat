@@ -1,4 +1,4 @@
-$spectrum-checkbox-check-icon-url = 'abstract/checkbox/embed/Check.svg' // Relative to project root?
+$spectrum-checkbox-check-icon-url = 'embed/Check.svg' // Relative to project root?
 
 $spectrum-checkbox-description {
   color: $spectrum-color-input-label;
@@ -8,7 +8,7 @@ $spectrum-checkbox-checkmark {
   border-color: $spectrum-color-switch-border;
 
   &:after {
-    background-image: svgurl($spectrum-checkbox-check-icon-url) svg(path fill $spectrum-color-switch-track);
+    background-image: svgurl(embedurl($spectrum-checkbox-check-icon-url)) svg(path fill $spectrum-color-switch-track);
   }
 }
 
