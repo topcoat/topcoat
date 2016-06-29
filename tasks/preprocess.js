@@ -4,15 +4,19 @@ module.exports = function(gulp) {
   var svgstylus = require('svg-stylus');
 
   var stylusConfig = {
+    'resolve url': true,
     use: [
       svgstylus()
+    ],
+    paths: [
+      'dist/'
     ]
   };
 
-  gulp.task('preprocess', function() {
-    return gulp.src('coral/index.styl')
+  gulp.task('reference-preprocess', function() {
+    return gulp.src('reference/index.styl')
       .pipe(stylus(stylusConfig))
-      .pipe(rename('coral.css'))
-      .pipe(gulp.dest('dist/coral/'));
+      .pipe(rename('spectrum.css'))
+      .pipe(gulp.dest('dist/reference/'));
   });
 };

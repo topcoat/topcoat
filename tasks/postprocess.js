@@ -14,8 +14,8 @@ module.exports = function(gulp) {
     })
   ];
 
-  gulp.task('postprocess', function() {
-    return gulp.src('dist/coral.css')
+  gulp.task('reference-postprocess', function() {
+    return gulp.src('dist/spectrum.css')
       .pipe(postcss(processors))
       .pipe(gulp.dest('dist/'));
   });

@@ -1,0 +1,22 @@
+// The location of the Spectrum Foundation release we're using
+importSkin(component, colorStop) {
+  @import 'palette/styl/'+colorStop+'.styl'
+  @import 'abstract/'+component+'/skin.styl'
+}
+
+importComponent(component) {
+  @import 'abstract/'+component+'/index.styl'
+}
+
+@require 'abstract/commons/'
+
+@require 'page.styl'
+
+@require 'icon'
+@require 'alert'
+@require 'button'
+@require 'checkbox'
+@require 'dialog'
+@require 'progress'
+@require 'radio'
+@require 'textfield'
