@@ -1,12 +1,8 @@
 {
-  "name": "spectrum",
+  "name": "spectrum-css",
   "version": "1.0.0-pre.2",
   "scripts": {
-    "build": "gulp build",
-    "stats": "stylestats dist/reference/spectrum.css"
-  },
-  "bin": {
-    "stylestats": "./node_modules/.bin/stylestats"
+    "build": "gulp build"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -26,7 +22,6 @@
     "semver": "^5.1.0",
     "spectrum-icons": "git+ssh://git@git.corp.adobe.com:Spectrum/icons.git#1.0.0-pre.3",
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-    "stylestats": "^6.3.0",
     "stylus": "^0.54.5",
     "svg-stylus": "git+https://github.com/lazd/svg-stylus.git"
   }
