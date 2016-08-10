@@ -1,6 +1,6 @@
 {
   "name": "topcoat-fonts",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Fonts for use with Topcoat",
   "main": "src/fonts.css",
   "style": "src/fonts.css",
@@ -18,4 +18,8 @@
     "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
   ],
   "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "homepage": "http://topcoat.io"
 }

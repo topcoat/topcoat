@@ -1,0 +1,47 @@
+{
+  "name": "topcoat-theme-desktop-dark",
+  "version": "0.4.1",
+  "description": "Dark desktop theme for Topcoat.",
+  "main": "entry.css",
+  "style": "src/theme-desktop-dark.css",
+  "scripts": {
+    "test": "mocha",
+    "pretest": "npm run build",
+    "build": "postcss --use postcss-import --use postcss-css-variables ./src/theme-desktop-dark.css -o ./css/theme-desktop-dark.css",
+    "lint": "npm run build && csslint css/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kristoferjoseph/theme-desktop-dark.git"
+  },
+  "keywords": [
+    "theme",
+    "desktop",
+    "dark",
+    "topcoat",
+    "css"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "dependencies": {
+    "topcoat-fonts": "0.2.5",
+    "topcoat-variables-dark": "1.0.1",
+    "topcoat-variables-desktop": "1.0.1",
+    "topcoat-variables-shared": "1.0.1"
+  },
+  "devDependencies": {
+    "csslint": "^1.0.2",
+    "mocha": "^3.0.2",
+    "postcss": "^5.1.2",
+    "postcss-cli": "^2.5.2",
+    "postcss-css-variables": "^0.5.1",
+    "postcss-import": "^8.1.2",
+    "postcss-inherit": "^2.0.1"
+  }
+}
