@@ -7,7 +7,7 @@ function read(file) {
 
 describe('Topcoat theme-desktop-dark', function() {
   it('should create expected css file', function() {
-    var actual = read('css/theme-desktop-dark.css');
+    var actual = read('test/results/theme-desktop-dark.css');
     var expected = read('test/expected/theme-desktop-dark.css');
     assert.equal(actual, expected, 'should generate correct css');
   });

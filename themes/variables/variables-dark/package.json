@@ -2,8 +2,7 @@
   "name": "topcoat-variables-dark",
   "version": "1.0.1",
   "description": "Dark variables for theme.",
-  "main": "index.html",
-  "style": "src/variables-dark.css",
+  "style": "src/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

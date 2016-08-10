@@ -7,8 +7,8 @@
   "scripts": {
     "test": "mocha",
     "pretest": "npm run build",
-    "build": "postcss --use postcss-import --use postcss-css-variables ./src/theme-desktop-dark.css -o ./css/theme-desktop-dark.css",
-    "lint": "npm run build && csslint css/*"
+    "build": "postcss --use postcss-import --use postcss-css-variables ./src/theme-desktop-dark.css -o ./test/results/theme-desktop-dark.css",
+    "lint": "npm run build && csslint test/results/"
   },
   "repository": {
     "type": "git",
