@@ -1,6 +1,5 @@
-Topcoat Variables Mobile
-========================
+# Topcoat Mobile Variables
 
-Variables for the mobile theme.
+Mobile variables for theme to use with [Topcoat](http://topcoat.io).
 
-[![NPM](https://nodei.co/npm/topcoat-variables-mobile.png)](https://nodei.co/npm/topcoat-variables-mobile/)
+[![NPM](https://nodei.co/npm/topcoat-variables-mobile.svg)](https://nodei.co/npm/topcoat-variables-mobile/)

@@ -1,21 +1,20 @@
 {
   "name": "topcoat-variables-mobile",
-  "version": "1.0.1",
-  "description": "Variables for mobile theme.",
+  "version": "1.0.2",
+  "description": "Variables for the Topcoat mobile theme.",
   "main": "index.html",
-  "style": "src/variables-mobile.css",
+  "style": "src/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/variables-mobile.git"
+    "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
-    "desktop",
-    "theme",
-    "css",
-    "topcoat"
+    "topcoat",
+    "variables",
+    "light"
   ],
   "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
   "contributors": [
