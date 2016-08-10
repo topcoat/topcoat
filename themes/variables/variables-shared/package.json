@@ -1,15 +1,14 @@
 {
   "name": "topcoat-variables-shared",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared variables for Topcoat theme",
-  "main": "index.html",
-  "style": "src/variables-shared",
+  "style": "src/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/variables-shared.git"
+    "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
     "desktop",
