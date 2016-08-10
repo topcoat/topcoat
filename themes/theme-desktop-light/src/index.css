@@ -1,0 +1,21 @@
+@import "topcoat-variables-shared";
+@import "topcoat-variables-desktop";
+@import "topcoat-variables-light";
+@import "topcoat-fonts";
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family, "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif);
+  font-weight: var(--font-weight);
+  background: var(--background--body);
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
