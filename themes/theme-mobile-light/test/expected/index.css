@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Regular.otf');
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Light.otf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Semibold.otf');
+  font-weight: 600;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  background: hsla(180, 5%, 88%, 1);
+}
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}

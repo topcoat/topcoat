@@ -1,0 +1,46 @@
+{
+  "name": "topcoat-theme-mobile-light",
+  "version": "1.0.0",
+  "description": "Light theme for mobile applications",
+  "style": "src/",
+  "scripts": {
+    "test": "mocha",
+    "pretest": "npm run build",
+    "build": "postcss --use postcss-import --use postcss-css-variables ./src/index.css -o ./test/results/index.css",
+    "lint": "npm run build && csslint test/results/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kristoferjoseph/theme-mobile-light.git"
+  },
+  "keywords": [
+    "topcoat",
+    "theme",
+    "mobile",
+    "light",
+    "css"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kristoferjoseph/theme-mobile-light/issues"
+  },
+  "dependencies": {
+    "topcoat-fonts": "0.2.5",
+    "topcoat-variables-light": "1.0.3",
+    "topcoat-variables-mobile": "1.0.2",
+    "topcoat-variables-shared": "1.0.2"
+  },
+  "devDependencies": {
+    "csslint": "^1.0.2",
+    "mocha": "^3.0.2",
+    "postcss": "^5.1.2",
+    "postcss-cli": "^2.5.2",
+    "postcss-css-variables": "^0.5.1",
+    "postcss-import": "^8.1.2",
+    "postcss-inherit": "^2.0.1"
+  }
+}
