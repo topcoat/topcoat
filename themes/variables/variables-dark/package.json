@@ -1,14 +1,14 @@
 {
   "name": "topcoat-variables-dark",
-  "version": "1.0.1",
-  "description": "Dark variables for theme.",
+  "version": "1.0.4",
+  "description": "Dark variables for Topcoat themes.",
   "style": "src/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/variables-dark.git"
+    "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
     "topcoat",

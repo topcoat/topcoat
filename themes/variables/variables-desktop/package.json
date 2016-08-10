@@ -2,8 +2,7 @@
   "name": "topcoat-variables-desktop",
   "version": "1.0.1",
   "description": "Variables for the Topcoat Desktop theme",
-  "main": "entry.css",
-  "style": "src/variables-desktop.css",
+  "style": "src/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,10 +11,9 @@
     "url": "git://github.com/topcoat/variables-desktop.git"
   },
   "keywords": [
-    "desktop",
-    "theme",
-    "css",
-    "topcoat"
+    "topcoat",
+    "variables",
+    "dark"
   ],
   "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
   "contributors": [
