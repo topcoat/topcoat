@@ -1,8 +1,8 @@
 {
   "name": "topcoat-theme-desktop-dark",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "description": "Dark desktop theme for Topcoat.",
-  "style": "src/index.css",
+  "style": "src/",
   "scripts": {
     "test": "mocha",
     "pretest": "npm run build",
@@ -30,9 +30,9 @@
   },
   "dependencies": {
     "topcoat-fonts": "0.2.5",
-    "topcoat-variables-dark": "1.0.2",
-    "topcoat-variables-desktop": "1.0.1",
-    "topcoat-variables-shared": "1.0.1"
+    "topcoat-variables-dark": "1.0.4",
+    "topcoat-variables-desktop": "1.0.3",
+    "topcoat-variables-shared": "1.0.2"
   },
   "devDependencies": {
     "csslint": "^1.0.2",
