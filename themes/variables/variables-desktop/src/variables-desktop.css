@@ -1,21 +1,3 @@
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
 :root {
   --base-font-size: 12px;
   --font-size: 1rem;
@@ -31,8 +13,8 @@
   --padding--large: 0.28rem 1.16rem;
   --height: 1.313rem;
   --height--large: 1.688rem;
-  --line-height: var(height);
-  --line-height--large: var(height--large);
+  --line-height: var(--height);
+  --line-height--large: var(--height--large);
   --vertical-align: top;
   --size--icon: 0.81406rem;
   --size--icon--large: 1.06344rem;
@@ -43,9 +25,9 @@
   --padding--list-header: 0.3rem 1.6rem;
   --padding--list-item: 1.16rem;
   --font-size--list-header: .9em;
-  --font-weight--list-header: var(font-weight);
+  --font-weight--list-header: var(--font-weight);
   --search-icon: url("../img/search.svg");
-  --background-image--search-input: var(search-icon);
+  --background-image--search-input: var(--search-icon);
   --font-size--textarea: 1rem;
   --padding--container: 1rem;
   --size--checkbox: 1rem;
@@ -83,4 +65,3 @@
   --padding--overlay__title: 0rem 0 1rem;
   --max-width--overlay: 50%;
 }
-

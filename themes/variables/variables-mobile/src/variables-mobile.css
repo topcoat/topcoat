@@ -1,38 +1,20 @@
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
 :root {
   --base-font-size: 16px;
   --font-size: 1rem;
   --font-size--large: 1.3rem;
-  --font-size--header: var(font-size--large);
+  --font-size--header: var(--font-size--large);
   --font-weight: 400;
-  --font-weight--large: var(font-weight);
+  --font-weight--large: var(--font-weight);
   --letter-spacing: 1px;
   --border-radius: 6px;
   --border-radius--large: 30px;
   --border-radius--huge: 40px;
   --padding: 0 1.25rem;
-  --padding--large: var(padding);
+  --padding--large: var(--padding);
   --height: 3rem;
   --height--large: 4.375rem;
-  --line-height: var(height);
-  --line-height--large: var(height--large);
+  --line-height: var(--height);
+  --line-height--large: var(--height--large);
   --vertical-align: top;
   --padding--container: 2rem;
   --size--icon: 1.62rem;
@@ -44,9 +26,9 @@
   --padding--list-header: 4px 20px;
   --padding--list-item: 1.25rem;
   --font-size--list-header: .9em;
-  --font-weight--list-header: var(font-weight);
+  --font-weight--list-header: var(--font-weight);
   --search-icon: url("../img/search.svg");
-  --background-image--search-input: var(search-icon);
+  --background-image--search-input: var(--search-icon);
   --font-size--textarea: 2.5rem;
   --font-size--textarea--large: 3rem;
   --size--checkbox: 2rem;
@@ -80,4 +62,3 @@
   --padding--overlay__title: 0 0 1.2rem;
   --max-width--overlay: 80%;
 }
-

@@ -1,6 +1,6 @@
 {
   "name": "topcoat-variables-mobile",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Variables for mobile theme.",
   "main": "index.html",
   "style": "src/variables-mobile.css",

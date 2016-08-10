@@ -1,6 +1,6 @@
 {
   "name": "topcoat-variables-desktop",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Variables for the Topcoat Desktop theme",
   "main": "entry.css",
   "style": "src/variables-desktop.css",
