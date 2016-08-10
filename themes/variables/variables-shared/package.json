@@ -1,6 +1,6 @@
 {
   "name": "topcoat-variables-shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared variables for Topcoat theme",
   "main": "index.html",
   "style": "src/variables-shared",

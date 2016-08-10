@@ -1,6 +1,6 @@
 {
   "name": "topcoat-variables-light",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Light variables for the default topcoat theme",
   "main": "entry.css",
   "style": "src/variables-light.css",

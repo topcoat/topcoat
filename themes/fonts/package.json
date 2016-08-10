@@ -1,0 +1,21 @@
+{
+  "name": "topcoat-fonts",
+  "version": "0.2.4",
+  "description": "Fonts for use with Topcoat",
+  "main": "src/fonts.css",
+  "style": "src/fonts.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/fonts.git"
+  },
+  "keywords": [
+    "fonts",
+    "topcoat",
+    "css"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
+}

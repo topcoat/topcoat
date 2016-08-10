@@ -1,6 +1,6 @@
 {
   "name": "topcoat-variables-dark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dark variables for theme.",
   "main": "index.html",
   "style": "src/variables-dark.css",
