@@ -1,0 +1,29 @@
+{
+  "name": "topcoat-variables-light",
+  "version": "0.2.6",
+  "description": "Light variables for the default topcoat theme",
+  "main": "entry.css",
+  "style": "src/variables-light.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kristoferjoseph/variables-light.git"
+  },
+  "keywords": [
+    "topcoat",
+    "theme",
+    "variables",
+    "light",
+    "css"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  }
+}

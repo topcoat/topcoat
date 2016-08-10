@@ -1,0 +1,51 @@
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+:root {
+  --font-weight--cta: 500;
+  --overflow: hidden;
+  --radio-offset: -109px;
+  --radio-offset--checked: -74px;
+  --radio-width: 37px;
+  --radio-bgsize: var(radio-width);
+  --radio-height: 31px;
+  --radio-line-height: var(radio-height);
+  --radio-margin: 15px;
+  --overlay-bg-color: rgba(88, 90, 92, 0.7);
+  --overlay-bg-box-shadow: inset 0px 0px 115px 0px #000000;
+  --font-size--textarea--large: 1.3rem;
+  --line-height--large: 1.3rem;
+  --margin: 0;
+  --bar-border-radius  : 12px;
+  --bar-width          : 250px;
+  --bar-height         : 1.25rem;
+  --progress-border-radius: 12px 0 0 12px;
+  --content--switch__label--left: 'ON';
+  --content--switch__label--right: 'OFF';
+  --margin-bottom--switch__toggle: -1px;
+  --margin-top--switch__toggle: -1px;
+  --transition--switch__toggle: margin-left 0.05s ease-in-out;
+  --margin-bottom--switch__toggle: -1px;
+  --margin-top--switch__toggle: -1px;
+  --padding--notification: 0.15em 0.5em 0.2em;
+  --margin--notification: 5px;
+  --border-radius--notification: 2px;
+  --color--notification: #fff;
+  --search-icon: url("../img/search.svg");
+}
+

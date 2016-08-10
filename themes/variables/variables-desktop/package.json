@@ -1,0 +1,28 @@
+{
+  "name": "topcoat-variables-desktop",
+  "version": "0.3.1",
+  "description": "Variables for the Topcoat Desktop theme",
+  "main": "entry.css",
+  "style": "src/variables-desktop.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/variables-desktop.git"
+  },
+  "keywords": [
+    "desktop",
+    "theme",
+    "css",
+    "topcoat"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  }
+}
