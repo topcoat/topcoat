@@ -1,6 +1,6 @@
 {
   "name": "topcoat-variables-desktop",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Variables for the Topcoat Desktop theme",
   "style": "src/",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/variables-desktop.git"
+    "url": "git://github.com/topcoat/topcoat.git"
   },
   "keywords": [
     "topcoat",
