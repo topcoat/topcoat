@@ -1,14 +1,15 @@
 {
   "name": "topcoat-button-base",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Topcoat button base. Reset styles for buttons.",
-  "style": "src/button.css",
+  "main": "css/index.css",
+  "style": "src/",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha test/",
-    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/button.css -o ./css/button.css",
+    "build": "postcss --use postcss-import --use postcss-inherit ./test/fixtures/index.css -o ./css/index.css",
     "pretest": "npm run build"
   },
   "repository": {
@@ -27,7 +28,7 @@
     "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
     "Andrei Oprea <andrei.br92@gmail.com> (http://andreio.net/)"
   ],
-  "license": "Apache2",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/topcoat/topcoat/issues"
   },
@@ -36,12 +37,12 @@
     "topcoat-utils": "^0.4.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "autoprefixer": "^5.2.0",
-    "postcss": "^4.1.11",
-    "postcss-cli": "^1.3.1",
-    "postcss-css-variables": "^0.3.8",
-    "postcss-import": "^5.2.2",
-    "postcss-inherit": "0.0.2"
+    "autoprefixer": "^6.4.0",
+    "mocha": "^3.0.2",
+    "postcss": "^5.1.2",
+    "postcss-cli": "^2.5.2",
+    "postcss-css-variables": "^0.5.1",
+    "postcss-import": "^8.1.2",
+    "postcss-inherit": "^2.0.2"
   }
 }

@@ -9,8 +9,9 @@ describe('Topcoat Button Base', function() {
     'use strict';
 
     it('should create expected css file', function() {
-        var actual = read('css/button.css').trim();
-        var expected = read('test/expected/button.css').trim();
+        console.log(require('../package.json').name)
+        var actual = read('css/index.css').trim();
+        var expected = read('test/expected/index.css').trim();
         assert.equal(actual, expected, 'should generate correct css');
     });
 
