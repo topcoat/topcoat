@@ -1,18 +1,18 @@
-importComponent('button')
+@import 'abstract/button/index.styl'
 
 .spectrum-Button {
-  @extends $spectrum-button
+  spectrum-button()
 
   .spectrum-Icon {
-    @extends $spectrum-button-icon
+    spectrum-button-icon()
   }
 }
 
 .spectrum-Button--square {
-  @extends $spectrum-button--square
+  spectrum-button--square()
 
   .spectrum-Icon {
-    @extends $spectrum-button--square-icon
+    spectrum-button--square-icon()
   }
 }
 

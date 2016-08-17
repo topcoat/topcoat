@@ -1,27 +1,27 @@
-importComponent('checkbox')
+@import 'abstract/checkbox/index.styl'
 
 .spectrum-Checkbox {
-  @extends $spectrum-checkbox
+  spectrum-checkbox()
 }
 
 .spectrum-Checkbox-checkmark {
-  @extends $spectrum-checkbox-checkmark
+  spectrum-checkbox-checkmark()
 }
 
 .spectrum-Checkbox-input {
-  @extends $spectrum-checkbox-input
+  spectrum-checkbox-input()
 
   &:checked + .spectrum-Checkbox-checkmark {
-    @extends $spectrum-checkbox--checked-checkmark
+    spectrum-checkbox--checked-checkmark()
   }
 }
 
 .spectrum-Checkbox[indeterminate] .spectrum-Checkbox-checkmark {
-  @extends $spectrum-checkbox--indeterminate-checkmark
+  spectrum-checkbox--indeterminate-checkmark()
 }
 
 .spectrum-Checkbox-description {
-  @extends $spectrum-checkbox-description
+  spectrum-checkbox-description()
 }
 
 @import 'light.styl'

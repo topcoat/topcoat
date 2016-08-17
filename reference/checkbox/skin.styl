@@ -1,42 +1,42 @@
 .spectrum-Checkbox-description {
-  @extend $spectrum-checkbox-description
+  spectrum-checkbox-description()
 }
 
 .spectrum-Checkbox-checkmark {
-  @extend $spectrum-checkbox-checkmark
+  spectrum-checkbox-checkmark()
 }
 
 .spectrum-Checkbox-input {
   &:checked + .spectrum-Radio-checkmark {
-    @extend $spectrum-checkbox--checked-checkmark;
+    spectrum-checkbox--checked-checkmark()
   }
 
   &:focus + .spectrum-Checkbox-checkmark {
-    @extend $spectrum-checkbox--focus-checkmark;
+    spectrum-checkbox--focus-checkmark()
   }
 }
 
 .spectrum-Checkbox {
   &:hover {
     .spectrum-Checkbox-checkmark {
-      @extend $spectrum-checkbox--hover-checkmark;
+      spectrum-checkbox--hover-checkmark()
     }
   }
 
   &:active {
     .spectrum-Checkbox-checkmark {
-      @extend $spectrum-checkbox--active-checkmark;
+      spectrum-checkbox--active-checkmark()
     }
   }
 
   &:disabled,
   &.is-disabled {
     .spectrum-Checkbox-checkmark {
-      @extend $spectrum-checkbox--disabled-checkmark;
+      spectrum-checkbox--disabled-checkmark()
     }
 
     .spectrum-Checkbox-description {
-      @extend $spectrum-checkbox--disabled-description;
+      spectrum-checkbox--disabled-description()
     }
   }
 }

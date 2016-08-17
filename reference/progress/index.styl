@@ -1,161 +1,161 @@
-importComponent('progress')
+@import 'abstract/progress/index.styl'
 
 .spectrum-Progress {
-  @extends $spectrum-progress
+  spectrum-progress()
 }
 
 .spectrum-Progress-bar {
-  @extends $spectrum-progress-bar
+  spectrum-progress-bar()
 }
 
 .spectrum-Progress-status {
-  @extends $spectrum-progress-status
+  spectrum-progress-status()
 }
 
 .spectrum-Progress-label {
-  @extends $spectrum-progress-label
+  spectrum-progress-label()
 }
 
 .spectrum-Progress--indeterminate {
-  @extends $spectrum-progress--indeterminate
+  spectrum-progress--indeterminate()
 
   .spectrum-Progress-status {
-    @extends $spectrum-progress--indeterminate-status
+    spectrum-progress--indeterminate-status()
   }
 
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--indeterminate-bar
+    spectrum-progress--indeterminate-bar()
   }
 }
 
 .spectrum-Progress--leftLabel {
-  @extends $spectrum-progress--leftLabel
+  spectrum-progress--leftLabel()
 
   .spectrum-Progress-label {
-    @extends $spectrum-progress--leftLabel-label
+    spectrum-progress--leftLabel-label()
   }
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--leftLabel-bar
+    spectrum-progress--leftLabel-bar()
   }
 }
 
 .spectrum-Progress--bottomLabel {
-  @extends $spectrum-progress--bottomLabel
+  spectrum-progress--bottomLabel()
 
   .spectrum-Progress-label {
-    @extends $spectrum-progress--bottomLabel-label
+    spectrum-progress--bottomLabel-label()
   }
 
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--bottomLabel-bar
+    spectrum-progress--bottomLabel-bar()
   }
 }
 
 .spectrum-Progress--noLabel {
-  @extends $spectrum-progress--noLabel
+  spectrum-progress--noLabel()
 
   .spectrum-Progress-label {
-    @extends $spectrum-progress--noLabel-label
+    spectrum-progress--noLabel-label()
   }
 
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--noLabel-bar
+    spectrum-progress--noLabel-bar()
   }
 }
 
 .spectrum-Progress--small {
-  @extends $spectrum-progress--small
+  spectrum-progress--small()
 
   .spectrum-Progress-label {
-    @extends $spectrum-progress--small-label
+    spectrum-progress--small-label()
   }
 
   .spectrum-Progress-status {
-    @extends $spectrum-progress--small-label
+    spectrum-progress--small-label()
   }
 
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--small-bar
+    spectrum-progress--small-bar()
   }
 
   &.spectrum-Progress--bottomLabel {
-    @extends $spectrum-progress--small--bottomLabel
+    spectrum-progress--small--bottomLabel()
 
     .spectrum-Progress-label {
-      @extends $spectrum-progress--small--bottomLabel-label
+      spectrum-progress--small--bottomLabel-label()
     }
   }
 
   &.spectrum-Progress--leftLabel,
   &.spectrum-Progress--rightLabel {
-    @extends $spectrum-progress--leftLabel
+    spectrum-progress--leftLabel()
 
     // Move the bar to the vertical center
     .spectrum-Progress-bar {
-      @extends $spectrum-progress--leftLabel-bar
+      spectrum-progress--leftLabel-bar()
     }
 
     .spectrum-Progress-label {
-      @extends $spectrum-progress--leftLabel-label
+      spectrum-progress--leftLabel-label()
     }
   }
 }
 
 .spectrum-Progress--medium {
-  @extends $spectrum-progress--medium
+  spectrum-progress--medium()
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--medium-bar
+    spectrum-progress--medium-bar()
   }
 
   &.spectrum-Progress--leftLabel,
   &.spectrum-Progress--rightLabel {
-    @extends $spectrum-progress--medium--leftLabel
+    spectrum-progress--medium--leftLabel()
 
     // Move the bar to the vertical center
     .spectrum-Progress-bar {
-      @extends $spectrum-progress--medium--leftLabel-bar
+      spectrum-progress--medium--leftLabel-bar()
     }
 
     .spectrum-Progress-label {
-      @extends $spectrum-progress--medium--leftLabel-label
+      spectrum-progress--medium--leftLabel-label()
     }
   }
 }
 
 .spectrum-Progress--large {
-  @extends $spectrum-progress--large
+  spectrum-progress--large()
 
   .spectrum-Progress-label {
-    @extends $spectrum-progress--large-label
+    spectrum-progress--large-label()
   }
 
   .spectrum-Progress-status {
-    @extends $spectrum-progress--large-status
+    spectrum-progress--large-status()
   }
 
   .spectrum-Progress-bar {
-    @extends $spectrum-progress--large-bar
+    spectrum-progress--large-bar()
   }
 
   &.spectrum-Progress--bottomLabel {
-    @extends $spectrum-progress--large--bottomLabel
+    spectrum-progress--large--bottomLabel()
 
     .spectrum-Progress-label {
-      @extends $spectrum-progress--large--bottomLabel-label
+      spectrum-progress--large--bottomLabel-label()
     }
   }
 
   &.spectrum-Progress--leftLabel,
   &.spectrum-Progress--rightLabel {
-    @extends $spectrum-progress--large--leftLabel
+    spectrum-progress--large--leftLabel()
 
     // Move the bar to the vertical center
     .spectrum-Progress-bar {
-      @extends $spectrum-progress--large--leftLabel-bar
+      spectrum-progress--large--leftLabel-bar()
     }
 
     .spectrum-Progress-label {
-      @extends $spectrum-progress--large--leftLabel-label
+      spectrum-progress--large--leftLabel-label()
     }
   }
 }

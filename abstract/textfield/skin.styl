@@ -1,17 +1,17 @@
 @require '../commons'
 
-$spectrum-textfield--hovered {
+spectrum-textfield--hovered() {
   &::placeholder {
     color: $spectrum-color-input-placeholder-hover
   }
 }
 
-$spectrum-textfield--focused {
+spectrum-textfield--focused() {
   border-color: $spectrum-color-input-border-focus;
   box-shadow: 0 0 0 1*$px $spectrum-color-input-border-focus;
 }
 
-$spectrum-textfield--disabled {
+spectrum-textfield--disabled() {
   background-color: $spectrum-color-input-background-disabled;
   border-color: $spectrum-color-input-border-disabled;
   color: $spectrum-color-input-text-disabled;
@@ -24,7 +24,7 @@ $spectrum-textfield--disabled {
   }
 }
 
-$spectrum-textfield--invalid {
+spectrum-textfield--invalid() {
   border-color: $spectrum-color-input-border-invalid;
 
   &:focus { /* might break things due to pre-defined focus */
@@ -32,7 +32,7 @@ $spectrum-textfield--invalid {
   }
 }
 
-$spectrum-textfield {
+spectrum-textfield() {
   border-color: $spectrum-color-input-border;
   background-color: $spectrum-color-input-background;
   color: $spectrum-color-input-text;
@@ -42,32 +42,32 @@ $spectrum-textfield {
   }
 
   &:hover {
-    @extends $spectrum-textfield--hovered
+    spectrum-textfield--hovered()
   }
 
   &:focus {
-    @extends $spectrum-textfield--focused
+    spectrum-textfield--focused()
   }
 
   &:disabled {
-    @extends $spectrum-textfield--disabled
+    spectrum-textfield--disabled()
   }
 
   &:invalid {
-    @extends $spectrum-textfield--invalid
+    spectrum-textfield--invalid()
   }
 }
 
-$spectrum-textfield--quiet--focus {
+spectrum-textfield--quiet--focus() {
   box-shadow: 0 1*$px 0 $spectrum-color-input-border-focus;
 }
 
-$spectrum-textfield--quiet--disabled {
+spectrum-textfield--quiet--disabled() {
   border-color:  $spectrum-color-input-border-disabled-quiet;
   background-color: transparent;
 }
 
-$spectrum-textfield--quiet--invalid {
+spectrum-textfield--quiet--invalid() {
   border-color: $spectrum-color-input-border-invalid;
 
   &:focus {
@@ -75,20 +75,20 @@ $spectrum-textfield--quiet--invalid {
   }
 }
 
-$spectrum-textfield--quiet {
+spectrum-textfield--quiet() {
   background-color: transparent;
   border-color: $spectrum-color-input-border;
   color: $spectrum-color-input-text;
 
   &:focus {
-    @extends $spectrum-textfield--quiet--focus
+    spectrum-textfield--quiet--focus()
   }
 
   &:disabled {
-    @extends $spectrum-textfield--quiet--disabled
+    spectrum-textfield--quiet--disabled()
   }
 
   &:invalid {
-    @extends $spectrum-textfield--quiet--invalid
+    spectrum-textfield--quiet--invalid()
   }
 }

@@ -1,67 +1,67 @@
-importComponent('dialog')
+@import 'abstract/dialog/index.styl'
 
 // The full screen container in which the dialog resides
 // Because of this contain, clicks will never fall though when a dialog is visible
 .spectrum-Dialog {
-  @extends $spectrum-dialog
+  spectrum-dialog()
 }
 
 .spectrum-Dialog.is-open {
-  @extends $spectrum-dialog--open
+  spectrum-dialog--open()
 }
 
 .spectrum-Dialog-header {
-  @extends $spectrum-dialog-header
+  spectrum-dialog-header()
 }
 
 .spectrum-Dialog-content {
-  @extends $spectrum-dialog-content
+  spectrum-dialog-content()
 }
 
 .spectrum-Dialog-footer {
-  @extends $spectrum-dialog-footer
+  spectrum-dialog-footer()
 
   .spectrum-Button {
-    @extends $spectrum-dialog-footer-button
+    spectrum-dialog-footer-button()
   }
 }
 
 .spectrum-Dialog-wrapper {
-  @extends $spectrum-dialog-wrapper
+  spectrum-dialog-wrapper()
 }
 
 .spectrum-Dialog-title {
-  @extends $spectrum-dialog-title
+  spectrum-dialog-title()
 }
 
 .spectrum-Dialog-typeIcon {
-  @extends $spectrum-dialog-typeIcon
+  spectrum-dialog-typeIcon()
 }
 
 .spectrum-Dialog-closeButton {
-  @extends $spectrum-dialog-closeButton
+  spectrum-dialog-closeButton()
 }
 
 .spectrum-Dialog--fullscreen {
   .spectrum-Dialog-wrapper {
-    @extends $spectrum-dialog--fullscreen-wrapper
+    spectrum-dialog--fullscreen-wrapper()
   }
 
   .spectrum-Dialog-header {
-    @extends $spectrum-dialog--fullscreen-header
+    spectrum-dialog--fullscreen-header()
   }
 
   .spectrum-Dialog-typeIcon {
-    @extends $spectrum-dialog--fullscreen-typeIcon
+    spectrum-dialog--fullscreen-typeIcon()
   }
 
   .spectrum-Dialog-footer,
   .spectrum-Dialog-header {
-    @extends $spectrum-dialog--fullscreen-footer
+    spectrum-dialog--fullscreen-footer()
   }
 
   .spectrum-Dialog-content {
-    @extends $spectrum-dialog--fullscreen-content
+    spectrum-dialog--fullscreen-content()
   }
 }
 

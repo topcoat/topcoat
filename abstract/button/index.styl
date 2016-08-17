@@ -4,7 +4,7 @@ $spectrum-button-radius = 16*$px
 $spectrum-button-height = 32*$px
 $spectrum-button-border = 2*$px
 
-$spectrum-button {
+spectrum-button() {
   display: inline-block;
   box-sizing: border-box;
 
@@ -60,15 +60,15 @@ $spectrum-button {
 }
 
 // Icon text should be aligned correctly
-$spectrum-button-icon {
+spectrum-button-icon() {
   vertical-align: top;
   margin-right: 5*$px;
 }
 
-$spectrum-button--square {
+spectrum-button--square() {
 }
 
-$spectrum-button--square-icon {
+spectrum-button--square-icon() {
   // CUI-5646 Remove margin when square
   margin-right: 0;
 }

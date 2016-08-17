@@ -4,7 +4,7 @@ $spectrum-alert-header-height = 38*$px;
 $spectrum-alert-corner-radius = 3*$px;
 $spectrum-alert-icon-left-spacing = 0;
 
-$spectrum-alert {
+spectrum-alert() {
   position: relative;
 
   display: inline-block;
@@ -19,7 +19,7 @@ $spectrum-alert {
   border-radius: $spectrum-alert-corner-radius;
 }
 
-$spectrum-alert-typeIcon {
+spectrum-alert-typeIcon() {
   position: absolute;
   top: 12*$px;
   right: 12*$px;
@@ -33,7 +33,7 @@ $spectrum-alert-typeIcon {
   opacity: 1 !important;
 }
 
-$spectrum-alert-header {
+spectrum-alert-header() {
   display: inline-block;
   height: auto;
   min-height: 0;
@@ -47,7 +47,7 @@ $spectrum-alert-header {
   text-transform: none;
 }
 
-$spectrum-alert-content {
+spectrum-alert-content() {
   display: block;
   margin: (22*$px) 0 0 0;
   padding: 0;
@@ -56,7 +56,7 @@ $spectrum-alert-content {
   word-wrap: break-word;
 }
 
-$spectrum-alert-footer {
+spectrum-alert-footer() {
   display: block;
 
   text-align: right;
@@ -68,7 +68,7 @@ $spectrum-alert-footer {
   }
 }
 
-$spectrum-alert-footer-button {
+spectrum-alert-footer-button() {
   margin-right: 0;
 
   // Spacing between buttons

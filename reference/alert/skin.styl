@@ -1,31 +1,39 @@
-.spectrum-Alert--error {
-  @extends $spectrum-alert--error
+.spectrum-Alert {
+  spectrum-alert()
 
   .spectrum-Alert-typeIcon {
-    @extends $spectrum-alert-typeIcon--error
+    spectrum-alert-typeIcon()
+  }
+}
+
+.spectrum-Alert--error {
+  spectrum-alert--error()
+
+  .spectrum-Alert-typeIcon {
+    spectrum-alert-typeIcon--error()
   }
 }
 
 .spectrum-Alert--success {
-  @extends $spectrum-alert--success
+  spectrum-alert--success()
 
   .spectrum-Alert-typeIcon {
-    @extends $spectrum-alert-typeIcon--success
+    spectrum-alert-typeIcon--success()
   }
 }
 
 .spectrum-Alert--warning {
-  @extends $spectrum-alert--warning
+  spectrum-alert--warning()
 
   .spectrum-Alert-typeIcon {
-    @extends $spectrum-alert-typeIcon--warning
+    spectrum-alert-typeIcon--warning()
   }
 }
 
 .spectrum-Alert-header {
-  @extends $spectrum-alert-header
+  spectrum-alert-header()
 }
 
 .spectrum-Alert-content {
-  @extends $spectrum-alert-content
+  spectrum-alert-content()
 }

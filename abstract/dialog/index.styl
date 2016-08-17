@@ -15,7 +15,7 @@ $spectrum-dialog-closebutton-height = 18*$px;
 
 // The full screen container in which the dialog resides
 // Because of this contain, clicks will never fall though when a dialog is visible
-$spectrum-dialog {
+spectrum-dialog() {
   position: fixed;
   top: 0;
   right: 0
@@ -33,25 +33,25 @@ $spectrum-dialog {
   opacity: 0;
 }
 
-$spectrum-dialog--open {
+spectrum-dialog--open() {
   display: block;
 
   opacity: 1;
 }
 
-$spectrum-dialog-header {
+spectrum-dialog-header() {
   display: block;
 }
 
-$spectrum-dialog-content {
+spectrum-dialog-content() {
   display: block;
 }
 
-$spectrum-dialog-footer {
+spectrum-dialog-footer() {
   display: block;
 }
 
-$spectrum-dialog-wrapper {
+spectrum-dialog-wrapper() {
   display: block;
 
   min-width: $spectrum-dialog-min-width;
@@ -63,7 +63,7 @@ $spectrum-dialog-wrapper {
   outline: none; // Firefox shows outline
 }
 
-$spectrum-dialog-header {
+spectrum-dialog-header() {
   position: relative;
 
   box-sizing: border-box;
@@ -85,7 +85,7 @@ $spectrum-dialog-header {
   }
 }
 
-$spectrum-dialog-title {
+spectrum-dialog-title() {
   font-size: $spectrum-dialog-header-font-size;
   line-height: 100%;
 
@@ -99,13 +99,13 @@ $spectrum-dialog-title {
   outline: none; // Hide focus outline
 }
 
-$spectrum-dialog-typeIcon {
+spectrum-dialog-typeIcon() {
   position: absolute;
   right: 0;
   top: -2*$px;
 }
 
-$spectrum-dialog-closeButton {
+spectrum-dialog-closeButton() {
   line-height: $spectrum-dialog-closebutton-height;
 
   position: absolute;
@@ -118,7 +118,7 @@ $spectrum-dialog-closeButton {
   height: $spectrum-dialog-closebutton-height;
 }
 
-$spectrum-dialog-content {
+spectrum-dialog-content() {
   display: block;
   box-sizing: border-box;
   padding: 0;
@@ -128,7 +128,7 @@ $spectrum-dialog-content {
   outline: none; // Hide focus outline
 }
 
-$spectrum-dialog-footer {
+spectrum-dialog-footer() {
   &:after {
     content: " "; /* Older browser do not support empty content */
     visibility: hidden;
@@ -144,7 +144,7 @@ $spectrum-dialog-footer {
   outline: none; // Hide focus outline
 }
 
-$spectrum-dialog-footer-button {
+spectrum-dialog-footer-button() {
   margin: 16*$px 12*$px 0 0;
 
   &:last-child {
@@ -152,7 +152,7 @@ $spectrum-dialog-footer-button {
   }
 }
 
-$spectrum-dialog--fullscreen-wrapper {
+spectrum-dialog--fullscreen-wrapper() {
   position: absolute;
   top: 0;
   right: auto;
@@ -171,7 +171,7 @@ $spectrum-dialog--fullscreen-wrapper {
   border: none; // Remove border
 }
 
-$spectrum-dialog--fullscreen-header {
+spectrum-dialog--fullscreen-header() {
   position: fixed; // Fixed so the header stays top even it scrolls.
   top: 0;
   right: $spectrum-dialog-padding;
@@ -182,11 +182,11 @@ $spectrum-dialog--fullscreen-header {
   padding-top: $spectrum-dialog-padding;
 }
 
-$spectrum-dialog--fullscreen-typeIcon {
+spectrum-dialog--fullscreen-typeIcon() {
   top: $spectrum-dialog-padding - 2*$px;
 }
 
-$spectrum-dialog--fullscreen-footer {
+spectrum-dialog--fullscreen-footer() {
   position: fixed; // Fixed so the footer stays bottom even it scrolls.
   right: $spectrum-dialog-padding;
   bottom: 0;
@@ -196,17 +196,17 @@ $spectrum-dialog--fullscreen-footer {
   padding-bottom: ($spectrum-dialog-padding/2); // looks better with half padding.
 }
 
-$spectrum-dialog--fullscreen-footer {
+spectrum-dialog--fullscreen-footer() {
   // Fix a relatively nasty Chrome bug involving nested position: fixed elements
   // https://code.google.com/p/chromium/issues/detail?id=178651
   transform: translate3d(0,0,0);
 }
-$spectrum-dialog--fullscreen-header {
+spectrum-dialog--fullscreen-header() {
   // Fix a relatively nasty Chrome bug involving nested position: fixed elements
   // https://code.google.com/p/chromium/issues/detail?id=178651
   transform: translate3d(0,0,0);
 }
 
-$spectrum-dialog--fullscreen-content {
+spectrum-dialog--fullscreen-content() {
   padding-top: $spectrum-dialog-header-height;
 }

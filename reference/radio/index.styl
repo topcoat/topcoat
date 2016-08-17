@@ -1,23 +1,23 @@
-importComponent('radio')
+@import 'abstract/radio/index.styl'
 
 .spectrum-Radio {
-  @extends $spectrum-radio
+  spectrum-radio()
 }
 
 .spectrum-Radio-input {
-  @extends $spectrum-radio-input
+  spectrum-radio-input()
 
   &:checked + .spectrum-Radio-checkmark {
-    @extends $spectrum-radio--checked-checkmark
+    spectrum-radio--checked-checkmark()
   }
 }
 
 .spectrum-Radio-description {
-  @extends $spectrum-radio-description
+  spectrum-radio-description()
 }
 
 .spectrum-Radio-checkmark {
-  @extends $spectrum-radio-checkmark
+  spectrum-radio-checkmark()
 }
 
 @import 'light.styl'

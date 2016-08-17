@@ -3,7 +3,7 @@
 $spectrum-radio-diameter = 12*$px;
 $spectrum-radio-radius = 6*$px;
 
-$spectrum-radio {
+spectrum-radio() {
   display: inline-block;
   position: relative;
 
@@ -12,7 +12,7 @@ $spectrum-radio {
   font-size: 0;
 }
 
-$spectrum-radio-input {
+spectrum-radio-input() {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -24,11 +24,11 @@ $spectrum-radio-input {
   cursor: pointer;
 }
 
-$spectrum-radio--checked-checkmark {
+spectrum-radio--checked-checkmark() {
   border-width: 6*$px;
 }
 
-$spectrum-radio-description {
+spectrum-radio-description() {
   margin: 0 8*$px;
 
   font-size: $spectrum-font-size;
@@ -38,7 +38,7 @@ $spectrum-radio-description {
   transition: color 150ms ease-in-out;
 }
 
-$spectrum-radio-checkmark {
+spectrum-radio-checkmark() {
   display: inline-block;
   box-sizing: border-box;
   width: $spectrum-radio-diameter;

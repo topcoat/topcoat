@@ -1,26 +1,26 @@
-importComponent('alert')
+@import 'abstract/alert/index.styl'
 
 .spectrum-Alert {
-  @extends $spectrum-alert
+  spectrum-alert()
 }
 
 .spectrum-Alert-typeIcon {
-  @extends $spectrum-alert-typeIcon
+  spectrum-alert-typeIcon()
 }
 
 .spectrum-Alert-header {
-  @extends $spectrum-alert-header
+  spectrum-alert-header()
 }
 
 .spectrum-Alert-content {
-  @extends $spectrum-alert-content
+  spectrum-alert-content()
 }
 
 .spectrum-Alert-footer {
-  @extends $spectrum-alert-footer
+  spectrum-alert-footer()
 
   .spectrum-Button {
-    @extends $spectrum-alert-footer-button
+    spectrum-alert-footer-button()
   }
 }
 

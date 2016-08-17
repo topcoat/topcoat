@@ -1,61 +1,61 @@
 .spectrum-Radio-input {
-  @extends $spectrum-radio-input
+  spectrum-radio-input()
 
   &:checked + .spectrum-Radio-checkmark {
-    @extends $spectrum-radio--checked-checkmark
+    spectrum-radio--checked-checkmark()
   }
 
   &:focus + .spectrum-Radio-checkmark {
-    @extends $spectrum-radio--focus-checkmark
+    spectrum-radio--focus-checkmark()
   }
 
   &:disabled {
-    @extends $spectrum-radio--disabled-checkmark
+    spectrum-radio--disabled-checkmark()
   }
 
   &:disabled ~ .spectrum-Radio-description {
-    @extends $spectrum-radio--disabled-description
+    spectrum-radio--disabled-description()
   }
 }
 
 .spectrum-Radio {
-  @extends $spectrum-radio
+  spectrum-radio()
 
   .spectrum-Radio-description {
-    @extends $spectrum-radio-description
+    spectrum-radio-description()
   }
 
   .spectrum-Radio-checkmark {
-    @extends $spectrum-radio-checkmark
+    spectrum-radio-checkmark()
   }
 
   &:hover {
     .spectrum-Radio-checkmark {
-      @extends $spectrum-radio-checkmark--hover
+      spectrum-radio-checkmark--hover()
     }
 
     .spectrum-Radio-description {
-      @extends $spectrum-radio-description--hover
+      spectrum-radio-description--hover()
     }
   }
 
   &:active {
     .spectrum-Radio-checkmark {
-      @extends $spectrum-radio-checkmark--active
+      spectrum-radio-checkmark--active()
     }
 
     .spectrum-Radio-description {
-      @extends $spectrum-radio-description--active
+      spectrum-radio-description--active()
     }
   }
 
   &[disabled] {
     .spectrum-Radio-checkmark {
-      @extends $spectrum-radio-checkmark--disabled
+      spectrum-radio-checkmark--disabled()
     }
 
     .spectrum-Radio-description {
-      @extends $spectrum-radio-description--disabled
+      spectrum-radio-description--disabled()
     }
   }
 }
