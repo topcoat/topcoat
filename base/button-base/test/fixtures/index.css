@@ -1,0 +1,13 @@
+@import "../../src/";
+
+.button {
+  extend: %button;
+}
+
+.button--quiet {
+  extend: %button--quiet;
+}
+
+.button--disabled {
+  extend: %button--disabled;
+}

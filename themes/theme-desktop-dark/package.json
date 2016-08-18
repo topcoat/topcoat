@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "pretest": "npm run build",
-    "build": "postcss --use postcss-import --use postcss-css-variables ./src/index.css -o ./test/results/index.css",
+    "build": "postcss --use postcss-import ./src/index.css -o ./test/results/index.css",
     "lint": "npm run build && csslint test/results/"
   },
   "repository": {
