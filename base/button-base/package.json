@@ -1,6 +1,6 @@
 {
   "name": "topcoat-button-base",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Topcoat button base. Reset styles for buttons.",
   "style": "src/",
   "directories": {

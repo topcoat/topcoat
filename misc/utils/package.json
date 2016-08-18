@@ -1,0 +1,22 @@
+{
+  "name": "topcoat-utils",
+  "version": "0.4.1",
+  "description": "Utils for Topcoat",
+  "style": "src/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topcoat/topcoat.git"
+  },
+  "keywords": [
+    "utils",
+    "topcoat"
+  ],
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  }
+}
