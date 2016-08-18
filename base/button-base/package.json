@@ -1,6 +1,6 @@
 {
   "name": "topcoat-button-base",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "Topcoat button base. Reset styles for buttons.",
   "style": "src/",
   "directories": {
@@ -33,7 +33,7 @@
   },
   "homepage": "http://topcoat.io",
   "dependencies": {
-    "topcoat-utils": "^0.4.0"
+    "topcoat-utils": "^0.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
