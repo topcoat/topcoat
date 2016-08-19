@@ -20,7 +20,7 @@
     "inquirer": "^1.0.3",
     "run-sequence": "^1.2.1",
     "semver": "^5.1.0",
-    "spectrum-icons": "git+ssh://git@git.corp.adobe.com:Spectrum/icons.git#1.0.0-pre.3",
+    "spectrum-icons": "git+ssh://git@git.corp.adobe.com:Spectrum/icons.git#1.0.0-pre.4",
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
     "stylus": "^0.54.5",
     "svg-stylus": "git+https://github.com/lazd/svg-stylus.git"
