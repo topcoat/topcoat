@@ -1,6 +1,6 @@
 {
   "name": "spectrum-css",
-  "version": "1.0.0-pre.7",
+  "version": "1.0.0",
   "scripts": {
     "build": "gulp build"
   },
