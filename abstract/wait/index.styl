@@ -1,0 +1,121 @@
+/*
+ * ADOBE CONFIDENTIAL
+ *
+ * Copyright 2016 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+@require '../commons'
+@require 'animation'
+
+$spectrum-wait-small-height = 16*$px
+$spectrum-wait-small-width = 16*$px
+$spectrum-wait-medium-height = 32*$px
+$spectrum-wait-medium-width = 32*$px
+$spectrum-wait-large-height = 64*$px
+$spectrum-wait-large-width = 64*$px
+
+$spectrum-wait-dots-small-height = 24*$px
+$spectrum-wait-dots-small-width = 24*$px
+$spectrum-wait-dots-medium-height = 32*$px
+$spectrum-wait-dots-medium-width = 32*$px
+$spectrum-wait-dots-large-height = 64*$px
+$spectrum-wait-dots-large-width = 64*$px
+
+spectrum-wait() {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(60);
+}
+spectrum-wait--small() {
+  width: $spectrum-wait-small-width;
+  height: $spectrum-wait-small-height;
+
+  animation-name: spectrum-wait-squares-small;
+}
+
+spectrum-wait--medium() {
+  width: $spectrum-wait-medium-width;
+  height: $spectrum-wait-medium-height;
+
+  animation-name: spectrum-wait-squares-medium;
+}
+
+spectrum-wait--large() {
+  width: $spectrum-wait-large-width;
+  height: $spectrum-wait-large-height;
+
+  animation-name: spectrum-wait-squares-large;
+}
+
+spectrum-wait--centered() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+spectrum-wait--centered-small() {
+  margin-top: -($spectrum-progress-small-height / 2);
+  margin-left: -($spectrum-progress-small-width / 2);
+}
+
+spectrum-wait--centered-medium() {
+  margin-top: -($spectrum-progress-medium-height / 2);
+  margin-left: -($spectrum-progress-medium-width / 2);
+}
+
+spectrum-wait--centered-large() {
+  margin-top: -($spectrum-progress-large-height / 2);
+  margin-left: -($spectrum-progress-large-width / 2);
+}
+
+spectrum-wait--dots() {
+  background-repeat: no-repeat;
+
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(40);
+}
+
+spectrum-wait--dots-small() {
+  width: $spectrum-wait-dots-small-width;
+  height: $spectrum-wait-dots-small-height;
+
+  background-size: auto 9*$px;
+
+  animation-name: spectrum-wait-dots-small;
+}
+
+spectrum-wait--dots-medium() {
+  width: $spectrum-wait-dots-medium-width;
+  height: $spectrum-wait-dots-medium-height;
+
+  background-size: auto 12*$px;
+
+  animation-name: spectrum-wait-dots-medium;
+}
+
+spectrum-wait--dots-large() {
+  width: $spectrum-wait-dots-large-width;
+  height: $spectrum-wait-dots-large-height;
+
+  background-size: auto 24*$px;
+
+  animation-name: spectrum-wait-dots-large;
+}
