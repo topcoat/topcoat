@@ -1,5 +1,7 @@
 # Topcoat
 
+[![Join the chat at https://gitter.im/topcoat/Topcoat](https://badges.gitter.im/topcoat/Topcoat.svg)](https://gitter.im/topcoat/Topcoat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 CSS for clean and fast web apps
 
 ---
