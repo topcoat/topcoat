@@ -15,11 +15,15 @@
  * from Adobe Systems Incorporated.
  */
 
-$spectrum-font-base-family = adobe-clean, Helvetica, Arial, sans-serif;
-$spectrum-font-family-zh = adobe-clean-han-traditional, $spectrum-font-base-family;
-$spectrum-font-family-zhhans = adobe-clean-han-simplified-c, $spectrum-font-base-family;
-$spectrum-font-family-ko = adobe-clean-han-korean, $spectrum-font-base-family;
-$spectrum-font-family-jp = adobe-clean-han-japanese,  $spectrum-font-base-family;
-$spectrum-font-family-condensed = adobe-clean-condensed, $spectrum-font-base-family;
+$spectrum-font-family-base = adobe-clean, Helvetica, Arial, sans-serif;
+$spectrum-font-family-zh = adobe-clean-han-traditional, $spectrum-font-family-base;
+$spectrum-font-family-zhhans = adobe-clean-han-simplified-c, $spectrum-font-family-base;
+$spectrum-font-family-ko = adobe-clean-han-korean, $spectrum-font-family-base;
+$spectrum-font-family-jp = adobe-clean-han-japanese,  $spectrum-font-family-base;
+$spectrum-font-family-condensed = adobe-clean-condensed, $spectrum-font-family-base;
 $spectrum-font-size = 14*$px
 $spectrum-text-body-line-height = 20*$px
+
+//this duplicate var is deprecated and will be removed once
+// it is refactored out where it was implemented
+$spectrum-font-base-family = $spectrum-font-family-base
