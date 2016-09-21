@@ -1,8 +1,29 @@
 .spectrum--light,
 .spectrum--dark {
-  font-family: $spectrum-font-base-family
+  font-family: $spectrum-font-family-base
   font-size: $spectrum-font-size
 }
+
+.spectrum--light:lang(zh-Hans),
+.spectrum--dark:lang(zh-Hans) {
+  font-family: $spectrum-font-family-zhhans
+}
+
+.spectrum--light:lang(zh),
+.spectrum--dark:lang(zh) {
+  font-family: $spectrum-font-family-zh
+}
+
+.spectrum--light:lang(ko),
+.spectrum--dark:lang(ko) {
+  font-family: $spectrum-font-family-ko
+}
+
+.spectrum--light:lang(ja),
+.spectrum--dark:lang(ja) {
+  font-family: $spectrum-font-family-ja
+}
+
 
 .spectrum--light {
   background-color: $spectrum-color-light-background
