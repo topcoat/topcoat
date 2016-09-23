@@ -14,24 +14,37 @@
  * is strictly forbidden unless prior written permission is obtained
  * from Adobe Systems Incorporated.
  */
+
 @require '../commons'
-@require 'animation'
+@require 'animation.styl'
 
-$spectrum-wait-small-height = 16*$px
-$spectrum-wait-small-width = 16*$px
-$spectrum-wait-medium-height = 32*$px
-$spectrum-wait-medium-width = 32*$px
-$spectrum-wait-large-height = 64*$px
-$spectrum-wait-large-width = 64*$px
+$spectrum-wait-spinner-small-height = 16*$px
+$spectrum-wait-spinner-small-width = 16*$px
+$spectrum-wait-spinner-medium-height = 32*$px
+$spectrum-wait-spinner-medium-width = 32*$px
+$spectrum-wait-spinner-large-height = 64*$px
+$spectrum-wait-spinner-large-width = 64*$px
 
-$spectrum-wait-dots-small-height = 24*$px
+$spectrum-wait-dots-small-height = 9*$px
 $spectrum-wait-dots-small-width = 24*$px
-$spectrum-wait-dots-medium-height = 32*$px
+$spectrum-wait-dots-medium-height = 12*$px
 $spectrum-wait-dots-medium-width = 32*$px
-$spectrum-wait-dots-large-height = 64*$px
+$spectrum-wait-dots-large-height = 24*$px
 $spectrum-wait-dots-large-width = 64*$px
 
-spectrum-wait() {
+/*
+ * this is common
+ */
+spectrum-wait--centered() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/*
+ * this is the wait spinner
+ */
+spectrum-wait-spinner() {
   display: inline-block;
 
   background-size: auto 100%;
@@ -42,49 +55,49 @@ spectrum-wait() {
   animation-iteration-count: infinite;
   animation-timing-function: steps(60);
 }
-spectrum-wait--small() {
-  width: $spectrum-wait-small-width;
-  height: $spectrum-wait-small-height;
+spectrum-wait-spinner--small() {
+  width: $spectrum-wait-spinner-small-width;
+  height: $spectrum-wait-spinner-small-height;
 
-  animation-name: spectrum-wait-squares-small;
+  animation-name: spectrum-wait-spinner-small-animation;
 }
 
-spectrum-wait--medium() {
-  width: $spectrum-wait-medium-width;
-  height: $spectrum-wait-medium-height;
+spectrum-wait-spinner--medium() {
+  width: $spectrum-wait-spinner-medium-width;
+  height: $spectrum-wait-spinner-medium-height;
 
-  animation-name: spectrum-wait-squares-medium;
+  animation-name: spectrum-wait-spinner-medium-animation;
 }
 
-spectrum-wait--large() {
-  width: $spectrum-wait-large-width;
-  height: $spectrum-wait-large-height;
+spectrum-wait-spinner--large() {
+  width: $spectrum-wait-spinner-large-width;
+  height: $spectrum-wait-spinner-large-height;
 
-  animation-name: spectrum-wait-squares-large;
+  animation-name: spectrum-wait-spinner-large-animation;
 }
 
-spectrum-wait--centered() {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/*
+ * this is a style set on two modifiers: e.g. wait--centered && wait--small
+ */
+spectrum-wait-spinner--centered--small() {
+  margin-top: -($spectrum-wait-spinner-small-height / 2);
+  margin-left: -($spectrum-wait-spinner-small-width / 2);
 }
 
-spectrum-wait--centered-small() {
-  margin-top: -($spectrum-progress-small-height / 2);
-  margin-left: -($spectrum-progress-small-width / 2);
+spectrum-wait-spinner--centered--medium() {
+  margin-top: -($spectrum-wait-spinner-medium-height / 2);
+  margin-left: -($spectrum-wait-spinner-medium-width / 2);
 }
 
-spectrum-wait--centered-medium() {
-  margin-top: -($spectrum-progress-medium-height / 2);
-  margin-left: -($spectrum-progress-medium-width / 2);
+spectrum-wait-spinner--centered--large() {
+  margin-top: -($spectrum-wait-spinner-large-height / 2);
+  margin-left: -($spectrum-wait-spinner-large-width / 2);
 }
 
-spectrum-wait--centered-large() {
-  margin-top: -($spectrum-progress-large-height / 2);
-  margin-left: -($spectrum-progress-large-width / 2);
-}
-
-spectrum-wait--dots() {
+/*
+ * this is the wait dots
+ */
+spectrum-wait-dots() {
   background-repeat: no-repeat;
 
   animation-duration: 0.8s;
@@ -93,29 +106,48 @@ spectrum-wait--dots() {
   animation-timing-function: steps(40);
 }
 
-spectrum-wait--dots-small() {
+spectrum-wait-dots--small() {
   width: $spectrum-wait-dots-small-width;
   height: $spectrum-wait-dots-small-height;
 
   background-size: auto 9*$px;
 
-  animation-name: spectrum-wait-dots-small;
+  animation-name: spectrum-wait-dots-small-animation;
 }
 
-spectrum-wait--dots-medium() {
+spectrum-wait-dots--medium() {
   width: $spectrum-wait-dots-medium-width;
   height: $spectrum-wait-dots-medium-height;
 
   background-size: auto 12*$px;
 
-  animation-name: spectrum-wait-dots-medium;
+  animation-name: spectrum-wait-dots-medium-animation;
 }
 
-spectrum-wait--dots-large() {
+spectrum-wait-dots--large() {
   width: $spectrum-wait-dots-large-width;
   height: $spectrum-wait-dots-large-height;
 
   background-size: auto 24*$px;
 
-  animation-name: spectrum-wait-dots-large;
+  animation-name: spectrum-wait-dots-large-animation;
 }
+
+/*
+ * this is a style set on two modifiers: e.g. wait--centered && wait--small
+ */
+spectrum-wait-dots--centered--small() {
+  margin-top: -($spectrum-wait-dots-small-height / 2);
+  margin-left: -($spectrum-wait-dots-small-width / 2);
+}
+
+spectrum-wait-dots--centered--medium() {
+  margin-top: -($spectrum-wait-dots-medium-height / 2);
+  margin-left: -($spectrum-wait-dots-medium-width / 2);
+}
+
+spectrum-wait-dots--centered--large() {
+  margin-top: -($spectrum-wait-dots-large-height / 2);
+  margin-left: -($spectrum-wait-dots-large-width / 2);
+}
+
