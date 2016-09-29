@@ -1,0 +1,58 @@
+@import 'abstract/wait/index.styl'
+
+.spectrum-Wait {
+  spectrum-wait-spinner()
+  spectrum-wait-spinner--small()
+}
+
+.spectrum-Wait--medium {
+  spectrum-wait-spinner--medium()
+}
+
+.spectrum-Wait--large {
+  spectrum-wait-spinner--large()
+}
+
+.spectrum-Wait--centered {
+  spectrum-wait-spinner--centered()
+  spectrum-wait-spinner--centered--small()
+
+  &.spectrum-Wait--medium {
+    spectrum-wait-spinner--centered--medium()
+  }
+
+  &.spectrum-Wait--large {
+    spectrum-wait-spinner--centered--large()
+  }
+}
+
+.spectrum-Wait--dots {
+  spectrum-wait-dots()
+  spectrum-wait-dots--small()
+
+  &.spectrum-Wait--centered {
+    spectrum-wait-dots--centered()
+    spectrum-wait-dots--centered--small()
+  }
+
+  &.spectrum-Wait--medium {
+    spectrum-wait-dots--medium()
+
+    &.spectrum-Wait--centered {
+      spectrum-wait-dots--centered()
+      spectrum-wait-dots--centered--medium()
+    }
+  }
+
+  &.spectrum-Wait--large {
+    spectrum-wait-dots--large()
+
+    &.spectrum-Wait--centered {
+      spectrum-wait-dots--centered()
+      spectrum-wait-dots--centered--large()
+    }
+  }
+}
+
+@import 'light.styl'
+@import 'dark.styl'
