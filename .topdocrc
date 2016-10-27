@@ -1,0 +1,6 @@
+{
+  "source": "dist/reference/css",
+  "destination": "dist/reference/docs",
+  "template": "./docs-template/index.js",
+  "clobber": "true"
+}

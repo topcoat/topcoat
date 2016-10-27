@@ -1,0 +1,76 @@
+- var tint = 'light';
+//- TODO: magic to change color stop
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+    title Spectrum CSS - Documentation
+    meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
+
+    link(rel='stylesheet', type='text/css', href='css/normalize.css')
+    link(rel='stylesheet', type='text/css', href='css/rainbow.css')
+    link(rel='stylesheet', type='text/css', href='css/flexboxgrid.css')
+    link(rel='stylesheet', type='text/css', href='../css/spectrum.css')
+    link(rel='stylesheet', type='text/css', href='css/theme-base.css')
+    link(rel='stylesheet', type='text/css', href='css/theme-header.css')
+    link(rel='stylesheet', type='text/css', href='css/theme-home.css')
+    link(rel='stylesheet', type='text/css', href='css/theme-scroll.css')
+    script(type="text/javascript", src='js/main.js')
+    script(type="text/javascript", src='js/rainbow-custom.min.js')
+    //- this is nice of us :)
+    //if lt IE 9
+      script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+
+  body.u-cssdoc-clearfix(class=`spectrum--${tint}`)
+    header.cssdoc-header.row
+      .col-3.start-xs
+        .cssdoc-header-link.box
+          a(href='http://spectrum.corp.adobe.com')
+            img.cssdoc-header-logo-image(src='img/spectrum_logo_light.svg', alt='Adobe Spectrum Logo')
+          h3.cssdoc-header-title.spectrum-Heading.spectrum-Heading--subtitle2.box spectrum-css
+      .col-xs.end-xs.cssdoc-header-content
+        .row
+            .cssdoc-colorstop-label.col-xs
+              p.box color stop:
+            .cssdoc-colorstop-selector.col-xs-1
+              p.box= tint
+
+
+    section.cssdoc-home-presentation.row.center-xs
+      .cssdoc-home-content.col-xs
+        .box
+          h1.spectrum-Heading.spectrum-Heading--display.cssdoc-home-presentation-title spectrum-css
+          p.cssdoc-home-presentation-pitch A web implementation of Spectrum
+          p.cssdoc-home-presentation-pitch Part of Adobe's living design system
+          p.cssdoc-home-presentation-pitch git.corp.adobe.com/spectrum/spectrum-css
+
+    section.cssdoc-main-content.row
+      .cssdoc-nav.col-sm-3
+        nav.box
+          each component in document.components
+            .row.center-xs.around-xs.start-sm
+              .cssdoc-nav-item
+                  a.cssdoc-nav-link.box(href='#'+component.slug)= component.name
+
+      .cssdoc-components.col-xs-12.col-sm-8
+        each component in document.components
+          article.cssdoc-component.box
+            header.row(id=component.slug)
+              .col-xs
+                h2.cssdoc-component-name.spectrum-Heading.spectrum-Heading--pagetitle.box= component.name
+            section.cssdoc-component-description.row
+              .col-xs
+                p= component.description
+            section.cssdoc-component-markup.row
+              .col-xs-offset-1.col-xs
+                .box!= component.markup
+
+            section.cssdoc-component-example.col-xs-12
+                .row.end-xs
+                  a.cssdoc-code-link.spectrum-Button.spectrum-Button--minimal.box(href="#") show markup
+                .row
+                  .cssdoc-code-example.box
+                    h3.cssdoc-code-example-title.spectrum-Heading.spectrum-Heading--subtitle2 HTML
+                    pre.html
+                      code(data-language="html")=component.markup
