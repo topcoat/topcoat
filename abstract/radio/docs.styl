@@ -1,0 +1,36 @@
+/* these comments can be included in the output css, for us they are used by
+   topdoc to generate the documentation we publish...
+
+   you can probably ignore them unless you want to generate documentation
+   or you want to help fix our documentation :)
+
+   note:
+     the '!'' tells stylus to preserve the comment into output css
+     the 'topdoc' let's topdoc know it should parse the comment for YAML
+*/
+
+/*! topdoc
+  name: Radio
+  description: The Spectrum radio thingy
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+      <div class="spectrum-Radio">
+        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-description" for="radio-0">Kittens</label>
+      </div>
+      <div class="spectrum-Radio">
+        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-description" for="radio-0">Puppies</label>
+      </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
+

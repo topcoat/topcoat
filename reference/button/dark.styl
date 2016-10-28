@@ -1,6 +1,13 @@
+// importing from the included git.corp/spectrum/palette source
+// which defines all the color vars needed by stylus
 @import 'palette/styl/dark.styl'
+
+// bring in the color stop skin specific changes
+// to the base button attributes
 @import 'abstract/button/skin.styl'
 
+// add all of the selectors defined needed for the skin
+// in a selector that defines the skin (which is a color stop)
 .spectrum--dark {
   @import 'skin.styl'
 }

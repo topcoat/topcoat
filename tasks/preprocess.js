@@ -4,6 +4,7 @@ module.exports = function(gulp) {
   var svgstylus = require('svg-stylus');
 
   var stylusConfig = {
+    compress: false,
     use: [
       svgstylus()
     ],
@@ -16,6 +17,6 @@ module.exports = function(gulp) {
     return gulp.src('reference/index.styl')
       .pipe(stylus(stylusConfig))
       .pipe(rename('spectrum.css'))
-      .pipe(gulp.dest('dist/reference/'));
+      .pipe(gulp.dest('dist/reference/css'))
   });
 };
