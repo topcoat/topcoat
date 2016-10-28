@@ -1,6 +1,12 @@
 # spectrum-css
 
-This is work in progress from the Adobe Design Frameworks team.  The goal is to support [Spectrum](spectrum.corp.adobe.com) consumption via web by providing a standard implementation that can be integrated into other libraries.
+STAGING: this branch is used for release staging and is possibly unstable!
+
+`master` is stable and where releases come from.  
+
+Note: we continuously release, so master always equal to the latest tagged release. Any work in progress will be on an issue specific branch.
+
+This project is a work-in-progress resource from the Adobe Design Frameworks team.  The goal is to support [Spectrum](spectrum.corp.adobe.com) consumption via web by providing a standard implementation that can be integrated into other libraries.
 
 To open an issue, or request a feature, use our [JIRA project](https://jira.corp.adobe.com/browse/SPECTRUM).
 
