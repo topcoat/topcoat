@@ -1,3 +1,4 @@
+![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
 # spectrum-css
 
 This is work in progress from the Adobe Design Frameworks team.  The goal is to support [Spectrum](spectrum.corp.adobe.com) consumption via web by providing a standard implementation that can be integrated into other libraries.
