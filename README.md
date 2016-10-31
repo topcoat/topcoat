@@ -50,29 +50,3 @@ Thanks - Adobe Design Frameworks
 [sds-jira-link]: https://jira.corp.adobe.com/browse/SDS
 [dev-docs-link]: https://wiki.corp.adobe.com/display/AdobeDesign/Spectrum+Developer+Docs
 [forking-link]: https://help.github.com/articles/fork-a-repo/
-
-
-
-
-
-# spectrum-css
-
-This is work in progress from the Adobe Design Frameworks team.  
-
-To open an issue, or request a feature, use our [JIRA project](https://jira.corp.adobe.com/browse/SPECTRUM).
-
-Documentation will eventually be pushed to `gh-pages`, but we're not quite there yet.
-
-
-
-Thanks - Adobe Design Frameworks
-
-## Usage
-
-```sh
-git clone git@git.corp.adobe.com:spectrum/spectrum-css.git
-cd spectrum-css
-npm install
-gulp dev
-open http://localhost:8080
-```
