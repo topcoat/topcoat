@@ -31,11 +31,11 @@ This repository is part of the [Spectrum Design System][spectrum-link] which is 
 We try to work in compliance with some [Open Development][dna-opendev-link] standards.  See our [open development documentation][dna-opendev-link] for details.
 
 ## problems?
-For questions, discussion, or feedback join us on [Slack][slack-link]!  You can also use the follow mail lists:
+For questions, discussion, or feedback join us on [Slack][slack-link]!  You can also use the following mail lists:
 
 #### consumer announcements and general questions
-* spectrum-informed@adobe.com
 * grp-design-dna-informed@adobe.com
+* spectrum-informed@adobe.com
 
 #### contributor questions and design frameworks
 * cg-design-dna-contributors@adobe.onmicrosoft.com
@@ -46,7 +46,7 @@ Thanks - Adobe Design Frameworks
 [spectrum-link]: http://spectrum.corp.adobe.com
 [slack-link]: https://adobespectrum.slack.com
 [dna-link]: http://spectrum-dna.corp.adobe.com
-[dna-opendev-link]: http://spectrum-dna.corp.adobe.com/opendevelopment.html
+[dna-opendev-link]: https://wiki.corp.adobe.com/display/AdobeDesign/Spectrum+Developer+Docs
 [sds-jira-link]: https://jira.corp.adobe.com/browse/SDS
 [dev-docs-link]: https://wiki.corp.adobe.com/display/AdobeDesign/Spectrum+Developer+Docs
 [forking-link]: https://help.github.com/articles/fork-a-repo/
