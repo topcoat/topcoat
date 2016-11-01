@@ -4,7 +4,7 @@ The goal is to support [spectrum][spectrum-link] consumption via web by providin
 
 For now, there is not a large implementation set, only a few components.  Also, the current dependency on [spectrum/palette](http://git.corp.adobe.com/spectrum/palette) is going to be refactored out.  We are working on a larger system called [DNA][dna-link] and that will supersede palette in the near future.
 
-For questions, or to discuss, join us on [Slack](adobespectrum.slack.com)!
+For questions, or to discuss, join us on [Slack][slack-link]!
 
 ## usage  
 You can simply grab a [release](https://git.corp.adobe.com/Spectrum/spectrum-css/releases) of this project if you don't want to build it yourself :)
@@ -44,7 +44,7 @@ For questions, discussion, or feedback join us on [Slack][slack-link]!  You can 
 Thanks - Adobe Design Frameworks
 
 [spectrum-link]: http://spectrum.corp.adobe.com
-[slack-link]: https://adobespectrum.slack.com
+[slack-link]: https://adobespectrum.slack.com/messages/dev/
 [dna-link]: http://spectrum-dna.corp.adobe.com
 [dna-opendev-link]: https://wiki.corp.adobe.com/display/AdobeDesign/Spectrum+Developer+Docs
 [sds-jira-link]: https://jira.corp.adobe.com/browse/SDS
