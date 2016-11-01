@@ -10,19 +10,9 @@ module.exports = function(gulp) {
   gulp.task('build-reference', function(cb) {
     runSequence(
       'build-reference-css',
-      'build-reference-examples',
       'copy-reference-icons',
       cb
     );
-  });
-
-  gulp.task('build-reference-examples', function() {
-    return gulp.src('reference/**/examples/*.html')
-      .pipe(concat('index.html'))
-      .pipe(wrap({
-        src: 'reference/index.html'
-      }))
-      .pipe(gulp.dest('dist/reference/'))
   });
 
   gulp.task('build-reference-css', function(cb) {
@@ -57,14 +47,7 @@ module.exports = function(gulp) {
       'reference/**/*.styl'
     ], ['reload-reference-css']);
 
-    gulp.watch([
-      'reference/**/*.html'
-    ], ['reload-reference-examples']);
   });
-
-  gulp.task('reload-reference-examples', ['build-reference-examples'], function() {
-    gulp.src('').pipe(connect.reload());
-  })
 
   gulp.task('reload-reference-css', ['build-reference-css'], function() {
     gulp.src('').pipe(connect.reload());
