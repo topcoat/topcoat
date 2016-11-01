@@ -11,6 +11,8 @@
     "copy-dependencies": "sync -rv --exclude=*.pug docs-template dist/reference/docs"
   },
   "devDependencies": {
+    "@spectrum/spectrum-gulp-gh-pages": "^0.1.0",
+    "@spectrum/spectrum-gulp-release": "^0.2.0",
     "autoprefixer": "^6.3.6",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
