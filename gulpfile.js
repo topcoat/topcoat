@@ -2,8 +2,9 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var del = require('del');
 
-require('./tasks/release')(gulp);
 require('./tasks/reference')(gulp);
+require('@spectrum/spectrum-gulp-gh-pages')(gulp);
+require('@spectrum/spectrum-gulp-release')(gulp);
 
 gulp.task('clean', function() {
   return del('dist/**');
