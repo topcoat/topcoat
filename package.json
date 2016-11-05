@@ -3,7 +3,7 @@
   "version": "2.0.0-1",
   "scripts": {
     "build": "gulp build && npm run docs",
-    "docs": "topdoc",
+    "docs": "topdoc -a 'docs-template/'",
     "watch:docs": "onchange \"docs-template/\" -- npm run docs",
     "livereload": "livereload \"dist\"/",
     "dev": "npm-run-all --parallel watch:* livereload",
@@ -35,6 +35,6 @@
     "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
     "stylus": "^0.54.5",
     "svg-stylus": "git+https://github.com/lazd/svg-stylus.git",
-    "topdoc": "^1.0.2"
+    "topdoc": "1.0.5"
   }
 }
