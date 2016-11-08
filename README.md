@@ -39,7 +39,6 @@ For questions, discussion, or feedback join us on [Slack][slack-link]!  You can 
 
 #### contributor questions and design frameworks
 * cg-design-dna-contributors@adobe.onmicrosoft.com
-* spectrum-core@adobe.com
 
 Thanks - Adobe Design Frameworks
 
