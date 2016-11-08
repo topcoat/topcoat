@@ -24,8 +24,8 @@ npm run build
 
 The `dist/` folder will contain all the goodies, including a copy of the [style documentation](http://git.corp.adobe/com/pages/spectrum/spectrum-css/)
 
-## about spectrum, sds, and dna
-This repository is part of the [Spectrum Design System][spectrum-link] which is Adobe's unified design language. [Spectrum DNA][dna-link] consists of a set of projects provided by the **Adobe Design Frameworks** team.  Our goal is to support [Spectrum][spectrum-link] consumption by providing source constants, build tools, and implementation support that can be integrated by anyone wanting to conform to the Spectrum Design System.
+## about Spectrum and DNA
+This repository is part of the [Design DNA][dna-link] project, which is a design system being developed by the **Adobe Design Frameworks** team.  Our goal is to support [Spectrum][spectrum-link] consumption by providing source constants, build tools, and implementation support that can be integrated by anyone wanting to conform to the Spectrum design language.
 
 ## open development
 We try to work in compliance with some [Open Development][dna-opendev-link] standards.  See our [open development documentation][dna-opendev-link] for details.
