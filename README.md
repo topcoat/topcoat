@@ -6,7 +6,7 @@ For now, there is not a large implementation set, only a few components.  Also, 
 
 For questions, or to discuss, join us on [Slack][slack-link]!
 
-## usage  
+## Usage  
 You can simply grab a [release](https://git.corp.adobe.com/Spectrum/spectrum-css/releases) of this project if you don't want to build it yourself :)
 
 To build this project, follow the steps below.
@@ -24,28 +24,39 @@ npm run build
 
 The `dist/` folder will contain all the goodies, including a copy of the [style documentation](http://git.corp.adobe/com/pages/spectrum/spectrum-css/)
 
-## about Spectrum and DNA
+## About Spectrum and DNA
 This repository is part of the [Design DNA][dna-link] project, which is a design system being developed by the **Adobe Design Frameworks** team.  Our goal is to support [Spectrum][spectrum-link] consumption by providing source constants, build tools, and implementation support that can be integrated by anyone wanting to conform to the Spectrum design language.
 
-## open development
+## Open Development
 We try to work in compliance with some [Open Development][dna-opendev-link] standards.  See our [open development documentation][dna-opendev-link] for details.
 
-## problems?
-For questions, discussion, or feedback join us on [Slack][slack-link]!  You can also use the following mail lists:
+## Problems?
+For questions, discussion, or feedback join us on [Slack][slack-link]!  
 
-#### consumer announcements and general questions
+If the problem is issue worthy, look into our [JIRA project][sdl-jira-link] and open an issue if one isn't there already.
+
+You can also use the mail lists mentioned below.
+
+## Announcements and Communications 
+
+The best way to connect with us is [Slack][slack-link].  Did we mention [Slack][slack-link]?  We use [Slack][slack-link] a lot, check out the #dev and #dna-contributors-dev channels to find us.
+
+
+We also have mail lists for those just wanting announcements, or the answer to an FAQ. One is specific to DNA, the other Spectrum:
 * grp-design-dna-informed@adobe.com
 * spectrum-informed@adobe.com
 
-#### contributor questions and design frameworks
+Because sometimes archived, threaded email conversations are a good thing for development, we have the required contributors mailing list:
 * cg-design-dna-contributors@adobe.onmicrosoft.com
+
 
 Thanks - Adobe Design Frameworks
 
 [spectrum-link]: http://spectrum.corp.adobe.com
-[slack-link]: https://adobespectrum.slack.com/messages/dev/
-[dna-link]: http://spectrum-dna.corp.adobe.com
+[slack-link]: https://adobespectrum.slack.com
+[dna-link]: http://design-dna.corp.adobe.com
 [dna-opendev-link]: https://wiki.corp.adobe.com/display/AdobeDesign/Spectrum+Developer+Docs
-[sds-jira-link]: https://jira.corp.adobe.com/browse/SDS
+[sdl-jira-link]: https://jira.corp.adobe.com/browse/SDL
+[dna-jira-link]: https://jira.corp.adobe.com/browse/DNA
 [dev-docs-link]: https://wiki.corp.adobe.com/display/AdobeDesign/Spectrum+Developer+Docs
 [forking-link]: https://help.github.com/articles/fork-a-repo/
