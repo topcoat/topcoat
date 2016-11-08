@@ -1,6 +1,7 @@
 {
   "source": "dist/reference/css",
   "destination": "dist/reference/docs",
+  "assetDirectory": "docs-template/",
   "clobber": true,
   "pugFile": "docs-template/template.pug"
 }
