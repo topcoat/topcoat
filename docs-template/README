@@ -1,8 +1,0 @@
-This is the pug template that Topdoc uses to render the documentation.
-
-We're using a beta of the 1.x Topdoc right now.  It will get slightly less
-janky in the near future.
-
-See:
-- https://github.com/topcoat/topdoc/issues/37
-- https://github.com/topcoat/topdoc/issues/38
