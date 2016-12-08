@@ -20,7 +20,7 @@
   "devDependencies": {
     "@spectrum/spectrum-gulp-gh-pages": "^0.1.0",
     "@spectrum/spectrum-gulp-release": "^0.2.0",
-    "@spectrum/spectrum-origins": "0.1.0",
+    "@spectrum/spectrum-origins": "^0.1.0",
     "@spectrum/dna-topdoc-template": "^0.0.1",
     "@spectrum/site-resources": "^0.0.3",
     "autoprefixer": "^6.3.6",
