@@ -33,7 +33,7 @@ module.exports = function(gulp) {
       '!**/*.styl',
       '!**/*.html'
     ])
-      .pipe(gulp.dest('dist/reference/icons/'))
+      .pipe(gulp.dest('dist/reference/docs/css/vendor/icons/'))
   });
 
   gulp.task('dev', ['build'], function() {
