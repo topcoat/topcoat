@@ -2,7 +2,10 @@
   "name": "spectrum-css",
   "version": "2.0.0-1",
   "scripts": {
-    "build": "gulp build && run-s fetch-all docs",
+    "build": "npm run clean && npm run build:origins && gulp build && npm run build:docs",
+    "build:docs": "run-s fetch-all docs",
+    "build:origins": "generateStylus --src ./node_modules/@spectrum/spectrum-origins/build-color.json --dest ./dist/origins/styl/",
+    "clean": "rm -rf ./dist",
     "docs": "topdoc",
     "watch:docs": "onchange \"docs-template/\" -- npm run docs",
     "fetch:css": "copy-site-resources -i css dist/reference/docs/css",
@@ -17,6 +20,7 @@
   "devDependencies": {
     "@spectrum/spectrum-gulp-gh-pages": "^0.1.0",
     "@spectrum/spectrum-gulp-release": "^0.2.0",
+    "@spectrum/spectrum-origins": "0.1.0",
     "@spectrum/dna-topdoc-template": "^0.0.1",
     "@spectrum/site-resources": "^0.0.3",
     "autoprefixer": "^6.3.6",

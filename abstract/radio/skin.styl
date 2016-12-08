@@ -1,39 +1,34 @@
-@require '../commons'
-
-spectrum-radio-input() {
-
-}
-
 spectrum-radio--checked-checkmark() {
-  border-color: $spectrum-color-switch-border;
+  // Todo: missing radio var
+  border-color: $spectrum-color-border-switch-default;
 }
 
 spectrum-radio--focus-checkmark() {
-  border-color: $spectrum-color-switch-border-focus;
-  box-shadow: 0 0 0 1*$px $spectrum-color-switch-border-focus;
+  // Todo: missing radio var
+  border-color: $spectrum-color-border-switch-focus;
+  box-shadow: 0 0 0 1*$px $spectrum-color-border-switch-focus;
 }
 
 spectrum-radio--disabled-checkmark() {
-  border-color: $spectrum-color-input-background-disabled;
+  // Todo: missing radio var
+  border-color: $spectrum-color-background-input-disabled;
 }
 
 spectrum-radio--disabled-description() {
-  color: $spectrum-color-disabled-text;
+  color: $spectrum-color-text-disabled;
 }
 
-spectrum-radio() {
-
-}
 spectrum-radio-description() {
+  // Todo: missing radio var $spectrum-color-text-input-label;
   color: $spectrum-color-input-label;
 }
 
 spectrum-radio-checkmark() {
-  border-color: $spectrum-color-switch-border;
+  border-color: $spectrum-color-border-switch;
 }
 
 spectrum-radio-checkmark--hover() {
-  border-color: $spectrum-color-switch-border-hover;
+  border-color: $spectrum-color-border-switch-hover;
   box-shadow: none;
 }
 
@@ -42,7 +37,7 @@ spectrum-radio-description--hover() {
 }
 
 spectrum-radio-checkmark--active() {
-  border-color: spectrum-color-switch-border-active;
+  border-color: spectrum-color-border-switch-active;
 }
 
 spectrum-radio-description--active() {
@@ -50,9 +45,9 @@ spectrum-radio-description--active() {
 }
 
 spectrum-radio-checkmark--disabled() {
-  border-color: $spectrum-color-input-background-disabled;
+  border-color: $spectrum-color-background-input-disabled;
 }
 
 spectrum-radio-description--disabled() {
-  color: $spectrum-color-disabled-text;
+  color: $spectrum-color-text-disabled;
 }

@@ -6,10 +6,6 @@ require('./tasks/reference')(gulp);
 require('@spectrum/spectrum-gulp-gh-pages')(gulp);
 require('@spectrum/spectrum-gulp-release')(gulp);
 
-gulp.task('clean', function() {
-  return del('dist/**');
-});
-
 gulp.task('copy-abstract', function() {
   return gulp.src('abstract/**/*')
     .pipe(gulp.dest('dist/abstract/'))
@@ -29,7 +25,6 @@ gulp.task('copy-icons', function() {
 
 gulp.task('build', function(cb) {
   runSequence(
-    'clean',
     [
       'copy-abstract',
       'copy-palette',
