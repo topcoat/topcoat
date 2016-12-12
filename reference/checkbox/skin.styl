@@ -1,5 +1,5 @@
-.spectrum-Checkbox-description {
-  spectrum-checkbox-description()
+.spectrum-Checkbox-label {
+  spectrum-checkbox-label()
 }
 
 .spectrum-Checkbox-checkmark {
@@ -7,36 +7,35 @@
 }
 
 .spectrum-Checkbox-input {
-  &:checked + .spectrum-Radio-checkmark {
-    spectrum-checkbox--checked-checkmark()
+  &:checked + .spectrum-Checkbox-checkmark {
+    spectrum-checkbox-checkmark--checked()
   }
 
   &:focus + .spectrum-Checkbox-checkmark {
-    spectrum-checkbox--focus-checkmark()
+    spectrum-checkbox-checkmark--focus()
   }
 }
 
 .spectrum-Checkbox {
   &:hover {
     .spectrum-Checkbox-checkmark {
-      spectrum-checkbox--hover-checkmark()
+      spectrum-checkbox-checkmark--hover()
     }
   }
 
   &:active {
     .spectrum-Checkbox-checkmark {
-      spectrum-checkbox--active-checkmark()
+      spectrum-checkbox-checkmark--active()
     }
   }
 
-  &:disabled,
-  &.is-disabled {
+  &[disabled] {
     .spectrum-Checkbox-checkmark {
-      spectrum-checkbox--disabled-checkmark()
+      spectrum-checkbox-checkmark--disabled()
     }
 
-    .spectrum-Checkbox-description {
-      spectrum-checkbox--disabled-description()
+    .spectrum-Checkbox-label {
+      spectrum-checkbox-label--disabled()
     }
   }
 }

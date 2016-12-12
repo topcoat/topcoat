@@ -1,94 +1,72 @@
-@require '../commons'
-
-spectrum-textfield--hovered() {
-  &::placeholder {
-    color: $spectrum-color-input-placeholder-hover
-  }
+spectrum-textfield() {
+  background-color: $spectrum-color-background-input-default;
+  border-color: $spectrum-color-border-input-default;
+  color: $spectrum-color-text-input-default;
 }
 
-spectrum-textfield--focused() {
-  border-color: $spectrum-color-input-border-focus;
-  box-shadow: 0 0 0 1*$px $spectrum-color-input-border-focus;
+spectrum-textfield--hover() {
+  border-color: $spectrum-color-border-input-hover;
+  box-shadow: 0 0 0 1*$px $spectrum-color-border-input-hover;
+}
+
+spectrum-textfield--focus() {
+  border-color: $spectrum-color-border-input-focus;
+  box-shadow: 0 0 0 1*$px $spectrum-color-border-input-focus;
 }
 
 spectrum-textfield--disabled() {
-  background-color: $spectrum-color-input-background-disabled;
-  border-color: $spectrum-color-input-border-disabled;
-  color: $spectrum-color-input-text-disabled;
+  background-color: $spectrum-color-background-input-disabled;
+  border-color: $spectrum-color-border-input-disabled;
+  color: $spectrum-color-text-input-disabled;
 
   /* For safari mobile browser */
-  -webkit-text-fill-color: $spectrum-color-input-text-disabled;
-
-  &::placeholder {
-    color: $spectrum-color-input-placeholder-disabled
-  }
+  -webkit-text-fill-color: $spectrum-color-text-input-disabled;
 }
 
 spectrum-textfield--invalid() {
-  border-color: $spectrum-color-input-border-invalid;
+  border-color: $spectrum-color-border-input-invalid;
 
   &:focus { /* might break things due to pre-defined focus */
-    box-shadow: 0 0 0 1*$px $spectrum-color-input-border-invalid;
+    box-shadow: 0 0 0 1*$px $spectrum-color-border-input-invalid;
   }
 }
 
-spectrum-textfield() {
-  border-color: $spectrum-color-input-border;
-  background-color: $spectrum-color-input-background;
-  color: $spectrum-color-input-text;
-
-  &::placeholder {
-    color: $spectrum-color-input-placeholder
-  }
-
-  &:hover {
-    spectrum-textfield--hovered()
-  }
-
-  &:focus {
-    spectrum-textfield--focused()
-  }
-
-  &:disabled {
-    spectrum-textfield--disabled()
-  }
-
-  &:invalid {
-    spectrum-textfield--invalid()
-  }
+spectrum-textfield-placeholder() {
+  color: $spectrum-color-text-placeholder-default
 }
 
-spectrum-textfield--quiet--focus() {
-  box-shadow: 0 1*$px 0 $spectrum-color-input-border-focus;
+spectrum-textfield-placeholder--hover() {
+  color: $spectrum-color-text-placeholder-hover
 }
 
-spectrum-textfield--quiet--disabled() {
-  border-color:  $spectrum-color-input-border-disabled-quiet;
-  background-color: transparent;
-}
-
-spectrum-textfield--quiet--invalid() {
-  border-color: $spectrum-color-input-border-invalid;
-
-  &:focus {
-    box-shadow: 0 1*$px 0 $spectrum-color-input-border-invalid;
-  }
+spectrum-textfield-placeholder--disabled() {
+  color: $spectrum-color-text-placeholder-disabled
 }
 
 spectrum-textfield--quiet() {
-  background-color: transparent;
-  border-color: $spectrum-color-input-border;
-  color: $spectrum-color-input-text;
+  background-color: $spectrum-color-background-input-quiet-default
+  border-color: $spectrum-color-border-input-quiet-default
+  color: $spectrum-color-text-input-default
+}
+
+spectrum-textfield--quiet--hover() {
+  box-shadow: 0 1*$px 0 $spectrum-color-border-input-quiet-hover
+}
+
+spectrum-textfield--quiet--focus() {
+  box-shadow: 0 1*$px 0 $spectrum-color-border-input-quiet-focus
+}
+
+spectrum-textfield--quiet--disabled() {
+  background-color: $spectrum-color-background-input-quiet-disabled
+  border-color:  $spectrum-color-border-input-quiet-disabled
+}
+
+spectrum-textfield--quiet--invalid() {
+  border-color: $spectrum-color-border-input-invalid;
 
   &:focus {
-    spectrum-textfield--quiet--focus()
-  }
-
-  &:disabled {
-    spectrum-textfield--quiet--disabled()
-  }
-
-  &:invalid {
-    spectrum-textfield--quiet--invalid()
+    box-shadow: 0 1*$px 0 $spectrum-color-border-input-invalid;
   }
 }
+

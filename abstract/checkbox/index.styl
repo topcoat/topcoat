@@ -19,7 +19,7 @@ spectrum-checkbox-input() {
   z-index: 1
 }
 
-spectrum-checkbox-description() {
+spectrum-checkbox-label() {
   margin: 0 8*$px
   font-size: $spectrum-font-size
   vertical-align: middle
@@ -42,7 +42,8 @@ spectrum-checkbox-checkmark() {
 
   &:after {
     position: absolute
-    top: 11*$px
+    // i guess this value depends on the line-height of the input element ?!
+    top: 14*$px
     left: 1*$px
     width: 10*$px
     height: 10*$px
@@ -59,7 +60,7 @@ spectrum-checkbox-checkmark() {
   }
 }
 
-spectrum-checkbox--checked-checkmark() {
+spectrum-checkbox-checkmark--checked() {
   border-width: 6*$px
 
   &:after {
@@ -68,15 +69,15 @@ spectrum-checkbox--checked-checkmark() {
   }
 }
 
-spectrum-checkbox--hover-checkmark() {
+spectrum-checkbox-checkmark--hover() {
   box-shadow: none;
 }
 
-spectrum-checkbox--focus-checkmark() {
+spectrum-checkbox-checkmark--focus() {
   box-shadow: 0 0 0 1*$px
 }
 
-spectrum-checkbox--indeterminate-checkmark() {
+spectrum-checkbox-checkmark--indeterminate() {
   border-top-width: 5*$px
   border-bottom-width: 5*$px
 }

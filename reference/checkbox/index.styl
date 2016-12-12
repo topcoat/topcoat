@@ -1,27 +1,29 @@
+@import 'abstract/checkbox/docs.styl'
+
 @import 'abstract/checkbox/index.styl'
 
 .spectrum-Checkbox {
   spectrum-checkbox()
 }
 
-.spectrum-Checkbox-checkmark {
-  spectrum-checkbox-checkmark()
-}
-
 .spectrum-Checkbox-input {
   spectrum-checkbox-input()
 
   &:checked + .spectrum-Checkbox-checkmark {
-    spectrum-checkbox--checked-checkmark()
+    spectrum-checkbox-checkmark--checked()
   }
 }
 
 .spectrum-Checkbox[indeterminate] .spectrum-Checkbox-checkmark {
-  spectrum-checkbox--indeterminate-checkmark()
+  spectrum-checkbox-checkmark--indeterminate()
 }
 
-.spectrum-Checkbox-description {
-  spectrum-checkbox-description()
+.spectrum-Checkbox-label {
+  spectrum-checkbox-label()
+}
+
+.spectrum-Checkbox-checkmark {
+  spectrum-checkbox-checkmark()
 }
 
 @import 'light.styl'

@@ -24,11 +24,7 @@ spectrum-radio-input() {
   cursor: pointer;
 }
 
-spectrum-radio--checked-checkmark() {
-  border-width: 6*$px;
-}
-
-spectrum-radio-description() {
+spectrum-radio-label() {
   margin: 0 8*$px;
 
   font-size: $spectrum-font-size;
@@ -51,4 +47,8 @@ spectrum-radio-checkmark() {
   vertical-align: middle;
 
   transition: border $spectrum-transition-time ease-in-out, box-shadow $spectrum-transition-time ease-in-out;
+}
+
+spectrum-radio-checkmark--checked() {
+  border-width: 6*$px;
 }

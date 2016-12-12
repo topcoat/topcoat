@@ -1,0 +1,71 @@
+/* these comments can be included in the output css, for us they are used by
+   topdoc to generate the documentation we publish...
+
+   you can probably ignore them unless you want to generate documentation
+   or you want to help fix our documentation :)
+
+   note:
+     the '!'' tells stylus to preserve the comment into output css
+     the 'topdoc' let's topdoc know it should parse the comment for YAML
+*/
+
+/*! topdoc
+  name: Checkbox
+  description: The Spectrum checkbox
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+      <div class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
+      </div>
+      <div class="spectrum-Checkbox" checked>
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
+      </div>
+      <div class="spectrum-Checkbox" indeterminate>
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
+      </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
+
+
+/*! topdoc
+  name: Checkbox - disabled
+  description: The 'disabled' Spectrum checkbox
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+      <div class="spectrum-Checkbox" disabled>
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
+      </div>
+      <div class="spectrum-Checkbox" disabled checked>
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
+      </div>
+      <div class="spectrum-Checkbox" disabled indeterminate>
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
+      </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
