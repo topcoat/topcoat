@@ -13,11 +13,16 @@ To build this project, follow the steps below.
 
 If you are contributing, please make a [fork][forking-link] of this repo and [do your work][dev-docs-link] in an [issue specific branch][sds-jira-link].
 
+Because we are using scoped releases for NPM, you need to configure the `@spectrum` namespace like this:
+
+`npm config set @spectrum:registry https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-snapshot-local/`
+
 Once you are ready, you can get started like this:
 
 ```sh
 git clone git@git.corp.adobe.com:<YOUR_USERNAME>/spectrum-css.git
 cd spectrum-css
+npm install --scope=@spectrum --registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-snapshot/
 npm install
 npm run build
 ```
