@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "run-s clean build:origins build:tasks-all docs-all",
-    "build:origins": "generateStylus --src ./node_modules/@spectrum/spectrum-origins/build-color.json --dest ./dist/origins/styl/",
+    "build:origins": "generateStylus --src ./node_modules/@spectrum/spectrum-origins/build-color.json --dest ./temp/origins/styl/",
     "lint": "eslint tasks/*.js",
     "docs-all": "run-s fetch-all docs:compile",
     "docs:compile": "topdoc",
@@ -21,10 +21,11 @@
     "ci-all": "npm run build"
   },
   "devDependencies": {
+    "@spectrum/balthazar": "^0.1.x",
     "@spectrum/dna-topdoc-template": "^0.0.1",
     "@spectrum/kulcon": "^0.0.3",
     "@spectrum/site-resources": "^0.0.3",
-    "@spectrum/spectrum-origins": "^0.1.0",
+    "@spectrum/spectrum-origins": "^0.2.x",
     "any-promise": "^1.3.0",
     "autoprefixer": "^6.5.3",
     "eslint": "^3.12.0",
@@ -35,7 +36,6 @@
     "postcss": "^5.2.6",
     "rimraf": "^2.5.4",
     "spectrum-icons": "git+ssh://git@git.corp.adobe.com:Spectrum/icons.git#1.0.0-pre.4",
-    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
     "stylus": "^0.54.5",
     "svg-stylus": "git+https://github.com/lazd/svg-stylus.git",
     "topdoc": "^1.0.5"

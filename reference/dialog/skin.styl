@@ -15,13 +15,36 @@
  * from Adobe Systems Incorporated.
  */
 
-.spectrum-Dialog--error {
+.spectrum-Dialog-wrapper {
+  spectrum-dialog-wrapper()
+}
+
+.spectrum-Dialog-header {
+  spectrum-dialog-header()
+}
+
+.spectrum-Dialog-footer {
+  spectrum-dialog-footer()
+}
+
+.spectrum-Dialog--success {
   .spectrum-Dialog-title {
-    spectrum-dialog-title--error()
+    spectrum-dialog-title--success()
   }
 
   .spectrum-Dialog-typeIcon {
-    spectrum-dialog-title--error()
+    spectrum-dialog-typeIcon--success()
+  }
+}
+
+.spectrum-Dialog--help,
+.spectrum-Dialog--info {
+  .spectrum-Dialog-title {
+    spectrum-dialog-title--info()
+  }
+
+  .spectrum-Dialog-typeIcon {
+    spectrum-dialog-typeIcon--info()
   }
 }
 
@@ -35,34 +58,21 @@
   }
 }
 
-.spectrum-Dialog--help, &.spectrum-Dialog--info {
+.spectrum-Dialog--error {
   .spectrum-Dialog-title {
-    spectrum-dialog-title--info()
+    spectrum-dialog-title--error()
   }
 
   .spectrum-Dialog-typeIcon {
-    spectrum-dialog-title--info()
+    spectrum-dialog-title--error()
   }
 }
 
-.spectrum-Dialog--success {
-  .spectrum-Dialog-title {
-    spectrum-dialog-title--success()
-  }
-
-  .spectrum-Dialog-typeIcon {
-    spectrum-dialog-title--success()
-  }
+.spectrum-Dialog--modal {
+  spectrum-dialog--modal()
 }
 
-.spectrum-Dialog-wrapper {
-  spectrum-dialog-wrapper()
-}
 
-.spectrum-Dialog-header {
-  spectrum-dialog-header()
-}
 
-.spectrum-Dialog-footer {
-  spectrum-dialog-footer()
-}
+
+

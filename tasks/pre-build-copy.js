@@ -36,8 +36,6 @@ var excludeExtensions = [
 
 var abstractSource = 'abstract/';
 var abstractDest = 'dist/abstract/';
-var paletteSource = 'node_modules/spectrum-palette/';
-var paletteDest = 'dist/palette/';
 var iconSource = 'node_modules/spectrum-icons/font/';
 var iconFontDest = 'dist/reference/docs/css/vendor/icons';
 var iconStylusDest = 'dist/icons';
@@ -65,10 +63,6 @@ function copyIconFont() {
     { clobber: true, filter: iconCopyFontFilter});
 }
 
-function copyPalette() {
-  return asyncCopy('palette resources', paletteSource, paletteDest);
-}
-
 function asyncCopy(what, source, destination, options) {
   log.info('Copying', what);
   return fsx.copy(source, destination, options)
@@ -84,7 +78,6 @@ module.exports = function() {
   return Promise.all([
     copyAbstractSource(),
     copyIconFont(),
-    copyIconStylus(),
-    copyPalette()
+    copyIconStylus()
   ]);
 };
