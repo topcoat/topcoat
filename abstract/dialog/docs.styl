@@ -1,0 +1,194 @@
+/* these comments can be included in the output css, for us they are used by
+   topdoc to generate the documentation we publish...
+
+   you can probably ignore them unless you want to generate documentation
+   or you want to help fix our documentation :)
+
+   note:
+     the '!'' tells stylus to preserve the comment into output css
+     the 'topdoc' let's topdoc know it should parse the comment for YAML
+*/
+
+/*! topdoc
+  name: Dialog - Default
+  description: A Spectrum 'default' dialog (which is also the default style)
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.add('is-open')">Open Dialog - Default</button>
+    <div class="spectrum-Dialog" id="defaultDialog">
+      <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+        <div class="spectrum-Dialog-header">
+          <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          <p>This Dialog is not centered.</p>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+        </div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+/*! topdoc
+  name: Dialog - Success
+  description: A Spectrum 'success' dialog
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button>
+    <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
+      <div class="spectrum-Dialog-wrapper" style="width:400px;">
+        <div class="spectrum-Dialog-header">
+          <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Check-Circle spectrum-Dialog-typeIcon"></div>
+          <h2 class="spectrum-Dialog-title">Success Dialog</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          <p>This dialog was created from markup. </p>
+          <p>This dialog is not centered. </p>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
+        </div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+/*! topdoc
+  name: Dialog - Info
+  description: A Spectrum 'info' dialog
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button>
+    <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog">
+      <div class="spectrum-Dialog-wrapper" style="width:400px;">
+        <div class="spectrum-Dialog-header">
+          <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Info-Circle"></div>
+          <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          <p>This dialog was created from markup. </p>
+          <p>This dialog is not centered. </p>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button>
+        </div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+/*! topdoc
+  name: Dialog - Warning
+  description: A Spectrum 'warning' dialog
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button>
+    <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
+      <div class="spectrum-Dialog-wrapper" style="width:400px;">
+        <div class="spectrum-Dialog-header">
+          <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
+          <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          <p>This dialog was created from markup. This Dialog is not centered.</p>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
+        </div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+/*! topdoc
+  name: Dialog - Error
+  description: A Spectrum 'error' dialog
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.add('is-open')">Open Dialog - Error</button>
+    <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog">
+      <div class="spectrum-Dialog-wrapper" style="width:400px;">
+        <div class="spectrum-Dialog-header">
+          <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
+          <h2 class="spectrum-Dialog-title">Error Dialog</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          <p>This dialog was created from markup. This Dialog is not centered.</p>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button>
+        </div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+
+/*! topdoc
+  name: Dialog - Modal
+  description: A Spectrum 'modal' dialog
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
+    <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
+      <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+        <div class="spectrum-Dialog-header">
+          <h2 class="spectrum-Dialog-title">Defaul Dialog - Modal</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          <p>This Dialog is not centered.</p>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
+          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
+        </div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+

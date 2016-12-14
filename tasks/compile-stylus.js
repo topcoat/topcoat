@@ -34,7 +34,8 @@ var options = {
   ],
   paths: [
     'reference/',
-    'dist/'
+    'dist/',
+    'temp/'
   ]
 };
 
