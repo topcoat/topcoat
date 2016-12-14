@@ -3,7 +3,8 @@
   "version": "2.0.0-1",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "run-s clean build:origins build:tasks-all docs-all",
+    "clean:temp": "rimraf temp",
+    "build": "run-s clean build:origins build:tasks-all docs-all clean:temp",
     "build:origins": "generateStylus --src ./node_modules/@spectrum/spectrum-origins/build-color.json --dest ./temp/origins/styl/",
     "lint": "eslint tasks/*.js",
     "docs-all": "run-s fetch-all docs:compile",
