@@ -1,5 +1,5 @@
 {
-  "name": "spectrum-css",
+  "name": "@spectrum/spectrum-css",
   "version": "2.0.0-1",
   "scripts": {
     "clean": "rimraf dist",
@@ -18,12 +18,14 @@
     "dev": "npm-run-all --parallel watch:* livereload",
     "tdv": "topdoc --version",
     "copy-dependencies": "sync -rv --exclude=*.pug site-template dist/reference/docs",
-    "ci-all": "npm run build"
+    "ci-all": "npm run build",
+    "release": "dna-npm-bump-version && dna-npm-release"
   },
   "devDependencies": {
     "@spectrum/balthazar": "^0.1.x",
     "@spectrum/dna-topdoc-template": "^0.0.1",
     "@spectrum/kulcon": "^0.0.3",
+    "@spectrum/dna-npm-release": "^0.x",
     "@spectrum/site-resources": "^0.0.3",
     "@spectrum/spectrum-origins": "^0.2.x",
     "any-promise": "^1.3.0",
