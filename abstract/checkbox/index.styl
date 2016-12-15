@@ -1,11 +1,17 @@
-$spectrum-checkbox-size = 12*$px
-$spectrum-checkbox-radius = 2*$px
+@require '../commons'
+
+$spectrum-checkbox-height = $spectrum-component-single-line-height
+
+$spectrum-checkbox-checkmark-box-size = 12*$px
+$spectrum-checkbox-checkmark-mark-size = 10*$px
+$spectrum-checkbox-checkmark-box-border-radius = 2*$px
 
 spectrum-checkbox() {
   display: inline-block
   position: relative
-  padding: 7*$px 0
   font-size: 0
+  height: $spectrum-checkbox-height
+  line-height: $spectrum-checkbox-height
 }
 
 spectrum-checkbox-input() {
@@ -29,10 +35,10 @@ spectrum-checkbox-label() {
 spectrum-checkbox-checkmark() {
   display: inline-block
   box-sizing: border-box
-  width: $spectrum-checkbox-size
-  height: $spectrum-checkbox-size
+  width: $spectrum-checkbox-checkmark-box-size
+  height: $spectrum-checkbox-checkmark-box-size
 
-  border-radius: $spectrum-checkbox-radius
+  border-radius: $spectrum-checkbox-checkmark-box-border-radius
   border-width: 2*$px
   border-style: solid
 
@@ -40,13 +46,12 @@ spectrum-checkbox-checkmark() {
 
   transition: border $spectrum-transition-time ease-in-out, box-shadow $spectrum-transition-time ease-in-out
 
-  &:after {
+  &::after {
     position: absolute
-    // i guess this value depends on the line-height of the input element ?!
-    top: 14*$px
+    top: ($spectrum-checkbox-height / 2 - $spectrum-checkbox-checkmark-mark-size / 2 )
     left: 1*$px
-    width: 10*$px
-    height: 10*$px
+    width: $spectrum-checkbox-checkmark-mark-size
+    height: $spectrum-checkbox-checkmark-mark-size
 
     background-repeat: no-repeat
     background-position: center
@@ -63,7 +68,7 @@ spectrum-checkbox-checkmark() {
 spectrum-checkbox-checkmark--checked() {
   border-width: 6*$px
 
-  &:after {
+  &::after {
     transform:scale(1)
     opacity:1
   }
