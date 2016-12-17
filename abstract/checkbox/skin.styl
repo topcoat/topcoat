@@ -3,7 +3,7 @@ $spectrum-checkbox-check-icon-url = 'embed/Check.svg' // Relative to project roo
 spectrum-checkbox-checkmark() {
   border-color: $spectrum-color-border-switch-default;
 
-  &:after {
+  &::after {
     background-image: svgurl(embedurl($spectrum-checkbox-check-icon-url)) svg(path fill $spectrum-color-switch-track);
   }
 }
