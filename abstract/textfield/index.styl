@@ -69,14 +69,6 @@ spectrum-textfield() {
   }
 }
 
-
-// to be used for textarea
-spectrum-textfield--multiline() {
-  height: auto;
-  padding: 4*$px 8*$px;
-  text-indent: 0;
-}
-
 spectrum-textfield--quiet() {
   border-radius: 0;
   text-indent: 0;
@@ -88,4 +80,16 @@ spectrum-textfield--quiet() {
   padding-left: 0;
   padding-right: 0;
 
+}
+
+// to be used for textarea
+spectrum-textfield--multiline() {
+  height: auto;
+  padding: 4*$px 8*$px;
+  text-indent: 0;
+}
+
+spectrum-textfield--quiet--multiline() {
+  resize: none;
+  overflow-y: hidden;
 }
