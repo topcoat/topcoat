@@ -194,6 +194,8 @@ module.exports = function(grunt) {
                     src: 'node_modules/topcoat-theme/img/*',
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/img')
                 }, {
+                    expand: true,
+                    flatten: true,
                     src: ['css/**'],
                     dest: path.join(chromiumSrc, 'tools/perf/page_sets/topcoat/release/')
                 }]

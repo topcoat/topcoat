@@ -4,3 +4,5 @@ tmp
 .DS_Store
 src/
 .tern-port
+
+ dev/test/perf/telemetry/perf/page_sets/topcoat_*.json
