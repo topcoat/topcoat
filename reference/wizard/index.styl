@@ -1,0 +1,154 @@
+@import 'abstract/wizard/docs.styl'
+
+@import 'abstract/wizard/index.styl'
+
+.spectrum-Wizard {
+  spectrum-wizard()
+}
+
+.spectrum-Wizard--interactive {
+  .spectrum-WizardStep-label,
+  .spectrum-WizardStep-markerContainer {
+     spectrum-wizard--interactive()
+  }
+}
+
+// Small (w/o label or tooltip)
+.spectrum-Wizard--small {
+  spectrum-wizard--small()
+
+  .spectrum-WizardStep {
+    spectrum-wizardstep--small()
+
+    // Disable Label
+    .spectrum-WizardStep-label {
+      spectrum-wizardstep-label--small()
+    }
+
+    &:first-child, &:last-child {
+      spectrum-wizardstep--small--edgechild()
+    }
+
+    // Disable first line
+    &:first-child {
+      .spectrum-WizardStep-markerContainer {
+        spectrum-wizardstep-markercontainer--small--firstchild()
+      }
+    }
+
+    &:last-child {
+      .spectrum-WizardStep-markerContainer {
+        spectrum-wizardstep-markercontainer--small--lastchild()
+      }
+    }
+  }
+}
+
+.spectrum-WizardStep {
+  spectrum-wizardstep()
+
+  // Completed State
+  &.is-complete {
+    .spectrum-WizardStep-marker {
+      spectrum-wizardstep-marker--is-complete()
+    }
+
+    // The next step's line should be solid
+    & + .spectrum-WizardStep .spectrum-WizardStep-segment {
+      spectrum-wizardstep-segment--solid()
+    }
+  }
+
+  // Selected state
+  &.is-selected {
+    // Focus
+    &:focus {
+      spectrum-wizardstep--is-selected--focus()
+    }
+    .spectrum-WizardStep-marker {
+      spectrum-wizardstep-marker--is-selected()
+    }
+  }
+}
+
+.spectrum-WizardStep-label {
+  spectrum-wizardstep-label()
+}
+
+.spectrum-WizardStep-markerContainer {
+  spectrum-wizardstep-markercontainer()
+}
+
+// Circle step marker
+.spectrum-WizardStep-marker {
+  spectrum-wizardstep-marker()
+}
+
+// Step line
+.spectrum-WizardStep-segment {
+  spectrum-wizardstep-segment()
+  // Default is dashed
+  spectrum-wizardstep-segment--dashed()
+}
+
+// First step overrides
+.spectrum-WizardStep:first-child {
+  .spectrum-WizardStep-markerContainer {
+    spectrum-wizardstep-markercontainer--firstchild()
+  }
+
+  .spectrum-WizardStep-label {
+    spectrum-wizardstep-label--firstchild()
+  }
+
+  .spectrum-WizardStep-segment {
+    spectrum-wizardstep-segment--firstchild()
+  }
+
+  .spectrum-WizardStep-tooltip {
+    spectrum-wizardstep-tooltip--firstchild()
+  }
+}
+
+// Last step overrides
+.spectrum-WizardStep:last-child {
+  .spectrum-WizardStep-label {
+    spectrum-wizardstep-label--lastchild()
+  }
+
+  .spectrum-WizardStep-markerContainer {
+    spectrum-wizardstep-markercontainer--lastchild()
+  }
+
+  .spectrum-WizardStep-segment {
+    spectrum-wizardstep-segment--lastchild()
+  }
+
+  .spectrum-WizardStep-tooltip {
+    spectrum-wizardstep-tooltip--lastchild()
+  }
+}
+
+.spectrum-WizardStep:first-child,
+.spectrum-WizardStep:last-child {
+  spectrum-wizardstep--edgechild()
+}
+
+// Single step
+.spectrum-WizardStep:only-child {
+  .spectrum-WizardStep-label {
+    spectrum-wizardstep-label--onlychild()
+  }
+
+  .spectrum-WizardStep-markerContainer {
+    spectrum-wizardstep-markercontainer--onlychild()
+  }
+}
+
+// Tooltip
+.spectrum-WizardStep-tooltip {
+  spectrum-wizardstep-tooltip()
+}
+
+@require 'light.styl'
+@require 'dark.styl'
