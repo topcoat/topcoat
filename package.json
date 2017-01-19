@@ -4,8 +4,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "clean:temp": "rimraf temp",
-    "build": "run-s clean build:origins build:tasks-all docs-all clean:temp",
-    "build:origins": "generateStylus --src ./node_modules/@spectrum/spectrum-origins/build-color.json --dest ./temp/origins/styl/",
+    "build": "run-s clean build:tasks-all docs-all clean:temp",
     "lint": "eslint tasks/*.js",
     "docs-all": "run-s fetch-all docs:compile",
     "docs:compile": "topdoc",
@@ -23,12 +22,11 @@
     "release": "dna-npm-bump-version && dna-npm-release"
   },
   "devDependencies": {
-    "@spectrum/balthazar": "^0.1.x",
     "@spectrum/dna-topdoc-template": "^0.0.1",
     "@spectrum/kulcon": "^0.0.3",
     "@spectrum/dna-npm-release": "^0.x",
     "@spectrum/site-resources": "^0.0.3",
-    "@spectrum/spectrum-origins": "^0.2.x",
+    "@spectrum/spectrum-abstract-stylus": "^0.0.x",
     "any-promise": "^1.3.0",
     "autoprefixer": "^6.5.3",
     "eslint": "^3.12.0",

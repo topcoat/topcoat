@@ -33,6 +33,7 @@ var options = {
     svgstylus()
   ],
   paths: [
+    'docs/',
     'reference/',
     'dist/',
     'temp/'
