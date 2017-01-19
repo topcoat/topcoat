@@ -26,7 +26,7 @@ var autoprefixer = require('autoprefixer');
 var fsx = require('fs-promise');
 var log = require('@spectrum/kulcon').init('run-post-css');
 
-var cssWriteDest = 'dist/reference/css/spectrum.css';
+var cssWriteDest = 'dist/css/spectrum.css';
 
 var targetBrowsers = [
   'IE >= 10',

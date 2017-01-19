@@ -1,6 +1,6 @@
 {
-  "source": "dist/reference/css",
-  "destination": "dist/reference/docs",
+  "source": "dist/css",
+  "destination": "dist/docs",
   "template": "@spectrum/dna-topdoc-template",
   "assetDirectory": false
 }
