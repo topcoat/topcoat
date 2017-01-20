@@ -36,7 +36,7 @@ var excludeExtensions = [
 var abstractSource = 'node_modules/@spectrum/spectrum-abstract-stylus/dist/';
 var abstractDest = 'temp/abstract/';
 var iconSource = 'node_modules/spectrum-icons/font/';
-var iconFontDest = 'dist/reference/docs/css/vendor/icons';
+var iconFontDest = 'dist/docs/css/vendor/icons';
 var iconStylusDest = 'dist/icons';
 
 function iconCopyFontFilter(file) {

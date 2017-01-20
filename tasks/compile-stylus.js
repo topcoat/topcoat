@@ -34,14 +34,14 @@ var options = {
   ],
   paths: [
     'docs/',
-    'reference/',
+    'src/',
     'dist/',
     'temp/'
   ]
 };
 
 function readStylusIndex(stylusIndex) {
-  stylusIndex = stylusIndex || 'reference/index.styl';
+  stylusIndex = stylusIndex || 'src/index.styl';
   log.info('Reading stylus code from', stylusIndex);
   return fsx.readFile(stylusIndex).catch(handleReadError);
 }
