@@ -11,13 +11,9 @@
     "build:tasks-all": "./tasks/start-build.js",
     "watch:docs": "onchange \"docs-template/\" -- npm run docs",
     "fetch-all": "copy-site-resources dist/docs",
-    "fetch:css": "copy-site-resources -i css dist/docs/css",
-    "fetch:js": "copy-site-resources -i js dist/docs/js",
-    "fetch:img": "copy-site-resources -i img dist/docs/img",
     "livereload": "livereload \"dist\"/",
     "dev": "npm-run-all --parallel watch:* livereload",
     "tdv": "topdoc --version",
-    "copy-dependencies": "sync -rv --exclude=*.pug site-template dist/docs",
     "ci-all": "npm run build",
     "release": "dna-npm-bump-version && dna-npm-release"
   },
