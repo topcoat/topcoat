@@ -20,8 +20,8 @@
 /*eslint-env es6*/
 
 'use strict';
-
-// var injectDocs = require('./getDocsContent.js');
+require('any-promise/register/bluebird');
+var Promise = require('bluebird');
 var preprocess = require('./pre-build-copy.js');
 var compile = require('./compile-stylus.js');
 var postprocess = require('./run-post-css.js');
@@ -29,11 +29,24 @@ var log = require('@spectrum/kulcon').init('start-build');
 
 log.info('Starting...');
 
+// holds the color stop names (should be fetched via config) ( in balthazar ?)
+var colorStopNames = ['darkest', 'dark', 'light', 'lightest'];
+
 preprocess()
- .then(compile)
- .then(postprocess)
+ .then(buildAllColorStops)
  .then(done)
  .catch(handleError);
+
+
+
+function buildAllColorStops() {
+  return Promise.each(colorStopNames, function(colorStop) {
+    return compile(colorStop)
+      .then(function(cssString) {
+        postprocess(cssString, colorStop)
+      })
+  })
+}
 
 function done(result) {
   log.info('Done!');

@@ -26,8 +26,6 @@ var autoprefixer = require('autoprefixer');
 var fsx = require('fs-promise');
 var log = require('@spectrum/kulcon').init('run-post-css');
 
-var cssWriteDest = 'dist/css/spectrum.css';
-
 var targetBrowsers = [
   'IE >= 10',
   'last 2 Chrome versions',
@@ -50,7 +48,8 @@ function autoprefix(cleaned) {
     .catch(handleAutoprefixError);
 }
 
-function writeCSSOutput(cssString) {
+function writeCSSOutput(cssString, colorStop) {
+  var cssWriteDest = 'dist/css/spectrum-' + colorStop + '.css';
   log.info('Writing', cssWriteDest);
   return fsx.outputFile(cssWriteDest, cssString)
     .catch(handleWriteError);
@@ -75,10 +74,14 @@ function handleError(error, warning) {
   process.exit(-1);
 }
 
-module.exports = function(cssString) {
+module.exports = function(cssString, colorStop) {
+  var colorStop = colorStop || 'light';
+  log.info('PostCSS for ', colorStop);
   return cleanCss(cssString)
     .then(autoprefix)
-    .then(writeCSSOutput)
+    .then(function (output) {
+      writeCSSOutput(output, colorStop);
+    })
     .catch(function(error) {
       handleError(error, 'Unhanded error during post-process!');
     });

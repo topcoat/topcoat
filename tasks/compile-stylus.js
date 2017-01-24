@@ -40,8 +40,8 @@ var options = {
   ]
 };
 
-function readStylusIndex(stylusIndex) {
-  stylusIndex = stylusIndex || 'src/index.styl';
+function readStylusIndex(colorStop) {
+  var stylusIndex = 'src/spectrum-' + colorStop + '.styl';
   log.info('Reading stylus code from', stylusIndex);
   return fsx.readFile(stylusIndex).catch(handleReadError);
 }
@@ -66,9 +66,10 @@ function handleError(error, warning) {
   process.exit(-1);
 }
 
-module.exports = function() {
-  log.info('Starting css compile');
-  return readStylusIndex()
+module.exports = function(colorStop) {
+  var colorStop = colorStop || 'light';
+  log.info('Starting css compile for ', colorStop);
+  return readStylusIndex(colorStop)
     .then(compileStylus)
     .catch(handleError);
 };
