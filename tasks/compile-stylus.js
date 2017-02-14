@@ -24,6 +24,7 @@ require('any-promise/register/bluebird');
 var Promise = require('bluebird');
 var stylus = Promise.promisifyAll(require('stylus'));
 var svgstylus = require('svg-stylus');
+var checkvars = require('./check-vars.js');
 var fsx = require('fs-promise');
 var log = require('@spectrum/kulcon').init('compile-stylus');
 
@@ -71,5 +72,6 @@ module.exports = function(colorStop) {
   log.info('Starting css compile for ', colorStop);
   return readStylusIndex(colorStop)
     .then(compileStylus)
+    .then(checkvars)
     .catch(handleError);
 };
