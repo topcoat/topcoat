@@ -8,7 +8,7 @@
     "lint": "eslint tasks/*.js",
     "docs-all": "run-s fetch-all docs:compile",
     "docs:compile": "topdoc",
-    "build:tasks-all": "./tasks/start-build.js",
+    "build:tasks-all": "node ./tasks/start-build.js",
     "watch:docs": "onchange \"docs-template/\" -- npm run docs",
     "fetch-all": "copy-site-resources dist/docs",
     "livereload": "livereload \"dist\"/",

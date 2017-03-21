@@ -48,6 +48,13 @@ function iconCopyFontFilter(file) {
   return include;
 }
 
+function createDistDirs() {
+  return Promise.all([
+    fsx.mkdirs(iconStylusDest),
+    fsx.mkdirs(iconFontDest),
+    fsx.mkdirs(abstractDest)
+  ]);
+}
 
 function copyAbstractSource() {
   return asyncCopy('abstract source', abstractSource, abstractDest);
@@ -74,9 +81,11 @@ function asyncCopy(what, source, destination, options) {
 
 module.exports = function() {
   log.info('Starting pre-processing');
-  return Promise.all([
-    copyAbstractSource(),
-    copyIconFont(),
-    copyIconStylus()
-  ]);
+  return createDistDirs().then(() => {
+    return Promise.all([
+      copyAbstractSource(),
+      copyIconFont(),
+      copyIconStylus()
+    ]);
+  });
 };
