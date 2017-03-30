@@ -23,9 +23,10 @@ Once you are ready, you can get started like this:
 git clone git@git.corp.adobe.com:<YOUR_USERNAME>/spectrum-css.git
 cd spectrum-css
 npm install --scope=@spectrum --registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-snapshot/
-npm install
 npm run build
 ```
+
+Build tasks are all based on npm scripts, which can be found in `package.json`.  Just run `npm run <taskname>` and off you go.
 
 The `dist/` folder will contain all the goodies, including a copy of the [style documentation](http://git.corp.adobe/com/pages/spectrum/spectrum-css/)
 
