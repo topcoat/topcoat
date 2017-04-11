@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@spectrum/dna-npm-release": "^0.x",
-    "@spectrum/dna-topdoc-template": "^0.1.0",
+    "@spectrum/dna-topdoc-template": "^0.2.0",
     "@spectrum/kulcon": "^0.0.3",
-    "@spectrum/site-resources": "^0.2.0",
+    "@spectrum/site-resources": "^0.3.0",
     "@spectrum/spectrum-abstract-stylus": "^0.2.x",
     "any-promise": "^1.3.0",
     "autoprefixer": "^6.5.3",
