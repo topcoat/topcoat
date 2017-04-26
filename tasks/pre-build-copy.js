@@ -35,9 +35,10 @@ var excludeExtensions = [
 
 var abstractSource = 'node_modules/@spectrum/spectrum-abstract-stylus/dist/';
 var abstractDest = 'temp/abstract/';
-var iconSource = 'node_modules/spectrum-icons/font/';
-var iconFontDest = 'dist/docs/css/vendor/icons';
-var iconStylusDest = 'dist/icons';
+var iconStylusSource = 'node_modules/@spectrum/spectrum-icons/dist/font/stylus/';
+var iconStylusDest = 'temp/icons/'
+var iconFontSource = 'node_modules/@spectrum/spectrum-icons/dist/font/stylus/';
+var iconFontDest = 'dist/css/icons';
 
 function iconCopyFontFilter(file) {
   var include = true;
@@ -50,9 +51,9 @@ function iconCopyFontFilter(file) {
 
 function createDistDirs() {
   return Promise.all([
-    fsx.mkdirs(iconStylusDest),
+    fsx.mkdirs(abstractDest),
     fsx.mkdirs(iconFontDest),
-    fsx.mkdirs(abstractDest)
+    fsx.mkdirs(iconStylusDest)
   ]);
 }
 
@@ -61,11 +62,11 @@ function copyAbstractSource() {
 }
 
 function copyIconStylus() {
-  return asyncCopy('icon stylus files', iconSource, iconStylusDest);
+  return asyncCopy('icon source', iconStylusSource, iconStylusDest);
 }
 
 function copyIconFont() {
-  return asyncCopy('icon font', iconSource, iconFontDest,
+  return asyncCopy('icon font', iconFontSource, iconFontDest,
     { clobber: true, filter: iconCopyFontFilter});
 }
 
