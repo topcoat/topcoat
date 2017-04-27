@@ -25,7 +25,7 @@
     "@spectrum/dna-topdoc-template": "^0.2.0",
     "@spectrum/kulcon": "^0.0.3",
     "@spectrum/site-resources": "^0.3.0",
-    "@spectrum/spectrum-abstract-stylus": "^0.2.x",
+    "@spectrum/spectrum-abstract-stylus": "^0.2.2",
     "@spectrum/spectrum-icons": "^0.0.2",
     "any-promise": "^1.3.0",
     "autoprefixer": "^6.5.3",
