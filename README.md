@@ -2,7 +2,7 @@
 # spectrum-css
 The goal is to support [Spectrum][spectrum-link] design language as a CSS implementation.  
 
-This project is an example of how to merge the [abstrac-stylus](https://git.corp.adobe.com/Spectrum/spectrum-abstract-stylus) and [dom-reference](https://git.corp.adobe.com/Spectrum/spectrum-dom-reference)@tri projects into a working set of CSS and web markup.  It is not recommend to consume the css or html directly, but instead use one of the better supported frameworks at Adobe, such as Torq, React-Spectrum, or CoralUI. 
+This project is an example of how to merge the [abstrac-stylus](https://git.corp.adobe.com/Spectrum/spectrum-abstract-stylus) and [dom-reference](https://git.corp.adobe.com/Spectrum/spectrum-dom-reference) projects into a working set of CSS and web markup.  It is not recommend to consume the css or html directly, but instead use one of the better supported frameworks at Adobe, such as Torq, React-Spectrum, or CoralUI. 
 
 The output from this project can be seen [on Jenkins](https://designcodestuff.ci.corp.adobe.com:12001/job/spectrum-css/lastSuccessfulBuild/artifact/dist/docs/index.html).  Contibutors will need a local build, but recommended that downstream framework developers also create a local build for reference.  However, in a pinch, the Jenkins build should represent a stable view of what is available.
 
