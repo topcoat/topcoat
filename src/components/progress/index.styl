@@ -1,0 +1,202 @@
+@import 'docs/components/progress/docs.styl'
+
+@import 'abstract/components/progress/index.styl'
+
+.spectrum-Progress {
+  spectrum-progress()
+}
+
+.spectrum-Progress-bar {
+  spectrum-progress-bar()
+}
+
+.spectrum-Progress-status {
+  spectrum-progress-status()
+}
+
+.spectrum-Progress-label {
+  spectrum-progress-label()
+}
+
+.spectrum-Progress--indeterminate {
+  spectrum-progress--indeterminate()
+
+  .spectrum-Progress-status {
+    spectrum-progress-status--indeterminate()
+  }
+
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--indeterminate()
+  }
+}
+
+.spectrum-Progress--leftLabel {
+  spectrum-progress--leftLabel()
+
+  .spectrum-Progress-label {
+    spectrum-progress-label--leftLabel()
+  }
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--leftLabel()
+  }
+}
+
+.spectrum-Progress--bottomLabel {
+  spectrum-progress--bottomLabel()
+
+  .spectrum-Progress-label {
+    spectrum-progress-label--bottomLabel()
+  }
+
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--bottomLabel()
+  }
+}
+
+.spectrum-Progress--noLabel {
+  spectrum-progress--noLabel()
+
+  .spectrum-Progress-label {
+    spectrum-progress-label--noLabel()
+  }
+
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--noLabel()
+  }
+}
+
+.spectrum-Progress--small {
+  spectrum-progress--small()
+
+  .spectrum-Progress-label {
+    spectrum-progress-label--small()
+  }
+
+  .spectrum-Progress-status {
+    spectrum-progress-label--small()
+  }
+
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--small()
+  }
+
+  &.spectrum-Progress--bottomLabel {
+    spectrum-progress--small--bottomLabel()
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--small--bottomLabel()
+    }
+  }
+
+  &.spectrum-Progress--leftLabel {
+    spectrum-progress--small--leftLabel()
+
+    // Move the bar to the vertical center
+    .spectrum-Progress-bar {
+      spectrum-progress-bar--small--leftLabel()
+    }
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--small--leftLabel()
+    }
+  }
+
+  &.spectrum-Progress--rightLabel {
+    spectrum-progress--rightLabel()
+
+    // Move the bar to the vertical center
+    .spectrum-Progress-bar {
+      spectrum-progress-bar--small--rightLabel()
+    }
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--small--rightLabel()
+    }
+  }
+}
+
+.spectrum-Progress--medium {
+  spectrum-progress--medium()
+
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--medium()
+  }
+
+  &.spectrum-Progress--leftLabel {
+    spectrum-progress--medium--leftLabel()
+
+    // Move the bar to the vertical center
+    .spectrum-Progress-bar {
+      spectrum-progress-bar--medium--leftLabel()
+    }
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--medium--leftLabel()
+    }
+  }
+
+  &.spectrum-Progress--rightLabel {
+    spectrum-progress--medium--rightLabel()
+
+    // Move the bar to the vertical center
+    .spectrum-Progress-bar {
+      spectrum-progress-bar--medium--rightLabel()
+    }
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--medium--rightLabel()
+    }
+  }
+}
+
+.spectrum-Progress--large {
+  spectrum-progress--large()
+
+  .spectrum-Progress-label {
+    spectrum-progress-label--large()
+  }
+
+  .spectrum-Progress-status {
+    spectrum-progress-status--large()
+  }
+
+  .spectrum-Progress-bar {
+    spectrum-progress-bar--large()
+  }
+
+  &.spectrum-Progress--bottomLabel {
+    spectrum-progress--large--bottomLabel()
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--large--bottomLabel()
+    }
+  }
+
+  &.spectrum-Progress--leftLabel {
+    spectrum-progress--large--leftLabel()
+
+    // Move the bar to the vertical center
+    .spectrum-Progress-bar {
+      spectrum-progress-bar--large--leftLabel()
+    }
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--large--leftLabel()
+    }
+  }
+
+  &.spectrum-Progress--rightLabel {
+    spectrum-progress--large--rightLabel()
+
+    // Move the bar to the vertical center
+    .spectrum-Progress-bar {
+      spectrum-progress-bar--large--rightLabel()
+    }
+
+    .spectrum-Progress-label {
+      spectrum-progress-label--large--rightLabel()
+    }
+  }
+}
+
+@require 'skin.styl'

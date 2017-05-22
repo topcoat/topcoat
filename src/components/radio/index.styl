@@ -1,0 +1,25 @@
+@import 'docs/components/radio/docs.styl'
+
+@import 'abstract/components/radio/index.styl'
+
+.spectrum-Radio {
+  spectrum-radio()
+}
+
+.spectrum-Radio-input {
+  spectrum-radio-input()
+
+  &:checked + .spectrum-Radio-checkmark {
+    spectrum-radio-checkmark--checked()
+  }
+}
+
+.spectrum-Radio-label {
+  spectrum-radio-label()
+}
+
+.spectrum-Radio-checkmark {
+  spectrum-radio-checkmark()
+}
+
+@import 'skin.styl'

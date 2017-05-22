@@ -1,0 +1,44 @@
+/* This is an expection. It doesn't consume abstract-stylus, but @spectrum/spectrum-icons */
+
+@import 'icons/spectrum-css-icons-18.styl'
+@import 'icons/spectrum-css-icons-24.styl'
+
+/* Get the font-face definitions 18/ and 24/ folders */
+spectrum-fontIcon--font-face--18('icons/18')
+spectrum-fontIcon--font-face--24('icons/24')
+
+/* Create CSS classes from spectrum-icons */
+.spectrum-Icon {
+  spectrum-fontIcon()
+}
+
+.spectrum-Icon--sizeXXS {
+  spectrum-fontIcon--sizeXXS()
+}
+
+.spectrum-Icon--sizeXS {
+  spectrum-fontIcon--sizeXS()
+}
+
+.spectrum-Icon--sizeS {
+  spectrum-fontIcon--sizeS()
+}
+
+.spectrum-Icon--sizeM {
+  spectrum-fontIcon--sizeM()
+}
+
+.spectrum-Icon--sizeL {
+  spectrum-fontIcon--sizeL()
+}
+
+.spectrum-Icon--sizeXL {
+  spectrum-fontIcon--sizeXL()
+}
+
+.spectrum-Icon--sizeXXL {
+  spectrum-fontIcon--sizeXXL()
+}
+
+spectrum-fontIcon-iconclasses('.spectrum-Icon')
+

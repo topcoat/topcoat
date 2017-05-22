@@ -1,0 +1,6 @@
+{
+  "source": "dist/css/spectrum-light.css",
+  "destination": "dist/docs",
+  "template": "@spectrum/dna-topdoc-template",
+  "assetDirectory": false
+}

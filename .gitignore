@@ -1,2 +1,5 @@
-/node_modules
 /dist
+/node_modules
+/temp
+.npmrc*
+npm-debug.log*
