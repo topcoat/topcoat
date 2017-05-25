@@ -1,0 +1,124 @@
+@import 'abstract/components/dropdown/skin.styl'
+
+.spectrum-Dropdown {
+  spectrum-dropdown()
+
+  &:hover {
+    spectrum-dropdown--hover()
+  }
+}
+
+.spectrum-Dropdown-trigger {
+  spectrum-dropdown-trigger()
+
+  &:focus {
+    spectrum-dropdown-trigger--focus()
+  }
+}
+
+.spectrum-Dropdown-option {
+  spectrum-dropdown-option()
+
+  &:hover {
+    spectrum-dropdown-option--hover()
+  }
+
+  &:focus {
+    spectrum-dropdown-option--focus()
+  }
+
+  &.is-selected {
+    spectrum-dropdown-option--selected()
+  }
+}
+
+.spectrum-Dropdown-divider {
+  spectrum-dropdown-divider()
+}
+
+.spectrum-Dropdown-error-icon {
+  spectrum-dropdown-icon--alert()
+}
+
+.spectrum-Dropdown-open-icon {
+  spectrum-dropdown-icon--chevron()
+}
+
+.spectrum-Dropdown.is-open {
+  .spectrum-Dropdown-trigger {
+    spectrum-dropdown-trigger--open()
+
+    &:focus {
+      spectrum-dropdown-trigger--open--focus()
+    }
+  }
+}
+
+.spectrum-Dropdown.is-disabled {
+  .spectrum-Dropdown-trigger {
+    spectrum-dropdown-trigger--disabled()
+  }
+}
+
+.spectrum-Dropdown.has-error {
+  spectrum-dropdown--error()
+}
+
+.spectrum-Dropdown--quiet {
+  spectrum-dropdown--quiet()
+
+  .spectrum-Dropdown-trigger {
+    spectrum-dropdown-trigger--quiet()
+
+    &:hover {
+      spectrum-dropdown-trigger--quiet--hover()
+    }
+
+    &:focus {
+      spectrum-dropdown-trigger--quiet--focus()
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Dropdown-trigger {
+      spectrum-dropdown-trigger--quiet--disabled()
+    }
+  }
+
+  &.is-open {
+    .spectrum-Dropdown-trigger {
+      spectrum-dropdown-trigger--quiet--open()
+    }
+
+    .spectrum-Dropdown-menu {
+      spectrum-dropdown-menu--quiet--open()
+    }
+  }
+}
+
+// For demo purposes only -----------------------------
+.spectrum-Dropdown-trigger--focus {
+  spectrum-dropdown-trigger--focus()
+}
+
+.spectrum-Dropdown--hover {
+  spectrum-dropdown--hover()
+}
+
+.spectrum-Dropdown-option--hover {
+  spectrum-dropdown-option--hover()
+}
+
+.spectrum-Dropdown-option--focus {
+  spectrum-dropdown-option--focus()
+}
+
+.spectrum-Dropdown--quiet {
+  .spectrum-Dropdown-trigger--hover {
+    spectrum-dropdown-trigger--quiet--hover()
+  }
+
+  .spectrum-Dropdown-trigger--focus {
+    spectrum-dropdown-trigger--quiet--focus()
+  }
+}
