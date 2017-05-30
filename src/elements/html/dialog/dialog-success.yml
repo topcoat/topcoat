@@ -1,0 +1,20 @@
+---
+name: Dialog - Success
+description: A Spectrum 'success' dialog
+markup:
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button>
+  <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
+    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+      <div class="spectrum-Dialog-header">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Check-Circle spectrum-Dialog-typeIcon"></div>
+        <h2 class="spectrum-Dialog-title">Success Dialog</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        <p>This dialog was created from markup. </p>
+        <p>This dialog is not centered. </p>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
+      </div>
+    </div>
+  </div>

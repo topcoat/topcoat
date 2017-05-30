@@ -1,0 +1,46 @@
+---
+name: Wizard - With Tooltip
+description: A wizard with tooltips
+markup: |
+  <div class="spectrum-Wizard">
+    <div class="spectrum-WizardStep spectrum-Tooltip-hover is-complete">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-WizardStep-tooltip">
+        <span class="spectrum-Tooltip-content">Step 1<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+    <div class="spectrum-WizardStep spectrum-Tooltip-hover is-complete">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-WizardStep-tooltip">
+        <span class="spectrum-Tooltip-content">Step 2<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+    <div class="spectrum-WizardStep spectrum-Tooltip-hover is-selected">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-WizardStep-tooltip">
+        <span class="spectrum-Tooltip-content">Step 3<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+    <div class="spectrum-WizardStep spectrum-Tooltip-hover">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-WizardStep-tooltip">
+        <span class="spectrum-Tooltip-content">Step 4<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+  </div>

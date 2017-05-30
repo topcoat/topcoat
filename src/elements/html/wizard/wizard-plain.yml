@@ -1,0 +1,34 @@
+---
+name: Wizard - Plain
+description: A wizard w/o labels or tooltips
+markup: |
+  <div class="spectrum-Wizard spectrum-Wizard--small">
+    <div class="spectrum-WizardStep is-complete">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+    <div class="spectrum-WizardStep is-complete">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+    <div class="spectrum-WizardStep is-selected">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+    <div class="spectrum-WizardStep">
+      <span class="spectrum-WizardStep-markerContainer">
+        <span class="spectrum-WizardStep-marker"></span>
+      </span>
+      <span class="spectrum-WizardStep-segment">
+      </span>
+    </div>
+  </div>

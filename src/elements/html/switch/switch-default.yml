@@ -1,0 +1,5 @@
+---
+  name: Switch - Default
+  description: The default Spectrum Switch element
+  markup: |
+    <!-- TODO: add markup here -->

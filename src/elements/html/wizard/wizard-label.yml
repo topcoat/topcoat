@@ -1,0 +1,42 @@
+---
+name: Wizard - With Label
+description: A wizard with labels
+markup: |
+  <div class="spectrum-Wizard">
+    <div class="spectrum-WizardStep is-complete">
+        <span class="spectrum-WizardStep-label">Step 1</spectrum-step-label></span>
+        <span class="spectrum-WizardStep-markerContainer">
+          <span class="spectrum-WizardStep-marker">
+          </span>
+        </span>
+        <span class="spectrum-WizardStep-segment">
+        </span>
+    </div>
+    <div class="spectrum-WizardStep is-complete">
+        <span class="spectrum-WizardStep-label">Step 2</spectrum-step-label></span>
+        <span class="spectrum-WizardStep-markerContainer">
+          <span class="spectrum-WizardStep-marker">
+          </span>
+        </span>
+        <span class="spectrum-WizardStep-segment">
+        </span>
+    </div>
+    <div class="spectrum-WizardStep is-selected">
+        <span class="spectrum-WizardStep-label">Step 3</spectrum-step-label></span>
+        <span class="spectrum-WizardStep-markerContainer">
+          <span class="spectrum-WizardStep-marker">
+          </span>
+        </span>
+        <span class="spectrum-WizardStep-segment">
+        </span>
+    </div>
+    <div class="spectrum-WizardStep">
+        <span class="spectrum-WizardStep-label">Step 4</spectrum-step-label></span>
+        <span class="spectrum-WizardStep-markerContainer">
+          <span class="spectrum-WizardStep-marker">
+          </span>
+        </span>
+        <span class="spectrum-WizardStep-segment">
+        </span>
+    </div>
+  <div>

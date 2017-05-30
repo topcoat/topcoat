@@ -1,0 +1,19 @@
+// for implementation we first just need all the base level stuff
+// that is defined in the abstract index to give us reference
+//  to the functions that will be called below
+@import 'abstract/components/button/index.styl'
+
+// this top level implmentation is color stop agnotic
+// so it goes outside the imported stops below
+.spectrum-Button {
+  spectrum-button()
+
+  .spectrum-Icon {
+    spectrum-button-icon()
+  }
+}
+
+// this imports the variants to the top level selector
+// that makes the changes need to work with each color stop
+// view what is in the color stop files to see more detail
+@import 'skin.styl'

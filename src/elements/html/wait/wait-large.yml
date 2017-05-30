@@ -1,0 +1,5 @@
+---
+name: Wait - Default (Radial) - Large
+description: A Spectrum Wait of default type (radial) in large size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--large"></span>

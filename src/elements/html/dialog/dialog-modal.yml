@@ -1,0 +1,20 @@
+---
+name: Dialog - Modal
+description: A Spectrum 'modal' dialog
+markup: |
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
+  <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
+    <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        <p>This Dialog is not centered.</p>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
+        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
+      </div>
+    </div>
+  </div>
+

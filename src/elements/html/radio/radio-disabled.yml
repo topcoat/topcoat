@@ -1,0 +1,18 @@
+---
+name: Radio - disabled
+description: The 'disabled' Spectrum radio
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Radio" disabled>
+    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" disabled>
+    <span class="spectrum-Radio-checkmark"></span>
+    <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+  </div>
+  <div class="spectrum-Radio" disabled>
+    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" disabled>
+    <span class="spectrum-Radio-checkmark"></span>
+    <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
+  </div>

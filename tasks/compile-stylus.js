@@ -25,8 +25,9 @@ var Promise = require('bluebird');
 var stylus = Promise.promisifyAll(require('stylus'));
 var svgstylus = require('svg-stylus');
 var checkvars = require('./check-vars.js');
-var fsx = require('fs-promise');
+var fsx = require('fs-extra');
 var log = require('@spectrum/kulcon').init('compile-stylus');
+const path = require('path');
 
 var options = {
   compress: false,
@@ -35,14 +36,15 @@ var options = {
   ],
   paths: [
     'docs/',
-    'src/',
+    'src/elements/css',
     'dist/',
     'temp/'
   ]
 };
 
 function readStylusIndex(colorStop) {
-  var stylusIndex = 'src/spectrum-' + colorStop + '.styl';
+  // var stylusIndex = 'src/spectrum-' + colorStop + '.styl';
+  const stylusIndex = path.resolve('src', 'elements', 'css', `spectrum-${colorStop}.styl`);
   log.info('Reading stylus code from', stylusIndex);
   return fsx.readFile(stylusIndex).catch(handleReadError);
 }

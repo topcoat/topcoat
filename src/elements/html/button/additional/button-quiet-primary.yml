@@ -1,0 +1,13 @@
+---
+name: Button - Quiet Primary
+description: A 'quiet primary' Spectrum button
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button
+  spectrum-Button--quiet--primary">Button</button>
+
+  <button class="spectrum-Button spectrum-Button--quiet--primary"
+  disabled>Button</button>

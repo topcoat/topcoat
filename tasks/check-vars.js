@@ -24,7 +24,7 @@ require('any-promise/register/bluebird');
 var Promise = require('bluebird');
 var path = require('path');
 var log = require('@spectrum/kulcon').init('check-vars');
-var fsx = require('fs-promise');
+var fsx = require('fs-extra');
 
 function checkVars(stylusCSS) {
   var lines = stylusCSS.split('\n');

@@ -21,30 +21,35 @@
 
 'use strict';
 
-var postcss = require('postcss');
-var autoprefixer = require('autoprefixer');
-var fsx = require('fs-promise');
-var log = require('@spectrum/kulcon').init('run-post-css');
-
-var targetBrowsers = [
-  'IE >= 10',
-  'last 2 Chrome versions',
-  'last 2 Firefox versions',
-  'last 2 Safari versions',
-  'last 2 iOS versions'
-];
-
-var cleaner  = postcss([ autoprefixer({ add: false, browsers: [] }) ]);
-var prefixer = postcss([ autoprefixer({ browsers: targetBrowsers }) ]);
+const postcss = require('postcss');
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+const jecter = require('./jecter');
+const fsx = require('fs-extra');
+const log = require('@spectrum/kulcon').init('run-post-css');
+const domRef = require('./documentation/index.js');
+const Promise = require('bluebird');
 
 
-function cleanCss(cssString) {
-  return cleaner.process(cssString)
+
+function cleanCss(cssData) {
+  return postcss()
+    .use(autoprefixer({ add: false, browsers: [] }))
+    .process(cssData)
     .catch(handleCleanError);
 }
 
-function autoprefix(cleaned) {
-  return prefixer.process(cleaned.css)
+function autoprefix(cssData) {
+  let targetBrowsers = [
+    'IE >= 10',
+    'last 2 Chrome versions',
+    'last 2 Firefox versions',
+    'last 2 Safari versions',
+    'last 2 iOS versions'
+  ];
+  return postcss()
+    .use(autoprefixer({ browsers: targetBrowsers }))
+    .process(cssData.css)
     .catch(handleAutoprefixError);
 }
 
@@ -53,6 +58,28 @@ function writeCSSOutput(cssString, colorStop) {
   log.info('Writing', cssWriteDest);
   return fsx.outputFile(cssWriteDest, cssString)
     .catch(handleWriteError);
+}
+
+function tokenReplaceDocs(cssData) {
+  const targetElements = [];
+  const targetVariants = [];
+  const whitelist = false;
+  const srcRoot = process.cwd();
+
+  console.log('sending src root', srcRoot);
+
+  return domRef.fetchElementsForType(srcRoot, targetElements, targetVariants, 'html', 'topdoc', false)
+    .then(elements => {
+      log.info(`Topdoc token replace running for elements`);
+      return postcss()
+        .use(jecter({ data:elements }))
+        .process(cssData)
+        .catch(handleDocsError);
+    })
+    .catch(error => {
+      console.log('rejection loading documentation source');
+      console.error(error);
+    });
 }
 
 
@@ -68,17 +95,22 @@ function handleWriteError(error) {
   handleError(error, 'Error writing css to file!');
 }
 
+function handleDocsError(error) {
+  handleError(error, 'Error updating css documentation');
+}
+
 function handleError(error, warning) {
   log.warn(warning);
   log.error(error);
   process.exit(-1);
 }
 
-module.exports = function(cssString, colorStop) {
+module.exports = function(cssData, colorStop) {
   var colorStop = colorStop || 'light';
   log.info('PostCSS for ', colorStop);
-  return cleanCss(cssString)
+  return cleanCss(cssData)
     .then(autoprefix)
+    .then(tokenReplaceDocs)
     .then(function (output) {
       writeCSSOutput(output, colorStop);
     })

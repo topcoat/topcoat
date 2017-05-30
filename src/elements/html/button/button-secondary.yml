@@ -1,0 +1,12 @@
+---
+name: Button - Secondary
+description: A Spectrum 'secondary' style button
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--secondary">Button</button>
+
+  <button class="spectrum-Button spectrum-Button--secondary"
+  disabled>Button</button>

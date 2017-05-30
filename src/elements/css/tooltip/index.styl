@@ -1,0 +1,79 @@
+@import 'abstract/components/tooltip/index.styl'
+
+.spectrum-Tooltip {
+  spectrum-tooltip()
+}
+
+.spectrum-Tooltip-content {
+  spectrum-tooltip-content()
+
+  .spectrum-Link {
+    spectrum-tooltip-href()
+  }
+}
+
+.spectrum-Tooltip--large {
+  spectrum-tooltip--large()
+}
+
+.spectrum-Tooltip-typeIcon {
+  spectrum-tooltip-typeIcon()
+}
+
+.spectrum-Tooltip--is-open {
+  spectrum-tooltip--is-open()
+}
+
+.spectrum-Tooltip--top {
+  spectrum-tooltip-wrapped-top()
+}
+
+.spectrum-Tooltip--right {
+  spectrum-tooltip-wrapped-right()
+
+  .spectrum-Tooltip-tip {
+    spectrum-tooltip-right-tip()
+  }
+}
+
+.spectrum-Tooltip--left {
+  spectrum-tooltip-wrapped-left()
+
+  .spectrum-Tooltip-tip {
+    spectrum-tooltip-left-tip()
+  }
+}
+
+.spectrum-Tooltip--bottom {
+  spectrum-tooltip-wrapped-bottom()
+
+  .spectrum-Tooltip-tip {
+    spectrum-tooltip-bottom-tip()
+  }
+}
+
+.spectrum-Tooltip-hover {
+  spectrum-tooltip-hover()
+
+  &:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+    spectrum-tooltip-bottom-hover()
+  }
+
+  &:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+    spectrum-tooltip-top-hover()
+  }
+
+  &:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+    spectrum-tooltip-left-hover()
+  }
+
+  &:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+    spectrum-tooltip-right-hover()
+  }
+}
+
+.spectrum-Tooltip-tip {
+  spectrum-tooltip-tip()
+}
+
+@import 'skin.styl'

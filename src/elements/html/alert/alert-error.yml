@@ -1,0 +1,9 @@
+---
+name: Alert - Error
+description: The Spectrum alert 'error'
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--error">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <div class="spectrum-Alert-header">Error Alert - Oh no</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>

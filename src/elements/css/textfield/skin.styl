@@ -1,0 +1,82 @@
+@import 'abstract/components/textfield/skin.styl'
+
+// TODO: is it wonky that textarea shares the selector?
+// It's a little wonky, right?
+
+/*! topdoc
+{{ textarea-default-topdoc }}
+*/
+
+/*! topdoc
+{{ textarea-quiet-topdoc }}
+*/
+
+
+/*! topdoc
+{{ textfield-default-topdoc }}
+*/
+.spectrum-Textfield {
+  spectrum-textfield()
+
+  &::placeholder {
+    spectrum-textfield-placeholder()
+  }
+
+  &:hover {
+    spectrum-textfield--hover()
+
+    &::placeholder {
+      spectrum-textfield-placeholder--hover()
+    }
+  }
+
+  &:active {
+    spectrum-textfield--active()
+  }
+
+  &:focus {
+    spectrum-textfield--focus()
+  }
+
+  &[disabled] {
+    spectrum-textfield--disabled()
+
+    &::placeholder {
+      spectrum-textfield-placeholder--disabled()
+    }
+  }
+
+  &:invalid {
+    spectrum-textfield--invalid()
+  }
+}
+
+
+/*! topdoc
+{{ textfield-quiet-topdoc }}
+*/
+.spectrum-Textfield--quiet {
+  spectrum-textfield--quiet()
+
+  &:hover {
+    spectrum-textfield--quiet--hover()
+  }
+
+  &:active {
+    spectrum-textfield--quiet--active()
+  }
+
+  &:focus {
+    spectrum-textfield--quiet--focus()
+  }
+
+  &:disabled {
+    spectrum-textfield--quiet--disabled()
+  }
+
+  &:invalid {
+    spectrum-textfield--quiet--invalid()
+  }
+}
+
+
