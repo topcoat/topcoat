@@ -41,5 +41,8 @@
     "stylus": "^0.54.5",
     "svg-stylus": "0.0.5",
     "topdoc": "^1.0.5"
+  },
+  "dependencies": {
+    "jsdom": "^11.0.0"
   }
 }
