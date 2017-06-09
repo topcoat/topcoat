@@ -1,0 +1,45 @@
+---
+  name: Slider - Ramp
+  description: Spectrum ramp slider
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused state
+    :active: Active state
+  markup: |
+    <formfield class="spectrum-Slider spectrum-Slider--ramp">
+      <div class="spectrum-Slider-Label">
+        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
+        <label class="spectrum-Slider-Label--Value">14</label>
+      </div>
+      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+        <div class="spectrum-Slider-track">
+          <svg class="spectrum-Slider-track--ramp" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              xml:space="preserve">
+          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"/>
+          </svg>
+        </div>
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
+          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+        </div>
+      </div>
+    </formfield>
+    <formfield class="spectrum-Slider spectrum-Slider--ramp spectrum-Slider--disabled">
+      <div class="spectrum-Slider-Label">
+        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-Label--Value">14</label>
+      </div>
+      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+        <div class="spectrum-Slider-track">
+          <svg class="spectrum-Slider-track--ramp" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              xml:space="preserve">
+          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"/>
+          </svg>
+        </div>
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
+          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+        </div>
+      </div>
+    </formfield>
+
+
