@@ -21,7 +21,7 @@
     "release": "dna-npm-bump-version && dna-npm-release"
   },
   "devDependencies": {
-    "@spectrum/dna-npm-release": "^0.x",
+    "@spectrum/dna-npm-release": "^1.0.0",
     "@spectrum/dna-topdoc-template": "^0.2.0",
     "@spectrum/kulcon": "^0.0.3",
     "@spectrum/site-resources": "^0.3.0",
