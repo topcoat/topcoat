@@ -1,0 +1,5 @@
+---
+name: Label - Top
+description: A Spectrum label in the top variant.
+markup: |
+  <label class="spectrum-Label spectrum-Label--top">Spectrum Label</label>
