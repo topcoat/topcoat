@@ -1,5 +1,5 @@
 ---
-name: Radio - disabled
+name: Radio - Disabled
 description: The 'disabled' Spectrum radio
 modifiers:
   ':disabled': Disabled state

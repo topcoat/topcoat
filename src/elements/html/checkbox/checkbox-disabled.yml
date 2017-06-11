@@ -1,5 +1,5 @@
 ---
-name: Checkbox - disabled
+name: Checkbox - Disabled
 description: The 'disabled' Spectrum checkbox
 modifiers:
   ':disabled': Disabled state

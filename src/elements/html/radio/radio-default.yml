@@ -1,5 +1,5 @@
 ---
-name: Radio
+name: Radio - Default
 description: The Spectrum radio thingy
 modifiers:
   ':disabled': Disabled state
