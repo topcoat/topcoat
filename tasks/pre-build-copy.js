@@ -34,8 +34,6 @@ var excludeExtensions = [
 ];
 
 
-var srcSource = 'src/';
-var srcDest = 'dist/src/';
 var abstractSource = 'node_modules/@spectrum/spectrum-abstract-stylus/dist/';
 var abstractDest = 'temp/abstract/';
 var iconStylusSource = 'node_modules/@spectrum/spectrum-icons/dist/font/stylus/';
@@ -54,15 +52,10 @@ function iconCopyFontFilter(file) {
 
 function createDistDirs() {
   return Promise.all([
-    fsx.mkdirs(srcDest),
     fsx.mkdirs(abstractDest),
     fsx.mkdirs(iconFontDest),
     fsx.mkdirs(iconStylusDest)
   ]);
-}
-
-function copySource() {
-  return asyncCopy('source', srcSource, srcDest);
 }
 
 function copyAbstractSource() {
@@ -92,7 +85,6 @@ module.exports = function() {
   log.info('Starting pre-processing');
   return createDistDirs().then(() => {
     return Promise.all([
-      copySource(),
       copyAbstractSource(),
       copyIconFont(),
       copyIconStylus()
