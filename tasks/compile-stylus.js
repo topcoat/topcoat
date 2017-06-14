@@ -22,37 +22,45 @@
 'use strict';
 require('any-promise/register/bluebird');
 var Promise = require('bluebird');
-var stylus = Promise.promisifyAll(require('stylus'));
+var stylus = require('stylus');
 var svgstylus = require('svg-stylus');
 var checkvars = require('./check-vars.js');
 var fsx = require('fs-extra');
 var log = require('@spectrum/kulcon').init('compile-stylus');
 const path = require('path');
 
-var options = {
-  compress: false,
-  use: [
-    svgstylus()
-  ],
-  paths: [
-    'docs/',
-    'src/elements/css',
-    'dist/',
-    'temp/'
-  ]
-};
-
-function readStylusIndex(colorStop) {
-  // var stylusIndex = 'src/spectrum-' + colorStop + '.styl';
-  const stylusIndex = path.resolve('src', 'elements', 'css', `spectrum-${colorStop}.styl`);
+function readStylusIndex(stylusIndex) {
   log.info('Reading stylus code from', stylusIndex);
   return fsx.readFile(stylusIndex).catch(handleReadError);
 }
 
-function compileStylus(stylusBuffer) {
-  log.info('Rendering stylus input to css');
-  return stylus.renderAsync(stylusBuffer.toString(), options)
-    .catch(handleCompileError);
+function compileStylus(stylusIndex) {
+  return function(stylusBuffer) {
+    log.info('Rendering stylus input to css');
+
+    var promise = new Promise(function(resolve, reject) {
+      stylus(stylusBuffer.toString())
+        .set('paths', [
+          // Set the path to the directory containing the file we're importing
+          path.dirname(stylusIndex),
+
+          // Add the node_modules folder so we can import deps
+          'node_modules/'
+        ])
+        .set('compress', true)
+        .use(svgstylus())
+        .render(function(err, css) {
+          if (err) {
+            reject(err);
+          }
+          else {
+            resolve(css);
+          }
+        });
+    });
+
+    return promise.catch(handleCompileError);
+  };
 }
 
 function handleReadError(error) {
@@ -71,9 +79,11 @@ function handleError(error, warning) {
 
 module.exports = function(colorStop) {
   var colorStop = colorStop || 'light';
+  const stylusIndex = path.resolve('src', 'elements', 'css', `spectrum-${colorStop}.styl`);
+
   log.info('Starting css compile for ', colorStop);
-  return readStylusIndex(colorStop)
-    .then(compileStylus)
+  return readStylusIndex(stylusIndex)
+    .then(compileStylus(stylusIndex))
     .then(checkvars)
     .catch(handleError);
 };

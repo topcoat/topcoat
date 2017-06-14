@@ -25,8 +25,6 @@
     "@spectrum/dna-topdoc-template": "^0.2.0",
     "@spectrum/kulcon": "^0.0.3",
     "@spectrum/site-resources": "^0.3.0",
-    "@spectrum/spectrum-abstract-stylus": "^0.3.0",
-    "@spectrum/spectrum-icons": "^0.0.2",
     "any-promise": "^1.3.0",
     "autoprefixer": "^6.5.3",
     "bluebird": "^3.5.0",
@@ -41,9 +39,12 @@
     "rimraf": "^2.5.4",
     "stylus": "^0.54.5",
     "svg-stylus": "0.0.5",
-    "topdoc": "^1.0.5"
+    "topdoc": "^1.0.5",
+    "xmldoc": "^1.1.0"
   },
   "dependencies": {
+    "@spectrum/spectrum-abstract-stylus": "^0.3.0",
+    "@spectrum/spectrum-icons": "^0.0.2",
     "jsdom": "^11.0.0"
   }
 }
