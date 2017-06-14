@@ -5,39 +5,14 @@ markup: |
   <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
   style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
 
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
-  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
+  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
 
   <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue"
   style="margin: 0rem 0.25rem 0.25rem;">Blue Label</span>
 
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
-  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
-
-  <br>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--seafoam"
-  style="margin: 0rem 0.25rem 0.25rem;">Seafoam Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--periwinkle"
-  style="margin: 0rem 0.25rem 0.25rem;">Periwinkle Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--fuchsia"
-  style="margin: 0rem 0.25rem 0.25rem;">Fuchsia Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
+  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
 
   <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange"
   style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
-
-  <br>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--yellow"
-  style="margin: 0rem 0.25rem 0.25rem;">Yellow Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--plum"
-  style="margin: 0rem 0.25rem 0.25rem;">Plum Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--cyan"
-  style="margin: 0rem 0.25rem 0.25rem;">Cyan Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--kellygreen"
-  style="margin: 0rem 0.25rem 0.25rem;">Kelly Green Label</span>

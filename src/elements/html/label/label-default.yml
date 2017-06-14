@@ -4,30 +4,11 @@ description: A Spectrum label
 markup: |
   <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
 
-  <span class="spectrum-Label spectrum-Label--red">Red Label</span>
+  <span class="spectrum-Label spectrum-Label--green">Green Label</span>
 
   <span class="spectrum-Label spectrum-Label--blue">Blue Label</span>
 
-  <span class="spectrum-Label spectrum-Label--green">Green Label</span>
-
-  <br>
-
-  <span class="spectrum-Label spectrum-Label--seafoam">Seafoam Label</span>
-
-  <span class="spectrum-Label spectrum-Label--periwinkle">Periwinkle
-  Label</span>
-
-  <span class="spectrum-Label spectrum-Label--fuchsia">Fuchsia Label</span>
+  <span class="spectrum-Label spectrum-Label--red">Red Label</span>
 
   <span class="spectrum-Label spectrum-Label--orange">Orange Label</span>
 
-  <br>
-
-  <span class="spectrum-Label spectrum-Label--yellow">Yellow Label</span>
-
-  <span class="spectrum-Label spectrum-Label--plum">Plum Label</span>
-
-  <span class="spectrum-Label spectrum-Label--cyan">Cyan Label</span>
-
-  <span class="spectrum-Label spectrum-Label--kellygreen">Kelly Green
-  Label</span>
