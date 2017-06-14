@@ -1,6 +1,6 @@
 {
   "name": "@spectrum/spectrum-css",
-  "version": "2.0.0-beta.14",
+  "version": "2.0.0-beta.15",
   "scripts": {
     "clean": "run-p clean:temp clean:dist",
     "clean:dist": "rimraf dist",
