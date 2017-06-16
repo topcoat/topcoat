@@ -30,8 +30,8 @@ var log = require('@spectrum/kulcon').init('start-build');
 log.info('Starting...');
 
 // holds the color stop names (should be fetched via config) ( in balthazar ?)
-// var colorStopNames = ['darkest', 'dark', 'light', 'lightest'];
-var colorStopNames = ['light'];
+var colorStopNames = ['darkest', 'dark', 'light', 'lightest'];
+//var colorStopNames = ['light'];
 
 preprocess()
  .then(buildAllColorStops)
