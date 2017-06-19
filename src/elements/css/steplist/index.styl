@@ -1,0 +1,163 @@
+@import '@spectrum/spectrum-abstract-stylus/dist/components/steplist/index.styl'
+
+/*! topdoc
+{{ steplist-default-topdoc }}
+*/
+
+/*! topdoc
+{{ steplist-label-topdoc }}
+*/
+
+/*! topdoc
+{{ steplist-tooltip-topdoc }}
+*/
+
+.spectrum-Steplist {
+  spectrum-steplist()
+}
+
+.spectrum-Steplist--interactive {
+  .spectrum-Steplist-label,
+  .spectrum-Steplist-markerContainer {
+     spectrum-steplist--interactive()
+  }
+}
+
+// Small (w/o label or tooltip)
+.spectrum-Steplist--small {
+  spectrum-steplist--small()
+
+  .spectrum-Steplist-step {
+    spectrum-steplist-step--small()
+
+    // Disable Label
+    .spectrum-Steplist-label {
+      spectrum-steplist-label--small()
+    }
+
+    &:first-child, &:last-child {
+      spectrum-steplist-step--small--edgechild()
+    }
+
+    // Disable first line
+    &:first-child {
+      .spectrum-Steplist-markerContainer {
+        spectrum-steplist-markercontainer--small--firstchild()
+      }
+    }
+
+    &:last-child {
+      .spectrum-Steplist-markerContainer {
+        spectrum-steplist-markercontainer--small--lastchild()
+      }
+    }
+  }
+}
+
+.spectrum-Steplist-step {
+  spectrum-steplist-step()
+
+  // Completed State
+  &.is-complete {
+    .spectrum-Steplist-marker {
+      spectrum-steplist-marker--is-complete()
+    }
+
+    // The next step's line should be solid
+    & + .spectrum-Steplist-step .spectrum-Steplist-segment {
+      spectrum-steplist-segment--solid()
+    }
+  }
+
+  // Selected state
+  &.is-selected {
+    // Focus
+    &:focus {
+      spectrum-steplist-step--is-selected--focus()
+    }
+    .spectrum-Steplist-marker {
+      spectrum-steplist-marker--is-selected()
+    }
+  }
+}
+
+.spectrum-Steplist-label {
+  spectrum-steplist-label()
+}
+
+.spectrum-Steplist-markerContainer {
+  spectrum-steplist-markercontainer()
+}
+
+// Circle step marker
+.spectrum-Steplist-marker {
+  spectrum-steplist-marker()
+}
+
+// Step line
+.spectrum-Steplist-segment {
+  spectrum-steplist-segment()
+  // Default is dashed
+  spectrum-steplist-segment--dashed()
+}
+
+// First step overrides
+.spectrum-Steplist-step:first-child {
+  .spectrum-Steplist-markerContainer {
+    spectrum-steplist-markercontainer--firstchild()
+  }
+
+  .spectrum-Steplist-label {
+    spectrum-steplist-label--firstchild()
+  }
+
+  .spectrum-Steplist-segment {
+    spectrum-steplist-segment--firstchild()
+  }
+
+  .spectrum-Steplist-tooltip {
+    spectrum-steplist-tooltip--firstchild()
+  }
+}
+
+// Last step overrides
+.spectrum-Steplist-step:last-child {
+  .spectrum-Steplist-label {
+    spectrum-steplist-label--lastchild()
+  }
+
+  .spectrum-Steplist-markerContainer {
+    spectrum-steplist-markercontainer--lastchild()
+  }
+
+  .spectrum-Steplist-segment {
+    spectrum-steplist-segment--lastchild()
+  }
+
+  .spectrum-Steplist-tooltip {
+    spectrum-steplist-tooltip--lastchild()
+  }
+}
+
+.spectrum-Steplist-step:first-child,
+.spectrum-Steplist-step:last-child {
+  spectrum-steplist-step--edgechild()
+}
+
+// Single step
+.spectrum-Steplist-step:only-child {
+  .spectrum-Steplist-label {
+    spectrum-steplist-label--onlychild()
+  }
+
+  .spectrum-Steplist-markerContainer {
+    spectrum-steplist-markercontainer--onlychild()
+  }
+}
+
+// Tooltip
+.spectrum-Steplist-tooltip {
+  spectrum-steplist-tooltip()
+}
+
+@require 'skin.styl'
