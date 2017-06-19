@@ -1,0 +1,31 @@
+---
+name: Steplist - Plain
+description: A steplist w/o labels or tooltips
+markup: |
+  <div class="spectrum-Steplist spectrum-Steplist--small">
+    <div class="spectrum-Steplist-step is-complete">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment">
+      </span>
+    </div>
+    <div class="spectrum-Steplist-step is-complete">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step is-selected">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment"></span>
+    </div>
+  </div>

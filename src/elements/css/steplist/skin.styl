@@ -1,0 +1,68 @@
+@import '@spectrum/spectrum-abstract-stylus/dist/components/steplist/skin.styl'
+
+.spectrum-Steplist {
+
+  // Default Label Style is 'incomplete'
+  .spectrum-Steplist-label {
+    spectrum-steplist-label--incomplete()
+  }
+
+  // Default Marker Style is 'incomplete'
+  .spectrum-Steplist-marker {
+    spectrum-steplist-marker--incomplete()
+  }
+
+  // Default Line Style is 'incomplete'
+  .spectrum-Steplist-segment {
+    spectrum-steplist-segment--incomplete()
+  }
+
+  .spectrum-Steplist-step {
+
+    // Step Completed
+    &.is-complete {
+      .spectrum-Steplist-label {
+        spectrum-steplist-label--complete()
+      }
+      .spectrum-Steplist-marker {
+        spectrum-steplist-marker--complete()
+      }
+      .spectrum-Steplist-segment {
+        spectrum-steplist-segment--complete()
+      }
+    }
+
+    // Step Selected aka Current
+    &.is-selected {
+      .spectrum-Steplist-label {
+        spectrum-steplist-label--current()
+      }
+      .spectrum-Steplist-marker {
+        spectrum-steplist-marker--current()
+      }
+      .spectrum-Steplist-segment {
+        spectrum-steplist-segment--complete()
+      }
+    }
+  }
+
+  // Interactivity Styles
+  &.spectrum-Steplist--interactive {
+    .spectrum-Steplist-step {
+
+      // Step Hovered
+      &:hover {
+        .spectrum-Steplist-marker {
+          spectrum-steplist-marker--hover()
+        }
+      }
+
+      // Step Focused
+      &:focus {
+        .spectrum-Steplist-marker {
+          spectrum-steplist-marker--focus()
+        }
+      }
+    }
+  }
+}
