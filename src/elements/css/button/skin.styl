@@ -63,3 +63,35 @@
 .spectrum-Button--quiet--action {
   spectrum-button--quiet--action()
 }
+
+
+.spectrum-Button--quiet--warning {
+  background-color: $spectrum-button-quiet-warning-background-color-default
+  border-color: $spectrum-button-quiet-warning-border-color-default
+  color: $spectrum-button-quiet-warning-text-color-default
+
+  &:focus {
+    background-color: $spectrum-button-quiet-warning-background-color-focus
+    border-color: $spectrum-button-quiet-warning-border-color-focus
+    color: $spectrum-button-quiet-warning-text-color-focus
+  }
+
+  &:hover {
+    background-color: $spectrum-button-quiet-warning-background-color-hover
+    border-color: $spectrum-button-quiet-warning-border-color-hover
+    color: $spectrum-button-quiet-warning-text-color-hover
+  }
+
+  &:active {
+    background-color: $spectrum-button-quiet-warning-background-color-active
+    border-color: $spectrum-button-quiet-warning-border-color-active
+    color: $spectrum-button-quiet-warning-text-color-active
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: $spectrum-button-quiet-warning-background-color-disabled
+    border-color: $spectrum-button-quiet-warning-border-color-disabled
+    color: $spectrum-button-quiet-warning-text-color-disabled
+  }
+}
