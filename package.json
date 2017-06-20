@@ -5,7 +5,14 @@
     "clean": "run-p clean:temp clean:dist",
     "clean:dist": "rimraf dist",
     "clean:temp": "rimraf temp",
-    "build": "run-s clean build:tasks-all docs-all clean:temp",
+    "build": "run-s clean:dist mkdir balthazar postcss postcss-light postcss-dark",
+    "mkdir": "mkdir -p dist/vars",
+    "postcss": "postcss index.css -u postcss-nested postcss-import postcss-custom-properties postcss-calc > dist/spectrum.css",
+    "postcss-light": "postcss spectrum-light.css -u postcss-nested postcss-import postcss-custom-properties postcss-calc > dist/spectrum-light.css",
+    "postcss-dark": "postcss spectrum-dark.css -u postcss-nested postcss-import postcss-custom-properties postcss-calc > dist/spectrum-dark.css",
+
+    "balthazar": "balthazar -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json",
+    "build-old": "run-s clean balthazar build:tasks-all docs-all clean:temp",
     "build:tasks-all": "node ./tasks/start-build.js",
     "lint": "eslint tasks/*.js",
     "docs-all": "run-s fetch-all docs:compile docs:copy-resources",
@@ -21,10 +28,12 @@
     "release": "dna-npm-bump-version && dna-npm-release"
   },
   "devDependencies": {
+    "@spectrum/balthazar": "^0.6.1",
     "@spectrum/dna-npm-release": "^1.0.0",
     "@spectrum/dna-topdoc-template": "^0.2.0",
     "@spectrum/kulcon": "^0.0.3",
     "@spectrum/site-resources": "^0.3.0",
+    "@spectrum/spectrum-origins": "^0.5.3",
     "any-promise": "^1.3.0",
     "autoprefixer": "^6.5.3",
     "bluebird": "^3.5.0",
@@ -36,6 +45,10 @@
     "npm-run-all": "^3.1.2",
     "onchange": "^3.0.2",
     "postcss": "^5.2.6",
+    "postcss-calc": "^6.0.0",
+    "postcss-cli": "^4.1.0",
+    "postcss-custom-properties": "^6.0.1",
+    "postcss-nested": "^2.0.2",
     "rimraf": "^2.5.4",
     "stylus": "^0.54.5",
     "svg-stylus": "0.0.5",
@@ -45,6 +58,7 @@
   "dependencies": {
     "@spectrum/spectrum-abstract-stylus": "^0.3.3",
     "@spectrum/spectrum-icons": "^0.0.2",
-    "jsdom": "^11.0.0"
+    "jsdom": "^11.0.0",
+    "postcss-import": "^10.0.0"
   }
 }
