@@ -14,12 +14,15 @@ gulp.task('topdoc', function(cb) {
 });
 
 gulp.task('replace-topdoc', function(){
-  gulp.src(['src/**/*.css'])
+  gulp.src([
+    'dist/**/*.css',
+    '!dist/vars/*'
+  ])
     .pipe(replace(/\{\{\s*(.*?)\s*\}}/g, function(match, p1) {
       filePath = path.resolve('docs', p1);
       return fs.readFileSync(filePath);
     }))
-    .pipe(gulp.dest('temp/src_docs/'));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('build-docs', function(cb) {

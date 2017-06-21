@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
-var exec = require('child_process').exec;
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
+var runSequence = require('run-sequence');
 
 var processors = [
-  require('postcss-nested'),
   require('postcss-import'),
+  require('postcss-nested'),
   require('postcss-custom-properties'),
   require('postcss-calc'),
   require('postcss-pxtorem'),
@@ -19,16 +21,28 @@ var processors = [
   })
 ];
 
-gulp.task('balthazar', function(cb) {
-  exec('node_modules/.bin/balthazar -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json', function (err, stdout, stderr) {
-    process.stdout.write(stdout);
-    process.stderr.write(stderr);
-    cb(err);
-  });
+gulp.task('build-css', ['balthazar'], function(cb) {
+  runSequence(
+    [
+      'build-css:individual-components',
+      'build-css:all-components'
+    ],
+    cb
+  )
 });
 
-gulp.task('build-css', ['balthazar'], function() {
-  return gulp.src('src/*.css')
+gulp.task('build-css:individual-components', function() {
+  return gulp.src('src/*/index.css')
+    .pipe(postcss(processors))
+    .pipe(rename(function(path) {
+      path.basename = path.dirname;
+      path.dirname = '';
+    }))
+    .pipe(gulp.dest('dist/components/'));
+});
+
+gulp.task('build-css:all-components', function() {
+  return gulp.src('src/spectrum*.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });
