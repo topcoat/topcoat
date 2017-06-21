@@ -1,0 +1,55 @@
+@import '@spectrum/spectrum-abstract-stylus/dist/components/toggle/skin.styl'
+
+.spectrum-Toggle-switch-label {
+  spectrum-toggle-switch-label()
+}
+
+.spectrum-Toggle-switch-content {
+  spectrum-toggle-switch-content()
+}
+
+.spectrum-Toggle-switch-input {
+  &:checked + .spectrum-Toggle-switch-content {
+    spectrum-toggle-switch-content--checked()
+  }
+
+  &:focus + .spectrum-Toggle-switch-content {
+    spectrum-toggle-switch-content--focus()
+  }
+}
+
+/*! topdoc
+{{ toggle-onoffdefault-topdoc }}
+*/
+
+/*! topdoc
+{{ toggle-onoffdisabled-topdoc }}
+*/
+.spectrum-Toggle-switch {
+
+  &:hover {
+    .spectrum-Toggle-switch-content {
+      spectrum-toggle-switch-content--hover()
+    }
+  }
+
+  &:active {
+    .spectrum-Toggle-switch-content {
+      spectrum-toggle-switch-content--active()
+    }
+  }
+
+  &[disabled] {
+    .spectrum-Toggle-switch-input {
+      spectrum-toggle-switch-input--disabled()
+    }
+
+    .spectrum-Toggle-switch-content {
+      spectrum-toggle-switch-content--disabled()
+    }
+
+    .spectrum-Toggle-switch-label {
+      spectrum-toggle-switch-label--disabled()
+    }
+  }
+}

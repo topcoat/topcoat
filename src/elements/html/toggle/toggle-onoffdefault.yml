@@ -1,0 +1,19 @@
+---
+name: Toggle Switch - On/Off
+description: The Spectrum toggle on/off
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Toggle-switch">
+    <input type="checkbox" class="spectrum-Toggle-switch-input" id="toggle-onoff-0">
+    <span class="spectrum-Toggle-switch-content"></span>
+    <label class="spectrum-Toggle-switch-label" for="toggle-onoff-0">Toggle Off</label>
+  </div>
+  <div class="spectrum-Toggle-switch">
+    <input type="checkbox" class="spectrum-Toggle-switch-input" id="toggle-onoff-1" checked>
+    <span class="spectrum-Toggle-switch-content"></span>
+    <label class="spectrum-Toggle-switch-label" for="toggle-onoff-1">Toggle On</label>
+  </div>
+
