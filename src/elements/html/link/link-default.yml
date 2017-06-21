@@ -1,5 +1,0 @@
----
-name: Link - Default
-description: A link
-markup: |
-  <a href="#" class="spectrum-Link">Link using spectrum-Link</a>

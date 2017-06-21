@@ -10,7 +10,6 @@
     "postcss": "postcss index.css -u postcss-nested postcss-import postcss-custom-properties postcss-calc > dist/spectrum.css",
     "postcss-light": "postcss spectrum-light.css -u postcss-nested postcss-import postcss-custom-properties postcss-calc > dist/spectrum-light.css",
     "postcss-dark": "postcss spectrum-dark.css -u postcss-nested postcss-import postcss-custom-properties postcss-calc > dist/spectrum-dark.css",
-
     "balthazar": "balthazar -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json",
     "build-old": "run-s clean balthazar build:tasks-all docs-all clean:temp",
     "build:tasks-all": "node ./tasks/start-build.js",
@@ -38,8 +37,14 @@
     "autoprefixer": "^6.5.3",
     "bluebird": "^3.5.0",
     "cpx": "^1.5.0",
+    "del": "^3.0.0",
     "eslint": "^3.12.0",
     "fs-extra": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-exec": "^2.1.3",
+    "gulp-postcss": "^7.0.0",
+    "gulp-replace": "^0.6.0",
+    "gulp-util": "^3.0.8",
     "js-yaml": "^3.8.4",
     "livereload": "^0.6.0",
     "npm-run-all": "^3.1.2",
@@ -49,7 +54,9 @@
     "postcss-cli": "^4.1.0",
     "postcss-custom-properties": "^6.0.1",
     "postcss-nested": "^2.0.2",
+    "require-dir": "^0.3.2",
     "rimraf": "^2.5.4",
+    "run-sequence": "^1.2.2",
     "stylus": "^0.54.5",
     "svg-stylus": "0.0.5",
     "topdoc": "^1.0.5",
@@ -59,6 +66,7 @@
     "@spectrum/spectrum-abstract-stylus": "^0.3.3",
     "@spectrum/spectrum-icons": "^0.0.2",
     "jsdom": "^11.0.0",
-    "postcss-import": "^10.0.0"
+    "postcss-import": "^10.0.0",
+    "postcss-pxtorem": "^4.0.1"
   }
 }

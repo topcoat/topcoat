@@ -1,9 +1,0 @@
----
-name: Alert - Success
-description: The Spectrum alert 'success'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--success">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--CheckmarkCircle spectrum-Alert-typeIcon" role="img" aria-label="check"></div>
-    <div class="spectrum-Alert-header">Successful Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>

@@ -1,4 +1,0 @@
-/* Import light variables to start, giving us base colors and sizes */
-@import 'dist/vars/spectrum-light.css';
-
-@import 'button/index.css';
