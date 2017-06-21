@@ -11,6 +11,13 @@
   .spectrum-Icon {
     spectrum-button-icon()
   }
+
+  .spectrum-Button-label--with-icon {
+    // spectrum-origins define this variable as `$spectrum-button-label-icon-gap-size-default` but spectrum-abstract-stylus uses `$spectrum-button-label-icon-gap-size`
+    // so its a workaround for that
+    $spectrum-button-label-icon-gap-size=8px;
+    spectrum-button-label--with-icon()
+  }
 }
 
 .spectrum-Button--action {
