@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
 var replace = require('gulp-replace');
+var insert = require('gulp-insert');
+var merge = require('merge-stream');
 var runSequence = require('run-sequence');
 
 var processors = [
@@ -25,22 +27,64 @@ gulp.task('build-css', ['balthazar'], function(cb) {
   runSequence(
     [
       'build-css:individual-components',
+      'build-css:individual-component-colorstops',
       'build-css:all-components'
     ],
     cb
   )
 });
 
+/**
+  Builds individual components (dimensions only)
+*/
 gulp.task('build-css:individual-components', function() {
   return gulp.src('src/*/index.css')
     .pipe(postcss(processors))
-    .pipe(rename(function(path) {
-      path.basename = path.dirname;
-      path.dirname = '';
-    }))
     .pipe(gulp.dest('dist/components/'));
 });
 
+/**
+  Builds all skin files individually against each colorstop for each component
+*/
+gulp.task('build-css:individual-component-colorstops', function() {
+  return merge(
+    gulp.src('src/*/skin.css')
+    .pipe(insert.prepend("@import '../../dist/vars/spectrum-dark.css';"))
+    .pipe(postcss(processors))
+    .pipe(rename(function(path) {
+      path.basename = 'dark';
+    }))
+    .pipe(gulp.dest('dist/components/')),
+
+    gulp.src('src/*/skin.css')
+      .pipe(insert.prepend("@import '../../dist/vars/spectrum-light.css';"))
+      .pipe(postcss(processors))
+      .pipe(rename(function(path) {
+        path.basename = 'light';
+      }))
+      .pipe(gulp.dest('dist/components/')),
+
+    gulp.src('src/*/skin.css')
+      .pipe(insert.prepend("@import '../../dist/vars/spectrum-lightest.css';"))
+      .pipe(postcss(processors))
+      .pipe(rename(function(path) {
+        path.basename = 'lightest';
+      }))
+      .pipe(gulp.dest('dist/components/')),
+
+    gulp.src('src/*/skin.css')
+      .pipe(insert.prepend("@import '../../dist/vars/spectrum-darkest.css';"))
+      .pipe(postcss(processors))
+      .pipe(rename(function(path) {
+        path.basename = 'darkest';
+      }))
+      .pipe(gulp.dest('dist/components/'))
+  );
+});
+
+/**
+  Builds all components and all color stops for all components
+*/
 gulp.task('build-css:all-components', function() {
   return gulp.src('src/spectrum*.css')
     .pipe(postcss(processors))
