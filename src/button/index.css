@@ -14,7 +14,7 @@
 
   font-family: inherit;
   font-size: var(--spectrum-button-label-font-size-default);
-  line-height: var(--spectrum-button-height-default) - calc(2 * var(--spectrum-button-border-size-default));
+  line-height: calc(var(--spectrum-button-height-default) - calc(2 * var(--spectrum-button-border-size-default)));
   font-weight: var(--spectrum-button-label-font-weight-default);
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
