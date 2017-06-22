@@ -1,0 +1,269 @@
+.spectrum-Button {
+  .spectrum-Icon {
+    color: var(--spectrum-button-icon-color-default);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-primary-border-color-focus);
+  }
+
+  &:hover {
+    box-shadow: none;
+
+    .spectrum-Icon {
+      color: var(--spectrum-button-icon-color-hover);
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+
+    .spectrum-Icon {
+      color: var(--spectrum-button-icon-color-active);
+    }
+  }
+
+  &.is-selected .spectrum-Icon {
+    color: var(--spectrum-button-icon-color-active);
+  }
+}
+
+/* topdoc
+{{ button/button-cta.yml }}
+*/
+.spectrum-Button--cta {
+  background-color: var(--spectrum-button-cta-background-color-default);
+  border-color: var(--spectrum-button-cta-border-color-default);
+  color: var(--spectrum-button-cta-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-cta-background-color-focus);
+    border-color: var(--spectrum-button-cta-border-color-focus);
+    color: var(--spectrum-button-cta-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-cta-background-color-hover);
+    border-color: var(--spectrum-button-cta-border-color-hover);
+    color: var(--spectrum-button-cta-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-cta-background-color-active);
+    border-color: var(--spectrum-button-cta-border-color-active);
+    color: var(--spectrum-button-cta-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-cta-background-color-disabled);
+    border-color: var(--spectrum-button-cta-border-color-disabled);
+    color: var(--spectrum-button-cta-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-primary.yml }}
+*/
+.spectrum-Button--primary {
+  background-color: var(--spectrum-button-primary-background-color-default);
+  border-color: var(--spectrum-button-primary-border-color-default);
+  color: var(--spectrum-button-primary-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-primary-background-color-focus);
+    border-color: var(--spectrum-button-primary-border-color-focus);
+    color: var(--spectrum-button-primary-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-primary-background-color-hover);
+    border-color: var(--spectrum-button-primary-border-color-hover);
+    color: var(--spectrum-button-primary-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-primary-background-color-active);
+    border-color: var(--spectrum-button-primary-border-color-active);
+    color: var(--spectrum-button-primary-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-primary-background-color-disabled);
+    border-color: var(--spectrum-button-primary-border-color-disabled);
+    color: var(--spectrum-button-primary-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-secondary.yml }}
+*/
+.spectrum-Button--secondary {
+  background-color: var(--spectrum-button-secondary-background-color-default);
+  border-color: var(--spectrum-button-secondary-border-color-default);
+  color: var(--spectrum-button-secondary-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-secondary-background-color-focus);
+    border-color: var(--spectrum-button-secondary-border-color-focus);
+    color: var(--spectrum-button-secondary-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-secondary-background-color-hover);
+    border-color: var(--spectrum-button-secondary-border-color-hover);
+    color: var(--spectrum-button-secondary-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-secondary-background-color-active);
+    border-color: var(--spectrum-button-secondary-border-color-active);
+    color: var(--spectrum-button-secondary-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-secondary-background-color-disabled);
+    border-color: var(--spectrum-button-secondary-border-color-disabled);
+    color: var(--spectrum-button-secondary-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-warning.yml }}
+*/
+.spectrum-Button--warning {
+  background-color: var(--spectrum-button-warning-background-color-default);
+  border-color: var(--spectrum-button-warning-border-color-default);
+  color: var(--spectrum-button-warning-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-warning-background-color-focus);
+    border-color: var(--spectrum-button-warning-border-color-focus);
+    color: var(--spectrum-button-warning-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-warning-background-color-hover);
+    border-color: var(--spectrum-button-warning-border-color-hover);
+    color: var(--spectrum-button-warning-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-warning-background-color-active);
+    border-color: var(--spectrum-button-warning-border-color-active);
+    color: var(--spectrum-button-warning-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-warning-background-color-disabled);
+    border-color: var(--spectrum-button-warning-border-color-disabled);
+    color: var(--spectrum-button-warning-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-quiet-primary.yml }}
+*/
+.spectrum-Button--quiet--primary {
+  background-color: var(--spectrum-button-quiet-primary-background-color-default);
+  border-color: var(--spectrum-button-quiet-primary-border-color-default);
+  color: var(--spectrum-button-quiet-primary-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-quiet-primary-background-color-focus);
+    border-color: var(--spectrum-button-quiet-primary-border-color-focus);
+    color: var(--spectrum-button-quiet-primary-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-quiet-primary-background-color-hover);
+    border-color: var(--spectrum-button-quiet-primary-border-color-hover);
+    color: var(--spectrum-button-quiet-primary-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-quiet-primary-background-color-active);
+    border-color: var(--spectrum-button-quiet-primary-border-color-active);
+    color: var(--spectrum-button-quiet-primary-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-quiet-primary-background-color-disabled);
+    border-color: var(--spectrum-button-quiet-primary-border-color-disabled);
+    color: var(--spectrum-button-quiet-primary-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-quiet-secondary.yml }}
+*/
+.spectrum-Button--quiet--secondary {
+  background-color: var(--spectrum-button-quiet-secondary-background-color-default);
+  border-color: var(--spectrum-button-quiet-secondary-border-color-default);
+  color: var(--spectrum-button-quiet-secondary-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-quiet-secondary-background-color-focus);
+    border-color: var(--spectrum-button-quiet-secondary-border-color-focus);
+    color: var(--spectrum-button-quiet-secondary-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-quiet-secondary-background-color-hover);
+    border-color: var(--spectrum-button-quiet-secondary-border-color-hover);
+    color: var(--spectrum-button-quiet-secondary-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-quiet-secondary-background-color-active);
+    border-color: var(--spectrum-button-quiet-secondary-border-color-active);
+    color: var(--spectrum-button-quiet-secondary-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-quiet-secondary-background-color-disabled);
+    border-color: var(--spectrum-button-quiet-secondary-border-color-disabled);
+    color: var(--spectrum-button-quiet-secondary-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-quiet-warning.yml }}
+*/
+/*
+.spectrum-Button--quiet--warning {
+  background-color: var(--spectrum-button-quiet-warning-background-color-default);
+  border-color: var(--spectrum-button-quiet-warning-border-color-default);
+  color: var(--spectrum-button-quiet-warning-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-quiet-warning-background-color-focus);
+    border-color: var(--spectrum-button-quiet-warning-border-color-focus);
+    color: var(--spectrum-button-quiet-warning-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-quiet-warning-background-color-hover);
+    border-color: var(--spectrum-button-quiet-warning-border-color-hover);
+    color: var(--spectrum-button-quiet-warning-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-quiet-warning-background-color-active);
+    border-color: var(--spectrum-button-quiet-warning-border-color-active);
+    color: var(--spectrum-button-quiet-warning-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-quiet-warning-background-color-disabled);
+    border-color: var(--spectrum-button-quiet-warning-border-color-disabled);
+    color: var(--spectrum-button-quiet-warning-text-color-disabled);
+  }
+}
+*/

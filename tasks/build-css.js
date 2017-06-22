@@ -51,6 +51,8 @@ gulp.task('build-css:individual-component-colorstops', function() {
     gulp.src('src/*/skin.css')
     .pipe(insert.prepend("@import '../../dist/vars/spectrum-dark.css';"))
     .pipe(postcss(processors))
+    .pipe(insert.prepend('.spectrum--dark {\n'))
+    .pipe(insert.append('}\n'))
     .pipe(rename(function(path) {
       path.basename = 'dark';
     }))
@@ -59,6 +61,8 @@ gulp.task('build-css:individual-component-colorstops', function() {
     gulp.src('src/*/skin.css')
       .pipe(insert.prepend("@import '../../dist/vars/spectrum-light.css';"))
       .pipe(postcss(processors))
+      .pipe(insert.prepend('.spectrum--light {\n'))
+      .pipe(insert.append('}\n'))
       .pipe(rename(function(path) {
         path.basename = 'light';
       }))
@@ -67,6 +71,8 @@ gulp.task('build-css:individual-component-colorstops', function() {
     gulp.src('src/*/skin.css')
       .pipe(insert.prepend("@import '../../dist/vars/spectrum-lightest.css';"))
       .pipe(postcss(processors))
+      .pipe(insert.prepend('.spectrum--lightest {\n'))
+      .pipe(insert.append('}\n'))
       .pipe(rename(function(path) {
         path.basename = 'lightest';
       }))
@@ -75,6 +81,8 @@ gulp.task('build-css:individual-component-colorstops', function() {
     gulp.src('src/*/skin.css')
       .pipe(insert.prepend("@import '../../dist/vars/spectrum-darkest.css';"))
       .pipe(postcss(processors))
+      .pipe(insert.prepend('.spectrum--darkest {\n'))
+      .pipe(insert.append('}\n'))
       .pipe(rename(function(path) {
         path.basename = 'darkest';
       }))

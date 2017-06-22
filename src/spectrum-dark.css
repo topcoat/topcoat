@@ -1,0 +1,4 @@
+@import '../dist/vars/spectrum-dimensions.css';
+@import '../dist/vars/spectrum-dark.css';
+
+@import 'component-skins.css';

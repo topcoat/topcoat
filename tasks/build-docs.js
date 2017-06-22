@@ -25,10 +25,18 @@ gulp.task('replace-topdoc', function(){
     .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('copy-site-resources', function(){
+  gulp.src([
+    'node_modules/@spectrum/site-resources/lib/resources/**'
+  ])
+    .pipe(gulp.dest('dist/docs'));
+});
+
 gulp.task('build-docs', function(cb) {
   runSequence(
     'replace-topdoc',
     'topdoc',
+    'copy-site-resources',
     cb
   );
 });

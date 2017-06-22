@@ -1,0 +1,10 @@
+:root {
+  --spectrum-font-family-base: adobe-clean, Helvetica, Arial, sans-serif;
+  --spectrum-font-family-zh: adobe-clean-han-traditional, --spectrum-font-family-base;
+  --spectrum-font-family-zhhans: adobe-clean-han-simplified-c, --spectrum-font-family-base;
+  --spectrum-font-family-ko: adobe-clean-han-korean, --spectrum-font-family-base;
+  --spectrum-font-family-ja: adobe-clean-han-japanese,  --spectrum-font-family-base;
+  --spectrum-font-family-condensed: adobe-clean-condensed, --spectrum-font-family-base;
+  --spectrum-font-size: 14px;
+  --spectrum-text-body-line-height: 20px;
+}

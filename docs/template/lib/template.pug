@@ -1,0 +1,101 @@
+- var tint = 'light';
+//- TODO: magic to change color stop
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+    title Spectrum CSS - Documentation
+    meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
+
+    link(rel='stylesheet', type='text/css', href='css/vendor/normalize.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/rainbow.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/flexboxgrid.css')
+    link(rel='stylesheet', type='text/css', href=`css/vendor/spectrum-${tint}.css`)
+    link(rel='stylesheet', type='text/css', href='css/sdldocs.css')
+
+    //- this is nice of us :)
+    //if lt IE 9
+      script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+
+  body.u-sdldocs-clearfix(class='spectrum')
+    header.sdldocs-header.row
+      .col-xs-4.start-xs
+        .box
+          a.sdldocs-header-link(href='http://spectrum.corp.adobe.com')
+            img.sdldocs-header-logo-image(src='img/spectrum_logo_light.svg', alt='Adobe Spectrum Logo')
+          h3.sdldocs-header-title spectrum-css
+      .col-xs-8.end-xs
+        .box
+          label.sdldocs-colorstop-label Choose color:
+          a.sdldocs-colorstop-selector(href='#', onclick='changeCSS("css/vendor/spectrum-lightest.css", 3);', class='spectrum-Link') Lightest
+          a.sdldocs-colorstop-selector(href='#', onclick='changeCSS("css/vendor/spectrum-light.css", 3);', class='spectrum-Link') Light
+          a.sdldocs-colorstop-selector(href='#', onclick='changeCSS("css/vendor/spectrum-dark.css", 3);', class='spectrum-Link') Dark
+          a.sdldocs-colorstop-selector(href='#', onclick='changeCSS("css/vendor/spectrum-darkest.css", 3);', class='spectrum-Link') Darkest         
+
+
+    section.sdldocs-home-presentation.row.center-xs
+      .sdldocs-home-content.col-xs
+        .box
+          h1.spectrum-Heading.spectrum-Heading--display.sdldocs-home-presentation-title Disclaimer
+          p.sdldocs-home-presentation-pitch This is a test implementation
+          p.sdldocs-home-presentation-pitch for Aobe Design UI Element explorations
+          p.sdldocs-home-presentation-pitch USE CORALUI OR TORQ IF YOU ARE A PRODUCT
+
+    section.sdldocs-main-content.row
+      .sdldocs-nav.col-sm-3
+        nav.box
+          each component in document.components
+            .row.center-xs.around-xs.start-sm
+              .sdldocs-nav-item
+                  a.sdldocs-nav-link.box(href='#'+component.slug)= component.name
+
+      .sdldocs-components.col-xs-12.col-sm-8
+        each component in document.components
+          article.sdldocs-component.box
+            header.row(id=component.slug)
+              .col-xs
+                h2.sdldocs-component-name.spectrum-Heading.spectrum-Heading--pagetitle.box= component.name
+            section.sdldocs-component-description.row
+              .col-xs
+                p= component.description
+            section.sdldocs-component-markup.row
+              .col-xs-offset-1.col-xs
+                .box!= component.markup
+
+            section.sdldocs-component-example.col-xs-12
+                .row.end-xs
+                  a.sdldocs-code-link.spectrum-Button.spectrum-Button--quiet--primary.box(href="#") show markup
+                .row
+                  .sdldocs-code-example.box
+                    h3.sdldocs-code-example-title.spectrum-Heading.spectrum-Heading--subtitle2 HTML
+                    pre.html
+                      code(data-language="html")=component.markup
+    script(type="text/javascript", src='js/page-default.js')
+    script(type="text/javascript", src='js/vendor/rainbow-custom.min.js')
+    script(type="text/javascript", src='js/vendor/typekit.js')
+
+    script.
+      document.addEventListener("DOMContentLoaded", function(event) {
+      var elements = document.getElementsByClassName('sdldocs-code-link');
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+          elements[i].addEventListener("click", toggleMarkupVisibility);
+        };
+      });
+
+      var toggleMarkupVisibility = function(event) {
+        event.preventDefault();
+        // hack to back up to container and find the markup example
+        var exampleContainter = event.target.parentElement.parentElement;
+        var exampleMarkup = exampleContainter.querySelector('.sdldocs-code-example');
+        var style = window.getComputedStyle(exampleMarkup);
+        if (style.getPropertyValue('display') == 'none') {
+          event.target.innerHTML = 'hide markup';
+          exampleMarkup.style.display = 'block';
+        } else {
+          event.target.innerHTML = 'show markup';
+          exampleMarkup.style.display = 'none';
+        }
+        return false;
+      }
