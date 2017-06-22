@@ -1,0 +1,15 @@
+@import '../commons/index.css';
+
+.spectrum-Link {
+  text-decoration: none;
+  transition: color var(--spectrum-transition-time) ease-in-out;
+  outline: none;
+
+  &[disabled] {
+    opacity: 0.15;
+  }
+}
+
+.spectrum-Link--subtle {
+  text-decoration: underline;
+}

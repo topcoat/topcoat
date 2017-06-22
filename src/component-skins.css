@@ -1,4 +1,5 @@
 @import '../dist/vars/spectrum-dimensions.css';
 
+@import 'link/skin.css';
 @import 'button/skin.css';
 @import 'alert/skin.css';

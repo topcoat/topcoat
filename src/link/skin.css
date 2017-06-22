@@ -1,0 +1,35 @@
+.spectrum-Link {
+  color: var(--spectrum-link-text-color-default);
+
+  &:hover {
+    color: var(--spectrum-link-text-color-hover);
+  }
+
+  &:active {
+    color: var(--spectrum-link-text-color-active);
+  }
+
+  &:focus {
+    color: var(--spectrum-link-text-color-focus);
+    box-shadow: 0 1px 0 var(--spectrum-link-text-color-focus);
+  }
+}
+
+.spectrum-Link--subtle {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:active {
+    color: inherit;
+  }
+
+  &:focus {
+    color: inherit;
+    /* focus box-shadow color vale should be inherited like the color, too */
+    box-shadow: 0 1px 0 var(--spectrum-link-subtle-box-shadow-color-focus);
+  }
+}
+
