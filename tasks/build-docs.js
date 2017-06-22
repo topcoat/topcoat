@@ -5,7 +5,7 @@ var replace = require('gulp-replace');
 var fs = require('fs');
 var path = require('path');
 
-gulp.task('topdoc', function(cb) {
+gulp.task('build-docs:topdoc', function(cb) {
   exec('node_modules/.bin/topdoc', function (err, stdout, stderr) {
     process.stdout.write('[topdoc] '+stdout);
     process.stderr.write(stderr);
@@ -13,7 +13,7 @@ gulp.task('topdoc', function(cb) {
   });
 });
 
-gulp.task('replace-topdoc', function(){
+gulp.task('build-docs:inject-topdoc', function(){
   gulp.src([
     'dist/**/*.css',
     '!dist/vars/*'
@@ -25,7 +25,7 @@ gulp.task('replace-topdoc', function(){
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('copy-site-resources', function(){
+gulp.task('build-docs:copy-site-resources', function(){
   gulp.src([
     'node_modules/@spectrum/site-resources/lib/resources/**'
   ])
@@ -34,9 +34,9 @@ gulp.task('copy-site-resources', function(){
 
 gulp.task('build-docs', function(cb) {
   runSequence(
-    'replace-topdoc',
-    'topdoc',
-    'copy-site-resources',
+    'build-docs:inject-topdoc',
+    'build-docs:topdoc',
+    'build-docs:copy-site-resources',
     cb
   );
 });

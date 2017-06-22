@@ -1,0 +1,20 @@
+.spectrum {
+  font-family: var(--spectrum-font-family-base);
+  font-size: var(--spectrum-font-size);
+
+  &:lang(zh-Hans) {
+    font-family: var(--spectrum-font-family-zhhans);
+  }
+
+  &:lang(zh) {
+    font-family: var(--spectrum-font-family-zh);
+  }
+
+  &:lang(ko) {
+    font-family: var(--spectrum-font-family-ko);
+  }
+
+  &:lang(ja) {
+    font-family: var(--spectrum-font-family-ja);
+  }
+}

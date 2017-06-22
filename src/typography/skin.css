@@ -1,0 +1,36 @@
+&,
+.spectrum-Body {
+  color: var(--spectrum-body-text-color-default);
+}
+
+.spectrum-Body--large {
+  color: var(--spectrum-body-large-text-color-default);
+}
+
+.spectrum-Body--small {
+  color: var(--spectrum-body-small-text-color-default);
+}
+
+.spectrum-Body--secondary {
+  color: var(--spectrum-body-secondary-text-color-default);
+}
+
+.spectrum-Heading--display {
+  color: var(--spectrum-heading-display-text-color-default);
+}
+
+.spectrum-Heading--page-title {
+  color: var(--spectrum-heading-page-title-text-color-default);
+}
+
+.spectrum-Heading--subtitle1 {
+  color: var(--spectrum-heading-subtitle1-text-color-default);
+}
+
+.spectrum-Heading--subtitle2 {
+  color: var(--spectrum-heading-subtitle2-text-color-default);
+}
+
+.spectrum-Heading--subtitle3 {
+  color: var(--spectrum-heading-subtitle3-text-color-default);
+}
