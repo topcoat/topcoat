@@ -1,5 +1,13 @@
 .spectrum-Radio-input {
-  spectrum-radio-input()
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: .0001;
+
+  cursor: pointer;
 
   &:checked + .spectrum-Radio-checkmark {
     border-color: var(--spectrum-switch-border-color-active);
