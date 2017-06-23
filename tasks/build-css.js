@@ -132,6 +132,8 @@ gulp.task('build-css:concat-standalone', function(){
       'dist/spectrum-' + colorStop + '.css'
     ])
       .pipe(concat('spectrum-' + colorStop + '.css'))
+      // Replace instances of & that refer to the colorstop selector with .secptrum
+      .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
   }
 
