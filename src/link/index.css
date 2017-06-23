@@ -1,5 +1,8 @@
 @import '../commons/index.css';
 
+/* topdoc
+{{ link/link-default.yml }}
+*/
 .spectrum-Link {
   text-decoration: none;
   transition: color var(--spectrum-transition-time) ease-in-out;
@@ -10,6 +13,9 @@
   }
 }
 
+/* topdoc
+{{ link/link-subtle.yml }}
+*/
 .spectrum-Link--subtle {
   text-decoration: underline;
 }
