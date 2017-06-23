@@ -1,0 +1,44 @@
+@import '../commons/index.css';
+
+:root {
+  --spectrum-font-size-text-label: 12px;
+  --spectrum-line-height-text-label: 12px;
+}
+
+/* topdoc
+{{ label/label-default.yml }}
+*/
+.spectrum-Label {
+  display: inline-block;
+  position: relative;
+
+  width: auto;
+
+  padding: 6px 9px;
+
+  border-radius: var(--spectrum-border-radius);
+
+  font-size: var(--spectrum-font-size-text-label);
+  line-height: var(--spectrum-line-height-text-label);
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
+
+.spectrum-Label-typeIcon {
+  font-size: 14px;
+  line-height: 0;
+
+  &:before {
+    vertical-align: sub;
+  }
+}
+
+
+/* topdoc
+{{ label/label-large.yml }}
+*/
+.spectrum-Label--large {
+  padding: 10px 14px;
+}

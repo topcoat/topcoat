@@ -1,0 +1,9 @@
+---
+name: Label - Special
+description: A special label
+markup: |
+  <span class="spectrum-Label spectrum-Label--and">And</span>
+  <span class="spectrum-Label spectrum-Label--or">Or</span>
+  <br>
+  <span class="spectrum-Label spectrum-Label--active">Active</span>
+  <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>
