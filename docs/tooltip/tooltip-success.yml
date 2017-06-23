@@ -1,0 +1,7 @@
+---
+name: Tooltip - Success
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--success spectrum-Tooltip--is-open">
+    <span class="spectrum-Tooltip-content">Success Tooltip<div class="spectrum-Tooltip-tip"></div></span>
+  </span>

@@ -1,0 +1,7 @@
+---
+name: Tooltip - Links
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--is-open">
+    <span class="spectrum-Tooltip-content"><a href="#" class="spectrum-Link spectrum-Link--subtle">Link to</a><div class="spectrum-Tooltip-tip"></div></span>
+  </span>
