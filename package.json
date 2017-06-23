@@ -57,6 +57,7 @@
     "postcss-cli": "^4.1.0",
     "postcss-custom-properties": "^6.0.1",
     "postcss-nested": "^2.0.2",
+    "postcss-svg": "^2.1.0",
     "require-dir": "^0.3.2",
     "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2",

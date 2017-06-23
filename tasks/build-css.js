@@ -19,6 +19,7 @@ var processors = [
   require('postcss-nested'),
   require('postcss-custom-properties'),
   require('postcss-calc'),
+  require('postcss-svg'),
   require('postcss-pxtorem'),
   require('autoprefixer')({
     'browsers': [

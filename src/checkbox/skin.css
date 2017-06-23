@@ -6,7 +6,7 @@
   border-color: var(--spectrum-switch-border-color-default);
 
   &::after {
-    /* background-image: svgurl(embedurl(var(--spectrum-checkbox-check-icon-url))) svg(path fill var(--spectrum-switch-checkbox-checkmark-color-default)); */
+    background-image: url("embed/Check.svg" param(--color var(--spectrum-switch-checkbox-checkmark-color-default)));
   }
 }
 
