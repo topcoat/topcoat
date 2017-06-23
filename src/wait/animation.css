@@ -1,0 +1,55 @@
+@keyframes spectrum-wait-spinner-small-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -960px center;
+  }
+}
+
+@keyframes spectrum-wait-spinner-medium-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -1920px center;
+  }
+}
+
+@keyframes spectrum-wait-spinner-large-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -3840px center;
+  }
+}
+
+/* dots wait (three dots) */
+
+@keyframes spectrum-wait-dots-small-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -960px center;
+  }
+}
+
+@keyframes spectrum-wait-dots-medium-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -1280px center;
+  }
+}
+
+@keyframes spectrum-wait-dots-large-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -2560px center;
+  }
+}

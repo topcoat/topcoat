@@ -35,10 +35,10 @@ var processors = [
 gulp.task('build-css', ['balthazar'], function(cb) {
   runSequence(
     [
-      'build-css:components',
-      'build-css:component-colorstops',
-      'build-css:component-multistops',
-      'build-css:all-components'
+      'build-css:individual-components',
+      'build-css:individual-components-multistops',
+      'build-css:individual-components-colorstops',
+      'build-css:all-components-multistops'
     ],
     [
       'build-css:concat-standalone',
@@ -51,7 +51,7 @@ gulp.task('build-css', ['balthazar'], function(cb) {
 /**
   Builds individual components (dimensions only)
 */
-gulp.task('build-css:components', function() {
+gulp.task('build-css:individual-components', function() {
   return gulp.src('src/*/index.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/components/'));
@@ -61,10 +61,10 @@ gulp.task('build-css:components', function() {
   Builds all skin files individually against each colorstop for each component with outer descendant selectors
   This enables the use of multiple colorstops on the same page
 */
-gulp.task('build-css:component-multistops', function() {
+gulp.task('build-css:individual-components-multistops', function() {
   function buildSkinFiles(colorStop) {
     return gulp.src('src/*/skin.css')
-      .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../../dist/vars/spectrum-" + colorStop + ".css';\n.spectrum--" + colorStop + " {\n"))
+      .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';\n.spectrum--" + colorStop + " {\n"))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       .pipe(rename(function(path) {
@@ -81,10 +81,10 @@ gulp.task('build-css:component-multistops', function() {
   Builds all skin files individually against each colorstop for each component
   This increases performance, but does not allow multiple colorstops on the same page
 */
-gulp.task('build-css:component-colorstops', function() {
+gulp.task('build-css:individual-components-colorstops', function() {
   function buildSkinFiles(colorStop) {
     return gulp.src('src/*/skin.css')
-      .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../../dist/vars/spectrum-" + colorStop + ".css';"))
+      .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';"))
       .pipe(postcss(processors))
       .pipe(rename(function(path) {
         path.dirname += '/colorStops'
@@ -100,8 +100,8 @@ gulp.task('build-css:component-colorstops', function() {
   Builds all components and all color stops for all components
   This task results in unresolved multistop files that require build-css:build-multistops to be ready-to-use
 */
-gulp.task('build-css:all-components', function() {
-  return gulp.src('src/spectrum*.css')
+gulp.task('build-css:all-components-multistops', function() {
+  return gulp.src('src/spectrum-*.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });

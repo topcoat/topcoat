@@ -1,0 +1,135 @@
+@import '../commons/index.css';
+@import 'animation.css';
+
+:root {
+  --spectrum-wait-spinner-small-height: 16px;
+  --spectrum-wait-spinner-small-width: 16px;
+  --spectrum-wait-spinner-medium-height: 32px;
+  --spectrum-wait-spinner-medium-width: 32px;
+  --spectrum-wait-spinner-large-height: 64px;
+  --spectrum-wait-spinner-large-width: 64px;
+
+  --spectrum-wait-dots-small-height: 9px;
+  --spectrum-wait-dots-small-width: 24px;
+  --spectrum-wait-dots-medium-height: 12px;
+  --spectrum-wait-dots-medium-width: 32px;
+  --spectrum-wait-dots-large-height: 24px;
+  --spectrum-wait-dots-large-width: 64px;
+}
+
+/* topdoc
+{{ wait/wait-small.yml }}
+*/
+.spectrum-Wait {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(60);
+
+  width: var(--spectrum-wait-spinner-small-width);
+  height: var(--spectrum-wait-spinner-small-height);
+
+  animation-name: spectrum-wait-spinner-small-animation;
+}
+
+/* topdoc
+{{ wait/wait-medium.yml }}
+*/
+.spectrum-Wait--medium {
+  width: var(--spectrum-wait-spinner-medium-width);
+  height: var(--spectrum-wait-spinner-medium-height);
+
+  animation-name: spectrum-wait-spinner-medium-animation;
+}
+
+/* topdoc
+{{ wait/wait-large.yml }}
+*/
+.spectrum-Wait--large {
+  width: var(--spectrum-wait-spinner-large-width);
+  height: var(--spectrum-wait-spinner-large-height);
+
+  animation-name: spectrum-wait-spinner-large-animation;
+}
+
+.spectrum-Wait--centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: calc(-1 * calc(var(--spectrum-wait-spinner-small-height) / 2));
+  margin-left: calc(-1 * calc(var(--spectrum-wait-spinner-small-width) / 2));
+
+  &.spectrum-Wait--medium {
+    margin-top: calc(-1 * calc(var(--spectrum-wait-spinner-medium-height) / 2));
+    margin-left: calc(-1 * calc(var(--spectrum-wait-spinner-medium-width) / 2));
+  }
+
+  &.spectrum-Wait--large {
+    margin-top: calc(-1 * calc(var(--spectrum-wait-spinner-large-height) / 2));
+    margin-left: calc(-1 * calc(var(--spectrum-wait-spinner-large-width) / 2));
+  }
+}
+
+/* topdoc
+{{ wait/wait-dotssmall.yml }}
+*/
+.spectrum-Wait--dots {
+  background-repeat: no-repeat;
+
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(40);
+
+  width: var(--spectrum-wait-dots-small-width);
+  height: var(--spectrum-wait-dots-small-height);
+
+  background-size: auto var(--spectrum-wait-dots-small-height);
+
+  animation-name: spectrum-wait-dots-small-animation;
+
+  &.spectrum-Wait--centered {
+    margin-top: calc(-1 * calc(var(--spectrum-wait-dots-small-height) / 2));
+    margin-left: calc(-1 * calc(var(--spectrum-wait-dots-small-width) / 2));
+  }
+
+/* topdoc
+{{ wait/wait-dotsmedium.yml }}
+*/
+  &.spectrum-Wait--medium {
+    width: var(--spectrum-wait-dots-medium-width);
+    height: var(--spectrum-wait-dots-medium-height);
+
+    background-size: auto var(--spectrum-wait-dots-medium-height);
+
+    animation-name: spectrum-wait-dots-medium-animation;
+
+    &.spectrum-Wait--centered {
+      margin-top: calc(-1 * calc(var(--spectrum-wait-dots-medium-height) / 2));
+      margin-left: calc(-1 * calc(var(--spectrum-wait-dots-medium-width) / 2));
+    }
+  }
+
+/* topdoc
+{{ wait/wait-dotslarge.yml }}
+*/
+  &.spectrum-Wait--large {
+    width: var(--spectrum-wait-dots-large-width);
+    height: var(--spectrum-wait-dots-large-height);
+
+    background-size: auto var(--spectrum-wait-dots-large-height);
+
+    animation-name: spectrum-wait-dots-large-animation;
+
+    &.spectrum-Wait--centered {
+      margin-top: calc(-1 * calc(var(--spectrum-wait-dots-large-height) / 2));
+      margin-left: calc(-1 * calc(var(--spectrum-wait-dots-large-width) / 2));
+    }
+  }
+}

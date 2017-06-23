@@ -1,0 +1,5 @@
+---
+name: Wait - Dots - Medium
+description:  A Spectrum wait of 'dots' type in the medium size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
