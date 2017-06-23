@@ -1,0 +1,56 @@
+.spectrum-Radio-input {
+  spectrum-radio-input()
+
+  &:checked + .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-active);
+  }
+
+  &:focus + .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+  }
+
+  &:disabled ~ .spectrum-Radio-label {
+    color: var(--spectrum-switch-label-text-color-disabled);
+  }
+}
+
+
+/* topdoc
+{{ radio/radio-default.yml }}
+*/
+.spectrum-Radio {
+  .spectrum-Radio-label {
+    color: var(--spectrum-switch-label-text-color-default);
+  }
+
+  .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-default);
+  }
+
+  &:hover {
+    .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-border-color-hover);
+      box-shadow: none;
+    }
+  }
+
+  &:active {
+    .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-border-color-active);
+    }
+  }
+
+/* topdoc
+{{ radio/radio-disabled.yml }}
+*/
+  &[disabled] {
+    .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-border-color-disabled);
+    }
+
+    .spectrum-Radio-label {
+      color: var(--spectrum-switch-label-text-color-disabled);
+    }
+  }
+}
