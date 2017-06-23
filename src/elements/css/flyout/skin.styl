@@ -1,0 +1,49 @@
+@import '@spectrum/spectrum-abstract-stylus/dist/components/flyout/skin.styl'
+
+/*! topdoc
+{{ flyout-default-topdoc }}
+*/
+.spectrum-Flyout {
+  spectrum-flyout()
+}
+
+.spectrum-Flyout-option {
+  spectrum-flyout-option()
+
+  &:focus {
+    spectrum-flyout-option--focus()
+
+    &.is-selected {
+      spectrum-flyout-option--focus--selected()
+    }
+  }
+
+  &:hover {
+    spectrum-flyout-option--hover()
+
+    &.is-selected {
+      spectrum-flyout-option--hover--selected()
+    }
+  }
+
+  &.is-selected {
+    spectrum-flyout-option--selected()
+  }
+
+  &.is-disabled {
+    spectrum-flyout-option--disabled()
+  }
+}
+
+.spectrum-Flyout-divider {
+  spectrum-flyout-divider()
+}
+
+// demo only
+.spectrum-Flyout-option--hover {
+  spectrum-flyout-option--hover()
+}
+
+.spectrum-Flyout-option--focus {
+  spectrum-flyout-option--focus()
+}
