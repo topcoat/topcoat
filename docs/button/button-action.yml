@@ -1,0 +1,26 @@
+---
+name: Button - Action
+description: A Spectrum 'action' button, used in the action bar
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--action">Button</button>
+  <button class="spectrum-Button spectrum-Button--action" disabled>Button</button>
+
+  <button class="spectrum-Button spectrum-Button--action">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+    Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--action" disabled>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+    Button
+  </button>
+
+  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+  </button>
+  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only" disabled>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+  </button>

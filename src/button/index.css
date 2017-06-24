@@ -50,14 +50,33 @@
   &:active {
     box-shadow: none;
   }
+
+  .spectrum-Icon {
+    vertical-align: top;
+  }
+
+  .spectrum-Icon + .spectrum-Button-label {
+    margin-left: var(--spectrum-button-label-icon-gap-size-default);
+  }
 }
 
-.spectrum-Icon {
-  vertical-align: top;
+.spectrum-Button--action {
+  size: var(--spectrum-button-action-font-size-default);
+  font-weight: var(--spectrum-button-action-font-weight-default);
+  padding: 0 var(--spectrum-button-action-padding-x-default);
 }
 
-.spectrum-Icon + .spectrum-Button-label {
-  margin-left: var(--spectrum-button-label-icon-gap-size-default);
+.spectrum-Button--action--icon-only {
+  padding: 0 var(--spectrum-button-action-icon-padding-x-default);
+}
+
+.spectrum-Button--quiet--action {
+  size: var(--spectrum-button-quiet-action-font-size-default);
+  font-weight: var(--spectrum-button-quiet-action-font-weight-default);
+}
+
+.spectrum-Button--quiet--action--icon-only {
+  padding: 0 var(--spectrum-button-action-icon-padding-x-default);
 }
 
 .spectrum-Button--block {

@@ -233,6 +233,76 @@
 }
 
 /* topdoc
+{{ button/button-action.yml }}
+*/
+.spectrum-Button--action {
+  background-color: var(--spectrum-button-action-background-color-default);
+  border-color: var(--spectrum-button-action-border-color-default);
+  border-width: var(--spectrum-button-action-border-size-default);
+  border-radius: var(--spectrum-button-action-border-corner-radius-default);
+  color: var(--spectrum-button-action-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-action-background-color-focus);
+    border-color: var(--spectrum-button-action-border-color-focus);
+    color: var(--spectrum-button-action-text-color-focus);
+  };
+
+  &:hover {
+    background-color: var(--spectrum-button-action-background-color-hover);
+    border-color: var(--spectrum-button-action-border-color-hover);
+    color: var(--spectrum-button-action-text-color-hover);
+  };
+
+  &:active {
+    background-color: var(--spectrum-button-action-background-color-active);
+    border-color: var(--spectrum-button-action-border-color-active);
+    color: var(--spectrum-button-action-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-action-background-color-disabled);
+    border-color: var(--spectrum-button-action-border-color-disabled);
+    color: var(--spectrum-button-action-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/button-quietaction.yml }}
+*/
+.spectrum-Button--quiet--action {
+  background-color: var(--spectrum-button-quiet-action-background-color-default);
+  border-color: var(--spectrum-button-quiet-action-border-color-default);
+  border-width: var(--spectrum-button-quiet-action-border-size-default);
+  border-radius: var(--spectrum-button-quiet-action-border-corner-radius-default);
+  color: var(--spectrum-button-quiet-action-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-quiet-action-background-color-focus);
+    border-color: var(--spectrum-button-quiet-action-border-color-focus);
+    color: var(--spectrum-button-quiet-action-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-quiet-action-background-color-hover);
+    border-color: var(--spectrum-button-quiet-action-border-color-hover);
+    color: var(--spectrum-button-quiet-action-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-quiet-action-background-color-active);
+    border-color: var(--spectrum-button-quiet-action-border-color-active);
+    color: var(--spectrum-button-quiet-action-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    display: none;
+  }
+}
+
+/*! topdoc
 {{ button/button-quiet-warning.yml }}
 */
 /*
