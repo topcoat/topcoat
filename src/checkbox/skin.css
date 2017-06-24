@@ -37,17 +37,17 @@
       border-color: var(--spectrum-switch-border-color-active);
     }
   }
+}
 
+.spectrum-Checkbox-input {
 /* topdoc
 {{ checkbox/checkbox-disabled.yml }}
 */
-  &.is-disabled {
-    .spectrum-Checkbox-checkmark {
-      border-color: var(--spectrum-switch-border-color-disabled);
-    }
+  &:disabled + .spectrum-Checkbox-checkmark {
+    border-color: var(--spectrum-switch-border-color-disabled);
+  }
 
-    .spectrum-Checkbox-label {
-      color: var(--spectrum-switch-label-text-color-disabled);
-    }
+  &:disabled ~ .spectrum-Checkbox-label {
+    color: var(--spectrum-switch-label-text-color-disabled);
   }
 }
