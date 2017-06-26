@@ -32,7 +32,7 @@ var processors = [
   })
 ];
 
-gulp.task('build-css', ['balthazar'], function(cb) {
+gulp.task('build-css', function(cb) {
   runSequence(
     [
       'build-css:individual-components',

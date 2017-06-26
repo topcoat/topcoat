@@ -14,6 +14,7 @@
     "@spectrum/spectrum-origins": "^0.5.3",
     "autoprefixer": "^6.5.3",
     "del": "^3.0.0",
+    "express": "^4.15.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.0",
@@ -23,6 +24,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.0",
     "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
     "merge-stream": "^1.0.1",
     "postcss": "^5.2.6",
     "postcss-calc": "^6.0.0",
@@ -34,5 +36,6 @@
     "require-dir": "^0.3.2",
     "run-sequence": "^1.2.2",
     "topdoc": "^1.0.5"
-  }
+  },
+  "dependencies": {}
 }
