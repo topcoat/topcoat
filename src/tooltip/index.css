@@ -2,8 +2,6 @@
 
 :root {
   --spectrum-zindex-tooltip: 100;
-  --spectrum-font-size-text-label: 12px;
-  --spectrum-line-height-text-label: 12px;
 }
 
 .spectrum-Tooltip {
