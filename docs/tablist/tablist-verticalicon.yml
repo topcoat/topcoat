@@ -1,0 +1,22 @@
+---
+  name: TabList - Vertical - Icon
+  description: The Spectrum tab list with icons in vertical mode
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--vertical">
+      <div class="spectrum-Tab is-selected">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+    </div>
