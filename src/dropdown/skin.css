@@ -95,6 +95,7 @@
 
     &:focus {
       border-color: var(--spectrum-dropdown-trigger-border-color-focus);
+      box-shadow: none;
     }
   }
 
