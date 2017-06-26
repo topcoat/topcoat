@@ -1,0 +1,20 @@
+---
+name: Dialog - Warning
+description: A Spectrum 'warning' dialog
+markup:
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button>
+  <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
+    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+      <div class="spectrum-Dialog-header">
+        <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
+        <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        <p>This dialog was created from markup. This Dialog is not centered.</p>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
+      </div>
+    </div>
+  </div>
+
