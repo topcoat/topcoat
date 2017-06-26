@@ -24,7 +24,7 @@ gulp.task('balthazar:generate', function(cb) {
 gulp.task('balthazar:postprocess-dimensions', function() {
   gulp.src(['dist/vars/spectrum-light.css'])
     // Strip all colors
-    .pipe(replace(/.*?(rgb\(|rgba\(|-color).*?\n/g, ''))
+    .pipe(replace(/.*?(rgb\(|rgba\().*?\n/g, ''))
     .pipe(rename('spectrum-dimensions.css'))
     .pipe(gulp.dest('dist/vars/'));
 });
