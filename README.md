@@ -14,9 +14,19 @@ Spectrum CSS can be consumed as whole or in part with two distinct methods of ap
 
 The first method of applying colorstops, *multistop*, makes it possible to have any number of colorstops on the same page. This method results in slightly larger CSS files with more selectors, but is the method most products will use as dark and light colorstops are commonly mixed in Spectrum designs.
 
-1. To get all Spectrum components, include `spectrum-core.css` and any of the `spectrum-X.css` (light/dark/etc) files to enable those color stops simultaneously on the same page.
+1. To get all Spectrum components, include `dist/spectrum-core.css` then `dist/spectrum-COLORSTOP.css` for each colorstop you need (where `COLORSTOP` is light, dark, etc).
 
-2. To get only the CSS for components you need, include only `components/button/index.css` to get button's base styles, then include any number of `components/button/multiStops/X.css` to get button's CSS for the colorstops you use on your page.
+2. To get only the CSS for components and colorstops you need, include the following to start:
+
+* `dist/components/page/index.css`
+* `dist/components/page/multiStops/COLORSTOP.css` for each colorstop
+* `dist/components/typography/index.css`
+* `dist/components/typography/multiStops/COLORSTOP.css` for each colorstop
+
+Then, for each component you need:
+
+* `dist/components/COMPONENT/index.css` for each component
+* `dist/components/COMPONENT/multiStops/COLORSTOP.css` for each colorstop
 
 Set `<body class="spectrum spectrum--light">` to skin the page with light colors, and add `<div class="spectrum--dark">` wherever you need dark styles, or any combination of the above.
 
@@ -40,11 +50,29 @@ Note that, due to CSS selected specificity, whatever colorstop you import last w
 
 The second method of applying colorstops, *singlestops*, makes it so it's only possible to have a single colorstop on the page at once. This method results in less selectors and smaller CSS files.
 
-1. To get all Spectrum components for a specific colorstop, include `standalone/spectrum-X.css` to get all components and a single colorstop with no support for multiple colorstops on the same page.
+1. To get all Spectrum components for a specific colorstop, include only `dist/standalone/spectrum-COLORSTOP.css`.
 
-2. To get only the CSS for components you need with a single colorstop, include `components/button/index.css` to get button's base styles, then include `components/button/colorStops/X.css` to get button's CSS for a single colorstop and no support for multiple colorstops for that component. Components imported in this way can be mixed with other components imported using the individual component multistop strategy.
+2. To get only the CSS for components you need and a single colorstop, include the following to start:
+
+* `dist/components/page/index.css`
+* `dist/components/page/colorStop/COLORSTOP.css` for the single colorstop
+* `dist/components/typography/index.css`
+* `dist/components/typography/colorStop/COLORSTOP.css` for the single colorstop
+
+Then, for each component you need:
+
+* `dist/components/COMPONENT/index.css` for each component
+* `dist/components/COMPONENT/colorStop/COLORSTOP.css` for the single colorstop
 
 As there is CSS for only one color stop present, simply set `<body class="spectrum">`. If mixing with individual components using the *multistop* strategy, you can add `class="spectrum--dark"` on `<body>` or anywhere else, but it only affects components whose colorstops were imported using the individual component multistop strategy.
+
+
+### Import Order
+
+With Spectrum CSS, dependency management between components is the responsibility of the consumer, you. The framework you're building likely has dependencies itself, such as `dropdown` depends on `button`, and each of the components includes its CSS. If this is the case, you'll get the CSS in the right order automatically, since `dropdown` is going to depend on `button`, and `button` will import the necessary CSS.
+
+However, if you're doing a more manual inclusion of CSS files, the easiest thing to do is to use the fully built `dist/spectrum-core.css` + `dist/spectrum-light.css` or `dist/standalone/spectrum-light.css` files described above. If you need only specific components, be sure to follow the order in `src/components.css` so components can override styles of their dependencies. 
+
 
 ## Project Structure
 
@@ -61,7 +89,7 @@ npm install
 gulp
 ```
 
-Your `dist/` folder should now have a local copy of the Spectrum CSS docs and other goodies.
+Your `dist/` folder should now have a local copy of the Spectrum CSS docs and ready-to-use CSS files.
 
 ## Learn More
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
