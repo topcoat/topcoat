@@ -1,0 +1,57 @@
+.spectrum-Steplist {
+  /* Default Label Style is 'incomplete' */
+  .spectrum-Steplist-label {
+    color: var(--spectrum-steplist-incomplete-label-text-color-default)
+  }
+
+  /* Default Marker Style is 'incomplete' */
+  .spectrum-Steplist-marker {
+    border-color: var(--spectrum-steplist-incomplete-marker-color-default)
+  }
+
+  /* Default Line Style is 'incomplete' */
+  .spectrum-Steplist-segment {
+    border-bottom-color: var(--spectrum-steplist-incomplete-segment-color-default)
+  }
+
+  .spectrum-Steplist-step {
+    /* Step Completed */
+    &.is-complete {
+      .spectrum-Steplist-label {
+        color: var(--spectrum-steplist-complete-label-text-color-default)
+      }
+      .spectrum-Steplist-marker {
+        background-color: var(--spectrum-steplist-complete-marker-color-default)
+      }
+    }
+
+    /* Step Selected aka Current */
+    &.is-selected {
+      .spectrum-Steplist-label {
+        color: var(--spectrum-steplist-current-label-text-color-default)
+      }
+      .spectrum-Steplist-marker {
+        background-color: var(--spectrum-steplist-current-marker-color-default)
+      }
+    }
+
+    &.is-complete,
+    &.is-selected {
+      .spectrum-Steplist-segment {
+        border-bottom-color: var(--spectrum-steplist-complete-segment-color-default)
+      }
+    }
+  }
+
+  /* Interactivity Styles */
+  &.spectrum-Steplist--interactive {
+    .spectrum-Steplist-step {
+      /* Step Focused */
+      &:focus {
+        .spectrum-Steplist-marker {
+          background-color: var(--spectrum-steplist-current-marker-color-focus)
+        }
+      }
+    }
+  }
+}
