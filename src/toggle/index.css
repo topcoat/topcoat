@@ -1,0 +1,91 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ toggle/toggle-onoffdefault.yml }}
+*/
+.spectrum-ToggleSwitch {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  height: var(--spectrum-component-single-line-height);
+  line-height: var(--spectrum-component-single-line-height);
+}
+
+.spectrum-ToggleSwitch-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: .0001;
+  z-index: 1;
+
+  cursor: pointer;
+
+  &:checked + .spectrum-ToggleSwitch-content {
+    &::after {
+      transform: translateX(calc(var(--spectrum-switch-toggle-width-default) - var(--spectrum-switch-toggle-handle-width-default)));
+    }
+  }
+
+/* topdoc
+{{ toggle/toggle-onoffdisabled.yml }}
+*/
+  &:disabled,
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+.spectrum-ToggleSwitch-label {
+  margin: 0 var(--spectrum-switch-label-gap-size-default);
+  font-size: var(--spectrum-switch-label-font-size-default);
+  vertical-align: middle;
+  transition: color 150ms ease-in-out;
+}
+
+.spectrum-ToggleSwitch-content {
+  display: inline-block;
+  /* positions the pseudo elements relative to this one */
+  position: relative;
+
+  height: var(--spectrum-switch-toggle-height-default);
+  width: var(--spectrum-switch-toggle-width-default);
+
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+  }
+
+  /* ::before is used for the track of the switch */
+  &::before {
+    transition: background var(--spectrum-transition-time) ease-in-out, border var(--spectrum-transition-time) ease-in-out;
+
+    height: var(--spectrum-switch-toggle-track-height-default);
+
+    left: 0;
+    right: 0;
+
+    border-radius: calc(var(--spectrum-switch-toggle-track-height-default) / 2);
+  }
+
+  /* ::after is used for the handle of the switch */
+  &::after {
+    transition: background var(--spectrum-transition-time) ease-in-out, border var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+
+    width: var(--spectrum-switch-toggle-handle-width-default);
+    height: var(--spectrum-switch-toggle-handle-height-default);
+
+    top: 0;
+    left: 0;
+
+    border-width: var(--spectrum-switch-toggle-handle-border-size-default);
+    border-radius: var(--spectrum-switch-toggle-handle-border-radius-default);
+    border-style: solid;
+  }
+}

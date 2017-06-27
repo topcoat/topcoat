@@ -1,0 +1,81 @@
+.spectrum-ToggleSwitch-content {
+  /* :before is used for the track of the switch */
+  &::before {
+    background-color: var(--spectrum-switch-toggle-track-color-default);
+  }
+
+  /* :after is used for the handle of the switch */
+  &::after {
+    background-color: var(--spectrum-switch-toggle-handle-background-color-default);
+    border-color: var(--spectrum-switch-border-color-default);
+  }
+}
+
+.spectrum-ToggleSwitch-input {
+  &:checked + .spectrum-ToggleSwitch-content {
+    &::before {
+      background-color: var(--spectrum-switch-toggle-track-color-active);
+    }
+
+    &::after {
+      border-color: var(--spectrum-switch-border-color-active);
+    }
+  }
+
+  &:focus + .spectrum-ToggleSwitch-content {
+    &::before {
+      background-color: var(--spectrum-switch-toggle-track-color-focus);
+    }
+
+    &::after {
+      border-color: var(--spectrum-switch-border-color-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+    }
+  }
+}
+
+.spectrum-ToggleSwitch {
+  &:hover {
+    .spectrum-ToggleSwitch-content {
+      &::before {
+        background-color: var(--spectrum-switch-toggle-track-color-hover);
+      }
+
+      &::after {
+        border-color: var(--spectrum-switch-border-color-hover);
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:active {
+    .spectrum-ToggleSwitch-content {
+      &::before {
+        background-color: var(--spectrum-switch-toggle-track-color-active);
+      }
+
+      &::after {
+        border-color: var(--spectrum-switch-border-color-active);
+      }
+    }
+  }
+
+  .spectrum-ToggleSwitch-input {
+    &:disabled,
+    &[disabled] {
+      & + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-toggle-track-color-disabled);
+        }
+
+        &::after {
+          border-color: var(--spectrum-switch-border-color-disabled);
+        }
+      }
+
+      & ~ .spectrum-ToggleSwitch-label {
+        color: var(--spectrum-switch-label-text-color-disabled);
+      }
+    }
+  }
+}
