@@ -55,6 +55,7 @@
       color: var(--spectrum-switch-label-text-color-disabled);
     }
   }
+
 }
 
 .spectrum-Radio-input {
@@ -67,5 +68,38 @@
 
   &:disabled ~ .spectrum-Radio-label {
     color: var(--spectrum-switch-label-text-color-disabled);
+  }
+
+  &:invalid {
+    & + .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-default);
+    }
+
+    & ~ .spectrum-Radio-label {
+      color: var(--spectrum-switch-invalid-border-color-default);
+    }
+  }
+
+/* topdoc
+{{ radio/radio-required.yml }}
+*/
+  &:invalid:hover {
+    & + .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-hover);
+    }
+
+    & ~ .spectrum-Radio-label {
+      color: var(--spectrum-switch-invalid-border-color-hover);
+    }
+  }
+
+  &:invalid:active {
+    & + .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-active);
+    }
+
+    & ~ .spectrum-Radio-label {
+      color: var(--spectrum-switch-invalid-border-color-active);
+    }
   }
 }
