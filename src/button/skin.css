@@ -337,3 +337,59 @@
   }
 }
 */
+
+/* topdoc
+{{ button/logicbutton-and.yml }}
+*/
+.spectrum-Button--and {
+  background-color: var(--spectrum-button-logic-and-background-color-default);
+  border-color: var(--spectrum-button-logic-and-border-color-default);
+  color: var(--spectrum-button-logic-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-logic-and-background-color-focus);
+    border-color: var(--spectrum-button-logic-and-border-color-focus);
+    color: var(--spectrum-button-logic-text-color-default);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-logic-and-background-color-hover);
+    border-color: var(--spectrum-button-logic-and-border-color-hover);
+    color: var(--spectrum-button-logic-text-color-default);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-logic-and-background-color-disabled);
+    border-color: var(--spectrum-button-logic-and-border-color-disabled);
+    color: var(--spectrum-button-logic-text-color-disabled);
+  }
+}
+
+/* topdoc
+{{ button/logicbutton-or.yml }}
+*/
+.spectrum-Button--or {
+  background-color: var(--spectrum-button-logic-or-background-color-default);
+  border-color: var(--spectrum-button-logic-or-border-color-default);
+  color: var(--spectrum-button-logic-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-logic-or-background-color-focus);
+    border-color: var(--spectrum-button-logic-or-border-color-focus);
+    color: var(--spectrum-button-logic-text-color-default);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-logic-or-background-color-hover);
+    border-color: var(--spectrum-button-logic-or-border-color-hover);
+    color: var(--spectrum-button-logic-text-color-default);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--spectrum-button-secondary-background-color-disabled);
+    border-color: var(--spectrum-button-secondary-border-color-disabled);
+    color: var(--spectrum-button-logic-text-color-disabled);
+  }
+}

@@ -6,5 +6,5 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-LogicButton spectrum-LogicButton--and">And</button>
-  <button class="spectrum-LogicButton spectrum-LogicButton--and" disabled>And</button>
+  <button class="spectrum-Button spectrum-Button--and">And</button>
+  <button class="spectrum-Button spectrum-Button--and" disabled>And</button>

@@ -79,6 +79,14 @@
   padding: 0 var(--spectrum-button-action-icon-padding-x-default);
 }
 
+.spectrum-Button--and,
+.spectrum-Button--or {
+  border-width: var(--spectrum-button-logic-border-size-default);
+  border-radius: var(--spectrum-button-logic-border-corner-radius-default);
+  font-size: var(--spectrum-button-logic-font-size-default);
+  font-weight: var(--spectrum-button-logic-font-weight-default);
+}
+
 .spectrum-Button--block {
   display: block;
   width: 100%;
