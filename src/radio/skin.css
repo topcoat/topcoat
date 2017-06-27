@@ -44,18 +44,6 @@
       border-color: var(--spectrum-switch-border-color-active);
     }
   }
-
-
-  &.is-disabled {
-    .spectrum-Radio-checkmark {
-      border-color: var(--spectrum-switch-border-color-disabled);
-    }
-
-    .spectrum-Radio-label {
-      color: var(--spectrum-switch-label-text-color-disabled);
-    }
-  }
-
 }
 
 .spectrum-Radio-input {
