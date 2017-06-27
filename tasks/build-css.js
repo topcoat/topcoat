@@ -38,6 +38,7 @@ gulp.task('build-css', function(cb) {
       'build-css:individual-components',
       'build-css:individual-components-multistops',
       'build-css:individual-components-colorstops',
+      'build-css:page-component-colorstops',
       'build-css:all-components-multistops'
     ],
     [
@@ -68,7 +69,7 @@ gulp.task('build-css:individual-components-multistops', function() {
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       .pipe(rename(function(path) {
-        path.dirname += '/multiStops'
+        path.dirname += '/multiStops';
         path.basename = colorStop;
       }))
       .pipe(gulp.dest('dist/components/'));
@@ -77,23 +78,44 @@ gulp.task('build-css:individual-components-multistops', function() {
   return merge.apply(this, colorStops.map(buildSkinFiles));
 });
 
+function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
+  prependString = prependString || '';
+  appendString = appendString || '';
+  dest = dest || 'dist/components/';
+
+  return gulp.src(globs)
+    .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';" + prependString))
+    .pipe(insert.append(appendString))
+    .pipe(postcss(processors))
+    .pipe(rename(function(path) {
+      path.dirname += '/colorStops';
+      path.basename = colorStop;
+    }))
+    .pipe(gulp.dest(dest));
+}
+
 /**
   Builds all skin files individually against each colorstop for each component
   This increases performance, but does not allow multiple colorstops on the same page
 */
 gulp.task('build-css:individual-components-colorstops', function() {
-  function buildSkinFiles(colorStop) {
-    return gulp.src('src/*/skin.css')
-      .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';"))
-      .pipe(postcss(processors))
-      .pipe(rename(function(path) {
-        path.dirname += '/colorStops'
-        path.basename = colorStop;
-      }))
-      .pipe(gulp.dest('dist/components/'));
+  function buildComponentSkinFiles(colorStop) {
+    return buildSkinFiles(colorStop, [
+      'src/*/skin.css',
+      '!src/page/skin.css' // Process separately
+    ]);
   }
+  return merge.apply(this, colorStops.map(buildComponentSkinFiles));
+});
 
-  return merge.apply(this, colorStops.map(buildSkinFiles));
+/**
+  Build page skin files separately
+*/
+gulp.task('build-css:page-component-colorstops', function(){
+  function buildPageSkinFiles(colorStop) {
+    return buildSkinFiles(colorStop, 'src/page/skin.css', '.spectrum {\n', '\n}', 'dist/components/page/');
+  }
+  return merge.apply(this, colorStops.map(buildPageSkinFiles));
 });
 
 /**
