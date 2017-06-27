@@ -1,0 +1,21 @@
+---
+  name: TabList - Anchored
+  description: The Spectrum anchored tab list.
+  markup: |
+    <ul class="spectrum-TabList spectrum-TabList--anchored">
+      <li class="spectrum-Tab is-selected" tabindex="0">
+        <label class="spectrum-Tab-label">Monday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="1">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="2">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="3">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="4" disabled>
+        <label class="spectrum-Tab-label">Friday</label>
+      </li>
+    </ul>
