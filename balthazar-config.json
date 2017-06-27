@@ -6,6 +6,7 @@
   "colorStops": ["lightest", "light", "dark", "darkest"],
   "includes": [
     "../../spectrum-origins/src/global/color.json",
+    "../../spectrum-origins/src/semantics/color.json",
     "../../spectrum-origins/src/aliases/color.json",
     "../../spectrum-origins/src/components/accordion/accordion-default.json",
     "../../spectrum-origins/src/components/alert/alert-default.json",
@@ -38,6 +39,7 @@
     "../../spectrum-origins/src/components/drawer/drawer-default.json",
     "../../spectrum-origins/src/components/dropdown/dropdown-default.json",
     "../../spectrum-origins/src/components/dropdown/dropdown-quiet.json",
+    "../../spectrum-origins/src/components/flyout/flyout-default.json",
     "../../spectrum-origins/src/components/input/input-default.json",
     "../../spectrum-origins/src/components/input/input-invalid.json",
     "../../spectrum-origins/src/components/input/input-quiet.json",
