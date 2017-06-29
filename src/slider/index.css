@@ -121,7 +121,7 @@
   border-radius: var(--spectrum-border-radius);
   display:inline-block;
   position:relative;
-  padding: 6*$px 9*$px;
+  padding: 6px 9px;
   line-height: var(--spectrum-line-height-text-label);
   width:auto;
   -webkit-font-smoothing: subpixel-antialiased;
