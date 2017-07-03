@@ -11,7 +11,7 @@
     "@spectrum/dna-npm-release": "^1.0.0",
     "@spectrum/dna-topdoc-template": "^1.0.0",
     "@spectrum/site-resources": "^0.3.0",
-    "@spectrum/spectrum-origins": "^0.5.7",
+    "@spectrum/spectrum-origins": "^0.5.8",
     "autoprefixer": "^6.5.3",
     "del": "^3.0.0",
     "express": "^4.15.3",

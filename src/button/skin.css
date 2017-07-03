@@ -305,7 +305,6 @@
 /*! topdoc
 {{ button/button-quiet-warning.yml }}
 */
-/*
 .spectrum-Button--quiet--warning {
   background-color: var(--spectrum-button-quiet-warning-background-color-default);
   border-color: var(--spectrum-button-quiet-warning-border-color-default);
@@ -336,7 +335,6 @@
     color: var(--spectrum-button-quiet-warning-text-color-disabled);
   }
 }
-*/
 
 /* topdoc
 {{ button/logicbutton-and.yml }}
