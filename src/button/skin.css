@@ -246,13 +246,13 @@
     background-color: var(--spectrum-button-action-background-color-focus);
     border-color: var(--spectrum-button-action-border-color-focus);
     color: var(--spectrum-button-action-text-color-focus);
-  };
+  }
 
   &:hover {
     background-color: var(--spectrum-button-action-background-color-hover);
     border-color: var(--spectrum-button-action-border-color-hover);
     color: var(--spectrum-button-action-text-color-hover);
-  };
+  }
 
   &:active {
     background-color: var(--spectrum-button-action-background-color-active);
