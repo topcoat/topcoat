@@ -3,6 +3,7 @@ var rename = require('gulp-rename');
 var replace = require('gulp-replace');
 var runSequence = require('run-sequence');
 var exec = require('child_process').exec;
+var path = require('path');
 
 gulp.task('balthazar', function(cb) {
   runSequence(
@@ -14,7 +15,7 @@ gulp.task('balthazar', function(cb) {
 });
 
 gulp.task('balthazar:generate', function(cb) {
-  exec('node_modules/.bin/balthazar -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json', function (err, stdout, stderr) {
+  exec('node_modules' + path.sep + '.bin' + path.sep + 'balthazar -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json', function (err, stdout, stderr) {
     process.stdout.write(stdout);
     process.stderr.write(stderr);
     cb(err);
