@@ -1,5 +1,5 @@
 ---
-name: Button - Quiet Primary
+name: Button - Quiet Warning
 description: A 'quiet warning' Spectrum button
 modifiers:
   ':disabled': Disabled state
