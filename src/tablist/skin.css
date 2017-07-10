@@ -1,0 +1,99 @@
+/* topdoc
+{{ tablist/tab-default.yml }}
+*/
+.spectrum-Tab {
+  .spectrum-Tab-label {
+    color: var(--spectrum-tab-text-color-default)
+  }
+
+  &:hover {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tab-text-color-hover)
+    }
+  }
+
+  &:focus {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tab-text-color-focus)
+    }
+  }
+
+  &.is-selected {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tab-text-color-active)
+    }
+  }
+
+  &[disabled] {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tab-text-color-disabled)
+    }
+  }
+}
+
+.spectrum-TabList--anchored {
+  &::before {
+    background-color: var(--spectrum-tab-anchored-border-color-default);
+  }
+
+  .spectrum-Tab {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tab-anchored-label-color-default);
+
+      &::after {
+        background-color: var(--spectrum-tab-anchored-border-color-default);
+      }
+    }
+
+    &:hover .spectrum-Tab-label {
+      color: var(--spectrum-tab-anchored-label-color-hover);
+
+      &::after {
+        background-color: var(--spectrum-tab-anchored-border-color-hover);
+      }
+    }
+
+    &:active .spectrum-Tab-label,
+    &.is-selected .spectrum-Tab-label {
+      color: var(--spectrum-tab-anchored-label-color-active);
+
+      &::after {
+        background-color: var(--spectrum-tab-anchored-border-color-active);
+      }
+    }
+
+    &:focus .spectrum-Tab-label {
+      color: var(--spectrum-tab-anchored-label-color-focus);
+
+      &::after {
+        background-color: var(--spectrum-tab-anchored-border-color-focus);
+      }
+    }
+
+    &.is-disabled {
+      .spectrum-Tab-label {
+        color: var(--spectrum-tab-anchored-label-color-disabled);
+
+        &::after {
+          background-color: var(--spectrum-tab-anchored-border-color-disabled);
+        }
+      }
+    }
+  }
+}
+
+/*
+Todo: Determine if unused mixins are required
+
+spectrum-tab-line-default() {
+  border-color: var(--spectrum-tab-border-color-default)
+}
+
+spectrum-tab-line-focus() {
+  border-color: var(--spectrum-tab-border-color-focus)
+}
+
+spectrum-tab-line-disabled() {
+  border-color: var(--spectrum-tab-border-color-disabled)
+}
+*/

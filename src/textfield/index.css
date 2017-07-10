@@ -1,0 +1,92 @@
+@import '../commons/index.css';
+
+.spectrum-Textfield {
+  /* box */
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: var(--spectrum-border-radius);
+  padding: 0;
+  min-width: 110px;
+  height: var(--spectrum-component-single-line-height);
+  width: var(--spectrum-component-single-line-width);
+
+  vertical-align: top; /* used to align them correctly in forms. */
+
+  font-family: inherit;
+  font-size: var(--spectrum-font-size);
+  line-height: var(--spectrum-text-body-line-height);
+  text-indent: var(--spectrum-padding);
+
+  transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+
+  outline: none;
+
+  /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
+  /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+
+  &::placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color var(--spectrum-transition-time) ease-in-out;
+  }
+
+  &:hover {
+    &::placeholder {
+      font-weight: normal;
+    }
+  }
+
+  &:disabled {
+    &::placeholder {
+      font-weight: normal;
+    }
+    /* The opacity must be set to 1 */
+    -webkit-opacity: 1;
+  }
+
+  /* Remove the native clear button in IE */
+  /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
+  &::-ms-clear {
+    width: 0;
+    height: 0;
+  }
+
+  /* removes the native spin buttons */
+  /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* removes the red border that appears in Firefox */
+  &:-moz-ui-invalid {
+    box-shadow: none;
+  }
+}
+
+.spectrum-Textfield--quiet {
+  border-radius: 0;
+  text-indent: 0;
+
+  border: none;
+  border-bottom: 1px solid;
+
+  /* removes the side padding to align the text properly */
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+.spectrum-Textfield--multiline {
+  height: auto;
+  padding: 4px 8px;
+  text-indent: 0;
+}
+
+.spectrum-Textfield--quiet.spectrum-Textfield--multiline {
+  resize: none;
+  overflow-y: hidden;
+}

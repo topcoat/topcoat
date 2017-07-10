@@ -1,0 +1,53 @@
+.spectrum-Checkbox-label {
+  color: var(--spectrum-switch-label-text-color-default);
+}
+
+.spectrum-Checkbox-checkmark {
+  border-color: var(--spectrum-switch-border-color-default);
+
+  &::after {
+    background-image: url("embed/Check.svg" param(--color var(--spectrum-switch-checkbox-checkmark-color-default)));
+  }
+}
+
+.spectrum-Checkbox-input {
+  &:checked + .spectrum-Checkbox-checkmark {
+    border-color: var(--spectrum-switch-border-color-default);
+  }
+
+  &:focus + .spectrum-Checkbox-checkmark {
+    border-color: var(--spectrum-switch-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+  }
+}
+
+/* topdoc
+{{ checkbox/checkbox-default.yml }}
+*/
+.spectrum-Checkbox {
+  &:hover {
+    .spectrum-Checkbox-checkmark {
+      border-color: var(--spectrum-switch-border-color-hover);
+      box-shadow: none;
+    }
+  }
+
+  &:active {
+    .spectrum-Checkbox-checkmark {
+      border-color: var(--spectrum-switch-border-color-active);
+    }
+  }
+}
+
+.spectrum-Checkbox-input {
+/* topdoc
+{{ checkbox/checkbox-disabled.yml }}
+*/
+  &:disabled + .spectrum-Checkbox-checkmark {
+    border-color: var(--spectrum-switch-border-color-disabled);
+  }
+
+  &:disabled ~ .spectrum-Checkbox-label {
+    color: var(--spectrum-switch-label-text-color-disabled);
+  }
+}

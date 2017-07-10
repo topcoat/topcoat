@@ -1,0 +1,13 @@
+---
+name: Text Area - Default
+description: A Spectrum text area - (a multiline text field)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline">
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
+  </textarea>

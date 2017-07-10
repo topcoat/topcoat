@@ -1,0 +1,82 @@
+@import '../commons/index.css';
+
+:root {
+  --spectrum-checkbox-height: var(--spectrum-component-single-line-height);
+
+  --spectrum-checkbox-checkmark-box-size: 12px;
+  --spectrum-checkbox-checkmark-mark-size: 10px;
+  --spectrum-checkbox-checkmark-box-border-radius: 2px;
+}
+
+.spectrum-Checkbox {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  height: var(--spectrum-checkbox-height);
+  line-height: var(--spectrum-checkbox-height);
+}
+
+.spectrum-Checkbox-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: .0001;
+  z-index: 1;
+
+  &:checked + .spectrum-Checkbox-checkmark {
+    border-width: 6px;
+
+    &::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark {
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+}
+
+.spectrum-Checkbox-label {
+  margin: 0 8px;
+  font-size: var(--spectrum-font-size);
+  vertical-align: middle;
+  transition: color var(--spectrum-transition-time) ease-in-out;
+}
+
+.spectrum-Checkbox-checkmark {
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--spectrum-checkbox-checkmark-box-size);
+  height: var(--spectrum-checkbox-checkmark-box-size);
+
+  border-radius: var(--spectrum-checkbox-checkmark-box-border-radius);
+  border-width: 2px;
+  border-style: solid;
+
+  vertical-align: middle;
+
+  transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+
+  &::after {
+    position: absolute;
+    top: calc(calc(var(--spectrum-checkbox-height) / 2) - calc(var(--spectrum-checkbox-checkmark-mark-size) / 2));
+    left: 1px;
+    width: var(--spectrum-checkbox-checkmark-mark-size);
+    height: var(--spectrum-checkbox-checkmark-mark-size);
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0;
+    transform: scale(0);
+
+    transition: opacity var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out;
+
+    content: '';
+  }
+}

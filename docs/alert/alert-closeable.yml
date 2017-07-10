@@ -1,0 +1,14 @@
+---
+name: Alert - Closable
+description: >-
+  The closable Spectrum alert. It has a close button in the footer.
+  Combine this strategy with any variant.
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--error">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+    <div class="spectrum-Alert-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
+    </div>
+  </div>

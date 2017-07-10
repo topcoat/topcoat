@@ -1,0 +1,181 @@
+@import '../commons/index.css';
+
+.spectrum-TabList {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0;
+
+  * { outline: none; }
+
+  .spectrum-Tab {
+    cursor: pointer;
+
+    > .spectrum-Tab-icon {
+      position: relative;
+      vertical-align: middle;
+      font-size: 18px;
+    }
+
+    > .spectrum-Tab-label {
+      position: relative;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &.is-disabled {
+      cursor: default;
+    }
+  }
+}
+
+/* topdoc
+{{ tablist/tablist-horizontallabel.yml }}
+*/
+/* topdoc
+{{ tablist/tablist-horizontalicon.yml }}
+*/
+.spectrum-TabList--horizontal,
+.spectrum-TabList--anchored {
+  display: block;
+
+  .spectrum-Tab {
+    position: relative;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    margin: 0 15px 0 0;
+    padding: 0px 8px;
+    line-height: 32px;
+
+    > .spectrum-Tab-icon {
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    > .spectrum-Tab-label {
+      padding: 6px 0;
+    }
+
+    &.is-selected {
+      /* Horizontal Active Tab Line */
+      > .spectrum-Tab-label:after,
+      > .spectrum-Tab-icon:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}
+
+/* topdoc
+{{ tablist/tablist-verticallabel.yml }}
+*/
+/* topdoc
+{{ tablist/tablist-verticalicon.yml }}
+*/
+.spectrum-TabList--vertical {
+  display: inline-block;
+
+  .spectrum-Tab {
+    display: block;
+    overflow: visible; /* overflow: ellipsis; */
+    min-width: 0;
+    margin: 0 0 4px 0;
+    float: none;
+
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > .spectrum-Tab-icon {
+      padding: 4px 7px;
+      height: 24px;
+      line-height: 24px;
+      vertical-align: middle;
+    }
+
+    > .spectrum-Tab-label {
+      padding: 4px 7px;
+      height: 16px;
+      line-height: 16px;
+      vertical-align: middle;
+    }
+
+    &.is-selected {
+      /* Vertical Active Tab Line */
+      > .spectrum-Tab-label:after,
+      > .spectrum-Tab-icon:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        bottom: 4px;
+        /* top = bottom = label vertical padding | is hackfix making the left active bar
+          as tall as the (label.height - label.vertical-padding) / 2 */
+
+        display: block;
+        width: 2px;
+        height: auto;
+
+        border: none; /* reset border */
+        border-left: 2px solid;
+      }
+    }
+  }
+}
+
+/* topdoc
+{{ tablist/tablist-anchoredlabel.yml }}
+*/
+.spectrum-TabList--anchored {
+  list-style-type: none;
+  height: var(--spectrum-component-single-line-height);
+
+  .spectrum-Tab {
+    > .spectrum-Tab-label {
+      cursor: pointer;
+      text-transform: none;
+      font-size: var(--spectrum-tab-anchored-label-size-default);
+      font-weight: var(--spectrum-tab-anchored-label-weight-default);
+    }
+  }
+
+  .spectrum-Tab > .spectrum-Tab-label::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--spectrum-tab-anchored-border-size-default);
+  }
+}
+
+/* Large Tab (Bigger font and no uppercase) */
+.spectrum-TabList--large .spectrum-Tab {
+  margin: 0 17px 0 0;
+  padding: 10px 8px;
+
+  text-transform: none;
+  font-size: 14px;
+}

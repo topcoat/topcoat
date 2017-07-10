@@ -1,0 +1,20 @@
+---
+name: Radio - Required
+description: The 'required' Spectrum radio
+modifiers:
+  ':hover': Hover state
+  ':active': Active state
+  ':focus': Focused
+markup: |
+  <form>
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" required>
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form>

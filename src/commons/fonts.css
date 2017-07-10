@@ -1,0 +1,13 @@
+:root {
+  --spectrum-font-family-base: adobe-clean, Helvetica, Arial, sans-serif;
+  --spectrum-font-family-zh: adobe-clean-han-traditional, var(--spectrum-font-family-base);
+  --spectrum-font-family-zhhans: adobe-clean-han-simplified-c, var(--spectrum-font-family-base);
+  --spectrum-font-family-ko: adobe-clean-han-korean, var(--spectrum-font-family-base);
+  --spectrum-font-family-ja: adobe-clean-han-japanese,  var(--spectrum-font-family-base);
+  --spectrum-font-family-condensed: adobe-clean-condensed, var(--spectrum-font-family-base);
+  --spectrum-font-size: 14px;
+  --spectrum-text-body-line-height: 20px;
+
+  --spectrum-font-size-text-label: 12px;
+  --spectrum-line-height-text-label: 12px;
+}

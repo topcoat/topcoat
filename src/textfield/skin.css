@@ -1,0 +1,97 @@
+/* TODO: is it wonky that textarea shares the selector? */
+/* It's a little wonky, right? */
+
+/* topdoc
+{{ textfield/textarea-default.yml }}
+*/
+
+/* topdoc
+{{ textfield/textarea-quiet.yml }}
+*/
+
+/* topdoc
+{{ textfield/textfield-default.yml }}
+*/
+.spectrum-Textfield {
+  background-color: var(--spectrum-input-background-color-default);
+  border-color: var(--spectrum-input-border-color-default);
+  color: var(--spectrum-input-text-color-default);
+
+  &::placeholder {
+    color: var(--spectrum-input-placeholder-text-color-default);
+  }
+
+  &:hover {
+    border-color: var(--spectrum-input-border-color-hover);
+    box-shadow: none;
+
+    &::placeholder {
+      color: var(--spectrum-input-placeholder-text-color-hover);
+    }
+  }
+
+  &:active {
+    border-color: var(--spectrum-input-border-color-active);
+  }
+
+  &:focus {
+    border-color: var(--spectrum-input-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
+  }
+
+  &[disabled] {
+    background-color: var(--spectrum-input-background-color-disabled);
+    border-color: var(--spectrum-input-border-color-disabled);
+    color: var(--spectrum-input-text-color-disabled);
+
+    /* For safari mobile browser */
+    -webkit-text-fill-color: var(--spectrum-input-text-color-disabled);
+
+    &::placeholder {
+      color: var(--spectrum-input-placeholder-text-color-disabled);
+    }
+  }
+
+  &:invalid {
+    border-color: var(--spectrum-input-invalid-border-color-default);
+
+    &:focus { /* might break things due to pre-defined focus */
+      box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+    }
+  }
+}
+
+
+/* topdoc
+{{ textfield/textfield-quiet.yml }}
+*/
+.spectrum-Textfield--quiet {
+  background-color: var(--spectrum-input-quiet-background-color-default);
+  border-color: var(--spectrum-input-quiet-border-color-default);
+
+  &:hover {
+    border-color: var(--spectrum-input-quiet-border-color-hover);
+  }
+
+  &:active {
+    border-color: var(--spectrum-input-quiet-border-color-active);
+  }
+
+  &:focus {
+    border-color: var(--spectrum-input-quiet-border-color-focus);
+    box-shadow: 0 1px 0 var(--spectrum-input-quiet-border-color-focus);
+  }
+
+  &:disabled {
+    background-color: var(--spectrum-input-quiet-background-color-disabled);
+    border-color:  var(--spectrum-input-quiet-border-color-disabled);
+  }
+
+  &:invalid {
+    border-color: var(--spectrum-input-invalid-border-color-default);
+
+    &:focus {
+      box-shadow: 0 1px 0 var(--spectrum-input-invalid-border-color-default);
+    }
+  }
+}

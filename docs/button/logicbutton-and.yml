@@ -1,0 +1,10 @@
+---
+name: Logic Button AND
+description: The Spectrum logical AND button
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--and">And</button>
+  <button class="spectrum-Button spectrum-Button--and" disabled>And</button>

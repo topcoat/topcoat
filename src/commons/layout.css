@@ -1,0 +1,10 @@
+:root {
+  --spectrum-padding: 12px;
+  --spectrum-margin: var(--spectrum-padding);
+  --spectrum-border-radius: 4px;
+
+  --spectrum-transition-time: 150ms;
+
+  --spectrum-component-single-line-height: 32px;
+  --spectrum-component-single-line-width: 192px;
+}

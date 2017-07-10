@@ -1,0 +1,57 @@
+.spectrum-Alert {
+  background-color: var(--spectrum-alert-background-color-default);
+  /* default color set to body color, header element overwrites this */
+  color: var(--spectrum-alert-body-text-color-default);
+}
+
+.spectrum-Alert-header {
+  color: var(--spectrum-alert-header-text-color-default);
+}
+
+.spectrum-Alert-content {
+  color: var(--spectrum-alert-body-text-color-default);
+}
+
+/* topdoc
+{{ alert/alert-info.yml }}
+*/
+.spectrum-Alert--info {
+  border-color: var(--spectrum-alert-info-border-color-default);
+
+  .spectrum-Alert--typeIcon {
+    color: var(--spectrum-alert-info-border-color-default);
+  }
+}
+
+/* topdoc
+{{ alert/alert-error.yml }}
+*/
+.spectrum-Alert--error {
+  border-color: var(--spectrum-alert-error-border-color-default);
+
+  .spectrum-Alert--typeIcon {
+    color: var(--spectrum-alert-error-border-color-default);
+  }
+}
+
+/* topdoc
+{{ alert/alert-success.yml }}
+*/
+.spectrum-Alert--success {
+  border-color: var(--spectrum-alert-success-border-color-default);
+
+  .spectrum-Alert--typeIcon {
+    color: var(--spectrum-alert-success-border-color-default);
+  }
+}
+
+/* topdoc
+{{ alert/alert-warning.yml }}
+*/
+.spectrum-Alert--warning {
+  border-color: var(--spectrum-alert-warning-border-color-default);
+
+  .spectrum-Alert--typeIcon {
+    color: var(--spectrum-alert-warning-border-color-default);
+  }
+}

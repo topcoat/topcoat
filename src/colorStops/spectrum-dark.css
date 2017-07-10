@@ -1,0 +1,7 @@
+@import '../../dist/vars/spectrum-dark.css';
+
+:root {
+  --spectrum-wait-spinner-medium-sprite-url: 'embed/Spinner_Dark_32_Sprite.svg';
+  --spectrum-wait-spinner-large-sprite-url: 'embed/Spinner_Dark_64_Sprite.svg';
+  --spectrum-wait-dots-sprite-url: 'embed/Dots_Dark.svg';
+}

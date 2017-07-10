@@ -1,0 +1,93 @@
+.spectrum-Radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: .0001;
+
+  cursor: pointer;
+
+  &:checked + .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-active);
+  }
+
+  &:focus + .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+  }
+}
+
+
+/* topdoc
+{{ radio/radio-default.yml }}
+*/
+.spectrum-Radio {
+  .spectrum-Radio-label {
+    color: var(--spectrum-switch-label-text-color-default);
+  }
+
+  .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-default);
+  }
+
+  &:hover {
+    .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-border-color-hover);
+      box-shadow: none;
+    }
+  }
+
+  &:active {
+    .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-border-color-active);
+    }
+  }
+}
+
+.spectrum-Radio-input {
+/* topdoc
+{{ radio/radio-disabled.yml }}
+*/
+  &:disabled + .spectrum-Radio-checkmark {
+    border-color: var(--spectrum-switch-border-color-disabled);
+  }
+
+  &:disabled ~ .spectrum-Radio-label {
+    color: var(--spectrum-switch-label-text-color-disabled);
+  }
+
+  &:invalid {
+    & + .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-default);
+    }
+
+    & ~ .spectrum-Radio-label {
+      color: var(--spectrum-switch-invalid-border-color-default);
+    }
+  }
+
+/* topdoc
+{{ radio/radio-required.yml }}
+*/
+  &:invalid:hover {
+    & + .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-hover);
+    }
+
+    & ~ .spectrum-Radio-label {
+      color: var(--spectrum-switch-invalid-border-color-hover);
+    }
+  }
+
+  &:invalid:active {
+    & + .spectrum-Radio-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-active);
+    }
+
+    & ~ .spectrum-Radio-label {
+      color: var(--spectrum-switch-invalid-border-color-active);
+    }
+  }
+}

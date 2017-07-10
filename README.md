@@ -1,32 +1,101 @@
 ![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
 # spectrum-css
-The goal is to support [Spectrum][spectrum-link] design language as a CSS implementation.  
+The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language.  
 
-This project is an example of how to merge Spectrum DNA generated data into a working set of CSS and web markup.  This is also the 'default reference' for creating Spectrum-styled UI elements for the web. The output of this project forms the source for styling other, more complex frameworks such as Torq, React-Spectrum, or CoralUI. 
+This project makes use of Spectrum DNA generated data, and its output is meant to be used to type components in the [Torq Spectrum Web SDK](torq-spectrum-web-sdk), [React-Spectrum](reactspectrum-link), or [CoralUI](coralui-link). **Consider using one of these projects instead of Spectrum CSS directly.**
 
-The output from this project can be seen [on Jenkins](https://designcodestuff.ci.corp.adobe.com:12001/job/spectrum-css/lastSuccessfulBuild/artifact/dist/docs/index.html).  Contibutors will need a local build, and it's recommended that downstream framework developers also create a local build for reference.  However, in a pinch, the Jenkins build should represent a stable view of what is available.
+The output from this project can be seen [on Jenkins](https://designcodestuff.ci.corp.adobe.com:12001/job/spectrum-css/lastSuccessfulBuild/artifact/dist/docs/index.html).
+
+## Using Spectrum CSS
+
+Spectrum CSS can be consumed as whole or in part with two distinct methods of applying colorstops.
+
+### Multistop Strategy
+
+The first method of applying colorstops, *multistop*, makes it possible to have any number of colorstops on the same page. This method results in slightly larger CSS files with more selectors, but is the method most products will use as dark and light colorstops are commonly mixed in Spectrum designs.
+
+1. To get all Spectrum components, include `dist/spectrum-core.css` then `dist/spectrum-COLORSTOP.css` for each colorstop you need (where `COLORSTOP` is light, dark, etc).
+
+2. To get only the CSS for components and colorstops you need, include the following to start:
+
+* `dist/components/page/index.css`
+* `dist/components/page/multiStops/COLORSTOP.css` for each colorstop
+* `dist/components/typography/index.css`
+* `dist/components/typography/multiStops/COLORSTOP.css` for each colorstop
+
+Then, for each component you need:
+
+* `dist/components/COMPONENT/index.css` for each component
+* `dist/components/COMPONENT/multiStops/COLORSTOP.css` for each colorstop
+
+Set `<body class="spectrum spectrum--light">` to skin the page with light colors, and add `<div class="spectrum--dark">` wherever you need dark styles, or any combination of the above.
+
+Note that, due to CSS selected specificity, whatever colorstop you import last will win if you nest colorstops 3 levels deep. That is, if you first import the `light` colorstop, the the `dark` colorstop, and you have the following HTML, the 3rd button ends up dark.
+
+```html
+<body class="spectrum spectrum--light">
+  <button class="spectrum-Button">I'm light!</button>
+
+  <div class="spectrum--dark">
+    <button class="spectrum-Button">I'm dark!</button>
+
+    <div class="spectrum--light">
+      <button class="spectrum-Button">I'm still dark!</button>
+    </div>
+  </div>
+</body>
+```
+
+### Singlestop Strategy
+
+The second method of applying colorstops, *singlestops*, makes it so it's only possible to have a single colorstop on the page at once. This method results in less selectors and smaller CSS files.
+
+1. To get all Spectrum components for a specific colorstop, include only `dist/standalone/spectrum-COLORSTOP.css`.
+
+2. To get only the CSS for components you need and a single colorstop, include the following to start:
+
+* `dist/components/page/index.css`
+* `dist/components/page/colorStop/COLORSTOP.css` for the single colorstop
+* `dist/components/typography/index.css`
+* `dist/components/typography/colorStop/COLORSTOP.css` for the single colorstop
+
+Then, for each component you need:
+
+* `dist/components/COMPONENT/index.css` for each component
+* `dist/components/COMPONENT/colorStop/COLORSTOP.css` for the single colorstop
+
+As there is CSS for only one color stop present, simply set `<body class="spectrum">`. If mixing with individual components using the *multistop* strategy, you can add `class="spectrum--dark"` on `<body>` or anywhere else, but it only affects components whose colorstops were imported using the individual component multistop strategy.
+
+
+### Import Order
+
+With Spectrum CSS, dependency management between components is the responsibility of the consumer, you. The framework you're building likely has dependencies itself, such as `dropdown` depends on `button`, and each of the components includes its CSS. If this is the case, you'll get the CSS in the right order automatically, since `dropdown` is going to depend on `button`, and `button` will import the necessary CSS.
+
+However, if you're doing a more manual inclusion of CSS files, the easiest thing to do is to use the fully built `dist/spectrum-core.css` + `dist/spectrum-light.css` or `dist/standalone/spectrum-light.css` files described above. If you need only specific components, be sure to follow the order in `src/components.css` so components can override styles of their dependencies. 
+
 
 ## Project Structure
-The current setup of this project is to use Stylus to pre-process selectors.  We are refactoring to move away from the use of the `abstract-stylus` project to pull in mixins as a dependency.  Instead, this project will define the standard for selectors and markup.  Providing some ability to export support functions needed for legacy projects is TBD.
 
 In this project, there are three sets of source files.  
-- `src/elements/css`: contains the source for element CSS selectors, with related attribute/value pairs.
-- `src/elements/html`: this is the 'default' markup (in [topdoc](topdoc-link) format) that aligns with the css generated by this project.  Documentation is generated using the metatdate stored here.
-- `src/elements/constants`: **WIP** these source files provide constants from the Spectrum DNA project in the form of build generated output.  This allows DNA to be a dev-dependency only, keeping it from needing to be released as an open depenedency.
+- `src/`: contains the source for element CSS selectors, with related attribute/value pairs.
+- `docs/`: this is the 'default' markup (in [topdoc](topdoc-link) format) that aligns with the CSS generated by this project. Documentation is generated using the metadata stored here.
 
 ## Building
-Currently, this is an npm script driven project.  The available build tasks are [defined in package.json](https://git.corp.adobe.com/Spectrum/spectrum-css/blob/master/package.json#L5-L21), which drive a mixture of steps from the `tasks/` folder, Spectrum DNA related tools, and common web stack tools.  
 
-As a getting started TL;DR, you can do this:
-- `npm install`
-- `npm run build`
+Run the following commands:
 
-Your `dist/` folder should now have a local copy of the Spectrum-CSS docs and other goodies.
+```
+npm install
+gulp
+```
+
+Your `dist/` folder should now have a local copy of the Spectrum CSS docs and ready-to-use CSS files.
 
 ## Learn More
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
 
-Thanks - Adobe Design Frameworks
-
 [spectrum-link]: http://spectrum.corp.adobe.com
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
+[coralui-link]: http://coralui.corp.adobe.com/
+[reactspectrum-link]: https://git.corp.adobe.com/React/react-spectrum
+[torq-spectrum-web-sdk]: https://git.corp.adobe.com/torq/torq-web-spectrum

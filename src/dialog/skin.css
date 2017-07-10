@@ -1,0 +1,89 @@
+.spectrum-Dialog-wrapper {
+  background: var(--spectrum-dialog-background-color-default);
+}
+
+.spectrum-Dialog-header {
+  background: var(--spectrum-dialog-background-color-default);
+
+  &:after {
+    background: var(--spectrum-dialog-title-divider-color-default);
+  }
+}
+
+.spectrum-Dialog-title {
+  /* Todo: Determine if missing class is required */
+  color: var(--spectrum-dialog-title-text-color-default);
+}
+
+.spectrum-Dialog-typeIcon {
+  /* Todo: Determine if missing class is required */
+  color: var(--spectrum-dialog-icon-color-default);
+}
+
+.spectrum-Dialog-footer {
+  background: var(--spectrum-dialog-background-color-default);
+}
+
+/* topdoc
+{{ dialog/dialog-success.yml }}
+*/
+.spectrum-Dialog--success {
+  .spectrum-Dialog-title {
+    color: var(--spectrum-dialog-success-title-text-color-default);
+  }
+
+  .spectrum-Dialog-typeIcon {
+    color: var(--spectrum-dialog-success-icon-color-default);
+  }
+}
+
+
+/* topdoc
+{{ dialog/dialog-info.yml }}
+*/
+.spectrum-Dialog--help,
+.spectrum-Dialog--info {
+  .spectrum-Dialog-title {
+    color: var(--spectrum-dialog-info-title-text-color-default);
+  }
+
+  .spectrum-Dialog-typeIcon {
+    color: var(--spectrum-dialog-info-icon-color-default);
+  }
+}
+
+
+/* topdoc
+{{ dialog/dialog-warning.yml }}
+*/
+.spectrum-Dialog--warning {
+  .spectrum-Dialog-title {
+    color: var(--spectrum-dialog-warning-title-text-color-default);
+  }
+
+  .spectrum-Dialog-typeIcon {
+    color: var(--spectrum-dialog-warning-icon-color-default);
+  }
+}
+
+
+/* topdoc
+{{ dialog/dialog-error.yml }}
+*/
+.spectrum-Dialog--error {
+  .spectrum-Dialog-title {
+    color: var(--spectrum-dialog-error-title-text-color-default);
+  }
+
+  .spectrum-Dialog-typeIcon {
+    color: var(--spectrum-dialog-error-icon-color-default);
+  }
+}
+
+
+/* topdoc
+{{ dialog/dialog-modal.yml }}
+*/
+.spectrum-Dialog--modal {
+  background: var(--spectrum-dialog-underlay-background-color-default);
+}

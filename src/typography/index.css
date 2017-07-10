@@ -1,0 +1,66 @@
+@import '../commons/index.css';
+@import 'font.css';
+
+/* topdoc
+{{ typography/typography-default.yml }}
+*/
+.spectrum,
+.spectrum-Body {
+  font-size: var(--spectrum-body-font-size-default);
+  font-weight: var(--spectrum-body-font-weight-default);
+  line-height: var(--spectrum-body-font-line-height-default);
+}
+
+.spectrum-Body--italic {
+  font-style: var(--spectrum-body-italic-font-style-default);
+}
+
+.spectrum-Body--large {
+  font-size: var(--spectrum-body-large-font-size-default);
+  font-weight: var(--spectrum-body-large-font-weight-default);
+  line-height: var(--spectrum-body-large-font-line-height-default);
+}
+
+.spectrum-Body--small {
+  font-size: var(--spectrum-body-small-font-size-default);
+  font-weight: var(--spectrum-body-small-font-weight-default);
+  line-height: var(--spectrum-body-small-font-line-height-default);
+}
+
+.spectrum-Body--secondary {
+  font-size: var(--spectrum-body-secondary-font-size-default);
+  font-weight: var(--spectrum-body-secondary-font-weight-default);
+  line-height: var(--spectrum-body-secondary-font-line-height-default);
+}
+
+.spectrum-Heading--display {
+  font-weight: var(--spectrum-heading-display-font-weight-default);
+  font-size: var(--spectrum-heading-display-font-size-default);
+  line-height: var(--spectrum-heading-display-font-line-height-default);
+}
+
+.spectrum-Heading--page-title {
+  font-weight: var(--spectrum-heading-page-title-font-weight-default);
+  font-size: var(--spectrum-heading-page-title-font-size-default);
+  line-height: var(--spectrum-heading-page-title-font-line-height-default);
+}
+
+.spectrum-Heading--subtitle1 {
+  font-weight: var(--spectrum-heading-subtitle1-font-weight-default);
+  font-size: var(--spectrum-heading-subtitle1-font-size-default);
+  line-height: var(--spectrum-heading-subtitle1-font-line-height-default);
+}
+
+.spectrum-Heading--subtitle2 {
+  font-weight: var(--spectrum-heading-subtitle2-font-weight-default);
+  font-size: var(--spectrum-heading-subtitle2-font-size-default);
+  line-height: var(--spectrum-heading-subtitle2-font-line-height-default);
+}
+
+.spectrum-Heading--subtitle3 {
+  font-weight: var(--spectrum-heading-subtitle3-font-weight-default);
+  font-size: var(--spectrum-heading-subtitle3-font-size-default);
+  line-height: var(--spectrum-heading-subtitle3-font-line-height-default);
+  text-transform: var(--spectrum-heading-subtitle3-text-transform-default);
+  letter-spacing: var(--spectrum-heading-subtitle3-font-letter-spacing-default);
+}

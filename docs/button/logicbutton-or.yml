@@ -1,0 +1,10 @@
+---
+name: Logic Button OR
+description: The Spectrum logical OR button
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--or">Or</button>
+  <button class="spectrum-Button spectrum-Button--or" disabled>Or</button>

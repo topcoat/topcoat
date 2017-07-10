@@ -1,0 +1,222 @@
+/* topdoc
+{{ slider/slider-default.yml }}
+*/
+/* topdoc
+{{ slider/slider-label.yml }}
+*/
+/* topdoc
+{{ slider/slider-filled.yml }}
+*/
+/* topdoc
+{{ slider/slider-double.yml }}
+*/
+/* topdoc
+{{ slider/slider-video.yml }}
+*/
+/* topdoc
+{{ slider/slider-tick.yml }}
+*/
+/* topdoc
+{{ slider/slider-ramp.yml }}
+*/
+.spectrum-Slider {
+}
+
+.spectrum-Slider-controls {
+  background-color: transparent;
+}
+
+.spectrum-Slider-track {
+  background: var(--spectrum-slider-track-color-default);
+}
+
+/*
+Todo: Determine if unused mixin is required
+spectrum-slider-track-disabled(){
+  background: $spectrum-slider-track-color-disabled;
+}
+*/
+
+.spectrum-Slider-track--fill {
+  background: var(--spectrum-slider-fill-track-color-default);
+}
+
+.spectrum-Slider-track--buffer {
+  background: var(--spectrum-slider-player-track-buffer-color-default);
+}
+
+.spectrum-Slider-track--ramp {
+  path {
+    fill: var(--spectrum-slider-track-color-default);
+  }
+}
+
+.spectrum-Slider-handle {
+  border-color: var(--spectrum-slider-handle-border-color-default);
+  border-width: var(--spectrum-slider-handle-border-width-default);
+  border-style: solid;
+  background: var(--spectrum-slider-handle-color-default);
+  box-shadow: 0 0 0 var(--spectrum-slider-handle-outset-border-width-default) var(--spectrum-slider-handle-outset-border-color-default);
+  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
+  &:hover {
+    border-color: var(--spectrum-slider-handle-border-color-hover);
+    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  }
+
+  &:focus {
+    border-color: var(--spectrum-slider-handle-border-color-focus);
+    background: var(--spectrum-slider-handle-fill-color-focus);
+    border-width: var(--spectrum-slider-border-width-active);
+    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  }
+
+  &:active {
+    border-color: var(--spectrum-slider-handle-border-color-active);
+    background: var(--spectrum-slider-handle-fill-color-active);
+    border-width: var(--spectrum-slider-border-width-active);
+    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  }
+}
+
+.spectrum-Slider-input {
+  background: transparent;
+}
+
+/*
+Todo: Determine if missing mixin is required
+.spectrum-Slider-ticks {
+  spectrum-slider-ticks()
+}
+*/
+
+.spectrum-Slider-tick-mark {
+  background-color: var(--spectrum-slider-tick-mark-color-default);
+  border-radius: var(--spectrum-slider-tick-mark-border-radius-default);
+}
+
+.spectrum-Slider-controls--hover {
+  .spectrum-Slider-handle {
+    border-color: var(--spectrum-slider-handle-border-color-hover);
+    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  }
+}
+
+.spectrum-Slider-controls--focus {
+  .spectrum-Slider-handle {
+    border-color: var(--spectrum-slider-handle-border-color-focus);
+    background: var(--spectrum-slider-handle-fill-color-focus);
+    border-width: var(--spectrum-slider-border-width-active);
+    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  }
+}
+
+.spectrum-Slider-controls--active {
+  .spectrum-Slider-handle {
+    border-color: var(--spectrum-slider-handle-border-color-active);
+    background: var(--spectrum-slider-handle-fill-color-active);
+    border-width: var(--spectrum-slider-border-width-active);
+    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  }
+}
+
+.spectrum-Slider--disabled {
+  spectrum-slider-disabled()
+
+  .spectrum-Slider-Label,
+  .spectrum-Slider-Label--Name,
+  .spectrum-Slider-Label--Value,
+  .spectrum-Slider-Label--Tick {
+    color: var(--spectrum-slider-text-color-disabled);
+  }
+
+  .spectrum-Slider-handle {
+    border-color: var(--spectrum-slider-handle-border-color-disabled);
+    background: var(--spectrum-slider-handle-color-default);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--spectrum-slider-handle-border-color-disabled);
+      border-width: var(--spectrum-slider-handle-outset-border-width-default);
+      background: var(--spectrum-slider-handle-color-default);
+    }
+  }
+  .spectrum-Slider-track--fill {
+    background: var(--spectrum-slider-fill-track-color-disabled);
+  }
+  .spectrum-Slider-track--buffer {
+    background: var(--spectrum-slider-player-track-buffer-color-disabled);
+  }
+  .spectrum-Slider-track--ramp {
+    path {
+      fill: var(--spectrum-slider-ramp-track-color-disabled);
+    }
+  }
+  &.spectrum-Slider--color {
+    .spectrum-Slider-track {
+      background: var(--spectrum-slider-color-track-color-disabled);
+      box-shadow: none;
+    }
+    .spectrum-Slider-handle {
+      background: var(--spectrum-slider-color-handle-color-disabled);
+      box-shadow: none;
+      border-color: var(--spectrum-slider-color-handle-border-color-disabled);
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-width: var(--spectrum-slider-handle-outset-border-width-default);
+        background: var(--spectrum-slider-color-handle-color-disabled);
+        box-shadow: none;
+        border-color: var(--spectrum-slider-color-handle-border-color-disabled);
+      }
+    }
+  }
+}
+
+/* topdoc
+{{ slider/slider-colored.yml }}
+*/
+.spectrum-Slider--color {
+  .spectrum-Slider-track {
+    background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start-default), var(--spectrum-slider-color-track-background-color-gradient-end-default));
+    box-shadow: inset 0 0 0 var(--spectrum-slider-color-track-border-width-default) var(--spectrum-slider-color-track-border-color-default);
+  }
+  .spectrum-Slider-handle {
+    box-shadow: inset 0 0 0 var(--spectrum-slider-color-handle-inset-border-width-default) var(--spectrum-slider-color-handle-inset-border-color-default), 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color-default);
+    border-color: var(--spectrum-slider-color-handle-border-color-default);
+    background: var(--spectrum-slider-color-handle-color-default);
+
+    &:focus {
+      box-shadow: 0 0 0 var(--spectrum-slider-color-handle-outset-border-width-default) var(--spectrum-slider-color-handle-outset-border-color-focus);
+    }
+  }
+}
+
+/* topdoc
+{{ slider/slider-round.yml }}
+*/
+.spectrum-Slider--round {
+  .spectrum-Slider-handle {
+    &:hover .spectrum-Slider-input::after {
+      background-color: var(--spectrum-slider-round-handle-marker-color-hover);
+    }
+
+    &:focus .spectrum-Slider-input::after {
+      background-color: var(--spectrum-slider-round-handle-marker-color-focus);
+    }
+  }
+  .spectrum-Slider-input {
+   &::after {
+      background-color: var(--spectrum-slider-round-handle-marker-color-default);
+    }
+  }
+
+  .spectrum-Slider-controls {
+    &::before,
+    &::after {
+      background-color: var(--spectrum-slider-round-min-max-tick-color-default);
+    }
+  }
+}

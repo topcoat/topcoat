@@ -1,0 +1,71 @@
+@import '../commons/index.css';
+
+:root {
+  --spectrum-alert-header-height: 38px;
+  --spectrum-alert-corner-radius: 4px;
+}
+
+.spectrum-Alert {
+  position: relative;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: calc(var(--spectrum-component-single-line-width) * 2);
+  min-height: var(--spectrum-alert-header-height);
+  margin: 8px 0;
+  padding: 16px 20px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: var(--spectrum-alert-corner-radius);
+}
+
+.spectrum-Alert-typeIcon {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.spectrum-Alert-header {
+  display: inline-block;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 14px;
+  text-transform: none;
+}
+
+.spectrum-Alert-content {
+  display: block;
+  margin: 12px 0 0 0;
+  padding: 0;
+
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.spectrum-Alert-footer {
+  display: block;
+
+  text-align: right;
+
+  padding-top: 0.5rem;
+
+  &:empty {
+    display: none;
+  }
+
+  .spectrum-Button {
+    margin-right: 0;
+
+    /* Spacing between buttons */
+    margin-left: 0.75rem;
+  }
+}

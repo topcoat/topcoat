@@ -1,0 +1,99 @@
+@import '../commons/index.css';
+
+.spectrum-Button {
+  display: inline-block;
+  box-sizing: border-box;
+
+  border-width: var(--spectrum-button-border-size-default);
+  border-style: solid;
+  border-radius: var(--spectrum-button-border-corner-radius-default);
+
+  height: var(--spectrum-button-height-default);
+  margin-right: var(--spectrum-margin);
+  padding: 0 calc(var(--spectrum-button-border-corner-radius-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
+
+  font-family: inherit;
+  font-size: var(--spectrum-button-label-font-size-default);
+  line-height: calc(var(--spectrum-button-height-default) - calc(2 * var(--spectrum-button-border-size-default)));
+  font-weight: var(--spectrum-button-label-font-weight-default);
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+
+  /* Adjacent buttons should be aligned correctly */
+  vertical-align: top;
+
+  transition: background var(--spectrum-transition-time) ease-out,
+              border-color var(--spectrum-transition-time) ease-out,
+              color var(--spectrum-transition-time) ease-out,
+              box-shadow var(--spectrum-transition-time) ease-out;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled,
+  &[disabled] {
+    cursor: default;
+  }
+
+  /* Fix Firefox */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin-top: -2PX;
+    margin-bottom: -2PX;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+
+  .spectrum-Icon {
+    vertical-align: top;
+  }
+
+  .spectrum-Icon + .spectrum-Button-label {
+    margin-left: var(--spectrum-button-label-icon-gap-size-default);
+  }
+}
+
+.spectrum-Button--action {
+  size: var(--spectrum-button-action-font-size-default);
+  font-weight: var(--spectrum-button-action-font-weight-default);
+  padding: 0 var(--spectrum-button-action-padding-x-default);
+}
+
+.spectrum-Button--action--icon-only {
+  padding: 0 var(--spectrum-button-action-icon-padding-x-default);
+}
+
+.spectrum-Button--quiet--action {
+  size: var(--spectrum-button-quiet-action-font-size-default);
+  font-weight: var(--spectrum-button-quiet-action-font-weight-default);
+}
+
+.spectrum-Button--quiet--action--icon-only {
+  padding: 0 var(--spectrum-button-action-icon-padding-x-default);
+}
+
+.spectrum-Button--and,
+.spectrum-Button--or {
+  border-width: var(--spectrum-button-logic-border-size-default);
+  border-radius: var(--spectrum-button-logic-border-corner-radius-default);
+  font-size: var(--spectrum-button-logic-font-size-default);
+  font-weight: var(--spectrum-button-logic-font-weight-default);
+}
+
+.spectrum-Button--block {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
