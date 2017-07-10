@@ -1,26 +1,14 @@
 .spectrum-Button {
-  .spectrum-Icon {
-    color: var(--spectrum-button-icon-color-default);
-  }
-
   &:focus {
     box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-primary-border-color-focus);
   }
 
   &:hover {
     box-shadow: none;
-
-    .spectrum-Icon {
-      color: var(--spectrum-button-icon-color-hover);
-    }
   }
 
   &:active {
     box-shadow: none;
-
-    .spectrum-Icon {
-      color: var(--spectrum-button-icon-color-active);
-    }
   }
 
   &.is-selected .spectrum-Icon {
@@ -305,7 +293,6 @@
 /*! topdoc
 {{ button/button-quiet-warning.yml }}
 */
-/*
 .spectrum-Button--quiet--warning {
   background-color: var(--spectrum-button-quiet-warning-background-color-default);
   border-color: var(--spectrum-button-quiet-warning-border-color-default);
@@ -336,7 +323,6 @@
     color: var(--spectrum-button-quiet-warning-text-color-disabled);
   }
 }
-*/
 
 /* topdoc
 {{ button/logicbutton-and.yml }}
