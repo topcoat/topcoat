@@ -61,7 +61,7 @@
 }
 
 .spectrum-Button--action {
-  size: var(--spectrum-button-action-font-size-default);
+  font-size: var(--spectrum-button-action-font-size-default);
   font-weight: var(--spectrum-button-action-font-weight-default);
   padding: 0 var(--spectrum-button-action-padding-x-default);
 }
@@ -71,7 +71,7 @@
 }
 
 .spectrum-Button--quiet--action {
-  size: var(--spectrum-button-quiet-action-font-size-default);
+  font-size: var(--spectrum-button-quiet-action-font-size-default);
   font-weight: var(--spectrum-button-quiet-action-font-weight-default);
 }
 
