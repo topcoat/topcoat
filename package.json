@@ -37,5 +37,7 @@
     "run-sequence": "^1.2.2",
     "topdoc": "^1.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-git": "^2.4.1"
+  }
 }
