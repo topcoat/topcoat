@@ -22,40 +22,64 @@
     }
   }
 
-  &:focus + .spectrum-ToggleSwitch-content {
-    &::before {
-      background-color: var(--spectrum-switch-toggle-track-color-focus);
+  &:focus {
+    & + .spectrum-ToggleSwitch-content {
+      &::after {
+        border-color: var(--spectrum-switch-border-color-focus);
+        box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+      }
     }
 
-    &::after {
-      border-color: var(--spectrum-switch-border-color-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+    &:checked + .spectrum-ToggleSwitch-content {
+      &::before {
+        background-color: var(--spectrum-switch-toggle-track-color-focus);
+      }
+    }
+
+    & ~ .spectrum-ToggleSwitch-label {
+      color: var(--spectrum-switch-label-text-color-focus);
     }
   }
 }
 
 .spectrum-ToggleSwitch {
   &:hover {
-    .spectrum-ToggleSwitch-content {
-      &::before {
-        background-color: var(--spectrum-switch-toggle-track-color-hover);
+    .spectrum-ToggleSwitch-input {
+      & + .spectrum-ToggleSwitch-content {
+        &::after {
+          border-color: var(--spectrum-switch-border-color-hover);
+          box-shadow: none;
+        }
       }
 
-      &::after {
-        border-color: var(--spectrum-switch-border-color-hover);
-        box-shadow: none;
+      &:checked + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-toggle-track-color-hover);
+        }
+      }
+
+      & ~ .spectrum-ToggleSwitch-label {
+        color: var(--spectrum-switch-label-text-color-hover);
       }
     }
   }
 
   &:active {
-    .spectrum-ToggleSwitch-content {
-      &::before {
-        background-color: var(--spectrum-switch-toggle-track-color-active);
+    .spectrum-ToggleSwitch-input {
+      & + .spectrum-ToggleSwitch-content {
+        &::after {
+          border-color: var(--spectrum-switch-border-color-active);
+        }
       }
 
-      &::after {
-        border-color: var(--spectrum-switch-border-color-active);
+      &:checked + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-toggle-track-color-active);
+        }
+      }
+
+      & ~ .spectrum-ToggleSwitch-label {
+        color: var(--spectrum-switch-label-text-color-active);
       }
     }
   }
