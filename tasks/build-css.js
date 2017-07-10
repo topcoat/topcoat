@@ -87,6 +87,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
     .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';" + prependString))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
+    .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
     .pipe(rename(function(path) {
       path.dirname += '/colorStops';
       path.basename = colorStop;
