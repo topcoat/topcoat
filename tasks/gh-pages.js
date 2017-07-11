@@ -15,11 +15,11 @@ gulp.task('gh-pages', function(cb) {
       .on('end', function() {
         // Commit
         gulp.src([
-          './**',
-          '!./dist',
-          '!./dist/**',
-          '!./node_modules',
-          '!./node_modules/**'
+          './components',
+          './docs',
+          './standalone',
+          './vars',
+          './spectrum*'
         ])
           .pipe(git.commit('Deploy version ' + package.version))
           .on('end', function() {
