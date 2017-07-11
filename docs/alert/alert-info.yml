@@ -3,7 +3,7 @@ name: Alert - Info
 description: The Spectrum alert 'info'
 markup: |
   <div class="spectrum-Alert spectrum-Alert--info">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Info spectrum-Alert-typeIcon" role="img" aria-label="info"></div>
+    <div class="spectrum-Alert-typeIcon" role="img" aria-label="info"></div>
     <div class="spectrum-Alert-header">Infomation Alert Header</div>
     <div class="spectrum-Alert-content">This is an alert.</div>
   </div>
