@@ -15,7 +15,9 @@ gulp.task('balthazar', function(cb) {
 });
 
 gulp.task('balthazar:generate', function(cb) {
-  exec('node_modules' + path.sep + '.bin' + path.sep + 'balthazar -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json', function (err, stdout, stderr) {
+  var exePath = path.resolve('node_modules', '.bin', 'balthazar');
+  var balthazarArgs = ' -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json';
+  exec(exePath + balthazarArgs, function (err, stdout, stderr) {
     process.stdout.write(stdout);
     process.stderr.write(stderr);
     cb(err);

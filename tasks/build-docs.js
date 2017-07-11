@@ -6,7 +6,8 @@ var fs = require('fs');
 var path = require('path');
 
 gulp.task('build-docs:topdoc', function(cb) {
-  exec('node_modules' + path.sep + '.bin' + path.sep + 'topdoc', function (err, stdout, stderr) {
+  var exePath = path.resolve('node_modules', '.bin', 'topdoc');
+  exec(exePath, function (err, stdout, stderr) {
     process.stdout.write('[topdoc] '+stdout);
     process.stderr.write(stderr);
     cb(err);
