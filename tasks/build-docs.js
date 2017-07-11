@@ -6,14 +6,15 @@ var fs = require('fs');
 var path = require('path');
 
 gulp.task('build-docs:topdoc', function(cb) {
-  exec('node_modules/.bin/topdoc', function (err, stdout, stderr) {
+  var exePath = path.resolve('node_modules', '.bin', 'topdoc');
+  exec(exePath, function (err, stdout, stderr) {
     process.stdout.write('[topdoc] '+stdout);
     process.stderr.write(stderr);
     cb(err);
   });
 });
 
-gulp.task('build-docs:inject-topdoc', function(){
+gulp.task('build-docs:inject-topdoc', function() {
   gulp.src([
     'dist/**/*.css',
     '!dist/vars/*'
@@ -25,7 +26,7 @@ gulp.task('build-docs:inject-topdoc', function(){
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build-docs:copy-site-resources', function(){
+gulp.task('build-docs:copy-site-resources', function() {
   gulp.src([
     'node_modules/@spectrum/site-resources/lib/resources/**'
   ])
