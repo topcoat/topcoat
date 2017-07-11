@@ -15,9 +15,10 @@ gulp.task('balthazar', function(cb) {
 });
 
 gulp.task('balthazar:generate', function(cb) {
-  var exePath = path.resolve('node_modules', '.bin', 'balthazar');
-  var balthazarArgs = ' -t css -o node_modules/@spectrum/spectrum-origins/src -d dist/vars/ -c balthazar-config.json';
-  exec(exePath + balthazarArgs, function (err, stdout, stderr) {
+  var originsPath = path.resolve('node_modules', '@spectrum', 'spectrum-origins', 'src');
+  var outputPath = path.resolve('dist', 'vars');
+  var exePath = path.resolve('node_modules', '.bin', 'balthazar -t css -o ' + originsPath + ' -d ' + outputPath + ' -c balthazar-config.json');
+  exec(exePath, function (err, stdout, stderr) {
     process.stdout.write(stdout);
     process.stderr.write(stderr);
     cb(err);
@@ -25,7 +26,7 @@ gulp.task('balthazar:generate', function(cb) {
 });
 
 gulp.task('balthazar:postprocess-dimensions', function() {
-  gulp.src(['dist/vars/spectrum-light.css'])
+  gulp.src('dist/vars/spectrum-light.css')
     // Strip all colors
     .pipe(replace(/.*?(rgb\(|rgba\().*?\n/g, ''))
     .pipe(rename('spectrum-dimensions.css'))
