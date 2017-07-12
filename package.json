@@ -9,7 +9,7 @@
   "devDependencies": {
     "@spectrum/balthazar": "^0.6.1",
     "@spectrum/dna-npm-release": "^1.0.0",
-    "@spectrum/dna-topdoc-template": "^1.0.0",
+    "@spectrum/dna-topdoc-template": "^1.0.1",
     "@spectrum/site-resources": "^0.3.0",
     "@spectrum/spectrum-icons": "0.0.2",
     "@spectrum/spectrum-origins": "^0.5.8",
