@@ -285,6 +285,72 @@
 }
 
 /* topdoc
+{{ button/button-toggle.yml }}
+*/
+.spectrum-Button--toggle {
+  background-color: var(--spectrum-button-toggle-background-color-default);
+  border-color: var(--spectrum-button-toggle-border-color-default);
+  border-width: var(--spectrum-button-toggle-border-size-default);
+  border-radius: var(--spectrum-button-toggle-border-corner-radius-default);
+  color: var(--spectrum-button-toggle-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-toggle-background-color-focus);
+    border-color: var(--spectrum-button-toggle-border-color-focus);
+    color: var(--spectrum-button-toggle-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-toggle-background-color-hover);
+    border-color: var(--spectrum-button-toggle-border-color-hover);
+    color: var(--spectrum-button-toggle-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-toggle-background-color-active);
+    border-color: var(--spectrum-button-toggle-border-color-active);
+    color: var(--spectrum-button-toggle-text-color-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    display: none;
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-button-toggle-on-background-color-default);
+    border-color: var(--spectrum-button-toggle-on-border-color-default);
+    color: var(--spectrum-button-toggle-on-text-color-default);
+  }
+
+  &.is-selected:focus {
+    background-color: var(--spectrum-button-toggle-on-background-color-focus);
+    border-color: var(--spectrum-button-toggle-on-border-color-focus);
+    color: var(--spectrum-button-toggle-on-text-color-focus);
+  }
+
+  &.is-selected:hover {
+    background-color: var(--spectrum-button-toggle-on-background-color-hover);
+    border-color: var(--spectrum-button-toggle-on-border-color-hover);
+    color: var(--spectrum-button-toggle-on-text-color-hover);
+  }
+
+  &.is-selected:active {
+    background-color: var(--spectrum-button-toggle-on-background-color-active);
+    border-color: var(--spectrum-button-toggle-on-border-color-active);
+    color: var(--spectrum-button-toggle-on-text-color-active);
+  }
+
+  &.is-selected:disabled,
+  &.is-selected[disabled] {
+    background-color: var(--spectrum-button-toggle-on-background-color-disabled);
+    border-color: var(--spectrum-button-toggle-on-border-color-disabled);
+    color: var(--spectrum-button-toggle-on-text-color-disabled);
+  }
+
+}
+
+/*! topdoc
 {{ button/button-quiet-warning.yml }}
 */
 .spectrum-Button--quiet--warning {
