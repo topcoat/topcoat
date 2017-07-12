@@ -15,7 +15,7 @@ markup: |
     <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
     Button
   </button>
-  <button class="spectrum-Button spectrum-Button--toggle" is-selected>
+  <button class="spectrum-Button spectrum-Button--toggle is-selected">
     Selected Button
   </button>
   <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only">
