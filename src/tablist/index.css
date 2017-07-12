@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  /* The size of the icons in tabs */
+  --spectrum-tablist-icon-size: 18px;
+}
+
 .spectrum-TabList {
   position: relative;
   z-index: 1;
@@ -10,16 +15,25 @@
   * { outline: none; }
 
   .spectrum-Tab {
+    position: relative;
     cursor: pointer;
 
     > .spectrum-Tab-icon {
-      position: relative;
+      /* Ensure the label doesn't drop down */
+      display: inline-block;
+
       vertical-align: middle;
-      font-size: 18px;
+
+      /* Support SVG icons */
+      width: var(--spectrum-tablist-icon-size);
+      height: var(--spectrum-tablist-icon-size);
+
+      /* Support font icons */
+      font-size: var(--spectrum-tablist-icon-size);
+      line-height: var(--spectrum-tablist-icon-size);
     }
 
     > .spectrum-Tab-label {
-      position: relative;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 1px;
@@ -46,7 +60,6 @@
   display: block;
 
   .spectrum-Tab {
-    position: relative;
     float: left;
     display: block;
     box-sizing: border-box;
@@ -69,8 +82,7 @@
 
     &.is-selected {
       /* Horizontal Active Tab Line */
-      > .spectrum-Tab-label:after,
-      > .spectrum-Tab-icon:after {
+      &:after {
         content: "";
         position: absolute;
         display: block;
@@ -122,8 +134,7 @@
 
     &.is-selected {
       /* Vertical Active Tab Line */
-      > .spectrum-Tab-label:after,
-      > .spectrum-Tab-icon:after {
+      &:after {
         content: '';
         position: absolute;
         left: 0;
@@ -143,6 +154,11 @@
   }
 }
 
+.spectrum-Tab-label:empty {
+  /* Hide the tab label if it's not being used */
+  display: none;
+}
+
 /* topdoc
 {{ tablist/tablist-anchoredlabel.yml }}
 */
@@ -159,7 +175,7 @@
     }
   }
 
-  .spectrum-Tab > .spectrum-Tab-label::after,
+  .spectrum-Tab::after,
   &::before {
     content: "";
     position: absolute;
