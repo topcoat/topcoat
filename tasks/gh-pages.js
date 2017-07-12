@@ -19,6 +19,7 @@ gulp.task('gh-pages', function(cb) {
           './docs',
           './standalone',
           './vars',
+          './icons',
           './spectrum*'
         ])
           .pipe(git.commit('Deploy version ' + package.version))
