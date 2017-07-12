@@ -61,6 +61,7 @@
 
 .spectrum-Slider-track--fill {
   width: 0;
+  height: var(--spectrum-slider-track-height-default);
   position: relative;
   margin-left: 0;
 }
