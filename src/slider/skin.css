@@ -95,6 +95,9 @@ Todo: Determine if missing mixin is required
   border-radius: var(--spectrum-slider-tick-mark-border-radius-default);
 }
 
+/*
+Todo: Determine if these are supposed to be pseudo classes
+*/
 .spectrum-Slider-controls--hover {
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-hover);
@@ -123,10 +126,10 @@ Todo: Determine if missing mixin is required
 .spectrum-Slider--disabled {
   spectrum-slider-disabled()
 
-  .spectrum-Slider-Label,
-  .spectrum-Slider-Label--Name,
-  .spectrum-Slider-Label--Value,
-  .spectrum-Slider-Label--Tick {
+  .spectrum-Slider-label,
+  .spectrum-Slider-label--name,
+  .spectrum-Slider-label--value,
+  .spectrum-Slider-label--tick {
     color: var(--spectrum-slider-text-color-disabled);
   }
 
