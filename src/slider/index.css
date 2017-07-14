@@ -24,14 +24,6 @@
   width: var(--spectrum-slider-width-default);
 }
 
-.spectrum-Slider--disabled {
-  cursor: default;
-}
-
-.spectrum-Slider--disabled .spectrum-Slider-handle {
-  cursor: default;
-}
-
 .spectrum-Slider-controls {
   position: relative;
   display: inline-block;
@@ -40,14 +32,16 @@
   z-index: auto;
   margin: 0 var(--spectrum-slider-controls-margin) var(--spectrum-slider-margin-bottom-default);
   width: calc(var(--spectrum-slider-track-width-default) - var(--spectrum-slider-handle-width-default)); /* Todo: Client-side calc? */
-  height: var(--spectrum-slider-height-default);
+  min-height: var(--spectrum-slider-height-default);
 }
 
 .spectrum-Slider-track {
   border-radius: var(--spectrum-slider-track-border-radius-default);
   pointer-events: none;
   height: var(--spectrum-slider-track-height-default);
-  top: 50%;
+  /*top: 50%;*/
+  top: calc(var(--spectrum-slider-height-default) / 2);
+
   left: 0;
   margin-top: -1px;
   margin-right: 0;
@@ -78,14 +72,11 @@
   top: -7px;
 }
 
-.spectrum-Slider--disabled .spectrum-Slider-track {
-  margin-left: var(--spectrum-slider-track-margin-left);
-}
-
 .spectrum-Slider-handle {
   position: absolute;
   left: 0;
-  top: 50%;
+  /*top: 50%;*/
+  top: calc(var(--spectrum-slider-height-default) / 2);
   display: inline-block;
   box-sizing: border-box;
   outline: none;
@@ -116,6 +107,8 @@
   pointer-events: none;
 }
 
+
+
 .spectrum-Slider-label {
   display: block;
   position: relative;
@@ -131,55 +124,63 @@
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Slider-label--name {
+.spectrum-Slider-label-name {
   padding-left: 0;
 }
 
-.spectrum-Slider-label--value {
+.spectrum-Slider-label-value {
   float: right;
   padding-right: 0;
 }
 
-.spectrum-Slider-label--tick {
-  display: flex;
-  padding: 0;
-  margin: 16px 0 0 0;
-  justify-content: center;
-}
-
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider--tick {
-  spectrum-slider-tick()
-}
-*/
-
 .spectrum-Slider-ticks {
-  position: absolute;
   margin-left: var(--spectrum-slider-ticks-margin-right);
   margin-right: var(--spectrum-slider-ticks-margin-right);
-  top: 11px;
-  left: 0;
-  right: 0;
+  margin-top: 11px;
   display: flex;
   justify-content: space-between;
   z-index: 0;
 }
 
-.spectrum-Slider--tick--labelled {
-  margin-bottom: 16px;
-}
-
 .spectrum-Slider-tick-mark {
   position: relative;
-  width: var(--spectrum-slider-tick-mark-width-default);
-  height: var(--spectrum-slider-tick-mark-height-default);
 
-  &:first-of-type .spectrum-Slider-label--tick {
-    justify-content: flex-start;
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - calc(var(--spectrum-slider-tick-mark-width-default) / 2));
+    content: '';
+    width: var(--spectrum-slider-tick-mark-width-default);
+    height: var(--spectrum-slider-tick-mark-height-default);
   }
-  &:last-of-type .spectrum-Slider-label--tick {
-    justify-content: flex-end;
+
+  .spectrum-Slider-label {
+    margin: 16px 0 0 0;
+    text-align: center;
+  }
+
+  &:first-of-type {
+    &:after {
+      left: 0;
+    }
+
+    .spectrum-Slider-label {
+      left: 0;
+      text-align: left;
+    }
+  }
+
+  &:last-of-type {
+    &:after {
+      right: 0;
+      left: auto;
+    }
+
+    .spectrum-Slider-label {
+      right: 0;
+      text-align: right;
+    }
   }
 }
 
@@ -194,7 +195,7 @@ Todo: Determine if missing mixin is required
   }
 }
 
-.spectrum-Slider.spectrum-Slider--round {
+.spectrum-Slider--round {
   display: inline-block;
   width: var(--spectrum-slider-round-container-width-default);
   height: auto;
@@ -264,13 +265,24 @@ Todo: Determine if missing mixin is required
     &::after {
       content: '';
       position: absolute;
-      top: 50%;
+      /*top: 50%;*/
+      top: calc(var(--spectrum-slider-height-default) / 2);
       left: -2px;
       width: var(--spectrum-slider-round-handle-marker-width-default);
       height: var(--spectrum-slider-round-handle-marker-height-default);
       border-radius: var(--spectrum-slider-round-handle-marker-border-radius-default);
-      transform: translateY(-50%);
+      /*transform: translateY(-50%);*/
       transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
     }
   }
 }
+
+
+.spectrum-Slider.is-disabled {
+  cursor: default;
+
+  .spectrum-Slider-handle {
+    cursor: default;
+  }
+}
+

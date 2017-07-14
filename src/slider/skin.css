@@ -17,6 +17,9 @@
 {{ slider/slider-tick.yml }}
 */
 /* topdoc
+{{ slider/slider-tick-label.yml }}
+*/
+/* topdoc
 {{ slider/slider-ramp.yml }}
 */
 .spectrum-Slider {
@@ -91,8 +94,10 @@ Todo: Determine if missing mixin is required
 */
 
 .spectrum-Slider-tick-mark {
-  background-color: var(--spectrum-slider-tick-mark-color-default);
-  border-radius: var(--spectrum-slider-tick-mark-border-radius-default);
+  &:after {
+    background-color: var(--spectrum-slider-tick-mark-color-default);
+    border-radius: var(--spectrum-slider-tick-mark-border-radius-default);
+  }
 }
 
 /*
@@ -123,13 +128,8 @@ Todo: Determine if these are supposed to be pseudo classes
   }
 }
 
-.spectrum-Slider--disabled {
-  spectrum-slider-disabled()
-
-  .spectrum-Slider-label,
-  .spectrum-Slider-label--name,
-  .spectrum-Slider-label--value,
-  .spectrum-Slider-label--tick {
+.spectrum-Slider.is-disabled {
+  .spectrum-Slider-label {
     color: var(--spectrum-slider-text-color-disabled);
   }
 

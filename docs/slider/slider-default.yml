@@ -10,7 +10,7 @@
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
+    <formfield class="spectrum-Slider .is-disabled">
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
