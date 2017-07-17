@@ -1,0 +1,37 @@
+@import '../commons/index.css';
+
+.spectrum-Breadcrumb {
+  cursor: pointer;
+  position: relative;
+  margin-right: var(--spectrum-breadcrumb-margin-default);
+  font-size: var(--spectrum-breadcrumb-font-size-default);
+
+  &::after {
+    position: absolute;
+    top: var(--spectrum-breadcrumb-chevron-icon-height-default);
+    right: calc(var(--spectrum-breadcrumb-font-size-default) * -1);
+    width: var(--spectrum-breadcrumb-chevron-icon-width-default);
+    height: var(--spectrum-breadcrumb-chevron-icon-height-default);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform:scale(1);
+    opacity:1;
+    content:'';
+  }
+  
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.spectrum-Breadcrumb-title .spectrum-Breadcrumb {
+  &:last-of-type {
+    display: block;
+    font-size: var(--spectrum-breadcrumb-title-active-font-size-default);
+    font-weight: var(--spectrum-breadcrumb-title-active-font-weight-default);
+    line-height: var(--spectrum-breadcrumb-title-active-line-height-default);
+    margin: var(--spectrum-breadcrumb-title-margin-default);
+  }
+}
