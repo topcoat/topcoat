@@ -17,7 +17,7 @@ gulp.task('dev', ['build'], function() {
 
 gulp.task('reload-docs', ['build-docs'], function() {
   gulp.src('').pipe(connect.reload());
-})
+});
 
 gulp.task('reload-css', ['build-css'], function() {
   gulp.src('').pipe(connect.reload());
