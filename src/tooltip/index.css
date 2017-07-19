@@ -39,13 +39,17 @@
   padding: 10px 14px;
 }
 
+/* topdoc
+{{ tooltip/tooltip-icons.yml }}
+*/
 .spectrum-Tooltip-typeIcon {
   font-size: 14px;
-  line-height: 0;
+  vertical-align: middle;
+  margin-right: var(--spectrum-button-label-icon-gap-size-default);
+}
 
-  &:before {
-    vertical-align: sub;
-  }
+.spectrum-Tooltip-label {
+    vertical-align: middle;
 }
 
 .spectrum-Tooltip--is-open {
