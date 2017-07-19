@@ -1,6 +1,6 @@
 ---
   name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode 
+  description: The Spectrum tab list with icons in horizontal mode
   modifiers:
     ':disabled': Disabled state
     ':hover': Hover state
@@ -9,6 +9,7 @@
     <div class="spectrum-TabList spectrum-TabList--horizontal">
       <div class="spectrum-Tab is-selected">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -19,4 +20,4 @@
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
       </div>
-    </div> 
+    </div>

@@ -33,11 +33,19 @@ gulp.task('build-docs:copy-site-resources', function() {
     .pipe(gulp.dest('dist/docs'));
 });
 
+gulp.task('build-docs:copy-spectrum-icons', function() {
+  gulp.src([
+    'node_modules/@spectrum/spectrum-icons/dist/**'
+  ])
+    .pipe(gulp.dest('dist/icons/'));
+});
+
 gulp.task('build-docs', function(cb) {
   runSequence(
     'build-docs:inject-topdoc',
     'build-docs:topdoc',
     'build-docs:copy-site-resources',
+    'build-docs:copy-spectrum-icons',
     cb
   );
 });
