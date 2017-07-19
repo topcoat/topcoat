@@ -6,11 +6,26 @@ This project makes use of Spectrum DNA generated data, and its output is meant t
 
 The output from this project can be seen [on Jenkins](https://designcodestuff.ci.corp.adobe.com:12001/job/spectrum-css/lastSuccessfulBuild/artifact/dist/docs/index.html).
 
+## Spectrum, DNA, and Spectrum-CSS
+Spectrum, the design language, is represented by the DNA project as data values in JSON.  This is the `spectrum-origins` repository.  The structure of that repo is detailed in the readme.
+
+That JSON data must be compiled into output that can be consumed by UI frameworks.  The `balthazar` project contains tooling to do that conversion. In this case, the `spectrum-css` project uses `balthazar` to extract native CSS vars.  There is a `balthazar-config.json` file in the `spectrum-css` project that drives what values are extracted.  If a new element is added to `spectrum-css`, there must be an entry added to `balthazar-config.json` to be sure the values needed for the new element are available.
+
+The `spectrum-css` project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
+
+`spectrum-css` organizes the CSS source files in the `src` folder.   Each Spectrum element has it's own folder.  That folder contains an `index.css` file for the basic structual CSS for all variants of an element.  There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
+
+The CSS source files also contain [Topdoc](topdoc_link) comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
+
+A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.  The
+
+The README for files for `spectrum-css`, `balthazar`, and `spectrum-origins` are helpful for more details.
+
 ## Using Spectrum CSS
 
 Spectrum CSS can be consumed as whole or in part with two distinct methods of applying colorstops.
 
-### Multistop Strategy
+### Multi-stop Strategy
 
 The first method of applying colorstops, *multistop*, makes it possible to have any number of colorstops on the same page. This method results in slightly larger CSS files with more selectors, but is the method most products will use as dark and light colorstops are commonly mixed in Spectrum designs.
 
@@ -46,7 +61,7 @@ Note that, due to CSS selector specificity, whatever colorstop you import last w
 </body>
 ```
 
-### Singlestop Strategy
+### Single-stop Strategy
 
 The second method of applying colorstops, *singlestops*, makes it so it's only possible to have a single colorstop on the page at once. This method results in less selectors and smaller CSS files.
 
