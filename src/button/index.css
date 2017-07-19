@@ -34,7 +34,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     cursor: default;
   }
 

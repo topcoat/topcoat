@@ -35,7 +35,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-cta-background-color-disabled);
     border-color: var(--spectrum-button-cta-border-color-disabled);
     color: var(--spectrum-button-cta-text-color-disabled);
@@ -69,7 +69,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-primary-background-color-disabled);
     border-color: var(--spectrum-button-primary-border-color-disabled);
     color: var(--spectrum-button-primary-text-color-disabled);
@@ -103,7 +103,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-secondary-background-color-disabled);
     border-color: var(--spectrum-button-secondary-border-color-disabled);
     color: var(--spectrum-button-secondary-text-color-disabled);
@@ -137,7 +137,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-warning-background-color-disabled);
     border-color: var(--spectrum-button-warning-border-color-disabled);
     color: var(--spectrum-button-warning-text-color-disabled);
@@ -171,7 +171,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-quiet-primary-background-color-disabled);
     border-color: var(--spectrum-button-quiet-primary-border-color-disabled);
     color: var(--spectrum-button-quiet-primary-text-color-disabled);
@@ -205,7 +205,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-quiet-secondary-background-color-disabled);
     border-color: var(--spectrum-button-quiet-secondary-border-color-disabled);
     color: var(--spectrum-button-quiet-secondary-text-color-disabled);
@@ -242,7 +242,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-action-background-color-disabled);
     border-color: var(--spectrum-button-action-border-color-disabled);
     color: var(--spectrum-button-action-text-color-disabled);
@@ -279,7 +279,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     display: none;
   }
 }
@@ -313,7 +313,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     display: none;
   }
 
@@ -342,7 +342,7 @@
   }
 
   &.is-selected:disabled,
-  &.is-selected[disabled] {
+  &.is-selected.is-disabled {
     background-color: var(--spectrum-button-toggle-on-background-color-disabled);
     border-color: var(--spectrum-button-toggle-on-border-color-disabled);
     color: var(--spectrum-button-toggle-on-text-color-disabled);
@@ -377,7 +377,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-quiet-warning-background-color-disabled);
     border-color: var(--spectrum-button-quiet-warning-border-color-disabled);
     color: var(--spectrum-button-quiet-warning-text-color-disabled);
@@ -405,7 +405,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-logic-and-background-color-disabled);
     border-color: var(--spectrum-button-logic-and-border-color-disabled);
     color: var(--spectrum-button-logic-text-color-disabled);
@@ -433,7 +433,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-secondary-background-color-disabled);
     border-color: var(--spectrum-button-secondary-border-color-disabled);
     color: var(--spectrum-button-logic-text-color-disabled);
