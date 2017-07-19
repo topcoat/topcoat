@@ -10,7 +10,8 @@
   pointer-events: none;
   z-index: var(--spectrum-zindex-tooltip);
   opacity: 0;
-  transition: all 100ms ease-in-out;
+  visibility: hidden;
+  transition: all 100ms ease-in-out, visibility 0ms linear 100ms;
 }
 
 .spectrum-Tooltip-content {
@@ -45,11 +46,14 @@
 
   &:before {
     vertical-align: sub;
+    margin-right: var(--spectrum-button-label-icon-gap-size-default);
   }
 }
 
 .spectrum-Tooltip--is-open {
   opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
 }
 
 .spectrum-Tooltip--top {
