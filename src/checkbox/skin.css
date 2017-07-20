@@ -19,6 +19,10 @@
     border-color: var(--spectrum-switch-border-color-focus);
     box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
   }
+
+  &:focus ~ .spectrum-Checkbox-label {
+    color: var(--spectrum-switch-label-text-color-focus);
+  }
 }
 
 /* topdoc
@@ -30,11 +34,17 @@
       border-color: var(--spectrum-switch-border-color-hover);
       box-shadow: none;
     }
+    .spectrum-Checkbox-label {
+      color: var(--spectrum-switch-label-text-color-hover);
+    }
   }
 
   &:active {
     .spectrum-Checkbox-checkmark {
       border-color: var(--spectrum-switch-border-color-active);
+    }
+    .spectrum-Checkbox-label {
+      color: var(--spectrum-switch-label-text-color-active);
     }
   }
 }
@@ -49,6 +59,36 @@
 
   &:disabled ~ .spectrum-Checkbox-label {
     color: var(--spectrum-switch-label-text-color-disabled);
+  }
+
+  &:invalid {
+    & + .spectrum-Checkbox-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-default);
+    }
+
+    & ~ .spectrum-Checkbox-label {
+      color: var(--spectrum-switch-invalid-border-color-default);
+    }
+  }
+
+  &:invalid:hover {
+    & + .spectrum-Checkbox-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-hover);
+    }
+
+    & ~ .spectrum-Checkbox-label {
+      color: var(--spectrum-switch-invalid-border-color-hover);
+    }
+  }
+
+  &:invalid:active {
+    & + .spectrum-Checkbox-checkmark {
+      border-color: var(--spectrum-switch-invalid-border-color-active);
+    }
+
+    & ~ .spectrum-Checkbox-label {
+      color: var(--spectrum-switch-invalid-border-color-active);
+    }
   }
 }
 
