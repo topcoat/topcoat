@@ -1,0 +1,13 @@
+---
+name: Breadcrumb - Default
+description: The default Spectrum breadcrumb
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <div class="spectrum-Breadcrumb">
+    <span class="spectrum-Breadcrumb">Nike</span>
+    <span class="spectrum-Breadcrumb">Mens</span>
+    <span class="spectrum-Breadcrumb">Summer 2016</span>
+  </div>

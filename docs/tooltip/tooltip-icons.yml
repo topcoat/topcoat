@@ -4,33 +4,36 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--is-open">
     <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>&nbsp;Normal<div class="spectrum-Tooltip-tip"></div>
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
     </span>
   </span>
 
+  <br>
   <br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--success
   spectrum-Tooltip--is-open">
     <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>&nbsp;Success<div class="spectrum-Tooltip-tip"></div>
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
     </span>
   </span>
 
+  <br>
   <br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--info
   spectrum-Tooltip--is-open">
     <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>&nbsp;Info<div class="spectrum-Tooltip-tip"></div>
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
     </span>
   </span>
 
+  <br>
   <br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--error
   spectrum-Tooltip--is-open">
     <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>&nbsp;Info<div class="spectrum-Tooltip-tip"></div>
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
     </span>
   </span>

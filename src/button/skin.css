@@ -3,6 +3,14 @@
     box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-primary-border-color-focus);
   }
 
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
   &.is-selected .spectrum-Icon {
     color: var(--spectrum-button-icon-color-active);
   }
@@ -232,12 +240,14 @@
   &:hover {
     background-color: var(--spectrum-button-action-background-color-hover);
     border-color: var(--spectrum-button-action-border-color-hover);
+    box-shadow: none;
     color: var(--spectrum-button-action-text-color-hover);
   }
 
   &:active {
     background-color: var(--spectrum-button-action-background-color-active);
     border-color: var(--spectrum-button-action-border-color-active);
+    box-shadow: none;
     color: var(--spectrum-button-action-text-color-active);
   }
 
@@ -269,18 +279,22 @@
   &:hover {
     background-color: var(--spectrum-button-quiet-action-background-color-hover);
     border-color: var(--spectrum-button-quiet-action-border-color-hover);
+    box-shadow: none;
     color: var(--spectrum-button-quiet-action-text-color-hover);
   }
 
   &:active {
     background-color: var(--spectrum-button-quiet-action-background-color-active);
     border-color: var(--spectrum-button-quiet-action-border-color-active);
+    box-shadow: none;
     color: var(--spectrum-button-quiet-action-text-color-active);
   }
 
   &:disabled,
-  &.is-disabled {
-    display: none;
+  &[disabled] {
+    background-color: var(--spectrum-button-quiet-warning-background-color-disabled);
+    border-color: var(--spectrum-button-quiet-warning-border-color-disabled);
+    color: var(--spectrum-button-quiet-warning-text-color-disabled);
   }
 }
 

@@ -4,6 +4,7 @@
 @import 'typography/skin.css';
 @import 'link/skin.css';
 @import 'button/skin.css';
+@import 'breadcrumb/skin.css';
 @import 'alert/skin.css';
 @import 'checkbox/skin.css';
 @import 'label/skin.css';

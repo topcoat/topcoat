@@ -1,0 +1,33 @@
+.spectrum-Breadcrumb {
+	color: var(--spectrum-breadcrumb-text-color-default);
+
+  &:hover {
+    color: var(--spectrum-breadcrumb-text-color-hover);
+  }
+
+  &:focus {
+    color: var(--spectrum-breadcrumb-text-color-focus);
+  	outline: 0;
+  	border-bottom: 2px solid var(--spectrum-breadcrumb-text-color-focus);
+  }
+
+  &:active {
+  	color: var(--spectrum-breadcrumb-text-color-active);
+  }
+
+  &::after {
+    background-image: url("embed/Breadcrumb-Chevron.svg" param(--color var(--spectrum-breadcrumb-text-color-default)));
+  }
+  
+  &:last-of-type {
+    color: var(--spectrum-breadcrumb-text-color-active);
+  }
+}
+
+/* topdoc
+{{ breadcrumb/breadcrumb-default.yml }}
+*/
+
+/* topdoc
+{{ breadcrumb/breadcrumb-title.yml }}
+*/
