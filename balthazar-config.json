@@ -14,6 +14,8 @@
     "../../spectrum-origins/src/components/alert/alert-info.json",
     "../../spectrum-origins/src/components/alert/alert-success.json",
     "../../spectrum-origins/src/components/alert/alert-warning.json",
+    "../../spectrum-origins/src/components/breadcrumb/breadcrumb-default.json",
+    "../../spectrum-origins/src/components/breadcrumb/breadcrumb-title.json",
     "../../spectrum-origins/src/components/button/button-action-default.json",
     "../../spectrum-origins/src/components/button/button-action-icon.json",
     "../../spectrum-origins/src/components/button/button-cta.json",
