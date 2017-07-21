@@ -12,6 +12,9 @@
 
   --spectrum-slider-color-track-height-default: 24px;
 
+  /* This must be fixed to prevent problems with different width labels */
+  --spectrum-slider-ticks-width: 16px;
+
   /* Todo: Remove hardcoded values */
   --spectrum-slider-height-default: 32px;
   --spectrum-slider-round-width-default: 32px;
@@ -30,8 +33,7 @@
   box-sizing: border-box;
   vertical-align: top;
   z-index: auto;
-  margin: 0 var(--spectrum-slider-controls-margin) var(--spectrum-slider-margin-bottom-default);
-  width: calc(var(--spectrum-slider-track-width-default) - var(--spectrum-slider-handle-width-default)); /* Todo: Client-side calc? */
+  width: 100%;
   min-height: var(--spectrum-slider-height-default);
 }
 
@@ -39,17 +41,18 @@
   border-radius: var(--spectrum-slider-track-border-radius-default);
   pointer-events: none;
   height: var(--spectrum-slider-track-height-default);
-  /*top: 50%;*/
+
   top: calc(var(--spectrum-slider-height-default) / 2);
 
-  left: 0;
+  left: 8px;
   margin-top: -1px;
   margin-right: 0;
   margin-bottom: 0;
   padding: 0 var(--spectrum-slider-handle-width-default) 0 0;
 
   position: absolute;
-  width: var(--spectrum-slider-track-width-default);
+
+  width: calc(100% - 16px);
   margin-left: var(--spectrum-slider-track-margin-left);
 }
 
@@ -75,7 +78,7 @@
 .spectrum-Slider-handle {
   position: absolute;
   left: 0;
-  /*top: 50%;*/
+
   top: calc(var(--spectrum-slider-height-default) / 2);
   display: inline-block;
   box-sizing: border-box;
@@ -89,7 +92,18 @@
   margin-left: var(--spectrum-slider-handle-margin-top);
   width: var(--spectrum-slider-handle-width-default);
   height: var(--spectrum-slider-handle-height-default);
-  transition: border var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
+  border-width: var(--spectrum-slider-handle-border-width-default);
+  border-style: solid;
+  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
+  &:focus {
+    border-width: var(--spectrum-slider-border-width-active);
+  }
+
+  &:active {
+    border-width: var(--spectrum-slider-border-width-active);
+  }
 }
 
 .spectrum-Slider-input {
@@ -145,6 +159,8 @@
 .spectrum-Slider-tick-mark {
   position: relative;
 
+  width: var(--spectrum-slider-ticks-width);
+
   &:after {
     display: block;
     position: absolute;
@@ -156,42 +172,44 @@
   }
 
   .spectrum-Slider-label {
+    position: relative;
     margin: 16px 0 0 0;
     text-align: center;
   }
 
   &:first-of-type {
-    &:after {
-      left: 0;
-    }
-
     .spectrum-Slider-label {
-      left: 0;
+      /* Move over so we're left justified */
       text-align: left;
+      left: 6px;
     }
   }
 
   &:last-of-type {
-    &:after {
-      right: 0;
-      left: auto;
-    }
-
     .spectrum-Slider-label {
-      right: 0;
+      /* Move over so we're right justified */
+      left: -6px;
       text-align: right;
     }
   }
 }
 
 .spectrum-Slider--color {
+  .spectrum-Slider-controls {
+    margin-top: 8px;
+  }
+  .spectrum-Slider-controls,
   .spectrum-Slider-track {
+    min-height: auto;
     height: var(--spectrum-slider-color-track-height-default);
-    top: 8px;
+  }
+  .spectrum-Slider-track {
+    top: 0;
+    margin-top: 0;
   }
   .spectrum-Slider-handle {
     left: 40%;
-    top: 60%;
+    top: 50%;
   }
 }
 
@@ -199,10 +217,13 @@
   display: inline-block;
   width: var(--spectrum-slider-round-container-width-default);
   height: auto;
+  min-height: 0;
 
   .spectrum-Slider-controls {
     width: var(--spectrum-slider-round-width-default);
     height: var(--spectrum-slider-round-width-default);
+    min-height: 0;
+
     border-radius: var(--spectrum-slider-round-border-radius-default);
     position: relative;
     display: inline-block;
@@ -265,13 +286,12 @@
     &::after {
       content: '';
       position: absolute;
-      /*top: 50%;*/
-      top: calc(var(--spectrum-slider-height-default) / 2);
+      top: 50%;
       left: -2px;
       width: var(--spectrum-slider-round-handle-marker-width-default);
       height: var(--spectrum-slider-round-handle-marker-height-default);
       border-radius: var(--spectrum-slider-round-handle-marker-border-radius-default);
-      /*transform: translateY(-50%);*/
+      transform: translateY(-50%);
       transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
     }
   }

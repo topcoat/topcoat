@@ -56,29 +56,21 @@ spectrum-slider-track-disabled(){
 
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-handle-border-color-default);
-  border-width: var(--spectrum-slider-handle-border-width-default);
-  border-style: solid;
   background: var(--spectrum-slider-handle-color-default);
   box-shadow: 0 0 0 var(--spectrum-slider-handle-outset-border-width-default) var(--spectrum-slider-handle-outset-border-color-default);
-  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
   &:hover {
     border-color: var(--spectrum-slider-handle-border-color-hover);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 
   &:focus {
     border-color: var(--spectrum-slider-handle-border-color-focus);
     background: var(--spectrum-slider-handle-fill-color-focus);
-    border-width: var(--spectrum-slider-border-width-active);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 
   &:active {
     border-color: var(--spectrum-slider-handle-border-color-active);
     background: var(--spectrum-slider-handle-fill-color-active);
-    border-width: var(--spectrum-slider-border-width-active);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
