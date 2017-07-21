@@ -40,14 +40,17 @@
   padding: 10px 14px;
 }
 
+/* topdoc
+{{ tooltip/tooltip-icons.yml }}
+*/
 .spectrum-Tooltip-typeIcon {
   font-size: 14px;
-  line-height: 0;
+  vertical-align: middle;
+  margin-right: var(--spectrum-button-label-icon-gap-size-default);
+}
 
-  &:before {
-    vertical-align: sub;
-    margin-right: var(--spectrum-button-label-icon-gap-size-default);
-  }
+.spectrum-Tooltip-label {
+  vertical-align: middle;
 }
 
 .spectrum-Tooltip--is-open {
@@ -56,20 +59,7 @@
   transition-delay: 0ms;
 }
 
-.spectrum-Tooltip--top {
-  transform: translate(-50%, 8px) scale(.94);
-  top: -100%;
-  left: 50%;
-
-  // this moves the tooltip up, above the hovered component. this should be calculated by JS
-  margin-top: -26px;
-}
-
 .spectrum-Tooltip--right {
-  transform: translate(-8px, -50%) scale(.94);
-  top: 50%;
-  left: 100%;
-
   .spectrum-Tooltip-tip {
     bottom: 50%;
     left: -2px;
@@ -79,10 +69,6 @@
 }
 
 .spectrum-Tooltip--left {
-  transform: translate(calc(-100% + 8px), -50%) scale(.94);
-  top: 50%;
-  left: 0;
-
   .spectrum-Tooltip-tip {
     bottom: 50%;
     left: auto;
@@ -93,11 +79,6 @@
 }
 
 .spectrum-Tooltip--bottom {
-  transform: translate(-50%, -8px) scale(.94);
-  bottom: -100%;
-  left: 50%;
-  margin-bottom: -28px;
-
   .spectrum-Tooltip-tip {
     bottom: auto;
     top: -4px;
@@ -105,9 +86,37 @@
   }
 }
 
-.spectrum-Tooltip-hover {
+.u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
+
+  .spectrum-Tooltip--top {
+    transform: translate(-50%, 8px) scale(.94);
+    top: -100%;
+    left: 50%;
+
+    /* this moves the tooltip up, above the hovered component. this should be calculated by JS */
+    margin-top: -26px;
+  }
+
+  .spectrum-Tooltip--right {
+    transform: translate(-8px, -50%) scale(.94);
+    top: 50%;
+    left: 100%;
+  }
+
+  .spectrum-Tooltip--left {
+    transform: translate(calc(-100% + 8px), -50%) scale(.94);
+    top: 50%;
+    left: 0;
+  }
+
+  .spectrum-Tooltip--bottom {
+    transform: translate(-50%, -8px) scale(.94);
+    bottom: -100%;
+    left: 50%;
+    margin-bottom: -28px;
+  }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
     transform: translate(-50%, 8px) scale(.94);

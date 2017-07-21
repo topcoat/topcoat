@@ -4,10 +4,11 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--is-open">
     <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>Normal<div class="spectrum-Tooltip-tip"></div>
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
     </span>
   </span>
 
+  <br>
   <br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--success
@@ -17,6 +18,7 @@ markup: |
     </span>
   </span>
 
+  <br>
   <br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--info

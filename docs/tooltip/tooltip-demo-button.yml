@@ -2,28 +2,28 @@
 name: Tooltip - Demo Button
 description: A Spectrum tooltip
 markup: |
-  <div class="spectrum-Tooltip-hover" style="margin: 15px">
+  <div class="u-tooltip-showOnHover" style="margin: 15px">
       Tooltip Demo Bottom
       <span class="spectrum-Tooltip spectrum-Tooltip--bottom">
           <span class="spectrum-Tooltip-content">Tooltip Bottom<div class="spectrum-Tooltip-tip"></div></span>
       </span>
   </div>
   <br>
-  <div class="spectrum-Tooltip-hover" style="margin: 15px">
+  <div class="u-tooltip-showOnHover" style="margin: 15px">
       Tooltip Demo Left
       <span class="spectrum-Tooltip spectrum-Tooltip--left">
           <span class="spectrum-Tooltip-content">Tooltip Left<div class="spectrum-Tooltip-tip"></div></span>
       </span>
   </div>
   <br>
-  <div class="spectrum-Tooltip-hover" style="margin: 15px">
+  <div class="u-tooltip-showOnHover" style="margin: 15px">
       Tooltip Demo Right
       <span class="spectrum-Tooltip spectrum-Tooltip--right">
           <span class="spectrum-Tooltip-content">Tooltip Right<div class="spectrum-Tooltip-tip"></div></span>
       </span>
   </div>
   <br>
-  <div class="spectrum-Tooltip-hover" style="margin: 15px">
+  <div class="u-tooltip-showOnHover" style="margin: 15px">
       Tooltip Demo Top
       <span class="spectrum-Tooltip spectrum-Tooltip--top">
           <span class="spectrum-Tooltip-content">Tooltip Top<div class="spectrum-Tooltip-tip"></div></span>

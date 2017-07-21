@@ -34,7 +34,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     cursor: default;
   }
 
@@ -77,6 +77,11 @@
 
 .spectrum-Button--quiet--action--icon-only {
   padding: 0 var(--spectrum-button-action-icon-padding-x-default);
+}
+
+.spectrum-Button--toggle {
+  font-size: var(--spectrum-button-toggle-font-size-default);
+  font-weight: var(--spectrum-button-toggle-font-weight-default);
 }
 
 .spectrum-Button--and,
