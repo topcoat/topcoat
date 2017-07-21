@@ -292,7 +292,9 @@
 
   &:disabled,
   &[disabled] {
-    display: none;
+    background-color: var(--spectrum-button-quiet-warning-background-color-disabled);
+    border-color: var(--spectrum-button-quiet-warning-border-color-disabled);
+    color: var(--spectrum-button-quiet-warning-text-color-disabled);
   }
 }
 
