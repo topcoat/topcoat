@@ -14,7 +14,7 @@
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--color .is-disabled">
+    <formfield class="spectrum-Slider spectrum-Slider--color is-disabled">
       <div class="spectrum-Slider-label">
         <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
         <label class="spectrum-Slider-label-value">#2680eb</label>

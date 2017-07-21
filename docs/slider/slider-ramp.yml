@@ -24,7 +24,7 @@
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--ramp .is-disabled">
+    <formfield class="spectrum-Slider spectrum-Slider--ramp is-disabled">
       <div class="spectrum-Slider-label">
         <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
         <label class="spectrum-Slider-label-value">14</label>
