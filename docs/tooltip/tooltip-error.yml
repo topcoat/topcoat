@@ -2,6 +2,6 @@
 name: Tooltip - Error
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--error spectrum-Tooltip--is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--error is-open">
     <span class="spectrum-Tooltip-content">Error Tooltip<div class="spectrum-Tooltip-tip"></div></span>
   </span>

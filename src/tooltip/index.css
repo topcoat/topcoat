@@ -53,7 +53,7 @@
   vertical-align: middle;
 }
 
-.spectrum-Tooltip--is-open {
+.spectrum-Tooltip.is-open {
   opacity: 1;
   visibility: visible;
   transition-delay: 0ms;
@@ -90,6 +90,11 @@
   display: inline-block;
   position: relative;
 
+  .spectrum-Tooltip {
+    /* Required for animations to work */
+    visibility: visible;
+  }
+
   .spectrum-Tooltip--top {
     transform: translate(-50%, 8px) scale(.94);
     top: -100%;
@@ -118,24 +123,24 @@
     margin-bottom: -28px;
   }
 
+  &:hover .spectrum-Tooltip {
+    opacity: 1;
+  }
+
   &:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
     transform: translate(-50%, 8px) scale(.94);
-    opacity: 1;
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--top {
     transform: translate(-50%, -8px) scale(.94);
-    opacity: 1;
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(-100%, -50%) scale(1);
-    opacity: 1;
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--right {
     transform: translate(0, -50%) scale(1);
-    opacity: 1;
   }
 }
 

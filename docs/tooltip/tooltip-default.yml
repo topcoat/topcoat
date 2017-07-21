@@ -2,6 +2,6 @@
 name: Tooltip - Default
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--is-open">
+  <span class="spectrum-Tooltip is-open">
     <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
   </span>
