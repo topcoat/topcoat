@@ -51,3 +51,16 @@
     color: var(--spectrum-switch-label-text-color-disabled);
   }
 }
+
+.spectrum-Checkbox-input {
+/* topdoc
+{{ checkbox/checkbox-error.yml }}
+*/
+  &:error + .spectrum-Checkbox-checkmark {
+    border-color: var(--spectrum-switch-border-color-error);
+  }
+
+  &:error ~ .spectrum-Checkbox-label {
+    color: var(--spectrum-switch-label-text-color-error);
+  }
+}
