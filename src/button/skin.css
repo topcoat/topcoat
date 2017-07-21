@@ -43,7 +43,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-cta-background-color-disabled);
     border-color: var(--spectrum-button-cta-border-color-disabled);
     color: var(--spectrum-button-cta-text-color-disabled);
@@ -77,7 +77,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-primary-background-color-disabled);
     border-color: var(--spectrum-button-primary-border-color-disabled);
     color: var(--spectrum-button-primary-text-color-disabled);
@@ -111,7 +111,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-secondary-background-color-disabled);
     border-color: var(--spectrum-button-secondary-border-color-disabled);
     color: var(--spectrum-button-secondary-text-color-disabled);
@@ -145,7 +145,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-warning-background-color-disabled);
     border-color: var(--spectrum-button-warning-border-color-disabled);
     color: var(--spectrum-button-warning-text-color-disabled);
@@ -179,7 +179,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-quiet-primary-background-color-disabled);
     border-color: var(--spectrum-button-quiet-primary-border-color-disabled);
     color: var(--spectrum-button-quiet-primary-text-color-disabled);
@@ -213,7 +213,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-quiet-secondary-background-color-disabled);
     border-color: var(--spectrum-button-quiet-secondary-border-color-disabled);
     color: var(--spectrum-button-quiet-secondary-text-color-disabled);
@@ -252,7 +252,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-action-background-color-disabled);
     border-color: var(--spectrum-button-action-border-color-disabled);
     color: var(--spectrum-button-action-text-color-disabled);
@@ -299,6 +299,72 @@
 }
 
 /* topdoc
+{{ button/button-toggle.yml }}
+*/
+.spectrum-Button--toggle {
+  background-color: var(--spectrum-button-toggle-background-color-default);
+  border-color: var(--spectrum-button-toggle-border-color-default);
+  border-width: var(--spectrum-button-toggle-border-size-default);
+  border-radius: var(--spectrum-button-toggle-border-corner-radius-default);
+  color: var(--spectrum-button-toggle-text-color-default);
+
+  &:focus {
+    background-color: var(--spectrum-button-toggle-background-color-focus);
+    border-color: var(--spectrum-button-toggle-border-color-focus);
+    color: var(--spectrum-button-toggle-text-color-focus);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-button-toggle-background-color-hover);
+    border-color: var(--spectrum-button-toggle-border-color-hover);
+    color: var(--spectrum-button-toggle-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-toggle-background-color-active);
+    border-color: var(--spectrum-button-toggle-border-color-active);
+    color: var(--spectrum-button-toggle-text-color-active);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    display: none;
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-button-toggle-on-background-color-default);
+    border-color: var(--spectrum-button-toggle-on-border-color-default);
+    color: var(--spectrum-button-toggle-on-text-color-default);
+  }
+
+  &.is-selected:focus {
+    background-color: var(--spectrum-button-toggle-on-background-color-focus);
+    border-color: var(--spectrum-button-toggle-on-border-color-focus);
+    color: var(--spectrum-button-toggle-on-text-color-focus);
+  }
+
+  &.is-selected:hover {
+    background-color: var(--spectrum-button-toggle-on-background-color-hover);
+    border-color: var(--spectrum-button-toggle-on-border-color-hover);
+    color: var(--spectrum-button-toggle-on-text-color-hover);
+  }
+
+  &.is-selected:active {
+    background-color: var(--spectrum-button-toggle-on-background-color-active);
+    border-color: var(--spectrum-button-toggle-on-border-color-active);
+    color: var(--spectrum-button-toggle-on-text-color-active);
+  }
+
+  &.is-selected:disabled,
+  &.is-selected.is-disabled {
+    background-color: var(--spectrum-button-toggle-on-background-color-disabled);
+    border-color: var(--spectrum-button-toggle-on-border-color-disabled);
+    color: var(--spectrum-button-toggle-on-text-color-disabled);
+  }
+
+}
+
+/*! topdoc
 {{ button/button-quiet-warning.yml }}
 */
 .spectrum-Button--quiet--warning {
@@ -325,7 +391,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-quiet-warning-background-color-disabled);
     border-color: var(--spectrum-button-quiet-warning-border-color-disabled);
     color: var(--spectrum-button-quiet-warning-text-color-disabled);
@@ -353,7 +419,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-logic-and-background-color-disabled);
     border-color: var(--spectrum-button-logic-and-border-color-disabled);
     color: var(--spectrum-button-logic-text-color-disabled);
@@ -381,7 +447,7 @@
   }
 
   &:disabled,
-  &[disabled] {
+  &.is-disabled {
     background-color: var(--spectrum-button-secondary-background-color-disabled);
     border-color: var(--spectrum-button-secondary-border-color-disabled);
     color: var(--spectrum-button-logic-text-color-disabled);
