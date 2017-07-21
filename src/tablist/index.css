@@ -170,8 +170,8 @@
     > .spectrum-Tab-label {
       cursor: pointer;
       text-transform: none;
-      font-size: var(--spectrum-tab-anchored-label-size-default);
-      font-weight: var(--spectrum-tab-anchored-label-weight-default);
+/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
+      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
     }
   }
 
@@ -183,7 +183,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: var(--spectrum-tab-anchored-border-size-default);
+    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
+    height: 2px;
   }
 }
 
