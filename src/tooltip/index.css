@@ -20,7 +20,7 @@
 
   width: auto;
 
-  padding: 6px 9px;
+  padding: 4px 8px;
 
   border-radius: var(--spectrum-border-radius);
 
@@ -36,8 +36,13 @@
   }
 }
 
+/* topdoc
+{{ tooltip/tooltip-large.yml }}
+*/
 .spectrum-Tooltip--large {
-  padding: 10px 14px;
+  .spectrum-Tooltip-content{
+    padding: 8px 16px;
+  }
 }
 
 /* topdoc
