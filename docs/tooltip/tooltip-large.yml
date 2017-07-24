@@ -1,0 +1,7 @@
+---
+name: Tooltip - Large
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--large is-open">
+    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
+  </span>
