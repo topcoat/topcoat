@@ -1,23 +1,23 @@
 ---
-name: Checkbox - Error
-description: The Spectrum checkbox
+name: Checkbox - Required
+description: A checkbox that must be checked
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox is-error">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
     <span class="spectrum-Checkbox-checkmark"></span>
     <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
   </div>
-  <div class="spectrum-Checkbox is-error">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
     <span class="spectrum-Checkbox-checkmark"></span>
     <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
   </div>
-  <div class="spectrum-Checkbox is-error is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+  <div class="spectrum-Checkbox is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
     <span class="spectrum-Checkbox-checkmark"></span>
     <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
   </div>
