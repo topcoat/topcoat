@@ -12,6 +12,9 @@
 
   --spectrum-slider-color-track-height-default: 24px;
 
+  /* This must be fixed to prevent problems with different width labels */
+  --spectrum-slider-ticks-width: 16px;
+
   /* Todo: Remove hardcoded values */
   --spectrum-slider-height-default: 32px;
   --spectrum-slider-round-width-default: 32px;
@@ -24,38 +27,32 @@
   width: var(--spectrum-slider-width-default);
 }
 
-.spectrum-Slider--disabled {
-  cursor: default;
-}
-
-.spectrum-Slider--disabled .spectrum-Slider-handle {
-  cursor: default;
-}
-
 .spectrum-Slider-controls {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   vertical-align: top;
   z-index: auto;
-  margin: 0 var(--spectrum-slider-controls-margin) var(--spectrum-slider-margin-bottom-default);
-  width: calc(var(--spectrum-slider-track-width-default) - var(--spectrum-slider-handle-width-default)); /* Todo: Client-side calc? */
-  height: var(--spectrum-slider-height-default);
+  width: 100%;
+  min-height: var(--spectrum-slider-height-default);
 }
 
 .spectrum-Slider-track {
   border-radius: var(--spectrum-slider-track-border-radius-default);
   pointer-events: none;
   height: var(--spectrum-slider-track-height-default);
-  top: 50%;
-  left: 0;
+
+  top: calc(var(--spectrum-slider-height-default) / 2);
+
+  left: 8px;
   margin-top: -1px;
   margin-right: 0;
   margin-bottom: 0;
   padding: 0 var(--spectrum-slider-handle-width-default) 0 0;
 
   position: absolute;
-  width: var(--spectrum-slider-track-width-default);
+
+  width: calc(100% - 16px);
   margin-left: var(--spectrum-slider-track-margin-left);
 }
 
@@ -78,14 +75,11 @@
   top: -7px;
 }
 
-.spectrum-Slider--disabled .spectrum-Slider-track {
-  margin-left: var(--spectrum-slider-track-margin-left);
-}
-
 .spectrum-Slider-handle {
   position: absolute;
   left: 0;
-  top: 50%;
+
+  top: calc(var(--spectrum-slider-height-default) / 2);
   display: inline-block;
   box-sizing: border-box;
   outline: none;
@@ -98,7 +92,18 @@
   margin-left: var(--spectrum-slider-handle-margin-top);
   width: var(--spectrum-slider-handle-width-default);
   height: var(--spectrum-slider-handle-height-default);
-  transition: border var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
+  border-width: var(--spectrum-slider-handle-border-width-default);
+  border-style: solid;
+  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
+  &:focus {
+    border-width: var(--spectrum-slider-border-width-active);
+  }
+
+  &:active {
+    border-width: var(--spectrum-slider-border-width-active);
+  }
 }
 
 .spectrum-Slider-input {
@@ -116,91 +121,109 @@
   pointer-events: none;
 }
 
-.spectrum-Slider-Label {
+
+
+.spectrum-Slider-label {
   display: block;
-  font-size: var(--spectrum-font-size-text-label);
+  position: relative;
+
+  width: auto;
+
   border-radius: var(--spectrum-border-radius);
-  display:inline-block;
-  position:relative;
-  padding: 6px 9px;
+
+  font-size: var(--spectrum-font-size-text-label);
   line-height: var(--spectrum-line-height-text-label);
-  width:auto;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Slider-Label--Name {
+.spectrum-Slider-label-name {
   padding-left: 0;
 }
 
-.spectrum-Slider-Label--Value {
+.spectrum-Slider-label-value {
   float: right;
   padding-right: 0;
 }
 
-.spectrum-Slider-Label--Tick {
-  display: flex;
-  padding: 0;
-  margin: 16px 0 0 0;
-  justify-content: center;
-}
-
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider--tick {
-  spectrum-slider-tick()
-}
-*/
-
 .spectrum-Slider-ticks {
-  position: absolute;
   margin-left: var(--spectrum-slider-ticks-margin-right);
   margin-right: var(--spectrum-slider-ticks-margin-right);
-  top: 11px;
-  left: 0;
-  right: 0;
+  margin-top: 11px;
   display: flex;
   justify-content: space-between;
   z-index: 0;
 }
 
-.spectrum-Slider--tick--labelled {
-  margin-bottom: 16px;
-}
-
 .spectrum-Slider-tick-mark {
   position: relative;
-  width: var(--spectrum-slider-tick-mark-width-default);
-  height: var(--spectrum-slider-tick-mark-height-default);
 
-  &:first-of-type .spectrum-Slider-Label--Tick {
-    justify-content: flex-start;
+  width: var(--spectrum-slider-ticks-width);
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - calc(var(--spectrum-slider-tick-mark-width-default) / 2));
+    content: '';
+    width: var(--spectrum-slider-tick-mark-width-default);
+    height: var(--spectrum-slider-tick-mark-height-default);
   }
-  &:last-of-type .spectrum-Slider-Label--Tick {
-    justify-content: flex-end;
+
+  .spectrum-Slider-label {
+    position: relative;
+    margin: 16px 0 0 0;
+    text-align: center;
+  }
+
+  &:first-of-type {
+    .spectrum-Slider-label {
+      /* Move over so we're left justified */
+      text-align: left;
+      left: 6px;
+    }
+  }
+
+  &:last-of-type {
+    .spectrum-Slider-label {
+      /* Move over so we're right justified */
+      left: -6px;
+      text-align: right;
+    }
   }
 }
 
 .spectrum-Slider--color {
+  .spectrum-Slider-controls {
+    margin-top: 8px;
+  }
+  .spectrum-Slider-controls,
   .spectrum-Slider-track {
+    min-height: auto;
     height: var(--spectrum-slider-color-track-height-default);
-    top: 8px;
+  }
+  .spectrum-Slider-track {
+    top: 0;
+    margin-top: 0;
   }
   .spectrum-Slider-handle {
     left: 40%;
-    top: 60%;
+    top: 50%;
   }
 }
 
-.spectrum-Slider.spectrum-Slider--round {
+.spectrum-Slider--round {
   display: inline-block;
   width: var(--spectrum-slider-round-container-width-default);
   height: auto;
+  min-height: 0;
 
   .spectrum-Slider-controls {
     width: var(--spectrum-slider-round-width-default);
     height: var(--spectrum-slider-round-width-default);
+    min-height: 0;
+
     border-radius: var(--spectrum-slider-round-border-radius-default);
     position: relative;
     display: inline-block;
@@ -273,3 +296,13 @@ Todo: Determine if missing mixin is required
     }
   }
 }
+
+
+.spectrum-Slider.is-disabled {
+  cursor: default;
+
+  .spectrum-Slider-handle {
+    cursor: default;
+  }
+}
+
