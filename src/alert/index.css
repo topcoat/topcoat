@@ -3,6 +3,7 @@
 :root {
   --spectrum-alert-header-height: 38px;
   --spectrum-alert-corner-radius: 4px;
+  --spectrum-alert-min-width: calc(var(--spectrum-component-single-line-width) * 2);
 }
 
 /* topdoc
@@ -13,7 +14,7 @@
 
   display: inline-block;
   box-sizing: border-box;
-  width: calc(var(--spectrum-component-single-line-width) * 2);
+  min-width: var(--spectrum-alert-min-width);
   min-height: var(--spectrum-alert-header-height);
   margin: 8px 0;
   padding: 16px 20px;
@@ -51,6 +52,9 @@
   min-height: 0;
   margin: 0;
   padding: 0;
+
+  /* Leave room for the icon */
+  padding-right: 30px;
 
   font-size: 14px;
   font-weight: 700;
