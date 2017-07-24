@@ -26,6 +26,12 @@
   opacity: .0001;
   z-index: 1;
 
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+
   &:checked + .spectrum-Checkbox-checkmark {
     border-width: 6px;
 
