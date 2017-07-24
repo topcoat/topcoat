@@ -18,8 +18,9 @@
     opacity:1;
     content:'';
   }
-  
+
   &:last-of-type {
+    cursor: default;
     &::after {
       display: none;
     }
