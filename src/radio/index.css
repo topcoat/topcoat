@@ -28,6 +28,10 @@
   &:checked + .spectrum-Radio-checkmark {
     border-width: 6px;
   }
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .spectrum-Radio-label {
