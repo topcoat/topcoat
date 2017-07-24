@@ -12,7 +12,7 @@ gulp.task('dev', ['build'], function() {
   ], ['reload-css']);
 
   gulp.watch([
-    'reference/**/docs/**/*.yml'
+    'docs/**/*.yml'
   ], ['reload-docs']);
 });
 
