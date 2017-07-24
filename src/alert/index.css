@@ -5,6 +5,9 @@
   --spectrum-alert-corner-radius: 4px;
 }
 
+/* topdoc
+{{ alert/alert-closeable.yml }}
+*/
 .spectrum-Alert {
   position: relative;
 
