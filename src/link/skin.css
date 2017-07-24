@@ -13,6 +13,10 @@
     color: var(--spectrum-link-text-color-focus);
     box-shadow: 0 1px 0 var(--spectrum-link-text-color-focus);
   }
+
+  &.is-disabled {
+    color: var(--spectrum-link-text-color-disabled);
+  }
 }
 
 .spectrum-Link--subtle {

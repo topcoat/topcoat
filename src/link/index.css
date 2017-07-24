@@ -8,8 +8,11 @@
   transition: color var(--spectrum-transition-time) ease-in-out;
   outline: none;
 
-  &[disabled] {
-    opacity: 0.15;
+/* topdoc
+{{ link/link-disabled.yml }}
+*/
+  &.is-disabled {
+  	cursor: default;
   }
 }
 
