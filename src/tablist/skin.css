@@ -2,32 +2,22 @@
 {{ tablist/tab-default.yml }}
 */
 .spectrum-Tab {
-  .spectrum-Tab-label {
-    color: var(--spectrum-tablist-text-color-default)
-  }
+  color: var(--spectrum-tablist-text-color-default)
 
   &:hover {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-text-color-hover)
-    }
+    color: var(--spectrum-tablist-text-color-hover)
   }
 
   &:focus {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-text-color-focus)
-    }
+    color: var(--spectrum-tablist-text-color-focus)
   }
 
   &.is-selected {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-text-color-active)
-    }
+    color: var(--spectrum-tablist-text-color-active)
   }
 
   &.is-disabled {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-text-color-disabled)
-    }
+    color: var(--spectrum-tablist-text-color-disabled)
   }
 }
 
