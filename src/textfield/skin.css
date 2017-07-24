@@ -52,6 +52,7 @@
     }
   }
 
+  .is-invalid,
   &:invalid {
     border-color: var(--spectrum-input-invalid-border-color-default);
 
@@ -87,6 +88,7 @@
     border-color:  var(--spectrum-input-quiet-border-color-disabled);
   }
 
+  .is-invalid,
   &:invalid {
     border-color: var(--spectrum-input-invalid-border-color-default);
 
