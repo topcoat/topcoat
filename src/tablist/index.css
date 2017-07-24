@@ -59,6 +59,12 @@
 .spectrum-TabList--anchored {
   display: block;
 
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
   .spectrum-Tab {
     float: left;
     display: block;
