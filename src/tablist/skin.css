@@ -24,7 +24,7 @@
     }
   }
 
-  &[disabled] {
+  &.is-disabled {
     .spectrum-Tab-label {
       color: var(--spectrum-tablist-text-color-disabled)
     }
