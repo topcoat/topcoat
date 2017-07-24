@@ -95,7 +95,9 @@
 
   border-width: var(--spectrum-slider-handle-border-width-default);
   border-style: solid;
-  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
+  /* Transition the border for focus animations */
+  transition: border var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
   &:focus {
     border-width: var(--spectrum-slider-border-width-active);
@@ -231,7 +233,10 @@
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
+
+    /* Why? */
     transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+
     box-sizing: border-box;
     outline: none;
 
