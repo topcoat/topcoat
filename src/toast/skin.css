@@ -17,9 +17,6 @@
   background-color: var(--spectrum-toast-error-background-color-default);
 }
 
-/* topdoc
-{{ toast/toast-warning.yml }}
-*/
 .spectrum-Toast--warning,
 .spectrum-Toast--error {
   .spectrum-Toast-typeIcon {
