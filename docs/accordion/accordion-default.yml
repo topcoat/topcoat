@@ -1,0 +1,18 @@
+---
+name: Accordion - Default
+description: The default spectrum accordion
+markup: |
+  <div class="spectrum-Accordion">
+    <div class="spectrum-Accordion-item is-open">
+      <div class="spectrum-Accordion-header">Header 1</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item is-disabled">
+      <div class="spectrum-Accordion-header">Header 2</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item">
+      <div class="spectrum-Accordion-header">Header 2</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+  </div>
