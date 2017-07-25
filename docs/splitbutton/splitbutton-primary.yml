@@ -1,0 +1,12 @@
+---
+name: SplitButton - Primary
+description: A primary split button.
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger"></button>
+  </div>

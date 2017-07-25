@@ -1,0 +1,12 @@
+---
+name: SplitButton - Secondary
+description: A secondary split button.
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger"></button>
+  </div>
