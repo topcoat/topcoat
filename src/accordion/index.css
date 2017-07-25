@@ -1,0 +1,98 @@
+@import '../commons/index.css';
+
+/* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+:root {
+  --spectrum-accordion-icon-width: 6px;
+  --spectrum-accordion-icon-height: 10px;
+}
+
+/* topdoc
+{{ accordion/accordion-default.yml }}
+*/
+.spectrum-Accordion {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spectrum-Accordion-item {
+  z-index: inherit;
+  position: relative;
+
+  display: list-item;
+  margin: 0;
+
+  border-bottom: var(--spectrum-accordion-item-border-size-default) solid transparent;
+
+  &:first-of-type {
+    border-top: var(--spectrum-accordion-item-border-size-default) solid transparent;
+  }
+}
+
+.spectrum-Accordion-header {
+  position: relative;
+
+  box-sizing: border-box;
+  /* left padding takes into account the icon's size */
+  padding: 0 var(--spectrum-accordion-item-padding-default) 0 calc(var(--spectrum-accordion-item-padding-default) * 2);
+  margin: 0;
+
+  /* Subtract the size of the border since it's on the item itself */
+  height: calc(var(--spectrum-accordion-item-height-default) - (var(--spectrum-accordion-item-border-size-default) * 2));
+
+  /* For focus state */
+  border-left: var(--spectrum-accordion-item-focus-border-size-default) solid transparent;
+
+  font-size: var(--spectrum-accordion-item-header-font-size-default);
+  text-transform: uppercase;
+  line-height: var(--spectrum-accordion-item-height-default);
+
+  overflow: ellipsis;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    width: var(--spectrum-accordion-icon-width);
+    height: var(--spectrum-accordion-icon-height);
+
+    /* Support SVG icons */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: var(--spectrum-accordion-icon-spacing-default);
+    top: calc(var(--spectrum-accordion-item-height-default) / 2 - var(--spectrum-accordion-icon-height) / 2);
+
+    transition: transform ease var(--spectrum-transition-time);
+  }
+}
+
+.spectrum-Accordion-content {
+  padding: 0 var(--spectrum-accordion-item-content-padding-default) var(--spectrum-accordion-item-content-padding-default) var(--spectrum-accordion-item-content-padding-default);
+  display: none;
+}
+
+.spectrum-Accordion-item {
+  &.is-open {
+    .spectrum-Accordion-header::before {
+      transform: rotate(90deg);
+    }
+
+    .spectrum-Accordion-content {
+      display: block;
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Accordion-header {
+      cursor: default;
+    }
+  }
+}

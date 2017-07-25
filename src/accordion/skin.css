@@ -1,0 +1,41 @@
+.spectrum-Accordion-item {
+  border-color: var(--spectrum-global-color-grey300); /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+}
+
+.spectrum-Accordion-header {
+  color: var(--spectrum-accordion-text-color-default);
+
+  &::before {
+    background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-default)));
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--spectrum-accordion-text-color-hover);
+    background-color: var(--spectrum-global-color-grey200); /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+
+    &::before {
+      background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-hover)));
+    }
+  }
+
+  &:focus {
+    border-left-color: var(--spectrum-accordion-border-left-color-focus);
+  }
+}
+
+.spectrum-Accordion-item.is-disabled {
+  .spectrum-Accordion-header {
+    &,
+    &:hover,
+    &:focus {
+      color: var(--spectrum-accordion-text-color-disabled);
+      background-color: transparent;
+    }
+
+    &::before {
+      /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+      background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-global-color-grey400)));
+    }
+  }
+}
