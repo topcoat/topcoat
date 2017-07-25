@@ -1,0 +1,22 @@
+---
+name: Action Menu
+description: An action button with a flyout menu.
+markup: |
+  <div class="spectrum-ActionMenu">
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
+
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
+    </ul>
+  </div>
+  <div class="spectrum-ActionMenu">
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
+
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
+    </ul>
+  </div>

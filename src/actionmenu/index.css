@@ -1,0 +1,36 @@
+/* topdoc
+{{ actionmenu/actionmenu.yml }}
+*/
+.spectrum-ActionMenu {
+
+}
+
+.spectrum-ActionMenu-button {
+  display: block;
+
+  padding: 0 8px;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: -4px;
+    margin-right: 6px;
+  }
+}
+
+.spectrum-ActionMenu-button:empty {
+  padding: 0 6px;
+
+  &::before {
+    margin-right: 0;
+  }
+}
+
+.spectrum-ActionMenu-flyout {
+  margin-top: 8px;
+}
