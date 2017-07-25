@@ -1,0 +1,9 @@
+---
+name: Toast - Warning
+description: The info toast.
+markup: |
+  <div class="spectrum-Toast spectrum-Toast--warning">
+    <div class="spectrum-Toast-typeIcon" role="img" aria-label="alert"></div>
+    <div class="spectrum-Toast-content">The toast is burning.</div>
+    <button class="spectrum-Toast-closeButton"></button>  
+  </div>
