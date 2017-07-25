@@ -1,0 +1,34 @@
+/* topdoc
+{{ search/search.yml }}
+*/
+.spectrum-Search {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+
+    pointer-events: none;
+  }
+}
+
+.spectrum-Search-textfield {
+  display: block;
+  padding-left: 24px;
+}
+
+.spectrum-Search-clear {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -455,3 +455,30 @@
     color: var(--spectrum-button-logic-text-color-disabled);
   }
 }
+
+/* topdoc
+{{ button/button-icon.yml }}
+*/
+.spectrum-Button--icon {
+  color: var(--spectrum-button-icon-icon-color-default);
+
+  &:focus {
+    color: var(--spectrum-button-icon-icon-color-focus);
+  }
+
+  &:hover {
+    color: var(--spectrum-button-icon-icon-color-hover);
+  }
+
+  &:active {
+    color: var(--spectrum-button-icon-icon-color-active);
+
+    &::before {
+      background-color: var(--spectrum-button-icon-background-color-active);
+    }
+  }
+
+  &:disabled {
+    color: var(--spectrum-button-icon-icon-color-disabled);
+  }
+}

@@ -1,5 +1,14 @@
 @import '../commons/index.css';
 
+:root {
+  /* Icon Button */
+  --spectrum-button-icon-width: 32px;
+  --spectrum-button-icon-border-radius: 2px;
+  --spectrum-button-icon-background-size: 16px;
+  --spectrum-button-icon-icon-size: 8px;
+  --spectrum-button-icon-border-radius: 4px;
+}
+
 .spectrum-Button {
   display: inline-block;
   box-sizing: border-box;
@@ -101,4 +110,73 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.spectrum-Button--icon {
+  position: relative;
+
+  box-sizing: border-box;
+
+  width: var(--spectrum-button-icon-width);
+  height: var(--spectrum-button-icon-width);
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  border-radius: var(--spectrum-button-icon-border-radius);
+
+  /* There's never a background itself */
+  background-color: transparent;
+
+  line-height: var(--spectrum-button-icon-width);
+  text-align: center;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  /* The artificial background */
+  &::before {
+    display: block;
+
+    /* Center ourselves */
+    position: absolute;
+    top: calc(var(--spectrum-button-icon-width) / 4);
+    left: calc(var(--spectrum-button-icon-width) / 4);
+
+    width: calc(var(--spectrum-button-icon-width) / 2);
+    height: calc(var(--spectrum-button-icon-width) / 2);
+
+    /* Be below content and icons */
+    z-index: 0;
+
+    content: '';
+
+    border-radius: var(--spectrum-button-icon-border-radius);
+  }
+
+  /* The embedded SVG icon */
+  &::after {
+    position: relative;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: var(--spectrum-button-icon-icon-size) var(--spectrum-button-icon-icon-size);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &::after,
+  > * {
+    /* Float above the artificial background */
+    position: relative;
+    z-index: 1;
+  }
 }

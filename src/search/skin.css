@@ -1,0 +1,29 @@
+.spectrum-Search {
+  &::after {
+    background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-icon-color-default)));
+  }
+}
+
+.spectrum-Search-clear {
+  &::after {
+    background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-default)));
+  }
+
+  &:focus {
+    &::after {
+      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-focus)));
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-hover)));
+    }
+  }
+
+  &:active {
+    &::after {
+      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-active)));
+    }
+  }
+}
