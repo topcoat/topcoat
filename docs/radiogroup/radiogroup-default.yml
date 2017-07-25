@@ -1,0 +1,16 @@
+---
+name: RadioGroup - Default
+description: The Spectrum radio group 'default'
+markup: |
+  <div class="spectrum-RadioGroup">
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
+    </div>
+  </div>
