@@ -2,6 +2,10 @@
   &::after {
     background-image: url("embed/S_SelectDownChevron_@1x.svg" param(--color var(--spectrum-button-icon-color-default)));
   }
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 /* topdoc

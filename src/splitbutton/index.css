@@ -42,8 +42,6 @@
   float: left;
 
   &:focus {
-    box-shadow: none;
-
     /* Be on top when focused or border leaks */
     z-index: 1;
   }
