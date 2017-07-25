@@ -9,17 +9,13 @@ gulp.task('dev', ['build'], function() {
 
   gulp.watch([
     'src/**/*.css'
-  ], ['reload-css']);
+  ], ['reload']);
 
   gulp.watch([
     'docs/**/*.yml'
-  ], ['reload-docs']);
+  ], ['reload']);
 });
 
-gulp.task('reload-docs', ['build-docs'], function() {
-  gulp.src('').pipe(connect.reload());
-});
-
-gulp.task('reload-css', ['build-css'], function() {
+gulp.task('reload', ['build:lite'], function() {
   gulp.src('').pipe(connect.reload());
 });
