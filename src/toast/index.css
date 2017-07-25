@@ -11,6 +11,7 @@
 .spectrum-Toast {
   position: relative;
   padding: 12px 18px;
+  line-height: 24px;
 
   border-radius: var(--spectrum-toast-border-radius);
   font-size: var(--spectrum-toast-font-size);
@@ -36,7 +37,7 @@
 .spectrum-Toast-content {
   display: block;
 
-  padding-right: 24px;
+  padding-right: 32px;
 }
 
 .spectrum-Toast--warning,
