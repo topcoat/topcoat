@@ -328,7 +328,9 @@
 
   &:disabled,
   &.is-disabled {
-    display: none;
+    background-color: var(--spectrum-button-toggle-background-color-disabled);
+    border-color: var(--spectrum-button-toggle-border-color-disabled);
+    color: var(--spectrum-button-toggle-text-color-disabled);
   }
 
   &.is-selected {
