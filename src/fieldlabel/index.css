@@ -1,0 +1,20 @@
+@import '../commons/index.css';
+
+:root {
+  --spectrum-field-label-margin: 0 0 5px;
+}
+
+/* topdoc
+{{ fieldlabel/fieldlabel.yml }}
+*/
+.spectrum-FieldLabel {
+  display: block;
+
+  margin: var(--spectrum-field-label-margin);
+
+  font-size: var(--spectrum-font-size-text-label);
+  line-height: var(--spectrum-line-height-text-label);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
