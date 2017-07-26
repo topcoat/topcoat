@@ -1,5 +1,8 @@
 @import '../../dist/vars/spectrum-dark.css';
 
+/* Temporary skin variables that need to be moved into origins */
+@import '../commons/skin.css';
+
 :root {
   --spectrum-wait-spinner-medium-sprite-url: 'embed/Spinner_Dark_32_Sprite.svg';
   --spectrum-wait-spinner-large-sprite-url: 'embed/Spinner_Dark_64_Sprite.svg';

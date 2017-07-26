@@ -1,0 +1,10 @@
+:root {
+  /* Icon Button*/
+  --spectrum-button-icon-icon-color-default: var(--spectrum-global-color-grey700);
+  --spectrum-button-icon-icon-color-hover: var(--spectrum-global-color-grey900);
+  --spectrum-button-icon-icon-color-active: var(--spectrum-global-color-grey800);
+  --spectrum-button-icon-icon-color-focus: var(--spectrum-global-color-grey800);
+  --spectrum-button-icon-icon-color-disabled: var(--spectrum-global-color-grey400);
+  --spectrum-button-icon-background-color-default: transparent;
+  --spectrum-button-icon-background-color-active: var(--spectrum-global-color-grey400);
+}

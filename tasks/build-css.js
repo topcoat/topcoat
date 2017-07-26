@@ -66,7 +66,10 @@ gulp.task('build-css:individual-components', function() {
 */
 gulp.task('build-css:individual-components-multistops', function() {
   function buildSkinFiles(colorStop) {
-    return gulp.src('src/*/skin.css')
+    return gulp.src([
+      'src/*/skin.css',
+      '!src/commons/skin.css'
+    ])
       .pipe(plumber())
       .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';\n.spectrum--" + colorStop + " {\n"))
       .pipe(insert.append('}\n'))
