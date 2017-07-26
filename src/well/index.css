@@ -1,0 +1,11 @@
+@import '../commons/index.css';
+
+.spectrum-Well {
+  display: block;
+  min-width: 248px;
+  padding: 16px;
+  margin-top: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--spectrum-border-radius);
+}

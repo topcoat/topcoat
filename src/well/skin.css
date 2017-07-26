@@ -1,0 +1,7 @@
+/* topdoc
+{{ well/well.yml }}
+*/
+.spectrum-Well {
+  background-color: var(--spectrum-well-background-color-default);
+  border-color: var(--spectrum-well-border-color-default);
+}
