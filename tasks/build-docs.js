@@ -4,6 +4,7 @@ var runSequence = require('run-sequence');
 var replace = require('gulp-replace');
 var fs = require('fs');
 var path = require('path');
+var plumb = require('./lib/plumb.js');
 
 gulp.task('build-docs:topdoc', function(cb) {
   var exePath = path.resolve('node_modules', '.bin', 'topdoc');
@@ -19,6 +20,7 @@ gulp.task('build-docs:inject-topdoc', function() {
     'dist/**/*.css',
     '!dist/vars/*'
   ])
+    .pipe(plumb())
     .pipe(replace(/\{\{\s*(.*?)\s*\}}/g, function(match, p1) {
       filePath = path.resolve('docs', p1);
       return fs.readFileSync(filePath);

@@ -5,7 +5,7 @@ var replace = require('gulp-replace');
 var insert = require('gulp-insert');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
-var plumber = require('gulp-plumber');
+var plumb = require('./lib/plumb.js');
 var runSequence = require('run-sequence');
 
 var colorStops = [
@@ -55,7 +55,7 @@ gulp.task('build-css', function(cb) {
 */
 gulp.task('build-css:individual-components', function() {
   return gulp.src('src/*/index.css')
-    .pipe(plumber())
+    .pipe(plumb())
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/components/'));
 });
@@ -70,7 +70,7 @@ gulp.task('build-css:individual-components-multistops', function() {
       'src/*/skin.css',
       '!src/commons/skin.css'
     ])
-      .pipe(plumber())
+      .pipe(plumb())
       .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';\n.spectrum--" + colorStop + " {\n"))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
@@ -90,7 +90,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   dest = dest || 'dist/components/';
 
   return gulp.src(globs)
-    .pipe(plumber())
+    .pipe(plumb())
     .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';" + prependString))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
@@ -132,7 +132,7 @@ gulp.task('build-css:page-component-colorstops', function(){
 */
 gulp.task('build-css:all-components-multistops', function() {
   return gulp.src('src/spectrum-*.css')
-    .pipe(plumber())
+    .pipe(plumb())
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });
@@ -143,7 +143,7 @@ gulp.task('build-css:all-components-multistops', function() {
 gulp.task('build-css:build-multistops', function(){
   function buildMultistops(colorStop) {
     return gulp.src('dist/spectrum-' + colorStop + '.css')
-      .pipe(plumber())
+      .pipe(plumb())
       // Simply wrap the file in the colorstop
       // This is a workaround for the fact that postcss-import and postcss-nested can't play together
       .pipe(insert.prepend(".spectrum--" + colorStop + " {\n"))
