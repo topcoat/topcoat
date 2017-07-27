@@ -1,6 +1,9 @@
 /* topdoc
 {{ search/search.yml }}
 */
+/* topdoc
+{{ search/search-quiet.yml }}
+*/
 .spectrum-Search {
   position: relative;
   display: inline-block;
@@ -24,7 +27,7 @@
 
 .spectrum-Search-textfield {
   display: block;
-  padding-left: 24px;
+  text-indent: 36px;
 }
 
 .spectrum-Search-clear {
