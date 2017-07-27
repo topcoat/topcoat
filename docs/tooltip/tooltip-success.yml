@@ -2,6 +2,7 @@
 name: Tooltip - Success
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--success is-open">
-    <span class="spectrum-Tooltip-content">Success Tooltip<div class="spectrum-Tooltip-tip"></div></span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
+    <span class="spectrum-Tooltip-label">Success Tooltip</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>

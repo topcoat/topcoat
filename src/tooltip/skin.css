@@ -2,7 +2,7 @@
 {{ tooltip/tooltip-default.yml }}
 */
 .spectrum-Tooltip {
-  .spectrum-Tooltip-content,
+  &,
   .spectrum-Tooltip-tip::after {
     background-color: var(--spectrum-tooltip-background-color-default);
     color: var(--spectrum-tooltip-text-color-default);
@@ -13,7 +13,7 @@
 {{ tooltip/tooltip-error.yml }}
 */
 .spectrum-Tooltip--error {
-  .spectrum-Tooltip-content,
+  &,
   .spectrum-Tooltip-tip::after {
     background-color: var(--spectrum-tooltip-error-background-color-default);
   }
@@ -23,7 +23,7 @@
 {{ tooltip/tooltip-info.yml }}
 */
 .spectrum-Tooltip--info {
-  .spectrum-Tooltip-content,
+  &,
   .spectrum-Tooltip-tip::after {
     background-color: var(--spectrum-tooltip-info-background-color-default);
   }
@@ -33,7 +33,7 @@
 {{ tooltip/tooltip-success.yml }}
 */
 .spectrum-Tooltip--success {
-  .spectrum-Tooltip-content,
+  &,
   .spectrum-Tooltip-tip::after {
     background-color: var(--spectrum-tooltip-success-background-color-default);
   }

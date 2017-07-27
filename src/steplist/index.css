@@ -89,6 +89,9 @@
   display: inline-block;
   margin: 0;
 
+  /* Don't let tooltips mess up alignment */
+  vertical-align: bottom;
+
   width: var(--spectrum-steplist-step-width);
   padding: 0 calc(var(--spectrum-steplist-step-width) / 2) 0 0;
 
@@ -197,10 +200,6 @@
     /* Not visible for first step */
     display: none;
   }
-
-  .spectrum-Steplist-tooltip {
-    left: 0 !important;
-  }
 }
 
 /* Last step overrides */
@@ -223,12 +222,6 @@
   .spectrum-Steplist-segment {
     right: var(--spectrum-steplist-marker-diameter);
     left: auto;
-  }
-
-  .spectrum-Steplist-tooltip {
-    left: auto;
-    right: 0;
-    transform: translate(50%, calc(var(--spectrum-steplist-marker-hitArea) / -2)) !important;
   }
 }
 

@@ -2,38 +2,34 @@
 name: Tooltip - Icons
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
-    </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>Normal</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
   <br>
   <br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--success
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success
   is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
-    </span>
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--CheckmarkCircle spectrum-Tooltip-typeIcon"></span>Success</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
   <br>
   <br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--info
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info
   is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
-    </span>
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info spectrum-Tooltip-typeIcon"></span>Info</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
   <br>
   <br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--error
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error
   is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
-    </span>
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Warning</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
