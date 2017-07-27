@@ -20,24 +20,24 @@
     min-width: 270px;
     padding-bottom: 20px;
   }
+}
 
-  .spectrum-Popover-tip {
-    position: absolute;
-    /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */.
-    overflow: hidden;
+.spectrum-Popover-tip {
+  position: absolute;
+  /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
+  overflow: hidden;
+  width: var(--spectrum-popover-tip-width-default);
+  height: calc((var(--spectrum-popover-tip-width-default)/2)+(var(--spectrum-popover-border-size-default)));
+  &::after {
+    content: '';
     width: var(--spectrum-popover-tip-width-default);
-    height: calc((var(--spectrum-popover-tip-width-default)/2)+(var(--spectrum-popover-border-size-default)));
-    &::after {
-      content: '';
-      width: var(--spectrum-popover-tip-width-default);
-      height: var(--spectrum-popover-tip-width-default);
-      border-width: var(--spectrum-popover-border-size-default);
-      border-style: solid;
-      position: absolute;
-      transform: rotate(45deg);
-      top: -18px;
-      left: -1px;
-    }
+    height: var(--spectrum-popover-tip-width-default);
+    border-width: var(--spectrum-popover-border-size-default);
+    border-style: solid;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -18px;
+    left: -1px;
   }
 }
 
