@@ -1,0 +1,100 @@
+@import '../commons/index.css';
+
+.spectrum-Popover {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: var(--spectrum-popover-border-size-default);
+  border-radius: var(--spectrum-popover-border-corner-radius-default);
+  visibility: visible;
+  opacity: 0;
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .spectrum-Dialog-wrapper {
+    margin: 0;
+    min-width: 270px;
+    padding-bottom: 20px;
+  }
+
+  .spectrum-Popover-tip {
+    position: absolute;
+    /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */.
+    overflow: hidden;
+    width: var(--spectrum-popover-tip-width-default);
+    height: calc((var(--spectrum-popover-tip-width-default)/2)+(var(--spectrum-popover-border-size-default)));
+    &::after {
+      content: '';
+      width: var(--spectrum-popover-tip-width-default);
+      height: var(--spectrum-popover-tip-width-default);
+      border-width: var(--spectrum-popover-border-size-default);
+      border-style: solid;
+      position: absolute;
+      transform: rotate(45deg);
+      top: -18px;
+      left: -1px;
+    }
+  }
+}
+
+/* topdoc
+{{ popover/popover-left.yml }}
+*/
+.spectrum-Popover--left {
+  .spectrum-Popover-tip {
+    right: -18px;
+    transform: rotate(-90deg);
+  }
+}
+
+/* topdoc
+{{ popover/popover-right.yml }}
+*/
+.spectrum-Popover--right {
+  .spectrum-Popover-tip {
+    left: -18px;
+    transform: rotate(90deg);
+  }
+}
+
+/* Center the tip by default */
+.spectrum-Popover--left,
+.spectrum-Popover--right {
+  .spectrum-Popover-tip {
+    top: 50%;
+    margin-top: -6px;
+  }
+}
+
+
+/* topdoc
+{{ popover/popover-bottom.yml }}
+*/
+.spectrum-Popover--bottom {
+  .spectrum-Popover-tip {
+    top: -13px;
+    transform: rotate(180deg);
+  }
+}
+
+/* topdoc
+{{ popover/popover-top.yml }}
+*/
+.spectrum-Popover--top{
+  .spectrum-Popover-tip {
+    bottom: -13px;
+  }
+}
+
+/* Center the tip by default */
+.spectrum-Popover--bottom,
+.spectrum-Popover--top {
+  .spectrum-Popover-tip {
+    left: 50%;
+    margin-left: -12px;
+  }
+}

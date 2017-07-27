@@ -52,6 +52,7 @@
     "../../spectrum-origins/src/components/link/link-subtle.json",
     "../../spectrum-origins/src/components/loader/loader-default.json",
     "../../spectrum-origins/src/components/miller/column-item-default.json",
+    "../../spectrum-origins/src/components/popover/popover-default.json",
     "../../spectrum-origins/src/components/quickaction/quickaction-default.json",
     "../../spectrum-origins/src/components/select/select-default.json",
     "../../spectrum-origins/src/components/select/select-quiet.json",

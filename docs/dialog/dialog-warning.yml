@@ -6,7 +6,7 @@ markup:
   <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
     <div class="spectrum-Dialog-wrapper" style="width:400px;">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
+        <div class="spectrum-Dialog-typeIcon"></div>
         <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
       </div>
       <div class="spectrum-Dialog-content">
@@ -17,4 +17,3 @@ markup:
       </div>
     </div>
   </div>
-

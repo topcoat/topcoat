@@ -1,0 +1,32 @@
+/* topdoc
+{{ popover/popover-info.yml }}
+*/
+
+/* topdoc
+{{ popover/popover-success.yml }}
+*/
+
+/* topdoc
+{{ popover/popover-error.yml }}
+*/
+
+/* topdoc
+{{ popover/popover-warning.yml }}
+*/
+.spectrum-Popover {
+  background-color: var(--spectrum-popover-background-color-default);
+  border-color: var(--spectrum-popover-border-color-default);
+  box-shadow: 0 0 4px var(--spectrum-popover-border-size-default) var(--spectrum-dialog-popover-shadow-color-default);
+
+  .spectrum-Dialog-header,
+  .spectrum-Dialog-footer,
+  .spectrum-Dialog-wrapper {
+    background-color: transparent;
+  }
+
+  .spectrum-Popover-tip::after {
+    background-color: var(--spectrum-popover-background-color-default);
+    border-color: var(--spectrum-popover-border-color-default);
+    box-shadow: 0 0 4px var(--spectrum-popover-border-size-default) var(--spectrum-dialog-popover-shadow-color-default);
+  }
+}

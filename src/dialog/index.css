@@ -3,7 +3,6 @@
 :root {
   --spectrum-dialog-height: auto;
   --spectrum-dialog-min-width: 320px;
-  --spectrum-dialog-max-width: 90%;
   --spectrum-dialog-margin: 40px;
 
   --spectrum-dialog-divider-height: 2px;
@@ -29,6 +28,9 @@ Because of this contain, clicks will never fall though when a dialog is visible
   right: 0;
   bottom: 0;
   left: 0;
+
+  /* Use padding to limit the overall width of the dialog */
+  padding: var(--spectrum-dialog-margin);
 
   /* Scroll vertically only */
   display: none;
@@ -71,9 +73,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog-content {
+  font-size: var(--spectrum-dialog-content-font-size-default);
+  font-weight: var(--spectrum-dialog-content-font-weight-default);
   display: block;
   box-sizing: border-box;
-  padding: 0;
+  padding-top: 20px;
 
   /* Stop right there! The dialog's body should NOT scroll */
 
@@ -107,9 +111,10 @@ Because of this contain, clicks will never fall though when a dialog is visible
 .spectrum-Dialog-wrapper {
   display: block;
 
+  /* Allow 100% width, taking into account padding */
+  box-sizing: border-box;
+
   min-width: var(--spectrum-dialog-min-width);
-  max-width: var(--spectrum-dialog-max-width);
-  margin: var(--spectrum-dialog-margin);
   padding: var(--spectrum-dialog-padding);
 
   border-radius: var(--spectrum-dialog-border-radius);
@@ -117,7 +122,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog-title {
-  font-size: var(--spectrum-dialog-header-font-size);
+  font-size: var(--spectrum-dialog-header-font-size-default);
+  font-weight: var(--spectrum-dialog-header-font-weight-default);
   line-height: 100%;
 
   overflow: visible;
@@ -132,8 +138,15 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
 .spectrum-Dialog-typeIcon {
   position: absolute;
-  right: 0;
-  top: -2px;
+  right: 0px;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+  }
 }
 
 .spectrum-Dialog-closeButton {

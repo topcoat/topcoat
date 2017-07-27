@@ -32,8 +32,8 @@
     color: var(--spectrum-dialog-success-title-text-color-default);
   }
 
-  .spectrum-Dialog-typeIcon {
-    color: var(--spectrum-dialog-success-icon-color-default);
+  .spectrum-Dialog-typeIcon::after {
+    background-image: url("embed/S_CheckmarkCircle_18_N@2x.svg" param(--color var(--spectrum-dialog-success-icon-color-default)));
   }
 }
 
@@ -47,8 +47,9 @@
     color: var(--spectrum-dialog-info-title-text-color-default);
   }
 
-  .spectrum-Dialog-typeIcon {
+  .spectrum-Dialog-typeIcon::after {
     color: var(--spectrum-dialog-info-icon-color-default);
+    background-image: url("./embed/S_Info_18_N@2x.svg" param(--color var(--spectrum-dialog-info-icon-color-default)));
   }
 }
 
@@ -61,8 +62,9 @@
     color: var(--spectrum-dialog-warning-title-text-color-default);
   }
 
-  .spectrum-Dialog-typeIcon {
+  .spectrum-Dialog-typeIcon::after {
     color: var(--spectrum-dialog-warning-icon-color-default);
+    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-dialog-warning-icon-color-default)));
   }
 }
 
@@ -75,8 +77,9 @@
     color: var(--spectrum-dialog-error-title-text-color-default);
   }
 
-  .spectrum-Dialog-typeIcon {
+  .spectrum-Dialog-typeIcon::after {
     color: var(--spectrum-dialog-error-icon-color-default);
+    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-dialog-error-icon-color-default)));
   }
 }
 
