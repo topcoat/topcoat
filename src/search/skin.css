@@ -1,7 +1,5 @@
-.spectrum-Search {
-  &::after {
-    background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-icon-color-default)));
-  }
+.spectrum-Search-icon {
+  background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-icon-color-default)));
 }
 
 .spectrum-Search-clear {

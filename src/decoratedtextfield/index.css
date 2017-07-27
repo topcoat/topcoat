@@ -1,0 +1,42 @@
+/* topdoc
+{{ decoratedtextfield/decoratedtextfield.yml }}
+*/
+.spectrum-DecoratedTextfield {
+  display: inline-block;
+  position: relative;
+}
+
+.spectrum-DecoratedTextfield-input {
+  display: block;
+  text-indent: 36px;
+
+/* topdoc
+{{ decoratedtextfield/decoratedtextfield-quiet.yml }}
+*/
+  &.spectrum-Textfield--quiet {
+    /* Since quiet button has no left padding, push the icon all the way to the left */
+    & ~ .spectrum-DecoratedTextfield-icon {
+      left: 0;
+    }
+  }
+}
+
+.spectrum-DecoratedTextfield-icon {
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+
+  /* Support font icons */
+  text-align: center;
+  line-height: 32px;
+
+  /* Support SVG icons */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}

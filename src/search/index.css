@@ -4,34 +4,20 @@
 /* topdoc
 {{ search/search-quiet.yml }}
 */
-.spectrum-Search {
-  position: relative;
-  display: inline-block;
-
-  &::after {
-    display: block;
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 0;
-    width: 32px;
-    height: 32px;
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 16px 16px;
-
-    pointer-events: none;
-  }
-}
-
-.spectrum-Search-textfield {
-  display: block;
-  text-indent: 36px;
-}
-
+/* topdoc
+{{ search/search-customicon.yml }}
+*/
 .spectrum-Search-clear {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.spectrum-Search-input {
+  &.spectrum-Textfield--quiet {
+    /* Since quiet button has no right padding, push the icon all the way to the right */
+    & ~ .spectrum-Search-rightIcon {
+      right: 0;
+    }
+  }
 }

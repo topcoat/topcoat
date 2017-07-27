@@ -2,7 +2,8 @@
 name: Search - Quiet
 description: The quiet searchy, cleary field.
 markup: |
-  <form class="spectrum-Search">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-textfield">
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input">
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
   </form>
