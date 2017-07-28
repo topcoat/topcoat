@@ -21,3 +21,7 @@
     }
   }
 }
+
+.spectrum-Search-clear:disabled {
+  cursor: default;
+}

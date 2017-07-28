@@ -11,6 +11,6 @@ markup: |
   <form class="spectrum-Search spectrum-DecoratedTextfield">
     <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
     <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
   </form>
 

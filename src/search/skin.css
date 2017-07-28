@@ -7,12 +7,6 @@
     & ~ .spectrum-Search-icon {
       background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-text-color-disabled)));
     }
-
-    & ~ .spectrum-Search-clear {
-      &::after {
-        background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-disabled)));
-      }
-    }
   }
 }
 
@@ -36,6 +30,12 @@
   &:active {
     &::after {
       background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-active)));
+    }
+  }
+
+  &:disabled {
+    &::after {
+      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-disabled)));
     }
   }
 }
