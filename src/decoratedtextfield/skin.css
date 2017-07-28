@@ -1,3 +1,11 @@
 .spectrum-DecoratedTextfield-icon {
   color: var(--spectrum-input-icon-color-default);
 }
+
+.spectrum-DecoratedTextfield-input {
+  &:disabled {
+    & ~ .spectrum-DecoratedTextfield-icon {
+      color: var(--spectrum-input-text-color-disabled);
+    }
+  }
+}

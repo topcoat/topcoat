@@ -7,3 +7,8 @@ markup: |
     <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
   </div>
 
+  <div class="spectrum-DecoratedTextfield">
+    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-DecoratedTextfield-input" disabled>
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
+  </div>
+
