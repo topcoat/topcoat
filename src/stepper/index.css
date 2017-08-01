@@ -1,0 +1,101 @@
+@import '../commons/index.css';
+
+:root {
+  --spectrum-stepper-button-height: calc(var(--spectrum-component-single-line-height) / 2);
+  --spectrum-stepper-button-width: 24px;
+  --spectrum-stepper-padding: calc(var(--spectrum-padding) / 2);
+  --spectrum-Stepper-stepUpIcon-width: 8px;
+  --spectrum-Stepper-stepUpIcon-height: 6px;
+}
+
+.spectrum-Stepper {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  width: var(--spectrum-component-single-line-width);
+  line-height: 0;
+  border-radius: var(--spectrum-border-radius);
+  transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+
+  .spectrum-Stepper-buttons {
+    flex: 1;
+
+    .spectrum-Button {
+      position: relative;
+      margin: 0;
+      border-width: 1px;
+      border-right-width: 0;
+      border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
+    }
+
+    .spectrum-Stepper-stepUp {
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+    }
+
+    .spectrum-Stepper-stepDown {
+      float: left;
+      border-top: none;
+      border-top-left-radius: 0;
+
+      &:focus {
+        border-top: none;
+      }
+    }
+  }
+}
+
+.spectrum-Stepper-input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  width: 100%;
+}
+
+.spectrum-Stepper-stepUp,
+.spectrum-Stepper-stepDown {
+  height: var(--spectrum-stepper-button-height);
+  width: var(--spectrum-stepper-button-width);
+  padding-left: var(--spectrum-stepper-padding);
+  padding-right: var(--spectrum-stepper-padding);
+}
+
+.spectrum-Stepper-stepUpIcon,
+.spectrum-Stepper-stepDownIcon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: var(--spectrum-Stepper-stepUpIcon-width);
+    height: var(--spectrum-Stepper-stepUpIcon-height);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    content: '';
+  }
+}
+
+.spectrum-Stepper-stepUpIcon::after {
+  /* Off by 1px otherwise */
+  top: 5px;
+}
+
+.spectrum-Stepper--quiet {
+  border-radius: 0;
+
+  .spectrum-Stepper-buttons {
+    .spectrum-Button--quiet--action {
+      border-top: none;
+      border-left: none;
+    }
+
+    .spectrum-Stepper-stepDown {
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+---
+name: Stepper - Default
+description: A Spectrum stepper. Note that you must manually apply the is-focused class, and that the is-focused styles below don't look correct unless your cursor is actually in the stepper input field.
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Stepper">
+    <span class="spectrum-Stepper-buttons">
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+        <div class="spectrum-Stepper-stepUpIcon">
+        </div>
+      </button>
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+        <div class="spectrum-Stepper-stepDownIcon">
+        </div>
+      </button>
+    </span>
+    <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+  </div>
+
+  <div class="spectrum-Stepper is-focused">
+    <span class="spectrum-Stepper-buttons">
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+        <div class="spectrum-Stepper-stepUpIcon">
+        </div>
+      </button>
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+        <div class="spectrum-Stepper-stepDownIcon">
+        </div>
+      </button>
+    </span>
+    <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+  </div>
+
+  <div class="spectrum-Stepper is-invalid">
+    <span class="spectrum-Stepper-buttons">
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+        <div class="spectrum-Stepper-stepUpIcon">
+        </div>
+      </button>
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+        <div class="spectrum-Stepper-stepDownIcon">
+        </div>
+      </button>
+    </span>
+    <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+  </div>
+
+  <div class="spectrum-Stepper">
+    <span class="spectrum-Stepper-buttons">
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1" disabled>
+        <div class="spectrum-Stepper-stepUpIcon">
+        </div>
+      </button>
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1" disabled>
+        <div class="spectrum-Stepper-stepDownIcon">
+        </div>
+      </button>
+    </span>
+    <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
+  </div>

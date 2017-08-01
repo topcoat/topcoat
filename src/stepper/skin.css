@@ -1,0 +1,131 @@
+/* topdoc
+{{ stepper/stepper-default.yml }}
+*/
+
+.spectrum-Stepper {
+  &.is-focused {
+    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
+
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-input-border-color-focus);
+    }
+  }
+
+  &.is-invalid {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown,
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-input-invalid-border-color-default);
+
+      &:focus {
+        border-color: var(--spectrum-input-invalid-border-color-default);
+      }
+    }
+
+    .spectrum-Stepper-input {
+      border-left-color: var(--spectrum-input-border-color-default);
+    }
+
+    &.is-focused {
+      box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+    }
+  }
+}
+
+.spectrum-Stepper-stepUp,
+.spectrum-Stepper-stepDown {
+  border-color: var(--spectrum-input-border-color-default);
+
+  &:disabled {
+    border-color: var(--spectrum-input-border-color-disabled);
+  }
+}
+
+.spectrum-Stepper-stepDownIcon::after {
+  background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-default)));
+}
+
+.spectrum-Stepper-stepUpIcon::after {
+  background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-default)));
+}
+
+.spectrum-Stepper-stepDown {
+  &:hover {
+    /* Keep the border on hover */
+    border-bottom-color: var(--spectrum-input-border-color-default);
+
+    .spectrum-Stepper-stepDownIcon::after {
+      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-hover)));
+    }
+  }
+
+  &:focus {
+    .spectrum-Stepper-stepDownIcon::after {
+      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-focus)));
+    }
+  }
+}
+
+.spectrum-Stepper-stepUp {
+  &:hover {
+    .spectrum-Stepper-stepUpIcon::after {
+      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-hover)));
+    }
+  }
+
+  &:focus {
+    .spectrum-Stepper-stepUpIcon::after {
+      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-focus)));
+    }
+  }
+}
+
+.spectrum-Stepper-stepUp {
+  &:disabled {
+    .spectrum-Stepper-stepUpIcon::after {
+      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-disabled)));
+    }
+  }
+}
+
+.spectrum-Stepper-stepDown {
+  &:disabled {
+    .spectrum-Stepper-stepDownIcon::after {
+      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-disabled)));
+    }
+  }
+}
+
+/* topdoc
+{{ stepper/stepper-quiet.yml }}
+*/
+.spectrum-Stepper--quiet {
+  .spectrum-Stepper-stepUp,
+  .spectrum-Stepper-stepDown {
+    &:disabled {
+      border-color: var(--spectrum-input-quiet-border-color-disabled);
+    }
+  }
+
+  &.is-focused {
+    box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-focus);
+
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: var(--spectrum-input-border-color-focus);
+    }
+  }
+
+  &.is-invalid {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown,
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-input-invalid-border-color-default);
+    }
+
+    &.is-focused {
+      box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+    }
+  }
+}
