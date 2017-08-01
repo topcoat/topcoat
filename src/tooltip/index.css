@@ -67,7 +67,7 @@
 .spectrum-Tooltip--left {
   .spectrum-Tooltip-tip {
     top: 50%;
-    margin-top: -4px;
+    margin-top: -2px;
   }
 }
 
@@ -88,7 +88,7 @@
 .spectrum-Tooltip--top {
   .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: -4px;
+    margin-left: -2px;
   }
 }
 
