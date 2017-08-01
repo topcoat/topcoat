@@ -2,7 +2,7 @@
 {{ tablist/tab-default.yml }}
 */
 .spectrum-Tab {
-  color: var(--spectrum-tablist-text-color-default)
+  color: var(--spectrum-tablist-text-color-default);
 
   &:hover {
     color: var(--spectrum-tablist-text-color-hover)
