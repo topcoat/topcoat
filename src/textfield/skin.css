@@ -55,6 +55,7 @@
   &.is-invalid,
   &:invalid {
     border-color: var(--spectrum-input-invalid-border-color-default);
+    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-error-border-color-default)));
 
     &:focus { /* might break things due to pre-defined focus */
       box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);

@@ -9,3 +9,5 @@ markup: |
   <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
 
   <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
+
+  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield" pattern="[\d]+" required>

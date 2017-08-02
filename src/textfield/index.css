@@ -39,11 +39,11 @@
   }
 
   &:disabled {
+    /* The opacity must be set to 1 */
+    opacity: 1;
     &::placeholder {
       font-weight: normal;
     }
-    /* The opacity must be set to 1 */
-    -webkit-opacity: 1;
   }
 
   /* Remove the native clear button in IE */
@@ -65,6 +65,14 @@
   &:-moz-ui-invalid {
     box-shadow: none;
   }
+
+  &.is-invalid,
+  &:invalid {
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) 50%;
+    padding-right: 30px;
+  }
 }
 
 .spectrum-Textfield--quiet {
@@ -84,6 +92,15 @@
   height: auto;
   padding: 4px 8px;
   text-indent: 0;
+
+
+  &.is-invalid,
+  &:invalid {
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) calc(100% - 7px);
+    padding-right: 30px;
+  }
 }
 
 .spectrum-Textfield--quiet.spectrum-Textfield--multiline {

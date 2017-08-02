@@ -6,8 +6,11 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
   </textarea>
