@@ -2,6 +2,7 @@
 name: Flyout
 description: Spectrum Flyouts
 markup: |
+
   <ul class="spectrum-Flyout" role="menu">
     <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="0">Ballard</li>
     <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Fremont</li>
@@ -9,3 +10,5 @@ markup: |
     <hr class="spectrum-Flyout-divider">
     <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
   </ul>
+
+  <div class="dummy-spacing"></div>

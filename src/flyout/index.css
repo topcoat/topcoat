@@ -1,13 +1,14 @@
 @import '../commons/index.css';
 
 .spectrum-Flyout {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  white-space: nowrap;
 
   box-sizing: border-box;
 
   list-style-type: none;
-  padding: 0;
+  padding: 3px 0;
   margin: 0;
 
   min-width: var(--spectrum-component-single-line-width);
@@ -59,7 +60,8 @@
 
 .spectrum-Flyout-divider {
   height: var(--spectrum-flyout-divider-size-default);
-  margin: var(--spectrum-flyout-divider-padding-default) 0;
+  margin: var(--spectrum-flyout-divider-padding-default) auto;
   padding: 0 0;
   border: none;
+  width: 90%;
 }

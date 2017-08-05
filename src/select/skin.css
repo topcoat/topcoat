@@ -1,0 +1,80 @@
+.spectrum-Select {
+  &:hover {
+    border-color: var(--spectrum-select-border-color-hover);
+  }
+
+  &.is-open {
+    .spectrum-Select-trigger {
+      background-color: var(--spectrum-select-background-color-open);
+      border-color: var(--spectrum-select-border-color-open);
+    }
+  }
+
+  &.is-invalid {
+    .spectrum-Select-trigger {
+      border-color: var(--spectrum-select-border-color-invalid-default);
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Select-open-icon {
+      &::after {
+        background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-select-text-color-disabled)));
+      }
+    }
+    .spectrum-Select-trigger {
+      background-color: var(--spectrum-select-background-color-disabled);
+      color: var(--spectrum-select-text-color-disabled);
+    }
+  }
+}
+
+.spectrum-Select-trigger {
+  color: var(--spectrum-select-text-color-default);
+  background-color: var(--spectrum-select-background-color-default);
+  border-color: var(--spectrum-select-border-color-default);
+
+  &:hover {
+    color: var(--spectrum-select-text-color-hover);
+    background-color: var(--spectrum-select-background-color-hover);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--spectrum-select-border-color-focus);
+  }
+}
+
+.spectrum-Select-invalid-icon {
+  color: var(--spectrum-select-icon-color-invalid-default);
+}
+
+.spectrum-Select-open-icon {
+  &::after {
+    background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-select-text-color-default)));
+  }
+}
+
+.spectrum-Select--quiet {
+  .spectrum-Select-trigger {
+    border-color: transparent;
+    background: var(--spectrum-select-quiet-background-color-default);
+
+    &:focus {
+      border-color: var(--spectrum-select-border-color-focus);
+      box-shadow: none;
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Select-trigger {
+      background-color: var(--spectrum-select-quiet-background-color-disabled);
+    }
+  }
+
+  &.is-open {
+    .spectrum-Select-trigger {
+      border-color: transparent;
+      background: var(--spectrum-select-quiet-background-color-default);
+    }
+  }
+}

@@ -8,3 +8,8 @@
   --spectrum-component-single-line-height: 32px;
   --spectrum-component-single-line-width: 192px;
 }
+
+/* For documentation beautification only - DO NOT COPY */
+.dummy-spacing {
+  height: 160px;
+}

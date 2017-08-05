@@ -41,8 +41,6 @@
     "../../spectrum-origins/src/components/divider/well-default.json",
     "../../spectrum-origins/src/components/drag/drag-default.json",
     "../../spectrum-origins/src/components/drawer/drawer-default.json",
-    "../../spectrum-origins/src/components/dropdown/dropdown-default.json",
-    "../../spectrum-origins/src/components/dropdown/dropdown-quiet.json",
     "../../spectrum-origins/src/components/flyout/flyout-default.json",
     "../../spectrum-origins/src/components/input/input-default.json",
     "../../spectrum-origins/src/components/input/input-invalid.json",

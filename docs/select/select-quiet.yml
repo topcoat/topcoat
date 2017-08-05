@@ -1,0 +1,35 @@
+name: Select - Quiet
+description: Default dropdown with labels
+markup: |
+  <h4>Closed - Quiet</h4>
+  <div class="spectrum-Select spectrum-Select--quiet" style="width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
+  <h4>Open - Quiet</h4>
+  <div class="spectrum-Select spectrum-Select--quiet is-open" style=" width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+  <div class="dummy-spacing"></div>

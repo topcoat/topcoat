@@ -11,6 +11,9 @@ markup: |
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
+
+  <div class="dummy-spacing"></div>
+
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
 
@@ -20,3 +23,5 @@ markup: |
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
+
+  <div class="dummy-spacing"></div>

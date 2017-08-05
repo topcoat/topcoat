@@ -1,0 +1,36 @@
+name: Select - Default
+description: A Spectrum 'default' dropdown with a flyout. If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
+markup: |
+  <h4>Closed - Default</h4>
+  <div class="spectrum-Select" style="width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
+  <h4>Open - Default</h4>
+  <div class="spectrum-Select is-open" style="width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
