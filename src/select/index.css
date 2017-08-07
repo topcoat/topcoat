@@ -63,35 +63,6 @@
   transition: background-color var(--spectrum-transition-time);
 }
 
-.spectrum-Select-options {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.spectrum-Select-option {
-  position: relative;
-
-  padding: 0 var(--spectrum-select-padding-default);
-  height: var(--spectrum-select-height-default);
-  display: flex;
-  align-items: center;
-
-  &.is-selected {
-    &::after {
-      position: absolute;
-      right: var(--spectrum-select-padding-default);
-      top: 11px;
-      width: var(--spectrum-select-check-icon-width-default);
-      height: var(--spectrum-select-check-icon-height-default);
-      background-repeat: no-repeat;
-      background-size: var(--spectrum-select-check-icon-width-default) var(--spectrum-select-check-icon-height-default);
-      opacity: 1;
-      content: '';
-    }
-  }
-}
-
 .spectrum-Select-open-icon {
   position: relative;
   width: 18px;
