@@ -1,5 +1,5 @@
 .spectrum-Accordion-item {
-  border-color: var(--spectrum-global-color-grey300); /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+  border-color: var(--spectrum-accordion-border-color-default);
 }
 
 .spectrum-Accordion-header {
@@ -12,7 +12,7 @@
   &:focus,
   &:hover {
     color: var(--spectrum-accordion-text-color-hover);
-    background-color: var(--spectrum-global-color-grey200); /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+    background-color: var(--spectrum-accordion-background-color-hover);
 
     &::before {
       background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-hover)));
@@ -34,8 +34,7 @@
     }
 
     &::before {
-      /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
-      background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-global-color-grey400)));
+      background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-disabled)));
     }
   }
 }
