@@ -2,6 +2,7 @@
 
 :root {
   --spectrum-field-label-margin: 0 0 5px;
+  --spectrum-field-label-left-margin-right: 8px;
 }
 
 /* topdoc
@@ -17,4 +18,12 @@
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
+}
+
+/* topdoc
+{{ fieldlabel/fieldlabel-left.yml }}
+*/
+.spectrum-FieldLabel--left {
+  display: inline-block;
+  margin-right: var(--spectrum-field-label-left-margin-right);
 }

@@ -4,5 +4,5 @@ description: >-
   Field label for use with form inputs.
 markup: |
   <label for="lifestory" class="spectrum-FieldLabel">Life Story *</label>
-  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" required>
-  </textarea>
+
+  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>

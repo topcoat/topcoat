@@ -1,0 +1,9 @@
+---
+name: Field Label - Left
+description: >-
+  Field label for use with form inputs; left variation.
+markup: |
+  <div>
+    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story *</label>
+    <textarea id="lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+  </div>
