@@ -1,12 +1,12 @@
 ---
 name: Popover - Info/Help
-description: A Spectrum 'info/help' popover
+description: A Spectrum 'info/help' popover. When the icon element is present (preceeding the title element), padding will be added so text doesn't overlap the icon.
 markup: |
   <div class="spectrum-Popover spectrum-Dialog--help is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
         <div class="spectrum-Dialog-typeIcon"></div>
-        <div class="spectrum-Dialog-title">Info / Help Popover</div>
+        <div class="spectrum-Dialog-title">Info / Help Popover With a Long Title</div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
       <div class="spectrum-Dialog-footer">

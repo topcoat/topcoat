@@ -126,10 +126,12 @@ Because of this contain, clicks will never fall though when a dialog is visible
   font-weight: var(--spectrum-dialog-header-font-weight-default);
   line-height: 100%;
 
-  overflow: visible;
-
-  padding-left: 0;
-  padding-right: 15px;
+  /* Truncate text when it's too long to fit */
+  box-sizing: border-box;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   margin: 0 !important; /* Undo margin from heading rules */
 
@@ -146,6 +148,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
     width: 18px;
     height: 18px;
     background-size: contain;
+  }
+
+  & + .spectrum-Dialog-title {
+    /* Give more room for the icon when the title is long */
+    padding-right: 22px;
   }
 }
 
