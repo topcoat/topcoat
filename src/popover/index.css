@@ -18,6 +18,8 @@
   left: 0px;
   top: 0px;
 
+  outline: none; /* Hide focus outline */
+
   &.is-open {
     visibility: visible;
     opacity: 1;

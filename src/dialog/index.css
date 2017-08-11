@@ -41,6 +41,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
   transition: opacity var(--spectrum-transition-time);
 
   opacity: 0;
+
+  outline: none; /* Hide focus outline */
 }
 
 .spectrum-Dialog.is-open {
