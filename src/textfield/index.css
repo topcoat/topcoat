@@ -15,7 +15,10 @@
   font-family: inherit;
   font-size: var(--spectrum-font-size);
   line-height: var(--spectrum-text-body-line-height);
-  text-indent: var(--spectrum-padding);
+
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
+  padding-left: var(--spectrum-padding);
+  text-indent: 0;
 
   transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 
