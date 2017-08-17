@@ -1,0 +1,103 @@
+.spectrum-Dropdown {
+  &.is-open {
+    .spectrum-Dropdown-trigger {
+      background-color: var(--spectrum-dropdown-background-color-open);
+      border-color: var(--spectrum-dropdown-border-color-open);
+
+      &:focus {
+        box-shadow: none;
+        .spectrum-Dropdown-trigger-container {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
+    .spectrum-Icon {
+      color: var(--spectrum-dropdown-icon-color-invalid-default);
+    }
+
+    .spectrum-Dropdown-trigger {
+      border-color: var(--spectrum-dropdown-border-color-invalid-default);
+
+      &:focus {
+        box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-invalid-default);
+      }
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Dropdown-open-icon {
+      &::after {
+        background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-text-color-disabled)));
+      }
+    }
+    .spectrum-Dropdown-trigger {
+      background-color: var(--spectrum-dropdown-background-color-disabled);
+      color: var(--spectrum-dropdown-text-color-disabled);
+
+      &:focus {
+        box-shadow: none;
+        .spectrum-Dropdown-trigger-container {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.spectrum-Dropdown-trigger {
+  color: var(--spectrum-dropdown-text-color-default);
+  background-color: var(--spectrum-dropdown-background-color-default);
+  border-color: var(--spectrum-dropdown-border-color-default);
+
+  &:hover {
+    color: var(--spectrum-dropdown-text-color-hover);
+    background-color: var(--spectrum-dropdown-background-color-hover);
+    border-color: var(--spectrum-dropdown-border-color-hover);
+
+    .spectrum-Dropdown-open-icon::after {
+      background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-text-color-hover)));
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--spectrum-dropdown-border-color-focus);
+  }
+}
+
+.spectrum-Dropdown-open-icon::after {
+  background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-text-color-default)));
+}
+
+.spectrum-Dropdown--quiet {
+  .spectrum-Dropdown-trigger {
+    border-color: var(--spectrum-dropdown-quiet-border-color-default) !important;
+    background-color: var(--spectrum-dropdown-quiet-background-color-default) !important;
+
+    &:focus {
+      box-shadow: none;
+
+      .spectrum-Dropdown-trigger-container {
+        box-shadow: 0 2px 0 0 var(--spectrum-dropdown-border-color-focus);
+      }
+    }
+  }
+
+  &.is-invalid .spectrum-Dropdown-trigger:focus {
+    box-shadow: none;
+    .spectrum-Dropdown-trigger-container {
+      box-shadow: 0 2px 0 0 var(--spectrum-dropdown-border-color-invalid-default);
+    }
+  }
+
+  &.is-open, &.is-disabled {
+    .spectrum-Dropdown-trigger:focus {
+      box-shadow: none;
+      .spectrum-Dropdown-trigger-container {
+        box-shadow: none;
+      }
+    }  
+  }
+}

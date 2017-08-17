@@ -1,0 +1,42 @@
+name: Dropdown - Default
+description: A Spectrum 'default' dropdown element with a flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user. 
+markup: |
+  <h4>Closed</h4>
+  <div class="spectrum-Dropdown" style="width: 195px;">
+    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+        </span>
+      </span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-Dropdown is-open" style="width: 195px;">
+    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+        </span>
+      </span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>

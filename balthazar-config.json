@@ -52,8 +52,8 @@
     "../../spectrum-origins/src/elements/miller/column-item-default.json",
     "../../spectrum-origins/src/elements/popover/popover-default.json",
     "../../spectrum-origins/src/elements/quickaction/quickaction-default.json",
-    "../../spectrum-origins/src/elements/select/select-default.json",
-    "../../spectrum-origins/src/elements/select/select-quiet.json",
+    "../../spectrum-origins/src/elements/dropdown/dropdown-default.json",
+    "../../spectrum-origins/src/elements/dropdown/dropdown-quiet.json",
     "../../spectrum-origins/src/elements/slider/slider-color.json",
     "../../spectrum-origins/src/elements/slider/slider-default.json",
     "../../spectrum-origins/src/elements/slider/slider-fill.json",
@@ -96,6 +96,5 @@
     "../../spectrum-origins/src/elements/typography/heading-subtitle-3.json",
     "../../spectrum-origins/src/elements/typography/label-default.json",
     "../../spectrum-origins/src/elements/typography/label-large.json"
-
   ]
 }
