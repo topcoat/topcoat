@@ -23,6 +23,7 @@
   &.is-open {
     visibility: visible;
     opacity: 1;
+    transition-delay: 0ms;
   }
 
   .spectrum-Dialog-wrapper {

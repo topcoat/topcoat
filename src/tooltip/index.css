@@ -24,6 +24,7 @@
   &.is-open {
     opacity: 1;
     visibility: visible;
+    transition-delay: 0ms;
   }
 
   .spectrum-Link {
@@ -46,7 +47,6 @@
     transform: rotate(45deg);
   }
 }
-
 
 .spectrum-Tooltip--right {
   margin-left: var(--spectrum-tooltip-target-offset);
@@ -130,34 +130,42 @@
   .spectrum-Tooltip {
     /* Required for animations to work */
     visibility: visible;
+    transition: transform var(--spectrum-transition-time) ease-in-out;
+    top: -100%;
   }
 
-  .spectrum-Tooltip--top {
-    transform: translate(-50%, 8px);
-    top: -100%;
-    left: 50%;
-
-    /* this moves the tooltip up, above the hovered component. this should be calculated by JS */
-    margin-top: -26px;
+  .spectrum-Tooltip--right,
+  .spectrum-Tooltip--left {
+    top:50%;
+    .spectrum-Tooltip-tip {
+      top: 50%;
+      margin-top: -4px;
+    }
   }
 
   .spectrum-Tooltip--right {
     transform: translate(-8px, -50%);
-    top: 50%;
-    left: 100%;
   }
 
   .spectrum-Tooltip--left {
     transform: translate(calc(-100% + 8px), -50%);
-    top: 50%;
-    left: 0;
+  }
+
+  .spectrum-Tooltip--bottom,
+  .spectrum-Tooltip--top {
+    left:50%;
+    .spectrum-Tooltip-tip {
+      left: 50%;
+      margin-left: -4px;
+    }
   }
 
   .spectrum-Tooltip--bottom {
     transform: translate(-50%, -8px);
-    bottom: -100%;
-    left: 50%;
-    margin-bottom: -28px;
+  }
+
+  .spectrum-Tooltip--top {
+    transform: translate(-50%, 8px);
   }
 
   &:hover .spectrum-Tooltip {
