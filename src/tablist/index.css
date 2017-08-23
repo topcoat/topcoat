@@ -120,11 +120,17 @@
 
   &.spectrum-TabList--panel {
     .spectrum-Tab {
-      padding: 4px 8px;
       margin-right: var(--spectrum-tablist-panel-horizontal-tab-item-margin-right-default);
-      line-height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);
       height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);
     }
+  }
+}
+
+.spectrum-TabList--panel {
+  .spectrum-Tab {
+    line-height: normal;
+
+    padding: 1px 6px 5px 6px;
   }
 }
 
@@ -153,9 +159,7 @@
 
   &.spectrum-TabList--panel {
     .spectrum-Tab {
-      padding: 4px 6px;
       height: var(--spectrum-tablist-panel-vertical-tab-item-height-default);
-      line-height: var(--spectrum-tablist-panel-vertical-tab-item-height-default);
     }
   }
 }

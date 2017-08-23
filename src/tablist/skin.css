@@ -33,14 +33,17 @@
 
 .spectrum-TabList--anchored {
   border-color: var(--spectrum-tablist-anchored-border-color-default);
+
   .spectrum-Tab {
     &:focus {
       color: var(--spectrum-tablist-anchored-text-color-focus);
       box-shadow: initial;
+
+      /* The focus line should become blue only for anchored tabs */
+      ~ .spectrum-Tab-line {
+          background-color:  var(--spectrum-tablist-anchored-tabline-background-color-focus);
+      }
     }
-  }
-  .spectrum-Tab-line.is-focused {
-      background-color:  var(--spectrum-tablist-anchored-tabline-background-color-focus);
   }
 }
 
