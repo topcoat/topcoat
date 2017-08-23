@@ -7,7 +7,6 @@
 }
 
 .spectrum-SplitButton-action {
-  margin-right: 0;
   border-radius: var(--spectrum-button-border-corner-radius-default) 0 0 var(--spectrum-button-border-corner-radius-default);
 
   /* CTA is special and doesn't have a border between the buttons */
@@ -18,7 +17,8 @@
 }
 
 .spectrum-SplitButton-trigger {
-  margin-right: 0;
+  margin-left: 0 !important;
+
   border-radius: 0 var(--spectrum-button-border-corner-radius-default) var(--spectrum-button-border-corner-radius-default) 0;
   border-left-width: 0;
   padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
