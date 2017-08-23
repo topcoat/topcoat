@@ -7,6 +7,7 @@
 
 .spectrum-TabList {
   position: relative;
+  z-index: 0;
 
   margin: 0;
   padding: 0;
@@ -14,13 +15,16 @@
 
 .spectrum-Tab {
   position: relative;
+
+  /* Float above the tab line */
+  z-index: 1;
+
   cursor: pointer;
   outline: none;
   text-decoration: none;
   transition: color var(--spectrum-transition-time) ease-out;
   height: var(--spectrum-tablist-tab-item-height-default);
   line-height: var(--spectrum-tablist-tab-item-height-default);
-  z-index: 2;
 
   &.is-disabled {
     cursor: default;
@@ -33,6 +37,10 @@
 
 .spectrum-Tab-line {
   position: absolute;
+
+  /* Be below the tab */
+  z-index: 0;
+
   transition: transform var(--spectrum-transition-time) ease-in-out;
   left: 0;
   transform-origin: top left;
@@ -41,7 +49,7 @@
  .spectrum-TabList--page,
  .spectrum-TabList--panel {
   .spectrum-Tab {
-    margin-bottom: 2px;
+    margin-bottom: var(--spectrum-tablist-horizontal-tabline-height-default);
     &:focus {
       border-radius: var(--spectrum-tablist-tab-item-border-corner-radius-default);
     }
@@ -52,7 +60,6 @@
   .spectrum-Tab-label {
     font-size: var(--spectrum-tablist-panel-tab-item-label-font-size-default);
     font-weight: var(--spectrum-tablist-panel-tab-item-label-font-weight-default);
-    letter-spacing: 1px;
     text-transform: uppercase;
   }
 
@@ -114,7 +121,7 @@
     }
 
     .spectrum-Tab-line {
-      bottom: -2px;
+      bottom: calc(var(--spectrum-tablist-horizontal-tabline-height-default) * -1);
     }
   }
 
@@ -141,7 +148,7 @@
 
   .spectrum-Tab {
     display: block;
-    margin-left: 2px;
+    margin-left: var(--spectrum-tablist-horizontal-tabline-height-default);
   }
 
   .spectrum-Tab-label {
@@ -150,7 +157,7 @@
   }
 
   .spectrum-Tab-line {
-    top: 2px;
+    top: var(--spectrum-tablist-horizontal-tabline-height-default);
     left: 0;
     width: var(--spectrum-tablist-vertical-tabline-width-default);
     height: var(--spectrum-tablist-vertical-tabline-height-default);
