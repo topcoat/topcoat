@@ -1,3 +1,10 @@
+/* topdoc
+{{ dialog/dialog-modal.yml }}
+*/
+.spectrum-Dialog--modal {
+  background: var(--spectrum-dialog-underlay-background-color-default);
+}
+
 .spectrum-Dialog-wrapper {
   background: var(--spectrum-dialog-background-color-default);
 }
@@ -81,12 +88,4 @@
     color: var(--spectrum-dialog-error-icon-color-default);
     background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-dialog-error-icon-color-default)));
   }
-}
-
-
-/* topdoc
-{{ dialog/dialog-modal.yml }}
-*/
-.spectrum-Dialog--modal {
-  background: var(--spectrum-dialog-underlay-background-color-default);
 }

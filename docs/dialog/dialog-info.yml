@@ -1,20 +1,19 @@
 ---
 name: Dialog - Info
-description: A Spectrum 'info' dialog
+description: The Spectrum 'info' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Info Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog">
     <div class="spectrum-Dialog-wrapper" style="width:400px;">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
+        <div class="spectrum-Dialog-typeIcon"></div>
       </div>
       <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. </p>
-        <p>This dialog is not centered. </p>
+        This is an info dialog.
       </div>
       <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
       </div>
     </div>
   </div>

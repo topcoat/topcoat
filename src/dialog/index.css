@@ -1,16 +1,26 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-dialog-height: auto;
   --spectrum-dialog-min-width: 320px;
-  --spectrum-dialog-margin: 40px;
+  --spectrum-dialog-margin: 32px;
+
+  --spectrum-dialog-border-radius: var(--spectrum-border-radius);
 
   --spectrum-dialog-divider-height: 2px;
 
-  --spectrum-dialog-border-radius: var(--spectrum-border-radius);
-  --spectrum-dialog-header-font-size: 18px;
   --spectrum-dialog-header-height: 34px;
-  --spectrum-dialog-padding: 25px;
+  --spectrum-dialog-header-font-size: 18px;
+
+  --spectrum-dialog-padding: 40px;
+  --spectrum-dialog-padding-top: 48px;
+
+  --spectrum-dialog-content-padding-top: 20px;
+
+  --spectrum-dialog-fullscreen-padding-top: var(--spectrum-dialog-padding);
+  --spectrum-dialog-fullscreen-header-padding-bottom: 24px;
+  --spectrum-dialog-fullscreen-header-font-size: 28px;
+  --spectrum-dialog-fullscreen-header-font-weight: 100;
+  --spectrum-dialog-fullscreen-header-line-height: 36px;
 
   --spectrum-dialog-closebutton-height: 18px;
 }
@@ -29,6 +39,9 @@ Because of this contain, clicks will never fall though when a dialog is visible
   bottom: 0;
   left: 0;
 
+  /* Float above things by default */
+  z-index: 1;
+
   /* Use padding to limit the overall width of the dialog */
   padding: var(--spectrum-dialog-margin);
 
@@ -41,7 +54,6 @@ Because of this contain, clicks will never fall though when a dialog is visible
   transition: opacity var(--spectrum-transition-time);
 
   opacity: 0;
-
   outline: none; /* Hide focus outline */
 }
 
@@ -52,10 +64,9 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog-header {
-  display: block;
+  display: flex;
   position: relative;
 
-  box-sizing: border-box;
   width: 100%;
   height: var(--spectrum-dialog-header-height);
 
@@ -74,12 +85,26 @@ Because of this contain, clicks will never fall though when a dialog is visible
   }
 }
 
+.spectrum-Dialog-title {
+  flex: 1;
+}
+
+.spectrum-Dialog-typeIcon {
+  &::after {
+    display: block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+  }
+}
+
 .spectrum-Dialog-content {
   font-size: var(--spectrum-dialog-content-font-size-default);
   font-weight: var(--spectrum-dialog-content-font-weight-default);
   display: block;
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: var(--spectrum-dialog-content-padding-top);
 
   /* Stop right there! The dialog's body should NOT scroll */
 
@@ -118,6 +143,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
   min-width: var(--spectrum-dialog-min-width);
   padding: var(--spectrum-dialog-padding);
+  padding-top: var(--spectrum-dialog-padding-top);
 
   border-radius: var(--spectrum-dialog-border-radius);
   outline: none; /* Firefox shows outline */
@@ -131,31 +157,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
   margin: -4px 0 0 0;
 
   /* Truncate text when it's too long to fit */
-  box-sizing: border-box;
-  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
   outline: none; /* Hide focus outline */
-}
-
-.spectrum-Dialog-typeIcon {
-  position: absolute;
-  right: 0px;
-
-  &::after {
-    display: block;
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-size: contain;
-  }
-
-  & + .spectrum-Dialog-title {
-    /* Give more room for the icon when the title is long */
-    padding-right: 22px;
-  }
 }
 
 .spectrum-Dialog-closeButton {
@@ -171,57 +177,69 @@ Because of this contain, clicks will never fall though when a dialog is visible
   height: var(--spectrum-dialog-closebutton-height);
 }
 
-.spectrum-Dialog--fullscreen {
+.spectrum-Dialog-buttons {
+  float: right;
+  &:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+.spectrum-Dialog--centered {
   .spectrum-Dialog-wrapper {
+    left: 50%;
+    top: 50%;
     position: absolute;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* topdoc
+{{ dialog/dialog-fullscreen.yml }}
+*/
+.spectrum-Dialog--fullscreen,
+.spectrum-Dialog--fullscreenTakeover {
+  .spectrum-Dialog-wrapper {
+    /* Be a flexbox to allow a full sized content area that scrolls */
+    display: flex;
+    flex-direction: column;
 
     box-sizing: border-box;
     width: 100%; /* Fit vertically */
-    min-width: 100%; /* Fit vertically */
-    max-width: none;
-    height: auto; /* Variable height */
-    min-height: 100%; /* Full screen height */
-    max-height: none;
-    margin: 0;
+    height: 100%; /* Variable height */
 
-    border: none; /* Remove border */
+    padding-top: var(--spectrum-dialog-fullscreen-padding-top);
   }
 
   .spectrum-Dialog-header {
-    position: fixed; /* Fixed so the header stays top even it scrolls. */
-    top: 0;
-    right: var(--spectrum-dialog-padding);
-    left: var(--spectrum-dialog-padding);
-
-    box-sizing: content-box;
-    width: auto;
-    padding-top: var(--spectrum-dialog-padding);
+    padding-bottom: var(--spectrum-dialog-fullscreen-header-padding-bottom);
   }
 
-  .spectrum-Dialog-typeIcon {
-    top: calc(var(--spectrum-dialog-padding) - 2px);
-  }
-
-  .spectrum-Dialog-footer,
-  .spectrum-Dialog-header {
-    /* Fix a relatively nasty Chrome bug involving nested position: fixed elements */
-    /* https://code.google.com/p/chromium/issues/detail?id=178651 */
-    transform: translate3d(0, 0, 0);
-
-    position: fixed; /* Fixed so the footer stays bottom even it scrolls. */
-    right: var(--spectrum-dialog-padding);
-    bottom: 0;
-    left: var(--spectrum-dialog-padding);
-
-    padding-top: calc(var(--spectrum-dialog-padding) / 2);
-    padding-bottom: calc(var(--spectrum-dialog-padding) / 2); /* looks better with half padding. */
+  .spectrum-Dialog-title {
+    font-size: var(--spectrum-dialog-fullscreen-header-font-size);
+    font-weight: var(--spectrum-dialog-fullscreen-header-font-weight);
+    line-height: var(--spectrum-dialog-fullscreen-header-line-height);
   }
 
   .spectrum-Dialog-content {
-    padding-top: var(--spectrum-dialog-header-height);
+    flex: 1;
+
+    overflow-y: auto;
+  }
+}
+
+/* topdoc
+{{ dialog/dialog-fullscreen-takeover.yml }}
+*/
+.spectrum-Dialog--fullscreenTakeover {
+  /* Fill the entire window */
+  padding: 0;
+
+  .spectrum-Dialog-wrapper {
+    /* Remove the border since we've taken over */
+    border: none;
   }
 }

@@ -1,0 +1,20 @@
+---
+name: Dialog - Fullscreen
+description: The Spectrum 'fullscreen' dialog
+markup: |
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('fullscreenDialog').classList.add('is-open')">Open Fullscreen Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--fullscreen" id="fullscreenDialog">
+    <div class="spectrum-Dialog-wrapper">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
+      </div>
+      <div class="spectrum-Dialog-content">
+        This is a fullscreen dialog.
+      </div>
+      <div class="spectrum-Dialog-footer">
+      </div>
+    </div>
+  </div>
+

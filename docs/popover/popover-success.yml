@@ -5,8 +5,8 @@ markup: |
   <div class="spectrum-Popover spectrum-Dialog--success is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <div class="spectrum-Dialog-title">Success Popover</div>
+        <div class="spectrum-Dialog-typeIcon"></div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
       <div class="spectrum-Dialog-footer">
