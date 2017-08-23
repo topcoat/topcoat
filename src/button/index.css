@@ -119,6 +119,9 @@
 .spectrum-Button--icon {
   position: relative;
 
+  /* Contain child elements with z-index */
+  z-index: 0;
+
   box-sizing: border-box;
 
   width: var(--spectrum-button-icon-width);
