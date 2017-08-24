@@ -58,8 +58,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog.is-open {
-  /* Size according to content */
-  display: inline-block;
+  display: block;
 
   opacity: 1;
 }
@@ -137,7 +136,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog-wrapper {
-  display: block;
+  /* Size according to content */
+  display: inline-block;
 
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
