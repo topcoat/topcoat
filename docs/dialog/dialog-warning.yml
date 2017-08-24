@@ -4,7 +4,7 @@ description: A Spectrum 'warning' dialog
 markup:
   <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Warning Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+    <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
         <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
         <div class="spectrum-Dialog-typeIcon"></div>

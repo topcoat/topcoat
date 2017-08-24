@@ -4,7 +4,7 @@ description: A Spectrum 'success' dialog
 markup:
   <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Success Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+    <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
         <h2 class="spectrum-Dialog-title">Success Dialog</h2>
         <div class="spectrum-Dialog-typeIcon"></div>

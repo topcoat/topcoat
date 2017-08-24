@@ -3,6 +3,8 @@
 :root {
   --spectrum-popover-animation-distance: 4px;
   --spectrum-popover-target-offset: 13px;
+  --spectrum-popover-padding: 30px;
+  --spectrum-popover-min-width: 270px;
 }
 
 .spectrum-Popover {
@@ -27,9 +29,8 @@
   }
 
   .spectrum-Dialog-wrapper {
-    margin: 0;
-    min-width: 270px;
-    padding-bottom: 20px;
+    min-width: var(--spectrum-popover-min-width);
+    padding: var(--spectrum-popover-padding);
   }
 }
 
@@ -58,7 +59,7 @@
 .spectrum-Popover--left {
   margin-right: var(--spectrum-popover-target-offset);
   &.is-open {
-    left:  calc(-1 * var(--spectrum-popover-animation-distance));
+    left: calc(-1 * var(--spectrum-popover-animation-distance));
   }
   .spectrum-Popover-tip {
     right: -18px;

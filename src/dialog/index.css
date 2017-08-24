@@ -58,7 +58,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog.is-open {
-  display: block;
+  /* Size according to content */
+  display: inline-block;
 
   opacity: 1;
 }
