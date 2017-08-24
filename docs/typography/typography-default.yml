@@ -3,7 +3,7 @@
   description: The default Spectrum Typography elements
   markup: |
     <h1 class="spectrum-Heading--display">Display (h1)</h1>
-    <h1 class="spectrum-Heading--page-title">Page Title (h2)</h2>
+    <h2 class="spectrum-Heading--page-title">Page Title (h2)</h2>
     <h2 class="spectrum-Heading--subtitle1">Subtitle 1 (h2)</h2>
     <h3 class="spectrum-Heading--subtitle2">Subtitle 2 (h3)</h3>
     <h4 class="spectrum-Heading--subtitle3">Subtitle 3 (h4)</h4>
