@@ -48,6 +48,7 @@
 }
 
 .spectrum-Checkbox-label {
+  display: inline-block;
   margin: 0 8px;
   font-size: var(--spectrum-font-size);
   vertical-align: middle;

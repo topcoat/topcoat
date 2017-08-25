@@ -6,18 +6,18 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
