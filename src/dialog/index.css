@@ -148,6 +148,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
   border-radius: var(--spectrum-dialog-border-radius);
   outline: none; /* Firefox shows outline */
+
+  /* Horizontal centering */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .spectrum-Dialog-title {
@@ -191,9 +196,10 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
 .spectrum-Dialog--centered {
   .spectrum-Dialog-wrapper {
+    /* Vertical centering */
+    position: absolute;
     left: 50%;
     top: 50%;
-    position: absolute;
     transform: translate(-50%, -50%);
   }
 }
