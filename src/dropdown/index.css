@@ -21,7 +21,7 @@
     transition: opacity var(--spectrum-transition-time), transform var(--spectrum-transition-time);
     min-width: 100%;
     max-height: var(--spectrum-flyout-max-height-default);
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   &.is-disabled {
