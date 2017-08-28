@@ -5,6 +5,8 @@ var runSequence = require('run-sequence');
 var exec = require('child_process').exec;
 var path = require('path');
 
+var balthazar = require('@spectrum/balthazar');
+
 gulp.task('balthazar', function(cb) {
   runSequence(
     'balthazar:generate',
@@ -14,15 +16,25 @@ gulp.task('balthazar', function(cb) {
   );
 });
 
-gulp.task('balthazar:generate', function(cb) {
+gulp.task('balthazar:generate', function(done) {
+
   var originsPath = path.resolve('node_modules', '@spectrum', 'spectrum-origins', 'src');
   var outputPath = path.resolve('dist', 'vars');
-  var exePath = path.resolve('node_modules', '.bin', 'balthazar -t css -o ' + originsPath + ' -d ' + outputPath + ' -c balthazar-config.json');
-  exec(exePath, function (err, stdout, stderr) {
-    process.stdout.write(stdout);
-    process.stderr.write(stderr);
-    cb(err);
-  });
+
+  var opts = {
+    'origin': originsPath,
+    'destination': outputPath,
+    'colorStops': 'all',
+    'type': 'css'
+  };
+
+  balthazar(opts)
+    .then(result => {
+      done();
+    })
+    .catch(error => {
+      done(error);
+    });
 });
 
 gulp.task('balthazar:postprocess-dimensions', function() {

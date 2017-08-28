@@ -7,7 +7,7 @@
     "release": "dna-npm-bump-version && dna-npm-release"
   },
   "devDependencies": {
-    "@spectrum/balthazar": "^0.6.1",
+    "@spectrum/balthazar": "^1.x",
     "@spectrum/dna-npm-release": "^1.x",
     "@spectrum/dna-topdoc-template": "^1.x",
     "@spectrum/site-resources": "^0.3.0",
