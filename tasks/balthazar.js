@@ -5,7 +5,7 @@ var runSequence = require('run-sequence');
 var exec = require('child_process').exec;
 var path = require('path');
 
-var balthazar = require('@spectrum/balthazar');
+var balthazar = require('@spectrum/balthazar').generateToFile;
 
 gulp.task('balthazar', function(cb) {
   runSequence(
