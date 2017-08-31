@@ -9,6 +9,7 @@
 
 .spectrum-Popover {
   position: relative;
+  pointer-events: none;
   display: inline-block;
   box-sizing: border-box;
   border-style: solid;
@@ -26,6 +27,7 @@
     visibility: visible;
     opacity: 1;
     transition-delay: 0ms;
+    pointer-events: all;
   }
 
   .spectrum-Dialog-wrapper {
