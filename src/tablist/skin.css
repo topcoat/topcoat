@@ -1,90 +1,52 @@
 /* topdoc
-{{ tablist/tab-default.yml }}
+{{ tablist/tablist-anchored.yml }}
+*/
+/* topdoc
+{{ tablist/tablist-page.yml }}
+*/
+/* topdoc
+{{ tablist/tablist-panel.yml }}
+*/
+/* topdoc
+{{ tablist/tablist-panel-vertical.yml }}
 */
 .spectrum-Tab {
   color: var(--spectrum-tablist-text-color-default);
 
   &:hover {
-    color: var(--spectrum-tablist-text-color-hover)
-  }
-
-  &:focus {
-    color: var(--spectrum-tablist-text-color-focus)
+    color: var(--spectrum-tablist-text-color-hover);
   }
 
   &.is-selected {
-    color: var(--spectrum-tablist-text-color-active)
+    color: var(--spectrum-tablist-text-color-active);
+  }
+
+  &:focus {
+    color: var(--spectrum-tablist-text-color-focus);
+    box-shadow: 0 0 0 var(--spectrum-tablist-tab-item-border-width-default) var(--spectrum-tablist-border-color-focus);
   }
 
   &.is-disabled {
-    color: var(--spectrum-tablist-text-color-disabled)
+    color: var(--spectrum-tablist-text-color-disabled);
   }
 }
 
 .spectrum-TabList--anchored {
-  &::before {
-    background-color: var(--spectrum-tablist-anchored-border-color-default);
-  }
-/*
+  border-color: var(--spectrum-tablist-anchored-border-color-default);
+
   .spectrum-Tab {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-default);
+    &:focus {
+      color: var(--spectrum-tablist-anchored-text-color-focus);
+      box-shadow: initial;
 
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-default);
-      }
-    }
-
-    &:hover .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-hover);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-hover);
-      }
-    }
-
-    &:active .spectrum-Tab-label,
-    &.is-selected .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-active);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-active);
-      }
-    }
-
-    &:focus .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-focus);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-focus);
-      }
-    }
-
-    &.is-disabled {
-      .spectrum-Tab-label {
-        color: var(--spectrum-tablist-anchored-label-color-disabled);
-
-        &::after {
-          background-color: var(--spectrum-tablist-anchored-border-color-disabled);
-        }
+      /* The focus line should become blue only for anchored tabs */
+      ~ .spectrum-Tab-line {
+          background-color:  var(--spectrum-tablist-anchored-tabline-background-color-focus);
       }
     }
   }
-*/
 }
 
-/*
-Todo: Determine if unused mixins are required
-
-spectrum-tablist-line-default() {
-  border-color: var(--spectrum-tablist-border-color-default)
+.spectrum-Tab-line {
+  background-color: var(--spectrum-tablist-tabline-background-color-default);
 }
-
-spectrum-tablist-line-focus() {
-  border-color: var(--spectrum-tablist-border-color-focus)
-}
-
-spectrum-tablist-line-disabled() {
-  border-color: var(--spectrum-tablist-border-color-disabled)
-}
-*/

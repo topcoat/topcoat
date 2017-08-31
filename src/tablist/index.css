@@ -7,154 +7,166 @@
 
 .spectrum-TabList {
   position: relative;
+  z-index: 0;
 
   margin: 0;
   padding: 0;
+}
 
-  * { outline: none; }
+.spectrum-Tab {
+  position: relative;
 
+  /* Float above the tab line */
+  z-index: 1;
+
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: color var(--spectrum-transition-time) ease-out;
+  height: var(--spectrum-tablist-tab-item-height-default);
+  line-height: var(--spectrum-tablist-tab-item-height-default);
+
+  &.is-disabled {
+    cursor: default;
+  }
+}
+
+.spectrum-Tab-label {
+  cursor: pointer;
+}
+
+.spectrum-Tab-line {
+  position: absolute;
+
+  /* Be below the tab */
+  z-index: 0;
+
+  transition: transform var(--spectrum-transition-time) ease-in-out;
+  left: 0;
+  transform-origin: top left;
+}
+
+ .spectrum-TabList--page,
+ .spectrum-TabList--panel {
   .spectrum-Tab {
-    position: relative;
-    cursor: pointer;
-
-    > .spectrum-Tab-icon {
-      /* Ensure the label doesn't drop down */
-      display: inline-block;
-
-      vertical-align: middle;
-
-      /* Support SVG icons */
-      width: var(--spectrum-tablist-icon-size);
-      height: var(--spectrum-tablist-icon-size);
-
-      /* Support font icons */
-      font-size: var(--spectrum-tablist-icon-size);
-      line-height: var(--spectrum-tablist-icon-size);
-    }
-
-    > .spectrum-Tab-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-      white-space: nowrap;
-    }
-
-    &.is-disabled {
-      cursor: default;
+    margin-bottom: var(--spectrum-tablist-horizontal-tabline-height-default);
+    &:focus {
+      border-radius: var(--spectrum-tablist-tab-item-border-corner-radius-default);
     }
   }
 }
 
-/* topdoc
-{{ tablist/tablist-horizontallabel.yml }}
-*/
-/* topdoc
-{{ tablist/tablist-horizontalicon.yml }}
-*/
-.spectrum-TabList--horizontal,
-.spectrum-TabList--anchored {
+.spectrum-TabList--panel {
+  .spectrum-Tab-label {
+    font-size: var(--spectrum-tablist-panel-tab-item-label-font-size-default);
+    font-weight: var(--spectrum-tablist-panel-tab-item-label-font-weight-default);
+    text-transform: uppercase;
+  }
+
+  .spectrum-Tab-icon {
+    /* Ensure the label doesn't drop down */
+    display: inline-block;
+    vertical-align: middle;
+
+    /* Support SVG icons */
+    width: var(--spectrum-tablist-icon-size);
+    height: var(--spectrum-tablist-icon-size);
+
+    /* Support font icons */
+    font-size: var(--spectrum-tablist-icon-size);
+    line-height: var(--spectrum-tablist-icon-size);
+  }
+}
+
+.spectrum-TabList--horizontal {
   display: block;
 
-  &::after {
-    content: '';
-    clear: both;
-    display: block;
+  .spectrum-Tab {
+    display: inline-block;
   }
 
-  .spectrum-Tab {
-    float: left;
-    display: block;
-    box-sizing: border-box;
+  .spectrum-Tab-label {
     text-overflow: ellipsis;
-    max-width: 250px;
-    margin: 0 15px 0 0;
-    padding: 0px 8px;
-    line-height: 32px;
+  }
 
-    > .spectrum-Tab-icon {
-      margin-right: 5px;
-      &:last-child {
-        margin-right: 0px;
-      }
+  .spectrum-Tab-line {
+    position: absolute;
+    bottom: 0;
+    width: var(--spectrum-tablist-horizontal-tabline-width-default);
+    height: var(--spectrum-tablist-horizontal-tabline-height-default);
+  }
+
+  &.spectrum-TabList--page {
+    .spectrum-Tab {
+      padding: 0 8px;
+      margin-right: var(--spectrum-tablist-page-tab-item-margin-right-default);
     }
 
-    > .spectrum-Tab-label {
-      padding: 6px 0;
+    .spectrum-Tab-label {
+      text-transform: capitalize;
+    }
+  }
+
+  &.spectrum-TabList--anchored {
+    display: inline-block;
+    border-bottom: var(--spectrum-tablist-anchored-tab-item-border-width-default) solid;
+
+    .spectrum-Tab {
+      margin: 0px 16px;
+      padding-bottom: 8px;
     }
 
-    &.is-selected {
-      /* Horizontal Active Tab Line */
-      &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 2px;
-        border-bottom: 2px solid;
-      }
+    .spectrum-Tab-label {
+      text-transform: capitalize;
+    }
+
+    .spectrum-Tab-line {
+      bottom: calc(var(--spectrum-tablist-horizontal-tabline-height-default) * -1);
+    }
+  }
+
+  &.spectrum-TabList--panel {
+    .spectrum-Tab {
+      margin-right: var(--spectrum-tablist-panel-horizontal-tab-item-margin-right-default);
+      height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);
     }
   }
 }
 
-/* topdoc
-{{ tablist/tablist-verticallabel.yml }}
-*/
-/* topdoc
-{{ tablist/tablist-verticalicon.yml }}
-*/
+.spectrum-TabList--panel {
+  .spectrum-Tab {
+    line-height: normal;
+
+    padding: 1px 6px 5px 6px;
+  }
+}
+
 .spectrum-TabList--vertical {
   display: inline-block;
+  padding: 0px;
+  margin: 0px;
 
   .spectrum-Tab {
     display: block;
-    overflow: visible; /* overflow: ellipsis; */
-    min-width: 0;
-    margin: 0 0 4px 0;
-    float: none;
+    margin-left: var(--spectrum-tablist-horizontal-tabline-height-default);
+  }
 
-    text-align: left;
+  .spectrum-Tab-label {
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+  .spectrum-Tab-line {
+    top: var(--spectrum-tablist-horizontal-tabline-height-default);
+    left: 0;
+    width: var(--spectrum-tablist-vertical-tabline-width-default);
+    height: var(--spectrum-tablist-vertical-tabline-height-default);
+    border-radius:  var(--spectrum-tablist-vertical-tabline-border-radius-default);
+  }
 
-    > .spectrum-Tab-icon {
-      padding: 4px 7px;
-      height: 24px;
-      line-height: 24px;
-      vertical-align: middle;
-    }
-
-    > .spectrum-Tab-label {
-      padding: 4px 7px;
-      height: 16px;
-      line-height: 16px;
-      vertical-align: middle;
-    }
-
-    &.is-selected {
-      /* Vertical Active Tab Line */
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 4px;
-        bottom: 4px;
-        /* top = bottom = label vertical padding | is hackfix making the left active bar
-          as tall as the (label.height - label.vertical-padding) / 2 */
-
-        display: block;
-        width: 2px;
-        height: auto;
-
-        border: none; /* reset border */
-        border-left: 2px solid;
-      }
+  &.spectrum-TabList--panel {
+    .spectrum-Tab {
+      height: var(--spectrum-tablist-panel-vertical-tab-item-height-default);
     }
   }
 }
@@ -162,42 +174,4 @@
 .spectrum-Tab-label:empty {
   /* Hide the tab label if it's not being used */
   display: none;
-}
-
-/* topdoc
-{{ tablist/tablist-anchoredlabel.yml }}
-*/
-.spectrum-TabList--anchored {
-  list-style-type: none;
-  height: var(--spectrum-component-single-line-height);
-
-  .spectrum-Tab {
-    > .spectrum-Tab-label {
-      cursor: pointer;
-      text-transform: none;
-/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
-      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
-    }
-  }
-
-  .spectrum-Tab::after,
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
-    height: 2px;
-  }
-}
-
-/* Large Tab (Bigger font and no uppercase) */
-.spectrum-TabList--large .spectrum-Tab {
-  margin: 0 17px 0 0;
-  padding: 10px 8px;
-
-  text-transform: none;
-  font-size: 14px;
 }
