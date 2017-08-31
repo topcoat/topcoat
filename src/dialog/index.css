@@ -43,7 +43,7 @@
   top: 50%;
   transform: translate(-50%, calc(-50% + var(--spectrum-dialog-animation-distance)));
 
-  /* Appear above overlay */
+  /* Appear above underlay */
   z-index: 2;
 
   /* Allow 100% width, taking into account padding */
@@ -57,15 +57,11 @@
   border-radius: var(--spectrum-dialog-border-radius);
   outline: none; /* Firefox shows outline */
 
-  transition: transform var(--spectrum-transition-time) ease-in;
-}
+  &.is-open {
+    @inherit: %spectrum-overlay--open;
 
-
-.spectrum-Dialog.is-open {
-  @inherit: %spectrum-overlay--open;
-
-  transform: translate(-50%, -50%);
-  transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .spectrum-Dialog-header {
@@ -191,11 +187,6 @@
 .spectrum-Dialog--fullscreenTakeover {
   padding-top: var(--spectrum-dialog-fullscreen-padding-top);
 
-  &,
-  &.is-open {
-    transform: none;
-  }
-
   .spectrum-Dialog-header {
     padding-bottom: var(--spectrum-dialog-fullscreen-header-padding-bottom);
   }
@@ -221,4 +212,9 @@
 
   /* Remove the border since we've taken over */
   border: none;
+
+  &,
+  &.is-open {
+    transform: none;
+  }
 }

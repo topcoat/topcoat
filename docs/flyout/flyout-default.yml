@@ -3,7 +3,7 @@ name: Flyout
 description: Spectrum Flyouts
 markup: |
 
-  <ul class="spectrum-Flyout" role="menu">
+  <ul class="spectrum-Flyout is-open" role="menu">
     <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="0">Ballard</li>
     <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Fremont</li>
     <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Greenwood</li>

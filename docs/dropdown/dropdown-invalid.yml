@@ -12,7 +12,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -32,7 +32,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -43,7 +43,7 @@ markup: |
 
   <div class="dummy-spacing"></div>
 
-    <h4>Closed</h4>
+  <h4>Closed</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
     <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
@@ -74,7 +74,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>

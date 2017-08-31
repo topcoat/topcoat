@@ -1,4 +1,5 @@
 @import '../commons/index.css';
+@import '../commons/overlay.css';
 
 :root {
   --spectrum-popover-animation-distance: 4px;
@@ -8,31 +9,26 @@
 }
 
 .spectrum-Popover {
+  @inherit: %spectrum-overlay;
+
+  min-width: var(--spectrum-popover-min-width);
+  padding: var(--spectrum-popover-padding);
+
   position: relative;
-  pointer-events: none;
+  left: 0px;
+  top: 0px;
+
   display: inline-block;
   box-sizing: border-box;
+
   border-style: solid;
   border-width: var(--spectrum-popover-border-size-default);
   border-radius: var(--spectrum-popover-border-corner-radius-default);
-  transition: left var(--spectrum-transition-time) ease-in-out, opacity var(--spectrum-transition-time) ease-in-out, top var(--spectrum-transition-time) ease-in-out, visibility 0ms linear var(--spectrum-transition-time);
-  visibility: hidden;
-  opacity: 0;
-  left: 0px;
-  top: 0px;
 
   outline: none; /* Hide focus outline */
 
   &.is-open {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0ms;
-    pointer-events: all;
-  }
-
-  .spectrum-Dialog-wrapper {
-    min-width: var(--spectrum-popover-min-width);
-    padding: var(--spectrum-popover-padding);
+    @inherit: %spectrum-overlay--open;
   }
 }
 
@@ -42,6 +38,7 @@
   overflow: hidden;
   width: var(--spectrum-popover-tip-width-default);
   height: calc((var(--spectrum-popover-tip-width-default)/2)+(var(--spectrum-popover-border-size-default)));
+
   &::after {
     content: '';
     width: var(--spectrum-popover-tip-width-default);

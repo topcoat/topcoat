@@ -5,7 +5,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
 
-    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout is-open" role="menu">
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
@@ -17,7 +17,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
 
-    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout is-open" role="menu">
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>

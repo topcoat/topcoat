@@ -1,4 +1,5 @@
 @import '../commons/index.css';
+@import '../commons/overlay.css';
 
 :root {
   --spectrum-tooltip-animation-distance: 4px;
@@ -6,25 +7,28 @@
 }
 
 .spectrum-Tooltip {
+  @inherit: %spectrum-overlay;
+
   position: relative;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: left var(--spectrum-transition-time) ease-in-out, opacity var(--spectrum-transition-time) ease-in-out, top var(--spectrum-transition-time) ease-in-out, visibility 0ms linear var(--spectrum-transition-time);
-  display: inline-block;
-  position: relative;
-  width: auto;
-  padding: 2px 8px;
-  border-radius: var(--spectrum-border-radius);
-  font-size: var(--spectrum-font-size-text-label);
-  line-height: var(--spectrum-line-height-text-label);
   left: 0px;
   top: 0px;
 
+  display: inline-block;
+
+  width: auto;
+  padding: 2px 8px;
+
+  border-radius: var(--spectrum-border-radius);
+
+  font-size: var(--spectrum-font-size-text-label);
+  line-height: var(--spectrum-line-height-text-label);
+
   &.is-open {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0ms;
+    @inherit: %spectrum-overlay--open;
+  }
+
+  &, &.is-open {
+    pointer-events: none;
   }
 
   .spectrum-Link {

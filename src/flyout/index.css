@@ -1,6 +1,9 @@
 @import '../commons/index.css';
+@import '../commons/overlay.css';
 
 .spectrum-Flyout {
+  @inherit: %spectrum-overlay;
+
   position: absolute;
   display: inline-block;
   white-space: nowrap;
@@ -17,6 +20,10 @@
   border-style: solid;
   border-width: var(--spectrum-flyout-border-size-default);
   border-radius: var(--spectrum-flyout-border-corner-radius-default);
+
+  &.is-open {
+    @inherit: %spectrum-overlay--open;
+  }
 }
 
 .spectrum-Flyout-option {
