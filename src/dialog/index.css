@@ -60,6 +60,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
 .spectrum-Dialog.is-open {
   opacity: 1;
+
   visibility: visible;
   transition-delay: 0ms;
 }

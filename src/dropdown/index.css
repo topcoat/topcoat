@@ -18,7 +18,8 @@
     opacity: 0;
     pointer-events: none;
     margin-top:var(--spectrum-dropdown-flyout-margin-default);
-    transition: opacity var(--spectrum-transition-time), transform var(--spectrum-transition-time);
+    transition: opacity var(--spectrum-transition-time), transform var(--spectrum-transition-time), visibility 0ms linear var(--spectrum-transition-time);
+    visibility: hidden;
     min-width: 100%;
     max-height: var(--spectrum-flyout-max-height-default);
     overflow-y: auto;
@@ -43,6 +44,8 @@
       transform: translateY(4px); /*needed for the proper spectrum transition*/
       pointer-events: all;
       position: absolute;
+      transition-delay: 0ms;
+      visibility: visible;
     }
   }
 }

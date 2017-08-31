@@ -15,7 +15,7 @@
   border-style: solid;
   border-width: var(--spectrum-popover-border-size-default);
   border-radius: var(--spectrum-popover-border-corner-radius-default);
-  transition: left var(--spectrum-transition-time) ease-in-out, opacity var(--spectrum-transition-time) ease-in-out, top var(--spectrum-transition-time) ease-in-out;
+  transition: left var(--spectrum-transition-time) ease-in-out, opacity var(--spectrum-transition-time) ease-in-out, top var(--spectrum-transition-time) ease-in-out, visibility 0ms linear var(--spectrum-transition-time);
   visibility: hidden;
   opacity: 0;
   left: 0px;
