@@ -8,7 +8,7 @@
   markup: |
     <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
       <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
       </div>
       <div class="spectrum-Tab" tabindex="0">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
