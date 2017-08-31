@@ -198,9 +198,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog--centered.is-open {
-    transform: translate(-50%, -50%);
-    transition-timing-function: ease-out;
-  }
+  transform: translate(-50%, -50%);
+  transition-timing-function: ease-out;
 }
 
 /* topdoc
