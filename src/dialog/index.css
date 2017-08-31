@@ -49,7 +49,6 @@
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
 
-  max-height: calc(100% - calc(var(--spectrum-dialog-margin) * 2));
   min-width: var(--spectrum-dialog-min-width);
 
   padding: var(--spectrum-dialog-padding);
@@ -180,16 +179,11 @@
   top: var(--spectrum-dialog-margin);
   right: var(--spectrum-dialog-margin);
   bottom: var(--spectrum-dialog-margin);
-
-  transform: translate(0, var(--spectrum-dialog-animation-distance));
-}
-
-.spectrum-Dialog--fullscreen.is-open {
-  transform: translate(0, 0);
 }
 
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
+  transform: translate(0, var(--spectrum-dialog-animation-distance));
   padding-top: var(--spectrum-dialog-fullscreen-padding-top);
 
   .spectrum-Dialog-header {
@@ -201,15 +195,23 @@
     font-weight: var(--spectrum-dialog-fullscreen-header-font-weight);
     line-height: var(--spectrum-dialog-fullscreen-header-line-height);
   }
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
 }
 
 /* topdoc
 {{ dialog/dialog-fullscreen-takeover.yml }}
 */
 .spectrum-Dialog--fullscreenTakeover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
   box-sizing: border-box;
-  width: 100%; /* Fit vertically */
-  height: 100%; /* Variable height */
 
   /* Remove the border since we've taken over */
   border: none;
