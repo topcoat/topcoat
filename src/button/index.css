@@ -77,6 +77,8 @@
   font-size: var(--spectrum-button-action-font-size-default);
   font-weight: var(--spectrum-button-action-font-weight-default);
   padding: 0 var(--spectrum-button-action-padding-x-default);
+  border-width: var(--spectrum-button-action-border-size-default);
+  border-radius: var(--spectrum-button-action-border-corner-radius-default);
 }
 
 .spectrum-Button--action--icon-only {
@@ -86,6 +88,8 @@
 .spectrum-Button--quiet--action {
   font-size: var(--spectrum-button-quiet-action-font-size-default);
   font-weight: var(--spectrum-button-quiet-action-font-weight-default);
+  border-width: var(--spectrum-button-quiet-action-border-size-default);
+  border-radius: var(--spectrum-button-quiet-action-border-corner-radius-default);
 }
 
 .spectrum-Button--quiet--action--icon-only {

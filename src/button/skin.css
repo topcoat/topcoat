@@ -226,8 +226,6 @@
 .spectrum-Button--action {
   background-color: var(--spectrum-button-action-background-color-default);
   border-color: var(--spectrum-button-action-border-color-default);
-  border-width: var(--spectrum-button-action-border-size-default);
-  border-radius: var(--spectrum-button-action-border-corner-radius-default);
   color: var(--spectrum-button-action-text-color-default);
 
   &:focus {
@@ -265,8 +263,6 @@
 .spectrum-Button--quiet--action {
   background-color: var(--spectrum-button-quiet-action-background-color-default);
   border-color: var(--spectrum-button-quiet-action-border-color-default);
-  border-width: var(--spectrum-button-quiet-action-border-size-default);
-  border-radius: var(--spectrum-button-quiet-action-border-corner-radius-default);
   color: var(--spectrum-button-quiet-action-text-color-default);
 
   &:focus {

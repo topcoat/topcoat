@@ -17,48 +17,51 @@
   line-height: 0;
   border-radius: var(--spectrum-border-radius);
   transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
-
-  .spectrum-Stepper-buttons {
-    flex: 1;
-
-    .spectrum-Button {
-      position: relative;
-      margin: 0;
-      border-width: 1px;
-      border-right-width: 0;
-      border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
-    }
-
-    .spectrum-Stepper-stepUp {
-      border-bottom: none;
-      border-bottom-left-radius: 0;
-    }
-
-    .spectrum-Stepper-stepDown {
-      float: left;
-      border-top: none;
-      border-top-left-radius: 0;
-
-      &:focus {
-        border-top: none;
-      }
-    }
-  }
 }
 
-.spectrum-Stepper-input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  position: relative;
-  width: 100%;
+.spectrum-Stepper-buttons {
+  display: block;
 }
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
+  display: block;
+
   height: var(--spectrum-stepper-button-height);
   width: var(--spectrum-stepper-button-width);
+
   padding-left: var(--spectrum-stepper-padding);
   padding-right: var(--spectrum-stepper-padding);
+
+  /* Avoid margin added by adjacent buttons */
+  margin: 0 !important;
+
+  border-width: 1px;
+  border-right-width: 0;
+  border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
+}
+
+.spectrum-Stepper-stepUp {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown {
+  border-top: none;
+  border-top-left-radius: 0;
+
+  &:focus {
+    border-top: none;
+  }
+}
+
+.spectrum-Stepper-input {
+  position: relative;
+
+  flex: 1;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .spectrum-Stepper-stepUpIcon,
