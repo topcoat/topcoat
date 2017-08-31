@@ -2,18 +2,16 @@
 name: Dialog - Default
 description: The Spectrum Dialog.
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Dialog</button>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
   <div class="spectrum-Dialog" id="defaultDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
     </div>
   </div>

@@ -34,6 +34,7 @@
     "postcss-calc": "^6.0.0",
     "postcss-custom-properties": "^6.0.1",
     "postcss-import": "^10.0.0",
+    "postcss-inherit": "^4.0.3",
     "postcss-nested": "2.0.2",
     "postcss-pxtorem": "^4.0.1",
     "postcss-svg": "^2.1.0",

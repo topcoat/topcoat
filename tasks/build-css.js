@@ -17,6 +17,7 @@ var colorStops = [
 
 var processors = [
   require('postcss-import'),
+  require('postcss-inherit'),
   require('postcss-nested'),
   require('postcss-custom-properties'),
   require('postcss-calc'),

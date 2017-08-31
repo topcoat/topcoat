@@ -1,11 +1,7 @@
 /* topdoc
 {{ dialog/dialog-modal.yml }}
 */
-.spectrum-Dialog--modal {
-  background: var(--spectrum-dialog-underlay-background-color-default);
-}
-
-.spectrum-Dialog-wrapper {
+.spectrum-Dialog {
   background: var(--spectrum-dialog-background-color-default);
 }
 

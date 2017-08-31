@@ -1,0 +1,21 @@
+@import '../commons/index.css';
+@import '../commons/overlay.css';
+
+.spectrum-Underlay {
+  @inherit: %spectrum-overlay;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Float above things by default */
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.spectrum-Underlay.is-open {
+  @inherit: %spectrum-overlay--open;
+}

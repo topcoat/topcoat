@@ -2,18 +2,16 @@
 name: Dialog - Info
 description: The Spectrum 'info' dialog
 markup:
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Info Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--info spectrum-Dialog--modal spectrum-Dialog--centered" id="infoDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is an info dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Info Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--info spectrum-Dialog--centered" id="infoDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is an info dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>

@@ -1,0 +1,15 @@
+%spectrum-overlay {
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition: opacity var(--spectrum-transition-time), visibility 0ms linear var(--spectrum-transition-time);
+}
+
+%spectrum-overlay--open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+}

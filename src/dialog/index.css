@@ -1,4 +1,5 @@
 @import '../commons/index.css';
+@import '../commons/overlay.css';
 
 :root {
   --spectrum-dialog-min-width: 320px;
@@ -29,40 +30,43 @@
 /* topdoc
 {{ dialog/dialog-default.yml }}
 */
-/*
-The full screen container in which the dialog resides
-Because of this contain, clicks will never fall though when a dialog is visible
-*/
 .spectrum-Dialog {
+  @inherit: %spectrum-overlay;
+
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: flex;
+  flex-direction: column;
+
+  /* Centered by default */
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + var(--spectrum-dialog-animation-distance)));
 
-  /* Float above things by default */
-  z-index: 1;
+  /* Appear above overlay */
+  z-index: 2;
 
-  /* Use padding to limit the overall width of the dialog */
-  padding: var(--spectrum-dialog-margin);
+  /* Allow 100% width, taking into account padding */
+  box-sizing: border-box;
 
-  /* Scroll vertically only */
-  overflow-x: hidden;
-  overflow-y: auto;
+  max-height: calc(100% - calc(var(--spectrum-dialog-margin) * 2));
+  min-width: var(--spectrum-dialog-min-width);
 
-  /* Match the fade time of the backdrop */
-  transition: opacity var(--spectrum-transition-time), visibility 0ms linear var(--spectrum-transition-time);
-  visibility: hidden;
+  padding: var(--spectrum-dialog-padding);
+  padding-top: var(--spectrum-dialog-padding-top);
 
-  opacity: 0;
-  outline: none; /* Hide focus outline */
+  border-radius: var(--spectrum-dialog-border-radius);
+  outline: none; /* Firefox shows outline */
+
+  transition: transform var(--spectrum-transition-time) ease-in;
 }
 
-.spectrum-Dialog.is-open {
-  opacity: 1;
 
-  visibility: visible;
-  transition-delay: 0ms;
+.spectrum-Dialog.is-open {
+  @inherit: %spectrum-overlay--open;
+
+  transform: translate(-50%, -50%);
+  transition-timing-function: ease-out;
 }
 
 .spectrum-Dialog-header {
@@ -70,7 +74,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
   position: relative;
 
   width: 100%;
-  height: var(--spectrum-dialog-header-height);
+  min-height: var(--spectrum-dialog-header-height);
 
   border-radius: var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius) 0 0;
   outline: none; /* Hide focus outline around header */
@@ -102,15 +106,18 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog-content {
-  font-size: var(--spectrum-dialog-content-font-size-default);
-  font-weight: var(--spectrum-dialog-content-font-weight-default);
   display: block;
   box-sizing: border-box;
   padding-top: var(--spectrum-dialog-content-padding-top);
 
-  /* Stop right there! The dialog's body should NOT scroll */
+  overflow-y: auto;
 
   outline: none; /* Hide focus outline */
+
+  flex: 1;
+
+  font-size: var(--spectrum-dialog-content-font-size-default);
+  font-weight: var(--spectrum-dialog-content-font-weight-default);
 }
 
 .spectrum-Dialog-footer {
@@ -135,26 +142,6 @@ Because of this contain, clicks will never fall though when a dialog is visible
       margin-right: 0;
     }
   }
-}
-
-.spectrum-Dialog-wrapper {
-  /* Size according to content */
-  display: inline-block;
-
-  /* Allow 100% width, taking into account padding */
-  box-sizing: border-box;
-
-  min-width: var(--spectrum-dialog-min-width);
-  padding: var(--spectrum-dialog-padding);
-  padding-top: var(--spectrum-dialog-padding-top);
-
-  border-radius: var(--spectrum-dialog-border-radius);
-  outline: none; /* Firefox shows outline */
-
-  /* Horizontal centering */
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 .spectrum-Dialog-title {
@@ -185,39 +172,25 @@ Because of this contain, clicks will never fall though when a dialog is visible
   height: var(--spectrum-dialog-closebutton-height);
 }
 
-.spectrum-Dialog--centered {
-  .spectrum-Dialog-wrapper {
-    /* Vertical centering */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, calc(-50% + var(--spectrum-dialog-animation-distance)));
-    transition: transform var(--spectrum-transition-time) ease-in;
-  }
-}
-
-.spectrum-Dialog--centered.is-open {
-  transform: translate(-50%, -50%);
-  transition-timing-function: ease-out;
-}
-
 /* topdoc
 {{ dialog/dialog-fullscreen.yml }}
 */
+.spectrum-Dialog--fullscreen {
+  left: var(--spectrum-dialog-margin);
+  top: var(--spectrum-dialog-margin);
+  right: var(--spectrum-dialog-margin);
+  bottom: var(--spectrum-dialog-margin);
+
+  transform: translate(0, var(--spectrum-dialog-animation-distance));
+}
+
+.spectrum-Dialog--fullscreen.is-open {
+  transform: translate(0, 0);
+}
+
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
-  .spectrum-Dialog-wrapper {
-    /* Be a flexbox to allow a full sized content area that scrolls */
-    display: flex;
-    flex-direction: column;
-
-    box-sizing: border-box;
-    width: 100%; /* Fit vertically */
-    height: 100%; /* Variable height */
-
-    padding-top: var(--spectrum-dialog-fullscreen-padding-top);
-  }
+  padding-top: var(--spectrum-dialog-fullscreen-padding-top);
 
   .spectrum-Dialog-header {
     padding-bottom: var(--spectrum-dialog-fullscreen-header-padding-bottom);
@@ -228,23 +201,16 @@ Because of this contain, clicks will never fall though when a dialog is visible
     font-weight: var(--spectrum-dialog-fullscreen-header-font-weight);
     line-height: var(--spectrum-dialog-fullscreen-header-line-height);
   }
-
-  .spectrum-Dialog-content {
-    flex: 1;
-
-    overflow-y: auto;
-  }
 }
 
 /* topdoc
 {{ dialog/dialog-fullscreen-takeover.yml }}
 */
 .spectrum-Dialog--fullscreenTakeover {
-  /* Fill the entire window */
-  padding: 0;
+  box-sizing: border-box;
+  width: 100%; /* Fit vertically */
+  height: 100%; /* Variable height */
 
-  .spectrum-Dialog-wrapper {
-    /* Remove the border since we've taken over */
-    border: none;
-  }
+  /* Remove the border since we've taken over */
+  border: none;
 }
