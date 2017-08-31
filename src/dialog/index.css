@@ -179,12 +179,22 @@
   top: var(--spectrum-dialog-margin);
   right: var(--spectrum-dialog-margin);
   bottom: var(--spectrum-dialog-margin);
+
+  transform: translate(0, var(--spectrum-dialog-animation-distance));
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
 }
 
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
-  transform: translate(0, var(--spectrum-dialog-animation-distance));
   padding-top: var(--spectrum-dialog-fullscreen-padding-top);
+
+  &,
+  &.is-open {
+    transform: none;
+  }
 
   .spectrum-Dialog-header {
     padding-bottom: var(--spectrum-dialog-fullscreen-header-padding-bottom);
@@ -194,10 +204,6 @@
     font-size: var(--spectrum-dialog-fullscreen-header-font-size);
     font-weight: var(--spectrum-dialog-fullscreen-header-font-weight);
     line-height: var(--spectrum-dialog-fullscreen-header-line-height);
-  }
-
-  &.is-open {
-    transform: translate(0, 0);
   }
 }
 
