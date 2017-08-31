@@ -23,6 +23,7 @@
   --spectrum-dialog-fullscreen-header-line-height: 36px;
 
   --spectrum-dialog-closebutton-height: 18px;
+  --spectrum-dialog-animation-distance: 8px;
 }
 
 /* topdoc
@@ -46,21 +47,21 @@ Because of this contain, clicks will never fall though when a dialog is visible
   padding: var(--spectrum-dialog-margin);
 
   /* Scroll vertically only */
-  display: none;
   overflow-x: hidden;
   overflow-y: auto;
 
   /* Match the fade time of the backdrop */
-  transition: opacity var(--spectrum-transition-time);
+  transition: opacity var(--spectrum-transition-time), visibility 0ms linear var(--spectrum-transition-time);
+  visibility: hidden;
 
   opacity: 0;
   outline: none; /* Hide focus outline */
 }
 
 .spectrum-Dialog.is-open {
-  display: block;
-
   opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
 }
 
 .spectrum-Dialog-header {
@@ -183,24 +184,21 @@ Because of this contain, clicks will never fall though when a dialog is visible
   height: var(--spectrum-dialog-closebutton-height);
 }
 
-.spectrum-Dialog-buttons {
-  float: right;
-  &:after {
-    content: " "; /* Older browser do not support empty content */
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-}
-
 .spectrum-Dialog--centered {
   .spectrum-Dialog-wrapper {
     /* Vertical centering */
     position: absolute;
     left: 50%;
     top: 50%;
+    position: absolute;
+    transform: translate(-50%, calc(-50% + var(--spectrum-dialog-animation-distance)));
+    transition: transform var(--spectrum-transition-time) ease-in;
+  }
+}
+
+.spectrum-Dialog--centered.is-open {
     transform: translate(-50%, -50%);
+    transition-timing-function: ease-out;
   }
 }
 
