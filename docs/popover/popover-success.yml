@@ -2,7 +2,7 @@
 name: Popover - Success
 description: A Spectrum 'success' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--success is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Success Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>

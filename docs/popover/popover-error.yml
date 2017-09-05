@@ -2,7 +2,7 @@
 name: Popover - Error
 description: A Spectrum 'error' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--error is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--error is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Error Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>
