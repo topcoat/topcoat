@@ -5,7 +5,7 @@
 
   transition: transform var(--spectrum-transition-time) ease-in-out,
               opacity var(--spectrum-transition-time) ease-in-out,
-              visibility 0ms linear;
+              visibility 0ms linear var(--spectrum-transition-time);
 
   pointer-events: none;
 }
