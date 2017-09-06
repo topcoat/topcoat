@@ -2,7 +2,7 @@
 {{ actionmenu/actionmenu.yml }}
 */
 .spectrum-ActionMenu {
-
+  display: inline-block;
 }
 
 .spectrum-ActionMenu-button {
