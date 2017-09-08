@@ -5,7 +5,10 @@
   box-sizing: border-box;
   border: 1px solid;
   border-radius: var(--spectrum-border-radius);
-  padding: 0;
+
+  /* Apply padding by default to center text, giving consistency between input and textfield */
+  padding: 4px 0;
+
   min-width: 110px;
   height: var(--spectrum-component-single-line-height);
   width: var(--spectrum-component-single-line-width);
@@ -27,7 +30,9 @@
   /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
   /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
   -moz-appearance: textfield;
-  -webkit-appearance: none;
+
+  /* Normalize is adding a specific selector that resets this, so be important */
+  -webkit-appearance: none !important;
 
   &::placeholder {
     font-weight: normal;
@@ -88,14 +93,12 @@
   /* removes the side padding to align the text properly */
   padding-left: 0;
   padding-right: 0;
-
 }
 
 .spectrum-Textfield--multiline {
   height: auto;
   padding: 4px 8px;
   text-indent: 0;
-
 
   &.is-invalid,
   &:invalid {
@@ -106,7 +109,8 @@
   }
 }
 
-.spectrum-Textfield--quiet.spectrum-Textfield--multiline {
+/* Treat all quiet inputs and textareas the same */
+.spectrum-Textfield--quiet {
   resize: none;
   overflow-y: hidden;
 }
