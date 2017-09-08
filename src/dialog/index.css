@@ -41,7 +41,7 @@
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, calc(-50% + var(--spectrum-dialog-animation-distance)));
+  transform: translateX(-50%) translateY(-50%) translateY(var(--spectrum-dialog-animation-distance));
 
   /* Appear above underlay */
   z-index: 2;
