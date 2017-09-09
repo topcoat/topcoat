@@ -11,3 +11,19 @@ markup: |
     <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
     <input class="spectrum-Textfield" aria-invalid="false" type="text" placeholder="Enter your life story" id="spectrum-textinput-instance">
   </div>
+  <div style="margin-top: 20px;">
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+    <div class="spectrum-Stepper">
+      <span class="spectrum-Stepper-buttons">
+        <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+          <div class="spectrum-Stepper-stepUpIcon">
+          </div>
+        </button>
+        <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+          <div class="spectrum-Stepper-stepDownIcon">
+          </div>
+        </button>
+      </span>
+      <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+    </div>
+  </div>

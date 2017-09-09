@@ -2,7 +2,7 @@
 
 :root {
   --spectrum-field-label-margin: 0 0 5px;
-  --spectrum-field-label-left-margin-right: 8px;
+  --spectrum-field-label-left-margin: 10px 8px 5px 0;
 }
 
 /* topdoc
@@ -15,6 +15,9 @@
 
   font-size: var(--spectrum-font-size-text-label);
   line-height: var(--spectrum-line-height-text-label);
+
+  vertical-align: top;
+
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
@@ -25,5 +28,5 @@
 */
 .spectrum-FieldLabel--left {
   display: inline-block;
-  margin-right: var(--spectrum-field-label-left-margin-right);
+  margin: var(--spectrum-field-label-left-margin);
 }
