@@ -49,6 +49,13 @@
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
 
+  /* Be large enough to fit content */
+  width: fit-content;
+
+  /* Don't be bigger than the screen */
+  max-height: calc(100vh - calc(var(--spectrum-dialog-margin) * 2));
+  max-width: calc(100vw - calc(var(--spectrum-dialog-margin) * 2));
+
   min-width: var(--spectrum-dialog-min-width);
 
   padding: var(--spectrum-dialog-padding);
@@ -69,7 +76,7 @@
   position: relative;
 
   width: 100%;
-  min-height: var(--spectrum-dialog-header-height);
+  flex: 0 0 var(--spectrum-dialog-header-height);
 
   border-radius: var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius) 0 0;
   outline: none; /* Hide focus outline around header */
@@ -87,7 +94,7 @@
 }
 
 .spectrum-Dialog-title {
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .spectrum-Dialog-typeIcon {
@@ -107,9 +114,12 @@
 
   overflow-y: auto;
 
-  outline: none; /* Hide focus outline */
+  flex: 1 1 auto;
 
-  flex: 1;
+  /* Temporary IE 11 fix */
+  max-height: 70vh;
+
+  outline: none; /* Hide focus outline */
 
   font-size: var(--spectrum-dialog-content-font-size-default);
   font-weight: var(--spectrum-dialog-content-font-weight-default);
@@ -119,6 +129,8 @@
   border-radius: 0 0 var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius);
 
   text-align: right; /* right align buttons */
+
+  flex: 1 1 auto;
 
   outline: none; /* Hide focus outline */
 
@@ -185,6 +197,10 @@
 
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
+  width: auto;
+  max-height: none;
+  max-width: none;
+
   padding-top: var(--spectrum-dialog-fullscreen-padding-top);
 
   .spectrum-Dialog-header {
@@ -195,6 +211,10 @@
     font-size: var(--spectrum-dialog-fullscreen-header-font-size);
     font-weight: var(--spectrum-dialog-fullscreen-header-font-weight);
     line-height: var(--spectrum-dialog-fullscreen-header-line-height);
+  }
+
+  .spectrum-Dialog-content {
+    max-height: none;
   }
 }
 
