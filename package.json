@@ -1,6 +1,6 @@
 {
   "name": "@spectrum/spectrum-css",
-  "version": "2.0.0-beta.41",
+  "version": "2.0.0-beta.42",
   "scripts": {
     "build": "gulp",
     "ci-all": "npm run build",
