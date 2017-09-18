@@ -11,6 +11,10 @@
 .spectrum-Popover {
   @inherit: %spectrum-overlay;
 
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: flex;
+  flex-direction: column;
+
   min-width: var(--spectrum-popover-min-width);
   padding: var(--spectrum-popover-padding);
 
