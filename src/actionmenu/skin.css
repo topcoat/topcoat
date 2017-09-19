@@ -1,21 +1,26 @@
 .spectrum-ActionMenu-button {
   &::before {
     background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-default)));
+  }
 
-    &:focus {
-      background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-focus)));
-    }
+  &:focus::before {
+    background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-focus)));
+  }
 
-    &:hover {
-      background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-hover)));
-    }
+  &:hover::before {
+    background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-hover)));
+  }
 
-    &:active {
+  &:active,
+  &.is-selected {
+    &::before {
       background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-active)));
     }
+  }
 
-    &:disabled,
-    &.is-disabled {
+  &:disabled,
+  &.is-disabled {
+    &::before {
       background-image: url("embed/S_More_18_N@2x.svg" param(--color var(--spectrum-button-action-text-color-disabled)));
     }
   }

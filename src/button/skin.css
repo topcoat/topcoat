@@ -242,7 +242,8 @@
     color: var(--spectrum-button-action-text-color-hover);
   }
 
-  &:active {
+  &:active,
+  &.is-selected {
     background-color: var(--spectrum-button-action-background-color-active);
     border-color: var(--spectrum-button-action-border-color-active);
     box-shadow: none;
@@ -279,7 +280,8 @@
     color: var(--spectrum-button-quiet-action-text-color-hover);
   }
 
-  &:active {
+  &:active,
+  &.is-selected {
     background-color: var(--spectrum-button-quiet-action-background-color-active);
     border-color: var(--spectrum-button-quiet-action-border-color-active);
     box-shadow: none;
