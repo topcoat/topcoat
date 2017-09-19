@@ -130,7 +130,7 @@
 
   text-align: right; /* right align buttons */
 
-  flex: 1 1 auto;
+  flex: 0 1 auto;
 
   outline: none; /* Hide focus outline */
 
