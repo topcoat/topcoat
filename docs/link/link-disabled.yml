@@ -2,4 +2,4 @@
 name: Link - Disabled
 description: A disabled link
 markup: |
-  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
+  <p> This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>

@@ -8,11 +8,26 @@
   transition: color var(--spectrum-transition-time) ease-in-out;
   outline: none;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+    text-decoration-style: double;
+  }
+
 /* topdoc
 {{ link/link-disabled.yml }}
 */
   &.is-disabled {
   	cursor: default;
+    pointer-events: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 

@@ -11,7 +11,6 @@
 
   &:focus {
     color: var(--spectrum-link-text-color-focus);
-    box-shadow: 0 1px 0 var(--spectrum-link-text-color-focus);
   }
 
   &.is-disabled {
@@ -32,8 +31,6 @@
 
   &:focus {
     color: inherit;
-    /* focus box-shadow color vale should be inherited like the color, too */
-    box-shadow: 0 1px 0 var(--spectrum-link-subtle-box-shadow-color-focus);
   }
 }
 
