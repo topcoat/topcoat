@@ -1,0 +1,29 @@
+---
+name: FieldGroup - Default
+description: The Spectrum radio group 'default'
+markup: |
+  <div class="spectrum-FieldGroup">
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
+    </div>
+  </div>
+  <div class="spectrum-FieldGroup">
+    <label class="spectrum-Checkbox">
+      <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-label">Checkbox</span>
+    </label>
+    <label class="spectrum-Checkbox">
+      <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-label">Checkbox</span>
+    </label>
+  </div>
+

@@ -1,0 +1,58 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ fieldgroup/fieldgroup-default.yml }}
+*/
+
+.spectrum-FieldGroup {
+  display: inline-block;
+  vertical-align: top;
+
+  .spectrum-Radio,
+  .spectrum-Checkbox {
+    margin-right: 12px;
+  }
+}
+
+/* topdoc
+{{ fieldgroup/fieldgroup-vertical.yml }}
+*/
+
+.spectrum-FieldGroup--vertical {
+  .spectrum-Radio,
+  .spectrum-Checkbox {
+    display: block;
+    margin: 0 0 0 calc(-1 * var(--spectrum-radio-hitarea));
+  }
+
+  & + .spectrum-FieldGroup--vertical {
+    margin-left: var(--spectrum-fieldgroup-spacing);
+
+    .spectrum-Radio,
+    .spectrum-Checkbox {
+      /* Prevent overlap due to negative margin */
+      margin: 0;
+    }
+  }
+}
+
+/* topdoc
+{{ fieldgroup/fieldgroup-labelsbelow.yml }}
+*/
+
+.spectrum-FieldGroup--labelsBelow {
+  .spectrum-Radio {
+    height: 36px;
+    margin: 0;
+  }
+
+  .spectrum-Radio-checkmark {
+    margin-bottom: 18px;
+  }
+
+  .spectrum-Radio-label {
+    position: relative;
+    top: 12px;
+    left: -17px;
+  }
+}

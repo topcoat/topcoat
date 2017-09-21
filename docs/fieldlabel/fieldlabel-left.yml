@@ -4,15 +4,65 @@ description: >-
   Field label for use with form inputs; left variation.
 markup: |
   <div>
-    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story *</label>
+    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Company Title</label>
     <textarea id="lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
   </div>
   <div style="margin-top: 20px;">
-    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Email Address</label>
     <input class="spectrum-Textfield" aria-invalid="false" type="text" placeholder="Enter your life story" id="spectrum-textinput-instance">
   </div>
   <div style="margin-top: 20px;">
-    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
+    <div class="spectrum-Dropdown" style="width: 195px;">
+      <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+      <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
+        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-Flyout-divider">
+        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Interests</label>
+    <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+      <div class="spectrum-Radio">
+        <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-label" for="radio-5">Kittens</label>
+      </div>
+      <div class="spectrum-Radio">
+        <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-6">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-label" for="radio-6">Dogs</label>
+      </div>
+    </div>
+
+    <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+      <label class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <span class="spectrum-Checkbox-label">Checkbox</span>
+      </label>
+      <label class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <span class="spectrum-Checkbox-label">Checkbox</span>
+      </label>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Age</label>
     <div class="spectrum-Stepper">
       <span class="spectrum-Stepper-buttons">
         <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">

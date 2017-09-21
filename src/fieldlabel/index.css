@@ -1,6 +1,7 @@
 @import '../commons/index.css';
 
 :root {
+  --spectrum-field-min-width: 100px;
   --spectrum-field-label-margin: 0 0 5px;
   --spectrum-field-label-left-margin: 10px 8px 5px 0;
 }
@@ -10,6 +11,8 @@
 */
 .spectrum-FieldLabel {
   display: block;
+
+  min-width: var(--spectrum-field-min-width);
 
   margin: var(--spectrum-field-label-margin);
 

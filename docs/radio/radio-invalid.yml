@@ -1,16 +1,20 @@
 ---
-name: RadioGroup - Default
-description: The Spectrum radio group 'default'
+name: Radio - Invalid
+description: The 'invalid' Spectrum radio
+modifiers:
+  ':hover': Hover state
+  ':active': Active state
+  ':focus': Focused
 markup: |
-  <div class="spectrum-RadioGroup">
-    <div class="spectrum-Radio">
+  <form>
+    <div class="spectrum-Radio is-invalid">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
       <span class="spectrum-Radio-checkmark"></span>
       <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
     </div>
-    <div class="spectrum-Radio">
+    <div class="spectrum-Radio is-invalid">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
       <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
     </div>
-  </div>
+  </form>

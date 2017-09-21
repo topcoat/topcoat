@@ -9,9 +9,14 @@
   display: inline-block;
   position: relative;
 
-  padding: 7px 0;
+  padding: 6px var(--spectrum-radio-hitarea);
+  margin-left: calc(-1 * var(--spectrum-radio-hitarea));
 
   font-size: 0;
+
+  & + .spectrum-Radio {
+    margin-left: 0;
+  }
 }
 
 .spectrum-Radio-input {
@@ -35,13 +40,13 @@
 }
 
 .spectrum-Radio-label {
-  margin: 0 8px;
+  margin-left: 8px;
 
   font-size: var(--spectrum-font-size);
 
   vertical-align: middle;
 
-  transition: color 150ms ease-in-out;
+  transition: color var(--spectrum-transition-time) ease-in-out;
 }
 
 .spectrum-Radio-checkmark {

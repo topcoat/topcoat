@@ -1,8 +1,8 @@
 ---
-name: RadioGroup - Vertical
+name: FieldGroup - Vertical
 description: The Spectrum radio group 'vertical'
 markup: |
-  <div class="spectrum-RadioGroup spectrum-RadioGroup--vertical">
+  <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
     <div class="spectrum-Radio">
       <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
       <span class="spectrum-Radio-checkmark"></span>

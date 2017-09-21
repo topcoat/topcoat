@@ -1,8 +1,8 @@
 ---
-name: RadioGroup - Labels Below
+name: FieldGroup - Labels Below
 description: The Spectrum radio group 'labelsBelow'
 markup: |
-  <div class="spectrum-RadioGroup spectrum-RadioGroup--labelsBelow">
+  <div class="spectrum-FieldGroup spectrum-FieldGroup--labelsBelow">
     <div class="spectrum-Radio">
       <input type="radio" name="rating" class="spectrum-Radio-input" id="radio-2">
       <span class="spectrum-Radio-checkmark"></span>
