@@ -1,0 +1,40 @@
+---
+name: Table - Standard
+description: The standard table
+markup: |
+  <table class="spectrum-Table">
+    <thead class="spectrum-Table-head">
+      <tr>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell">Column Title</th>
+      </tr>
+    </thead>
+    <tbody class="spectrum-Table-body">
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+      </tr>
+    </tbody>
+  </table>

@@ -71,7 +71,7 @@
 
   &::after {
     position: absolute;
-    top: calc(calc(var(--spectrum-checkbox-height) / 2) - calc(var(--spectrum-checkbox-checkmark-mark-size) / 2));
+    top: calc(50% - calc(var(--spectrum-checkbox-checkmark-mark-size) / 2));
     left: 1px;
     width: var(--spectrum-checkbox-checkmark-mark-size);
     height: var(--spectrum-checkbox-checkmark-mark-size);

@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12">
+  <path style="fill:var(--color,black)" d="M9,7a1,1,0,0,0-1.71-.71L6,7.59V2A1,1,0,0,0,4,2V7.59L2.71,6.29A1,1,0,1,0,1.29,7.71l3,3a1,1,0,0,0,1.41,0l3-3A1,1,0,0,0,9,7Z"/>
+</svg>

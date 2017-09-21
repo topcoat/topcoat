@@ -1,0 +1,127 @@
+.spectrum-Table-headCell {
+  color: var(--spectrum-table-head-cell-text-color-default);
+
+  &.is-sortable {
+    &:hover {
+      color: var(--spectrum-table-head-cell-text-color-hover);
+    }
+
+    &:active {
+      color: var(--spectrum-table-head-cell-text-color-active);
+    }
+  }
+
+  &.is-sorted-asc,
+  &.is-sorted-desc {
+    &::after {
+      background-image: url("embed/sort.svg" param(--color var(--spectrum-table-head-cell-sort-icon-color-default)));
+    }
+
+    &:hover {
+      &::after {
+        background-image: url("embed/sort.svg" param(--color var(--spectrum-table-head-cell-sort-icon-color-hover)));
+      }
+    }
+
+    &:active {
+      &::after {
+        background-image: url("embed/sort.svg" param(--color var(--spectrum-table-head-cell-sort-icon-color-active)));
+      }
+    }
+  }
+}
+
+.spectrum-Table-body {
+  border: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  background-color: var(--spectrum-table-body-cell-background-color-default);
+}
+
+/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
+   by putting the border on the individual cells instead. */
+tbody.spectrum-Table-body {
+  border: none;
+
+  .spectrum-Table-row {
+    border-top: none;
+  }
+
+  .spectrum-Table-cell {
+    border-top: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  }
+
+  .spectrum-Table-row .spectrum-Table-cell:first-child {
+    border-left: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  }
+
+  .spectrum-Table-row .spectrum-Table-cell:last-child {
+    border-right: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  }
+
+  .spectrum-Table-row:last-child .spectrum-Table-cell {
+    border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  }
+}
+
+.spectrum-Table-row {
+  border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  background-color: var(--spectrum-table-body-cell-background-color-default);
+
+  &:hover {
+    background-color: var(--spectrum-table-body-cell-background-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-table-body-cell-background-color-active);
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-table-body-cell-background-color-selected);
+
+    &:hover {
+      background-color: var(--spectrum-table-body-cell-background-color-selected-hover);
+    }
+  }
+}
+
+.spectrum-Table-cell {
+  color: var(--spectrum-table-body-cell-text-color-default);
+}
+
+.spectrum-Table-cell--divider {
+  border-right: 1px solid var(--spectrum-table-body-cell-border-color-default);
+}
+
+.spectrum-Table--quiet {
+  .spectrum-Table-body {
+    border-width: 1px 0;
+    background-color: var(--spectrum-table-quiet-body-cell-background-color-default);
+  }
+
+  .spectrum-Table-row {
+    background-color: var(--spectrum-table-quiet-body-cell-background-color-default);
+
+    &:hover {
+      background-color: var(--spectrum-table-quiet-body-cell-background-color-hover);
+    }
+
+    &:active {
+      background-color: var(--spectrum-table-quiet-body-cell-background-color-active);
+    }
+
+    &.is-selected {
+      background-color: var(--spectrum-table-quiet-body-cell-background-color-selected);
+
+      &:hover {
+        background-color: var(--spectrum-table-quiet-body-cell-background-color-selected-hover);
+      }
+    }
+  }
+
+  tbody.spectrum-Table-body {
+    .spectrum-Table-row .spectrum-Table-cell:first-child,
+    .spectrum-Table-row .spectrum-Table-cell:last-child {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}

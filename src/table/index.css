@@ -1,0 +1,131 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ table/table-standard.yml }}
+*/
+/* topdoc
+{{ table/table-divs.yml }}
+*/
+/* topdoc
+{{ table/table-divs-quiet.yml }}
+*/
+.spectrum-Table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.spectrum-Table-headCell {
+  text-align: left;
+  font-size: var(--spectrum-table-head-cell-font-size-default);
+  font-weight: var(--spectrum-table-head-cell-font-weight-default);
+  line-height: var(--spectrum-table-head-cell-height-default);
+  letter-spacing: var(--spectrum-table-head-cell-letter-spacing-default);
+  text-transform: uppercase;
+  padding: var(--spectrum-table-head-cell-padding-vertical-default) var(--spectrum-table-cell-padding-default);
+  transition: color var(--spectrum-transition-time) ease-in-out;
+  cursor: default;
+
+  &.is-sortable {
+    cursor: pointer;
+  }
+
+  &.is-sorted-asc,
+  &.is-sorted-desc {
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: var(--spectrum-table-head-cell-sort-icon-margin-left-default);
+      width: var(--spectrum-table-head-cell-sort-icon-width-default);
+      height: var(--spectrum-table-head-cell-sort-icon-height-default);
+      background-size: contain;
+      vertical-align: bottom;
+      transition: transform var(--spectrum-transition-time) ease-in-out;
+    }
+  }
+
+  &.is-sorted-asc {
+    &::after {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+
+.spectrum-Table-cell--alignCenter {
+  text-align: center;
+}
+
+.spectrum-Table-cell--alignRight {
+  text-align: right;
+}
+
+.spectrum-Table-body {
+  border-radius: var(--spectrum-border-radius);
+  overflow: auto;
+}
+
+/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
+   by putting it on the individual cells instead. */
+.spectrum-Table:not(.spectrum-Table--quiet) {
+  tbody.spectrum-Table-body {
+    border: none;
+    border-radius: 0;
+
+    .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
+      border-top-left-radius: var(--spectrum-border-radius);
+    }
+
+    .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
+      border-top-right-radius: var(--spectrum-border-radius);
+    }
+
+    .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
+      border-bottom-left-radius: var(--spectrum-border-radius);
+    }
+
+    .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
+      border-bottom-right-radius: var(--spectrum-border-radius);
+    }
+  }
+}
+
+.spectrum-Table-cell {
+  font-size: var(--spectrum-table-body-cell-font-size-default);
+  line-height: var(--spectrum-table-body-cell-line-height-default);
+  padding: var(--spectrum-table-body-cell-padding-vertical-default) var(--spectrum-table-cell-padding-default);
+}
+
+.spectrum-Table-row {
+  cursor: pointer;
+  transition: background-color var(--spectrum-transition-time) ease-in-out;
+}
+
+/* topdoc
+{{ table/table-quiet.yml }}
+*/
+.spectrum-Table--quiet {
+  .spectrum-Table-body {
+    border-radius: 0;
+  }
+}
+
+/* topdoc
+{{ table/table-standard-multiselect.yml }}
+*/
+
+.spectrum-Table-checkboxCell {
+  padding-right: 0;
+}
+
+.spectrum-Table-checkbox {
+  vertical-align: super;
+  line-height: 12px;
+  height: 12px;
+}
+
+/* topdoc
+{{ table/table-quiet-multiselect.yml }}
+*/
+
+/* topdoc
+{{ table/table-dividers.yml }}
+*/
