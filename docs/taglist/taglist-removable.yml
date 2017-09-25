@@ -1,0 +1,22 @@
+---
+  name: TagList - Removable
+  description: The Spectrum tag list with remove buttons
+  markup: |
+    <div class="spectrum-TagList">
+      <div class="spectrum-Tag" tabindex="-1">
+        <span class="spectrum-Tag-label">Tag 1</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-selected" tabindex="-1">
+        <span class="spectrum-Tag-label">Tag 2</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-invalid" tabindex="-1">
+        <span class="spectrum-Tag-label">Tag 2</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-disabled" tabindex="-1">
+        <span class="spectrum-Tag-label">Tag 2</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+    </div>

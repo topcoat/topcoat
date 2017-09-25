@@ -1,0 +1,26 @@
+---
+  name: TagList - Avatars
+  description: The Spectrum tag list with avatars
+  markup: |
+    <div class="spectrum-TagList">
+      <div class="spectrum-Tag" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-selected" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-invalid" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-disabled" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+    </div>

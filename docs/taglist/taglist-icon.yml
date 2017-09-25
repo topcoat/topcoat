@@ -1,0 +1,26 @@
+---
+  name: TagList - Icons
+  description: The Spectrum tag list with icons
+  markup: |
+    <div class="spectrum-TagList">
+      <div class="spectrum-Tag" tabindex="-1">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-selected" tabindex="-1">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-invalid" tabindex="-1">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag is-disabled" tabindex="-1">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+    </div>

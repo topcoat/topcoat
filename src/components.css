@@ -10,6 +10,7 @@
 @import 'radio/index.css';
 @import 'fieldgroup/index.css';
 @import 'textfield/index.css';
+@import 'inputgroup/index.css';
 @import 'tooltip/index.css';
 @import 'wait/index.css';
 @import 'toast/index.css';
@@ -34,4 +35,4 @@
 @import 'calendar/index.css';
 @import 'table/index.css';
 @import 'rating/index.css';
-@import 'inputgroup/index.css';
+@import 'taglist/index.css';

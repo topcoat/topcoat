@@ -1,0 +1,26 @@
+---
+  name: TagList - Quiet
+  description: The quiet Spectrum tag list. Should only be used with avatars or icons.
+  markup: |
+    <div class="spectrum-TagList">
+      <div class="spectrum-Tag spectrum-Tag--quiet" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag spectrum-Tag--quiet is-selected" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag spectrum-Tag--quiet is-invalid" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+      <div class="spectrum-Tag spectrum-Tag--quiet is-disabled" tabindex="-1">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" />
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+      </div>
+    </div>

@@ -11,6 +11,7 @@
 @import 'progress/skin.css';
 @import 'radio/skin.css';
 @import 'textfield/skin.css';
+@import 'inputgroup/skin.css';
 @import 'tooltip/skin.css';
 @import 'wait/skin.css';
 @import 'underlay/skin.css';
@@ -35,4 +36,4 @@
 @import 'calendar/skin.css';
 @import 'table/skin.css';
 @import 'rating/skin.css';
-@import 'inputgroup/skin.css';
+@import 'taglist/skin.css';

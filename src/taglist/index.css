@@ -1,0 +1,102 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ taglist/taglist-default.yml }}
+*/
+/* topdoc
+{{ taglist/taglist-removable.yml }}
+*/
+/* topdoc
+{{ taglist/taglist-avatar.yml }}
+*/
+/* topdoc
+{{ taglist/taglist-icon.yml }}
+*/
+/* topdoc
+{{ taglist/taglist-quiet.yml }}
+*/
+
+:root {
+  --spectrum-tag-height-default: 24px;
+  --spectrum-tag-margin-default: 8px;
+  --spectrum-tag-label-font-size-default: 12px;
+  --spectrum-tag-remove-button-size-default: 12px;
+  --spectrum-tag-avatar-size-default: 16px;
+  --spectrum-tag-icon-size-default: 16px;
+}
+
+.spectrum-TagList {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & > .spectrum-Tag {
+    margin: 0 var(--spectrum-tag-margin-default) var(--spectrum-tag-margin-default) 0;
+  }
+}
+
+.spectrum-Tag {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  border-radius: var(--spectrum-border-radius);
+  outline: none;
+  padding: calc(var(--spectrum-tag-margin-default) / 2) var(--spectrum-tag-margin-default);
+  height: var(--spectrum-tag-height-default);
+  user-select: none;
+
+  transition: border-color var(--spectrum-transition-time) ease-in-out,
+    color var(--spectrum-transition-time) ease-in-out,
+    box-shadow var(--spectrum-transition-time) ease-in-out,
+    background-color var(--spectrum-transition-time) ease-in-out;
+
+  &.is-disabled {
+    pointer-events: none;
+  }
+}
+
+.spectrum-Tag-label {
+  flex: 1;
+  font-size: var(--spectrum-tag-label-font-size-default);
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.spectrum-Tag-removeButton {
+  /* Expand the hit area of the button to be larger than the actual icon */
+  width: calc(var(--spectrum-tag-remove-button-size-default) + var(--spectrum-tag-margin-default) * 2);
+  height: var(--spectrum-tag-height-default);
+  margin-right: -var(--spectrum-tag-margin-default); /* Undo right padding on .spectrum-Tag */
+  cursor: pointer;
+
+  /* The fake background, inherited from .spectrum-Button--icon */
+  &::before {
+    top: calc(var(--spectrum-tag-height-default) / 4);
+    left: var(--spectrum-tag-margin-default);
+
+    width: var(--spectrum-tag-remove-button-size-default);
+    height: var(--spectrum-tag-remove-button-size-default);
+  }
+
+  /* The actual icon */
+  &::after {
+    background-size: var(--spectrum-tag-remove-button-size-default) var(--spectrum-tag-remove-button-size-default);
+  }
+}
+
+.spectrum-Tag-avatar {
+  height: var(--spectrum-tag-avatar-size-default);
+  margin-right: var(--spectrum-tag-margin-default);
+  border-radius: 50%;
+  user-drag: none;
+}
+
+.spectrum-Tag-icon {
+  margin-right: var(--spectrum-tag-margin-default);
+  font-size: var(--spectrum-tag-icon-size-default);
+}
