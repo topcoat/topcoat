@@ -1,0 +1,19 @@
+@import '../commons/index.css';
+
+
+.spectrum-Rating {
+  cursor: pointer;
+
+  .spectrum-Rating-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 18px;
+    float: left;
+  }
+
+  &.is-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}

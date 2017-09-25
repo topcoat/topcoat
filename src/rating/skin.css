@@ -1,0 +1,44 @@
+/* topdoc
+{{ rating/rating-default.yml }}
+*/
+.spectrum-Rating-icon {
+  background-image: url("embed/S_Star_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-default)));
+}
+
+.spectrum-Rating:not(:hover) {
+  .spectrum-Rating-icon:not(.is-active) {
+    background-image: url("embed/S_StarOutline_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-default)));
+  }
+}
+
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) {
+    background-image: url("embed/S_StarOutline_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-default)));
+}
+
+/* topdoc
+{{ rating/rating-active.yml }}
+*/
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-active {
+  background-image: url("embed/S_Star_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-default)));
+}
+
+.spectrum-Rating-icon {
+  &.is-active {
+    background-image: url("embed/S_Star_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-active)));
+  }
+}
+
+/* topdoc
+{{ rating/rating-disabled.yml }}
+*/
+.spectrum-Rating {
+  &.is-disabled {
+    .spectrum-Rating-icon {
+      background-image: url("embed/S_StarOutline_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-disabled)));
+
+      &.is-active {
+        background-image: url("embed/S_Star_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-disabled)));
+      }
+    }
+  }
+}

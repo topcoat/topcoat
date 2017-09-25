@@ -1,0 +1,10 @@
+---
+name: Rating - Default
+description: The Spectrum Rating stars
+markup: |
+  <div class="spectrum-Rating">
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+  </div>

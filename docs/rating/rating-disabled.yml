@@ -1,0 +1,13 @@
+---
+name: Rating - Disabled
+description: The 'disabled' Spectrum rating
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Rating is-disabled">
+    <span class="spectrum-Rating-icon is-active"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+  </div>

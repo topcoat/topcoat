@@ -19,6 +19,7 @@
 @import 'tablist/skin.css';
 @import 'steplist/skin.css';
 @import 'toggle/skin.css';
+@import 'list/skin.css';
 @import 'flyout/skin.css';
 @import 'dropdown/skin.css';
 @import 'toast/skin.css';
@@ -33,4 +34,4 @@
 @import 'stepper/skin.css';
 @import 'calendar/skin.css';
 @import 'table/skin.css';
-@import 'list/skin.css';
+@import 'rating/skin.css';
