@@ -1,14 +1,15 @@
 ---
 name: Flyout
-description: Spectrum Flyouts
+description: Spectrum Flyouts (uses a List for content)
 markup: |
 
-  <ul class="spectrum-Flyout is-open" role="menu">
-    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="0">Ballard</li>
-    <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Fremont</li>
-    <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Greenwood</li>
-    <hr class="spectrum-Flyout-divider">
-    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+
+  <ul class="spectrum-Flyout is-open spectrum-List" role="menu">
+    <li class="spectrum-List-option is-selected" role="menuitem" tabindex="0">Ballard</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="0">Fremont</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="0">Greenwood</li>
+    <hr class="spectrum-List-divider">
+    <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
   </ul>
 
   <div class="dummy-spacing"></div>

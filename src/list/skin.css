@@ -1,0 +1,46 @@
+/* topdoc
+{{ list/list-default.yml }}
+*/
+.spectrum-List {
+  background-color: var(--spectrum-list-background-color-default);
+  border-color: var(--spectrum-list-border-color-default);
+}
+
+.spectrum-List-option {
+  background-color: var(--spectrum-list-option-background-color-default);
+  color: var(--spectrum-list-option-text-color-default);
+
+  &:focus,
+  &.is-focused {
+    background-color: var(--spectrum-list-option-background-color-focus);
+    color: var(--spectrum-list-option-text-color-focus);
+    background-image: linear-gradient(to right, var(--spectrum-alias-focus-blue) 0%, var(--spectrum-alias-focus-blue) 2px, transparent 2px, transparent 100%);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-list-option-background-color-hover);
+    color: var(--spectrum-list-option-text-color-hover);
+  }
+
+  &.is-selected {
+    color: var(--spectrum-list-option-text-color-selected);
+    &::after {
+      background-image: url("./embed/Check.svg" param(--color var(--spectrum-semantic-informative-color-icon)));
+    }
+  }
+
+  &:active {
+    background-color: var(--spectrum-list-option-background-color-active);
+  }
+
+  &.is-disabled {
+    background-color: var(--spectrum-list-option-background-color-disabled);
+    background-image: none;
+    color: var(--spectrum-list-option-text-color-disabled);
+    cursor: default;
+  }
+}
+
+.spectrum-List-divider {
+  background-color: var(--spectrum-list-divider-color-default);
+}

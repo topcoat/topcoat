@@ -2,7 +2,6 @@
 @import '../commons/overlay.css';
 
 :root {
-  --spectrum-popover-animation-distance: 4px;
   --spectrum-popover-target-offset: 13px;
   --spectrum-popover-padding: 30px;
   --spectrum-popover-min-width: 270px;
@@ -60,7 +59,7 @@
 .spectrum-Popover--left {
   margin-right: var(--spectrum-popover-target-offset);
   &.is-open {
-    left: calc(-1 * var(--spectrum-popover-animation-distance));
+    @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Popover-tip {
     right: -18px;
@@ -74,7 +73,7 @@
 .spectrum-Popover--right {
   margin-left: var(--spectrum-popover-target-offset);
   &.is-open {
-    left: var(--spectrum-popover-animation-distance);
+    @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Popover-tip {
     left: -18px;
@@ -98,7 +97,7 @@
 .spectrum-Popover--bottom {
   margin-top: var(--spectrum-popover-target-offset);
   &.is-open {
-    top: var(--spectrum-popover-animation-distance);
+    @inherit: %spectrum-overlay--bottom--open;
   }
   .spectrum-Popover-tip {
     top: -13px;
@@ -109,10 +108,10 @@
 /* topdoc
 {{ popover/popover-top.yml }}
 */
-.spectrum-Popover--top{
+.spectrum-Popover--top {
   margin-bottom: var(--spectrum-popover-target-offset);
   &.is-open {
-    top: calc(-1 * var(--spectrum-popover-animation-distance));
+    @inherit: %spectrum-overlay--top--open;
   }
   .spectrum-Popover-tip {
     bottom: -13px;

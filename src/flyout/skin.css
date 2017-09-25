@@ -2,52 +2,6 @@
 {{ flyout/flyout-default.yml }}
 */
 .spectrum-Flyout {
-  background-color: var(--spectrum-flyout-background-color-default);
   border-color: var(--spectrum-flyout-border-color-default);
   box-shadow: 0 0 3px var(--spectrum-flyout-shadow-color-default);
-}
-
-.spectrum-Flyout-option {
-  background-color: var(--spectrum-flyout-option-background-color-default);
-  color: var(--spectrum-flyout-option-text-color-default);
-
-  &:focus {
-    background-color: var(--spectrum-flyout-option-background-color-focus);
-    color: var(--spectrum-flyout-option-text-color-focus);
-    background-image: linear-gradient(to right, var(--spectrum-alias-focus-blue) 0%, var(--spectrum-alias-focus-blue) 2px, transparent 2px, transparent 100%);
-
-
-    &.is-selected {
-      background-color: var(--spectrum-flyout-option-background-color-focus);
-      color: var(--spectrum-flyout-option-text-color-selected);
-      background-image: linear-gradient(to right, var(--spectrum-alias-focus-blue) 0%, var(--spectrum-alias-focus-blue) 2px, transparent 2px, transparent 100%);
-    }
-  }
-
-  &:hover {
-    background-color: var(--spectrum-flyout-option-background-color-hover);
-    color: var(--spectrum-flyout-option-text-color-hover);
-
-    &.is-selected {
-      background-color: var(--spectrum-flyout-option-background-color-hover);
-      color: var(--spectrum-flyout-option-text-color-selected);
-    }
-  }
-
-  &.is-selected {
-    background-color: var(--spectrum-flyout-option-background-color-selected);
-    color: var(--spectrum-flyout-option-text-color-selected);
-    &::after {
-      background-image: url("../checkbox/embed/Check.svg" param(--color var(--spectrum-semantic-informative-color-icon)));
-    }
-  }
-
-  &.is-disabled {
-    background-color: var(--spectrum-flyout-option-background-color-disabled);
-    color: var(--spectrum-flyout-option-text-color-disabled);
-  }
-}
-
-.spectrum-Flyout-divider {
-  background-color: var(--spectrum-flyout-divider-color-default);
 }

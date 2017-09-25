@@ -30,7 +30,7 @@
   }
 }
 
-.spectrum-Dropdown-flyout {
+.spectrum-List.spectrum-Dropdown-flyout {
   min-width: 100%;
   max-height: var(--spectrum-flyout-max-height-default);
 
