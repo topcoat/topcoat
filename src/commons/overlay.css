@@ -29,7 +29,7 @@
 }
 
 %spectrum-overlay--top--open {
-  transform: translateY(-1 * var(--spectrum-overlay-animation-distance));
+  transform: translateY(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
 
 %spectrum-overlay--right--open {
@@ -37,5 +37,5 @@
 }
 
 %spectrum-overlay--left--open {
-  transform: translateX(-1 * var(--spectrum-overlay-animation-distance));
+  transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
