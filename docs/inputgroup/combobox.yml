@@ -1,0 +1,26 @@
+name: Combo Box
+description: A combo box uses the input group component to display a field with a button next to it
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input" disabled>
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input is-invalid">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>

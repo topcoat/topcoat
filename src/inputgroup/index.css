@@ -1,0 +1,35 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ inputgroup/combobox.yml }}
+*/
+/* topdoc
+{{ inputgroup/combobox-quiet.yml }}
+*/
+
+.spectrum-InputGroup {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-width: var(--spectrum-component-single-line-width);
+}
+
+.spectrum-InputGroup-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+  flex: 1;
+}
+
+.spectrum-InputGroup-button {
+  padding: 0;
+  width: 34px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-InputGroup--quiet {
+  .spectrum-InputGroup-button {
+    border-bottom: 1px solid;
+  }
+}

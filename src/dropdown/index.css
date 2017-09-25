@@ -5,37 +5,14 @@
 */
 .spectrum-Dropdown {
   position: relative;
-  box-sizing: border-box;
-  transition: border-color var(--spectrum-transition-time);
-  border-radius: var(--spectrum-border-radius);
-  font-size: var(--spectrum-dropdown-font-size-default);
-  cursor: pointer;
   display: inline-block;
-  min-width: 64px;
-  outline: none;
-
-  &.is-disabled {
-    border-width: 0;
-
-    .spectrum-Dropdown-trigger {
-      border-width: 0;
-      cursor: default;
-    }
-  }
-
-  &.is-open {
-    .spectrum-Dropdown-trigger {
-      border: 1px solid;
-    }
-  }
+  min-width: var(--spectrum-component-single-line-width);
 }
 
 .spectrum-List.spectrum-Dropdown-flyout {
   min-width: 100%;
   max-height: var(--spectrum-flyout-max-height-default);
-
   margin-top: var(--spectrum-dropdown-flyout-margin-default);
-
   overflow-y: auto;
 
   &.is-open {
@@ -46,23 +23,7 @@
 
 .spectrum-Dropdown-trigger {
   position: relative;
-
   width: 100%;
-  height: var(--spectrum-dropdown-height-default);
-
-  margin: 0;
-  padding: 0 var(--spectrum-dropdown-padding-default);
-
-  border: 1px solid;
-  border-radius: var(--spectrum-border-radius);
-
-  transition: background-color var(--spectrum-transition-time);
-
-  font-family: inherit;
-  font-style: italic;
-
-  cursor: pointer;
-  outline: none;
 
   .spectrum-Dropdown-trigger-container {
     height: 100%;
@@ -76,6 +37,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &.is-placeholder {
+      font-style: italic;
+    }
   }
 }
 
@@ -85,9 +50,11 @@
   }
 
   .spectrum-Dropdown-open-icon {
+    display: inline-block;
     position: relative;
     width: 12px;
     height: 18px;
+    vertical-align: top;
 
     &::after {
       position: absolute;
@@ -110,6 +77,12 @@
 /* topdoc
 {{ dropdown/dropdown-quiet.yml }}
 */
+.spectrum-Dropdown--quiet {
+  .spectrum-Dropdown-trigger {
+    margin: 0 var(--spectrum-dropdown-padding-default);
+    width: calc(100% - var(--spectrum-dropdown-padding-default) * 2);
+  }
+}
 
 /* topdoc
 {{ dropdown/dropdown-invalid.yml }}

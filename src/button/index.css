@@ -191,3 +191,47 @@
     z-index: 1;
   }
 }
+
+.spectrum-Button--dropdown,
+.spectrum-Button--quiet--dropdown {
+  height: var(--spectrum-dropdown-height-default);
+
+  font-family: inherit;
+  font-weight: normal;
+  font-size: var(--spectrum-dropdown-font-size-default);
+  line-height: normal;
+  -webkit-font-smoothing: initial;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.spectrum-Button--dropdown {
+  margin: 0;
+  padding: 0 var(--spectrum-dropdown-padding-default);
+
+  border: 1px solid;
+  border-radius: var(--spectrum-border-radius);
+
+  transition: background-color var(--spectrum-transition-time),
+    box-shadow var(--spectrum-transition-time),
+    border-color var(--spectrum-transition-time);
+
+  &:disabled,
+  &.is-disabled {
+    border-width: 0;
+    cursor: default;
+  }
+
+  &.is-open {
+    border: 1px solid;
+  }
+}
+
+.spectrum-Button--quiet--dropdown {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+}
