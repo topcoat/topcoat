@@ -1,22 +1,18 @@
 ---
   name: TagList - Removable
-  description: The Spectrum tag list with remove buttons
+  description: An editable taglist.
   markup: |
-    <div class="spectrum-TagList">
-      <div class="spectrum-Tag" tabindex="-1">
+    <div class="spectrum-TagList" role="list" aria-label="Tags">
+      <div class="spectrum-Tag" role="listitem">
         <span class="spectrum-Tag-label">Tag 1</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1"></button>
       </div>
-      <div class="spectrum-Tag is-selected" tabindex="-1">
+      <div class="spectrum-Tag is-invalid" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" tabindex="-1">
+      <div class="spectrum-Tag is-disabled" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
-      </div>
-      <div class="spectrum-Tag is-disabled" tabindex="-1">
-        <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" disabled></button>
       </div>
     </div>

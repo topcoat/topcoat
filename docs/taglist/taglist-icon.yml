@@ -2,25 +2,20 @@
   name: TagList - Icons
   description: The Spectrum tag list with icons
   markup: |
-    <div class="spectrum-TagList">
-      <div class="spectrum-Tag" tabindex="-1">
+    <div class="spectrum-TagList" role="list" aria-label="Tags">
+      <div class="spectrum-Tag" role="listitem">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
-      <div class="spectrum-Tag is-selected" tabindex="-1">
+      <div class="spectrum-Tag is-invalid" role="listitem">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" tabindex="-1">
+      <div class="spectrum-Tag is-disabled" role="listitem">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
-      </div>
-      <div class="spectrum-Tag is-disabled" tabindex="-1">
-        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
       </div>
     </div>

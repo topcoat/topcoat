@@ -1,18 +1,15 @@
 ---
   name: TagList - Default
-  description: The Spectrum tag list
+  description: A taglist with items that cannot be edited.
   markup: |
-    <div class="spectrum-TagList">
-      <div class="spectrum-Tag" tabindex="-1">
+    <div class="spectrum-TagList" role="list" aria-label="list">
+      <div class="spectrum-Tag" role="listitem">
         <span class="spectrum-Tag-label">Tag 1</span>
       </div>
-      <div class="spectrum-Tag is-selected" tabindex="-1">
+      <div class="spectrum-Tag is-invalid" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
       </div>
-      <div class="spectrum-Tag is-invalid" tabindex="-1">
-        <span class="spectrum-Tag-label">Tag 2</span>
-      </div>
-      <div class="spectrum-Tag is-disabled" tabindex="-1">
+      <div class="spectrum-Tag is-disabled" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
       </div>
     </div>

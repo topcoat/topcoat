@@ -68,8 +68,7 @@
 }
 
 .spectrum-Tag-removeButton {
-  /* Expand the hit area of the button to be larger than the actual icon */
-  width: calc(var(--spectrum-tag-remove-button-size-default) + var(--spectrum-tag-margin-default) * 2);
+  width: var(--spectrum-tag-height-default);
   height: var(--spectrum-tag-height-default);
   margin-right: -var(--spectrum-tag-margin-default); /* Undo right padding on .spectrum-Tag */
   cursor: pointer;
@@ -77,7 +76,7 @@
   /* The fake background, inherited from .spectrum-Button--icon */
   &::before {
     top: calc(var(--spectrum-tag-height-default) / 4);
-    left: var(--spectrum-tag-margin-default);
+    left: calc(var(--spectrum-tag-height-default) / 4);
 
     width: var(--spectrum-tag-remove-button-size-default);
     height: var(--spectrum-tag-remove-button-size-default);
