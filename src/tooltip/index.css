@@ -55,7 +55,7 @@
 .spectrum-Tooltip--right {
   margin-left: var(--spectrum-tooltip-target-offset);
   &.is-open {
-    left: var(--spectrum-tooltip-animation-distance);
+    @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Tooltip-tip {
     left: -6px;
@@ -66,7 +66,7 @@
 .spectrum-Tooltip--left {
   margin-right: var(--spectrum-tooltip-target-offset);
   &.is-open {
-    left:  calc(-1 * var(--spectrum-tooltip-animation-distance));
+    @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Tooltip-tip {
     right: -6px;
@@ -85,7 +85,7 @@
 .spectrum-Tooltip--bottom {
   margin-top: var(--spectrum-tooltip-target-offset);
   &.is-open {
-    top: var(--spectrum-tooltip-animation-distance);
+    @inherit: %spectrum-overlay--bottom--open;
   }
   .spectrum-Tooltip-tip {
     top: -4px;
@@ -96,7 +96,7 @@
 .spectrum-Tooltip--top {
   margin-bottom: var(--spectrum-tooltip-target-offset);
   &.is-open {
-    top: calc(-1 * var(--spectrum-tooltip-animation-distance));
+    @inherit: %spectrum-overlay--top--open;
   }
   .spectrum-Tooltip-tip {
     bottom: -4px;
