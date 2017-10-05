@@ -1,0 +1,18 @@
+---
+name: Quick Actions
+description: Spectrum quick actions (requires an icon)
+markup: |
+  <div class="spectrum-QuickActions is-open">
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline" role="img" aria-label="info"></span>
+    </button>
+  </div>
