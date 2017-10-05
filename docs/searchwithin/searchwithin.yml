@@ -1,0 +1,74 @@
+---
+name: Search Within
+description: The Spectrum search within field. Override the width of the component where necessary.
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-SearchWithin">
+    <div class="spectrum-Dropdown">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">All</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield">
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-SearchWithin" style="margin-bottom: 180px;">
+    <div class="spectrum-Dropdown is-open">
+      <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">All</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield">
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+
+    <ul class="spectrum-Flyout is-open spectrum-List" role="menu" tabindex="0" style="top: 38px; left: 0;">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">All</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Campaigns</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Audiences</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Tags</li>
+    </ul>
+  </div>
+
+  <h4>Default (Changed Selection)</h4>
+  <div class="spectrum-SearchWithin">
+    <div class="spectrum-Dropdown">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">Campaigns</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield">
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-SearchWithin">
+    <div class="spectrum-Dropdown is-disabled">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">All</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+  </div>

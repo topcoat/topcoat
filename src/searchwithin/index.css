@@ -1,0 +1,33 @@
+/* topdoc
+{{ searchwithin/searchwithin.yml }}
+*/
+
+:root {
+  --spectrum-searchwithin-width: 250px;
+}
+
+.spectrum-SearchWithin {
+  width: var(--spectrum-searchwithin-width);
+  display: inline-flex;
+  position: relative;
+
+  .spectrum-Dropdown {
+    min-width: 0;
+  }
+
+  .spectrum-Dropdown-trigger {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+  }
+
+  .spectrum-Textfield {
+    flex: 1;
+    margin-left: -1px; /* hides left border */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:hover, &:focus {
+      position: relative; /* shows left border */
+    }
+  }
+}
