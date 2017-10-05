@@ -52,7 +52,7 @@
         }
       }
 
-      &:checked + .spectrum-ToggleSwitch-content {
+      &:checked:enabled + .spectrum-ToggleSwitch-content {
         &::before {
           background-color: var(--spectrum-switch-toggle-track-color-hover);
         }
@@ -72,7 +72,7 @@
         }
       }
 
-      &:checked + .spectrum-ToggleSwitch-content {
+      &:checked:enabled + .spectrum-ToggleSwitch-content {
         &::before {
           background-color: var(--spectrum-switch-toggle-track-color-active);
         }
@@ -99,6 +99,26 @@
 
       & ~ .spectrum-ToggleSwitch-label {
         color: var(--spectrum-switch-label-text-color-disabled);
+      }
+    }
+  }
+}
+
+.spectrum-ToggleSwitch--ab {
+  .spectrum-ToggleSwitch-input, .spectrum-ToggleSwitch-input:focus {
+    &:checked + .spectrum-ToggleSwitch-content {
+      &::before {
+        background-color: var(--spectrum-switch-toggle-track-color-default);
+      }
+    }
+  }
+
+  &:hover, &:active {
+    .spectrum-ToggleSwitch-input {
+      &:checked:enabled + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-toggle-track-color-default);
+        }
       }
     }
   }

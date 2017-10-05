@@ -6,14 +6,13 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-ToggleSwitch">
+  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-0">
     <span class="spectrum-ToggleSwitch-content"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-0">Toggle A</label>
   </div>
-  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch-ab">
+  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-1" checked>
     <span class="spectrum-ToggleSwitch-content"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-1">Toggle B</label>
   </div>
-
