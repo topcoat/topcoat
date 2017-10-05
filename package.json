@@ -6,8 +6,8 @@
     "bump": "node dist/bin/dna-npm-bump-version",
     "ci-all": "npm run build",
     "release": "npm run release:stable",
-    "release:snapshot": "run-s build bump publish:snapshot",
-    "release:stable": "run-s build bump publish:stable",
+    "release:snapshot": "npm run build && npm run bump && npm run publish:snapshot",
+    "release:stable": "npm run build && npm run bump && npm run publish:stable",
     "publish:snapshot": "node dist/bin/dna-npm-publish --releaseAsType=\"snapshot\"",
     "publish:stable": "node dist/bin/dna-npm-publish --releaseAsType=\"stable\""
   },
