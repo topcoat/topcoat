@@ -16,7 +16,7 @@ gulp.task('balthazar', function(cb) {
   );
 });
 
-gulp.task('balthazar:generate', function(done) {
+gulp.task('balthazar:generate', function() {
 
   var originsPath = path.resolve('node_modules', '@spectrum', 'spectrum-origins', 'src');
   var outputPath = path.resolve('dist', 'vars');
@@ -28,13 +28,7 @@ gulp.task('balthazar:generate', function(done) {
     'type': 'css'
   };
 
-  balthazar(opts)
-    .then(result => {
-      done();
-    })
-    .catch(error => {
-      done(error);
-    });
+  return balthazar(opts);
 });
 
 gulp.task('balthazar:postprocess-dimensions', function() {
