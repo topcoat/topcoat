@@ -4,5 +4,5 @@ description: A Spectrum info tooltip is the same as default :)
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
     <span class="spectrum-Tooltip-label">Normal Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>

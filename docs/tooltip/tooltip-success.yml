@@ -4,5 +4,5 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label">Success Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>

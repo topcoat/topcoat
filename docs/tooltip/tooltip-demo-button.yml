@@ -6,7 +6,7 @@ markup: |
       Bottom
       <div class="spectrum-Tooltip spectrum-Tooltip--bottom">
         <span class="spectrum-Tooltip-label">Tooltip Bottom</span>
-        <div class="spectrum-Tooltip-tip"></div>
+        <span class="spectrum-Tooltip-tip"></span>
       </div>
   </span>
   <br>
@@ -14,7 +14,7 @@ markup: |
       Left
       <div class="spectrum-Tooltip spectrum-Tooltip--left">
           <span class="spectrum-Tooltip-label">Tooltip Left</span>
-          <div class="spectrum-Tooltip-tip"></div>
+          <span class="spectrum-Tooltip-tip"></span>
       </div>
   </span>
   <br>
@@ -22,7 +22,7 @@ markup: |
       Right
       <div class="spectrum-Tooltip spectrum-Tooltip--right">
         <span class="spectrum-Tooltip-label">Tooltip Right</span>
-        <div class="spectrum-Tooltip-tip"></div>
+        <span class="spectrum-Tooltip-tip"></span>
       </div>
   </span>
   <br>
@@ -30,6 +30,6 @@ markup: |
       Top
       <div class="spectrum-Tooltip spectrum-Tooltip--top">
         <span class="spectrum-Tooltip-label">Tooltip Top</span>
-        <div class="spectrum-Tooltip-tip"></div>
+        <span class="spectrum-Tooltip-tip"></span>
       </div>
   </span>
