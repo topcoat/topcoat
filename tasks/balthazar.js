@@ -38,7 +38,7 @@ gulp.task('balthazar:generate', function(done) {
 });
 
 gulp.task('balthazar:postprocess-dimensions', function() {
-  gulp.src('dist/vars/spectrum-light.css')
+  return gulp.src('dist/vars/spectrum-light.css')
     // Strip all colors
     .pipe(replace(/.*?(rgb\(|rgba\().*?\n/g, ''))
     .pipe(rename('spectrum-dimensions.css'))
@@ -46,7 +46,7 @@ gulp.task('balthazar:postprocess-dimensions', function() {
 });
 
 gulp.task('balthazar:postprocess-colorstops', function() {
-  gulp.src([
+  return gulp.src([
     'dist/vars/spectrum-*.css',
     '!dist/vars/spectrum-dimensions.css'
   ])
