@@ -1,5 +1,5 @@
 .spectrum-Button {
-  &:focus {
+  &:focus-ring {
     box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-primary-border-color-focus);
   }
 
@@ -24,7 +24,7 @@
   border-color: var(--spectrum-button-cta-border-color-default);
   color: var(--spectrum-button-cta-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-cta-background-color-focus);
     border-color: var(--spectrum-button-cta-border-color-focus);
     color: var(--spectrum-button-cta-text-color-focus);
@@ -58,7 +58,7 @@
   border-color: var(--spectrum-button-primary-border-color-default);
   color: var(--spectrum-button-primary-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-primary-background-color-focus);
     border-color: var(--spectrum-button-primary-border-color-focus);
     color: var(--spectrum-button-primary-text-color-focus);
@@ -92,7 +92,7 @@
   border-color: var(--spectrum-button-secondary-border-color-default);
   color: var(--spectrum-button-secondary-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-secondary-background-color-focus);
     border-color: var(--spectrum-button-secondary-border-color-focus);
     color: var(--spectrum-button-secondary-text-color-focus);
@@ -126,7 +126,7 @@
   border-color: var(--spectrum-button-warning-border-color-default);
   color: var(--spectrum-button-warning-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-warning-background-color-focus);
     border-color: var(--spectrum-button-warning-border-color-focus);
     color: var(--spectrum-button-warning-text-color-focus);
@@ -160,7 +160,7 @@
   border-color: var(--spectrum-button-quiet-primary-border-color-default);
   color: var(--spectrum-button-quiet-primary-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-quiet-primary-background-color-focus);
     border-color: var(--spectrum-button-quiet-primary-border-color-focus);
     color: var(--spectrum-button-quiet-primary-text-color-focus);
@@ -194,7 +194,7 @@
   border-color: var(--spectrum-button-quiet-secondary-border-color-default);
   color: var(--spectrum-button-quiet-secondary-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-quiet-secondary-background-color-focus);
     border-color: var(--spectrum-button-quiet-secondary-border-color-focus);
     color: var(--spectrum-button-quiet-secondary-text-color-focus);
@@ -228,7 +228,7 @@
   border-color: var(--spectrum-button-action-border-color-default);
   color: var(--spectrum-button-action-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-action-background-color-focus);
     border-color: var(--spectrum-button-action-border-color-focus);
     box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-action-border-color-focus);
@@ -266,7 +266,7 @@
   border-color: var(--spectrum-button-quiet-action-border-color-default);
   color: var(--spectrum-button-quiet-action-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-quiet-action-background-color-focus);
     border-color: var(--spectrum-button-quiet-action-border-color-focus);
     box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-quiet-action-border-color-focus);
@@ -306,7 +306,7 @@
   border-radius: var(--spectrum-button-toggle-border-corner-radius-default);
   color: var(--spectrum-button-toggle-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-toggle-background-color-focus);
     border-color: var(--spectrum-button-toggle-border-color-focus);
     color: var(--spectrum-button-toggle-text-color-focus);
@@ -337,7 +337,7 @@
     color: var(--spectrum-button-toggle-on-text-color-default);
   }
 
-  &.is-selected:focus {
+  &.is-selected:focus-ring {
     background-color: var(--spectrum-button-toggle-on-background-color-focus);
     border-color: var(--spectrum-button-toggle-on-border-color-focus);
     color: var(--spectrum-button-toggle-on-text-color-focus);
@@ -372,7 +372,7 @@
   border-color: var(--spectrum-button-quiet-warning-border-color-default);
   color: var(--spectrum-button-quiet-warning-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-quiet-warning-background-color-focus);
     border-color: var(--spectrum-button-quiet-warning-border-color-focus);
     color: var(--spectrum-button-quiet-warning-text-color-focus);
@@ -406,7 +406,7 @@
   border-color: var(--spectrum-button-logic-and-border-color-default);
   color: var(--spectrum-button-logic-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-logic-and-background-color-focus);
     border-color: var(--spectrum-button-logic-and-border-color-focus);
     color: var(--spectrum-button-logic-text-color-default);
@@ -434,7 +434,7 @@
   border-color: var(--spectrum-button-logic-or-border-color-default);
   color: var(--spectrum-button-logic-text-color-default);
 
-  &:focus {
+  &:focus-ring {
     background-color: var(--spectrum-button-logic-or-background-color-focus);
     border-color: var(--spectrum-button-logic-or-border-color-focus);
     color: var(--spectrum-button-logic-text-color-default);
@@ -460,7 +460,7 @@
 .spectrum-Button--icon {
   color: var(--spectrum-button-icon-icon-color-default);
 
-  &:focus {
+  &:focus-ring {
     color: var(--spectrum-button-icon-icon-color-focus);
   }
 
@@ -492,7 +492,7 @@
     border-color: var(--spectrum-dropdown-border-color-hover);
   }
 
-  &:focus,
+  &:focus-ring,
   &.is-focused {
     border-color: var(--spectrum-dropdown-border-color-focus);
     box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-focus);
@@ -503,7 +503,7 @@
     background-color: var(--spectrum-dropdown-background-color-open);
     border-color: var(--spectrum-dropdown-border-color-open);
 
-    &:focus,
+    &:focus-ring,
     &.is-focused {
       box-shadow: none;
     }
@@ -512,7 +512,7 @@
   &.is-invalid {
     border-color: var(--spectrum-dropdown-border-color-invalid-default);
 
-    &:focus,
+    &:focus-ring,
     &.is-focused {
       border-color: var(--spectrum-dropdown-border-color-invalid-default);
       box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-invalid-default);
@@ -524,7 +524,7 @@
     background-color: var(--spectrum-dropdown-background-color-disabled);
     color: var(--spectrum-dropdown-text-color-disabled);
 
-    &:focus {
+    &:focus-ring {
       box-shadow: none;
     }
   }
@@ -534,13 +534,13 @@
   border-color: var(--spectrum-dropdown-quiet-border-color-default);
   background-color: var(--spectrum-dropdown-quiet-background-color-default);
 
-  &:focus,
+  &:focus-ring,
   &.is-focused {
     box-shadow: 0 2px 0 0 var(--spectrum-dropdown-border-color-focus);
   }
 
   &.is-invalid {
-    &:focus,
+    &:focus-ring,
     &.is-focused {
       box-shadow: 0 2px 0 0 var(--spectrum-dropdown-border-color-invalid-default);
     }
@@ -550,7 +550,7 @@
   &.is-disabled {
     color: var(--spectrum-dropdown-text-color-disabled);
 
-    &:focus {
+    &:focus-ring {
       box-shadow: none;
     }
   }

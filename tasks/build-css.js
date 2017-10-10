@@ -23,6 +23,7 @@ var processors = [
   require('postcss-calc'),
   require('postcss-svg'),
   require('postcss-pxtorem'),
+  require('postcss-focus-ring'),
   require('autoprefixer')({
     'browsers': [
       'IE >= 10',

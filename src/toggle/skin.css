@@ -22,7 +22,7 @@
     }
   }
 
-  &:focus {
+  &:focus-ring {
     & + .spectrum-ToggleSwitch-content {
       &::after {
         border-color: var(--spectrum-switch-border-color-focus);

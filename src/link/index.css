@@ -21,7 +21,7 @@
 {{ link/link-disabled.yml }}
 */
   &.is-disabled {
-  	cursor: default;
+    cursor: default;
     pointer-events: none;
 
     &:hover,

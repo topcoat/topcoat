@@ -15,12 +15,12 @@
     border-color: var(--spectrum-switch-border-color-default);
   }
 
-  &:focus + .spectrum-Checkbox-checkmark {
+  &:focus-ring + .spectrum-Checkbox-checkmark {
     border-color: var(--spectrum-switch-border-color-focus);
     box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
   }
 
-  &:focus ~ .spectrum-Checkbox-label {
+  &:focus-ring ~ .spectrum-Checkbox-label {
     color: var(--spectrum-switch-label-text-color-focus);
   }
 }

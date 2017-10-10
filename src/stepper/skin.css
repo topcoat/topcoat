@@ -3,12 +3,18 @@
 */
 
 .spectrum-Stepper {
-  &.is-focused {
+  &.is-focused,
+  &:focus-within {
     box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
       border-color: var(--spectrum-input-border-color-focus);
+    }
+
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-input-border-color-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
     }
   }
 
@@ -27,8 +33,14 @@
       border-left-color: var(--spectrum-input-border-color-default);
     }
 
-    &.is-focused {
+    &.is-focused,
+    &:focus-within {
       box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+
+      .spectrum-Stepper-input {
+        border-left-color: var(--spectrum-input-invalid-border-color-default);
+        box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+      }
     }
   }
 }
@@ -108,12 +120,18 @@
     }
   }
 
-  &.is-focused {
+  &.is-focused,
+  &:focus-within {
     box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-focus);
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
       border-color: var(--spectrum-input-border-color-focus);
+    }
+
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-input-border-color-focus);
+      box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-focus);
     }
   }
 
@@ -124,8 +142,13 @@
       border-color: var(--spectrum-input-invalid-border-color-default);
     }
 
-    &.is-focused {
+    &.is-focused,
+    &:focus-within {
       box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+
+      .spectrum-Stepper-input {
+        box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+      }
     }
   }
 }

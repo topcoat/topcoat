@@ -21,7 +21,7 @@
     color: var(--spectrum-tablist-text-color-active);
   }
 
-  &:focus {
+  &:focus-ring {
     color: var(--spectrum-tablist-text-color-focus);
     box-shadow: 0 0 0 var(--spectrum-tablist-tab-item-border-width-default) var(--spectrum-tablist-border-color-focus);
   }
@@ -35,7 +35,7 @@
   border-color: var(--spectrum-tablist-anchored-border-color-default);
 
   .spectrum-Tab {
-    &:focus {
+    &:focus-ring {
       color: var(--spectrum-tablist-anchored-text-color-focus);
       box-shadow: initial;
 

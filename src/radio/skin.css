@@ -3,7 +3,7 @@
     border-color: var(--spectrum-switch-border-color-active);
   }
 
-  &:focus {
+  &:focus-ring {
     & + .spectrum-Radio-checkmark {
       border-color: var(--spectrum-switch-border-color-focus);
       box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
