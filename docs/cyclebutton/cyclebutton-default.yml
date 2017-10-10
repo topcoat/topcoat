@@ -1,0 +1,8 @@
+---
+name: Cycle Button - Default
+description: A Spectrum cycle button
+markup: |
+  <button class="spectrum-CycleButton">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PlayCircle spectrum-CycleButton-icon is-active"></span>
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle spectrum-CycleButton-icon"></span>
+  </button>

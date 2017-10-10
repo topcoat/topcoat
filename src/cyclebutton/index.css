@@ -1,0 +1,20 @@
+@import '../commons/index.css';
+
+.spectrum-CycleButton {
+  width: var(--spectrum-cyclebutton-button-width-default);
+  height: var(--spectrum-cyclebutton-button-height-default);
+  line-height: var(--spectrum-cyclebutton-button-height-default);
+  border-radius: var(--spectrum-cyclebutton-button-border-radius-default);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
+    outline: 0;
+  }
+}
+
+.spectrum-CycleButton-icon:not(.is-active) {
+  display: none
+}
