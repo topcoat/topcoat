@@ -61,7 +61,7 @@
     color: var(--spectrum-switch-label-text-color-disabled);
   }
 
-  &:invalid {
+  &.is-invalid {
     & + .spectrum-Checkbox-checkmark {
       border-color: var(--spectrum-switch-invalid-border-color-default);
     }
@@ -71,7 +71,7 @@
     }
   }
 
-  &:invalid:hover {
+  &.is-invalid:hover {
     & + .spectrum-Checkbox-checkmark {
       border-color: var(--spectrum-switch-invalid-border-color-hover);
     }
@@ -81,7 +81,7 @@
     }
   }
 
-  &:invalid:active {
+  &.is-invalid:active {
     & + .spectrum-Checkbox-checkmark {
       border-color: var(--spectrum-switch-invalid-border-color-active);
     }
