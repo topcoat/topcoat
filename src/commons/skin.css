@@ -7,4 +7,7 @@
   --spectrum-button-icon-icon-color-disabled: var(--spectrum-global-color-grey400);
   --spectrum-button-icon-background-color-default: transparent;
   --spectrum-button-icon-background-color-active: var(--spectrum-global-color-grey200);
+
+  /* Button */
+  --spectrum-button-border-focus-grow: 1px;
 }
