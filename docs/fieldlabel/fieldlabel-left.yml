@@ -14,21 +14,14 @@ markup: |
   <div style="margin-top: 20px;">
     <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
     <div class="spectrum-Dropdown" style="width: 195px;">
-      <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
         <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+          <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
           <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+            <span class="spectrum-Dropdown-open-icon"></span>
           </span>
         </span>
       </button>
-      <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
-        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-        <hr class="spectrum-Flyout-divider">
-        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
     </div>
   </div>
 
