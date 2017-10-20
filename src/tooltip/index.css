@@ -31,12 +31,8 @@
     @inherit: %spectrum-overlay--open;
   }
 
-  &, &.is-open {
+  & {
     pointer-events: none;
-  }
-
-  .spectrum-Link {
-    pointer-events: all;
   }
 }
 
