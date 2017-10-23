@@ -3,8 +3,7 @@
 */
 
 .spectrum-Stepper {
-  &.is-focused,
-  &:focus-within {
+  &.is-focused {
     box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
 
     .spectrum-Stepper-stepUp,
@@ -31,10 +30,14 @@
 
     .spectrum-Stepper-input {
       border-left-color: var(--spectrum-input-border-color-default);
+
+      &:focus {
+        border-color: var(--spectrum-input-invalid-border-color-default);
+        box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+      }
     }
 
-    &.is-focused,
-    &:focus-within {
+    &.is-focused {
       box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
 
       .spectrum-Stepper-input {
@@ -120,8 +123,7 @@
     }
   }
 
-  &.is-focused,
-  &:focus-within {
+  &.is-focused {
     box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-focus);
 
     .spectrum-Stepper-stepUp,
@@ -136,17 +138,34 @@
   }
 
   &.is-invalid {
-    .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown,
     .spectrum-Stepper-input {
       border-color: var(--spectrum-input-invalid-border-color-default);
+
+      &:focus {
+        border-color: var(--spectrum-input-invalid-border-color-default);
+        box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+      }
     }
 
-    &.is-focused,
-    &:focus-within {
+    .spectrum-Stepper-stepUp {
+      border-color: var(--spectrum-input-border-color-default);
+
+      &:focus {
+        border-color: var(--spectrum-input-border-color-default);
+      }
+    }
+
+    &.is-focused {
       box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
 
+      .spectrum-Stepper-stepUp,
+      .spectrum-Stepper-stepDown {
+        border-color: var(--spectrum-input-invalid-border-color-default);
+      }
+
       .spectrum-Stepper-input {
+        border-color: var(--spectrum-input-invalid-border-color-default);
         box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
       }
     }
