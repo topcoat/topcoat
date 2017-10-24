@@ -37,6 +37,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: 12px;
 
     &.is-placeholder {
       font-style: italic;
@@ -78,6 +79,8 @@
 {{ dropdown/dropdown-quiet.yml }}
 */
 .spectrum-Dropdown--quiet {
+  min-width: 0;
+
   .spectrum-Dropdown-trigger {
     margin: 0 var(--spectrum-dropdown-padding-default);
     width: calc(100% - var(--spectrum-dropdown-padding-default) * 2);
