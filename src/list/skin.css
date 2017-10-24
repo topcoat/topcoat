@@ -29,6 +29,7 @@
     }
   }
 
+  .is-active,
   &:active {
     background-color: var(--spectrum-list-option-background-color-active);
   }
