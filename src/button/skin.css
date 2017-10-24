@@ -264,7 +264,6 @@
 .spectrum-Button--quiet--action {
   background-color: var(--spectrum-button-quiet-action-background-color-default);
   color: var(--spectrum-button-quiet-action-text-color-default);
-  border-width: 0;
 
   &:focus-ring {
     background-color: var(--spectrum-button-quiet-action-background-color-focus);

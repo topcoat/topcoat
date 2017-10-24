@@ -89,7 +89,7 @@
 .spectrum-Button--quiet--action {
   font-size: var(--spectrum-button-quiet-action-font-size-default);
   font-weight: var(--spectrum-button-quiet-action-font-weight-default);
-  border-width: var(--spectrum-button-quiet-action-border-size-default);
+  border-width: 0;
   border-radius: var(--spectrum-button-quiet-action-border-corner-radius-default);
 }
 
