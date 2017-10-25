@@ -1,0 +1,79 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ pagination/pagination-explicit.yml }}
+*/
+.spectrum-Pagination-input {
+  width: var(--spectrum-pagination-input-width-default);
+  min-width: var(--spectrum-pagination-input-width-default);
+}
+
+.spectrum-Pagination-counter {
+  display: inline-block;
+  height: var(--spectrum-pagination-counter-height-default);
+  line-height: var(--spectrum-pagination-counter-height-default);
+  margin-left: var(--spectrum-pagination-counter-margin-left-default);
+}
+
+/* topdoc
+{{ pagination/pagination-listing.yml }}
+*/
+.spectrum-Pagination-directionButton {
+  font-size: var(--spectrum-pagination-direction-button-font-size-default);
+  font-weight: bold;
+}
+
+.spectrum-Pagination-pageButton {
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--spectrum-pagination-page-button-width-default);
+  height: var(--spectrum-pagination-page-button-width-default);
+  line-height: var(--spectrum-pagination-page-button-line-height-default);
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 var(--spectrum-pagination-page-button-margin-horizontal-default);
+  border: var(--spectrum-pagination-page-button-border-width-default) solid transparent;
+  outline: none;
+  transition: background-color var(--spectrum-transition-time) ease-in-out,
+              color var(--spectrum-transition-time) ease-in-out,
+              border-color var(--spectrum-transition-time) ease-in-out;
+}
+
+/* topdoc
+{{ pagination/pagination-button-style-cta.yml }}
+*/
+.spectrum-Pagination-prevButton {
+  border-radius: var(--spectrum-button-border-corner-radius-default) 0 0 var(--spectrum-button-border-corner-radius-default);
+  float: left; /* removes DOM whitespace */
+  padding-right: calc(var(--spectrum-padding) / 2);
+  padding-left: calc(var(--spectrum-padding) / 2);
+  border-right: 0;
+}
+
+.spectrum-Pagination-nextButton {
+  border-radius: 0 var(--spectrum-button-border-corner-radius-default) var(--spectrum-button-border-corner-radius-default) 0;
+  margin-left: 0 !important;
+
+  /* CTA is special and doesn't have a border between the buttons */
+  &.spectrum-Button--cta {
+    border-left: 0;
+    margin-left: var(--spectrum-button-border-size-default) !important;
+  }
+}
+
+.spectrum-Pagination-prevButton,
+.spectrum-Pagination-nextButton {
+  &:focus {
+    /* this also triggers 'z-index: auto' and stays on top */
+    position: relative;
+  }
+}
+
+/* topdoc
+{{ pagination/pagination-button-style-primary.yml }}
+*/
+
+/* topdoc
+{{ pagination/pagination-button-style-secondary.yml }}
+*/

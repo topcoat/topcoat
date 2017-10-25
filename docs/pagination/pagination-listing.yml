@@ -1,0 +1,18 @@
+---
+name: Pagination - Listing
+description: A Spectrum 'listing' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">1</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton is-active">2</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">3</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">4</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">5</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">6</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">7</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">8</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">...</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">24</span>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Next</button>
+  </nav>

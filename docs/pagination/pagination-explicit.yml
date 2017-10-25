@@ -1,0 +1,10 @@
+---
+name: Pagination - Explicit
+description: A Spectrum 'explicit' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--icon"><span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span></button>
+    <input type="text" name="field" value="2" class="spectrum-Textfield spectrum-Pagination-input">
+    <span class="spectrum-Body--secondary spectrum-Pagination-counter">of 89 pages</span>
+    <button class="spectrum-Button spectrum-Button--icon"><span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span></button>
+  </nav>

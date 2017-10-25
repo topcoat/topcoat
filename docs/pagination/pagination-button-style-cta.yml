@@ -1,0 +1,13 @@
+---
+name: Pagination - Button Style CTA
+description: A Spectrum 'button style call-to-action' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-prevButton">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span>
+    </button>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-nextButton">
+      Next
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span>
+    </button>
+  </nav>
