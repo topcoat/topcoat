@@ -1,0 +1,8 @@
+---
+name: Banner - Info
+description: The Spectrum banner 'info'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--info">
+    <div class="spectrum-Banner-header">Most Popular</div>
+    <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+  </div>

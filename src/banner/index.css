@@ -1,0 +1,34 @@
+@import '../commons/index.css';
+
+.spectrum-Banner {
+  display: inline-block;
+  border-radius: var(--spectrum-banner-border-radius-default);
+  padding: var(--spectrum-banner-padding-vertical-default) var(--spectrum-banner-padding-horizontal-default);
+  font-size: var(--spectrum-banner-font-size-default);
+  line-height: var(--spectrum-banner-line-height-default);
+}
+
+.spectrum-Banner-header {
+  font-weight: bold;
+}
+
+/* topdoc
+{{ banner/banner-info.yml }}
+*/
+
+/* topdoc
+{{ banner/banner-warning.yml }}
+*/
+
+/* topdoc
+{{ banner/banner-error.yml }}
+*/
+
+/* topdoc
+{{ banner/banner-corner.yml }}
+*/
+.spectrum-Banner--corner {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}

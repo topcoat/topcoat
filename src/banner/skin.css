@@ -1,0 +1,15 @@
+.spectrum-Banner {
+  color: var(--spectrum-banner-text-color-default);
+}
+
+.spectrum-Banner--info {
+  background-color: var(--spectrum-banner-info-background-color-default);
+}
+
+.spectrum-Banner--warning {
+  background-color: var(--spectrum-banner-warning-background-color-default);
+}
+
+.spectrum-Banner--error {
+  background-color: var(--spectrum-banner-error-background-color-default);
+}
