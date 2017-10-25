@@ -1,0 +1,6 @@
+---
+name: Rule - Sub Section
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Sub Section (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule spectrum-Rule--subsection">

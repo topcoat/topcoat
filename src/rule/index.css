@@ -1,0 +1,39 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ rule/rule-default.yml }}
+*/
+.spectrum-Rule {
+  border-style: solid;
+  border-width: var(--spectrum-rule-border-width-default);
+  border-radius: var(--spectrum-rule-border-width-default);
+}
+
+/* topdoc
+{{ rule/rule-subsection.yml }}
+*/
+.spectrum-Rule--subsection {
+  border-width: var(--spectrum-rule-subsection-border-width-default);
+  border-radius: var(--spectrum-rule-subsection-border-width-default);
+}
+
+/* topdoc
+{{ rule/rule-subsection2.yml }}
+*/
+.spectrum-Rule--subsection2 {
+  border-width: var(--spectrum-rule-subsection2-border-width-default);
+  border-radius: var(--spectrum-rule-subsection2-border-width-default);
+}
+
+/* topdoc
+{{ rule/rule-panel.yml }}
+*/
+.spectrum-Rule--panel {
+  box-sizing: border-box;
+  display: inline-block;
+  border-width: var(--spectrum-rule-panel-border-width-default);
+  height: var(--spectrum-rule-panel-height-default);
+  vertical-align: text-bottom;
+  margin: 0 var(--spectrum-rule-panel-margin-horizontal-default);
+  border-radius: 0;
+}

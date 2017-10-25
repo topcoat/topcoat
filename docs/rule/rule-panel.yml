@@ -1,0 +1,9 @@
+---
+name: Rule - Panel
+description:
+markup: |
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle"></span>
+  <span class="spectrum-Rule spectrum-Rule--panel"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment"></span>
