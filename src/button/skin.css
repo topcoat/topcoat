@@ -295,35 +295,35 @@
 {{ button/button-toggle.yml }}
 */
 .spectrum-Button--toggle {
-  background-color: var(--spectrum-button-toggle-background-color-default);
-  border-color: var(--spectrum-button-toggle-border-color-default);
-  border-width: var(--spectrum-button-toggle-border-size-default);
-  border-radius: var(--spectrum-button-toggle-border-corner-radius-default);
-  color: var(--spectrum-button-toggle-text-color-default);
+  background-color: var(--spectrum-button-toggle-off-background-color-default);
+  border-color: var(--spectrum-button-toggle-off-border-color-default);
+  border-width: var(--spectrum-button-toggle-off-border-size-default);
+  border-radius: var(--spectrum-button-toggle-off-border-corner-radius-default);
+  color: var(--spectrum-button-toggle-off-text-color-default);
 
   &:focus-ring {
-    background-color: var(--spectrum-button-toggle-background-color-focus);
-    border-color: var(--spectrum-button-toggle-border-color-focus);
-    color: var(--spectrum-button-toggle-text-color-focus);
+    background-color: var(--spectrum-button-toggle-off-background-color-focus);
+    border-color: var(--spectrum-button-toggle-off-border-color-focus);
+    color: var(--spectrum-button-toggle-off-text-color-focus);
   }
 
   &:hover {
-    background-color: var(--spectrum-button-toggle-background-color-hover);
-    border-color: var(--spectrum-button-toggle-border-color-hover);
-    color: var(--spectrum-button-toggle-text-color-hover);
+    background-color: var(--spectrum-button-toggle-off-background-color-hover);
+    border-color: var(--spectrum-button-toggle-off-border-color-hover);
+    color: var(--spectrum-button-toggle-off-text-color-hover);
   }
 
   &:active {
-    background-color: var(--spectrum-button-toggle-background-color-active);
-    border-color: var(--spectrum-button-toggle-border-color-active);
-    color: var(--spectrum-button-toggle-text-color-active);
+    background-color: var(--spectrum-button-toggle-off-background-color-active);
+    border-color: var(--spectrum-button-toggle-off-border-color-active);
+    color: var(--spectrum-button-toggle-off-text-color-active);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-toggle-background-color-disabled);
-    border-color: var(--spectrum-button-toggle-border-color-disabled);
-    color: var(--spectrum-button-toggle-text-color-disabled);
+    background-color: var(--spectrum-button-toggle-off-background-color-disabled);
+    border-color: var(--spectrum-button-toggle-off-border-color-disabled);
+    color: var(--spectrum-button-toggle-off-text-color-disabled);
   }
 
   &.is-selected {

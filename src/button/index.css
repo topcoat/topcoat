@@ -98,8 +98,8 @@
 }
 
 .spectrum-Button--toggle {
-  font-size: var(--spectrum-button-toggle-font-size-default);
-  font-weight: var(--spectrum-button-toggle-font-weight-default);
+  font-size: var(--spectrum-button-toggle-off-font-size-default);
+  font-weight: var(--spectrum-button-toggle-off-font-weight-default);
 }
 
 .spectrum-Button--and,
