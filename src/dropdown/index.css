@@ -14,11 +14,6 @@
   max-height: var(--spectrum-flyout-max-height-default);
   margin-top: var(--spectrum-dropdown-flyout-margin-default);
   overflow-y: auto;
-
-  &.is-open {
-    /* Animate downward */
-    transform: translateY(4px);
-  }
 }
 
 .spectrum-Dropdown-trigger {

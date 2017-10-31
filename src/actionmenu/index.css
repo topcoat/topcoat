@@ -33,9 +33,4 @@
 
 .spectrum-ActionMenu-flyout {
   margin-top: 4px;
-
-  &.is-open {
-    /* Animate downward when opened */
-    transform: translateY(4px);
-  }
 }
