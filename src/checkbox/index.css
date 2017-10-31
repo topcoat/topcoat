@@ -76,10 +76,12 @@
 
   &::after {
     position: absolute;
-    top: calc(50% - calc(var(--spectrum-checkbox-checkmark-mark-size) / 2));
+    top: 50%;
     left: 1px;
     width: var(--spectrum-checkbox-checkmark-mark-size);
     height: var(--spectrum-checkbox-checkmark-mark-size);
+
+    margin-top: calc(var(--spectrum-checkbox-checkmark-mark-size) / -2);
 
     background-repeat: no-repeat;
     background-position: center;
