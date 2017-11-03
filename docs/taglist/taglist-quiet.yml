@@ -4,17 +4,17 @@
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
       <div class="spectrum-Tag spectrum-Tag--quiet" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
       <div class="spectrum-Tag spectrum-Tag--quiet is-invalid" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
       <div class="spectrum-Tag spectrum-Tag--quiet is-disabled" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
       </div>
