@@ -18,7 +18,7 @@
   border-radius: var(--spectrum-button-border-corner-radius-default);
 
   height: var(--spectrum-button-height-default);
-  padding: 0 calc(var(--spectrum-button-border-corner-radius-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
+  padding: 0 calc(var(--spectrum-button-padding-x-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
 
   font-family: inherit;
   font-size: var(--spectrum-button-label-font-size-default);
