@@ -3,7 +3,6 @@
 :root {
   --spectrum-alert-header-height: 38px;
   --spectrum-alert-corner-radius: 4px;
-  --spectrum-alert-min-width: calc(var(--spectrum-component-single-line-width) * 2);
 }
 
 /* topdoc
@@ -14,7 +13,7 @@
 
   display: inline-block;
   box-sizing: border-box;
-  min-width: var(--spectrum-alert-min-width);
+  min-width: var(--spectrum-alert-min-width-default);
   min-height: var(--spectrum-alert-header-height);
   margin: 8px 0;
   padding: var(--spectrum-alert-padding-y-default) var(--spectrum-alert-padding-x-default);
