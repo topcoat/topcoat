@@ -30,7 +30,7 @@ gulp.task('build-docs:inject-topdoc', function() {
 
 gulp.task('build-docs:copy-site-resources', function() {
   gulp.src([
-    'node_modules/@spectrum/site-resources/lib/resources/**'
+    'tasks/resources/docs/**'
   ])
     .pipe(gulp.dest('dist/docs'));
 });

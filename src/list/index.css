@@ -57,8 +57,7 @@
 
 .spectrum-List-divider {
   height: var(--spectrum-list-divider-size-default);
-  margin: var(--spectrum-list-divider-padding-default) auto;
+  margin: var(--spectrum-list-divider-padding-default) var(--spectrum-list-option-padding-default);
   padding: 0 0;
   border: none;
-  width: 100%;
 }
