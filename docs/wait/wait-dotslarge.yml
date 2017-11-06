@@ -1,5 +1,0 @@
----
-name: Wait - Dots - Large
-description: A Spectrum wait of 'dots' type in the ;arge size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>

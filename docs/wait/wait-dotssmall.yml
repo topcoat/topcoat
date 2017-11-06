@@ -1,5 +1,0 @@
----
-name: Wait - Dots - Small
-description: A Spectrum wait of 'dots' type in the default (small) size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots"></span>

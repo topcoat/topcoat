@@ -1,0 +1,5 @@
+---
+name: Loader - Round - Large
+description: A Spectrum Loader of default type (round) in large size
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--large"></span>
