@@ -277,11 +277,16 @@
     color: var(--spectrum-button-quiet-action-text-color-hover);
   }
 
-  &:active,
-  &.is-selected {
+  &:active {
     background-color: var(--spectrum-button-quiet-action-background-color-active);
     box-shadow: none;
     color: var(--spectrum-button-quiet-action-text-color-active);
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-button-quiet-action-background-color-selected);
+    box-shadow: none;
+    color: var(--spectrum-button-quiet-action-text-color-selected);
   }
 
   &:disabled,
