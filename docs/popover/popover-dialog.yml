@@ -40,3 +40,23 @@ markup: |
     </div>
     <div class="spectrum-Popover-tip"></div>
   </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right spectrum-Dialog--error is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Long Error Message With Much Text</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
