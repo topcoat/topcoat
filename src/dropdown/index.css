@@ -7,14 +7,15 @@
   position: relative;
   display: inline-block;
   min-width: var(--spectrum-component-single-line-width);
+
+  .spectrum-Popover {
+    min-width: 100%;
+    max-height: var(--spectrum-flyout-max-height-default);
+    margin-top: var(--spectrum-dropdown-flyout-margin-default);
+    overflow-y: auto;
+  }
 }
 
-.spectrum-List.spectrum-Dropdown-flyout {
-  min-width: 100%;
-  max-height: var(--spectrum-flyout-max-height-default);
-  margin-top: var(--spectrum-dropdown-flyout-margin-default);
-  overflow-y: auto;
-}
 
 .spectrum-Dropdown-trigger {
   position: relative;

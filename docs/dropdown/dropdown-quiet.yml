@@ -2,7 +2,7 @@ name: Dropdown - Quiet
 description: A Spectrum 'quiet' dropdown.
 markup: |
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
@@ -11,17 +11,10 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--quiet--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Ballard</span>
@@ -30,18 +23,19 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
   </div>
-  <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled">
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
@@ -50,11 +44,4 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
