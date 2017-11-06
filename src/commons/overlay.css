@@ -1,5 +1,5 @@
 :root {
-  --spectrum-overlay-animation-distance: 4px;
+  --spectrum-overlay-animation-distance: 6px;
 }
 
 %spectrum-overlay {
