@@ -6,8 +6,14 @@ modifiers:
   ':focus': Focused
   ':active': Active state
 markup: |
-  <div class="spectrum-Breadcrumb-title">
-    <span class="spectrum-Breadcrumb">Nike</span>
-    <span class="spectrum-Breadcrumb">Mens</span>
-    <span class="spectrum-Breadcrumb">Summer 2016</span>
-  </div>
+  <nav>
+    <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" href="#">Home</a></li>
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Playground</a></li>
+      <li class="spectrum-Breadcrumb">
+        <h1 class="spectrum-Heading--page-title">
+          <a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Sliders</a>
+        </h1>
+      </li>
+    </ul>
+  </nav>
