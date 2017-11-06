@@ -271,6 +271,10 @@
     color: var(--spectrum-button-quiet-action-text-color-focus);
   }
 
+  &.is-selected {
+    color: var(--spectrum-button-quiet-action-text-color-selected);
+  }
+
   &:hover {
     background-color: var(--spectrum-button-quiet-action-background-color-hover);
     box-shadow: none;
@@ -283,10 +287,9 @@
     color: var(--spectrum-button-quiet-action-text-color-active);
   }
 
+  /* Make sure background color overrides hover and active */
   &.is-selected {
     background-color: var(--spectrum-button-quiet-action-background-color-selected);
-    box-shadow: none;
-    color: var(--spectrum-button-quiet-action-text-color-selected);
   }
 
   &:disabled,
