@@ -6,10 +6,10 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">More Actions</button>
 
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout is-open" role="menu">
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-ActionMenu-flyout is-open" role="menu">
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
 
@@ -18,10 +18,10 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected"></button>
 
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout is-open" role="menu">
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-ActionMenu-flyout is-open" role="menu">
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
 
@@ -30,10 +30,10 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
 
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout" role="menu">
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-ActionMenu-flyout" role="menu">
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
 

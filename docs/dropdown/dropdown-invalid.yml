@@ -12,12 +12,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout" role="menu" tabindex="0">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -32,12 +32,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -54,12 +54,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList" role="menu" tabindex="0">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -74,12 +74,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
