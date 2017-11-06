@@ -1,14 +1,14 @@
 ---
 name: Flyout
-description: Spectrum Flyouts use the SelectList to provide a menu.
+description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.
 markup: |
 
-  <ul class="spectrum-Flyout is-open spectrum-SelectList" role="menu">
-    <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="0">Ballard</li>
-    <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Fremont</li>
-    <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Greenwood</li>
-    <hr class="spectrum-SelectList-divider">
-    <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
-  </ul>
-
-  <div class="dummy-spacing"></div>
+  <div class="spectrum-Popover is-open">
+    <ul class="spectrum-SelectList" role="menu">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="0">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+    </ul>
+  </div>

@@ -2,7 +2,7 @@ name: Dropdown - Invalid
 description: A Spectrum 'invalid' dropdown element. This is also a good example of how to use a custom icon.
 markup: |
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown is-invalid">
+  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
@@ -12,18 +12,33 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-open is-invalid">
-    <button class="spectrum-Button spectrum-Button--dropdown is-selected is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
+    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">Ballard</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
+        </span>
+      </span>
+    </button>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
+    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
@@ -32,55 +47,4 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
-
-  <div class="dummy-spacing"></div>
-
-  <h4>Closed</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
-      </span>
-    </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList" role="menu" tabindex="0">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
-  </div>
-
-  <h4>Open</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open is-invalid">
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-selected is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
-      </span>
-    </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-SelectList spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
-  </div>
-
-  <div class="dummy-spacing"></div>

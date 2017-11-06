@@ -33,12 +33,14 @@ markup: |
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
 
-    <ul class="spectrum-Flyout is-open spectrum-SelectList" role="menu" tabindex="0" style="top: 38px; left: 0;">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">All</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Campaigns</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Audiences</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Tags</li>
-    </ul>
+    <div class="spectrum-Popover is-open" style="position: absolute; top: 38px; left: 0;">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">All</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Campaigns</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Audiences</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Tags</li>
+      </ul>
+    </div>
   </div>
 
   <h4>Default (Changed Selection)</h4>

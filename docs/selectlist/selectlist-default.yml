@@ -1,6 +1,6 @@
 ---
 name: SelectList
-description: A select list that can be used in a flyout, popover, or anywhere else.
+description: A list of options that can be used in a Popover.
 markup: |
 
   <ul class="spectrum-SelectList" role="listbox">
