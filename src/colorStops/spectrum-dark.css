@@ -4,7 +4,7 @@
 @import '../commons/skin.css';
 
 :root {
-  --spectrum-wait-spinner-medium-sprite-url: 'embed/Spinner_Dark_32_Sprite.svg';
-  --spectrum-wait-spinner-large-sprite-url: 'embed/Spinner_Dark_64_Sprite.svg';
-  --spectrum-wait-dots-sprite-url: 'embed/Dots_Dark.svg';
+  --spectrum-loader-spinner-sprite-url: 'embed/Loader_Dark_16_Sprite.svg';
+  --spectrum-loader-spinner-medium-sprite-url: 'embed/Loader_Dark_32_Sprite.svg';
+  --spectrum-loader-spinner-large-sprite-url: 'embed/Loader_Dark_64_Sprite.svg';
 }

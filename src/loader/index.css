@@ -1,0 +1,70 @@
+@import '../commons/index.css';
+@import 'animation.css';
+
+:root {
+  --spectrum-loader-spinner-small-height: 16px;
+  --spectrum-loader-spinner-small-width: 16px;
+  --spectrum-loader-spinner-medium-height: 32px;
+  --spectrum-loader-spinner-medium-width: 32px;
+  --spectrum-loader-spinner-large-height: 64px;
+  --spectrum-loader-spinner-large-width: 64px;
+}
+
+/* topdoc
+{{ loader/loader-small.yml }}
+*/
+.spectrum-Loader {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(60);
+
+  width: var(--spectrum-loader-spinner-small-width);
+  height: var(--spectrum-loader-spinner-small-height);
+
+  animation-name: spectrum-wait-spinner-small-animation;
+}
+
+/* topdoc
+{{ loader/loader-medium.yml }}
+*/
+.spectrum-Loader--medium {
+  width: var(--spectrum-loader-spinner-medium-width);
+  height: var(--spectrum-loader-spinner-medium-height);
+
+  animation-name: spectrum-wait-spinner-medium-animation;
+}
+
+/* topdoc
+{{ loader/loader-large.yml }}
+*/
+.spectrum-Loader--large {
+  width: var(--spectrum-loader-spinner-large-width);
+  height: var(--spectrum-loader-spinner-large-height);
+
+  animation-name: spectrum-wait-spinner-large-animation;
+}
+
+.spectrum-Loader--centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: calc(-1 * calc(var(--spectrum-loader-spinner-small-height) / 2));
+  margin-left: calc(-1 * calc(var(--spectrum-loader-spinner-small-width) / 2));
+
+  &.spectrum-Loader--medium {
+    margin-top: calc(-1 * calc(var(--spectrum-loader-spinner-medium-height) / 2));
+    margin-left: calc(-1 * calc(var(--spectrum-loader-spinner-medium-width) / 2));
+  }
+
+  &.spectrum-Loader--large {
+    margin-top: calc(-1 * calc(var(--spectrum-loader-spinner-large-height) / 2));
+    margin-left: calc(-1 * calc(var(--spectrum-loader-spinner-large-width) / 2));
+  }
+}

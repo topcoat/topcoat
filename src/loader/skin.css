@@ -1,0 +1,13 @@
+
+.spectrum-Loader {
+  background-image: url(var(--spectrum-loader-spinner-sprite-url));
+}
+
+.spectrum-Loader--medium {
+  background-image: url(var(--spectrum-loader-spinner-medium-sprite-url));
+}
+
+
+.spectrum-Loader--large {
+  background-image: url(var(--spectrum-loader-spinner-large-sprite-url));
+}
