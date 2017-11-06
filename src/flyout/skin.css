@@ -3,5 +3,5 @@
 */
 .spectrum-Flyout {
   border-color: var(--spectrum-flyout-border-color-default);
-  box-shadow: 0 0 3px var(--spectrum-flyout-shadow-color-default);
+  box-shadow: 0 var(--spectrum-flyout-shadow-y-offset-default) var(--spectrum-flyout-shadow-blur-default) var(--spectrum-flyout-shadow-color-default);
 }
