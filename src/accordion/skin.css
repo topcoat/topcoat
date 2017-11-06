@@ -12,6 +12,7 @@
   &:focus,
   &:hover {
     color: var(--spectrum-accordion-text-color-hover);
+
     background-color: var(--spectrum-accordion-background-color-hover);
 
     &::before {
@@ -21,6 +22,16 @@
 
   &:focus {
     border-left-color: var(--spectrum-accordion-border-left-color-focus);
+  }
+}
+
+.spectrum-Accordion-item {
+  &.is-open {
+    .spectrum-Accordion-header {
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
 }
 

@@ -4,6 +4,8 @@
 :root {
   --spectrum-accordion-icon-width: 6px;
   --spectrum-accordion-icon-height: 10px;
+  /* Subtract the size of the border since it's on the item itself */
+  --spectrum-accordion-header-height: calc(var(--spectrum-accordion-item-height-default) - var(--spectrum-accordion-item-border-size-default));
 }
 
 /* topdoc
@@ -38,19 +40,18 @@
   padding: 0 var(--spectrum-accordion-item-padding-default) 0 calc(var(--spectrum-accordion-item-padding-default) * 2);
   margin: 0;
 
-  /* Subtract the size of the border since it's on the item itself */
-  height: calc(var(--spectrum-accordion-item-height-default) - (var(--spectrum-accordion-item-border-size-default) * 2));
+  height: var(--spectrum-accordion-header-height);
 
   /* For focus state */
   border-left: var(--spectrum-accordion-item-focus-border-size-default) solid transparent;
 
   font-size: var(--spectrum-accordion-item-header-font-size-default);
   text-transform: uppercase;
-  line-height: var(--spectrum-accordion-item-height-default);
+  line-height: var(--spectrum-accordion-header-height);
 
-  overflow: ellipsis;
+  text-overflow: ellipsis;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
 
   &:focus {
     outline: none;
