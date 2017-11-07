@@ -1,3 +1,5 @@
+@import '../commons/index.css';
+
 /* topdoc
 {{ search/search.yml }}
 */
@@ -14,18 +16,23 @@
   display: block;
 
   /* Use padding instead of text-indent so long strings don't overlap the icon */
-  padding-left: 36px;
+  padding-left: var(--spectrum-search-padding-left-default);
   text-indent: 0;
 
   /* Don't let long strings overlap the close icon */
-  padding-right: 28px;
+  padding-right: var(--spectrum-search-padding-right-default);
 
   &.spectrum-Textfield--quiet {
-    padding-left: 32px;
+    padding-left: var(--spectrum-search-quiet-padding-left-default);
+    padding-right: var(--spectrum-search-quiet-padding-right-default);
 
     /* Since quiet button has no left padding, push the icon all the way to the left */
-    & ~ .spectrum-DecoratedTextfield-icon {
+    & ~ .spectrum-Search-icon {
       left: 0;
+    }
+
+    & ~ .spectrum-Search-clear {
+      right: -8px;
     }
 
     /* Since quiet button has no right padding, push the icon all the way to the right */
@@ -38,10 +45,10 @@
 .spectrum-Search-icon {
   display: block;
   position: absolute;
-  left: 4px;
+  left: 12px;
   top: 0;
-  width: 32px;
-  height: 32px;
+  width: var(--spectrum-search-icon-width-default);
+  height: var(--spectrum-input-height-default);
 
   /* Support font icons */
   text-align: center;

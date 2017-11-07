@@ -17,7 +17,7 @@
   text-indent: 0;
 
   min-width: 110px;
-  height: var(--spectrum-component-single-line-height);
+  height: var(--spectrum-input-height-default);
   width: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
