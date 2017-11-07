@@ -10,7 +10,6 @@
 
   .spectrum-Popover {
     min-width: 100%;
-    max-height: var(--spectrum-flyout-max-height-default);
     margin-top: var(--spectrum-dropdown-flyout-margin-default);
     overflow-y: auto;
   }

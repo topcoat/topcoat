@@ -1,7 +1,6 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-radio-diameter: 12px;
   --spectrum-radio-radius: 6px;
 }
 
@@ -31,7 +30,7 @@
   cursor: pointer;
 
   &:checked + .spectrum-Radio-checkmark {
-    border-width: 6px;
+    border-width: 5px;
   }
 
   &:disabled {
@@ -52,10 +51,10 @@
 .spectrum-Radio-checkmark {
   display: inline-block;
   box-sizing: border-box;
-  width: var(--spectrum-radio-diameter);
-  height: var(--spectrum-radio-diameter);
+  width: var(--spectrum-switch-radio-diameter-default);
+  height: var(--spectrum-switch-radio-diameter-default);
 
-  border-radius: var(--spectrum-radio-radius);
+  border-radius: var(--spectrum-switch-radio-radius-default);
   border-width: 2px;
   border-style: solid;
 
