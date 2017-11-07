@@ -404,7 +404,8 @@
 /* topdoc
 {{ button/logicbutton-and.yml }}
 */
-.spectrum-Button--and {
+
+.spectrum-Button--logic--and {
   background-color: var(--spectrum-button-logic-and-background-color-default);
   border-color: var(--spectrum-button-logic-and-border-color-default);
   color: var(--spectrum-button-logic-text-color-default);
@@ -432,7 +433,7 @@
 /* topdoc
 {{ button/logicbutton-or.yml }}
 */
-.spectrum-Button--or {
+.spectrum-Button--logic--or {
   background-color: var(--spectrum-button-logic-or-background-color-default);
   border-color: var(--spectrum-button-logic-or-border-color-default);
   color: var(--spectrum-button-logic-text-color-default);
