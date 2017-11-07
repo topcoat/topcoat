@@ -25,6 +25,7 @@
   font-family: inherit;
   font-size: var(--spectrum-font-size);
   line-height: var(--spectrum-text-body-line-height);
+  text-overflow: ellipsis;
 
   transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 
