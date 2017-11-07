@@ -7,6 +7,8 @@
   --spectrum-button-icon-background-size: 16px;
   --spectrum-button-icon-icon-size: 8px;
   --spectrum-button-icon-border-radius: 4px;
+
+  --spectrum-button-logic-padding-x-default: 8px;
 }
 
 .spectrum-Button {
@@ -102,8 +104,11 @@
   font-weight: var(--spectrum-button-toggle-off-font-weight-default);
 }
 
-.spectrum-Button--and,
-.spectrum-Button--or {
+.spectrum-Button--logic--and,
+.spectrum-Button--logic--or {
+  height: var(--spectrum-button-logic-height-default);
+  line-height: 0;
+  padding: var(--spectrum-button-logic-padding-x-default);
   border-width: var(--spectrum-button-logic-border-size-default);
   border-radius: var(--spectrum-button-logic-border-corner-radius-default);
   font-size: var(--spectrum-button-logic-font-size-default);
