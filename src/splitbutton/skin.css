@@ -3,7 +3,7 @@
     background-image: url("embed/S_SelectDownChevron_@1x.svg" param(--color var(--spectrum-button-icon-color-default)));
   }
 
-  &:focus {
+  &:focus-ring {
     box-shadow: none;
   }
 }
@@ -18,7 +18,7 @@
     }
   }
 
-  &:focus {
+  &:focus-ring {
     &::after {
       background-image: url("embed/S_SelectDownChevron_@1x.svg" param(--color var(--spectrum-button-cta-text-color-focus)));
     }
@@ -54,7 +54,7 @@
     }
   }
 
-  &:focus {
+  &:focus-ring {
     &::after {
       background-image: url("embed/S_SelectDownChevron_@1x.svg" param(--color var(--spectrum-button-primary-text-color-focus)));
     }
@@ -90,7 +90,7 @@
     }
   }
 
-  &:focus {
+  &:focus-ring {
     &::after {
       background-image: url("embed/S_SelectDownChevron_@1x.svg" param(--color var(--spectrum-button-secondary-text-color-focus)));
     }
