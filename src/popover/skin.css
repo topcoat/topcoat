@@ -1,7 +1,7 @@
 .spectrum-Popover {
   background-color: var(--spectrum-popover-background-color-default);
   border-color: var(--spectrum-popover-border-color-default);
-  box-shadow: 0 var(--spectrum-popover-shadow-y-offset-default) var(--spectrum-popover-shadow-blur-default) var(--spectrum-popover-shadow-color-default);
+  box-shadow: 0 0 var(--spectrum-popover-shadow-blur-default) var(--spectrum-popover-shadow-color-default);
 
   .spectrum-Dialog-header,
   .spectrum-Dialog-footer,
