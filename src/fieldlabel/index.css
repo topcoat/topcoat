@@ -2,8 +2,8 @@
 
 :root {
   --spectrum-field-min-width: 100px;
-  --spectrum-field-label-margin: 0 0 5px;
-  --spectrum-field-label-left-margin: 10px 8px 5px 0;
+  --spectrum-field-label-margin: 0 0 6px;
+  --spectrum-field-label-left-margin: 10px 5px 6px 0;
 }
 
 /* topdoc

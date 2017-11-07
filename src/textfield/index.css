@@ -35,14 +35,15 @@
   -webkit-appearance: none !important;
 
   &::placeholder {
-    font-weight: normal;
-    font-style: italic;
+    font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
+    font-style: var(--spectrum-input-placeholder-text-style-default);
+    color: var(--spectrum-input-placeholder-text-color-default);
     transition: color var(--spectrum-transition-time) ease-in-out;
   }
 
   &:hover {
     &::placeholder {
-      font-weight: normal;
+      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
     }
   }
 
@@ -50,7 +51,7 @@
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
-      font-weight: normal;
+      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
     }
   }
 
