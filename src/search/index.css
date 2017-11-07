@@ -4,25 +4,61 @@
 /* topdoc
 {{ search/search-quiet.yml }}
 */
-/* topdoc
-{{ search/search-customicon.yml }}
-*/
-.spectrum-Search-clear {
-  position: absolute;
-  right: 0;
-  top: 0;
+
+.spectrum-Search {
+  display: inline-block;
+  position: relative;
 }
 
 .spectrum-Search-input {
+  display: block;
+
+  /* Use padding instead of text-indent so long strings don't overlap the icon */
+  padding-left: 36px;
+  text-indent: 0;
+
   /* Don't let long strings overlap the close icon */
   padding-right: 28px;
 
   &.spectrum-Textfield--quiet {
+    padding-left: 32px;
+
+    /* Since quiet button has no left padding, push the icon all the way to the left */
+    & ~ .spectrum-DecoratedTextfield-icon {
+      left: 0;
+    }
+
     /* Since quiet button has no right padding, push the icon all the way to the right */
     & ~ .spectrum-Search-rightIcon {
       right: 0;
     }
   }
+}
+
+.spectrum-Search-icon {
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+
+  /* Support font icons */
+  text-align: center;
+  line-height: 32px;
+
+  /* Support SVG icons */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}
+
+.spectrum-Search-clear {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .spectrum-Search-clear:disabled {
