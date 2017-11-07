@@ -51,10 +51,10 @@
 .spectrum-Radio-checkmark {
   display: inline-block;
   box-sizing: border-box;
-  width: var(--spectrum-switch-radio-diameter-default);
-  height: var(--spectrum-switch-radio-diameter-default);
+  width: var(--spectrum-radio-diameter-default);
+  height: var(--spectrum-radio-diameter-default);
 
-  border-radius: var(--spectrum-switch-radio-radius-default);
+  border-radius: var(--spectrum-radio-radius-default);
   border-width: 2px;
   border-style: solid;
 

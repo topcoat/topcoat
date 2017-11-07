@@ -32,7 +32,7 @@
   }
 
   &:checked + .spectrum-Checkbox-checkmark {
-    border-width: calc(var(--spectrum-switch-checkbox-box-size-default) / 2);
+    border-width: calc(var(--spectrum-checkbox-box-size-default) / 2);
 
     &::after {
       transform: scale(1);
@@ -44,7 +44,7 @@
 .spectrum-Checkbox.is-indeterminate {
   .spectrum-Checkbox-checkmark,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
-    border-width: calc(calc(var(--spectrum-switch-checkbox-box-size-default) / 2) - 1px) 3px calc(calc(var(--spectrum-switch-checkbox-box-size-default) / 2) - 1px) 3px;
+    border-width: calc(calc(var(--spectrum-checkbox-box-size-default) / 2) - 1px) 3px calc(calc(var(--spectrum-checkbox-box-size-default) / 2) - 1px) 3px;
     &::after {
       content: none;
     }
@@ -62,8 +62,8 @@
 .spectrum-Checkbox-checkmark {
   display: inline-block;
   box-sizing: border-box;
-  width: var(--spectrum-switch-checkbox-box-size-default);
-  height: var(--spectrum-switch-checkbox-box-size-default);
+  width: var(--spectrum-checkbox-box-size-default);
+  height: var(--spectrum-checkbox-box-size-default);
 
   border-radius: var(--spectrum-checkbox-checkmark-box-border-radius);
   border-width: 2px;
