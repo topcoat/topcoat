@@ -5,13 +5,13 @@ markup:
   <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
     <div class="spectrum-Dialog-header">
-      <h2 class="spectrum-Dialog-title">Error Dialog</h2>
+      <h2 class="spectrum-Dialog-title">Unable to Share</h2>
       <div class="spectrum-Dialog-typeIcon"></div>
     </div>
     <div class="spectrum-Dialog-content">
-      This is an error dialog.
+      An error occurred while sharing your project. Please verify the email address and try again.
     </div>
     <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
+      <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>

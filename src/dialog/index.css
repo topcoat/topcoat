@@ -3,6 +3,7 @@
 
 :root {
   --spectrum-dialog-min-width: 320px;
+  --spectrum-dialog-max-width: 480px;
   --spectrum-dialog-margin: 32px;
 
   --spectrum-dialog-border-radius: var(--spectrum-border-radius);
@@ -13,9 +14,9 @@
   --spectrum-dialog-header-font-size: 18px;
 
   --spectrum-dialog-padding: 40px;
-  --spectrum-dialog-padding-top: 48px;
+  --spectrum-dialog-padding-top: 46px;
 
-  --spectrum-dialog-content-padding-top: 20px;
+  --spectrum-dialog-content-padding-top: 11px;
 
   --spectrum-dialog-fullscreen-padding-top: var(--spectrum-dialog-padding);
   --spectrum-dialog-fullscreen-header-padding-bottom: 24px;
@@ -54,7 +55,7 @@
 
   /* Don't be bigger than the screen */
   max-height: calc(100vh - calc(var(--spectrum-dialog-margin) * 2));
-  max-width: calc(100vw - calc(var(--spectrum-dialog-margin) * 2));
+  max-width: var(--spectrum-dialog-max-width);
 
   min-width: var(--spectrum-dialog-min-width);
 
@@ -84,7 +85,7 @@
   &::after {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
 
     height: var(--spectrum-dialog-divider-height);
@@ -127,6 +128,7 @@
 
 .spectrum-Dialog-footer {
   border-radius: 0 0 var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius);
+  margin-top: 46px;
 
   text-align: right; /* right align buttons */
 
@@ -143,7 +145,7 @@
   }
 
   .spectrum-Button {
-    margin: 16px 12px 0 0;
+    margin: 0 12px 0 0;
 
     &:last-child {
       margin-right: 0;

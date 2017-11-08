@@ -2,16 +2,68 @@
 name: Dialog - Default
 description: The Spectrum Dialog.
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
-  <div class="spectrum-Dialog" id="defaultDialog">
-    <div class="spectrum-Dialog-header">
-      <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+  <div>
+    <h4>Confirmation dialog</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialog">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Enable Smart Filters?</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Smart filters are nondestructive and will preserve your original images.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
+      </div>
     </div>
-    <div class="spectrum-Dialog-content">
-      This is a dialog.
+  </div>
+  <div>
+    <h4>Information</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialogInformation">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Connect to WiFi</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Please connect to WiFi to sync your projects or go to Settings to change your preferences.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Continue</button>
+      </div>
     </div>
-    <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+  </div>
+  <div>
+    <h4>Destructive</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialogDestructive">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Delete 3 Documents</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Are you sure you want to delete the 3 selected documents?
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--warning" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>3 Buttons</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialogDestructive">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Rate This App</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        If you enjoy our app, would you mind taking a moment to rate it?
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">No, Thanks</button>
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Remind Me Later</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Rate Now</button>
+      </div>
     </div>
   </div>
