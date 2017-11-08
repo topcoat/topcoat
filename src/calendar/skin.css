@@ -11,51 +11,67 @@
 }
 
 .spectrum-Calendar-date {
-  color: var(--spectrum-calendar-day-text-color-default);
-  background: var(--spectrum-calendar-day-background-color-default);
-
-  &:hover:not(.is-range-selection) {
+  &:hover {
     color: var(--spectrum-calendar-day-text-color-hover);
-    background: var(--spectrum-calendar-day-background-color-hover);
 
-    &:active,
+    &:not(.is-range-end):not(.is-range-start) {
+      &:before {
+        background: var(--spectrum-calendar-day-background-color-hover);
+      }
+    }
+
     &.is-selected {
       color: var(--spectrum-calendar-day-text-color-selected-hover);
-      background: var(--spectrum-calendar-day-background-color-selected-hover);
+      &:not(.is-range-end):not(.is-range-start) {
+        &:before {
+          background: var(--spectrum-calendar-day-background-color-selected-hover);
+        }
+      }
+    }
+
+    .is-range-selection {
+      &:before {
+        background: var(--spectrum-calendar-day-background-color-selected-hover);
+      }
     }
   }
 
-  &:active,
+  &:active {
+    background-color: var(--spectrum-calendar-day-background-color-active);
+  }
+
   &.is-selected {
     color: var(--spectrum-calendar-day-text-color-selected);
     background: var(--spectrum-calendar-day-background-color-selected);
   }
 
+  &.is-selected:not(.is-range-selection) {
+    font-weight: var(--spectrum-calendar-day-font-weight-selected);
+    background: var(--spectrum-calendar-day-background-color-cap-selected);
+  }
+
   &.is-today {
     color: var(--spectrum-calendar-day-today-text-color-default);
-    background: var(--spectrum-calendar-day-today-background-color-default);
+    font-weight: var(--spectrum-calendar-day-today-font-weight-default);
 
-    &:hover {
-      color: var(--spectrum-calendar-day-today-text-color-hover);
-      background: var(--spectrum-calendar-day-today-background-color-hover);
-
-      &:active,
-      &.is-selected {
-        color: var(--spectrum-calendar-day-today-text-color-selected-hover);
-        background: var(--spectrum-calendar-day-today-background-color-selected-hover);
-        border-color: var(--spectrum-calendar-day-today-background-color-selected-hover);
-      }
+    &:before {
+      border-color: var(--spectrum-calendar-day-today-border-color-default);
     }
 
-    &:active,
-    &.is-selected {
-      color: var(--spectrum-calendar-day-today-text-color-selected);
-      background: var(--spectrum-calendar-day-today-background-color-selected);
+    &:hover {
+      &.is-selected {
+        &:before {
+          background: var(--spectrum-calendar-day-today-background-color-selected-hover);
+        }
+      }
     }
 
     &.is-disabled {
       color: var(--spectrum-calendar-day-today-text-color-disabled);
-      background: var(--spectrum-calendar-day-today-background-color-disabled);
+
+      &:before {
+        border-color: var(--spectrum-calendar-day-today-border-color-disabled);
+      }
     }
   }
 
@@ -65,20 +81,27 @@
     color: var(--spectrum-calendar-day-text-color-focus);
 
     &.is-today {
-      background: var(--spectrum-calendar-day-today-background-color-focus);
       border-color: var(--spectrum-calendar-day-border-color-focus);
-      color: var(--spectrum-calendar-day-today-text-color-focus);
     }
 
     &:active,
     &.is-selected {
       color: var(--spectrum-calendar-day-text-color-selected);
-      background: var(--spectrum-calendar-day-background-color-selected);
-      border-color: var(--spectrum-calendar-day-background-color-selected);
+      background: var(--spectrum-calendar-day-background-color-cap-selected);
+      border-color: var(--spectrum-calendar-day-border-color-focus);
     }
   }
 
   &.is-disabled {
     color: var(--spectrum-calendar-day-text-color-disabled);
+  }
+
+  &.is-range-start,
+  &.is-range-end {
+    color: var(--spectrum-calendar-day-text-color-cap-selected);
+
+    &:after {
+      background-color: var(--spectrum-calendar-day-background-color-selected);
+    }
   }
 }
