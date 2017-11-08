@@ -4,16 +4,49 @@
   border: 1px solid var(--spectrum-tag-border-color-default);
 
   &:hover {
-    color: var(--spectrum-tag-text-color-hover);
     background-color: var(--spectrum-tag-background-color-hover);
+    color: var(--spectrum-tag-text-color-hover);
     border-color: var(--spectrum-tag-border-color-hover);
+  }
+
+  &:focus-ring {
+    background-color: var(--spectrum-tag-background-color-focus);
+    color: var(--spectrum-tag-text-color-focus);
+    border-color: var(--spectrum-tag-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-focus);
   }
 
   &.is-invalid {
     color: var(--spectrum-tag-invalid-text-color-default);
     border-color: var(--spectrum-tag-invalid-border-color-default);
-    &:focus {
+
+    &:hover {
+      border-color: var(--spectrum-tag-invalid-border-color-hover);
+      color: var(--spectrum-tag-invalid-text-color-hover);
+    }
+
+    &:focus-ring {
+      color: var(--spectrum-tag-invalid-text-color-focus);
+      border-color: var(--spectrum-tag-invalid-border-color-default);
       box-shadow: 0 0 0 1px var(--spectrum-tag-invalid-border-color-default);
+
+    }
+    .spectrum-Tag-removeButton {
+      &::after {
+        background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-invalid-icon-color-default)));
+      }
+
+      &::focus {
+        &::after {
+          background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-invalid-icon-color-focus)));
+        }
+      }
+
+      &:hover {
+        &::after {
+          background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-invalid-icon-color-hover)));
+        }
+      }
     }
   }
 
@@ -21,6 +54,10 @@
     color: var(--spectrum-tag-text-color-disabled);
     background-color: var(--spectrum-tag-background-color-disabled);
     border-color: var(--spectrum-tag-border-color-disabled);
+
+    .spectrum-Tag-avatar {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -39,17 +76,5 @@
 .spectrum-Tag.is-disabled .spectrum-Tag-removeButton {
   &::after {
     background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-icon-color-disabled)));
-  }
-}
-
-.spectrum-Tag--quiet {
-  &,
-  &:hover,
-  &:focus,
-  &.is-invalid,
-  &.is-disabled {
-    background-color: transparent;
-    background-color: transparent;
-    border-color: transparent;
   }
 }
