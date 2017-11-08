@@ -7,6 +7,8 @@
   --spectrum-button-icon-background-size: 16px;
   --spectrum-button-icon-icon-size: 8px;
   --spectrum-button-icon-border-radius: 4px;
+
+  --spectrum-logicbutton-padding-x-default: 8px;
 }
 
 .spectrum-Button {
@@ -18,7 +20,7 @@
   border-radius: var(--spectrum-button-border-corner-radius-default);
 
   height: var(--spectrum-button-height-default);
-  padding: 0 calc(var(--spectrum-button-border-corner-radius-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
+  padding: 0 calc(var(--spectrum-button-padding-x-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
 
   font-family: inherit;
   font-size: var(--spectrum-button-label-font-size-default);
@@ -75,15 +77,15 @@
 }
 
 .spectrum-Button--action {
-  font-size: var(--spectrum-button-action-font-size-default);
-  font-weight: var(--spectrum-button-action-font-weight-default);
-  padding: 0 var(--spectrum-button-action-padding-x-default);
-  border-width: var(--spectrum-button-action-border-size-default);
-  border-radius: var(--spectrum-button-action-border-corner-radius-default);
+  font-size: var(--spectrum-actionbutton-font-size-default);
+  font-weight: var(--spectrum-actionbutton-font-weight-default);
+  padding: 0 var(--spectrum-actionbutton-padding-x-default);
+  border-width: var(--spectrum-actionbutton-border-size-default);
+  border-radius: var(--spectrum-actionbutton-border-corner-radius-default);
 }
 
 .spectrum-Button--action--icon-only {
-  padding: 0 var(--spectrum-button-action-icon-padding-x-default);
+  padding: 0 var(--spectrum-actionbutton-icon-padding-x-default);
 }
 
 .spectrum-Button--quiet--action {
@@ -94,7 +96,7 @@
 }
 
 .spectrum-Button--quiet--action--icon-only {
-  padding: 0 var(--spectrum-button-action-icon-padding-x-default);
+  padding: 0 var(--spectrum-actionbutton-icon-padding-x-default);
 }
 
 .spectrum-Button--toggle {
@@ -102,12 +104,15 @@
   font-weight: var(--spectrum-button-toggle-off-font-weight-default);
 }
 
-.spectrum-Button--and,
-.spectrum-Button--or {
-  border-width: var(--spectrum-button-logic-border-size-default);
-  border-radius: var(--spectrum-button-logic-border-corner-radius-default);
-  font-size: var(--spectrum-button-logic-font-size-default);
-  font-weight: var(--spectrum-button-logic-font-weight-default);
+.spectrum-Button--logic--and,
+.spectrum-Button--logic--or {
+  height: var(--spectrum-logicbutton-height-default);
+  line-height: 0;
+  padding: var(--spectrum-logicbutton-padding-x-default);
+  border-width: var(--spectrum-logicbutton-border-size-default);
+  border-radius: var(--spectrum-logicbutton-border-corner-radius-default);
+  font-size: var(--spectrum-logicbutton-font-size-default);
+  font-weight: var(--spectrum-logicbutton-font-weight-default);
 }
 
 .spectrum-Button--block {

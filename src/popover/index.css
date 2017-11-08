@@ -11,16 +11,16 @@
   @inherit: %spectrum-overlay;
 
   /* Be a flexbox to allow a full sized content area that scrolls */
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   box-sizing: border-box;
-
-  min-width: var(--spectrum-popover-min-width);
-  padding: var(--spectrum-popover-padding);
 
   position: relative;
   left: 0px;
   top: 0px;
+
+  min-width: var(--spectrum-component-single-line-width);
+  min-height: var(--spectrum-component-single-line-height);
 
   border-style: solid;
   border-width: var(--spectrum-popover-border-size-default);
@@ -30,6 +30,11 @@
 
   &.is-open {
     @inherit: %spectrum-overlay--open;
+  }
+
+  /* Don't let sharp corners be pokey */
+  .spectrum-SelectList {
+    border-radius: var(--spectrum-popover-border-corner-radius-default);
   }
 }
 
@@ -53,11 +58,19 @@
   }
 }
 
+.spectrum-Popover--dialog {
+  min-width: var(--spectrum-popover-min-width);
+  padding: var(--spectrum-popover-padding);
+}
+
 /* topdoc
-{{ popover/popover-left.yml }}
+{{ popover/popover-dialog.yml }}
 */
 .spectrum-Popover--left {
-  margin-right: var(--spectrum-popover-target-offset);
+  &.spectrum-Popover--withTip {
+    margin-right: var(--spectrum-popover-target-offset);
+  }
+
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
   }
@@ -67,11 +80,11 @@
   }
 }
 
-/* topdoc
-{{ popover/popover-right.yml }}
-*/
 .spectrum-Popover--right {
-  margin-left: var(--spectrum-popover-target-offset);
+  &.spectrum-Popover--withTip {
+    margin-left: var(--spectrum-popover-target-offset);
+  }
+
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
   }
@@ -90,12 +103,11 @@
   }
 }
 
-
-/* topdoc
-{{ popover/popover-bottom.yml }}
-*/
 .spectrum-Popover--bottom {
-  margin-top: var(--spectrum-popover-target-offset);
+  &.spectrum-Popover--withTip {
+    margin-top: var(--spectrum-popover-target-offset);
+  }
+
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
   }
@@ -105,11 +117,11 @@
   }
 }
 
-/* topdoc
-{{ popover/popover-top.yml }}
-*/
 .spectrum-Popover--top {
-  margin-bottom: var(--spectrum-popover-target-offset);
+  &.spectrum-Popover--withTip {
+    margin-bottom: var(--spectrum-popover-target-offset);
+  }
+
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
   }

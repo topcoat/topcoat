@@ -1,5 +1,5 @@
 name: Dropdown - Default
-description: A Spectrum 'default' dropdown element with a flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
+description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">
@@ -11,13 +11,6 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
   <h4>Open</h4>
@@ -30,16 +23,16 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-disabled" style="width: 195px;">
@@ -51,11 +44,4 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-option">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>

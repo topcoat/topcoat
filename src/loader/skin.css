@@ -1,9 +1,3 @@
-:root {
-  --spectrum-loader-background-color-fullpage: rgba(255,255,255,0.2);
-  --spectrum-loader-fill-color-fullpage: #FFFFFF;
-}
-
-
 .spectrum-Loader {
   background-image: url(var(--spectrum-loader-round-medium-sprite-url));
 }

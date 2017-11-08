@@ -1,0 +1,40 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ combobox/combobox.yml }}
+*/
+/* topdoc
+{{ combobox/combobox-quiet.yml }}
+*/
+
+.spectrum-ComboBox {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.spectrum-ComboBox-fieldgroup {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-width: var(--spectrum-component-single-line-width);
+}
+
+.spectrum-ComboBox-textfield {
+  border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius-default);
+  border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius-default);
+  border-right-width: 0;
+  flex: 1;
+}
+
+.spectrum-ComboBox-button {
+  padding: 0;
+  width: 34px;
+  border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius-default);
+  border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius-default);
+}
+
+.spectrum-ComboBox--quiet {
+  .spectrum-ComboBox-button {
+    border-bottom: 1px solid;
+  }
+}

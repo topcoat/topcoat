@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-input-padding-top: 3px;
+  --spectrum-input-padding-bottom: 5px;
+}
+
 .spectrum-Textfield {
   /* box */
   box-sizing: border-box;
@@ -7,10 +12,12 @@
   border-radius: var(--spectrum-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: 4px 0;
+  padding: var(--spectrum-input-padding-top) var(--spectrum-padding) var(--spectrum-input-padding-bottom);
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
+  text-indent: 0;
 
   min-width: 110px;
-  height: var(--spectrum-component-single-line-height);
+  height: var(--spectrum-input-height-default);
   width: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
@@ -18,10 +25,7 @@
   font-family: inherit;
   font-size: var(--spectrum-font-size);
   line-height: var(--spectrum-text-body-line-height);
-
-  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
-  padding-left: var(--spectrum-padding);
-  text-indent: 0;
+  text-overflow: ellipsis;
 
   transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 
@@ -35,14 +39,14 @@
   -webkit-appearance: none !important;
 
   &::placeholder {
-    font-weight: normal;
-    font-style: italic;
+    font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
+    font-style: var(--spectrum-input-placeholder-text-style-default);
     transition: color var(--spectrum-transition-time) ease-in-out;
   }
 
   &:hover {
     &::placeholder {
-      font-weight: normal;
+      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
     }
   }
 
@@ -50,7 +54,7 @@
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
-      font-weight: normal;
+      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
     }
   }
 

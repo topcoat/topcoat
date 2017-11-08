@@ -58,11 +58,11 @@
 }
 
 .spectrum-Stepper-stepDownIcon::after {
-  background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-default)));
+  background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-default)));
 }
 
 .spectrum-Stepper-stepUpIcon::after {
-  background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-default)));
+  background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-default)));
 }
 
 .spectrum-Stepper-stepDown {
@@ -71,13 +71,13 @@
     border-bottom-color: var(--spectrum-input-border-color-default);
 
     .spectrum-Stepper-stepDownIcon::after {
-      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-hover)));
+      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-hover)));
     }
   }
 
   &:focus {
     .spectrum-Stepper-stepDownIcon::after {
-      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-focus)));
+      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-focus)));
     }
   }
 }
@@ -85,13 +85,13 @@
 .spectrum-Stepper-stepUp {
   &:hover {
     .spectrum-Stepper-stepUpIcon::after {
-      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-hover)));
+      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-hover)));
     }
   }
 
   &:focus {
     .spectrum-Stepper-stepUpIcon::after {
-      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-focus)));
+      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-focus)));
     }
   }
 }
@@ -99,7 +99,7 @@
 .spectrum-Stepper-stepUp {
   &:disabled {
     .spectrum-Stepper-stepUpIcon::after {
-      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-disabled)));
+      background-image: url("embed/S_StepperUpChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-disabled)));
     }
   }
 }
@@ -107,7 +107,7 @@
 .spectrum-Stepper-stepDown {
   &:disabled {
     .spectrum-Stepper-stepDownIcon::after {
-      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-button-action-text-color-disabled)));
+      background-image: url("embed/S_StepperDownChevron_@1x.svg" param(--color var(--spectrum-actionbutton-text-color-disabled)));
     }
   }
 }

@@ -13,4 +13,7 @@
 
   --spectrum-loader-round-full-page-sprite-url: 'embed/Loader_Determinate_Full-Page_64_Sprite.svg';
   --spectrum-loader-round-indeterminate-full-page-sprite-url: 'embed/Loader_Indeterminate_Full-Page_64_Sprite.svg';
+
+  --spectrum-loader-background-color-fullpage: rgba(255,255,255,0.2);
+  --spectrum-loader-fill-color-fullpage: #FFFFFF;
 }

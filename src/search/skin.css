@@ -1,11 +1,13 @@
 .spectrum-Search-icon {
   background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-icon-color-default)));
+  color: var(--spectrum-input-icon-color-default);
 }
 
 .spectrum-Search-input {
   &:disabled {
     & ~ .spectrum-Search-icon {
       background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-text-color-disabled)));
+      color: var(--spectrum-input-text-color-disabled);
     }
   }
 }

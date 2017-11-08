@@ -6,5 +6,5 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-Button spectrum-Button--or">Or</button>
-  <button class="spectrum-Button spectrum-Button--or" disabled>Or</button>
+  <button class="spectrum-Button spectrum-Button--logic--or">Or</button>
+  <button class="spectrum-Button spectrum-Button--logic--or" disabled>Or</button>

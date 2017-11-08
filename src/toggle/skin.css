@@ -1,12 +1,12 @@
 .spectrum-ToggleSwitch-content {
   /* :before is used for the track of the switch */
   &::before {
-    background-color: var(--spectrum-switch-toggle-track-color-default);
+    background-color: var(--spectrum-switch-track-color-default);
   }
 
   /* :after is used for the handle of the switch */
   &::after {
-    background-color: var(--spectrum-switch-toggle-handle-background-color-default);
+    background-color: var(--spectrum-switch-handle-background-color-default);
     border-color: var(--spectrum-switch-border-color-default);
   }
 }
@@ -14,11 +14,11 @@
 .spectrum-ToggleSwitch-input {
   &:checked + .spectrum-ToggleSwitch-content {
     &::before {
-      background-color: var(--spectrum-switch-toggle-track-color-active);
+      background-color: var(--spectrum-switch-border-color-checked);
     }
 
     &::after {
-      border-color: var(--spectrum-switch-border-color-active);
+      border-color: var(--spectrum-switch-border-color-checked);
     }
   }
 
@@ -32,7 +32,7 @@
 
     &:checked + .spectrum-ToggleSwitch-content {
       &::before {
-        background-color: var(--spectrum-switch-toggle-track-color-focus);
+        background-color: var(--spectrum-switch-track-color-focus);
       }
     }
 
@@ -54,7 +54,10 @@
 
       &:checked:enabled + .spectrum-ToggleSwitch-content {
         &::before {
-          background-color: var(--spectrum-switch-toggle-track-color-hover);
+          background-color: var(--spectrum-switch-track-color-checked-hover);
+        }
+        &::after {
+          border-color: var(--spectrum-switch-border-color-checked-hover);
         }
       }
 
@@ -74,7 +77,10 @@
 
       &:checked:enabled + .spectrum-ToggleSwitch-content {
         &::before {
-          background-color: var(--spectrum-switch-toggle-track-color-active);
+          background-color: var(--spectrum-switch-track-color-checked-active);
+        }
+        &::after {
+          border-color: var(--spectrum-switch-border-color-checked-active);
         }
       }
 
@@ -85,11 +91,14 @@
   }
 
   .spectrum-ToggleSwitch-input {
-    &:disabled,
-    &[disabled] {
+    &:disabled {
+      & ~ .spectrum-ToggleSwitch-label {
+        color: var(--spectrum-switch-label-text-color-disabled);
+      }
+
       & + .spectrum-ToggleSwitch-content {
         &::before {
-          background-color: var(--spectrum-switch-toggle-track-color-disabled);
+          background-color: var(--spectrum-switch-track-color-disabled);
         }
 
         &::after {
@@ -97,27 +106,84 @@
         }
       }
 
-      & ~ .spectrum-ToggleSwitch-label {
-        color: var(--spectrum-switch-label-text-color-disabled);
+      &:checked + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-disabled-checked);
+        }
       }
     }
   }
 }
 
+
 .spectrum-ToggleSwitch--ab {
-  .spectrum-ToggleSwitch-input, .spectrum-ToggleSwitch-input:focus {
+  .spectrum-ToggleSwitch-input {
+    & {
+      &:checked + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-default);
+        }
+      }
+    }
+
     &:checked + .spectrum-ToggleSwitch-content {
-      &::before {
-        background-color: var(--spectrum-switch-toggle-track-color-default);
+      &::after {
+        /* Don't be blue */
+        border-color: var(--spectrum-switch-border-color-default);
+      }
+    }
+
+    &:focus-ring {
+      &:checked + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-default);
+        }
+        &::after {
+          border-color: var(--spectrum-switch-border-color-focus);
+        }
+      }
+    }
+
+    &:disabled {
+      &:checked + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-disabled);
+        }
+      }
+
+      & + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-disabled);
+        }
+
+        &::after {
+          border-color: var(--spectrum-switch-border-color-disabled);
+        }
       }
     }
   }
 
-  &:hover, &:active {
+  &:hover {
     .spectrum-ToggleSwitch-input {
       &:checked:enabled + .spectrum-ToggleSwitch-content {
         &::before {
-          background-color: var(--spectrum-switch-toggle-track-color-default);
+          background-color: var(--spectrum-switch-track-color-default);
+        }
+        &::after {
+          border-color: var(--spectrum-switch-border-color-hover);
+        }
+      }
+    }
+  }
+
+  &:active {
+    .spectrum-ToggleSwitch-input {
+      &:checked:enabled + .spectrum-ToggleSwitch-content {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-default);
+        }
+        &::after {
+          border-color: var(--spectrum-switch-border-color-active);
         }
       }
     }

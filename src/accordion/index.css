@@ -6,6 +6,7 @@
   --spectrum-accordion-icon-height: 10px;
   /* Subtract the size of the border since it's on the item itself */
   --spectrum-accordion-header-height: calc(var(--spectrum-accordion-item-height-default) - var(--spectrum-accordion-item-border-size-default));
+  --spectrum-accordion-item-header-tracking: calc(var(--spectrum-accordion-item-header-tracking-default) / 100);
 }
 
 /* topdoc
@@ -45,6 +46,7 @@
   font-size: var(--spectrum-accordion-item-header-font-size-default);
   text-transform: uppercase;
   line-height: var(--spectrum-accordion-header-height);
+  letter-spacing: var(--spectrum-accordion-item-header-tracking);
 
   text-overflow: ellipsis;
   cursor: pointer;

@@ -1,22 +1,7 @@
-/* topdoc
-{{ popover/popover-info.yml }}
-*/
-
-/* topdoc
-{{ popover/popover-success.yml }}
-*/
-
-/* topdoc
-{{ popover/popover-error.yml }}
-*/
-
-/* topdoc
-{{ popover/popover-warning.yml }}
-*/
 .spectrum-Popover {
   background-color: var(--spectrum-popover-background-color-default);
   border-color: var(--spectrum-popover-border-color-default);
-  box-shadow: 0 0 4px var(--spectrum-popover-border-size-default) var(--spectrum-dialog-popover-shadow-color-default);
+  box-shadow: 0 0 var(--spectrum-popover-shadow-blur-default) var(--spectrum-popover-shadow-color-default);
 
   .spectrum-Dialog-header,
   .spectrum-Dialog-footer,
@@ -27,6 +12,6 @@
   .spectrum-Popover-tip::after {
     background-color: var(--spectrum-popover-background-color-default);
     border-color: var(--spectrum-popover-border-color-default);
-    box-shadow: 0 0 4px var(--spectrum-popover-border-size-default) var(--spectrum-dialog-popover-shadow-color-default);
+    box-shadow: 0 var(--spectrum-popover-shadow-y-offset-default) var(--spectrum-popover-shadow-blur-default) var(--spectrum-popover-shadow-color-default);
   }
 }

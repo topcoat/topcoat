@@ -224,37 +224,37 @@
 {{ button/button-action.yml }}
 */
 .spectrum-Button--action {
-  background-color: var(--spectrum-button-action-background-color-default);
-  border-color: var(--spectrum-button-action-border-color-default);
-  color: var(--spectrum-button-action-text-color-default);
+  background-color: var(--spectrum-actionbutton-background-color-default);
+  border-color: var(--spectrum-actionbutton-border-color-default);
+  color: var(--spectrum-actionbutton-text-color-default);
 
   &:focus-ring {
-    background-color: var(--spectrum-button-action-background-color-focus);
-    border-color: var(--spectrum-button-action-border-color-focus);
-    box-shadow: 0 0 0 var(--spectrum-button-border-focus-grow) var(--spectrum-button-action-border-color-focus);
-    color: var(--spectrum-button-action-text-color-focus);
+    background-color: var(--spectrum-actionbutton-background-color-focus);
+    border-color: var(--spectrum-actionbutton-border-color-focus);
+    box-shadow: 0 0 0 var(--spectrum-button-border-focus-grow) var(--spectrum-actionbutton-border-color-focus);
+    color: var(--spectrum-actionbutton-text-color-focus);
   }
 
   &:hover {
-    background-color: var(--spectrum-button-action-background-color-hover);
-    border-color: var(--spectrum-button-action-border-color-hover);
+    background-color: var(--spectrum-actionbutton-background-color-hover);
+    border-color: var(--spectrum-actionbutton-border-color-hover);
     box-shadow: none;
-    color: var(--spectrum-button-action-text-color-hover);
+    color: var(--spectrum-actionbutton-text-color-hover);
   }
 
   &:active,
   &.is-selected {
-    background-color: var(--spectrum-button-action-background-color-active);
-    border-color: var(--spectrum-button-action-border-color-active);
+    background-color: var(--spectrum-actionbutton-background-color-active);
+    border-color: var(--spectrum-actionbutton-border-color-active);
     box-shadow: none;
-    color: var(--spectrum-button-action-text-color-active);
+    color: var(--spectrum-actionbutton-text-color-active);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-action-background-color-disabled);
-    border-color: var(--spectrum-button-action-border-color-disabled);
-    color: var(--spectrum-button-action-text-color-disabled);
+    background-color: var(--spectrum-actionbutton-background-color-disabled);
+    border-color: var(--spectrum-actionbutton-border-color-disabled);
+    color: var(--spectrum-actionbutton-text-color-disabled);
   }
 }
 
@@ -271,6 +271,10 @@
     color: var(--spectrum-button-quiet-action-text-color-focus);
   }
 
+  &.is-selected {
+    color: var(--spectrum-button-quiet-action-text-color-selected);
+  }
+
   &:hover {
     background-color: var(--spectrum-button-quiet-action-background-color-hover);
     box-shadow: none;
@@ -283,10 +287,9 @@
     color: var(--spectrum-button-quiet-action-text-color-active);
   }
 
+  /* Make sure background color overrides hover and active */
   &.is-selected {
     background-color: var(--spectrum-button-quiet-action-background-color-selected);
-    box-shadow: none;
-    color: var(--spectrum-button-quiet-action-text-color-selected);
   }
 
   &:disabled,
@@ -401,56 +404,57 @@
 /* topdoc
 {{ button/logicbutton-and.yml }}
 */
-.spectrum-Button--and {
-  background-color: var(--spectrum-button-logic-and-background-color-default);
-  border-color: var(--spectrum-button-logic-and-border-color-default);
-  color: var(--spectrum-button-logic-text-color-default);
+
+.spectrum-Button--logic--and {
+  background-color: var(--spectrum-logicbutton-and-background-color-default);
+  border-color: var(--spectrum-logicbutton-and-border-color-default);
+  color: var(--spectrum-logicbutton-text-color-default);
 
   &:focus-ring {
-    background-color: var(--spectrum-button-logic-and-background-color-focus);
-    border-color: var(--spectrum-button-logic-and-border-color-focus);
-    color: var(--spectrum-button-logic-text-color-default);
+    background-color: var(--spectrum-logicbutton-and-background-color-focus);
+    border-color: var(--spectrum-logicbutton-and-border-color-focus);
+    color: var(--spectrum-logicbutton-text-color-default);
   }
 
   &:hover {
-    background-color: var(--spectrum-button-logic-and-background-color-hover);
-    border-color: var(--spectrum-button-logic-and-border-color-hover);
-    color: var(--spectrum-button-logic-text-color-default);
+    background-color: var(--spectrum-logicbutton-and-background-color-hover);
+    border-color: var(--spectrum-logicbutton-and-border-color-hover);
+    color: var(--spectrum-logicbutton-text-color-default);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-logic-and-background-color-disabled);
-    border-color: var(--spectrum-button-logic-and-border-color-disabled);
-    color: var(--spectrum-button-logic-text-color-disabled);
+    background-color: var(--spectrum-logicbutton-and-background-color-disabled);
+    border-color: var(--spectrum-logicbutton-and-border-color-disabled);
+    color: var(--spectrum-logicbutton-text-color-disabled);
   }
 }
 
 /* topdoc
 {{ button/logicbutton-or.yml }}
 */
-.spectrum-Button--or {
-  background-color: var(--spectrum-button-logic-or-background-color-default);
-  border-color: var(--spectrum-button-logic-or-border-color-default);
-  color: var(--spectrum-button-logic-text-color-default);
+.spectrum-Button--logic--or {
+  background-color: var(--spectrum-logicbutton-or-background-color-default);
+  border-color: var(--spectrum-logicbutton-or-border-color-default);
+  color: var(--spectrum-logicbutton-text-color-default);
 
   &:focus-ring {
-    background-color: var(--spectrum-button-logic-or-background-color-focus);
-    border-color: var(--spectrum-button-logic-or-border-color-focus);
-    color: var(--spectrum-button-logic-text-color-default);
+    background-color: var(--spectrum-logicbutton-or-background-color-focus);
+    border-color: var(--spectrum-logicbutton-or-border-color-focus);
+    color: var(--spectrum-logicbutton-text-color-default);
   }
 
   &:hover {
-    background-color: var(--spectrum-button-logic-or-background-color-hover);
-    border-color: var(--spectrum-button-logic-or-border-color-hover);
-    color: var(--spectrum-button-logic-text-color-default);
+    background-color: var(--spectrum-logicbutton-or-background-color-hover);
+    border-color: var(--spectrum-logicbutton-or-border-color-hover);
+    color: var(--spectrum-logicbutton-text-color-default);
   }
 
   &:disabled,
   &.is-disabled {
     background-color: var(--spectrum-button-secondary-background-color-disabled);
     border-color: var(--spectrum-button-secondary-border-color-disabled);
-    color: var(--spectrum-button-logic-text-color-disabled);
+    color: var(--spectrum-logicbutton-text-color-disabled);
   }
 }
 

@@ -22,13 +22,14 @@
   border-radius: 0 var(--spectrum-button-border-corner-radius-default) var(--spectrum-button-border-corner-radius-default) 0;
   border-left-width: 0;
   padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
-  padding-right: var(--spectrum-padding);
+  padding-right: calc(var(--spectrum-padding) - 2px);
 
   &::after {
     content: '';
     display: block;
-    width: 10px;
+    width: var(--spectrum-splitbutton-icon-width-default);
     height: 6px;
+    margin-top: 1px;
     background-repeat: no-repeat;
     background-position: center center;
   }
