@@ -2,18 +2,70 @@
 @import 'animation.css';
 
 :root {
-  --spectrum-loader-spinner-small-height: 16px;
-  --spectrum-loader-spinner-small-width: 16px;
-  --spectrum-loader-spinner-medium-height: 32px;
-  --spectrum-loader-spinner-medium-width: 32px;
-  --spectrum-loader-spinner-large-height: 64px;
-  --spectrum-loader-spinner-large-width: 64px;
+  --spectrum-loader-round-small-height: 16px;
+  --spectrum-loader-round-small-width: 16px;
+  --spectrum-loader-round-medium-height: 32px;
+  --spectrum-loader-round-medium-width: 32px;
+  --spectrum-loader-round-large-height: 64px;
+  --spectrum-loader-round-large-width: 64px;
+
+  --spectrum-loader-bar-label-padding: 10px;
+  --spectrum-loader-bar-label-vertical-padding: 2px;
+
+  --spectrum-loader-bar-width: 182px;
+  --spectrum-loader-bar-height: 6px;
+  --spectrum-loader-bar-label-size: 12px;
+  --spectrum-loader-bar-radius: 4px;
+
+  --spectrum-loader-bar-small-width: 148px;
+  --spectrum-loader-bar-small-height: 4px;
+  --spectrum-loader-bar-small-radius: 2px;
+
+  --spectrum-loader-bar-label-margin-side: 12px;
+  --spectrum-loader-bar-label-margin-bottom: 8px;
+}
+
+/* topdoc
+{{ loader/loader-default.yml }}
+*/
+.spectrum-Loader {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  width: var(--spectrum-loader-round-medium-width);
+  height: var(--spectrum-loader-round-medium-height);
 }
 
 /* topdoc
 {{ loader/loader-small.yml }}
 */
-.spectrum-Loader {
+.spectrum-Loader--small {
+  width: var(--spectrum-loader-round-small-width);
+  height: var(--spectrum-loader-round-small-height);
+}
+
+/* topdoc
+{{ loader/loader-large.yml }}
+*/
+.spectrum-Loader--large {
+  width: var(--spectrum-loader-round-large-width);
+  height: var(--spectrum-loader-round-large-height);
+}
+
+/* topdoc
+{{ loader/loader-full-page.yml }}
+*/
+.spectrum-Loader--fullpage {
+  width: var(--spectrum-loader-round-large-width);
+  height: var(--spectrum-loader-round-large-height);
+}
+
+/* topdoc
+{{ loader/loader-indeterminate-default.yml }}
+*/
+.spectrum-Loader--indeterminate {
   display: inline-block;
 
   background-size: auto 100%;
@@ -24,47 +76,112 @@
   animation-iteration-count: infinite;
   animation-timing-function: steps(60);
 
-  width: var(--spectrum-loader-spinner-small-width);
-  height: var(--spectrum-loader-spinner-small-height);
-
-  animation-name: spectrum-wait-spinner-small-animation;
-}
-
-/* topdoc
-{{ loader/loader-medium.yml }}
-*/
-.spectrum-Loader--medium {
-  width: var(--spectrum-loader-spinner-medium-width);
-  height: var(--spectrum-loader-spinner-medium-height);
+  width: var(--spectrum-loader-round-medium-width);
+  height: var(--spectrum-loader-round-medium-height);
 
   animation-name: spectrum-wait-spinner-medium-animation;
 }
 
 /* topdoc
-{{ loader/loader-large.yml }}
+{{ loader/loader-indeterminate-small.yml }}
 */
-.spectrum-Loader--large {
-  width: var(--spectrum-loader-spinner-large-width);
-  height: var(--spectrum-loader-spinner-large-height);
+.spectrum-Loader--indeterminate--small {
+  width: var(--spectrum-loader-round-small-width);
+  height: var(--spectrum-loader-round-small-height);
+
+  animation-name: spectrum-wait-spinner-small-animation;
+}
+
+/* topdoc
+{{ loader/loader-indeterminate-large.yml }}
+*/
+.spectrum-Loader--indeterminate--large {
+  width: var(--spectrum-loader-round-large-width);
+  height: var(--spectrum-loader-round-large-height);
 
   animation-name: spectrum-wait-spinner-large-animation;
 }
 
-.spectrum-Loader--centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/* topdoc
+{{ loader/loader-indeterminate-full-page.yml }}
+*/
+.spectrum-Loader--indeterminate--fullpage {
+  width: var(--spectrum-loader-round-large-width);
+  height: var(--spectrum-loader-round-large-height);
 
-  margin-top: calc(-1 * calc(var(--spectrum-loader-spinner-small-height) / 2));
-  margin-left: calc(-1 * calc(var(--spectrum-loader-spinner-small-width) / 2));
+  animation-name: spectrum-wait-spinner-large-animation;
+}
 
-  &.spectrum-Loader--medium {
-    margin-top: calc(-1 * calc(var(--spectrum-loader-spinner-medium-height) / 2));
-    margin-left: calc(-1 * calc(var(--spectrum-loader-spinner-medium-width) / 2));
-  }
 
-  &.spectrum-Loader--large {
-    margin-top: calc(-1 * calc(var(--spectrum-loader-spinner-large-height) / 2));
-    margin-left: calc(-1 * calc(var(--spectrum-loader-spinner-large-width) / 2));
+/* topdoc
+{{ loader/loader-bar-default.yml }}
+*/
+.spectrum-Loader--bar {
+  position: relative;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--spectrum-loader-bar-width);
+  vertical-align: top;
+  &.spectrum-Loader--side-label {
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: auto;
   }
 }
+
+.spectrum-Loader--bar-track {
+  /* Visually apply border radius to child elements */
+  overflow: hidden;
+  width: var(--spectrum-loader-bar-width);
+  height: var(--spectrum-loader-bar-height);
+  border-radius: var(--spectrum-loader-bar-radius);
+}
+
+.spectrum-Loader--bar-fill {
+  height: var(--spectrum-loader-bar-height);
+
+  transition: width 1s;
+}
+
+.spectrum-Loader--bar-label, .spectrum-Loader--bar-percentage {
+  font-size: var(--spectrum-loader-bar-label-size);
+  text-align: left;
+  margin-bottom: var(--spectrum-loader-bar-label-margin-bottom);
+}
+.spectrum-Loader--side-label {
+  .spectrum-Loader--bar-label {
+    margin-right: var(--spectrum-loader-bar-label-margin-side);
+    margin-bottom: 0;
+  }
+  .spectrum-Loader--bar-percentage {
+    order: 3;
+    text-align: right;
+    margin-left: var(--spectrum-loader-bar-label-margin-side);
+    margin-bottom: 0;
+  }
+}
+
+
+/* topdoc
+{{ loader/loader-bar-small.yml }}
+*/
+.spectrum-Loader--bar--small {
+  height: var(--spectrum-loader-bar-small-height);
+  min-width: var(--spectrum-loader-bar-small-width);
+
+  .spectrum-Loader--bar-fill {
+    height: var(--spectrum-loader-bar-small-height);
+  }
+
+  .spectrum-Loader--bar-track {
+    height: var(--spectrum-loader-bar-small-height);
+    border-radius: var(--spectrum-loader-bar-small-radius);
+  }
+}
+
+/* topdoc
+{{ loader/loader-bar-full-page.yml }}
+*/

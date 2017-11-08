@@ -1,5 +1,5 @@
 ---
-name: Loader - Round - Small
+name: Loader - Default - Small
 description: A Spectrum Loader of default type (round) in small size
 markup: |
-  <span class="spectrum-Loader"></span>
+  <div class="spectrum-Loader spectrum-Loader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>

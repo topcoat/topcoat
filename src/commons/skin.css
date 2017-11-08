@@ -10,4 +10,7 @@
 
   /* Button */
   --spectrum-button-border-focus-grow: 1px;
+
+  --spectrum-loader-round-full-page-sprite-url: 'embed/Loader_Determinate_Full-Page_64_Sprite.svg';
+  --spectrum-loader-round-indeterminate-full-page-sprite-url: 'embed/Loader_Indeterminate_Full-Page_64_Sprite.svg';
 }

@@ -1,0 +1,5 @@
+---
+name: Loader - Indeterminate - Small
+description: A Spectrum Loader of default type (round) in small size
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--small"></span>

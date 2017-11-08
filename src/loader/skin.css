@@ -1,13 +1,58 @@
+:root {
+  --spectrum-loader-background-color-fullpage: rgba(255,255,255,0.2);
+  --spectrum-loader-fill-color-fullpage: #FFFFFF;
+}
+
 
 .spectrum-Loader {
-  background-image: url(var(--spectrum-loader-spinner-sprite-url));
+  background-image: url(var(--spectrum-loader-round-medium-sprite-url));
 }
 
-.spectrum-Loader--medium {
-  background-image: url(var(--spectrum-loader-spinner-medium-sprite-url));
+.spectrum-Loader--small {
+  background-image: url(var(--spectrum-loader-round-small-sprite-url));
 }
-
 
 .spectrum-Loader--large {
-  background-image: url(var(--spectrum-loader-spinner-large-sprite-url));
+  background-image: url(var(--spectrum-loader-round-large-sprite-url));
+}
+
+.spectrum-Loader--fullpage {
+  background-image: url(var(--spectrum-loader-round-full-page-sprite-url));
+}
+
+.spectrum-Loader--indeterminate {
+  background-image: url(var(--spectrum-loader-round-indeterminate-medium-sprite-url));
+}
+
+.spectrum-Loader--indeterminate--small {
+  background-image: url(var(--spectrum-loader-round-indeterminate-small-sprite-url));
+}
+
+.spectrum-Loader--indeterminate--large {
+  background-image: url(var(--spectrum-loader-round-indeterminate-large-sprite-url));
+}
+.spectrum-Loader--indeterminate--fullpage {
+  background-image: url(var(--spectrum-loader-round-indeterminate-full-page-sprite-url));
+}
+
+.spectrum-Loader--bar-fill {
+  background: var(--spectrum-loader-blue-color-default);
+}
+
+.spectrum-Loader--bar-track {
+  background-color: var(--spectrum-loader-background-color-default);
+}
+
+.spectrum-Loader--bar--fullpage {
+  .spectrum-Loader--bar-fill {
+    background: var(--spectrum-loader-fill-color-fullpage);
+  }
+
+  .spectrum-Loader--bar-label, & .spectrum-Loader--bar-percentage {
+    color: var(--spectrum-loader-fill-color-fullpage);
+  }
+
+  .spectrum-Loader--bar-track {
+    background-color: var(--spectrum-loader-background-color-fullpage);
+  }
 }

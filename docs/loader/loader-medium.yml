@@ -1,5 +1,0 @@
----
-name: Loader - Round - Medium
-description: A Spectrum Loader of default type (round) in medium size
-markup: |
-  <span class="spectrum-Loader spectrum-Loader--medium"></span>
