@@ -1,35 +1,34 @@
 ---
-name: Tooltip - Icons
+name: Tooltip
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>Normal</span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success
-  is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--CheckmarkCircle spectrum-Tooltip-typeIcon"></span>Success</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info
-  is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info spectrum-Tooltip-typeIcon"></span>Info</span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
+    <span class="spectrum-Tooltip-label">Success</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
 
-  <br>
-  <br>
+  <br><br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error
-  is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--InfoCircle spectrum-Tooltip-typeIcon"></span>Info</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
+    <span class="spectrum-Tooltip-label">Info</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Warning</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
+    <span class="spectrum-Tooltip-label">Warning</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>

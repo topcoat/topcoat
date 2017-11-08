@@ -5,8 +5,8 @@
   --spectrum-tooltip-animation-distance: 4px;
   --spectrum-tooltip-target-offset: 3px;
   --spectrum-tooltip-max-width: 256px;
-  --spectrum-tooltip-tip-width: 8px;
-  --spectrum-tooltip-tip-height: 4px;
+  --spectrum-tooltip-tip-size: 8px;
+  --spectrum-tooltip-tip-cross: 11px;
 }
 
 .spectrum-Tooltip {
@@ -21,10 +21,11 @@
 
   width: auto;
   max-width: var(--spectrum-tooltip-max-width);
-  padding: 2px 9px;
+  padding: 2px 8px;
   border-radius: var(--spectrum-border-radius);
 
   font-size: var(--spectrum-font-size-text-label);
+  font-weight: var(--spectrum-tooltip-font-weight-default);
   line-height: var(--spectrum-line-height-text-label);
 
   &.is-open {
@@ -39,16 +40,23 @@
 .spectrum-Tooltip-tip {
   position: absolute;
   overflow: hidden;
-  width: var(--spectrum-tooltip-tip-width);
-  height: var(--spectrum-tooltip-tip-height);
+  width: var(--spectrum-tooltip-tip-cross);
+  height: var(--spectrum-tooltip-tip-cross);
   &::after {
     content: '';
-    width: 6px;
-    height: 6px;
-    top: -4px;
+    width: var(--spectrum-tooltip-tip-size);
+    height: var(--spectrum-tooltip-tip-size);
+    top: -2px;
     left: 1px;
     position: absolute;
     transform: rotate(45deg);
+  }
+}
+
+.spectrum-Tooltip--right,
+.spectrum-Tooltip--left {
+  .spectrum-Tooltip-tip {
+    top: calc(50% - calc(var(--spectrum-tooltip-tip-cross) / 2));
   }
 }
 
@@ -58,8 +66,11 @@
     @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Tooltip-tip {
-    left: -6px;
+    left: calc(var(--spectrum-tooltip-tip-size) * -1);
     transform: rotate(90deg);
+
+    /* This is a gross hack */
+    top: calc(50% - calc(calc(var(--spectrum-tooltip-tip-cross) / 2) - 0.5px));
   }
 }
 
@@ -69,16 +80,8 @@
     @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Tooltip-tip {
-    right: -6px;
+    right: calc(var(--spectrum-tooltip-tip-size) * -1);
     transform: rotate(-90deg);
-  }
-}
-
-.spectrum-Tooltip--right,
-.spectrum-Tooltip--left {
-  .spectrum-Tooltip-tip {
-    top: 50%;
-    margin-top: calc(var(--spectrum-tooltip-tip-height) / -2);
   }
 }
 
@@ -88,7 +91,7 @@
     @inherit: %spectrum-overlay--bottom--open;
   }
   .spectrum-Tooltip-tip {
-    top: -4px;
+    top: calc(var(--spectrum-tooltip-tip-size) * -1);
     transform: rotate(180deg);
   }
 }
@@ -99,7 +102,7 @@
     @inherit: %spectrum-overlay--top--open;
   }
   .spectrum-Tooltip-tip {
-    bottom: -4px;
+    bottom: calc(var(--spectrum-tooltip-tip-size) * -1);
   }
 }
 
@@ -107,7 +110,7 @@
 .spectrum-Tooltip--top {
   .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: calc(var(--spectrum-tooltip-tip-width) / -2);
+    margin-left: calc(var(--spectrum-tooltip-tip-cross) / -2);
   }
 }
 
@@ -117,8 +120,11 @@
 .spectrum-Tooltip-typeIcon {
   margin-right: var(--spectrum-button-label-icon-gap-size-default);
 
+  /* Override the size, just for these icons only */
+  font-size: 14px;
+
   /* Fix font icon alignment in Chrome on Windows, works for Mac too */
-  vertical-align: -2px;
+  vertical-align: -3px;
   line-height: 14px;
 }
 

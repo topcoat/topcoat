@@ -9,9 +9,6 @@
   }
 }
 
-/* topdoc
-{{ tooltip/tooltip-error.yml }}
-*/
 .spectrum-Tooltip--error {
   &,
   .spectrum-Tooltip-tip::after {
@@ -19,9 +16,6 @@
   }
 }
 
-/* topdoc
-{{ tooltip/tooltip-info.yml }}
-*/
 .spectrum-Tooltip--info {
   &,
   .spectrum-Tooltip-tip::after {
@@ -29,16 +23,9 @@
   }
 }
 
-/* topdoc
-{{ tooltip/tooltip-success.yml }}
-*/
 .spectrum-Tooltip--success {
   &,
   .spectrum-Tooltip-tip::after {
     background-color: var(--spectrum-tooltip-success-background-color-default);
   }
 }
-
-/* topdoc
-{{ tooltip/tooltip-links.yml }}
-*/
