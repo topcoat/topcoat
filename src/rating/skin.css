@@ -31,14 +31,9 @@
 /* topdoc
 {{ rating/rating-disabled.yml }}
 */
-.spectrum-Rating {
-  &.is-disabled {
-    .spectrum-Rating-icon {
-      background-image: url("embed/S_StarOutline_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-disabled)));
-
-      &.is-active {
-        background-image: url("embed/S_Star_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-disabled)));
-      }
-    }
-  }
+.spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
+  background-image: url("embed/S_Star_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-disabled)));
+}
+.spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) {
+  background-image: url("embed/S_StarOutline_18_N@2x.svg" param(--color var(--spectrum-rating-icon-color-disabled)));
 }
