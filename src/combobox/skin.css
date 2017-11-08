@@ -77,4 +77,19 @@
   &:invalid {
     border-color: var(--spectrum-input-invalid-border-color-default);
   }
+
+  .spectrum-ComboBox--quiet & {
+    background-color: inherit;
+
+    &:hover,
+    &.focus-ring,
+    &:active,
+    &.is-open,
+    &:invalid,
+    &.is-invalid,
+    &disabled {
+      background-color: inherit;
+    }
+  }
+
 }
