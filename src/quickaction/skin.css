@@ -7,16 +7,20 @@
   color: var(--spectrum-quickaction-text-color-default);
   box-shadow: 0 1px 3px var(--spectrum-quickaction-box-shadow-color-default);
 
-  &:hover {
-    border-color: var(--spectrum-quickaction-border-color-hover);
-    color: var(--spectrum-quickaction-text-color-hover);
+  &:focus {
+    outline: none;
   }
 
-  &:focus {
+  &:focus-ring {
     border-color: var(--spectrum-quickaction-border-color-focus);
     color: var(--spectrum-quickaction-text-color-focus);
     box-shadow: 0 0 0 1px var(--spectrum-quickaction-border-color-focus);
     outline: none;
+  }
+
+  &:hover {
+    border-color: var(--spectrum-quickaction-border-color-hover);
+    color: var(--spectrum-quickaction-text-color-hover);
   }
 
   &:active {
