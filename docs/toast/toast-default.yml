@@ -4,5 +4,12 @@ description: The default toast.
 markup: |
   <div class="spectrum-Toast">
     <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton"></button>  
+    <button class="spectrum-Toast-closeButton"></button>
+  </div>
+
+  <br>
+
+  <div class="spectrum-Toast" style="position: absolute">
+    <div class="spectrum-Toast-content">This is a toast.</div>
+    <button class="spectrum-Toast-closeButton"></button>
   </div>

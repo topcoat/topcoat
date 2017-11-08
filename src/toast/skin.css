@@ -3,11 +3,38 @@
   color: var(--spectrum-toast-text-color-default);
 }
 
+.spectrum-Toast-closeButton {
+  background-image: url("embed/S_ToastClose_@1x.svg" param(--color white));
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:focus-ring {
+    background-color: rgba(255, 255, 255, 1);
+
+    &:not(:active) {
+      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-background-color-default)));
+    }
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+
 /* topdoc
 {{ toast/toast-warning.yml }}
 */
 .spectrum-Toast--warning {
   background-color: var(--spectrum-toast-warning-background-color-default);
+
+  .spectrum-Toast-closeButton {
+    &:focus-ring:not(:active) {
+      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-warning-background-color-default)));
+    }
+  }
 }
 
 /* topdoc
@@ -15,6 +42,12 @@
 */
 .spectrum-Toast--error {
   background-color: var(--spectrum-toast-error-background-color-default);
+
+  .spectrum-Toast-closeButton {
+    &:focus-ring:not(:active) {
+      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-error-background-color-default)));
+    }
+  }
 }
 
 .spectrum-Toast--warning,
@@ -34,6 +67,12 @@
   .spectrum-Toast-typeIcon {
     background-image: url("../Alert/embed/S_Info_18_N@2x.svg" param(--color white));
   }
+
+  .spectrum-Toast-closeButton {
+    &:focus-ring:not(:active) {
+      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-info-background-color-default)));
+    }
+  }
 }
 
 /* topdoc
@@ -44,6 +83,12 @@
 
   .spectrum-Toast-typeIcon {
     background-image: url("../Alert/embed/S_CheckmarkCircle_18_N@2x.svg" param(--color white));
+  }
+
+  .spectrum-Toast-closeButton {
+    &:focus-ring:not(:active) {
+      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-success-background-color-default)));
+    }
   }
 }
 

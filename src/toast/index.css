@@ -1,31 +1,30 @@
 @import '../commons/index.css';
 
-:root {
-  --spectrum-toast-border-radius: 4px;
-  --spectrum-toast-font-size: 14px;
-}
-
 /* topdoc
 {{ toast/toast-default.yml }}
 */
 .spectrum-Toast {
   position: relative;
-  padding: 12px 18px;
-  line-height: 24px;
 
-  border-radius: var(--spectrum-toast-border-radius);
-  font-size: var(--spectrum-toast-font-size);
+  /* Ensure text vertical alignment matches the specs */
+  padding: 13px 18px 15px 18px;
+
+  border-radius: var(--spectrum-toast-border-radius-default);
+
+  font-size: var(--spectrum-toast-font-size-default);
+  font-weight: var(--spectrum-toast-font-weight-default);
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .spectrum-Toast-typeIcon {
   position: absolute;
-  left: 15px;
+  left: 16px;
   top: 15px;
 
   width: 18px;
   height: 18px;
   vertical-align: -4px;
-  margin-right: 4px;
 
   /* Support font icons */
   font-size: 18px;
@@ -37,7 +36,7 @@
 .spectrum-Toast-content {
   display: block;
 
-  padding-right: 32px;
+  padding-right: 30px;
 }
 
 .spectrum-Toast--warning,
@@ -45,7 +44,7 @@
 .spectrum-Toast--info,
 .spectrum-Toast--success {
   .spectrum-Toast-content {
-    padding-left: 24px;
+    padding-left: 28px;
   }
 }
 
@@ -62,8 +61,6 @@
 
   background-color: transparent;
 
-  background-image: url("embed/S_ToastClose_@1x.svg" param(--color white));
-
   background-size: 8px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -72,17 +69,7 @@
 
   cursor: pointer;
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  &:active {
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-
   &:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 1);
-    background-image: url("embed/S_ToastClose_@1x.svg" param(--color black));
   }
 }
