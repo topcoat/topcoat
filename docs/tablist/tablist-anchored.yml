@@ -19,5 +19,5 @@
         <label class="spectrum-Tab-label">Friday</label>
       </div>
       <!-- Apply .is-focused to element below when corresponding tab is in focus -->
-      <div class="spectrum-Tab-line" style="width:62px; left: 15px;"></div>
+      <div class="spectrum-Tab-line" style="width: 48px; left: 15px;"></div>
     </div>
