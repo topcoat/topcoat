@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 
-.spectrum-ComboBox-fieldgroup {
+.spectrum-ComboBox-fieldGroup {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
