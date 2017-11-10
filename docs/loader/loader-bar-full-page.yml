@@ -1,0 +1,15 @@
+---
+name: Loader - Bar - Full Page
+description: A Spectrum bar loader for full page overlays
+markup: |
+  <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <div>
+      <div class="spectrum-Loader--bar spectrum-Loader--bar--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-Loader--bar-label">Loading</div>
+        <div class="spectrum-Loader--bar-percentage">50%</div>
+        <div class="spectrum-Loader--bar-track">
+          <div class="spectrum-Loader--bar-fill spectrum-Loader--bar--fullpage-fill" handle="status" style="width: 50%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -4,6 +4,9 @@
 :root {
   --spectrum-accordion-icon-width: 6px;
   --spectrum-accordion-icon-height: 10px;
+  /* Subtract the size of the border since it's on the item itself */
+  --spectrum-accordion-header-height: calc(var(--spectrum-accordion-item-height-default) - var(--spectrum-accordion-item-border-size-default));
+  --spectrum-accordion-item-header-tracking: calc(var(--spectrum-accordion-item-header-tracking-default) / 100);
 }
 
 /* topdoc
@@ -34,26 +37,34 @@
   position: relative;
 
   box-sizing: border-box;
-  /* left padding takes into account the icon's size */
-  padding: 0 var(--spectrum-accordion-item-padding-default) 0 calc(var(--spectrum-accordion-item-padding-default) * 2);
+  /* left padding takes into account the icon's size as well as the focus state's left border */
+  padding: 0 var(--spectrum-accordion-item-padding-default) 0 calc(calc(var(--spectrum-accordion-item-padding-default) * 2) + 2px);
   margin: 0;
 
-  /* Subtract the size of the border since it's on the item itself */
-  height: calc(var(--spectrum-accordion-item-height-default) - (var(--spectrum-accordion-item-border-size-default) * 2));
-
-  /* For focus state */
-  border-left: var(--spectrum-accordion-item-focus-border-size-default) solid transparent;
+  height: var(--spectrum-accordion-header-height);
 
   font-size: var(--spectrum-accordion-item-header-font-size-default);
   text-transform: uppercase;
-  line-height: var(--spectrum-accordion-item-height-default);
+  line-height: var(--spectrum-accordion-header-height);
+  letter-spacing: var(--spectrum-accordion-item-header-tracking);
 
-  overflow: ellipsis;
+  text-overflow: ellipsis;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
 
   &:focus {
     outline: none;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: -var(--spectrum-accordion-item-border-size-default);
+
+      height: calc(var(--spectrum-accordion-item-height-default) + var(--spectrum-accordion-item-border-size-default));
+      width: var(--spectrum-accordion-item-focus-border-size-default);
+    }
   }
 
   &::before {
@@ -68,7 +79,7 @@
 
     position: absolute;
     left: var(--spectrum-accordion-icon-spacing-default);
-    top: calc(var(--spectrum-accordion-item-height-default) / 2 - var(--spectrum-accordion-icon-height) / 2);
+    top: calc(var(--spectrum-accordion-header-height) / 2 - var(--spectrum-accordion-icon-height) / 2);
 
     transition: transform ease var(--spectrum-transition-time);
   }
@@ -83,6 +94,11 @@
   &.is-open {
     .spectrum-Accordion-header::before {
       transform: rotate(90deg);
+    }
+
+    .spectrum-Accordion-header::after {
+      /* No bottom border when open, so be less tall */
+      height: var(--spectrum-accordion-item-height-default);
     }
 
     .spectrum-Accordion-content {

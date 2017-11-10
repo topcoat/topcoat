@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3636 36" enable-background="new 0 0 3636 36" width="3636" height="36">
+  <style type="text/css">
+    .track {
+      fill: transparent;
+      stroke: #3E3E3E;
+      stroke-width: 3;
+    }
+    .fill {
+      fill: transparent;
+      stroke: #1473e6;
+      stroke-width: 3;
+      stroke-dasharray: 92;
+      transform: rotate(270deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
+  <circle class="track" cx="18" cy="18" r="14.5"/><circle class="fill" cx="18" cy="18" r="14.5" stroke-dashoffset="91.11"/>
+  <circle class="track" cx="54" cy="18" r="14.5"/><circle class="fill" cx="54" cy="18" r="14.5" stroke-dashoffset="90.2"/>
+  <circle class="track" cx="90" cy="18" r="14.5"/><circle class="fill" cx="90" cy="18" r="14.5" stroke-dashoffset="89.28"/>
+  <circle class="track" cx="126" cy="18" r="14.5"/><circle class="fill" cx="126" cy="18" r="14.5" stroke-dashoffset="88.37"/>
+  <circle class="track" cx="162" cy="18" r="14.5"/><circle class="fill" cx="162" cy="18" r="14.5" stroke-dashoffset="87.46"/>
+  <circle class="track" cx="198" cy="18" r="14.5"/><circle class="fill" cx="198" cy="18" r="14.5" stroke-dashoffset="86.55"/>
+  <circle class="track" cx="234" cy="18" r="14.5"/><circle class="fill" cx="234" cy="18" r="14.5" stroke-dashoffset="85.64"/>
+  <circle class="track" cx="270" cy="18" r="14.5"/><circle class="fill" cx="270" cy="18" r="14.5" stroke-dashoffset="84.73"/>
+  <circle class="track" cx="306" cy="18" r="14.5"/><circle class="fill" cx="306" cy="18" r="14.5" stroke-dashoffset="83.82"/>
+  <circle class="track" cx="342" cy="18" r="14.5"/><circle class="fill" cx="342" cy="18" r="14.5" stroke-dashoffset="82.91"/>
+  <circle class="track" cx="378" cy="18" r="14.5"/><circle class="fill" cx="378" cy="18" r="14.5" stroke-dashoffset="82"/>
+  <circle class="track" cx="414" cy="18" r="14.5"/><circle class="fill" cx="414" cy="18" r="14.5" stroke-dashoffset="81.08"/>
+  <circle class="track" cx="450" cy="18" r="14.5"/><circle class="fill" cx="450" cy="18" r="14.5" stroke-dashoffset="80.17"/>
+  <circle class="track" cx="486" cy="18" r="14.5"/><circle class="fill" cx="486" cy="18" r="14.5" stroke-dashoffset="79.26"/>
+  <circle class="track" cx="522" cy="18" r="14.5"/><circle class="fill" cx="522" cy="18" r="14.5" stroke-dashoffset="78.35"/>
+  <circle class="track" cx="558" cy="18" r="14.5"/><circle class="fill" cx="558" cy="18" r="14.5" stroke-dashoffset="77.44"/>
+  <circle class="track" cx="594" cy="18" r="14.5"/><circle class="fill" cx="594" cy="18" r="14.5" stroke-dashoffset="76.53"/>
+  <circle class="track" cx="630" cy="18" r="14.5"/><circle class="fill" cx="630" cy="18" r="14.5" stroke-dashoffset="75.62"/>
+  <circle class="track" cx="666" cy="18" r="14.5"/><circle class="fill" cx="666" cy="18" r="14.5" stroke-dashoffset="74.71"/>
+  <circle class="track" cx="702" cy="18" r="14.5"/><circle class="fill" cx="702" cy="18" r="14.5" stroke-dashoffset="73.8"/>
+  <circle class="track" cx="738" cy="18" r="14.5"/><circle class="fill" cx="738" cy="18" r="14.5" stroke-dashoffset="72.88"/>
+  <circle class="track" cx="774" cy="18" r="14.5"/><circle class="fill" cx="774" cy="18" r="14.5" stroke-dashoffset="71.97"/>
+  <circle class="track" cx="810" cy="18" r="14.5"/><circle class="fill" cx="810" cy="18" r="14.5" stroke-dashoffset="71.06"/>
+  <circle class="track" cx="846" cy="18" r="14.5"/><circle class="fill" cx="846" cy="18" r="14.5" stroke-dashoffset="70.15"/>
+  <circle class="track" cx="882" cy="18" r="14.5"/><circle class="fill" cx="882" cy="18" r="14.5" stroke-dashoffset="69.24"/>
+  <circle class="track" cx="918" cy="18" r="14.5"/><circle class="fill" cx="918" cy="18" r="14.5" stroke-dashoffset="68.33"/>
+  <circle class="track" cx="954" cy="18" r="14.5"/><circle class="fill" cx="954" cy="18" r="14.5" stroke-dashoffset="67.42"/>
+  <circle class="track" cx="990" cy="18" r="14.5"/><circle class="fill" cx="990" cy="18" r="14.5" stroke-dashoffset="66.51"/>
+  <circle class="track" cx="1026" cy="18" r="14.5"/><circle class="fill" cx="1026" cy="18" r="14.5" stroke-dashoffset="65.6"/>
+  <circle class="track" cx="1062" cy="18" r="14.5"/><circle class="fill" cx="1062" cy="18" r="14.5" stroke-dashoffset="64.69"/>
+  <circle class="track" cx="1098" cy="18" r="14.5"/><circle class="fill" cx="1098" cy="18" r="14.5" stroke-dashoffset="63.77"/>
+  <circle class="track" cx="1134" cy="18" r="14.5"/><circle class="fill" cx="1134" cy="18" r="14.5" stroke-dashoffset="62.86"/>
+  <circle class="track" cx="1170" cy="18" r="14.5"/><circle class="fill" cx="1170" cy="18" r="14.5" stroke-dashoffset="61.95"/>
+  <circle class="track" cx="1206" cy="18" r="14.5"/><circle class="fill" cx="1206" cy="18" r="14.5" stroke-dashoffset="61.04"/>
+  <circle class="track" cx="1242" cy="18" r="14.5"/><circle class="fill" cx="1242" cy="18" r="14.5" stroke-dashoffset="60.13"/>
+  <circle class="track" cx="1278" cy="18" r="14.5"/><circle class="fill" cx="1278" cy="18" r="14.5" stroke-dashoffset="59.22"/>
+  <circle class="track" cx="1314" cy="18" r="14.5"/><circle class="fill" cx="1314" cy="18" r="14.5" stroke-dashoffset="58.31"/>
+  <circle class="track" cx="1350" cy="18" r="14.5"/><circle class="fill" cx="1350" cy="18" r="14.5" stroke-dashoffset="57.4"/>
+  <circle class="track" cx="1386" cy="18" r="14.5"/><circle class="fill" cx="1386" cy="18" r="14.5" stroke-dashoffset="56.49"/>
+  <circle class="track" cx="1422" cy="18" r="14.5"/><circle class="fill" cx="1422" cy="18" r="14.5" stroke-dashoffset="55.57"/>
+  <circle class="track" cx="1458" cy="18" r="14.5"/><circle class="fill" cx="1458" cy="18" r="14.5" stroke-dashoffset="54.66"/>
+  <circle class="track" cx="1494" cy="18" r="14.5"/><circle class="fill" cx="1494" cy="18" r="14.5" stroke-dashoffset="53.75"/>
+  <circle class="track" cx="1530" cy="18" r="14.5"/><circle class="fill" cx="1530" cy="18" r="14.5" stroke-dashoffset="52.84"/>
+  <circle class="track" cx="1566" cy="18" r="14.5"/><circle class="fill" cx="1566" cy="18" r="14.5" stroke-dashoffset="51.93"/>
+  <circle class="track" cx="1602" cy="18" r="14.5"/><circle class="fill" cx="1602" cy="18" r="14.5" stroke-dashoffset="51.02"/>
+  <circle class="track" cx="1638" cy="18" r="14.5"/><circle class="fill" cx="1638" cy="18" r="14.5" stroke-dashoffset="50.11"/>
+  <circle class="track" cx="1674" cy="18" r="14.5"/><circle class="fill" cx="1674" cy="18" r="14.5" stroke-dashoffset="49.2"/>
+  <circle class="track" cx="1710" cy="18" r="14.5"/><circle class="fill" cx="1710" cy="18" r="14.5" stroke-dashoffset="48.29"/>
+  <circle class="track" cx="1746" cy="18" r="14.5"/><circle class="fill" cx="1746" cy="18" r="14.5" stroke-dashoffset="47.38"/>
+  <circle class="track" cx="1782" cy="18" r="14.5"/><circle class="fill" cx="1782" cy="18" r="14.5" stroke-dashoffset="46.46"/>
+  <circle class="track" cx="1818" cy="18" r="14.5"/><circle class="fill" cx="1818" cy="18" r="14.5" stroke-dashoffset="45.55"/>
+  <circle class="track" cx="1854" cy="18" r="14.5"/><circle class="fill" cx="1854" cy="18" r="14.5" stroke-dashoffset="44.64"/>
+  <circle class="track" cx="1890" cy="18" r="14.5"/><circle class="fill" cx="1890" cy="18" r="14.5" stroke-dashoffset="43.73"/>
+  <circle class="track" cx="1926" cy="18" r="14.5"/><circle class="fill" cx="1926" cy="18" r="14.5" stroke-dashoffset="42.82"/>
+  <circle class="track" cx="1962" cy="18" r="14.5"/><circle class="fill" cx="1962" cy="18" r="14.5" stroke-dashoffset="41.91"/>
+  <circle class="track" cx="1998" cy="18" r="14.5"/><circle class="fill" cx="1998" cy="18" r="14.5" stroke-dashoffset="41"/>
+  <circle class="track" cx="2034" cy="18" r="14.5"/><circle class="fill" cx="2034" cy="18" r="14.5" stroke-dashoffset="40.09"/>
+  <circle class="track" cx="2070" cy="18" r="14.5"/><circle class="fill" cx="2070" cy="18" r="14.5" stroke-dashoffset="39.18"/>
+  <circle class="track" cx="2106" cy="18" r="14.5"/><circle class="fill" cx="2106" cy="18" r="14.5" stroke-dashoffset="38.26"/>
+  <circle class="track" cx="2142" cy="18" r="14.5"/><circle class="fill" cx="2142" cy="18" r="14.5" stroke-dashoffset="37.35"/>
+  <circle class="track" cx="2178" cy="18" r="14.5"/><circle class="fill" cx="2178" cy="18" r="14.5" stroke-dashoffset="36.44"/>
+  <circle class="track" cx="2214" cy="18" r="14.5"/><circle class="fill" cx="2214" cy="18" r="14.5" stroke-dashoffset="35.53"/>
+  <circle class="track" cx="2250" cy="18" r="14.5"/><circle class="fill" cx="2250" cy="18" r="14.5" stroke-dashoffset="34.62"/>
+  <circle class="track" cx="2286" cy="18" r="14.5"/><circle class="fill" cx="2286" cy="18" r="14.5" stroke-dashoffset="33.71"/>
+  <circle class="track" cx="2322" cy="18" r="14.5"/><circle class="fill" cx="2322" cy="18" r="14.5" stroke-dashoffset="32.8"/>
+  <circle class="track" cx="2358" cy="18" r="14.5"/><circle class="fill" cx="2358" cy="18" r="14.5" stroke-dashoffset="31.89"/>
+  <circle class="track" cx="2394" cy="18" r="14.5"/><circle class="fill" cx="2394" cy="18" r="14.5" stroke-dashoffset="30.98"/>
+  <circle class="track" cx="2430" cy="18" r="14.5"/><circle class="fill" cx="2430" cy="18" r="14.5" stroke-dashoffset="30.07"/>
+  <circle class="track" cx="2466" cy="18" r="14.5"/><circle class="fill" cx="2466" cy="18" r="14.5" stroke-dashoffset="29.15"/>
+  <circle class="track" cx="2502" cy="18" r="14.5"/><circle class="fill" cx="2502" cy="18" r="14.5" stroke-dashoffset="28.24"/>
+  <circle class="track" cx="2538" cy="18" r="14.5"/><circle class="fill" cx="2538" cy="18" r="14.5" stroke-dashoffset="27.33"/>
+  <circle class="track" cx="2574" cy="18" r="14.5"/><circle class="fill" cx="2574" cy="18" r="14.5" stroke-dashoffset="26.42"/>
+  <circle class="track" cx="2610" cy="18" r="14.5"/><circle class="fill" cx="2610" cy="18" r="14.5" stroke-dashoffset="25.51"/>
+  <circle class="track" cx="2646" cy="18" r="14.5"/><circle class="fill" cx="2646" cy="18" r="14.5" stroke-dashoffset="24.6"/>
+  <circle class="track" cx="2682" cy="18" r="14.5"/><circle class="fill" cx="2682" cy="18" r="14.5" stroke-dashoffset="23.69"/>
+  <circle class="track" cx="2718" cy="18" r="14.5"/><circle class="fill" cx="2718" cy="18" r="14.5" stroke-dashoffset="22.78"/>
+  <circle class="track" cx="2754" cy="18" r="14.5"/><circle class="fill" cx="2754" cy="18" r="14.5" stroke-dashoffset="21.87"/>
+  <circle class="track" cx="2790" cy="18" r="14.5"/><circle class="fill" cx="2790" cy="18" r="14.5" stroke-dashoffset="20.95"/>
+  <circle class="track" cx="2826" cy="18" r="14.5"/><circle class="fill" cx="2826" cy="18" r="14.5" stroke-dashoffset="20.04"/>
+  <circle class="track" cx="2862" cy="18" r="14.5"/><circle class="fill" cx="2862" cy="18" r="14.5" stroke-dashoffset="19.13"/>
+  <circle class="track" cx="2898" cy="18" r="14.5"/><circle class="fill" cx="2898" cy="18" r="14.5" stroke-dashoffset="18.22"/>
+  <circle class="track" cx="2934" cy="18" r="14.5"/><circle class="fill" cx="2934" cy="18" r="14.5" stroke-dashoffset="17.31"/>
+  <circle class="track" cx="2970" cy="18" r="14.5"/><circle class="fill" cx="2970" cy="18" r="14.5" stroke-dashoffset="16.4"/>
+  <circle class="track" cx="3006" cy="18" r="14.5"/><circle class="fill" cx="3006" cy="18" r="14.5" stroke-dashoffset="15.49"/>
+  <circle class="track" cx="3042" cy="18" r="14.5"/><circle class="fill" cx="3042" cy="18" r="14.5" stroke-dashoffset="14.58"/>
+  <circle class="track" cx="3078" cy="18" r="14.5"/><circle class="fill" cx="3078" cy="18" r="14.5" stroke-dashoffset="13.67"/>
+  <circle class="track" cx="3114" cy="18" r="14.5"/><circle class="fill" cx="3114" cy="18" r="14.5" stroke-dashoffset="12.75"/>
+  <circle class="track" cx="3150" cy="18" r="14.5"/><circle class="fill" cx="3150" cy="18" r="14.5" stroke-dashoffset="11.84"/>
+  <circle class="track" cx="3186" cy="18" r="14.5"/><circle class="fill" cx="3186" cy="18" r="14.5" stroke-dashoffset="10.93"/>
+  <circle class="track" cx="3222" cy="18" r="14.5"/><circle class="fill" cx="3222" cy="18" r="14.5" stroke-dashoffset="10.02"/>
+  <circle class="track" cx="3258" cy="18" r="14.5"/><circle class="fill" cx="3258" cy="18" r="14.5" stroke-dashoffset="9.11"/>
+  <circle class="track" cx="3294" cy="18" r="14.5"/><circle class="fill" cx="3294" cy="18" r="14.5" stroke-dashoffset="8.2"/>
+  <circle class="track" cx="3330" cy="18" r="14.5"/><circle class="fill" cx="3330" cy="18" r="14.5" stroke-dashoffset="7.29"/>
+  <circle class="track" cx="3366" cy="18" r="14.5"/><circle class="fill" cx="3366" cy="18" r="14.5" stroke-dashoffset="6.38"/>
+  <circle class="track" cx="3402" cy="18" r="14.5"/><circle class="fill" cx="3402" cy="18" r="14.5" stroke-dashoffset="5.47"/>
+  <circle class="track" cx="3438" cy="18" r="14.5"/><circle class="fill" cx="3438" cy="18" r="14.5" stroke-dashoffset="4.56"/>
+  <circle class="track" cx="3474" cy="18" r="14.5"/><circle class="fill" cx="3474" cy="18" r="14.5" stroke-dashoffset="3.64"/>
+  <circle class="track" cx="3510" cy="18" r="14.5"/><circle class="fill" cx="3510" cy="18" r="14.5" stroke-dashoffset="2.73"/>
+  <circle class="track" cx="3546" cy="18" r="14.5"/><circle class="fill" cx="3546" cy="18" r="14.5" stroke-dashoffset="1.82"/>
+  <circle class="track" cx="3582" cy="18" r="14.5"/><circle class="fill" cx="3582" cy="18" r="14.5" stroke-dashoffset="0.91"/>
+  <circle class="track" cx="3618" cy="18" r="14.5"/><circle class="fill" cx="3618" cy="18" r="14.5" stroke-dashoffset="0"/>
+</svg>

@@ -1,6 +1,10 @@
 .spectrum-Breadcrumb {
   color: var(--spectrum-breadcrumb-text-color-default);
 
+  &::after {
+    background-image: url("embed/Breadcrumb-Chevron.svg" param(--color var(--spectrum-breadcrumb-chevron-icon-color-default)));
+  }
+
   .spectrum-Breadcrumb-link {
     color: inherit;
     text-decoration: none;
@@ -18,10 +22,6 @@
     &:active {
       color: var(--spectrum-breadcrumb-text-color-active);
       border-bottom: 0;
-    }
-
-    &::after {
-      background-image: url("embed/Breadcrumb-Chevron.svg" param(--color var(--spectrum-breadcrumb-text-color-default)));
     }
   }
 

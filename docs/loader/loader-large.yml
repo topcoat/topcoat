@@ -1,0 +1,5 @@
+---
+name: Loader - Default - Large
+description: A Spectrum Loader of default type (round) in large size
+markup: |
+  <div class="spectrum-Loader spectrum-Loader--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>

@@ -6,13 +6,12 @@
 @import 'alert/index.css';
 @import 'checkbox/index.css';
 @import 'label/index.css';
-@import 'progress/index.css';
 @import 'radio/index.css';
 @import 'fieldgroup/index.css';
 @import 'textfield/index.css';
-@import 'inputgroup/index.css';
+@import 'combobox/index.css';
 @import 'tooltip/index.css';
-@import 'wait/index.css';
+@import 'loader/index.css';
 @import 'toast/index.css';
 @import 'underlay/index.css';
 @import 'dialog/index.css';
@@ -20,7 +19,7 @@
 @import 'tablist/index.css';
 @import 'steplist/index.css';
 @import 'toggle/index.css';
-@import 'list/index.css';
+@import 'selectlist/index.css';
 @import 'flyout/index.css';
 @import 'dropdown/index.css';
 @import 'popover/index.css';
@@ -29,7 +28,6 @@
 @import 'actionmenu/index.css';
 @import 'well/index.css';
 @import 'fieldlabel/index.css';
-@import 'decoratedtextfield/index.css';
 @import 'search/index.css';
 @import 'stepper/index.css';
 @import 'calendar/index.css';

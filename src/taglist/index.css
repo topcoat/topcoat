@@ -12,9 +12,6 @@
 /* topdoc
 {{ taglist/taglist-icon.yml }}
 */
-/* topdoc
-{{ taglist/taglist-quiet.yml }}
-*/
 
 :root {
   --spectrum-tag-height-default: 24px;
@@ -35,9 +32,16 @@
   & > .spectrum-Tag {
     margin: 0 var(--spectrum-tag-margin-default) var(--spectrum-tag-margin-default) 0;
   }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .spectrum-Tag {
+  float: left;
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
@@ -98,4 +102,10 @@
 .spectrum-Tag-icon {
   margin-right: var(--spectrum-tag-margin-default);
   font-size: var(--spectrum-tag-icon-size-default);
+}
+
+.spectrum-Tag-icon,
+.spectrum-Tag-avatar {
+  /* Move it 2px to the left cause Nate says so */
+  margin-left: -2px;
 }

@@ -1,58 +1,81 @@
 @import '../commons/index.css';
 
 .spectrum-Breadcrumbs {
-  display: block;
+  display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .spectrum-Breadcrumb {
-  display: inline-block;
+  display: block;
+  float: left;
+
   position: relative;
+
   margin-right: var(--spectrum-breadcrumb-margin-default);
+
   font-size: var(--spectrum-breadcrumb-font-size-default);
+  font-weight: var(--spectrum-breadcrumb-font-weight-default);
+
+  &::after {
+    position: absolute;
+    top: calc(50% - calc(calc(var(--spectrum-breadcrumb-chevron-icon-height-default) / 2) - 1px));
+    right: calc(calc(var(--spectrum-breadcrumb-margin-default) / -2) - calc(var(--spectrum-breadcrumb-chevron-icon-width-default) / 2));
+
+    width: var(--spectrum-breadcrumb-chevron-icon-width-default);
+    height: var(--spectrum-breadcrumb-chevron-icon-height-default);
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: scale(1);
+
+    opacity: 1;
+
+    content: '';
+  }
 
   .spectrum-Breadcrumb-link {
     cursor: default;
+
     &[href],
     &[tabindex="0"] {
       cursor: pointer;
     }
-    &::after {
-        position: absolute;
-        top: var(--spectrum-breadcrumb-chevron-icon-height-default);
-        right: calc(var(--spectrum-breadcrumb-font-size-default) * -1);
-        width: var(--spectrum-breadcrumb-chevron-icon-width-default);
-        height: var(--spectrum-breadcrumb-chevron-icon-height-default);
-        background-repeat: no-repeat;
-        background-position: center;
-        transform:scale(1);
-        opacity:1;
-        content:'';
-    }
   }
 
   &:last-of-type {
-    .spectrum-Breadcrumb-link {
-      &::after {
-        display: none;
-      }
+    &::after {
+      display: none;
     }
   }
 }
 
 .spectrum-Breadcrumbs--title .spectrum-Breadcrumb {
   &:last-of-type {
+    /* Clear the floats so we drop to a new line */
+    clear: left;
+
     display: block;
+
+    margin: var(--spectrum-breadcrumb-title-margin-default);
+
     font-size: var(--spectrum-breadcrumb-title-active-font-size-default);
     font-weight: var(--spectrum-breadcrumb-title-active-font-weight-default);
     line-height: var(--spectrum-breadcrumb-title-active-line-height-default);
-    margin: var(--spectrum-breadcrumb-title-margin-default);
   }
+
   .spectrum-Heading--page-title {
+    margin: 0;
+
     font-size: inherit;
     font-weight: inherit;
-    margin: 0;
   }
 }

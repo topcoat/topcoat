@@ -19,5 +19,5 @@
       <div class="spectrum-Tab" tabindex="0">
         <label class="spectrum-Tab-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="width:36px; left: 8px;"></div>
+      <div class="spectrum-Tab-line" style="width: 28px; left: 8px;"></div>
     </div>

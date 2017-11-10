@@ -4,7 +4,10 @@
 @import '../commons/skin.css';
 
 :root {
-  --spectrum-wait-spinner-medium-sprite-url: 'embed/Spinner_Dark_32_Sprite.svg';
-  --spectrum-wait-spinner-large-sprite-url: 'embed/Spinner_Dark_64_Sprite.svg';
-  --spectrum-wait-dots-sprite-url: 'embed/Dots_Dark.svg';
+  --spectrum-loader-round-small-sprite-url: 'embed/Loader_Determinate_Dark_16_Sprite.svg';
+  --spectrum-loader-round-medium-sprite-url: 'embed/Loader_Determinate_Dark_32_Sprite.svg';
+  --spectrum-loader-round-large-sprite-url: 'embed/Loader_Determinate_Dark_64_Sprite.svg';
+  --spectrum-loader-round-indeterminate-small-sprite-url: 'embed/Loader_Indeterminate_Dark_16_Sprite.svg';
+  --spectrum-loader-round-indeterminate-medium-sprite-url: 'embed/Loader_Indeterminate_Dark_32_Sprite.svg';
+  --spectrum-loader-round-indeterminate-large-sprite-url: 'embed/Loader_Indeterminate_Dark_64_Sprite.svg';
 }

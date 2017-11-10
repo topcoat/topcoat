@@ -1,5 +1,0 @@
----
-name: Wait - Default (Radial) - Small
-description: A Spectrum Wait of default type (radial) in default size (small)
-markup: |
-  <span class="spectrum-Wait"></span>

@@ -1,8 +1,0 @@
----
-name: Tooltip - Error
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
-    <span class="spectrum-Tooltip-label">Error Tooltip</span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>

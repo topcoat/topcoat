@@ -1,0 +1,51 @@
+name: Combo Box
+description: A combo box uses the input group component to display a field with a button next to it
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-ComboBox spectrum-ComboBox">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-ComboBox spectrum-ComboBox is-open">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-ComboBox spectrum-ComboBox is-disabled">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield" disabled>
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button" aria-haspopup="true" disabled>
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-ComboBox spectrum-ComboBox is-invalid">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield is-invalid">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button is-invalid" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+  </div>

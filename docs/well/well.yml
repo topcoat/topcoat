@@ -9,4 +9,11 @@ markup: |
   <strong>Benjamin Franklin</strong>
   <br><br>
   Well said Ben!
+  <span class="spectrum-Well">
+  <em>Well done is better than well said.</em>
+  <br>
+  <strong>Benjamin Franklin</strong>
+  <br><br>
+  Well said Ben!
+  </span>
   </span>

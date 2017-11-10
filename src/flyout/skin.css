@@ -1,7 +1,0 @@
-/* topdoc
-{{ flyout/flyout-default.yml }}
-*/
-.spectrum-Flyout {
-  border-color: var(--spectrum-flyout-border-color-default);
-  box-shadow: 0 0 3px var(--spectrum-flyout-shadow-color-default);
-}

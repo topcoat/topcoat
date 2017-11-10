@@ -11,10 +11,15 @@
 
   margin: 0;
   padding: 0;
+
+  /* Friends should align to the top of the tabs */
+  vertical-align: top;
 }
 
 .spectrum-Tab {
   position: relative;
+
+  box-sizing: border-box;
 
   /* Float above the tab line */
   z-index: 1;
@@ -33,6 +38,9 @@
 
 .spectrum-Tab-label {
   cursor: pointer;
+  vertical-align: top;
+  display: inline-block;
+  padding: 2px 0;
 }
 
 .spectrum-Tab-line {
@@ -44,13 +52,16 @@
   transition: transform var(--spectrum-transition-time) ease-in-out;
   left: 0;
   transform-origin: top left;
+
+  border-radius: 2px;
 }
 
  .spectrum-TabList--page,
  .spectrum-TabList--panel {
   .spectrum-Tab {
     margin-bottom: var(--spectrum-tablist-horizontal-tabline-height-default);
-    &:focus {
+
+    &:focus-ring {
       border-radius: var(--spectrum-tablist-tab-item-border-corner-radius-default);
     }
   }
@@ -60,25 +71,27 @@
   .spectrum-Tab-label {
     font-size: var(--spectrum-tablist-panel-tab-item-label-font-size-default);
     font-weight: var(--spectrum-tablist-panel-tab-item-label-font-weight-default);
+    letter-spacing: var(--spectrum-tablist-panel-tab-item-label-letter-spacing-default);
     text-transform: uppercase;
   }
 
   .spectrum-Tab-icon {
     float: left;
 
-    margin-right: 7px;
-
     /* Ensure the label doesn't drop down */
     display: block;
-    vertical-align: middle;
 
     /* Support SVG icons */
-    width: var(--spectrum-tablist-icon-size);
-    height: var(--spectrum-tablist-icon-size);
+    /*width: var(--spectrum-tablist-icon-size);*/
+    /*height: var(--spectrum-tablist-icon-size);*/
 
     /* Support font icons */
-    font-size: var(--spectrum-tablist-icon-size);
-    line-height: var(--spectrum-tablist-icon-size);
+    /*font-size: var(--spectrum-tablist-icon-size);*/
+    /*line-height: var(--spectrum-tablist-icon-size);*/
+
+    & + .spectrum-Tab-label {
+      margin-left: 7px;
+    }
   }
 }
 
@@ -96,7 +109,7 @@
 
   .spectrum-Tab-line {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: var(--spectrum-tablist-horizontal-tabline-width-default);
     height: var(--spectrum-tablist-horizontal-tabline-height-default);
   }
@@ -109,6 +122,7 @@
 
     .spectrum-Tab-label {
       text-transform: capitalize;
+      padding: 0;
     }
   }
 
@@ -118,11 +132,13 @@
 
     .spectrum-Tab {
       margin: 0px 16px;
-      padding-bottom: 8px;
+      height: 46px;
     }
 
     .spectrum-Tab-label {
       text-transform: capitalize;
+      line-height: 46px;
+      padding: 0;
     }
 
     .spectrum-Tab-line {
@@ -133,7 +149,12 @@
   &.spectrum-TabList--panel {
     .spectrum-Tab {
       margin-right: var(--spectrum-tablist-panel-horizontal-tab-item-margin-right-default);
-      height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);
+      /*height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);*/
+      height: auto;
+    }
+    .spectrum-Tab-icon {
+      margin-top: 4px;
+      margin-bottom: 4px;
     }
   }
 }
@@ -142,7 +163,7 @@
   .spectrum-Tab {
     line-height: normal;
 
-    padding: 1px 6px 5px 6px;
+    padding: 3px 7px 3px 7px;
   }
 }
 
@@ -160,8 +181,6 @@
     display: inline-block;
     text-overflow: ellipsis;
     vertical-align: top;
-    margin-top: 8px;
-    margin-bottom: 8px;
   }
 
   .spectrum-Tab-line {
@@ -175,10 +194,11 @@
   &.spectrum-TabList--panel {
     .spectrum-Tab {
       height: var(--spectrum-tablist-panel-vertical-tab-item-height-default);
+      margin-bottom: 6px;
     }
     .spectrum-Tab-icon {
-      margin-top: 6px;
-      margin-bottom: 6px;
+      margin-top: 3px;
+      margin-bottom: 3px;
     }
   }
 }

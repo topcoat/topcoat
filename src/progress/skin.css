@@ -1,8 +1,0 @@
-.spectrum-Progress-bar {
-  background-color: var(--spectrum-loader-background-color-default);
-}
-
-.spectrum-Progress-status,
-.spectrum-Progress--indeterminate .spectrum-Progress-bar::after {
-  background: var(--spectrum-loader-blue-color-default);
-}

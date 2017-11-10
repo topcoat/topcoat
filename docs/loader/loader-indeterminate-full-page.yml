@@ -1,0 +1,7 @@
+---
+name: Loader - Indeterminate - Full Page
+description: An indeterminate Spectrum loader of default type (round) for full page overlays
+markup: |
+  <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--fullpage"></span>
+  </div>

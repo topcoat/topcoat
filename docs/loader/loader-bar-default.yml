@@ -1,0 +1,30 @@
+---
+name: Loader - Bar - Default
+description: A Spectrum bar loader
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Loader--bar-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--side-label" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>

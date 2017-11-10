@@ -3,16 +3,16 @@
   description: An editable taglist.
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 1</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-disabled" role="listitem">
+      <div class="spectrum-Tag is-disabled" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" tabindex="-1" disabled></button>
       </div>
     </div>
