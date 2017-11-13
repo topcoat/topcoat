@@ -1,0 +1,120 @@
+---
+name: Miller - Default
+description: The default spectrum miller column
+markup: |
+  <div class="spectrum-MillerColumns">
+    <ul class="spectrum-MillerColumn">
+      <li class="spectrum-MillerColumn-item is-branch is-branch-selectable" tabindex="0">
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-0">
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 1</span>
+        </span>
+      </li>
+      <li class="spectrum-MillerColumn-item is-branch is-branch-selectable is-selected" tabindex="0">
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-1" checked>
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 2</span>
+        </span>
+      </li>
+      <li class="spectrum-MillerColumn-item is-branch is-branch-selectable" tabindex="0">
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-2">
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+        <span class="spectrum-MillerColumn-item-content">
+          <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+          <span class="spectrum-MillerColumn-item-label">Action 3</span>
+        </span>
+      </li>
+    </ul>
+    <ul class="spectrum-MillerColumn">
+      <li class="spectrum-MillerColumn-item is-branch is-branch-selectable" tabindex="0">
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-0">
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 1</span>
+        </span>
+      </li>
+      <li class="spectrum-MillerColumn-item is-branch-selectable is-selected" tabindex="0">
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-1" checked>
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 2</span>
+        </span>
+      </li>
+      <li class="spectrum-MillerColumn-item is-branch-selectable is-selected" tabindex="0">
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-2" checked>
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+        <span class="spectrum-MillerColumn-item-content">
+          <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+          <span class="spectrum-MillerColumn-item-content-label">Action 3</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
+  Files select
+  <div class="spectrum-MillerColumns">
+    <ul class="spectrum-MillerColumn">
+      <li class="spectrum-MillerColumn-item is-branch" tabindex="0">
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 1</span>
+        </span>
+      </li>
+      <li class="spectrum-MillerColumn-item" tabindex="0">
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 2</span>
+        </span>
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-1">
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+      </li>
+      <li class="spectrum-MillerColumn-item is-navigated is-branch" tabindex="0">
+        <span class="spectrum-MillerColumn-item-content">
+          <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+          <span class="spectrum-MillerColumn-item-content-label">Action 3</span></span>
+        </span>
+      </li>
+    </ul>
+
+    <ul class="spectrum-MillerColumn">
+      <li class="spectrum-MillerColumn-item is-branch" tabindex="0">
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 1</span>
+        </span>
+      </li>
+      <li class="spectrum-MillerColumn-item" tabindex="0">
+        <span class="spectrum-MillerColumn-item-content">
+          <span class="spectrum-MillerColumn-item-content-label">Action 2</span>
+        </span>
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-1">
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+      </li>
+      <li class="spectrum-MillerColumn-item is-selected" tabindex="0">
+          <span class="spectrum-MillerColumn-item-content">
+            <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+            <span class="spectrum-MillerColumn-item-content-label">Action 3</span>
+          </span>
+        <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
+          <input type="checkbox" class="spectrum-Checkbox-input spectrum-MillerColumn-item-checkBox-input" id="checkbox-2" checked>
+          <span class="spectrum-Checkbox-checkmark"></span>
+        </label>
+      </li>
+    </ul>
+  </div>
