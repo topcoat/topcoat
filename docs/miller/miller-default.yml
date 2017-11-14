@@ -28,7 +28,7 @@ markup: |
           <span class="spectrum-Checkbox-checkmark"></span>
         </label>
         <span class="spectrum-MillerColumn-item-content">
-          <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+          <img src="img/example-ava.jpg" class="spectrum-MillerColumn-item-thumbnail">
           <span class="spectrum-MillerColumn-item-label">Action 3</span>
         </span>
       </li>
@@ -58,7 +58,7 @@ markup: |
           <span class="spectrum-Checkbox-checkmark"></span>
         </label>
         <span class="spectrum-MillerColumn-item-content">
-          <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+          <img src="img/example-ava.jpg" class="spectrum-MillerColumn-item-thumbnail">
           <span class="spectrum-MillerColumn-item-content-label">Action 3</span>
         </span>
       </li>
@@ -85,7 +85,7 @@ markup: |
       </li>
       <li class="spectrum-MillerColumn-item is-navigated is-branch" tabindex="0">
         <span class="spectrum-MillerColumn-item-content">
-          <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+          <img src="img/example-ava.jpg" class="spectrum-MillerColumn-item-thumbnail">
           <span class="spectrum-MillerColumn-item-content-label">Action 3</span></span>
         </span>
       </li>
@@ -108,7 +108,7 @@ markup: |
       </li>
       <li class="spectrum-MillerColumn-item is-selected" tabindex="0">
           <span class="spectrum-MillerColumn-item-content">
-            <img src="img/spectrum_logo_light.svg" class="spectrum-MillerColumn-item-thumbnail">
+            <img src="img/example-ava.jpg" class="spectrum-MillerColumn-item-thumbnail">
             <span class="spectrum-MillerColumn-item-content-label">Action 3</span>
           </span>
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">

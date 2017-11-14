@@ -14,8 +14,8 @@
   display: flex;
   padding: 0 var(--spectrum-miller-column-item-padding-right-default) 0 var(--spectrum-miller-column-item-padding-left-default);
   margin-bottom: var(--spectrum-miller-column-item-margin-bottom-default);
-  font-size: var(--spectrum-list-option-font-size-default);
-  font-weight: var(--spectrum-list-option-font-weight-default);
+  font-size: var(--spectrum-selectlist-option-font-size-default);
+  font-weight: var(--spectrum-selectlist-option-font-weight-default);
   font-style: normal;
   height: var(--spectrum-miller-column-item-height-default);
   border-radius: var(--spectrum-miller-column-item-border-radius-default);
