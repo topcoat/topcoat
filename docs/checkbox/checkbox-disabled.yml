@@ -8,16 +8,28 @@ modifiers:
 markup: |
   <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
-    <span class="spectrum-Checkbox-checkmark"></span>
+    <span class="spectrum-Checkbox-checkmark">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+    </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
-    <span class="spectrum-Checkbox-checkmark"></span>
+    <span class="spectrum-Checkbox-checkmark">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+    </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox is-disabled is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
-    <span class="spectrum-Checkbox-checkmark"></span>
+    <span class="spectrum-Checkbox-checkmark">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+    </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>

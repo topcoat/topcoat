@@ -5,8 +5,8 @@
 .spectrum-Checkbox-checkmark {
   border-color: var(--spectrum-checkbox-border-color-default);
 
-  &::after {
-    background-image: url("embed/Check.svg" param(--color var(--spectrum-checkbox-checkmark-color-default)));
+  .spectrum-Checkbox-checkmarkIcon {
+    color: var(--spectrum-checkbox-checkmark-color-default);
   }
 }
 

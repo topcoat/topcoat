@@ -8,16 +8,28 @@ modifiers:
 markup: |
   <label class="spectrum-Checkbox is-invalid">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-    <span class="spectrum-Checkbox-checkmark"></span>
+    <span class="spectrum-Checkbox-checkmark">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+    </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox is-invalid">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-    <span class="spectrum-Checkbox-checkmark"></span>
+    <span class="spectrum-Checkbox-checkmark">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+    </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox is-invalid is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
-    <span class="spectrum-Checkbox-checkmark"></span>
+    <span class="spectrum-Checkbox-checkmark">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+    </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
