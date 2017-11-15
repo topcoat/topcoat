@@ -6,28 +6,28 @@ markup: |
     <div class="spectrum-Accordion-item is-open">
       <div class="spectrum-Accordion-header" tabindex="0">Header 1</div>
       <svg class="spectrum-Icon spectrum-Accordion-chevron" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-AccordionChevron" />
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
       </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
     <div class="spectrum-Accordion-item is-disabled">
       <div class="spectrum-Accordion-header">Header 2</div>
       <svg class="spectrum-Icon spectrum-Accordion-chevron" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-AccordionChevron" />
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
       </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
     <div class="spectrum-Accordion-item">
       <div class="spectrum-Accordion-header" tabindex="0">Header 2</div>
       <svg class="spectrum-Icon spectrum-Accordion-chevron" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-AccordionChevron" />
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
       </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
     <div class="spectrum-Accordion-item">
       <div class="spectrum-Accordion-header" tabindex="0">Header 3</div>
       <svg class="spectrum-Icon spectrum-Accordion-chevron" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-AccordionChevron" />
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
       </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>

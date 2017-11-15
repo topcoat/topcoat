@@ -6,7 +6,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-More" />
+        <use xlink:href="#spectrum-css-icon-More" />
       </svg>
       <span class="spectrum-ActionMenu-label">More Actions</span>
     </button>
@@ -26,7 +26,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-More" />
+        <use xlink:href="#spectrum-css-icon-More" />
       </svg>
     </button>
 
@@ -45,7 +45,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
-        <use href="#spectrum-css-icon-More" />
+        <use xlink:href="#spectrum-css-icon-More" />
       </svg>
       <span class="spectrum-ActionMenu-label">More Actions</span>
     </button>
