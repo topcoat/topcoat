@@ -19,6 +19,18 @@
   margin: 0;
 }
 
+.spectrum-Accordion-chevron {
+  display: block;
+  width: var(--spectrum-accordion-icon-width);
+  height: var(--spectrum-accordion-icon-height);
+
+  position: absolute;
+  left: var(--spectrum-accordion-icon-spacing-default);
+  top: calc(var(--spectrum-accordion-header-height) / 2 - var(--spectrum-accordion-icon-height) / 2);
+
+  transition: transform ease var(--spectrum-transition-time);
+}
+
 .spectrum-Accordion-item {
   z-index: inherit;
   position: relative;
@@ -66,23 +78,6 @@
       width: var(--spectrum-accordion-item-focus-border-size-default);
     }
   }
-
-  &::before {
-    display: block;
-    content: '';
-    width: var(--spectrum-accordion-icon-width);
-    height: var(--spectrum-accordion-icon-height);
-
-    /* Support SVG icons */
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    position: absolute;
-    left: var(--spectrum-accordion-icon-spacing-default);
-    top: calc(var(--spectrum-accordion-header-height) / 2 - var(--spectrum-accordion-icon-height) / 2);
-
-    transition: transform ease var(--spectrum-transition-time);
-  }
 }
 
 .spectrum-Accordion-content {
@@ -92,7 +87,7 @@
 
 .spectrum-Accordion-item {
   &.is-open {
-    .spectrum-Accordion-header::before {
+    .spectrum-Accordion-chevron {
       transform: rotate(90deg);
     }
 

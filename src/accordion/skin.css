@@ -2,12 +2,12 @@
   border-color: var(--spectrum-accordion-border-color-default);
 }
 
+.spectrum-Accordion-chevron {
+  color: var(--spectrum-accordion-icon-color-default);
+}
+
 .spectrum-Accordion-header {
   color: var(--spectrum-accordion-text-color-default);
-
-  &::before {
-    background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-default)));
-  }
 
   &:focus,
   &:hover {
@@ -15,8 +15,8 @@
 
     background-color: var(--spectrum-accordion-background-color-hover);
 
-    &::before {
-      background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-hover)));
+    + .spectrum-Accordion-chevron {
+      color: var(--spectrum-accordion-icon-color-hover);
     }
   }
 
@@ -46,8 +46,8 @@
       background-color: transparent;
     }
 
-    &::before {
-      background-image: url("embed/S_AccordionChevron_s@1x.svg" param(--color var(--spectrum-accordion-icon-color-disabled)));
+    + .spectrum-Accordion-chevron {
+      color: var(--spectrum-accordion-icon-color-disabled);
     }
   }
 }
