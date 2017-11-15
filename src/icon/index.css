@@ -1,0 +1,9 @@
+.spectrum-Icon {
+  display: inline-block;
+
+  /* Inherit the text color */
+  color: inherit;
+
+  /* Fill should match the current text color */
+  fill: currentColor;
+}
