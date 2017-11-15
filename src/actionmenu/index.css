@@ -5,21 +5,25 @@
   display: inline-block;
 }
 
+.spectrum-ActionMenu-label {
+  margin-left: 6px;
+}
+
 .spectrum-ActionMenu-button {
   display: block;
 
   padding: 0 8px;
 
-  &::before {
+  /* Increase specificity to override stuff here */
+  .spectrum-ActionMenu-icon {
     display: inline-block;
     content: '';
     width: 18px;
-    height: 18px;
+    height: 5px;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    vertical-align: -4px;
-    margin-right: 6px;
+    vertical-align: 2px;
   }
 }
 

@@ -4,7 +4,12 @@ description: An action button with a Flyout. Note that the `is-selected` class s
 markup: |
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">More Actions</button>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">
+      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+        <use href="#spectrum-css-icon-More" />
+      </svg>
+      <span class="spectrum-ActionMenu-label">More Actions</span>
+    </button>
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu">
@@ -19,7 +24,11 @@ markup: |
   <br>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected"></button>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">
+      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+        <use href="#spectrum-css-icon-More" />
+      </svg>
+    </button>
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu">
@@ -34,5 +43,10 @@ markup: |
   <br>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">
+      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+        <use href="#spectrum-css-icon-More" />
+      </svg>
+      <span class="spectrum-ActionMenu-label">More Actions</span>
+    </button>
   </div>
