@@ -1,11 +1,23 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-miller-column-chevron-height-default: 10px;
+  --spectrum-miller-column-chevron-width-default: 6px;
+}
+
 /* topdoc
 {{ miller/miller-default.yml }}
 */
 .spectrum-MillerColumn {
   display: inline-block;
   width: var(--spectrum-miller-column-width-default);
+}
+
+.spectrum-MillerColumn-chevron {
+  display: none;
+  width: var(--spectrum-miller-column-chevron-width-default);
+  height: var(--spectrum-miller-column-chevron-height-default);
+  transition: transform ease var(--spectrum-transition-time);
 }
 
 .spectrum-MillerColumn-item {
@@ -21,28 +33,25 @@
   border-radius: var(--spectrum-miller-column-item-border-radius-default);
   align-items: center;
   width: var(--spectrum-miller-column-width-default);
+
   &.is-branch-selectable, &.is-selected, &:hover {
     /* checkbox on the left, shows up always */
     .spectrum-MillerColumn-item-checkBox {
       display: inline-block;
     }
   }
+
   &.is-branch {
     /* show chevron */
-    &::after {
+    .spectrum-MillerColumn-chevron {
       display: block;
-      content: '';
-      width: 10px;
-      height: var(--spectrum-miller-column-chevron-height-default);
-      /* Support SVG icons */
-      background-size: contain;
-      background-repeat: no-repeat;
-      transition: transform ease var(--spectrum-transition-time);
     }
   }
+
   .spectrum-MillerColumn-item-checkBox {
     display: none;
   }
+
   .spectrum-MillerColumn-item-thumbnail {
     width: var(--spectrum-miller-column-thumbnail-width-default);
     height: var(--spectrum-miller-column-thumbnail-height-default);

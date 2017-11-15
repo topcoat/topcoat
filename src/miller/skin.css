@@ -26,9 +26,3 @@
       }
     }
 }
-.spectrum-MillerColumn-item-checkBox-input {
-  &:focus ~ .spectrum-Miller-Column-checkLabel {
-    color: var(--spectrum-miller-column-text-color-default);
-  }
-}
-
