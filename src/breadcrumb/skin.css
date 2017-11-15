@@ -1,8 +1,8 @@
 .spectrum-Breadcrumb {
   color: var(--spectrum-breadcrumb-text-color-default);
 
-  &::after {
-    background-image: url("embed/Breadcrumb-Chevron.svg" param(--color var(--spectrum-breadcrumb-chevron-icon-color-default)));
+  .spectrum-Breadcrumb-chevron {
+    color: var(--spectrum-breadcrumb-chevron-icon-color-default);
   }
 
   .spectrum-Breadcrumb-link {

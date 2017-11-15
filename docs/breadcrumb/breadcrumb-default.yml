@@ -8,8 +8,20 @@ modifiers:
 markup: |
   <nav>
     <ul class="spectrum-Breadcrumbs">
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" href="#">Nike</a></li>
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Mens</a></li>
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Summer 2016</a></li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" href="#">Nike</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumb-chevron" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Mens</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumb-chevron" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Summer 2016</a>
+      </li>
     </ul>
   </nav>
