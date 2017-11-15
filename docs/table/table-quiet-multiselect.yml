@@ -8,7 +8,11 @@ markup: |
         <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-checkmark">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </th>
         <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
@@ -21,7 +25,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-checkmark">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -34,7 +42,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-checkmark">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -47,7 +59,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-checkmark">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -60,7 +76,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-checkmark">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -73,7 +93,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-checkmark">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">

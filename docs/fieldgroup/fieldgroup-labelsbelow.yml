@@ -1,5 +1,5 @@
 ---
-name: FieldGroup - Labels Below
+name: Field Group - Labels Below
 description: The Spectrum radio group 'labelsBelow'
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--labelsBelow">

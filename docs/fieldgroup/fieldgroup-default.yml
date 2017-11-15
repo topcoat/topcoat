@@ -1,5 +1,5 @@
 ---
-name: FieldGroup - Default
+name: Field Group - Default
 description: The Spectrum radio group 'default'
 markup: |
   <div class="spectrum-FieldGroup">
@@ -17,12 +17,20 @@ markup: |
   <div class="spectrum-FieldGroup">
     <label class="spectrum-Checkbox">
       <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-checkmark">
+        <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+        </svg>
+      </span>
       <span class="spectrum-Checkbox-label">Checkbox</span>
     </label>
     <label class="spectrum-Checkbox">
       <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-checkmark">
+        <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+        </svg>
+      </span>
       <span class="spectrum-Checkbox-label">Checkbox</span>
     </label>
   </div>

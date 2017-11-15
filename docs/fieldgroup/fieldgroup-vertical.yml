@@ -1,5 +1,5 @@
 ---
-name: FieldGroup - Vertical
+name: Field Group - Vertical
 description: The Spectrum radio group 'vertical'
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
