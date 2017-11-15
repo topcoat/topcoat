@@ -1,9 +1,9 @@
-.spectrum-Calendar-prevMonth::after {
-  background-image: url("embed/S_CarouselLeftChevron_@1x.svg" param(--color var(--spectrum-calendar-button-icon-color-default)));
+.spectrum-Calendar-prevMonth {
+  color: var(--spectrum-calendar-button-icon-color-default);
 }
 
-.spectrum-Calendar-nextMonth::after {
-  background-image: url("embed/S_CarouselRightChevron_@1x.svg" param(--color var(--spectrum-calendar-button-icon-color-default)));
+.spectrum-Calendar-nextMonth {
+  color: var(--spectrum-calendar-button-icon-color-default);
 }
 
 .spectrum-Calendar-dayOfWeek {

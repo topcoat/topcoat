@@ -16,6 +16,11 @@
 {{ calendar/calendar-range.yml }}
 */
 
+:root {
+  --spectrum-calendar-chevron-width: 12px;
+  --spectrum-calendar-chevron-height: 16px;
+}
+
 .spectrum-Calendar {
   display: inline-block;
   /*width: var(--spectrum-calendar-width-default);*/
@@ -52,9 +57,13 @@
 .spectrum-Calendar-nextMonth {
   position: absolute;
 
-  &::after {
-    background-size: 10px;
-  }
+}
+
+/* Todo: move to origins */
+.spectrum-Calendar-chevron {
+  width: var(--spectrum-calendar-chevron-width);
+  height: var(--spectrum-calendar-chevron-height);
+  margin: calc(calc(32px - var(--spectrum-calendar-chevron-height)) / 2) auto;
 }
 
 .spectrum-Calendar-prevMonth {
