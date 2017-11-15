@@ -21,19 +21,25 @@ function cleanIconFilename(file) {
 
 var baseUrl = 'http://icons.corp.adobe.com:4502/content/athena/clients/spectrum/collections/spectrum_css.zip';
 
-gulp.task('icons', function(cb) {
+gulp.task('update-icons', function(cb) {
   runSequence(
-    'clean',
+    'clean-iconfiles',
     'download-icons',
     'unzip-icons',
     'extract-icons',
     'clean-icons',
+    cb
+  );
+});
+
+gulp.task('icons', function(cb) {
+  runSequence(
     'generate-svgsprite',
     cb
   );
 });
 
-gulp.task('clean', function() {
+gulp.task('clean-iconfiles', function() {
   return del([
     'temp',
     'icons'
@@ -54,27 +60,25 @@ gulp.task('unzip-icons', function() {
 gulp.task('extract-icons', function() {
   return gulp.src('temp/icons/*/*.svg')
     .pipe(rename(stripDir))
-    .pipe(gulp.dest('temp/icons/'))
+    .pipe(gulp.dest('icons/'))
 });
 
 gulp.task('clean-icons', function() {
-  return gulp.src('temp/icons/*.svg')
+  return gulp.src('icons/*.svg')
     .pipe(svgmin())
     .pipe(replace(/<defs>.*?<\/defs>/, ''))
     .pipe(replace(/<title>.*?<\/title>/, ''))
     .pipe(replace(/ data-name=".*?"/, ''))
     .pipe(replace(/ id=".*?"/, ''))
     .pipe(replace(/ class="fill"/g, ''))
-    .pipe(gulp.dest('temp/icons/'))
+    .pipe(gulp.dest('icons/'))
 });
 
 
 gulp.task('generate-svgsprite', function () {
-  return gulp.src('temp/icons/*.svg')
+  return gulp.src('icons/*.svg')
     .pipe(rename(function (path) {
-      var name = path.dirname.split(path.sep);
-      name.push(path.basename);
-      path.basename = 'spectrum-icon-'+name.join('-');
+      path.basename = 'spectrum-css-icon-'+path.basename;
     }))
     .pipe(svgmin())
     .pipe(svgstore({
