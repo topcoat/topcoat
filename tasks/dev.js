@@ -14,6 +14,10 @@ gulp.task('dev', ['build'], function() {
   gulp.watch([
     'docs/**/*.yml'
   ], ['reload']);
+
+  gulp.watch([
+    'icons/*.svg'
+  ], ['icons']);
 });
 
 gulp.task('reload', ['build:lite'], function() {
