@@ -6,6 +6,7 @@ gulp.task('build', function(cb) {
     // 'lint', // Disabled for now
     'clean',
     'balthazar',
+    'icons',
     'build-css',
     'build-docs',
     cb
