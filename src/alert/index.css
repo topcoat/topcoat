@@ -25,24 +25,11 @@
 
 .spectrum-Alert-typeIcon {
   position: absolute;
+  display: block;
   top: 20px;
   right: 20px;
-
-  /* Support font icons */
-  text-align: right;
-}
-
-.spectrum-Alert-typeIcon::after {
-  display: block;
-  content: '';
   width: 18px;
   height: 18px;
-
-  /* Support font icons */
-  font-size: 18px;
-
-  /* Support SVG icons */
-  background-size: contain;
 }
 
 .spectrum-Alert-header {

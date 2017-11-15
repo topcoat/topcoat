@@ -3,7 +3,9 @@ name: Alert - Warning
 description: The Spectrum alert 'warning'
 markup: |
   <div class="spectrum-Alert spectrum-Alert--warning">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <svg class="spectrum-Icon spectrum-Alert-typeIcon" focusable="false" aria-hidden="true">
+      <use href="#spectrum-css-icon-AlertError" />
+    </svg>
     <div class="spectrum-Alert-header">Warning Alert Header</div>
     <div class="spectrum-Alert-content">This is an alert.</div>
   </div>

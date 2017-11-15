@@ -5,7 +5,9 @@ description: >-
   Combine this strategy with any variant.
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <svg class="spectrum-Icon spectrum-Alert-typeIcon" focusable="false" aria-hidden="true">
+      <use href="#spectrum-css-icon-AlertError" />
+    </svg>
     <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
     <div class="spectrum-Alert-content">This is an alert.</div>
     <div class="spectrum-Alert-footer">

@@ -3,7 +3,9 @@ name: Alert - Success
 description: The Spectrum alert 'success'
 markup: |
   <div class="spectrum-Alert spectrum-Alert--success">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="check"></div>
+    <svg class="spectrum-Icon spectrum-Alert-typeIcon" focusable="false" aria-hidden="true">
+      <use href="#spectrum-css-icon-AlertSuccess" />
+    </svg>
     <div class="spectrum-Alert-header">Successful Alert Header</div>
     <div class="spectrum-Alert-content">This is an alert.</div>
   </div>

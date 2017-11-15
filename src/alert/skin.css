@@ -18,9 +18,8 @@
 .spectrum-Alert--info {
   border-color: var(--spectrum-alert-info-border-color-default);
 
-  .spectrum-Alert-typeIcon::after {
+  .spectrum-Alert-typeIcon {
     color: var(--spectrum-alert-info-border-color-default);
-    background-image: url("embed/S_Info_18_N@2x.svg" param(--color var(--spectrum-alert-info-border-color-default)));
   }
 }
 
@@ -30,9 +29,8 @@
 .spectrum-Alert--error {
   border-color: var(--spectrum-alert-error-border-color-default);
 
-  .spectrum-Alert-typeIcon::after {
+  .spectrum-Alert-typeIcon {
     color: var(--spectrum-alert-error-border-color-default);
-    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-error-border-color-default)));
   }
 }
 
@@ -42,9 +40,8 @@
 .spectrum-Alert--success {
   border-color: var(--spectrum-alert-success-border-color-default);
 
-  .spectrum-Alert-typeIcon::after {
+  .spectrum-Alert-typeIcon {
     color: var(--spectrum-alert-success-border-color-default);
-    background-image: url("embed/S_CheckmarkCircle_18_N@2x.svg" param(--color var(--spectrum-alert-success-border-color-default)));
   }
 }
 
@@ -54,8 +51,7 @@
 .spectrum-Alert--warning {
   border-color: var(--spectrum-alert-warning-border-color-default);
 
-  .spectrum-Alert-typeIcon::after {
+  .spectrum-Alert-typeIcon {
     color: var(--spectrum-alert-warning-border-color-default);
-    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-warning-border-color-default)));
   }
 }
