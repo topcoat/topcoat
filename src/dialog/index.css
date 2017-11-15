@@ -99,13 +99,10 @@
 }
 
 .spectrum-Dialog-typeIcon {
-  &::after {
-    display: block;
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-size: contain;
-  }
+  display: block;
+  content: '';
+  width: 18px;
+  height: 18px;
 }
 
 .spectrum-Dialog-content {

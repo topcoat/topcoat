@@ -32,8 +32,7 @@
     color: var(--spectrum-dialog-error-title-text-color-default);
   }
 
-  .spectrum-Dialog-typeIcon::after {
+  .spectrum-Dialog-typeIcon{
     color: var(--spectrum-dialog-error-icon-color-default);
-    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-dialog-error-icon-color-default)));
   }
 }
