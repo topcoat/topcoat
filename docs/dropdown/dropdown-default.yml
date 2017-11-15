@@ -4,11 +4,11 @@ markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
+      <span class="spectrum-Dropdown-triggerContainer">
+        <span class="spectrum-Dropdown-triggerLabel is-placeholder">Select a Country</span>
+        <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </span>
     </button>
   </div>
@@ -16,11 +16,11 @@ markup: |
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-open" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Ballard</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
+      <span class="spectrum-Dropdown-triggerContainer">
+        <span class="spectrum-Dropdown-triggerLabel">Ballard</span>
+        <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </span>
     </button>
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
@@ -37,11 +37,11 @@ markup: |
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-disabled" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
+      <span class="spectrum-Dropdown-triggerContainer">
+        <span class="spectrum-Dropdown-triggerLabel is-placeholder">Select a Country</span>
+        <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </span>
     </button>
   </div>

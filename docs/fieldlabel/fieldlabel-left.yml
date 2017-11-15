@@ -15,11 +15,11 @@ markup: |
     <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
     <div class="spectrum-Dropdown" style="width: 195px;">
       <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
-        <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
-          <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon"></span>
-          </span>
+        <span class="spectrum-Dropdown-triggerContainer">
+          <span class="spectrum-Dropdown-triggerLabel is-placeholder">Select a Country</span>
+          <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          </svg>
         </span>
       </button>
     </div>

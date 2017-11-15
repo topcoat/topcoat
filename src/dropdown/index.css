@@ -1,5 +1,11 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-dropdown-chevron-icon-width-default: 10px;
+  --spectrum-dropdown-chevron-icon-height-default: 6px;
+  --spectrum-dropdown-icon-margin-default: 5px;
+}
+
 /* topdoc
 {{ dropdown/dropdown-default.yml }}
 */
@@ -20,7 +26,7 @@
   position: relative;
   width: 100%;
 
-  .spectrum-Dropdown-trigger-container {
+  .spectrum-Dropdown-triggerContainer {
     height: 100%;
     width: 100%;
     display: flex;
@@ -28,11 +34,17 @@
     align-items: center;
   }
 
-  .spectrum-Dropdown-trigger-label {
+  .spectrum-Dropdown-triggerLabel {
+    /* Be the biggest! */
+    flex: 1;
+
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+
     margin-right: 12px;
+
+    text-overflow: ellipsis;
+    text-align: left;
 
     &.is-placeholder {
       font-style: italic;
@@ -40,34 +52,17 @@
   }
 }
 
-.spectrum-Dropdown-icon-container {
-  .spectrum-Icon {
-    margin-left: var(--spectrum-dropdown-margin-default);;
-  }
+.spectrum-Dropdown-chevron {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
 
-  .spectrum-Dropdown-open-icon {
-    display: inline-block;
-    position: relative;
-    width: 12px;
-    height: 18px;
-    vertical-align: top;
+  width: var(--spectrum-dropdown-chevron-icon-width-default);
+  height: var(--spectrum-dropdown-chevron-icon-height-default);
 
-    &::after {
-      position: absolute;
-      top: 6px;
-      left: 0;
+  margin-left: var(--spectrum-dropdown-icon-margin-default);
 
-      width: var(--spectrum-dropdown-chevron-icon-width-default);
-      height: var(--spectrum-dropdown-chevron-icon-height-default);
-
-      background-repeat: no-repeat;
-      background-position: center;
-
-      opacity: 1;
-
-      content: '';
-    }
-  }
+  opacity: 1;
 }
 
 /* topdoc

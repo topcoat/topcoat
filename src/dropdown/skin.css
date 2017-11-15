@@ -1,7 +1,7 @@
 .spectrum-Dropdown {
   .spectrum-Dropdown-trigger:hover {
-    .spectrum-Dropdown-open-icon::after {
-      background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-text-color-hover)));
+    .spectrum-Dropdown-chevron {
+      color: var(--spectrum-dropdown-text-color-hover);
     }
   }
 
@@ -10,24 +10,21 @@
       color: var(--spectrum-dropdown-icon-color-invalid-default);
     }
 
-    .spectrum-Dropdown-open-icon,
-    &:hover .spectrum-Dropdown-open-icon {
-      &::after {
-        background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-icon-color-invalid-default)));
-      }
+    &:hover .spectrum-Dropdown-chevron {
+      color: var(--spectrum-dropdown-icon-color-invalid-default);
     }
   }
 
   &.is-disabled {
     &,
     .spectrum-Dropdown-trigger:hover {
-      .spectrum-Dropdown-open-icon::after {
-        background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-text-color-disabled)));
+      .spectrum-Dropdown-chevron {
+        color: var(--spectrum-dropdown-text-color-disabled);
       }
     }
   }
 }
 
-.spectrum-Dropdown-open-icon::after {
-  background-image: url("embed/Down-Chevron.svg" param(--color var(--spectrum-dropdown-text-color-default)));
+.spectrum-Dropdown-chevron {
+  color: var(--spectrum-dropdown-text-color-default);
 }

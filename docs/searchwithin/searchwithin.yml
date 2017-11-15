@@ -6,11 +6,11 @@ markup: |
   <div class="spectrum-SearchWithin">
     <div class="spectrum-Dropdown">
       <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
-        <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label">All</span>
-          <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
-          </span>
+        <span class="spectrum-Dropdown-triggerContainer">
+          <span class="spectrum-Dropdown-triggerLabel">All</span>
+          <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          </svg>
         </span>
       </button>
     </div>
@@ -22,11 +22,11 @@ markup: |
   <div class="spectrum-SearchWithin" style="margin-bottom: 180px;">
     <div class="spectrum-Dropdown is-open">
       <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
-        <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label">All</span>
-          <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
-          </span>
+        <span class="spectrum-Dropdown-triggerContainer">
+          <span class="spectrum-Dropdown-triggerLabel">All</span>
+          <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          </svg>
         </span>
       </button>
     </div>
@@ -47,11 +47,11 @@ markup: |
   <div class="spectrum-SearchWithin">
     <div class="spectrum-Dropdown">
       <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
-        <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label">Campaigns</span>
-          <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
-          </span>
+        <span class="spectrum-Dropdown-triggerContainer">
+          <span class="spectrum-Dropdown-triggerLabel">Campaigns</span>
+          <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          </svg>
         </span>
       </button>
     </div>
@@ -63,11 +63,11 @@ markup: |
   <div class="spectrum-SearchWithin">
     <div class="spectrum-Dropdown is-disabled">
       <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
-        <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label">All</span>
-          <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
-          </span>
+        <span class="spectrum-Dropdown-triggerContainer">
+          <span class="spectrum-Dropdown-triggerLabel">All</span>
+          <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          </svg>
         </span>
       </button>
     </div>
