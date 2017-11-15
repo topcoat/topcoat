@@ -1,4 +1,5 @@
-.sdldocs-container {
+.sdldocs-main-content,
+.sdldocs-header {
   margin: 0 auto;
   max-width: 1100px;
 }
@@ -19,12 +20,10 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-section.examples a,
 .sdldocs-code-link a {
   color: #005abe;
   text-decoration: none;
 }
-section.examples a:hover,
 .sdldocs-code-link a:hover {
   text-decoration: underline;
 }
@@ -61,16 +60,14 @@ pre.html {
   min-height: 48px;
   line-height: 48px;
 }
-.sdldocs-header-logo-link:hover {
-  text-decoration: none;
-}
 .sdldocs-header-logo-image {
   vertical-align: middle;
 }
 .sdldocs-header-title {
   margin-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
   display: none;
-  vertical-align: middle;
 }
 .sdldocs-colorstop {
   min-width: 300px;
@@ -91,36 +88,10 @@ pre.html {
     display: inline;
   }
 }
-.sdldocs-scroll {
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: auto;
-  height: 100%;
-}
 .sdldocs-nav {
   margin-top: 1rem;
   margin-bottom: 3rem;
   display: none;
-}
-.sdldocs-menu {
-  margin-left: 1.1rem;
-}
-.sdldocs-menu-link {
-  display: inline-block;
-  margin: 0 0.875rem;
-  padding: 0;
-  color: #707070 !important;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 100;
-  line-height: 3rem;
-/* tint bottom line for selected  */
-}
-.sdldocs-menu-link:hover {
-  border-bottom: solid 2px #2c2c2c;
-}
-.sdldocs-menu-link.is-selected {
-  border-bottom: solid 2px #2c2c2c;
 }
 .sdldocs-nav-item {
   margin-bottom: 1rem;
@@ -130,7 +101,7 @@ pre.html {
 .sdldocs-nav-link {
   color: #6b6b6b;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 18px;
   line-height: 80px;
 }
 @media (min-width: 48em) {
@@ -141,68 +112,17 @@ pre.html {
     border: none;
   }
   .sdldocs-nav-link {
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 1.125rem;
+    line-height: 24px;
   }
 }
-.sdldocs-home-presentation {
-  background-color: #fcfcfc;
-}
-.sdldocs-home-content {
-  margin-top: 0.9rem;
-  margin-bottom: 1rem;
-  white-space: nowrap;
-  overflow: hidden;
-}
-@media (min-width: 48em) {
-  .sdldocs-home-content {
-    margin-top: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-}
-.sdldocs-article {
-  color: #4b4b4b; /* grey9 (Light); */
-  margin: 0 0 3rem 0;
-  font-weight: normal;
-}
-.sdldocs-article h1 {
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  font-weight: 100;
-}
-.sdldocs-article h2 {
-  font-size: 1.8rem;
-  line-height: 2rem;
-  font-weight: 100;
-}
-.sdldocs-article h3 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-weight: bold;
-}
-.sdldocs-article a {
-  color: #4b4b4b;
+
+.sdldocs-subtleLink {
   text-decoration: none;
-  font-weight: bold;
+  color: inherit;
 }
-.sdldocs-article a:hover {
-  border-bottom: 2px solid #005abe;
+
+/* For documentation beautification only - DO NOT COPY */
+.dummy-spacing {
+  height: 160px;
 }
-.sdldocs-article p {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.25rem;
-  color: #4b4b4b;
-  margin: 0 0 1rem;
-}
-.sdldocs-article-back {
-  float: right;
-  padding-left: 1rem;
-}
-.sdldocs-article-back:before {
-  content: '<- ';
-}
-.sdldocs-article-footer {
-  margin-bottom: 3rem;
-}
-/*# sourceMappingURL=sdldocs.css.map */
