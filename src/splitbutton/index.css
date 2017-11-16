@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-splitbutton-icon-width-default: 10px;
+  --spectrum-splitbutton-icon-height-default: 6px;
+}
+
 .spectrum-SplitButton {
   position: relative;
   display: inline-block;
@@ -24,15 +29,16 @@
   padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
   padding-right: calc(var(--spectrum-padding) - 2px);
 
-  &::after {
-    content: '';
-    display: block;
-    width: var(--spectrum-splitbutton-icon-width-default);
-    height: 6px;
-    margin-top: 1px;
-    background-repeat: no-repeat;
-    background-position: center center;
+  &:focus-ring {
+    box-shadow: none;
   }
+}
+
+.spectrum-SplitButton-chevron {
+  display: block;
+  width: var(--spectrum-splitbutton-icon-width-default);
+  height: var(--spectrum-splitbutton-icon-height-default);
+  margin-top: 1px;
 }
 
 .spectrum-SplitButton-action,

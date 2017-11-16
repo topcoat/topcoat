@@ -8,5 +8,9 @@ modifiers:
 markup: |
   <div class="spectrum-SplitButton">
     <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
-    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger"></button>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-SplitButton-chevron" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
+    </button>
   </div>
