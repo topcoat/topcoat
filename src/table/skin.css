@@ -2,30 +2,23 @@
   color: var(--spectrum-table-head-cell-text-color-default);
 
   &.is-sortable {
+    .spectrum-Table-sortedIcon {
+      color: var(--spectrum-table-head-cell-sort-icon-color-default);
+    }
+
     &:hover {
       color: var(--spectrum-table-head-cell-text-color-hover);
-    }
 
-    &:active {
-      color: var(--spectrum-table-head-cell-text-color-active);
-    }
-  }
-
-  &.is-sorted-asc,
-  &.is-sorted-desc {
-    &::after {
-      background-image: url("embed/sort.svg" param(--color var(--spectrum-table-head-cell-sort-icon-color-default)));
-    }
-
-    &:hover {
-      &::after {
-        background-image: url("embed/sort.svg" param(--color var(--spectrum-table-head-cell-sort-icon-color-hover)));
+      .spectrum-Table-sortedIcon {
+        color: var(--spectrum-table-head-cell-sort-icon-color-hover);
       }
     }
 
     &:active {
-      &::after {
-        background-image: url("embed/sort.svg" param(--color var(--spectrum-table-head-cell-sort-icon-color-active)));
+      color: var(--spectrum-table-head-cell-text-color-active);
+
+      .spectrum-Table-sortedIcon {
+        color: var(--spectrum-table-head-cell-sort-icon-color-active);
       }
     }
   }
