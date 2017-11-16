@@ -32,19 +32,19 @@
 
     }
     .spectrum-Tag-removeButton {
-      &::after {
-        background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-invalid-icon-color-default)));
+      .spectrum-Icon {
+        color: var(--spectrum-tag-invalid-icon-color-default);
       }
 
       &::focus {
-        &::after {
-          background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-invalid-icon-color-focus)));
+        .spectrum-Icon {
+          color: var(--spectrum-tag-invalid-icon-color-focus);
         }
       }
 
       &:hover {
-        &::after {
-          background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-invalid-icon-color-hover)));
+        .spectrum-Icon {
+          color: var(--spectrum-tag-invalid-icon-color-hover);
         }
       }
     }
@@ -62,19 +62,19 @@
 }
 
 .spectrum-Tag-removeButton {
-  &::after {
-    background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-icon-color-default)));
+  .spectrum-Icon {
+    color: var(--spectrum-tag-icon-color-default);
   }
 
   &:hover {
-    &::after {
-      background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-icon-color-hover)));
+    .spectrum-Icon {
+      color: var(--spectrum-tag-icon-color-hover);
     }
   }
 }
 
 .spectrum-Tag.is-disabled .spectrum-Tag-removeButton {
-  &::after {
-    background-image: url("embed/S_Close.svg" param(--color var(--spectrum-tag-icon-color-disabled)));
+  .spectrum-Icon {
+    color: var(--spectrum-tag-icon-color-disabled);
   }
 }

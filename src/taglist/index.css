@@ -18,6 +18,7 @@
   --spectrum-tag-margin-default: 8px;
   --spectrum-tag-label-font-size-default: 12px;
   --spectrum-tag-remove-button-size-default: 12px;
+  --spectrum-tag-remove-icon-size-default: 8px;
   --spectrum-tag-avatar-size-default: 16px;
   --spectrum-tag-icon-size-default: 16px;
 }
@@ -87,8 +88,10 @@
   }
 
   /* The actual icon */
-  &::after {
-    background-size: var(--spectrum-tag-remove-button-size-default) var(--spectrum-tag-remove-button-size-default);
+  .spectrum-Icon {
+    margin: 8px auto;
+    width: var(--spectrum-tag-remove-icon-size-default);
+    height: var(--spectrum-tag-remove-icon-size-default);
   }
 }
 

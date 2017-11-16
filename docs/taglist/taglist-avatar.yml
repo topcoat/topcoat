@@ -6,16 +6,28 @@
       <div class="spectrum-Tag" role="listitem" tabindex="0">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TagClose" />
+          </svg>
+        </button>
       </div>
       <div class="spectrum-Tag is-invalid" role="listitem" tabindex="0">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TagClose" />
+          </svg>
+        </button>
       </div>
       <div class="spectrum-Tag is-disabled" role="listitem">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TagClose" />
+          </svg>
+        </button>
       </div>
     </div>
