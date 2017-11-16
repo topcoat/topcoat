@@ -4,16 +4,33 @@
 .spectrum-Rating {
   cursor: pointer;
 
-  .spectrum-Rating-icon {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 16px;
-    float: left;
-  }
 
   &.is-disabled {
     cursor: default;
     pointer-events: none;
   }
 }
+
+.spectrum-Rating-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 16px;
+  float: left;
+
+}
+
+.spectrum-Rating-Star {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.spectrum-Rating-Star--active {
+  display: none;
+}
+
+.spectrum-Rating-Star--inactive {
+  display: block;
+}
+
