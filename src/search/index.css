@@ -66,8 +66,16 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  .spectrum-Icon {
+    width: 8px;
+    height: 8px;
+
+    margin: 12px auto;
+  }
+
+  .spectrum-Search-clear:disabled {
+    cursor: default;
+  }
 }
 
-.spectrum-Search-clear:disabled {
-  cursor: default;
-}

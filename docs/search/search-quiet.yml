@@ -4,12 +4,24 @@ description: The quiet searchy, cleary field.
 markup: |
   <form class="spectrum-Search">
     <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input">
-    <div class="spectrum-Search-icon"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+    <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
+    </svg>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SearchClear" />
+      </svg>
+    </button>
   </form>
 
   <form class="spectrum-Search">
     <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input" disabled>
-    <div class="spectrum-Search-icon"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+    <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
+    </svg>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled>
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SearchClear" />
+      </svg>
+    </button>
   </form>

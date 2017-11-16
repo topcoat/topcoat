@@ -1,43 +1,11 @@
 .spectrum-Search-icon {
-  background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-icon-color-default)));
   color: var(--spectrum-input-icon-color-default);
 }
 
 .spectrum-Search-input {
   &:disabled {
     & ~ .spectrum-Search-icon {
-      background-image: url("embed/S_SearchMagGlass_@1x.svg" param(--color var(--spectrum-input-text-color-disabled)));
       color: var(--spectrum-input-text-color-disabled);
-    }
-  }
-}
-
-.spectrum-Search-clear {
-  &::after {
-    background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-default)));
-  }
-
-  &:focus {
-    &::after {
-      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-focus)));
-    }
-  }
-
-  &:hover {
-    &::after {
-      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-hover)));
-    }
-  }
-
-  &:active {
-    &::after {
-      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-active)));
-    }
-  }
-
-  &:disabled {
-    &::after {
-      background-image: url("embed/S_SearchClear_@1x.svg" param(--color var(--spectrum-button-icon-icon-color-disabled)));
     }
   }
 }
