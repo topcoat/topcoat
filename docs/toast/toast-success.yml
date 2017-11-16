@@ -3,7 +3,13 @@ name: Toast - Success
 description: The info toast.
 markup: |
   <div class="spectrum-Toast spectrum-Toast--success">
-    <div class="spectrum-Toast-typeIcon" role="img" aria-label="alert"></div>
+    <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertSuccess" />
+    </svg>
     <div class="spectrum-Toast-content">The toast is golden brown.</div>
-    <button class="spectrum-Toast-closeButton"></button>  
+    <button class="spectrum-Toast-closeButton">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ToastClose" />
+      </svg>
+    </button>
   </div>

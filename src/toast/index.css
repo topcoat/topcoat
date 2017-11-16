@@ -25,12 +25,6 @@
   width: 18px;
   height: 18px;
   vertical-align: -4px;
-
-  /* Support font icons */
-  font-size: 18px;
-
-  /* Support SVG icons */
-  background-size: contain;
 }
 
 .spectrum-Toast-content {
@@ -53,6 +47,8 @@
   right: 8px;
   top: 8px;
 
+  padding: 0;
+
   width: 32px;
   height: 32px;
 
@@ -61,13 +57,17 @@
 
   background-color: transparent;
 
-  background-size: 8px;
-  background-position: center center;
-  background-repeat: no-repeat;
-
   transition: background-color var(--spectrum-transition-time) ease-in-out;
 
   cursor: pointer;
+
+  .spectrum-Icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+  }
 
   &:focus {
     outline: none;

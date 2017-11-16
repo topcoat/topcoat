@@ -3,8 +3,12 @@
   color: var(--spectrum-toast-text-color-default);
 }
 
+.spectrum-Toast-typeIcon {
+  color: white;
+}
+
 .spectrum-Toast-closeButton {
-  background-image: url("embed/S_ToastClose_@1x.svg" param(--color white));
+  color: white;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -14,7 +18,7 @@
     background-color: rgba(255, 255, 255, 1);
 
     &:not(:active) {
-      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-background-color-default)));
+      color: var(--spectrum-toast-background-color-default);
     }
   }
 
@@ -32,7 +36,7 @@
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-warning-background-color-default)));
+      color: var(--spectrum-toast-warning-background-color-default);
     }
   }
 }
@@ -45,18 +49,10 @@
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-error-background-color-default)));
+      color: var(--spectrum-toast-error-background-color-default);
     }
   }
 }
-
-.spectrum-Toast--warning,
-.spectrum-Toast--error {
-  .spectrum-Toast-typeIcon {
-    background-image: url("../Alert/embed/S_Alert_18_N@2x.svg" param(--color white));
-  }
-}
-
 
 /* topdoc
 {{ toast/toast-info.yml }}
@@ -64,13 +60,9 @@
 .spectrum-Toast--info {
   background-color: var(--spectrum-toast-info-background-color-default);
 
-  .spectrum-Toast-typeIcon {
-    background-image: url("../Alert/embed/S_Info_18_N@2x.svg" param(--color white));
-  }
-
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-info-background-color-default)));
+      color: var(--spectrum-toast-info-background-color-default);
     }
   }
 }
@@ -81,13 +73,10 @@
 .spectrum-Toast--success {
   background-color: var(--spectrum-toast-success-background-color-default);
 
-  .spectrum-Toast-typeIcon {
-    background-image: url("../Alert/embed/S_CheckmarkCircle_18_N@2x.svg" param(--color white));
-  }
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      background-image: url("embed/S_ToastClose_@1x.svg" param(--color var(--spectrum-toast-success-background-color-default)));
+      color: var(--spectrum-toast-success-background-color-default);
     }
   }
 }
