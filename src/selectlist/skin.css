@@ -23,8 +23,9 @@
 
   &.is-selected {
     color: var(--spectrum-selectlist-option-text-color-selected);
-    &::after {
-      background-image: url("./embed/S_MenuCheckmark_@1x.svg" param(--color var(--spectrum-selectlist-option-icon-color-selected)));
+
+    .spectrum-SelectList-checkmark {
+      color: var(--spectrum-selectlist-option-icon-color-selected);
     }
   }
 
