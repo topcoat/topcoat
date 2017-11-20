@@ -2,7 +2,7 @@
   border-color: var(--spectrum-accordion-border-color-default);
 }
 
-.spectrum-Accordion-chevron {
+.spectrum-Accordion-indicator {
   color: var(--spectrum-accordion-icon-color-default);
 }
 
@@ -15,7 +15,7 @@
 
     background-color: var(--spectrum-accordion-background-color-hover);
 
-    + .spectrum-Accordion-chevron {
+    + .spectrum-Accordion-indicator {
       color: var(--spectrum-accordion-icon-color-hover);
     }
   }
@@ -46,7 +46,7 @@
       background-color: transparent;
     }
 
-    + .spectrum-Accordion-chevron {
+    + .spectrum-Accordion-indicator {
       color: var(--spectrum-accordion-icon-color-disabled);
     }
   }

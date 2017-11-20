@@ -39,7 +39,7 @@
   line-height: var(--spectrum-heading-display-font-line-height-default);
 }
 
-.spectrum-Heading--page-title {
+.spectrum-Heading--pageTitle {
   font-weight: var(--spectrum-heading-page-title-font-weight-default);
   font-size: var(--spectrum-heading-page-title-font-size-default);
   line-height: var(--spectrum-heading-page-title-font-line-height-default);

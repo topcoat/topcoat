@@ -5,8 +5,12 @@
 .spectrum-CycleButton {
   background-color: var(--spectrum-cyclebutton-button-background-color-default);
 
+  .spectrum-Icon {
+    color: var(--spectrum-cyclebutton-icon-color-default);
+  }
+
   &:hover {
-    .spectrum-CycleButton-icon {
+    .spectrum-Icon {
       color: var(--spectrum-cyclebutton-icon-color-hover);
     }
   }
@@ -19,12 +23,8 @@
     /* we cannot achieve rounded corners with outline so we use box-shadow instead */
     box-shadow: 0px 0px 0px var(--spectrum-cyclebutton-button-box-shadow-spread-radius-focus) var(--spectrum-cyclebutton-button-box-shadow-color-focus) inset;
 
-    .spectrum-CycleButton-icon {
+    .spectrum-Icon {
       color: var(--spectrum-cyclebutton-icon-color-hover);
     }
   }
-}
-
-.spectrum-CycleButton-icon {
-  color: var(--spectrum-cyclebutton-icon-color-default);
 }

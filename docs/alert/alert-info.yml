@@ -3,7 +3,7 @@ name: Alert - Info
 description: The Spectrum alert 'info'
 markup: |
   <div class="spectrum-Alert spectrum-Alert--info">
-    <svg class="spectrum-Icon spectrum-Alert-typeIcon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-AlertInfo" />
     </svg>
     <div class="spectrum-Alert-header">Infomation Alert Header</div>

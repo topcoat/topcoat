@@ -18,9 +18,9 @@ markup: |
     Button
   </button>
 
-  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only">
+  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--iconOnly">
     <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
   </button>
-  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only" disabled>
+  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--iconOnly" disabled>
     <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
   </button>

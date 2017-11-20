@@ -19,7 +19,7 @@
   margin: 0;
 }
 
-.spectrum-Accordion-chevron {
+.spectrum-Accordion-indicator {
   display: block;
   width: var(--spectrum-accordion-icon-width);
   height: var(--spectrum-accordion-icon-height);
@@ -87,7 +87,7 @@
 
 .spectrum-Accordion-item {
   &.is-open {
-    .spectrum-Accordion-chevron {
+    .spectrum-Accordion-indicator {
       transform: rotate(90deg);
     }
 

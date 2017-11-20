@@ -84,7 +84,7 @@
   border-radius: var(--spectrum-actionbutton-border-corner-radius-default);
 }
 
-.spectrum-Button--action--icon-only {
+.spectrum-Button--action--iconOnly {
   padding: 0 var(--spectrum-actionbutton-icon-padding-x-default);
 }
 
@@ -95,7 +95,7 @@
   border-radius: var(--spectrum-button-quiet-action-border-corner-radius-default);
 }
 
-.spectrum-Button--quiet--action--icon-only {
+.spectrum-Button--quiet--action--iconOnly {
   padding: 0 var(--spectrum-actionbutton-icon-padding-x-default);
 }
 

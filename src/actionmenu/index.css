@@ -3,34 +3,26 @@
 */
 .spectrum-ActionMenu {
   display: inline-block;
+
+  > .spectrum-Button {
+    display: block;
+
+    padding: 0 8px;
+
+    /* Increase specificity by nesting to override stuff here */
+    > .spectrum-ActionMenu-icon {
+      display: inline-block;
+      content: '';
+      width: 18px;
+      height: 5px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: 2px;
+    }
+  }
 }
 
 .spectrum-ActionMenu-label {
   margin-left: 6px;
-}
-
-.spectrum-ActionMenu-button {
-  display: block;
-
-  padding: 0 8px;
-
-  /* Increase specificity to override stuff here */
-  .spectrum-ActionMenu-icon {
-    display: inline-block;
-    content: '';
-    width: 18px;
-    height: 5px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: 2px;
-  }
-}
-
-.spectrum-ActionMenu-button:empty {
-  padding: 0 6px;
-
-  &::before {
-    margin-right: 0;
-  }
 }

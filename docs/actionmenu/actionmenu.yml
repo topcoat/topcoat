@@ -4,7 +4,7 @@ description: An action button with a Flyout. Note that the `is-selected` class s
 markup: |
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">
+    <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
@@ -24,7 +24,7 @@ markup: |
   <br>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">
+    <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
@@ -43,7 +43,7 @@ markup: |
   <br>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">
+    <button class="spectrum-Button spectrum-Button--quiet--action">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>

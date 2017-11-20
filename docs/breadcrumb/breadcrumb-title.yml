@@ -10,18 +10,18 @@ markup: |
     <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
       <li class="spectrum-Breadcrumb">
         <a class="spectrum-Breadcrumb-link" href="#">Home</a>
-        <svg class="spectrum-Icon spectrum-Breadcrumb-chevron" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Breadcrumb-separator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
         </svg>
       </li>
       <li class="spectrum-Breadcrumb">
         <a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Playground</a>
-        <svg class="spectrum-Icon spectrum-Breadcrumb-chevron" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Breadcrumb-separator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
         </svg>
       </li>
       <li class="spectrum-Breadcrumb">
-        <h1 class="spectrum-Heading--page-title">
+        <h1 class="spectrum-Heading--pageTitle">
           <a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Sliders</a>
         </h1>
       </li>

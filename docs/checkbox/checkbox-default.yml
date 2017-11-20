@@ -8,8 +8,8 @@ modifiers:
 markup: |
   <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-    <span class="spectrum-Checkbox-checkmark">
-      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
     </span>
@@ -17,8 +17,8 @@ markup: |
   </label>
   <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-    <span class="spectrum-Checkbox-checkmark">
-      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
     </span>
@@ -26,8 +26,8 @@ markup: |
   </label>
   <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
-    <span class="spectrum-Checkbox-checkmark">
-      <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
     </span>

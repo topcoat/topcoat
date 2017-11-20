@@ -13,7 +13,7 @@
   }
 }
 
-.spectrum-Breadcrumb-chevron {
+.spectrum-Breadcrumb-separator {
   position: absolute;
   top: calc(50% - calc(calc(var(--spectrum-breadcrumb-chevron-icon-height-default) / 2) - 1px));
   right: calc(calc(var(--spectrum-breadcrumb-margin-default) / -2) - calc(var(--spectrum-breadcrumb-chevron-icon-width-default) / 2));
@@ -37,7 +37,6 @@
   font-size: var(--spectrum-breadcrumb-font-size-default);
   font-weight: var(--spectrum-breadcrumb-font-weight-default);
 
-
   .spectrum-Breadcrumb-link {
     cursor: default;
 
@@ -48,7 +47,7 @@
   }
 
   &:last-of-type {
-    .spectrum-Breadcrumb-chevron {
+    .spectrum-Breadcrumb-separator {
       display: none;
     }
   }
@@ -68,7 +67,7 @@
     line-height: var(--spectrum-breadcrumb-title-active-line-height-default);
   }
 
-  .spectrum-Heading--page-title {
+  .spectrum-Heading--pageTitle {
     margin: 0;
 
     font-size: inherit;

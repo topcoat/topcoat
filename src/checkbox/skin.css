@@ -2,24 +2,24 @@
   color: var(--spectrum-checkbox-label-text-color-default);
 }
 
-.spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-border-color-default);
 
-  .spectrum-Checkbox-checkmarkIcon {
+  .spectrum-Checkbox-checkmark {
     color: var(--spectrum-checkbox-checkmark-color-default);
   }
 }
 
-.spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-box {
   background-color: var(--spectrum-checkbox-background-color-default);
 }
 
 .spectrum-Checkbox-input {
-  &:checked + .spectrum-Checkbox-checkmark {
+  &:checked + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-border-color-checked);
   }
 
-  &:focus-ring + .spectrum-Checkbox-checkmark {
+  &:focus-ring + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-border-color-focus);
     box-shadow: 0 0 0 1px var(--spectrum-checkbox-border-color-focus);
   }
@@ -29,21 +29,21 @@
   }
 }
 
-.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark,
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
+.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-border-color-checked);
 }
 
 .spectrum-Checkbox:hover {
-  &.is-indeterminate .spectrum-Checkbox-checkmark,
-  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-border-color-checked-hover);
   }
 }
 
 .spectrum-Checkbox:active {
-  &.is-indeterminate .spectrum-Checkbox-checkmark,
-  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-border-color-checked-active);
   }
 }
@@ -55,7 +55,7 @@
   border-color: var(--spectrum-checkbox-border-color-default);
 
   &:hover {
-    .spectrum-Checkbox-checkmark {
+    .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-border-color-hover);
       box-shadow: none;
     }
@@ -65,7 +65,7 @@
   }
 
   &:active {
-    .spectrum-Checkbox-checkmark {
+    .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-border-color-active);
     }
     .spectrum-Checkbox-label {
@@ -74,7 +74,7 @@
   }
 
   &.is-invalid {
-    .spectrum-Checkbox-checkmark {
+    .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-border-color-invalid);
     }
 
@@ -84,7 +84,7 @@
   }
 
   &.is-invalid:hover {
-    .spectrum-Checkbox-checkmark {
+    .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-border-color-invalid-hover) !important;
     }
 
@@ -94,7 +94,7 @@
   }
 
   &.is-invalid:active {
-    .spectrum-Checkbox-checkmark {
+    .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-border-color-invalid-active);
     }
 
@@ -108,7 +108,7 @@
 /* topdoc
 {{ checkbox/checkbox-disabled.yml }}
 */
-  &:disabled + .spectrum-Checkbox-checkmark {
+  &:disabled + .spectrum-Checkbox-box {
     /* I'm sorry about the !important */
     border-color: var(--spectrum-checkbox-border-color-disabled) !important;
 
@@ -124,7 +124,7 @@
 /* topdoc
 {{ checkbox/checkbox-error.yml }}
 */
-  &:error + .spectrum-Checkbox-checkmark {
+  &:error + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-border-color-error);
   }
 

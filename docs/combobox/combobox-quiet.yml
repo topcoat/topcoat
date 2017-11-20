@@ -2,21 +2,25 @@ name: Combo Box - Quiet
 description: A combo box uses the input group component to display a field with a button next to it
 markup: |
   <h4>Default</h4>
-  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet">
+  <div class="spectrum-ComboBox spectrum-ComboBox--quiet">
     <div class="spectrum-ComboBox-fieldGroup">
-      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield">
-      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button" aria-haspopup="true">
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-input">
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown" aria-haspopup="true">
+        <svg class="spectrum-Icon spectrum-ComboBox-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </button>
     </div>
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet is-open">
+  <div class="spectrum-ComboBox spectrum-ComboBox--quiet is-open">
     <div class="spectrum-ComboBox-fieldGroup">
-      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield">
-      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button" aria-haspopup="true">
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-input">
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown" aria-haspopup="true">
+        <svg class="spectrum-Icon spectrum-ComboBox-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </button>
     </div>
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
@@ -31,21 +35,25 @@ markup: |
   </div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet is-disabled">
+  <div class="spectrum-ComboBox spectrum-ComboBox--quiet is-disabled">
     <div class="spectrum-ComboBox-fieldGroup">
-      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield" disabled>
-      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button" aria-haspopup="true" disabled>
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-input" disabled>
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown" aria-haspopup="true" disabled>
+        <svg class="spectrum-Icon spectrum-ComboBox-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </button>
     </div>
   </div>
 
   <h4>Invalid</h4>
-  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet is-invalid">
+  <div class="spectrum-ComboBox spectrum-ComboBox--quiet is-invalid">
     <div class="spectrum-ComboBox-fieldGroup">
-      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield is-invalid">
-      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button is-invalid" aria-haspopup="true">
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-input is-invalid">
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown is-invalid" aria-haspopup="true">
+        <svg class="spectrum-Icon spectrum-ComboBox-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
       </button>
     </div>
   </div>

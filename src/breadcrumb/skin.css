@@ -1,7 +1,7 @@
 .spectrum-Breadcrumb {
   color: var(--spectrum-breadcrumb-text-color-default);
 
-  .spectrum-Breadcrumb-chevron {
+  .spectrum-Breadcrumb-separator {
     color: var(--spectrum-breadcrumb-chevron-icon-color-default);
   }
 
@@ -13,7 +13,7 @@
       color: var(--spectrum-breadcrumb-text-color-hover);
     }
 
-    &:focus {
+    &:focus-ring {
       color: var(--spectrum-breadcrumb-text-color-focus);
       outline: 0;
       border-bottom: 2px solid var(--spectrum-breadcrumb-text-color-focus);
@@ -37,7 +37,7 @@
       }
     }
     .spectrum-Breadcrumb-link {
-      &:focus {
+      &:focus-ring {
         color: var(--spectrum-breadcrumb-text-color-active);
         border-bottom: 0;
       }

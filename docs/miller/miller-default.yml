@@ -7,8 +7,8 @@ markup: |
       <li class="spectrum-MillerColumn-item is-branch is-branch-selectable" tabindex="0">
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -23,8 +23,8 @@ markup: |
       <li class="spectrum-MillerColumn-item is-branch is-branch-selectable is-selected" tabindex="0">
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -39,8 +39,8 @@ markup: |
       <li class="spectrum-MillerColumn-item is-branch is-branch-selectable" tabindex="0">
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -58,8 +58,8 @@ markup: |
       <li class="spectrum-MillerColumn-item is-branch is-branch-selectable" tabindex="0">
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -74,8 +74,8 @@ markup: |
       <li class="spectrum-MillerColumn-item is-branch-selectable is-selected" tabindex="0">
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -90,8 +90,8 @@ markup: |
       <li class="spectrum-MillerColumn-item is-branch-selectable is-selected" tabindex="0">
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" checked>
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -125,8 +125,8 @@ markup: |
         </span>
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -161,8 +161,8 @@ markup: |
         </span>
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
@@ -178,8 +178,8 @@ markup: |
         </span>
         <label class="spectrum-Checkbox spectrum-MillerColumn-item-checkBox">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" checked>
-          <span class="spectrum-Checkbox-checkmark">
-            <svg class="spectrum-Icon spectrum-Checkbox-checkmarkIcon" focusable="false" aria-hidden="true">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
             </svg>
           </span>
