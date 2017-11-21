@@ -59,7 +59,7 @@
 .spectrum-Steplist--small {
   padding: 11px 0;
 
-  .spectrum-Steplist-step {
+  .spectrum-Steplist-item {
     padding: 0 40px 0 0;
     width: 80px;
 
@@ -87,7 +87,7 @@
   }
 }
 
-.spectrum-Steplist-step {
+.spectrum-Steplist-item {
   outline: none;
   position: relative;
   display: inline-block;
@@ -106,7 +106,7 @@
     }
 
     /* The next step's line should be solid */
-    & + .spectrum-Steplist-step .spectrum-Steplist-segment {
+    & + .spectrum-Steplist-item .spectrum-Steplist-segment {
       border-bottom-width: var(--spectrum-steplist-segment-height);
       border-bottom-style: solid;
     }
@@ -191,7 +191,7 @@
 }
 
 /* First step overrides */
-.spectrum-Steplist-step:first-child {
+.spectrum-Steplist-item:first-child {
   .spectrum-Steplist-markerContainer {
     left: 0;
   }
@@ -207,7 +207,7 @@
 }
 
 /* Last step overrides */
-.spectrum-Steplist-step:last-child {
+.spectrum-Steplist-item:last-child {
   .spectrum-Steplist-label {
     left: auto;
     right: 0;
@@ -229,13 +229,13 @@
   }
 }
 
-.spectrum-Steplist-step:first-child,
-.spectrum-Steplist-step:last-child {
+.spectrum-Steplist-item:first-child,
+.spectrum-Steplist-item:last-child {
   width: calc(calc(var(--spectrum-steplist-step-width) / 2) - calc(var(--spectrum-steplist-marker-diameter) * 2.5));
 }
 
 /* Single step */
-.spectrum-Steplist-step:only-child {
+.spectrum-Steplist-item:only-child {
   .spectrum-Steplist-label {
     /* Be centered */
     left: 50%;

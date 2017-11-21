@@ -29,7 +29,7 @@
 
   cursor: pointer;
 
-  &:checked + .spectrum-Radio-checkmark {
+  &:checked + .spectrum-Radio-button {
     border-width: 5px;
   }
 
@@ -48,7 +48,7 @@
   transition: color var(--spectrum-transition-time) ease-in-out;
 }
 
-.spectrum-Radio-checkmark {
+.spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
   width: var(--spectrum-radio-diameter-default);

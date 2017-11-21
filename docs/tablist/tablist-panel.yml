@@ -7,57 +7,57 @@
     :focus: Focused
   markup: |
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Folder spectrum-TabList-item-icon"></div>
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Image spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Image spectrum-TabList-item-icon"></div>
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Filter spectrum-TabList-item-icon"></div>
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Comment spectrum-TabList-item-icon"></div>
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="width: 46px; left: 7px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 46px; left: 7px;"></div>
     </div>
 
     <br><br>
 
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-TabList-item-icon"></div>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-TabList-item-icon"></div>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-TabList-item-icon"></div>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-TabList-item-icon"></div>
       </div>
-      <div class="spectrum-Tab-line" style="width: 17px; left: 7px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 17px; left: 7px;"></div>
     </div>
 
     <br><br>
 
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="width: 27px; left: 6px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 27px; left: 6px;"></div>
     </div>

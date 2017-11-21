@@ -5,10 +5,10 @@ markup: |
 
   <div class="spectrum-Popover is-open">
     <ul class="spectrum-SelectList" role="menu">
-      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="0">Ballard</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Fremont</li>
-      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Greenwood</li>
+      <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="0">Ballard</li>
+      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Fremont</li>
+      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Greenwood</li>
       <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+      <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
     </ul>
   </div>

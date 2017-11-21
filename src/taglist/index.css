@@ -30,7 +30,7 @@
   padding: 0;
   list-style: none;
 
-  & > .spectrum-Tag {
+  & > .spectrum-TagList-item {
     margin: 0 var(--spectrum-tag-margin-default) var(--spectrum-tag-margin-default) 0;
   }
 
@@ -41,7 +41,7 @@
   }
 }
 
-.spectrum-Tag {
+.spectrum-TagList-item {
   float: left;
   display: inline-flex;
   align-items: center;
@@ -63,7 +63,7 @@
   }
 }
 
-.spectrum-Tag-label {
+.spectrum-TagList-item-label {
   flex: 1;
   font-size: var(--spectrum-tag-label-font-size-default);
   cursor: default;
@@ -72,10 +72,10 @@
   text-overflow: ellipsis;
 }
 
-.spectrum-Tag-removeButton {
+.spectrum-TagList-item-removeButton {
   width: var(--spectrum-tag-height-default);
   height: var(--spectrum-tag-height-default);
-  margin-right: -var(--spectrum-tag-margin-default); /* Undo right padding on .spectrum-Tag */
+  margin-right: -var(--spectrum-tag-margin-default); /* Undo right padding on .spectrum-TagList-item */
   cursor: pointer;
 
   /* The fake background, inherited from .spectrum-Button--icon */
@@ -95,20 +95,20 @@
   }
 }
 
-.spectrum-Tag-avatar {
+.spectrum-TagList-item-avatar {
   height: var(--spectrum-tag-avatar-size-default);
   margin-right: var(--spectrum-tag-margin-default);
   border-radius: 50%;
   user-drag: none;
 }
 
-.spectrum-Tag-icon {
+.spectrum-TagList-item-icon {
   margin-right: var(--spectrum-tag-margin-default);
   font-size: var(--spectrum-tag-icon-size-default);
 }
 
-.spectrum-Tag-icon,
-.spectrum-Tag-avatar {
+.spectrum-TagList-item-icon,
+.spectrum-TagList-item-avatar {
   /* Move it 2px to the left cause Nate says so */
   margin-left: -2px;
 }

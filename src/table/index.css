@@ -9,12 +9,12 @@
 /* topdoc
 {{ table/table-divs-quiet.yml }}
 */
-.spectrum-Table {
+.spectrum-TabList-itemle {
   border-collapse: separate;
   border-spacing: 0;
 }
 
-.spectrum-Table-sortedIcon {
+.spectrum-TabList-itemle-sortedIcon {
   display: none;
   margin-left: var(--spectrum-table-head-cell-sort-icon-margin-left-default);
 
@@ -26,7 +26,7 @@
   transition: transform var(--spectrum-transition-time) ease-in-out;
 }
 
-.spectrum-Table-headCell {
+.spectrum-TabList-itemle-headCell {
   text-align: left;
   font-size: var(--spectrum-table-head-cell-font-size-default);
   font-weight: var(--spectrum-table-head-cell-font-weight-default);
@@ -43,63 +43,63 @@
 
   &.is-sorted-asc,
   &.is-sorted-desc {
-    .spectrum-Table-sortedIcon {
+    .spectrum-TabList-itemle-sortedIcon {
       display: inline-block;
     }
   }
 
   &.is-sorted-asc {
-    .spectrum-Table-sortedIcon {
+    .spectrum-TabList-itemle-sortedIcon {
       transform: rotateZ(180deg);
     }
   }
 }
 
-.spectrum-Table-cell--alignCenter {
+.spectrum-TabList-itemle-cell--alignCenter {
   text-align: center;
 }
 
-.spectrum-Table-cell--alignRight {
+.spectrum-TabList-itemle-cell--alignRight {
   text-align: right;
 }
 
-.spectrum-Table-body {
+.spectrum-TabList-itemle-body {
   border-radius: var(--spectrum-border-radius);
   overflow: auto;
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
    by putting it on the individual cells instead. */
-.spectrum-Table:not(.spectrum-Table--quiet) {
-  tbody.spectrum-Table-body {
+.spectrum-TabList-itemle:not(.spectrum-TabList-itemle--quiet) {
+  tbody.spectrum-TabList-itemle-body {
     border: none;
     border-radius: 0;
 
-    .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
+    .spectrum-TabList-itemle-row:first-child .spectrum-TabList-itemle-cell:first-child {
       border-top-left-radius: var(--spectrum-border-radius);
     }
 
-    .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
+    .spectrum-TabList-itemle-row:first-child .spectrum-TabList-itemle-cell:last-child {
       border-top-right-radius: var(--spectrum-border-radius);
     }
 
-    .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
+    .spectrum-TabList-itemle-row:last-child .spectrum-TabList-itemle-cell:first-child {
       border-bottom-left-radius: var(--spectrum-border-radius);
     }
 
-    .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
+    .spectrum-TabList-itemle-row:last-child .spectrum-TabList-itemle-cell:last-child {
       border-bottom-right-radius: var(--spectrum-border-radius);
     }
   }
 }
 
-.spectrum-Table-cell {
+.spectrum-TabList-itemle-cell {
   font-size: var(--spectrum-table-body-cell-font-size-default);
   line-height: var(--spectrum-table-body-cell-line-height-default);
   padding: var(--spectrum-table-body-cell-padding-vertical-default) var(--spectrum-table-cell-padding-default);
 }
 
-.spectrum-Table-row {
+.spectrum-TabList-itemle-row {
   cursor: pointer;
   transition: background-color var(--spectrum-transition-time) ease-in-out;
 }
@@ -107,8 +107,8 @@
 /* topdoc
 {{ table/table-quiet.yml }}
 */
-.spectrum-Table--quiet {
-  .spectrum-Table-body {
+.spectrum-TabList-itemle--quiet {
+  .spectrum-TabList-itemle-body {
     border-radius: 0;
   }
 }
@@ -117,11 +117,11 @@
 {{ table/table-standard-multiselect.yml }}
 */
 
-.spectrum-Table-checkboxCell {
+.spectrum-TabList-itemle-checkboxCell {
   padding-right: 0;
 }
 
-.spectrum-Table-checkbox {
+.spectrum-TabList-itemle-checkbox {
   vertical-align: super;
 }
 

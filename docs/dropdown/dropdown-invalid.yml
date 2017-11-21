@@ -4,34 +4,35 @@ markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-triggerContainer">
-        <span class="spectrum-Dropdown-triggerLabel">Select a Country</span>
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-        <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
-        </svg>
-      </span>
+      <span class="spectrum-Dropdown-label">Select a Country</span>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
     </button>
   </div>
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-triggerContainer">
-        <span class="spectrum-Dropdown-triggerLabel">Ballard</span>
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-        <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
-        </svg>
-      </span>
+      <span class="spectrum-Dropdown-label">Ballard</span>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
     </button>
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu" tabindex="0">
-        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="-1">
+          Ballard
+          <svg class="spectrum-Icon spectrum-SelectList-checkmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-MenuCheckmark" />
+          </svg>
+        </li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="-1">Greenwood</li>
         <hr class="spectrum-SelectList-divider">
-        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+        <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="-1">United States of America</li>
       </ul>
     </div>
   </div>
@@ -39,12 +40,10 @@ markup: |
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-triggerContainer">
-        <span class="spectrum-Dropdown-triggerLabel">Select a Country</span>
-        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-        <svg class="spectrum-Icon spectrum-Dropdown-chevron" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
-        </svg>
-      </span>
+      <span class="spectrum-Dropdown-label">Select a Country</span>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
     </button>
   </div>

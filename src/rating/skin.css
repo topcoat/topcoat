@@ -5,10 +5,10 @@
   color: var(--spectrum-rating-icon-color-default);
 
   /* Star */
-  .spectrum-Rating-Star--active {
+  .spectrum-Rating-starActive {
     display: block;
   }
-  .spectrum-Rating-Star--inactive {
+  .spectrum-Rating-starInactive {
     display: none;
   }
 }
@@ -18,10 +18,10 @@
     color: var(--spectrum-rating-icon-color-default);
 
     /* StarOutline */
-    .spectrum-Rating-Star--active {
+    .spectrum-Rating-starActive {
       display: none;
     }
-    .spectrum-Rating-Star--inactive {
+    .spectrum-Rating-starInactive {
       display: block;
     }
   }
@@ -31,10 +31,10 @@
   color: var(--spectrum-rating-icon-color-default);
 
   /* StarOutline */
-  .spectrum-Rating-Star--active {
+  .spectrum-Rating-starActive {
     display: none;
   }
-  .spectrum-Rating-Star--inactive {
+  .spectrum-Rating-starInactive {
     display: block;
   }
 }
@@ -46,10 +46,10 @@
   color: var(--spectrum-rating-icon-color-default);
 
   /* Star */
-  .spectrum-Rating-Star--active {
+  .spectrum-Rating-starActive {
     display: block;
   }
-  .spectrum-Rating-Star--inactive {
+  .spectrum-Rating-starInactive {
     display: none;
   }
 }
@@ -59,10 +59,10 @@
     color: var(--spectrum-rating-icon-color-active);
 
     /* Star */
-    .spectrum-Rating-Star--active {
+    .spectrum-Rating-starActive {
       display: block;
     }
-    .spectrum-Rating-Star--inactive {
+    .spectrum-Rating-starInactive {
       display: none;
     }
   }
@@ -75,10 +75,10 @@
   color: var(--spectrum-rating-icon-color-disabled);
 
   /* Star */
-  .spectrum-Rating-Star--active {
+  .spectrum-Rating-starActive {
     display: block;
   }
-  .spectrum-Rating-Star--inactive {
+  .spectrum-Rating-starInactive {
     display: none;
   }
 }
@@ -86,10 +86,10 @@
   color: var(--spectrum-rating-icon-color-disabled);
 
   /* StarOutline */
-  .spectrum-Rating-Star--active {
+  .spectrum-Rating-starActive {
     display: none;
   }
-  .spectrum-Rating-Star--inactive {
+  .spectrum-Rating-starInactive {
     display: block;
   }
 }

@@ -2,49 +2,49 @@
 name: Table - Standard
 description: The standard table
 markup: |
-  <table class="spectrum-Table">
-    <thead class="spectrum-Table-head">
+  <table class="spectrum-TabList-itemle">
+    <thead class="spectrum-TabList-itemle-head">
       <tr>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+        <th class="spectrum-TabList-itemle-headCell is-sortable is-sorted-desc">
           Column Title
-          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-TabList-itemle-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-TableSortArrow" />
           </svg>
         </th>
-        <th class="spectrum-Table-headCell is-sortable">
+        <th class="spectrum-TabList-itemle-headCell is-sortable">
           Column Title
-          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-TabList-itemle-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-TableSortArrow" />
           </svg>
         </th>
-        <th class="spectrum-Table-headCell">Column Title</th>
+        <th class="spectrum-TabList-itemle-headCell">Column Title</th>
       </tr>
     </thead>
-    <tbody class="spectrum-Table-body">
-      <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Alpha</td>
-        <td class="spectrum-Table-cell">Row Item Alpha</td>
-        <td class="spectrum-Table-cell">Row Item Alpha</td>
+    <tbody class="spectrum-TabList-itemle-body">
+      <tr class="spectrum-TabList-itemle-row">
+        <td class="spectrum-TabList-itemle-cell">Row Item Alpha</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Alpha</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Alpha</td>
       </tr>
-      <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Bravo</td>
-        <td class="spectrum-Table-cell">Row Item Bravo</td>
-        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      <tr class="spectrum-TabList-itemle-row">
+        <td class="spectrum-TabList-itemle-cell">Row Item Bravo</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Bravo</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Bravo</td>
       </tr>
-      <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Charlie</td>
-        <td class="spectrum-Table-cell">Row Item Charlie</td>
-        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      <tr class="spectrum-TabList-itemle-row">
+        <td class="spectrum-TabList-itemle-cell">Row Item Charlie</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Charlie</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Charlie</td>
       </tr>
-      <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Delta</td>
-        <td class="spectrum-Table-cell">Row Item Delta</td>
-        <td class="spectrum-Table-cell">Row Item Delta</td>
+      <tr class="spectrum-TabList-itemle-row">
+        <td class="spectrum-TabList-itemle-cell">Row Item Delta</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Delta</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Delta</td>
       </tr>
-      <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Echo</td>
-        <td class="spectrum-Table-cell">Row Item Echo</td>
-        <td class="spectrum-Table-cell">Row Item Echo</td>
+      <tr class="spectrum-TabList-itemle-row">
+        <td class="spectrum-TabList-itemle-cell">Row Item Echo</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Echo</td>
+        <td class="spectrum-TabList-itemle-cell">Row Item Echo</td>
       </tr>
     </tbody>
   </table>

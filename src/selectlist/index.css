@@ -26,7 +26,7 @@
   opacity: 1;
 }
 
-.spectrum-SelectList-option {
+.spectrum-SelectList-item {
   cursor: pointer;
   position: relative;
   display: flex;

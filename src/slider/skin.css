@@ -121,7 +121,7 @@ Todo: Determine if these are supposed to be pseudo classes
 }
 
 .spectrum-Slider.is-disabled {
-  .spectrum-Slider-label {
+  .spectrum-Slider-labelContainer {
     color: var(--spectrum-slider-text-color-disabled);
   }
 

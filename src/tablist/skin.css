@@ -10,7 +10,7 @@
 /* topdoc
 {{ tablist/tablist-panel-vertical.yml }}
 */
-.spectrum-Tab {
+.spectrum-TabList-item {
   color: var(--spectrum-tablist-text-color-default);
 
   &:hover {
@@ -34,19 +34,19 @@
 .spectrum-TabList--anchored {
   border-color: var(--spectrum-tablist-anchored-border-color-default);
 
-  .spectrum-Tab {
+  .spectrum-TabList-item {
     &:focus-ring {
       color: var(--spectrum-tablist-anchored-text-color-focus);
       box-shadow: initial;
 
       /* The focus line should become blue only for anchored tabs */
-      ~ .spectrum-Tab-line {
+      ~ .spectrum-TabList-item-line {
           background-color:  var(--spectrum-tablist-anchored-tabline-background-color-focus);
       }
     }
   }
 }
 
-.spectrum-Tab-line {
+.spectrum-TabList-item-line {
   background-color: var(--spectrum-tablist-tabline-background-color-default);
 }

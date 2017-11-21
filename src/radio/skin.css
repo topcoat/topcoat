@@ -1,10 +1,10 @@
 .spectrum-Radio-input {
-  &:checked + .spectrum-Radio-checkmark {
+  &:checked + .spectrum-Radio-button {
     border-color: var(--spectrum-radio-border-color-checked);
   }
 
   &:focus-ring {
-    & + .spectrum-Radio-checkmark {
+    & + .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-focus);
       box-shadow: 0 0 0 1px var(--spectrum-radio-border-color-focus);
     }
@@ -24,17 +24,17 @@
     color: var(--spectrum-radio-label-text-color-default);
   }
 
-  .spectrum-Radio-checkmark {
+  .spectrum-Radio-button {
     border-color: var(--spectrum-radio-border-color-default);
   }
 
   &:hover {
-    .spectrum-Radio-checkmark {
+    .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-hover);
       box-shadow: none;
     }
 
-    .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+    .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-checked-hover);
     }
 
@@ -44,11 +44,11 @@
   }
 
   &:active {
-    .spectrum-Radio-checkmark {
+    .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-active);
     }
 
-    .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+    .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-checked-active);
     }
 
@@ -59,7 +59,7 @@
   }
 
   &.is-invalid {
-    .spectrum-Radio-checkmark {
+    .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-invalid);
     }
 
@@ -72,7 +72,7 @@
 {{ radio/radio-invalid.yml }}
 */
   &.is-invalid:hover {
-    .spectrum-Radio-checkmark {
+    .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-invalid-hover) !important;
     }
 
@@ -82,7 +82,7 @@
   }
 
   &.is-invalid:active {
-    .spectrum-Radio-checkmark {
+    .spectrum-Radio-button {
       border-color: var(--spectrum-radio-border-color-invalid-active) !important;
     }
 
@@ -96,7 +96,7 @@
 /* topdoc
 {{ radio/radio-disabled.yml }}
 */
-  &:disabled + .spectrum-Radio-checkmark {
+  &:disabled + .spectrum-Radio-button {
     border-color: var(--spectrum-radio-border-color-disabled);
   }
 

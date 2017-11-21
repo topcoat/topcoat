@@ -3,7 +3,7 @@ name: Steplist - With Tooltip
 description: A steplist with tooltips
 markup: |
   <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 1</span>
@@ -16,7 +16,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 2</span>
@@ -29,7 +29,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 3</span>
@@ -42,7 +42,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 4</span>

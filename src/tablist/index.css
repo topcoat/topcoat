@@ -16,7 +16,7 @@
   vertical-align: top;
 }
 
-.spectrum-Tab {
+.spectrum-TabList-item {
   position: relative;
 
   box-sizing: border-box;
@@ -36,14 +36,14 @@
   }
 }
 
-.spectrum-Tab-label {
+.spectrum-TabList-item-label {
   cursor: pointer;
   vertical-align: top;
   display: inline-block;
   padding: 2px 0;
 }
 
-.spectrum-Tab-line {
+.spectrum-TabList-item-line {
   position: absolute;
 
   /* Be below the tab */
@@ -58,7 +58,7 @@
 
  .spectrum-TabList--page,
  .spectrum-TabList--panel {
-  .spectrum-Tab {
+  .spectrum-TabList-item {
     margin-bottom: var(--spectrum-tablist-horizontal-tabline-height-default);
 
     &:focus-ring {
@@ -68,14 +68,14 @@
 }
 
 .spectrum-TabList--panel {
-  .spectrum-Tab-label {
+  .spectrum-TabList-item-label {
     font-size: var(--spectrum-tablist-panel-tab-item-label-font-size-default);
     font-weight: var(--spectrum-tablist-panel-tab-item-label-font-weight-default);
     letter-spacing: var(--spectrum-tablist-panel-tab-item-label-letter-spacing-default);
     text-transform: uppercase;
   }
 
-  .spectrum-Tab-icon {
+  .spectrum-TabList-item-icon {
     float: left;
 
     /* Ensure the label doesn't drop down */
@@ -89,7 +89,7 @@
     /*font-size: var(--spectrum-tablist-icon-size);*/
     /*line-height: var(--spectrum-tablist-icon-size);*/
 
-    & + .spectrum-Tab-label {
+    & + .spectrum-TabList-item-label {
       margin-left: 7px;
     }
   }
@@ -98,16 +98,16 @@
 .spectrum-TabList--horizontal {
   display: block;
 
-  .spectrum-Tab {
+  .spectrum-TabList-item {
     display: inline-block;
     vertical-align: top;
   }
 
-  .spectrum-Tab-label {
+  .spectrum-TabList-item-label {
     text-overflow: ellipsis;
   }
 
-  .spectrum-Tab-line {
+  .spectrum-TabList-item-line {
     position: absolute;
     bottom: 0px;
     width: var(--spectrum-tablist-horizontal-tabline-width-default);
@@ -115,12 +115,12 @@
   }
 
   &.spectrum-TabList--page {
-    .spectrum-Tab {
+    .spectrum-TabList-item {
       padding: 0 8px;
       margin-right: var(--spectrum-tablist-page-tab-item-margin-right-default);
     }
 
-    .spectrum-Tab-label {
+    .spectrum-TabList-item-label {
       text-transform: capitalize;
       padding: 0;
     }
@@ -130,29 +130,29 @@
     display: inline-block;
     border-bottom: var(--spectrum-tablist-anchored-tab-item-border-width-default) solid;
 
-    .spectrum-Tab {
+    .spectrum-TabList-item {
       margin: 0px 16px;
       height: 46px;
     }
 
-    .spectrum-Tab-label {
+    .spectrum-TabList-item-label {
       text-transform: capitalize;
       line-height: 46px;
       padding: 0;
     }
 
-    .spectrum-Tab-line {
+    .spectrum-TabList-item-line {
       bottom: calc(var(--spectrum-tablist-horizontal-tabline-height-default) * -1);
     }
   }
 
   &.spectrum-TabList--panel {
-    .spectrum-Tab {
+    .spectrum-TabList-item {
       margin-right: var(--spectrum-tablist-panel-horizontal-tab-item-margin-right-default);
       /*height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);*/
       height: auto;
     }
-    .spectrum-Tab-icon {
+    .spectrum-TabList-item-icon {
       margin-top: 4px;
       margin-bottom: 4px;
     }
@@ -160,7 +160,7 @@
 }
 
 .spectrum-TabList--panel {
-  .spectrum-Tab {
+  .spectrum-TabList-item {
     line-height: normal;
 
     padding: 3px 7px 3px 7px;
@@ -172,18 +172,18 @@
   padding: 0px;
   margin: 0px;
 
-  .spectrum-Tab {
+  .spectrum-TabList-item {
     display: block;
     margin-left: var(--spectrum-tablist-horizontal-tabline-height-default);
   }
 
-  .spectrum-Tab-label {
+  .spectrum-TabList-item-label {
     display: inline-block;
     text-overflow: ellipsis;
     vertical-align: top;
   }
 
-  .spectrum-Tab-line {
+  .spectrum-TabList-item-line {
     top: var(--spectrum-tablist-horizontal-tabline-height-default);
     left: 0;
     width: var(--spectrum-tablist-vertical-tabline-width-default);
@@ -192,18 +192,18 @@
   }
 
   &.spectrum-TabList--panel {
-    .spectrum-Tab {
+    .spectrum-TabList-item {
       height: var(--spectrum-tablist-panel-vertical-tab-item-height-default);
       margin-bottom: 6px;
     }
-    .spectrum-Tab-icon {
+    .spectrum-TabList-item-icon {
       margin-top: 3px;
       margin-bottom: 3px;
     }
   }
 }
 
-.spectrum-Tab-label:empty {
+.spectrum-TabList-item-label:empty {
   /* Hide the tab label if it's not being used */
   display: none;
 }

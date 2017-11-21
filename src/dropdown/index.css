@@ -25,16 +25,11 @@
 .spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .spectrum-Dropdown-triggerContainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .spectrum-Dropdown-triggerLabel {
+  .spectrum-Dropdown-label {
     /* Be the biggest! */
     flex: 1;
 
@@ -52,7 +47,7 @@
   }
 }
 
-.spectrum-Dropdown-chevron {
+.spectrum-Dropdown-icon {
   display: inline-block;
   position: relative;
   vertical-align: top;

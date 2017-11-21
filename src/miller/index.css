@@ -13,7 +13,7 @@
   width: var(--spectrum-miller-column-width-default);
 }
 
-.spectrum-MillerColumn-chevron {
+.spectrum-MillerColumn-childIndicator {
   display: none;
   width: var(--spectrum-miller-column-chevron-width-default);
   height: var(--spectrum-miller-column-chevron-height-default);
@@ -36,23 +36,23 @@
 
   &.is-branch-selectable, &.is-selected, &:hover {
     /* checkbox on the left, shows up always */
-    .spectrum-MillerColumn-item-checkBox {
+    .spectrum-Checkbox {
       display: inline-block;
     }
   }
 
   &.is-branch {
     /* show chevron */
-    .spectrum-MillerColumn-chevron {
+    .spectrum-MillerColumn-childIndicator {
       display: block;
     }
   }
 
-  .spectrum-MillerColumn-item-checkBox {
+  .spectrum-Checkbox {
     display: none;
   }
 
-  .spectrum-MillerColumn-item-thumbnail {
+  .spectrum-MillerColumn-itemThumbnail {
     width: var(--spectrum-miller-column-thumbnail-width-default);
     height: var(--spectrum-miller-column-thumbnail-height-default);
     margin-left: var(--spectrum-miller-column-thumbnail-margin-left-default);
@@ -60,18 +60,12 @@
   }
 }
 
-.spectrum-MillerColumn-item-content {
+.spectrum-MillerColumn-itemLabel {
   flex: 1;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.spectrum-MillerColumn-item-content-label {
   padding-left: var(--spectrum-miller-column-item-label-padding-left-default);
+
   text-overflow: ellipsis;
   overflow: hidden;
-  flex: 1;
   white-space: nowrap;
 }
 

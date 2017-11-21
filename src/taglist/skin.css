@@ -1,4 +1,4 @@
-.spectrum-Tag {
+.spectrum-TagList-item {
   color: var(--spectrum-tag-text-color-default);
   background-color: var(--spectrum-tag-background-color-default);
   border: 1px solid var(--spectrum-tag-border-color-default);
@@ -31,7 +31,7 @@
       box-shadow: 0 0 0 1px var(--spectrum-tag-invalid-border-color-default);
 
     }
-    .spectrum-Tag-removeButton {
+    .spectrum-TagList-item-removeButton {
       .spectrum-Icon {
         color: var(--spectrum-tag-invalid-icon-color-default);
       }
@@ -55,13 +55,13 @@
     background-color: var(--spectrum-tag-background-color-disabled);
     border-color: var(--spectrum-tag-border-color-disabled);
 
-    .spectrum-Tag-avatar {
+    .spectrum-TagList-item-avatar {
       opacity: 0.3;
     }
   }
 }
 
-.spectrum-Tag-removeButton {
+.spectrum-TagList-item-removeButton {
   .spectrum-Icon {
     color: var(--spectrum-tag-icon-color-default);
   }
@@ -73,7 +73,7 @@
   }
 }
 
-.spectrum-Tag.is-disabled .spectrum-Tag-removeButton {
+.spectrum-TagList-item.is-disabled .spectrum-TagList-item-removeButton {
   .spectrum-Icon {
     color: var(--spectrum-tag-icon-color-disabled);
   }

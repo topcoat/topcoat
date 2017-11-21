@@ -125,7 +125,7 @@
 
 
 
-.spectrum-Slider-label {
+.spectrum-Slider-labelContainer {
   display: block;
   position: relative;
 
@@ -140,11 +140,11 @@
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Slider-label-name {
+.spectrum-Slider-label {
   padding-left: 0;
 }
 
-.spectrum-Slider-label-value {
+.spectrum-Slider-value {
   float: right;
   padding-right: 0;
 }
@@ -173,14 +173,14 @@
     height: var(--spectrum-slider-tick-mark-height-default);
   }
 
-  .spectrum-Slider-label {
+  .spectrum-Slider-labelContainer {
     position: relative;
     margin: 16px 0 0 0;
     text-align: center;
   }
 
   &:first-of-type {
-    .spectrum-Slider-label {
+    .spectrum-Slider-labelContainer {
       /* Move over so we're left justified */
       text-align: left;
       left: 6px;
@@ -188,7 +188,7 @@
   }
 
   &:last-of-type {
-    .spectrum-Slider-label {
+    .spectrum-Slider-labelContainer {
       /* Move over so we're right justified */
       left: -6px;
       text-align: right;

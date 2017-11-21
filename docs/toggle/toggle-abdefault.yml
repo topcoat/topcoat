@@ -8,12 +8,12 @@ modifiers:
 markup: |
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-0">
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-0">Toggle A</label>
   </div>
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-1" checked>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-1">Toggle B</label>
   </div>
 
@@ -21,11 +21,11 @@ markup: |
 
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle A</label>
   </div>
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle B</label>
   </div>

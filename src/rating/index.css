@@ -17,20 +17,21 @@
   width: 24px;
   height: 16px;
   float: left;
-
 }
 
-.spectrum-Rating-Star {
+.spectrum-Rating-starActive,
+.spectrum-Rating-starInactive {
   width: 16px;
   height: 16px;
   margin: 0 auto;
 }
 
-.spectrum-Rating-Star--active {
+
+.spectrum-Rating-starActive {
   display: none;
 }
 
-.spectrum-Rating-Star--inactive {
+.spectrum-Rating-starInactive {
   display: block;
 }
 

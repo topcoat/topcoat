@@ -4,42 +4,42 @@ description: The 'active' Spectrum rating
 markup: |
   <div class="spectrum-Rating">
     <span class="spectrum-Rating-icon is-active">
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--active" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
       </svg>
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--inactive" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starInactive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-StarOutline" />
       </svg>
     </span>
     <span class="spectrum-Rating-icon is-active">
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--active" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
       </svg>
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--inactive" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starInactive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-StarOutline" />
       </svg>
     </span>
     <span class="spectrum-Rating-icon is-active">
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--active" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
       </svg>
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--inactive" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starInactive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-StarOutline" />
       </svg>
     </span>
     <span class="spectrum-Rating-icon">
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--active" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
       </svg>
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--inactive" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starInactive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-StarOutline" />
       </svg>
     </span>
     <span class="spectrum-Rating-icon">
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--active" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
       </svg>
-      <svg class="spectrum-Icon spectrum-Rating-Star spectrum-Rating-Star--inactive" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Rating-starInactive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-StarOutline" />
       </svg>
     </span>

@@ -4,15 +4,15 @@ description: A list of options that can be used in a Popover.
 markup: |
 
   <ul class="spectrum-SelectList" role="listbox">
-    <li class="spectrum-SelectList-option is-selected" role="option" tabindex="0">
+    <li class="spectrum-SelectList-item is-selected" role="option" tabindex="0">
       Ballard
       <svg class="spectrum-Icon spectrum-SelectList-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-MenuCheckmark" />
       </svg>
     </li>
-    <li class="spectrum-SelectList-option" role="option" tabindex="0">Fremont</li>
-    <li class="spectrum-SelectList-option" role="option" tabindex="0">Greenwood</li>
+    <li class="spectrum-SelectList-item" role="option" tabindex="0">Fremont</li>
+    <li class="spectrum-SelectList-item" role="option" tabindex="0">Greenwood</li>
     <hr class="spectrum-SelectList-divider">
-    <li class="spectrum-SelectList-option is-disabled" role="option" tabindex="0">United States of America</li>
+    <li class="spectrum-SelectList-item is-disabled" role="option" tabindex="0">United States of America</li>
   </ul>
 

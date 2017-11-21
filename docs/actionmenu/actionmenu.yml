@@ -13,9 +13,9 @@ markup: |
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu">
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
       </ul>
     </div>
   </div>
@@ -32,9 +32,9 @@ markup: |
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu">
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
       </ul>
     </div>
   </div>

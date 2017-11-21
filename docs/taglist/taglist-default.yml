@@ -3,13 +3,13 @@
   description: A taglist with items that cannot be edited.
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="list">
-      <div class="spectrum-Tag" role="listitem">
-        <span class="spectrum-Tag-label">Tag 1</span>
+      <div class="spectrum-TagList-item" role="listitem">
+        <span class="spectrum-TagList-item-label">Tag 1</span>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
-        <span class="spectrum-Tag-label">Tag 2</span>
+      <div class="spectrum-TagList-item is-invalid" role="listitem">
+        <span class="spectrum-TagList-item-label">Tag 2</span>
       </div>
-      <div class="spectrum-Tag is-disabled" role="listitem">
-        <span class="spectrum-Tag-label">Tag 2</span>
+      <div class="spectrum-TagList-item is-disabled" role="listitem">
+        <span class="spectrum-TagList-item-label">Tag 2</span>
       </div>
     </div>

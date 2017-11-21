@@ -22,7 +22,7 @@
 
   cursor: pointer;
 
-  &:checked + .spectrum-ToggleSwitch-content {
+  &:checked + .spectrum-ToggleSwitch-switch {
     &::after {
       transform: translateX(calc(var(--spectrum-switch-width-default) - var(--spectrum-switch-handle-width-default)));
     }
@@ -41,7 +41,7 @@
   transition: color 150ms ease-in-out;
 }
 
-.spectrum-ToggleSwitch-content {
+.spectrum-ToggleSwitch-switch {
   display: inline-block;
   /* positions the pseudo elements relative to this one */
   position: relative;

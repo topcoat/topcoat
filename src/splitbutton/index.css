@@ -5,6 +5,18 @@
   --spectrum-splitbutton-icon-height-default: 6px;
 }
 
+/* topdoc
+{{ splitbutton/splitbutton-cta.yml }}
+*/
+
+/* topdoc
+{{ splitbutton/splitbutton-primary.yml }}
+*/
+
+/* topdoc
+{{ splitbutton/splitbutton-secondary.yml }}
+*/
+
 .spectrum-SplitButton {
   position: relative;
   display: inline-block;
@@ -34,7 +46,7 @@
   }
 }
 
-.spectrum-SplitButton-chevron {
+.spectrum-SplitButton-icon {
   display: block;
   width: var(--spectrum-splitbutton-icon-width-default);
   height: var(--spectrum-splitbutton-icon-height-default);

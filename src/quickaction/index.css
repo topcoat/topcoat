@@ -28,7 +28,7 @@
   }
 }
 
-.spectrum-QuickActions-button {
+.spectrum-QuickActions-item {
   width: var(--spectrum-quickaction-width-default);
   height: var(--spectrum-quickaction-height-default);
   margin-left: var(--spectrum-quickaction-margin-default);

@@ -1,7 +1,7 @@
 /* topdoc
 {{ quickaction/quickaction-default.yml }}
 */
-.spectrum-QuickActions-button {
+.spectrum-QuickActions-item {
   background-color: var(--spectrum-quickaction-background-color-default);
   border-color: var(--spectrum-quickaction-border-color-default);
   color: var(--spectrum-quickaction-text-color-default);
