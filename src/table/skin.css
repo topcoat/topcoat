@@ -1,15 +1,15 @@
-.spectrum-TabList-itemle-headCell {
+.spectrum-Table-headCell {
   color: var(--spectrum-table-head-cell-text-color-default);
 
   &.is-sortable {
-    .spectrum-TabList-itemle-sortedIcon {
+    .spectrum-Table-sortedIcon {
       color: var(--spectrum-table-head-cell-sort-icon-color-default);
     }
 
     &:hover {
       color: var(--spectrum-table-head-cell-text-color-hover);
 
-      .spectrum-TabList-itemle-sortedIcon {
+      .spectrum-Table-sortedIcon {
         color: var(--spectrum-table-head-cell-sort-icon-color-hover);
       }
     }
@@ -17,45 +17,45 @@
     &:active {
       color: var(--spectrum-table-head-cell-text-color-active);
 
-      .spectrum-TabList-itemle-sortedIcon {
+      .spectrum-Table-sortedIcon {
         color: var(--spectrum-table-head-cell-sort-icon-color-active);
       }
     }
   }
 }
 
-.spectrum-TabList-itemle-body {
+.spectrum-Table-body {
   border: 1px solid var(--spectrum-table-body-cell-border-color-default);
   background-color: var(--spectrum-table-body-cell-background-color-default);
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
    by putting the border on the individual cells instead. */
-tbody.spectrum-TabList-itemle-body {
+tbody.spectrum-Table-body {
   border: none;
 
-  .spectrum-TabList-itemle-row {
+  .spectrum-Table-row {
     border-top: none;
   }
 
-  .spectrum-TabList-itemle-cell {
+  .spectrum-Table-cell {
     border-top: 1px solid var(--spectrum-table-body-cell-border-color-default);
   }
 
-  .spectrum-TabList-itemle-row .spectrum-TabList-itemle-cell:first-child {
+  .spectrum-Table-row .spectrum-Table-cell:first-child {
     border-left: 1px solid var(--spectrum-table-body-cell-border-color-default);
   }
 
-  .spectrum-TabList-itemle-row .spectrum-TabList-itemle-cell:last-child {
+  .spectrum-Table-row .spectrum-Table-cell:last-child {
     border-right: 1px solid var(--spectrum-table-body-cell-border-color-default);
   }
 
-  .spectrum-TabList-itemle-row:last-child .spectrum-TabList-itemle-cell {
+  .spectrum-Table-row:last-child .spectrum-Table-cell {
     border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
   }
 }
 
-.spectrum-TabList-itemle-row {
+.spectrum-Table-row {
   border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
   background-color: var(--spectrum-table-body-cell-background-color-default);
 
@@ -76,21 +76,21 @@ tbody.spectrum-TabList-itemle-body {
   }
 }
 
-.spectrum-TabList-itemle-cell {
+.spectrum-Table-cell {
   color: var(--spectrum-table-body-cell-text-color-default);
 }
 
-.spectrum-TabList-itemle-cell--divider {
+.spectrum-Table-cell--divider {
   border-right: 1px solid var(--spectrum-table-body-cell-border-color-default);
 }
 
-.spectrum-TabList-itemle--quiet {
-  .spectrum-TabList-itemle-body {
+.spectrum-Table--quiet {
+  .spectrum-Table-body {
     border-width: 1px 0;
     background-color: var(--spectrum-table-quiet-body-cell-background-color-default);
   }
 
-  .spectrum-TabList-itemle-row {
+  .spectrum-Table-row {
     background-color: var(--spectrum-table-quiet-body-cell-background-color-default);
 
     &:hover {
@@ -110,9 +110,9 @@ tbody.spectrum-TabList-itemle-body {
     }
   }
 
-  tbody.spectrum-TabList-itemle-body {
-    .spectrum-TabList-itemle-row .spectrum-TabList-itemle-cell:first-child,
-    .spectrum-TabList-itemle-row .spectrum-TabList-itemle-cell:last-child {
+  tbody.spectrum-Table-body {
+    .spectrum-Table-row .spectrum-Table-cell:first-child,
+    .spectrum-Table-row .spectrum-Table-cell:last-child {
       border-left: none;
       border-right: none;
     }
