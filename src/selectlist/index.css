@@ -3,6 +3,7 @@
 .spectrum-SelectList {
   display: inline-block;
   white-space: nowrap;
+  overflow: auto;
 
   box-sizing: border-box;
 
