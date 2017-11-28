@@ -8,19 +8,27 @@
   markup: |
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
       <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Folder spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-24-Folder"></use>
+        </svg>
         <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Image spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-24-Image"></use>
+        </svg>
         <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Filter spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-24-Filter"></use>
+        </svg>
         <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Comment spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-24-Comment"></use>
+        </svg>
         <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
       <div class="spectrum-TabList-item-line" style="width: 46px; left: 7px;"></div>
@@ -30,16 +38,24 @@
 
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
       <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-18-Folder"></use>
+        </svg>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-18-Image"></use>
+        </svg>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-18-Filter"></use>
+        </svg>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-TabList-item-icon"></div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use href="#spectrum-icon-18-Comment"></use>
+        </svg>
       </div>
       <div class="spectrum-TabList-item-line" style="width: 17px; left: 7px;"></div>
     </div>
