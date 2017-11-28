@@ -535,8 +535,13 @@
 }
 
 .spectrum-Button--quiet--dropdown {
+  color: var(--spectrum-dropdown-text-color-default);
   border-color: var(--spectrum-dropdown-quiet-border-color-default);
   background-color: var(--spectrum-dropdown-quiet-background-color-default);
+
+  &:hover {
+    color: var(--spectrum-dropdown-text-color-hover);
+  }
 
   &:focus-ring,
   &.is-focused {
