@@ -5,7 +5,7 @@ markup: |
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Select a Country</span>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use href="#spectrum-icon-18-Alert"></use>
       </svg>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -18,7 +18,7 @@ markup: |
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use href="#spectrum-icon-18-Alert"></use>
       </svg>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -45,7 +45,7 @@ markup: |
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Select a Country</span>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tab-icon spectrum-TabList-item-icon" focusable="false" aria-hidden="true" aria-label="Folder">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use href="#spectrum-icon-18-Alert"></use>
       </svg>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
