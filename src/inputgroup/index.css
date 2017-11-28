@@ -1,12 +1,5 @@
 @import '../commons/index.css';
 
-/* topdoc
-{{ inputgroup/combobox.yml }}
-*/
-/* topdoc
-{{ inputgroup/combobox-quiet.yml }}
-*/
-
 .spectrum-InputGroup {
   position: relative;
   display: inline-flex;
