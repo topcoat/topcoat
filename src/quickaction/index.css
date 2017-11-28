@@ -34,7 +34,6 @@
   margin-left: var(--spectrum-quickaction-margin-default);
   padding: 0;
   border-width: var(--spectrum-quickaction-border-width);
-  line-height: calc(var(--spectrum-quickaction-height-default) - var(--spectrum-quickaction-border-width) * 2);
   border-radius: var(--spectrum-quickaction-border-radius-default);
   border-style: solid;
   transition: border-color var(--spectrum-transition-time) ease-out,
@@ -51,5 +50,10 @@
 
   &:first-child {
     margin-left: 0;
+  }
+
+  .spectrum-Icon {
+    /* Fix alignment */
+    margin-top: 2px;
   }
 }
