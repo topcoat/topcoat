@@ -20,7 +20,6 @@
   --spectrum-tag-remove-button-size-default: 12px;
   --spectrum-tag-remove-icon-size-default: 8px;
   --spectrum-tag-avatar-size-default: 16px;
-  --spectrum-tag-icon-size-default: 16px;
 }
 
 .spectrum-TagList {
@@ -101,9 +100,8 @@
   user-drag: none;
 }
 
-.spectrum-TagList-item-icon {
+.spectrum-Icon {
   margin-right: var(--spectrum-tag-margin-default);
-  font-size: var(--spectrum-tag-icon-size-default);
 }
 
 .spectrum-TagList-item-icon,

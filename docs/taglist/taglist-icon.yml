@@ -4,8 +4,8 @@
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
       <div class="spectrum-TagList-item" role="listitem" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
-          <use xlink:href="#spectrum-icon-18-Tag" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+          <use xlink:href="#spectrum-icon-24-SentimentPositive" />
         </svg>
         <span class="spectrum-TagList-item-label">Shantanu</span>
         <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
@@ -15,8 +15,8 @@
         </button>
       </div>
       <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
-          <use xlink:href="#spectrum-icon-18-Tag" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+          <use xlink:href="#spectrum-icon-24-SentimentPositive" />
         </svg>
         <span class="spectrum-TagList-item-label">Shantanu</span>
         <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
@@ -26,8 +26,8 @@
         </button>
       </div>
       <div class="spectrum-TagList-item is-disabled" role="listitem">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
-          <use xlink:href="#spectrum-icon-18-Tag" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+          <use xlink:href="#spectrum-icon-24-SentimentPositive" />
         </svg>
         <span class="spectrum-TagList-item-label">Shantanu</span>
         <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
