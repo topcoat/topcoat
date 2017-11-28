@@ -1,0 +1,9 @@
+---
+name: Status Light - Status Colors
+description: Status Colors (300) - Color has meaning.
+markup: |
+  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved, Complete, Success, New</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active, In Use, Live</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--archived">Archived, Deleted, Paused, Draft, Not Started, Ended</div>

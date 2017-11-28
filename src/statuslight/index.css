@@ -1,0 +1,23 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ statuslight/statuslight-status.yml }}
+*/
+.spectrum-StatusLight {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: var(--spectrum-statuslight-circle-width);
+    height: var(--spectrum-statuslight-circle-width); /* same as width */
+    border-radius: 50%;
+    margin: 0 var(--spectrum-statuslight-circle-margin-horizontal);
+  }
+}
+
+.spectrum-StatusLight--archived {
+  font-style: italic;
+}
+
+/* topdoc
+{{ statuslight/statuslight-category.yml }}
+*/

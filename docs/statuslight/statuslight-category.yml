@@ -1,0 +1,12 @@
+---
+name: Status Light - Category Colors
+description: Category Colors (300) - Color is organizational.
+markup: |
+  <div class="spectrum-StatusLight spectrum-StatusLight--celery">A/B Test</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--yellow">Multivariate Test</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--fuchsia">Display Ad Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--indigo">Flash Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--seafoam">Landing Page Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--chartreuse">Optimizing Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--magenta">Monitoring Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--purple">Other</div>
