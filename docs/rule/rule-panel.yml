@@ -2,8 +2,16 @@
 name: Rule - Panel
 description:
 markup: |
-  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete"></span>
-  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle"></span>
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+    <use href="#spectrum-icon-18-Delete"></use>
+  </svg>
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="PauseCircle">
+    <use href="#spectrum-icon-18-PauseCircle"></use>
+  </svg>
   <span class="spectrum-Rule spectrum-Rule--panel"></span>
-  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></span>
-  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment"></span>
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+    <use href="#spectrum-icon-18-Filter"></use>
+  </svg>
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+    <use href="#spectrum-icon-18-Comment"></use>
+  </svg>
