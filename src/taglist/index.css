@@ -60,6 +60,10 @@
   &.is-disabled {
     pointer-events: none;
   }
+
+  .spectrum-Icon {
+    margin-right: var(--spectrum-tag-margin-default);
+  }
 }
 
 .spectrum-TagList-item-label {
@@ -98,10 +102,6 @@
   margin-right: var(--spectrum-tag-margin-default);
   border-radius: 50%;
   user-drag: none;
-}
-
-.spectrum-Icon {
-  margin-right: var(--spectrum-tag-margin-default);
 }
 
 .spectrum-TagList-item-icon,
