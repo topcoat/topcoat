@@ -37,7 +37,7 @@ gulp.task('build-docs:copy-site-resources', function() {
 
 gulp.task('build-docs:copy-spectrum-icons', function() {
   gulp.src([
-    'node_modules/@spectrum/spectrum-icons/dist/**'
+    'node_modules/@spectrum/spectrum-icons/svg/**'
   ])
     .pipe(gulp.dest('dist/icons/'));
 });

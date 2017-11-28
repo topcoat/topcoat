@@ -104,3 +104,4 @@ document.addEventListener('click', function(event) {
 }());
 
 AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
+AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');

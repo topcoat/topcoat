@@ -15,7 +15,7 @@
     "@spectrum/balthazar": "^1.x",
     "@spectrum/dna-npm-release": "^1.x",
     "@spectrum/dna-topdoc-template": "^1.x",
-    "@spectrum/spectrum-icons": "^0.2.x",
+    "@spectrum/spectrum-icons": "1.0.0-beta.7",
     "@spectrum/spectrum-origins": "^2.x",
     "autoprefixer": "^6.5.3",
     "del": "^3.0.0",
