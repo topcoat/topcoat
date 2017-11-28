@@ -124,7 +124,7 @@
   font-size: 14px;
 
   /* Fix font icon alignment in Chrome on Windows, works for Mac too */
-  vertical-align: -3px;
+  vertical-align: -2px;
   line-height: 14px;
 }
 

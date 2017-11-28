@@ -3,7 +3,11 @@ name: Tooltip
 description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--CheckmarkCircle spectrum-Tooltip-typeIcon"></span>Success</span>
+    <span class="spectrum-Tooltip-label">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="CheckmarkCircle">
+        <use href="#spectrum-icon-24-CheckmarkCircle"></use>
+      </svg>Success
+    </span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
@@ -14,7 +18,10 @@ markup: |
   <br><br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--InfoCircle spectrum-Tooltip-typeIcon"></span>Info</span>
+  <span class="spectrum-Tooltip-label">
+    <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="Info">
+      <use href="#spectrum-icon-24-Info"></use>
+    </svg>Info</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
@@ -25,7 +32,10 @@ markup: |
   <br><br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Warning</span>
+    <span class="spectrum-Tooltip-label">
+    <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="Alert">
+      <use href="#spectrum-icon-24-Alert"></use>
+    </svg>Warning</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
