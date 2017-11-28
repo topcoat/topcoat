@@ -67,8 +67,8 @@
   min-width: 0;
 
   .spectrum-Dropdown-trigger {
-    margin: 0 var(--spectrum-dropdown-padding-default);
-    width: calc(100% - var(--spectrum-dropdown-padding-default) * 2);
+    width: auto;
+    padding: 0 var(--spectrum-dropdown-padding-default);
   }
 }
 
