@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-pagination-icon-width-default: 7px;
+  --spectrum-pagination-icon-height-default: 10px;
+}
+
 /* topdoc
 {{ pagination/pagination-explicit.yml }}
 */
@@ -49,6 +54,11 @@
   padding-right: calc(var(--spectrum-padding) / 2);
   padding-left: calc(var(--spectrum-padding) / 2);
   border-right: 0;
+
+  .spectrum-Icon {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
 }
 
 .spectrum-Pagination-nextButton {
@@ -60,6 +70,10 @@
     border-left: 0;
     margin-left: var(--spectrum-button-border-size-default) !important;
   }
+
+  .spectrum-Icon {
+    margin-left: 8px;
+  }
 }
 
 .spectrum-Pagination-prevButton,
@@ -67,6 +81,12 @@
   &:focus {
     /* this also triggers 'z-index: auto' and stays on top */
     position: relative;
+  }
+
+  .spectrum-Icon {
+    margin-top: 9px;
+    width: var(--spectrum-pagination-icon-width-default);
+    height: var(--spectrum-pagination-icon-height-default);
   }
 }
 

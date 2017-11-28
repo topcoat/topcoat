@@ -4,10 +4,14 @@ description: A Spectrum 'button style call-to-action' pagination
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-prevButton">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span>
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Previous">
+        <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
+      </svg>
     </button>
     <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-nextButton">
       Next
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span>
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Next">
+        <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
+      </svg>
     </button>
   </nav>
