@@ -89,7 +89,6 @@
 
   /* The actual icon */
   .spectrum-Icon {
-    margin: 8px auto;
     width: var(--spectrum-tag-remove-icon-size-default);
     height: var(--spectrum-tag-remove-icon-size-default);
   }

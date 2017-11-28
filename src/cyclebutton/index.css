@@ -1,6 +1,7 @@
 @import '../commons/index.css';
 
 .spectrum-CycleButton {
+  position: relative;
   width: var(--spectrum-cyclebutton-button-width-default);
   height: var(--spectrum-cyclebutton-button-height-default);
   line-height: var(--spectrum-cyclebutton-button-height-default);
@@ -12,6 +13,14 @@
   &:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: 0;
+  }
+
+  .spectrum-Icon {
+    /* Be centered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .spectrum-Icon:not(.is-active) {

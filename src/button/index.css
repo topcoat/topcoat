@@ -63,7 +63,7 @@
   }
 
   .spectrum-Icon {
-    vertical-align: top;
+    vertical-align: text-top;
   }
 
   .spectrum-Icon + .spectrum-Button-label {
@@ -145,7 +145,6 @@
   /* There's never a background itself */
   background-color: transparent;
 
-  line-height: var(--spectrum-button-icon-width);
   text-align: center;
 
   cursor: pointer;
@@ -174,27 +173,22 @@
     border-radius: var(--spectrum-button-icon-border-radius);
   }
 
-  /* The embedded SVG icon */
-  &::after {
-    position: relative;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: var(--spectrum-button-icon-icon-size) var(--spectrum-button-icon-icon-size);
-  }
-
   &:disabled {
     cursor: default;
   }
 
-  &::after,
-  > * {
+  .spectrum-Icon {
     /* Float above the artificial background */
-    position: relative;
     z-index: 1;
+
+    /* Be centered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 12px;
+    height: 12px;
   }
 }
 

@@ -5,22 +5,22 @@ markup: |
   <div class="spectrum-QuickActions is-open">
     <button class="spectrum-QuickActions-item">
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Text">
-        <use href="#spectrum-icon-18-Text"></use>
+        <use xlink:href="#spectrum-icon-18-Text" />
       </svg>
     </button>
     <button class="spectrum-QuickActions-item">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
-        <use href="#spectrum-icon-18-RotateLeft"></use>
+        <use xlink:href="#spectrum-icon-18-RotateLeft" />
       </svg>
     </button>
     <button class="spectrum-QuickActions-item">
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Crop">
-        <use href="#spectrum-icon-18-Crop"></use>
+        <use xlink:href="#spectrum-icon-18-Crop" />
       </svg>
     </button>
     <button class="spectrum-QuickActions-item">
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="DeleteOutline">
-        <use href="#spectrum-icon-18-DeleteOutline"></use>
+        <use xlink:href="#spectrum-icon-18-DeleteOutline" />
       </svg>
     </button>
   </div>

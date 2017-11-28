@@ -72,14 +72,16 @@
 .spectrum-Stepper-stepDownIcon {
   width: var(--spectrum-Stepper-stepUpIcon-width);
   height: var(--spectrum-Stepper-stepUpIcon-height);
-  margin-top: 3px;
   margin-left: 2px;
   opacity: 1;
 }
 
+/* Be aligned nicely */
 .spectrum-Stepper-stepUpIcon {
-  /* Off by 1px otherwise */
-  margin-top: 6px;
+  margin-top: 1px;
+}
+.spectrum-Stepper-stepDownIcon {
+  margin-top: -1px;
 }
 
 .spectrum-Stepper--quiet {

@@ -5,7 +5,7 @@ markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label">
       <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="CheckmarkCircle">
-        <use href="#spectrum-icon-24-CheckmarkCircle"></use>
+        <use xlink:href="#spectrum-icon-24-CheckmarkCircle" />
       </svg>Success
     </span>
     <span class="spectrum-Tooltip-tip"></span>
@@ -20,7 +20,7 @@ markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
   <span class="spectrum-Tooltip-label">
     <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="Info">
-      <use href="#spectrum-icon-24-Info"></use>
+      <use xlink:href="#spectrum-icon-24-Info" />
     </svg>Info</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
@@ -34,7 +34,7 @@ markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
     <span class="spectrum-Tooltip-label">
     <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="Alert">
-      <use href="#spectrum-icon-24-Alert"></use>
+      <use xlink:href="#spectrum-icon-24-Alert" />
     </svg>Warning</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>

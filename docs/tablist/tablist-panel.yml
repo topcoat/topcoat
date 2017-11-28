@@ -9,25 +9,25 @@
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
       <div class="spectrum-TabList-item is-selected" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
-          <use href="#spectrum-icon-24-Folder"></use>
+          <use xlink:href="#spectrum-icon-24-Folder" />
         </svg>
         <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
-          <use href="#spectrum-icon-24-Image"></use>
+          <use xlink:href="#spectrum-icon-24-Image" />
         </svg>
         <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
-          <use href="#spectrum-icon-24-Filter"></use>
+          <use xlink:href="#spectrum-icon-24-Filter" />
         </svg>
         <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
-          <use href="#spectrum-icon-24-Comment"></use>
+          <use xlink:href="#spectrum-icon-24-Comment" />
         </svg>
         <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
@@ -39,22 +39,22 @@
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
       <div class="spectrum-TabList-item is-selected" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
-          <use href="#spectrum-icon-18-Folder"></use>
+          <use xlink:href="#spectrum-icon-18-Folder" />
         </svg>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
-          <use href="#spectrum-icon-18-Image"></use>
+          <use xlink:href="#spectrum-icon-18-Image" />
         </svg>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
-          <use href="#spectrum-icon-18-Filter"></use>
+          <use xlink:href="#spectrum-icon-18-Filter" />
         </svg>
       </div>
       <div class="spectrum-TabList-item" tabindex="0">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
-          <use href="#spectrum-icon-18-Comment"></use>
+          <use xlink:href="#spectrum-icon-18-Comment" />
         </svg>
       </div>
       <div class="spectrum-TabList-item-line" style="width: 17px; left: 7px;"></div>

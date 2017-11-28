@@ -84,9 +84,10 @@
   }
 
   .spectrum-Icon {
-    margin-top: 9px;
     width: var(--spectrum-pagination-icon-width-default);
     height: var(--spectrum-pagination-icon-height-default);
+
+    vertical-align: baseline;
   }
 }
 

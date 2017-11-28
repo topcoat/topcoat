@@ -4,9 +4,9 @@ description: A Spectrum cycle button
 markup: |
   <button class="spectrum-CycleButton">
     <svg class="spectrum-Icon spectrum-Icon--sizeS is-active" focusable="false" aria-hidden="true" aria-label="Folder">
-      <use href="#spectrum-icon-18-PlayCircle"></use>
+      <use xlink:href="#spectrum-icon-18-PlayCircle" />
     </svg>
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="PauseCircle">
-      <use href="#spectrum-icon-18-PauseCircle"></use>
+      <use xlink:href="#spectrum-icon-18-PauseCircle" />
     </svg>
   </button>

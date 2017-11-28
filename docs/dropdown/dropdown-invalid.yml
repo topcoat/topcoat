@@ -6,7 +6,7 @@ markup: |
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
-        <use href="#spectrum-icon-18-Alert"></use>
+        <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -19,7 +19,7 @@ markup: |
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
-        <use href="#spectrum-icon-18-Alert"></use>
+        <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -46,7 +46,7 @@ markup: |
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
-        <use href="#spectrum-icon-18-Alert"></use>
+        <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />

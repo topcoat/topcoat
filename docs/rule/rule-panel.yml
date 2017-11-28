@@ -3,15 +3,15 @@ name: Rule - Panel
 description:
 markup: |
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use href="#spectrum-icon-18-Delete"></use>
+    <use xlink:href="#spectrum-icon-18-Delete" />
   </svg>
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="PauseCircle">
-    <use href="#spectrum-icon-18-PauseCircle"></use>
+    <use xlink:href="#spectrum-icon-18-PauseCircle" />
   </svg>
   <span class="spectrum-Rule spectrum-Rule--panel"></span>
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
-    <use href="#spectrum-icon-18-Filter"></use>
+    <use xlink:href="#spectrum-icon-18-Filter" />
   </svg>
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
-    <use href="#spectrum-icon-18-Comment"></use>
+    <use xlink:href="#spectrum-icon-18-Comment" />
   </svg>
