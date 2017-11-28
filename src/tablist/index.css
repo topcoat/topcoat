@@ -75,19 +75,11 @@
     text-transform: uppercase;
   }
 
-  .spectrum-TabList-item-icon {
+  .spectrum-Icon {
     float: left;
 
     /* Ensure the label doesn't drop down */
     display: block;
-
-    /* Support SVG icons */
-    /*width: var(--spectrum-tablist-icon-size);*/
-    /*height: var(--spectrum-tablist-icon-size);*/
-
-    /* Support font icons */
-    /*font-size: var(--spectrum-tablist-icon-size);*/
-    /*line-height: var(--spectrum-tablist-icon-size);*/
 
     & + .spectrum-TabList-item-label {
       margin-left: 7px;
@@ -152,7 +144,7 @@
       /*height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);*/
       height: auto;
     }
-    .spectrum-TabList-item-icon {
+    .spectrum-Icon {
       margin-top: 4px;
       margin-bottom: 4px;
     }
@@ -196,7 +188,7 @@
       height: var(--spectrum-tablist-panel-vertical-tab-item-height-default);
       margin-bottom: 6px;
     }
-    .spectrum-TabList-item-icon {
+    .spectrum-Icon {
       margin-top: 3px;
       margin-bottom: 3px;
     }
