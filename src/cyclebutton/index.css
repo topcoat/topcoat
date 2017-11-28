@@ -13,8 +13,8 @@
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: 0;
   }
-}
 
-.spectrum-CycleButton-icon:not(.is-active) {
-  display: none
+  .spectrum-Icon:not(.is-active) {
+    display: none
+  }
 }

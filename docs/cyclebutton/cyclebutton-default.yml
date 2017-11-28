@@ -3,6 +3,10 @@ name: Cycle Button - Default
 description: A Spectrum cycle button
 markup: |
   <button class="spectrum-CycleButton">
-    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PlayCircle is-active"></span>
-    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle"></span>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS is-active" focusable="false" aria-hidden="true" aria-label="Folder">
+      <use href="#spectrum-icon-18-PlayCircle"></use>
+    </svg>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="PauseCircle">
+      <use href="#spectrum-icon-18-PauseCircle"></use>
+    </svg>
   </button>
