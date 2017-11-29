@@ -14,7 +14,7 @@
   &:hover {
     color: var(--spectrum-calendar-day-text-color-hover);
 
-    &:not(.is-range-end):not(.is-range-start) {
+    &:not(.is-selection-end):not(.is-selection-start) {
       &:before {
         background: var(--spectrum-calendar-day-background-color-hover);
       }
@@ -22,7 +22,7 @@
 
     &.is-selected {
       color: var(--spectrum-calendar-day-text-color-selected-hover);
-      &:not(.is-range-end):not(.is-range-start) {
+      &:not(.is-selection-end):not(.is-selection-start) {
         &:before {
           background: var(--spectrum-calendar-day-background-color-selected-hover);
         }
@@ -52,6 +52,7 @@
 
   &.is-today {
     color: var(--spectrum-calendar-day-today-text-color-default);
+    border-color: var(--spectrum-calendar-day-today-border-color-default);
     font-weight: var(--spectrum-calendar-day-today-font-weight-default);
 
     &:before {
@@ -59,7 +60,7 @@
     }
 
     &:hover {
-      &.is-selected {
+      &.is-selected:not(.is-range-selection) {
         &:before {
           background: var(--spectrum-calendar-day-today-background-color-selected-hover);
         }
@@ -68,6 +69,7 @@
 
     &.is-disabled {
       color: var(--spectrum-calendar-day-today-text-color-disabled);
+      border-color: var(--spectrum-calendar-day-today-border-color-disabled);
 
       &:before {
         border-color: var(--spectrum-calendar-day-today-border-color-disabled);
@@ -96,12 +98,16 @@
     color: var(--spectrum-calendar-day-text-color-disabled);
   }
 
-  &.is-range-start,
-  &.is-range-end {
+  &.is-selection-start,
+  &.is-selection-end {
     color: var(--spectrum-calendar-day-text-color-cap-selected);
 
     &:after {
       background-color: var(--spectrum-calendar-day-background-color-selected);
+    }
+
+    &.is-disabled {
+      color: var(--spectrum-calendar-day-text-color-disabled);
     }
   }
 }

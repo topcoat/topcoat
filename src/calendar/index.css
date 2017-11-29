@@ -182,10 +182,15 @@
     width: calc(var(--spectrum-calendar-day-size-default) + calc(var(--spectrum-calendar-day-padding-size-default) * 2));
 
     &.is-range-start,
-    &.is-range-end {
-      font-weight: var(--spectrum-calendar-day-font-weight-cap-selected);
-
+    &.is-range-end,
+    &.is-selection-start,
+    &.is-selection-end {
       width: calc(var(--spectrum-calendar-day-size-default) + var(--spectrum-calendar-day-padding-size-default));
+    }
+
+    &.is-selection-start,
+    &.is-selection-end {
+      font-weight: var(--spectrum-calendar-day-font-weight-cap-selected);
 
       &:after {
         position: absolute;
@@ -203,69 +208,36 @@
       }
     }
 
-    &.is-range-start {
+    &.is-range-start,
+    &.is-selection-start {
       padding-right: var(--spectrum-calendar-day-padding-size-default);
-
       margin-left: var(--spectrum-calendar-day-padding-size-default);
-
       border-radius: var(--spectrum-calendar-day-size-default) 0 0 var(--spectrum-calendar-day-size-default);
 
+      &:before,
       &:after {
         left: 0;
       }
-
-      &.is-range-end {
-        border-radius: var(--spectrum-calendar-day-size-default);
-      }
     }
 
-    &.is-range-end {
+    &.is-range-end,
+    &.is-selection-end {
       padding-left: var(--spectrum-calendar-day-padding-size-default);
-
       margin-right: var(--spectrum-calendar-day-padding-size-default);
-
       border-radius: 0 var(--spectrum-calendar-day-size-default) var(--spectrum-calendar-day-size-default) 0;
 
+      &:before,
       &:after {
+        left: auto;
         right: 0;
       }
-
-      &.is-range-start {
-        border-radius: var(--spectrum-calendar-day-size-default);
-      }
     }
-  }
-}
 
-.spectrum-Calendar-tableCell:first-of-type {
-  .spectrum-Calendar-date.is-range-selection {
-    width: calc(var(--spectrum-calendar-day-size-default) + var(--spectrum-calendar-day-padding-size-default));
-
-    padding-right: var(--spectrum-calendar-day-padding-size-default);
-
-    margin-left: var(--spectrum-calendar-day-padding-size-default);
-
-    border-radius: var(--spectrum-calendar-day-size-default) 0 0 var(--spectrum-calendar-day-size-default);
-
-    &:before {
-      left: 0;
-    }
-  }
-}
-
-.spectrum-Calendar-tableCell:last-of-type {
-  .spectrum-Calendar-date.is-range-selection {
-    width: calc(var(--spectrum-calendar-day-size-default) + var(--spectrum-calendar-day-padding-size-default));
-
-    padding-left: var(--spectrum-calendar-day-padding-size-default);
-
-    margin-right: var(--spectrum-calendar-day-padding-size-default);
-
-    border-radius: 0 var(--spectrum-calendar-day-size-default) var(--spectrum-calendar-day-size-default) 0;
-
-    &:before {
-      left: auto;
-      right: 0;
+    &.is-selection-start.is-selection-end,
+    &.is-selection-start.is-range-end,
+    &.is-selection-end.is-range-start {
+      width: var(--spectrum-calendar-day-size-default);
+      border-radius: var(--spectrum-calendar-day-size-default);
     }
   }
 }
