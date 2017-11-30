@@ -1,3 +1,14 @@
+.spectrum-InputGroup {
+  &:hover {
+    .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
+      &,
+      & ~ .spectrum-InputGroup-button {
+        border-color: var(--spectrum-input-border-color-hover);
+      }
+    }
+  }
+}
+
 .spectrum-InputGroup-input:focus {
   ~ .spectrum-InputGroup-button {
     border-color: var(--spectrum-dropdown-border-color-focus);
@@ -13,63 +24,26 @@
   }
 }
 
-.spectrum-InputGroup-button {
-  border-color: var(--spectrum-fieldbutton-border-color-default);
-  background-color: var(--spectrum-fieldbutton-background-color-default);
-  color: var(--spectrum-fieldbutton-icon-color-default);
-
-  &:hover {
-    border-color: var(--spectrum-fieldbutton-border-color-hover);
-    background-color: var(--spectrum-fieldbutton-background-color-hover);
-    color: var(--spectrum-fieldbutton-icon-color-hover);
-  }
-
-  &:active,
-  &.is-selected {
-    border-color: var(--spectrum-fieldbutton-border-color-active);
-    background-color: var(--spectrum-fieldbutton-background-color-active);
-    color: var(--spectrum-fieldbutton-icon-color-active);
-  }
-
-  &:disabled:hover {
-    border-color: var(--spectrum-fieldbutton-border-color-disabled);
-    background-color: var(--spectrum-fieldbutton-background-color-disabled);
-    color: var(--spectrum-fieldbutton-icon-color-disabled);
-  }
-
-  &.is-invalid,
-  &:invalid {
-    border-color: var(--spectrum-input-invalid-border-color-default);
-  }
-}
-
 .spectrum-InputGroup--quiet {
   .spectrum-InputGroup-button {
-    border-color: var(--spectrum-input-quiet-border-color-default);
-    background-color: inherit;
-
+    &,
     &:hover,
-    &:focus-ring,
+    &:focus,
     &:active,
     &.is-selected,
     &:invalid,
     &.is-invalid,
     &:disabled,
     &:disabled:hover {
-      background-color: inherit;
-    }
-
-    &.is-selected {
-      border-color: var(--spectrum-fieldbutton-border-color-active);
+      border-color: var(--spectrum-input-quiet-border-color-default);
     }
   }
 
   &:hover {
-    .spectrum-InputGroup-button {
-      border-color: var(--spectrum-input-quiet-border-color-hover);
-
-      &:disabled {
-        border-color: var(--spectrum-input-quiet-border-color-default);
+    .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
+      &,
+      & ~ .spectrum-InputGroup-button {
+        border-color: var(--spectrum-input-quiet-border-color-hover);
       }
     }
   }
@@ -77,6 +51,7 @@
   .spectrum-InputGroup-input {
     &.is-invalid,
     &:invalid {
+      &,
       ~ .spectrum-InputGroup-button {
         border-color: var(--spectrum-input-invalid-border-color-default);
       }
