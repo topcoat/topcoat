@@ -235,7 +235,8 @@
 
     &.is-selection-start.is-selection-end,
     &.is-selection-start.is-range-end,
-    &.is-selection-end.is-range-start {
+    &.is-selection-end.is-range-start,
+    &.is-range-start.is-range-end {
       width: var(--spectrum-calendar-day-size-default);
       border-radius: var(--spectrum-calendar-day-size-default);
     }
