@@ -87,18 +87,6 @@
   }
 }
 
-.spectrum-Textfield--quiet {
-  border-radius: 0;
-  text-indent: 0;
-
-  border: none;
-  border-bottom: 1px solid;
-
-  /* removes the side padding to align the text properly */
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .spectrum-Textfield--multiline {
   height: auto;
   padding: 4px 8px;
@@ -113,8 +101,18 @@
   }
 }
 
-/* Treat all quiet inputs and textareas the same */
 .spectrum-Textfield--quiet {
+  border-radius: 0;
+  text-indent: 0;
+
+  border: none;
+  border-bottom: 1px solid;
+
+  /* removes the side padding to align the text properly */
+  padding-left: 0;
+  padding-right: 0;
+
+  /* Treat all quiet inputs and textareas the same */
   resize: none;
   overflow-y: hidden;
 }
