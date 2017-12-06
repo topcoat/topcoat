@@ -21,6 +21,12 @@
   }
 }
 
+.spectrum-Dropdown--quiet {
+  .spectrum-Popover {
+    left: -var(--spectrum-dropdown-padding-default);
+  }
+}
+
 
 .spectrum-Dropdown-trigger {
   position: relative;
@@ -68,7 +74,6 @@
 
   .spectrum-Dropdown-trigger {
     width: auto;
-    padding: 0 var(--spectrum-dropdown-padding-default);
   }
 }
 
