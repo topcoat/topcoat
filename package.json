@@ -1,6 +1,6 @@
 {
   "name": "@spectrum/spectrum-css",
-  "version": "2.0.0-beta.66",
+  "version": "2.0.0-beta.67",
   "scripts": {
     "build": "gulp",
     "bump": "node node_modules/.bin/dna-npm-bump-version",
