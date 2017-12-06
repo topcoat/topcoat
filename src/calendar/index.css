@@ -45,7 +45,7 @@
   width: 100%;
   line-height: var(--spectrum-calendar-header-height-default);
   margin: 0;
-  padding: 0 var(--spectrum-calendar-header-height-default);;
+  padding: 0 var(--spectrum-calendar-header-height-default);
 
   text-align: center;
   overflow: hidden;

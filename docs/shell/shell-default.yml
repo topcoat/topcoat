@@ -1,0 +1,150 @@
+---
+name: Shell
+description: The application shell.
+markup: |
+  <div style="margin: 0 0 10px 0">Full size example</div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Shell in Fullscreen Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--fullscreen" id="fullscreenDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Shell Fullsize</h2>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Close</button>
+    </div>
+    <header class="spectrum-Shell">
+      <div class="spectrum-Shell-leftContainer">
+        <div class="spectrum-Shell-logoIcon" style="color: #00fa8f;">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-24-AdobeMediaOptimizer" />
+          </svg>
+        </div>
+        <div class="spectrum-Shell-logoLabel">Adobe Media Optimizer</div>
+        <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
+          <div class="spectrum-TabList-item" tabindex="0">
+            <label class="spectrum-TabList-item-label">Display</label>
+          </div>
+          <div class="spectrum-TabList-item is-selected" tabindex="0">
+            <label class="spectrum-TabList-item-label">Search</label>
+          </div>
+          <div class="spectrum-TabList-item" tabindex="0">
+            <label class="spectrum-TabList-item-label">Social</label>
+          </div>
+          <div class="spectrum-TabList-item-line" style="width: 39px; left: 80px;"></div>
+        </div>
+      </div>
+      <div class="spectrum-Shell-rightContainer">
+        <div class="spectrum-Shell-companyLabel">Company, Inc</div>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-Search" />
+          </svg>
+        </button>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-HelpCircle" />
+          </svg>
+        </button>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-Apps" />
+          </svg>
+        </button>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-Bell" />
+          </svg>
+        </button>
+        <div class="spectrum-Shell-avatar">
+          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        </div>
+      </div>
+    </header>
+  </div>
+  <div style="margin: 30px 0 10px 0">Mid-size example</div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Shell in Fullscreen Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--fullscreen" id="fullscreenDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Shell Mid-size</h2>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Close</button>
+    </div>
+    <header class="spectrum-Shell" style="max-width: 770px;">
+      <div class="spectrum-Shell-leftContainer">
+        <div class="spectrum-Shell-logoIcon" style="color: #00fa8f;">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-24-AdobeMediaOptimizer" />
+          </svg>
+        </div>
+        <div class="spectrum-Shell-logoLabel">Media Optimizer</div>
+        <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 88px;">
+          <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+            <span class="spectrum-Dropdown-label">Search</span>
+            <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="spectrum-Shell-rightContainer">
+        <div class="spectrum-Shell-companyLabel">Company, Inc</div>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-Search" />
+          </svg>
+        </button>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-HelpCircle" />
+          </svg>
+        </button>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-Apps" />
+          </svg>
+        </button>
+        <button class="spectrum-Button spectrum-Button--icon">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+            <use xlink:href="#spectrum-icon-18-Bell" />
+          </svg>
+        </button>
+        <div class="spectrum-Shell-avatar">
+          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        </div>
+      </div>
+    </header>
+  </div>
+  <div style="margin: 30px 0 10px 0">Small size example</div>
+  <header class="spectrum-Shell" style="max-width: 348px;">
+    <div class="spectrum-Shell-leftContainer">
+      <div class="spectrum-Shell-logoIcon" style="color: #00fa8f;">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Close">
+          <use xlink:href="#spectrum-icon-24-AdobeMediaOptimizer" />
+        </svg>
+      </div>
+      <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 88px;">
+        <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+          <span class="spectrum-Dropdown-label">Search</span>
+          <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="spectrum-Shell-rightContainer">
+      <button class="spectrum-Button spectrum-Button--icon">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+          <use xlink:href="#spectrum-icon-18-HelpCircle" />
+        </svg>
+      </button>
+      <button class="spectrum-Button spectrum-Button--icon">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+          <use xlink:href="#spectrum-icon-18-Apps" />
+        </svg>
+      </button>
+      <button class="spectrum-Button spectrum-Button--icon">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Close">
+          <use xlink:href="#spectrum-icon-18-Bell" />
+        </svg>
+      </button>
+      <div class="spectrum-Shell-avatar">
+        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      </div>
+    </div>
+  </header>

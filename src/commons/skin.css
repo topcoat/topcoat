@@ -11,9 +11,15 @@
   /* Button */
   --spectrum-button-border-focus-grow: 1px;
 
+  /* Loader */
   --spectrum-loader-round-full-page-sprite-url: 'embed/Loader_Determinate_Full-Page_64_Sprite.svg';
   --spectrum-loader-round-indeterminate-full-page-sprite-url: 'embed/Loader_Indeterminate_Full-Page_64_Sprite.svg';
-
   --spectrum-loader-background-color-fullpage: rgba(255,255,255,0.2);
   --spectrum-loader-fill-color-fullpage: #FFFFFF;
+
+  /* Shell */
+  --spectrum-shell-grey100: rgb(30, 30, 30);
+  --spectrum-shell-grey700: rgb(133, 133, 133);
+  --spectrum-shell-grey800: rgb(180, 180, 180);
+  --spectrum-shell-grey900: rgb(226, 226, 226);
 }

@@ -1,0 +1,45 @@
+/* topdoc
+{{ shell/shell-default.yml }}
+*/
+.spectrum-Shell {
+  color: var(--spectrum-shell-grey900);
+  background-color: var(--spectrum-shell-grey100);
+
+  .spectrum-TabList-item {
+    color: var(--spectrum-shell-grey700);
+    &.is-selected {
+      color: var(--spectrum-shell-grey900);
+    }
+    &:hover, &:active {
+      color: var(--spectrum-shell-grey900);
+    }
+  }
+
+  .spectrum-TabList-item-line {
+    background-color: var(--spectrum-shell-grey900);
+  }
+
+  .spectrum-Button--icon {
+    color: var(--spectrum-shell-grey700);
+    &:hover, &:active {
+      color: var(--spectrum-shell-grey900);
+    }
+    &:active::before {
+      background: transparent;
+    }
+  }
+
+  .spectrum-Button--quiet--dropdown, .spectrum-Dropdown-icon {
+    color: var(--spectrum-shell-grey800);
+    &:hover, &:active {
+      color: var(--spectrum-shell-grey900);
+    }
+  }
+  .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-icon {
+    color: var(--spectrum-shell-grey900);
+  }
+}
+
+.spectrum-Shell-companyLabel {
+  color: var(--spectrum-shell-grey700);
+}

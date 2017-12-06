@@ -1,0 +1,63 @@
+:root {
+   --spectrum-shell-avatar-logo-dimensions: 24px;
+   --spectrum-shell-height: 48px;
+}
+
+.spectrum-Shell {
+  height: var(--spectrum-shell-height);
+  padding: 0 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .spectrum-TabList-item {
+    top: 1px;
+  }
+
+  .spectrum-TabList-item-line {
+    bottom: -7px;
+  }
+
+  .spectrum-Button--icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.spectrum-Shell-leftContainer,  .spectrum-Shell-rightContainer {
+  display: flex;
+  align-items: center;
+}
+
+.spectrum-Shell-logoIcon {
+  height: var(--spectrum-shell-avatar-logo-dimensions);
+  width: var(--spectrum-shell-avatar-logo-dimensions);
+  position: relative;
+  margin-right: 12px;
+}
+
+.spectrum-Shell-logoLabel {
+  margin-right: 72px;
+}
+
+.spectrum-Shell-rightContainer > * {
+  margin: 0 14px;
+  &:first-child {
+    margin-left: 28px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.spectrum-Shell-avatar {
+  width: var(--spectrum-shell-avatar-logo-dimensions);
+  height: var(--spectrum-shell-avatar-logo-dimensions);
+  border-radius: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
