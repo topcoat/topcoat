@@ -1,22 +1,13 @@
 .spectrum-MillerColumn-item {
-  &::after {
-    background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color var(--spectrum-miller-column-chevron-color-default)));
-  }
   &:focus,
   &:hover {
     background-color: var(--spectrum-miller-column-item-background-color-hover);
-    &::after {
-      background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color var(--spectrum-miller-column-chevron-color-hover)));
-    }
   }
   &.is-navigated {
       /* gray background */
       background-color: var(--spectrum-miller-column-item-background-color-active);
       &:hover {
         background-color: var(--spectrum-miller-column-item-background-color-active);
-      }
-      &::after {
-        background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color var(--spectrum-miller-column-chevron-color-active)));
       }
     }
     &.is-selected {
