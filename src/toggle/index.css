@@ -7,8 +7,8 @@
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: var(--spectrum-component-single-line-height);
-  line-height: var(--spectrum-component-single-line-height);
+  height: var(--spectrum-switch-height-default);
+  line-height: var(--spectrum-switch-height-default);
 }
 
 .spectrum-ToggleSwitch-input {
@@ -24,7 +24,7 @@
 
   &:checked + .spectrum-ToggleSwitch-switch {
     &::after {
-      transform: translateX(calc(var(--spectrum-switch-width-default) - var(--spectrum-switch-handle-width-default)));
+      transform: translateX(calc(var(--spectrum-switch-track-width-default) - var(--spectrum-switch-handle-diameter-default)));
     }
   }
 
@@ -35,8 +35,8 @@
 }
 
 .spectrum-ToggleSwitch-label {
-  margin: 0 var(--spectrum-switch-label-gap-size-default);
-  font-size: var(--spectrum-switch-label-font-size-default);
+  margin: 0 var(--spectrum-switch-text-gap-default);
+  font-size: var(--spectrum-switch-text-font-size-default);
   vertical-align: middle;
   transition: color 150ms ease-in-out;
 }
@@ -46,8 +46,8 @@
   /* positions the pseudo elements relative to this one */
   position: relative;
 
-  height: var(--spectrum-switch-height-default);
-  width: var(--spectrum-switch-width-default);
+  height: var(--spectrum-switch-track-height-default);
+  width: var(--spectrum-switch-track-width-default);
 
   vertical-align: middle;
 
@@ -75,8 +75,8 @@
   &::after {
     transition: background var(--spectrum-transition-time) ease-in-out, border var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 
-    width: var(--spectrum-switch-handle-width-default);
-    height: var(--spectrum-switch-handle-height-default);
+    width: var(--spectrum-switch-handle-diameter-default);
+    height: var(--spectrum-switch-handle-diameter-default);
 
     top: 0;
     left: 0;

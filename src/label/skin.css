@@ -7,7 +7,7 @@
 */
 .spectrum-Label--inactive,
 .spectrum-Label--grey {
-  background-color: var(--spectrum-label-colored-grey-background-color-default);
+  background-color: var(--spectrum-label-colored-gray-background-color-default);
 }
 
 .spectrum-Label--green {

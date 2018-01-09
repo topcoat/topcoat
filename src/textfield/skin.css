@@ -31,12 +31,12 @@
   }
 
   &:active {
-    border-color: var(--spectrum-input-border-color-active);
+    border-color: var(--spectrum-input-border-color-down);
   }
 
   &:focus {
-    border-color: var(--spectrum-input-border-color-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
+    border-color: var(--spectrum-input-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-key-focus);
   }
 
   &[disabled] {
@@ -76,12 +76,12 @@
   }
 
   &:active {
-    border-color: var(--spectrum-input-quiet-border-color-active);
+    border-color: var(--spectrum-input-quiet-border-color-down);
   }
 
   &:focus {
-    border-color: var(--spectrum-input-quiet-border-color-focus);
-    box-shadow: 0 1px 0 var(--spectrum-input-quiet-border-color-focus);
+    border-color: var(--spectrum-input-quiet-border-color-key-focus);
+    box-shadow: 0 1px 0 var(--spectrum-input-quiet-border-color-key-focus);
   }
 
   &:disabled {

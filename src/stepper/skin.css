@@ -4,16 +4,16 @@
 
 .spectrum-Stepper {
   &.is-focused {
-    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-key-focus);
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-input-border-color-focus);
+      border-color: var(--spectrum-input-border-color-key-focus);
     }
 
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-input-border-color-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-input-border-color-focus);
+      border-color: var(--spectrum-input-border-color-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-input-border-color-key-focus);
     }
   }
 
@@ -77,16 +77,16 @@
   }
 
   &.is-focused {
-    box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-focus);
+    box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-key-focus);
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-input-border-color-focus);
+      border-color: var(--spectrum-input-border-color-key-focus);
     }
 
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-input-border-color-focus);
-      box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-focus);
+      border-color: var(--spectrum-input-border-color-key-focus);
+      box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-key-focus);
     }
   }
 

@@ -37,7 +37,7 @@
   }
 
   &:active {
-    background-color: var(--spectrum-calendar-day-background-color-active);
+    background-color: var(--spectrum-calendar-day-background-color-down);
   }
 
   &.is-selected {
@@ -78,19 +78,19 @@
   }
 
   &.is-focused:not(.is-range-selection) {
-    background: var(--spectrum-calendar-day-background-color-focus);
-    border-color: var(--spectrum-calendar-day-border-color-focus);
-    color: var(--spectrum-calendar-day-text-color-focus);
+    background: var(--spectrum-calendar-day-background-color-key-focus);
+    border-color: var(--spectrum-calendar-day-border-color-key-focus);
+    color: var(--spectrum-calendar-day-text-color-key-focus);
 
     &.is-today {
-      border-color: var(--spectrum-calendar-day-border-color-focus);
+      border-color: var(--spectrum-calendar-day-border-color-key-focus);
     }
 
     &:active,
     &.is-selected {
       color: var(--spectrum-calendar-day-text-color-selected);
       background: var(--spectrum-calendar-day-background-color-cap-selected);
-      border-color: var(--spectrum-calendar-day-border-color-focus);
+      border-color: var(--spectrum-calendar-day-border-color-key-focus);
     }
   }
 

@@ -11,8 +11,8 @@
 
   &:focus,
   &.is-focused {
-    background-color: var(--spectrum-selectlist-option-background-color-focus);
-    color: var(--spectrum-selectlist-option-text-color-focus);
+    background-color: var(--spectrum-selectlist-option-background-color-key-focus);
+    color: var(--spectrum-selectlist-option-text-color-key-focus);
     background-image: linear-gradient(to right, var(--spectrum-alias-focus-blue) 0%, var(--spectrum-alias-focus-blue) 2px, transparent 2px, transparent 100%);
   }
 
@@ -31,7 +31,7 @@
 
   .is-active,
   &:active {
-    background-color: var(--spectrum-selectlist-option-background-color-active);
+    background-color: var(--spectrum-selectlist-option-background-color-down);
   }
 
   &.is-disabled {

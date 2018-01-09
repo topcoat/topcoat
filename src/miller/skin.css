@@ -5,9 +5,9 @@
   }
   &.is-navigated {
       /* gray background */
-      background-color: var(--spectrum-miller-column-item-background-color-active);
+      background-color: var(--spectrum-miller-column-item-background-color-down);
       &:hover {
-        background-color: var(--spectrum-miller-column-item-background-color-active);
+        background-color: var(--spectrum-miller-column-item-background-color-down);
       }
     }
     &.is-selected {

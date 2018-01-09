@@ -6,7 +6,7 @@
   background: var(--spectrum-dialog-background-color-default);
 
   &:after {
-    background: var(--spectrum-dialog-title-divider-color-default);
+    background: var(--spectrum-dialog-rule-color-default);
   }
 }
 

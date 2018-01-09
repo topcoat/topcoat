@@ -14,20 +14,20 @@
     }
 
     &:focus-ring {
-      color: var(--spectrum-breadcrumb-text-color-focus);
+      color: var(--spectrum-breadcrumb-text-color-key-focus);
       outline: 0;
-      border-bottom: 2px solid var(--spectrum-breadcrumb-text-color-focus);
+      border-bottom: 2px solid var(--spectrum-breadcrumb-text-color-key-focus);
     }
 
     &:active {
-      color: var(--spectrum-breadcrumb-text-color-active);
+      color: var(--spectrum-breadcrumb-text-color-down);
       border-bottom: 0;
     }
   }
 
   &.is-selected,
   &:last-of-type {
-    color: var(--spectrum-breadcrumb-text-color-active);
+    color: var(--spectrum-breadcrumb-text-color-down);
   }
 
   &.is-selected {
@@ -38,7 +38,7 @@
     }
     .spectrum-Breadcrumb-link {
       &:focus-ring {
-        color: var(--spectrum-breadcrumb-text-color-active);
+        color: var(--spectrum-breadcrumb-text-color-down);
         border-bottom: 0;
       }
     }

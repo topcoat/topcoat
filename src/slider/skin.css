@@ -64,13 +64,13 @@ spectrum-slider-track-disabled(){
   }
 
   &:focus {
-    border-color: var(--spectrum-slider-handle-border-color-focus);
-    background: var(--spectrum-slider-handle-fill-color-focus);
+    border-color: var(--spectrum-slider-handle-border-color-key-focus);
+    background: var(--spectrum-slider-handle-fill-color-key-focus);
   }
 
   &:active {
-    border-color: var(--spectrum-slider-handle-border-color-active);
-    background: var(--spectrum-slider-handle-fill-color-active);
+    border-color: var(--spectrum-slider-handle-border-color-down);
+    background: var(--spectrum-slider-handle-fill-color-down);
   }
 }
 
@@ -104,18 +104,18 @@ Todo: Determine if these are supposed to be pseudo classes
 
 .spectrum-Slider-controls--focus {
   .spectrum-Slider-handle {
-    border-color: var(--spectrum-slider-handle-border-color-focus);
-    background: var(--spectrum-slider-handle-fill-color-focus);
-    border-width: var(--spectrum-slider-border-width-active);
+    border-color: var(--spectrum-slider-handle-border-color-key-focus);
+    background: var(--spectrum-slider-handle-fill-color-key-focus);
+    border-width: var(--spectrum-slider-border-width-key-focus);
     transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
 .spectrum-Slider-controls--active {
   .spectrum-Slider-handle {
-    border-color: var(--spectrum-slider-handle-border-color-active);
-    background: var(--spectrum-slider-handle-fill-color-active);
-    border-width: var(--spectrum-slider-border-width-active);
+    border-color: var(--spectrum-slider-handle-border-color-down);
+    background: var(--spectrum-slider-handle-fill-color-down);
+    border-width: var(--spectrum-slider-border-width-key-focus);
     transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
@@ -184,7 +184,7 @@ Todo: Determine if these are supposed to be pseudo classes
     background: var(--spectrum-slider-color-handle-color-default);
 
     &:focus {
-      box-shadow: 0 0 0 var(--spectrum-slider-color-handle-outset-border-width-default) var(--spectrum-slider-color-handle-outset-border-color-focus);
+      box-shadow: 0 0 0 var(--spectrum-slider-color-handle-outset-border-width-default) var(--spectrum-slider-color-handle-outset-border-color-key-focus);
     }
   }
 }
@@ -199,7 +199,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
     &:focus .spectrum-Slider-input::after {
-      background-color: var(--spectrum-slider-round-handle-marker-color-focus);
+      background-color: var(--spectrum-slider-round-handle-marker-color-key-focus);
     }
   }
   .spectrum-Slider-input {

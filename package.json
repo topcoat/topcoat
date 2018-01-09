@@ -12,11 +12,11 @@
     "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\""
   },
   "devDependencies": {
-    "@spectrum/balthazar": "^1.x",
+    "@spectrum/balthazar": "^2.x",
     "@spectrum/dna-npm-release": "^1.x",
     "@spectrum/dna-topdoc-template": "^1.x",
+    "@spectrum/spectrum-dna": "^3.x",
     "@spectrum/spectrum-icons": "^1.0.0-beta.9",
-    "@spectrum/spectrum-origins": "^2.x",
     "autoprefixer": "^6.5.3",
     "del": "^3.0.0",
     "express": "^4.15.3",
@@ -26,6 +26,7 @@
     "gulp-download-stream": "0.0.13",
     "gulp-eslint": "^4.0.0",
     "gulp-exec": "^2.1.3",
+    "gulp-filter": "^5.0.1",
     "gulp-git": "^2.4.1",
     "gulp-insert": "^0.5.0",
     "gulp-plumber": "^1.1.0",

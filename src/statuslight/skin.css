@@ -1,24 +1,24 @@
 .spectrum-StatusLight--negative::before {
-  background-color: var(--spectrum-statuslight-color-status-negative);
+  background-color: var(--spectrum-statuslight-state-color-negative);
 }
 
 .spectrum-StatusLight--notice::before {
-  background-color: var(--spectrum-statuslight-color-status-notice);
+  background-color: var(--spectrum-statuslight-state-color-notice);
 }
 
 .spectrum-StatusLight--positive::before {
-  background-color: var(--spectrum-statuslight-color-status-positive);
+  background-color: var(--spectrum-statuslight-state-color-positive);
 }
 
 .spectrum-StatusLight--active::before {
-  background-color: var(--spectrum-statuslight-color-status-active);
+  background-color: var(--spectrum-statuslight-state-color-active);
 }
 
 .spectrum-StatusLight--archived {
   color: var(--spectrum-statuslight-text-color-archived);
 
   &::before {
-    background-color: var(--spectrum-statuslight-color-status-archived);
+    background-color: var(--spectrum-statuslight-state-color-archived);
   }
 }
 
@@ -26,7 +26,7 @@
   background-color: var(--spectrum-statuslight-color-organizational-celery);
 }
 
-.spectrum-StatusLight--yellow::before {
+.spectrum-StatusLight--yellow::before { 
   background-color: var(--spectrum-statuslight-color-organizational-yellow);
 }
 

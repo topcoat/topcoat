@@ -56,7 +56,7 @@
 
 .spectrum-Rating-icon {
   &.is-active {
-    color: var(--spectrum-rating-icon-color-active);
+    color: var(--spectrum-rating-icon-color-down);
 
     /* Star */
     .spectrum-Rating-starActive {

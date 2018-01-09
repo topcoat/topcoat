@@ -6,11 +6,11 @@
   }
 
   &:active {
-    color: var(--spectrum-link-text-color-active);
+    color: var(--spectrum-link-text-color-down);
   }
 
   &:focus {
-    color: var(--spectrum-link-text-color-focus);
+    color: var(--spectrum-link-text-color-key-focus);
   }
 
   &.is-disabled {

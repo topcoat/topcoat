@@ -49,7 +49,7 @@
       /* Step Focused */
       &:focus {
         .spectrum-Steplist-marker {
-          background-color: var(--spectrum-steplist-current-marker-color-focus)
+          background-color: var(--spectrum-steplist-current-marker-color-key-focus)
         }
       }
     }

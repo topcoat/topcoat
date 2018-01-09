@@ -4,11 +4,11 @@
   }
 
   &:focus {
-    border-color: var(--spectrum-pagination-page-button-border-color-focus);
+    border-color: var(--spectrum-pagination-page-button-border-color-key-focus);
   }
 
   &.is-active {
-    background-color: var(--spectrum-pagination-page-button-background-color-active);
-    color: var(--spectrum-pagination-page-button-text-color-active);
+    background-color: var(--spectrum-pagination-page-button-background-color-down);
+    color: var(--spectrum-pagination-page-button-text-color-down);
   }
 }

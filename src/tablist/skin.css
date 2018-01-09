@@ -18,12 +18,12 @@
   }
 
   &.is-selected {
-    color: var(--spectrum-tablist-text-color-active);
+    color: var(--spectrum-tablist-text-color-down);
   }
 
   &:focus-ring {
-    color: var(--spectrum-tablist-text-color-focus);
-    box-shadow: 0 0 0 var(--spectrum-tablist-tab-item-border-width-default) var(--spectrum-tablist-border-color-focus);
+    color: var(--spectrum-tablist-text-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-tablist-tab-item-border-width-default) var(--spectrum-tablist-border-color-key-focus);
   }
 
   &.is-disabled {
@@ -36,12 +36,12 @@
 
   .spectrum-TabList-item {
     &:focus-ring {
-      color: var(--spectrum-tablist-anchored-text-color-focus);
+      color: var(--spectrum-tablist-anchored-text-color-key-focus);
       box-shadow: initial;
 
       /* The focus line should become blue only for anchored tabs */
       ~ .spectrum-TabList-item-line {
-          background-color:  var(--spectrum-tablist-anchored-tabline-background-color-focus);
+          background-color:  var(--spectrum-tablist-anchored-tabline-background-color-key-focus);
       }
     }
   }

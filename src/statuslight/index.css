@@ -7,10 +7,10 @@
   &::before {
     content: '';
     display: inline-block;
-    width: var(--spectrum-statuslight-circle-width);
-    height: var(--spectrum-statuslight-circle-width); /* same as width */
+    width: var(--spectrum-statuslight-circle-width-default);
+    height: var(--spectrum-statuslight-circle-width-default); /* same as width */
     border-radius: 50%;
-    margin: 0 var(--spectrum-statuslight-circle-margin-horizontal);
+    margin: 0 var(--spectrum-statuslight-circle-margin-horizontal-default);
   }
 }
 

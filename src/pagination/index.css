@@ -49,7 +49,7 @@
 {{ pagination/pagination-button-style-cta.yml }}
 */
 .spectrum-Pagination-prevButton {
-  border-radius: var(--spectrum-button-border-corner-radius-default) 0 0 var(--spectrum-button-border-corner-radius-default);
+  border-radius: var(--spectrum-button-border-radius-default) 0 0 var(--spectrum-button-border-radius-default);
   float: left; /* removes DOM whitespace */
   padding-right: calc(var(--spectrum-padding) / 2);
   padding-left: calc(var(--spectrum-padding) / 2);
@@ -62,7 +62,7 @@
 }
 
 .spectrum-Pagination-nextButton {
-  border-radius: 0 var(--spectrum-button-border-corner-radius-default) var(--spectrum-button-border-corner-radius-default) 0;
+  border-radius: 0 var(--spectrum-button-border-radius-default) var(--spectrum-button-border-radius-default) 0;
   margin-left: 0 !important;
 
   /* CTA is special and doesn't have a border between the buttons */

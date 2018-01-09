@@ -15,10 +15,10 @@
     }
 
     &:active {
-      color: var(--spectrum-table-head-cell-text-color-active);
+      color: var(--spectrum-table-head-cell-text-color-down);
 
       .spectrum-Table-sortedIcon {
-        color: var(--spectrum-table-head-cell-sort-icon-color-active);
+        color: var(--spectrum-table-head-cell-sort-icon-color-down);
       }
     }
   }
@@ -64,7 +64,7 @@ tbody.spectrum-Table-body {
   }
 
   &:active {
-    background-color: var(--spectrum-table-body-cell-background-color-active);
+    background-color: var(--spectrum-table-body-cell-background-color-down);
   }
 
   &.is-selected {
@@ -98,7 +98,7 @@ tbody.spectrum-Table-body {
     }
 
     &:active {
-      background-color: var(--spectrum-table-quiet-body-cell-background-color-active);
+      background-color: var(--spectrum-table-quiet-body-cell-background-color-down);
     }
 
     &.is-selected {

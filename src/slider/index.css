@@ -100,11 +100,11 @@
   transition: border var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
   &:focus {
-    border-width: var(--spectrum-slider-border-width-active);
+    border-width: var(--spectrum-slider-border-width-key-focus);
   }
 
   &:active {
-    border-width: var(--spectrum-slider-border-width-active);
+    border-width: var(--spectrum-slider-border-width-key-focus);
   }
 }
 
@@ -278,7 +278,7 @@
     border-radius: var(--spectrum-slider-round-border-radius-default);
 
     &:focus {
-      border-width: var(--spectrum-slider-round-border-width-focus);
+      border-width: var(--spectrum-slider-round-border-width-key-focus);
     }
   }
   .spectrum-Slider-input {

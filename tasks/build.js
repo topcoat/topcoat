@@ -5,7 +5,7 @@ gulp.task('build', function(cb) {
   runSequence(
     // 'lint', // Disabled for now
     'clean',
-    'balthazar',
+    'load-dna',
     'icons',
     'build-css',
     'build-docs',

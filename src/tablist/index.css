@@ -62,7 +62,7 @@
     margin-bottom: var(--spectrum-tablist-horizontal-tabline-height-default);
 
     &:focus-ring {
-      border-radius: var(--spectrum-tablist-tab-item-border-corner-radius-default);
+      border-radius: var(--spectrum-tablist-tab-item-border-radius-default);
     }
   }
 }

@@ -10,10 +10,10 @@
   }
 
   &:focus-ring {
-    background-color: var(--spectrum-tag-background-color-focus);
-    color: var(--spectrum-tag-text-color-focus);
-    border-color: var(--spectrum-tag-border-color-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-focus);
+    background-color: var(--spectrum-tag-background-color-key-focus);
+    color: var(--spectrum-tag-text-color-key-focus);
+    border-color: var(--spectrum-tag-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-key-focus);
   }
 
   &.is-invalid {
@@ -26,7 +26,7 @@
     }
 
     &:focus-ring {
-      color: var(--spectrum-tag-invalid-text-color-focus);
+      color: var(--spectrum-tag-invalid-text-color-key-focus);
       border-color: var(--spectrum-tag-invalid-border-color-default);
       box-shadow: 0 0 0 1px var(--spectrum-tag-invalid-border-color-default);
 
@@ -38,7 +38,7 @@
 
       &::focus {
         .spectrum-Icon {
-          color: var(--spectrum-tag-invalid-icon-color-focus);
+          color: var(--spectrum-tag-invalid-icon-color-key-focus);
         }
       }
 

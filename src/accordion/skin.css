@@ -22,7 +22,7 @@
 
   &:focus {
     &:after  {
-      background-color: var(--spectrum-accordion-border-left-color-focus);
+      background-color: var(--spectrum-accordion-border-left-color-key-focus);
     }
   }
 }

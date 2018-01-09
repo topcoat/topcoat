@@ -7,37 +7,37 @@
   /* :after is used for the handle of the switch */
   &::after {
     background-color: var(--spectrum-switch-handle-background-color-default);
-    border-color: var(--spectrum-switch-border-color-default);
+    border-color: var(--spectrum-switch-handle-border-color-default);
   }
 }
 
 .spectrum-ToggleSwitch-input {
   &:checked + .spectrum-ToggleSwitch-switch {
     &::before {
-      background-color: var(--spectrum-switch-border-color-checked);
+      background-color: var(--spectrum-switch-track-color-selected);
     }
 
     &::after {
-      border-color: var(--spectrum-switch-border-color-checked);
+      border-color: var(--spectrum-switch-handle-border-color-selected);
     }
   }
 
   &:focus-ring {
     & + .spectrum-ToggleSwitch-switch {
       &::after {
-        border-color: var(--spectrum-switch-border-color-focus);
-        box-shadow: 0 0 0 1px var(--spectrum-switch-border-color-focus);
+        border-color: var(--spectrum-switch-handle-border-color-key-focus);
+        box-shadow: 0 0 0 1px var(--spectrum-switch-handle-border-color-key-focus);
       }
     }
 
     &:checked + .spectrum-ToggleSwitch-switch {
       &::before {
-        background-color: var(--spectrum-switch-track-color-focus);
+        background-color: var(--spectrum-switch-track-color-default);
       }
     }
 
     & ~ .spectrum-ToggleSwitch-label {
-      color: var(--spectrum-switch-label-text-color-focus);
+      color: var(--spectrum-switch-text-color-key-focus);
     }
   }
 }
@@ -47,22 +47,22 @@
     .spectrum-ToggleSwitch-input {
       & + .spectrum-ToggleSwitch-switch {
         &::after {
-          border-color: var(--spectrum-switch-border-color-hover);
+          border-color: var(--spectrum-switch-handle-border-color-hover);
           box-shadow: none;
         }
       }
 
       &:checked:enabled + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-checked-hover);
+          background-color: var(--spectrum-switch-track-color-selected-hover);
         }
         &::after {
-          border-color: var(--spectrum-switch-border-color-checked-hover);
+          border-color: var(--spectrum-switch-handle-border-color-selected-hover);
         }
       }
 
       & ~ .spectrum-ToggleSwitch-label {
-        color: var(--spectrum-switch-label-text-color-hover);
+        color: var(--spectrum-switch-text-color-hover);
       }
     }
   }
@@ -71,21 +71,21 @@
     .spectrum-ToggleSwitch-input {
       & + .spectrum-ToggleSwitch-switch {
         &::after {
-          border-color: var(--spectrum-switch-border-color-active);
+          border-color: var(--spectrum-switch-handle-border-color-down);
         }
       }
 
       &:checked:enabled + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-checked-active);
+          background-color: var(--spectrum-switch-track-color-selected-down);
         }
         &::after {
-          border-color: var(--spectrum-switch-border-color-checked-active);
+          border-color: var(--spectrum-switch-handle-border-color-selected-down);
         }
       }
 
       & ~ .spectrum-ToggleSwitch-label {
-        color: var(--spectrum-switch-label-text-color-active);
+        color: var(--spectrum-switch-text-color-down);
       }
     }
   }
@@ -93,7 +93,7 @@
   .spectrum-ToggleSwitch-input {
     &:disabled {
       & ~ .spectrum-ToggleSwitch-label {
-        color: var(--spectrum-switch-label-text-color-disabled);
+        color: var(--spectrum-switch-text-color-disabled);
       }
 
       & + .spectrum-ToggleSwitch-switch {
@@ -102,13 +102,13 @@
         }
 
         &::after {
-          border-color: var(--spectrum-switch-border-color-disabled);
+          border-color: var(--spectrum-switch-handle-border-color-disabled);
         }
       }
 
       &:checked + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-disabled-checked);
+          background-color: var(--spectrum-switch-track-color-disabled-selected);
         }
       }
     }
@@ -129,7 +129,7 @@
     &:checked + .spectrum-ToggleSwitch-switch {
       &::after {
         /* Don't be blue */
-        border-color: var(--spectrum-switch-border-color-default);
+        border-color: var(--spectrum-switch-handle-border-color-default);
       }
     }
 
@@ -139,7 +139,7 @@
           background-color: var(--spectrum-switch-track-color-default);
         }
         &::after {
-          border-color: var(--spectrum-switch-border-color-focus);
+          border-color: var(--spectrum-switch-handle-border-color-key-focus);
         }
       }
     }
@@ -157,7 +157,7 @@
         }
 
         &::after {
-          border-color: var(--spectrum-switch-border-color-disabled);
+          border-color: var(--spectrum-switch-handle-border-color-disabled);
         }
       }
     }
@@ -170,7 +170,7 @@
           background-color: var(--spectrum-switch-track-color-default);
         }
         &::after {
-          border-color: var(--spectrum-switch-border-color-hover);
+          border-color: var(--spectrum-switch-handle-border-color-hover);
         }
       }
     }
@@ -183,7 +183,7 @@
           background-color: var(--spectrum-switch-track-color-default);
         }
         &::after {
-          border-color: var(--spectrum-switch-border-color-active);
+          border-color: var(--spectrum-switch-handle-border-color-down);
         }
       }
     }

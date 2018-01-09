@@ -1,16 +1,17 @@
 .spectrum-Radio-input {
   &:checked + .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-border-color-checked);
+    border-color: var(--spectrum-radio-circle-border-color-selected);
   }
 
   &:focus-ring {
     & + .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-radio-border-color-focus);
+      border-color: var(--spectrum-radio-circle-border-color-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-radio-circle-border-color-key-focus);
+
     }
 
     & ~ .spectrum-Radio-label {
-      color: var(--spectrum-radio-label-text-color-focus);
+      color: var(--spectrum-radio-text-color-key-focus);
     }
   }
 }
@@ -21,50 +22,53 @@
 */
 .spectrum-Radio {
   .spectrum-Radio-label {
-    color: var(--spectrum-radio-label-text-color-default);
+    color: var(--spectrum-radio-text-color-default);
   }
 
   .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-border-color-default);
+    border-color: var(--spectrum-radio-circle-border-color-default);
   }
 
   &:hover {
     .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-hover);
+      border-color: var(--spectrum-radio-circle-border-color-hover);
       box-shadow: none;
     }
 
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-checked-hover);
+      border-color: var(--spectrum-radio-circle-border-color-selected-hover);
+
     }
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-label-text-color-hover);
+      color: var(--spectrum-radio-text-color-hover);
     }
   }
 
   &:active {
     .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-active);
+      border-color: var(--spectrum-radio-circle-border-color-down);
     }
 
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-checked-active);
+      border-color: var(--spectrum-radio-circle-border-color-selected-down);
+
     }
 
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-label-text-color-active);
+      color: var(--spectrum-radio-text-color-down);
     }
   }
 
   &.is-invalid {
     .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-invalid);
+      border-color: var(--spectrum-radio-circle-border-color-error);
+
     }
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-border-color-invalid);
+      color: var(--spectrum-radio-circle-border-color-error);
     }
   }
 
@@ -73,21 +77,23 @@
 */
   &.is-invalid:hover {
     .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-invalid-hover) !important;
+      border-color: var(--spectrum-radio-circle-border-color-error-hover) !important;
+
     }
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-border-color-invalid-hover);
+      color: var(--spectrum-radio-circle-border-color-error-hover);
     }
   }
 
   &.is-invalid:active {
     .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-border-color-invalid-active) !important;
+      border-color: var(--spectrum-radio-circle-border-color-error-down) !important;
+
     }
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-border-color-invalid-active);
+      color: var(--spectrum-radio-circle-border-color-error-down);
     }
   }
 }
@@ -97,10 +103,11 @@
 {{ radio/radio-disabled.yml }}
 */
   &:disabled + .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-border-color-disabled);
+    border-color: var(--spectrum-radio-circle-border-color-disabled);
+
   }
 
   &:disabled ~ .spectrum-Radio-label {
-    color: var(--spectrum-radio-label-text-color-disabled);
+    color: var(--spectrum-radio-text-color-disabled);
   }
 }

@@ -118,7 +118,7 @@
 {{ tooltip/tooltip-icons.yml }}
 */
 .spectrum-Tooltip-typeIcon {
-  margin-right: var(--spectrum-button-label-icon-gap-size-default);
+  margin-right: var(--spectrum-button-text-gap-default);
 
   /* Override the size, just for these icons only */
   font-size: 14px;

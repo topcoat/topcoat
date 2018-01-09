@@ -131,10 +131,10 @@
   margin: var(--spectrum-calendar-day-padding-size-default);
 
   border-radius: var(--spectrum-calendar-day-size-default);
-  border: var(--spectrum-calendar-day-border-size-focus) solid transparent;
+  border: var(--spectrum-calendar-day-border-size-key-focus) solid transparent;
 
   font-size: var(--spectrum-calendar-day-font-size-default);
-  line-height: calc(var(--spectrum-calendar-day-size-default) - var(--spectrum-calendar-day-border-size-focus) * 2);
+  line-height: calc(var(--spectrum-calendar-day-size-default) - var(--spectrum-calendar-day-border-size-key-focus) * 2);
 
   cursor: pointer;
 
@@ -161,7 +161,7 @@
     width: var(--spectrum-calendar-day-size-default);
     height: var(--spectrum-calendar-day-size-default);
     border-radius: var(--spectrum-calendar-day-size-default);
-    border: var(--spectrum-calendar-day-border-size-focus) solid transparent;
+    border: var(--spectrum-calendar-day-border-size-key-focus) solid transparent;
   }
 
   &.is-selected:not(.is-range-selection) {

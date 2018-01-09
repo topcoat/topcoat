@@ -24,7 +24,7 @@
 
   border-style: solid;
   border-width: var(--spectrum-popover-border-size-default);
-  border-radius: var(--spectrum-popover-border-corner-radius-default);
+  border-radius: var(--spectrum-popover-border-radius-default);
 
   outline: none; /* Hide focus outline */
 
@@ -34,7 +34,7 @@
 
   /* Don't let sharp corners be pokey */
   .spectrum-SelectList {
-    border-radius: var(--spectrum-popover-border-corner-radius-default);
+    border-radius: var(--spectrum-popover-border-radius-default);
   }
 }
 
