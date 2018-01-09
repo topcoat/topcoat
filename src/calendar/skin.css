@@ -29,7 +29,7 @@
       }
     }
 
-    .is-range-selection {
+    &.is-range-selection {
       &:before {
         background: var(--spectrum-calendar-day-background-color-selected-hover);
       }
@@ -91,6 +91,20 @@
       color: var(--spectrum-calendar-day-text-color-selected);
       background: var(--spectrum-calendar-day-background-color-cap-selected);
       border-color: var(--spectrum-calendar-day-border-color-key-focus);
+    }
+  }
+
+  &.is-focused {
+    &.is-selected {
+      &:before {
+        background: var(--spectrum-calendar-day-background-color-selected-hover);
+      }
+    }
+
+    &.is-range-selection {
+      &:before {
+        background: var(--spectrum-calendar-day-background-color-selected-hover);
+      }
     }
   }
 
