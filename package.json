@@ -16,7 +16,7 @@
     "@spectrum/dna-npm-release": "^1.x",
     "@spectrum/dna-topdoc-template": "^1.x",
     "@spectrum/spectrum-dna": "^3.x",
-    "@spectrum/spectrum-icons": "^1.0.0-beta.11",
+    "@spectrum/spectrum-icons": "^1.0.0-beta.12",
     "autoprefixer": "^6.5.3",
     "del": "^3.0.0",
     "express": "^4.15.3",
