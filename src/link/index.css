@@ -14,6 +14,10 @@
 
   &:focus {
     text-decoration: underline;
+  }
+
+  &:focus-ring {
+    text-decoration: underline;
     text-decoration-style: double;
   }
 
