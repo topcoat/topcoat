@@ -4,3 +4,4 @@
 .npmrc*
 .tmp
 npm-debug.log*
+.DS_Store
