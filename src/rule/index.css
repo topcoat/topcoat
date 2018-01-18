@@ -4,6 +4,14 @@
 {{ rule/rule-default.yml }}
 */
 .spectrum-Rule {
+
+  /* Add the correct box sizing for hr in Firefox. */
+  box-sizing: content-box;
+  height: 0;
+
+  /* Show the overflow for hr in Edge and IE. */
+  overflow: visible;
+
   border-style: solid;
   border-width: var(--spectrum-rule-border-width-default);
   border-radius: var(--spectrum-rule-border-width-default);

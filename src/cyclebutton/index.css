@@ -1,6 +1,23 @@
 @import '../commons/index.css';
 
 .spectrum-CycleButton {
+
+  /* Change the font styles in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+  
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+  
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
   position: relative;
   width: var(--spectrum-cyclebutton-button-width-default);
   height: var(--spectrum-cyclebutton-button-height-default);
@@ -13,6 +30,17 @@
   &:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: 0;
+  }
+
+  /* Remove the inner border and padding for button in Firefox. */
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  /* Restore the focus styles unset by the previous rule. */
+  &:-moz-focusring{
+    outline: 1px dotted ButtonText;
   }
 
   .spectrum-Icon {

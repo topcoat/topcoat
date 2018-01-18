@@ -109,6 +109,15 @@
 }
 
 .spectrum-Slider-input {
+
+  /* Normalize input field */
+  /* Change the font styles for input in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  /*  Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
   width: var(--spectrum-slider-track-width-default);
   height: 100%;
   padding: 0;

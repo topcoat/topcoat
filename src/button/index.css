@@ -21,13 +21,25 @@
 
   height: var(--spectrum-button-height-default);
   padding: 0 calc(var(--spectrum-button-padding-x-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
+  
+  /* Remove button the margin in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the button overflow in Edge. */
+  overflow: visible;
 
   font-family: inherit;
   font-size: var(--spectrum-button-text-font-size-default);
   line-height: calc(var(--spectrum-button-height-default) - calc(2 * var(--spectrum-button-border-size-default)));
   font-weight: var(--spectrum-button-text-font-weight-default);
   text-decoration: none;
+
+  /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
 
   /* Adjacent buttons should be aligned correctly */
   vertical-align: top;
@@ -51,10 +63,19 @@
   /* Fix Firefox */
   &::-moz-focus-inner {
     border: 0;
+    
+    /* Remove the inner border and padding for button in Firefox. */
+    border-style: none;
     padding: 0;
+
     /* Use uppercase PX so values don't get converted to rem */
     margin-top: -2PX;
     margin-bottom: -2PX;
+  }
+
+  /* Restore the focus styles unset by the previous rule. */
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
   }
 
   &:hover,

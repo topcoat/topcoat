@@ -54,6 +54,13 @@
 }
 
 .spectrum-SelectList-divider {
+
+  /* Add the correct box sizing for hr in Firefox. */
+  box-sizing: content-box;
+
+  /* Show the overflow for hr in Edge and IE. */
+  overflow: visible;
+
   height: var(--spectrum-selectlist-divider-size-default);
   margin: var(--spectrum-selectlist-divider-padding-default) var(--spectrum-selectlist-option-padding-default);
   padding: 0 0;

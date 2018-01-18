@@ -29,6 +29,24 @@
 }
 
 .spectrum-QuickActions-item {
+
+  /* Change the font styles in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+  
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+  
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
   width: var(--spectrum-quickaction-width-default);
   height: var(--spectrum-quickaction-height-default);
   margin-left: var(--spectrum-quickaction-margin-default);
@@ -39,6 +57,18 @@
   transition: border-color var(--spectrum-transition-time) ease-out,
     color var(--spectrum-transition-time) ease-out,
     box-shadow var(--spectrum-transition-time) ease-out;
+
+
+  /* Remove the inner border and padding for button in Firefox. */
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  /* Restore the focus styles unset by the previous rule. */
+  &:-moz-focusring{
+    outline: 1px dotted ButtonText;
+  }
 
   &:hover {
     cursor: pointer;

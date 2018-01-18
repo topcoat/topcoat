@@ -40,6 +40,13 @@
 }
 
 .spectrum-Heading--pageTitle {
+
+  /**
+  * Normalize the margin on `h1` elements within `section` and
+  * `article` contexts in Chrome, Firefox, and Safari.
+  */
+  margin: 0.67em 0;
+
   font-weight: var(--spectrum-heading-page-title-font-weight-default);
   font-size: var(--spectrum-heading-page-title-font-size-default);
   line-height: var(--spectrum-heading-page-title-font-line-height-default);

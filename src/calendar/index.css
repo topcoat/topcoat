@@ -74,6 +74,7 @@
 }
 
 .spectrum-Calendar-dayOfWeek {
+
   position: absolute;
   bottom: var(--spectrum-calendar-day-padding-size-default);
 
@@ -89,6 +90,16 @@
   text-decoration: none !important; /* override abbr styling from normalize.css */
 
   cursor: default;
+
+  &[title] {
+    /* Normalize abbr[title] */
+    /* Remove the bottom border in Chrome 57- and Firefox 39-. */
+    border-bottom: none;
+
+    /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
 }
 
 .spectrum-Calendar-body {

@@ -22,7 +22,14 @@
 
   vertical-align: top; /* used to align them correctly in forms. */
 
-  font-family: inherit;
+  /* Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the overflow for input in Edge. */
+  overflow: visible;
+
+  /* Change the input font styles in all browsers */
+  font-family: sans-serif;
   font-size: var(--spectrum-font-size);
   line-height: var(--spectrum-text-body-line-height);
   text-overflow: ellipsis;
@@ -91,6 +98,9 @@
   height: auto;
   padding: 4px 8px;
   text-indent: 0;
+
+  /* Remove the default vertical scrollbar for textarea in IE. */
+  overflow: auto;
 
   &.is-invalid,
   &:invalid {

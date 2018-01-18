@@ -98,6 +98,10 @@
 }
 
 .spectrum-TagList-item-avatar {
+
+  /* Remove the border on images inside links in IE 10-. */
+  border-style: none;
+
   height: var(--spectrum-tag-avatar-size-default);
   margin-right: var(--spectrum-tag-margin-default);
   border-radius: 50%;

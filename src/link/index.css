@@ -4,6 +4,11 @@
 {{ link/link-default.yml }}
 */
 .spectrum-Link {
+
+  /* Remove the gray background on active links in IE 10. */
+  background-color: transparent;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
   transition: color var(--spectrum-transition-time) ease-in-out;
   outline: none;

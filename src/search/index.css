@@ -15,12 +15,25 @@
 .spectrum-Search-input {
   display: block;
 
+  /* Correct the odd appearance of input[type="search"] in Chrome and Safari.*/
+  /* This gets overridden by .spectrum-Textfield */
+  -webkit-appearance: textfield;
+
+  /* Correct the outline for input[type="search"] style in Safari. */
+  outline-offset: -2px;
+
   /* Use padding instead of text-indent so long strings don't overlap the icon */
   padding-left: var(--spectrum-search-padding-left-default);
   text-indent: 0;
 
   /* Don't let long strings overlap the close icon */
   padding-right: var(--spectrum-search-padding-right-default);
+
+  /* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 
   &.spectrum-Textfield--quiet {
     padding-left: var(--spectrum-search-quiet-padding-left-default);
