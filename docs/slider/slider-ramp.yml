@@ -7,7 +7,7 @@
     :focus: Focused state
     :active: Active state
   markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--ramp">
+    <div class="spectrum-Slider spectrum-Slider--ramp">
       <div class="spectrum-Slider-labelContainer">
         <label class="spectrum-Slider-label">Slider Label - Default</label>
         <label class="spectrum-Slider-value">14</label>
@@ -20,11 +20,11 @@
           </svg>
         </div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+          <input type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
         </div>
       </div>
-    </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--ramp is-disabled">
+    </div>
+    <div class="spectrum-Slider spectrum-Slider--ramp is-disabled">
       <div class="spectrum-Slider-labelContainer">
         <label class="spectrum-Slider-label">Slider Label - Disabled</label>
         <label class="spectrum-Slider-value">14</label>
@@ -37,9 +37,9 @@
           </svg>
         </div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+          <input type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
         </div>
       </div>
-    </formfield>
+    </div>
 
 

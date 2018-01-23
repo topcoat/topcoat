@@ -7,17 +7,17 @@
     :focus: Focused state
     :active: Active state
   markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--round">
+    <div class="spectrum-Slider spectrum-Slider--round">
       <div class="spectrum-Slider-controls">
         <div class="spectrum-Slider-handle" tabindex="0">
           <div class="spectrum-Slider-input"></div>
         </div>
       </div>
-    </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
+    </div>
+    <div class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
       <div class="spectrum-Slider-controls">
         <div class="spectrum-Slider-handle" tabindex="0">
           <div class="spectrum-Slider-input"></div>
         </div>
       </div>
-    </formfield>
+    </div>
