@@ -3,14 +3,33 @@
 :root {
   --spectrum-miller-column-chevron-height-default: 10px;
   --spectrum-miller-column-chevron-width-default: 6px;
+  --spectrum-miller-column-margin-default: 8px;
 }
 
 /* topdoc
 {{ miller/miller-default.yml }}
 */
+.spectrum-MillerColumns {
+  overflow-x: scroll;
+  white-space: nowrap;
+  user-select: none;
+  padding: var(--spectrum-miller-column-margin-default) 0;
+}
+
 .spectrum-MillerColumn {
   display: inline-block;
   width: var(--spectrum-miller-column-width-default);
+  vertical-align: top;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  margin-right: var(--spectrum-miller-column-margin-default);
+  overflow: auto;
+  height: 100%;
+
+  &:first-child {
+    margin-left: var(--spectrum-miller-column-margin-default);
+  }
 }
 
 .spectrum-MillerColumn-childIndicator {
@@ -33,6 +52,8 @@
   border-radius: var(--spectrum-miller-column-item-border-radius-default);
   align-items: center;
   width: var(--spectrum-miller-column-width-default);
+  box-sizing: border-box;
+  transition: background-color var(--spectrum-transition-time) ease-in-out;
 
   &.is-branch-selectable, &.is-selected, &:hover {
     /* checkbox on the left, shows up always */
