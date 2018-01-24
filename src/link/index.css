@@ -17,7 +17,7 @@
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-ring {
     text-decoration: underline;
   }
 

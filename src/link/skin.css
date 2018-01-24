@@ -9,7 +9,7 @@
     color: var(--spectrum-link-text-color-down);
   }
 
-  &:focus {
+  &:focus-ring {
     color: var(--spectrum-link-text-color-key-focus);
   }
 
