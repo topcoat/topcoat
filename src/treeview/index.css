@@ -1,0 +1,151 @@
+@import '../commons/index.css';
+
+:root {
+  --spectrum-treenav-icon-width-default: var(--spectrum-accordion-icon-width-default);
+  --spectrum-treenav-icon-height-default: var(--spectrum-accordion-icon-height-default);
+  --spectrum-treenav-link-margin-vertical-default: 4px;
+  --spectrum-treenav-list-padding-left-default: 28px;
+  --spectrum-treenav-link-padding-horizontal-default: var(--spectrum-treenav-link-padding-left-default);
+}
+
+/* topdoc
+{{ treeview/treeview-default.yml }}
+*/
+.spectrum-TreeView {
+  display: block;
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+
+.spectrum-TreeView-item {
+  /* Don't let child treeviews that are open spill out */
+  overflow: hidden;
+
+  &.is-open {
+    > .spectrum-TreeView-link > .spectrum-TreeView-indicator {
+      /* Rotate the chevron */
+      transform: rotate(90deg);
+    }
+
+    > .spectrum-TreeView {
+      /* Open the treeview */
+      height: auto;
+      visibility: visible;
+    }
+  }
+}
+
+.spectrum-TreeView-link {
+  /* Be inline block with 100% width to prevent margin collapse */
+  display: inline-block;
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: var(--spectrum-treenav-link-padding-vertical-default) var(--spectrum-treenav-link-padding-horizontal-default);
+  margin: var(--spectrum-treenav-link-margin-vertical-default) 0;
+
+  text-decoration: none;
+
+  /* Prevent weirdness that can cause the vertical bar to fall down */
+  white-space: nowrap;
+
+  &:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
+    outline: none;
+  }
+
+  .spectrum-Icon {
+    vertical-align: top;
+    margin-right: var(--spectrum-treenav-icon-margin-right-default);
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: calc(var(--spectrum-treenav-row-padding-horizontal-default) + var(--spectrum-treenav-listitem-border-width-default));
+    right: var(--spectrum-treenav-row-padding-horizontal-default);
+
+    /* Position correctly since top is not defined */
+    margin-top: calc(-1 * var(--spectrum-treenav-link-padding-vertical-default));
+
+    height: var(--spectrum-treenav-chevron-line-height-default);
+
+    background-color: transparent;
+
+    border-radius: var(--spectrum-treenav-wrap-border-radius-default);
+  }
+}
+
+.spectrum-TreeView-indicator {
+  display: block;
+  width: var(--spectrum-treenav-icon-width-default);
+  height: var(--spectrum-treenav-icon-height-default);
+
+  float: left;
+  margin-left: -14px;
+  margin-top: 5px;
+
+  transition: transform ease var(--spectrum-transition-time);
+}
+
+/* Close nested treeviews by default */
+.spectrum-TreeView .spectrum-TreeView {
+  /* Don't be a highlight container stealer */
+  position: static;
+
+  padding-left: var(--spectrum-treenav-list-padding-left-default);
+
+  /* Be hidden */
+  height: 0;
+  visibility: hidden;
+}
+
+/* topdoc
+{{ treeview/treeview-flat.yml }}
+*/
+.spectrum-TreeView-item--indent1 {
+  padding-left: var(--spectrum-treenav-list-padding-left-default);
+}
+
+.spectrum-TreeView-item--indent2 {
+  padding-left: calc(2 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent3 {
+  padding-left: calc(3 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent4 {
+  padding-left: calc(4 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent5 {
+  padding-left: calc(5 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent6 {
+  padding-left: calc(6 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent7 {
+  padding-left: calc(7 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent8 {
+  padding-left: calc(8 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent9 {
+  padding-left: calc(9 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+.spectrum-TreeView-item--indent10 {
+  padding-left: calc(10 * var(--spectrum-treenav-list-padding-left-default));
+}
+
+/* topdoc
+{{ treeview/treeview-icons.yml }}
+*/

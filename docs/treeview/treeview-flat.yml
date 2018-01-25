@@ -1,0 +1,76 @@
+---
+name: Tree View - Flat
+description: |
+  A Spectrum tree view drawn without nesting, suitable for infinite scrolling.
+  With this version of the tree, you must manage the visibility of "child items" manually based on the open state of the "parent item."
+markup: |
+  <ul class="spectrum-TreeView" style="width: 250px">
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 1</a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 1
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1">
+      <a class="spectrum-TreeView-link" href="#">Layer 2</a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1">
+      <a class="spectrum-TreeView-link" href="#">Layer 3</a>
+    </li>
+
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 4</a>
+    </li>
+
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 5</a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 2
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1 is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 3
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent2">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 4
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent3" hidden>
+      <a class="spectrum-TreeView-link" href="#">Layer 6</a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent3" hidden>
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 5
+      </a>
+    </li>
+  </ul>

@@ -57,6 +57,14 @@ document.addEventListener('click', function(event) {
   }
 });
 
+window.addEventListener('click', function(event) {
+  var el;
+  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null) {
+    el.classList.toggle('is-open');
+    event.preventDefault();
+  }
+});
+
 // Display Slider focus style
 function toggleSliderFocus(event) {
   if (!event.target.classList.contains('spectrum-Slider-input')) {
@@ -69,7 +77,6 @@ function toggleSliderFocus(event) {
 
 document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
-
 
 AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');
