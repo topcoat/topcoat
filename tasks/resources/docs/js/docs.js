@@ -57,5 +57,19 @@ document.addEventListener('click', function(event) {
   }
 });
 
+// Display Slider focus style
+function toggleSliderFocus(event) {
+  if (!event.target.classList.contains('spectrum-Slider-input')) {
+    return;
+  }
+  var func = event.type === 'focus' ? 'add' : 'remove';
+  var handle = event.target.closest('.spectrum-Slider-handle');
+  handle.classList[func]('is-focused');
+}
+
+document.addEventListener('focus', toggleSliderFocus, true);
+document.addEventListener('blur', toggleSliderFocus, true);
+
+
 AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');

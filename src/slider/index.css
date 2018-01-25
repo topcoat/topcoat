@@ -61,6 +61,7 @@
   height: var(--spectrum-slider-track-height-default);
   position: relative;
   margin-left: 0;
+  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 }
 
 .spectrum-Slider-track--buffer {
@@ -73,6 +74,7 @@
   height: var(--spectrum-slider-ramp-track-height-default);
   position: absolute;
   top: -7px;
+  width: 100%;
 }
 
 .spectrum-Slider-handle {
@@ -99,11 +101,12 @@
   /* Transition the border for focus animations */
   transition: border var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
-  &:focus {
+  &:.is-focused {
     border-width: var(--spectrum-slider-border-width-key-focus);
   }
 
-  &:active {
+  &:active,
+  &:.is-dragged {
     border-width: var(--spectrum-slider-border-width-key-focus);
   }
 }
@@ -130,8 +133,11 @@
   -webkit-appearance: none;
   border: 0;
   pointer-events: none;
-}
 
+  &:focus {
+    outline: none;
+  }
+}
 
 
 .spectrum-Slider-labelContainer {
@@ -285,17 +291,12 @@
     right: 8px;
     bottom: 8px;
     border-radius: var(--spectrum-slider-round-border-radius-default);
-
-    &:focus {
-      border-width: var(--spectrum-slider-round-border-width-key-focus);
-    }
-  }
-  .spectrum-Slider-input {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    opacity: 1;
     transform: rotate(calc(-1 * var(--spectrum-slider-round-min-max-tick-angles-default)));
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+
+    transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
     &::after {
       content: '';
@@ -306,8 +307,27 @@
       height: var(--spectrum-slider-round-handle-marker-height-default);
       border-radius: var(--spectrum-slider-round-handle-marker-border-radius-default);
       transform: translateY(-50%);
-      transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+      transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default), left var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
     }
+
+    &.is-focused {
+      border-width: var(--spectrum-slider-border-width-key-focus);
+
+      &::after {
+        left: calc(-1 * var(--spectrum-slider-border-width-key-focus));
+      }
+    }
+
+    &:active,
+    &.is-dragged {
+      cursor: ns-resize;
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }
+  }
+  .spectrum-Slider-input {
+    width: 100%;
+    height: 100%;
   }
 }
 

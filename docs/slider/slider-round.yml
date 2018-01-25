@@ -9,15 +9,15 @@
   markup: |
     <div class="spectrum-Slider spectrum-Slider--round">
       <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle" tabindex="0">
-          <div class="spectrum-Slider-input"></div>
+        <div class="spectrum-Slider-handle">
+          <input type="range" class="spectrum-Slider-input">
         </div>
       </div>
     </div>
     <div class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
       <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle" tabindex="0">
-          <div class="spectrum-Slider-input"></div>
+        <div class="spectrum-Slider-handle">
+          <input type="range" class="spectrum-Slider-input">
         </div>
       </div>
     </div>
