@@ -13,7 +13,19 @@ markup: |
       <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
     </div>
     <div class="spectrum-Radio is-invalid">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form
+  <form>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
       <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
     </div>

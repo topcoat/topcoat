@@ -29,6 +29,7 @@
     border-color: var(--spectrum-radio-circle-border-color-default);
   }
 
+  
   &:hover {
     .spectrum-Radio-button {
       border-color: var(--spectrum-radio-circle-border-color-hover);
@@ -43,6 +44,7 @@
     .spectrum-Radio-label {
       color: var(--spectrum-radio-text-color-hover);
     }
+
   }
 
   &:active {
@@ -54,7 +56,6 @@
       border-color: var(--spectrum-radio-circle-border-color-selected-down);
 
     }
-
 
     .spectrum-Radio-label {
       color: var(--spectrum-radio-text-color-down);
@@ -76,8 +77,8 @@
 {{ radio/radio-invalid.yml }}
 */
   &.is-invalid:hover {
-    .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-circle-border-color-error-hover) !important;
+    .spectrum-Radio-input + .spectrum-Radio-button {
+      border-color: var(--spectrum-radio-circle-border-color-error-hover);
 
     }
 
@@ -87,8 +88,8 @@
   }
 
   &.is-invalid:active {
-    .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-circle-border-color-error-down) !important;
+    .spectrum-Radio-input +.spectrum-Radio-button {
+      border-color: var(--spectrum-radio-circle-border-color-error-down);
 
     }
 
@@ -103,11 +104,10 @@
 {{ radio/radio-disabled.yml }}
 */
   &:disabled + .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-circle-border-color-disabled);
-
+    border-color: var(--spectrum-radio-circle-border-color-disabled) !important;
   }
 
   &:disabled ~ .spectrum-Radio-label {
-    color: var(--spectrum-radio-text-color-disabled);
+    color: var(--spectrum-radio-text-color-disabled) !important;
   }
 }
