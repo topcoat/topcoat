@@ -99,7 +99,6 @@ Todo: Determine if these are supposed to be pseudo classes
 .spectrum-Slider-controls--hover {
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-hover);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
@@ -107,8 +106,6 @@ Todo: Determine if these are supposed to be pseudo classes
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
     background: var(--spectrum-slider-handle-fill-color-key-focus);
-    border-width: var(--spectrum-slider-border-width-key-focus);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
@@ -116,8 +113,6 @@ Todo: Determine if these are supposed to be pseudo classes
   &.is-focused {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
     background: var(--spectrum-slider-handle-fill-color-key-focus);
-    border-width: var(--spectrum-slider-border-width-key-focus);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
@@ -125,8 +120,6 @@ Todo: Determine if these are supposed to be pseudo classes
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-down);
     background: var(--spectrum-slider-handle-fill-color-down);
-    border-width: var(--spectrum-slider-border-width-key-focus);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
@@ -134,8 +127,6 @@ Todo: Determine if these are supposed to be pseudo classes
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
     background: var(--spectrum-slider-handle-fill-color-down);
-    border-width: var(--spectrum-slider-border-width-key-focus);
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
   }
 }
 
@@ -221,8 +212,15 @@ Todo: Determine if these are supposed to be pseudo classes
       }
     }
 
+    &.is-focused {
+      background-color: var(--spectrum-slider-handle-fill-color-key-focus);
+
+      &::after {
+        background-color: var(--spectrum-slider-round-handle-marker-color-key-focus);
+      }
+    }
+
     &:active,
-    &.is-focused,
     &.is-dragged {
       background-color: var(--spectrum-slider-round-border-color-hover);
 

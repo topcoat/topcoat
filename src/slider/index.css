@@ -98,15 +98,11 @@
   border-width: var(--spectrum-slider-handle-border-width-default);
   border-style: solid;
 
-  /* Transition the border for focus animations */
-  transition: border var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
-
-  &:.is-focused {
-    border-width: var(--spectrum-slider-border-width-key-focus);
-  }
+  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
   &:active,
-  &:.is-dragged {
+  &.is-focused,
+  &.is-dragged {
     border-width: var(--spectrum-slider-border-width-key-focus);
   }
 }
@@ -307,19 +303,13 @@
       height: var(--spectrum-slider-round-handle-marker-height-default);
       border-radius: var(--spectrum-slider-round-handle-marker-border-radius-default);
       transform: translateY(-50%);
-      transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default), left var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
-    }
-
-    &.is-focused {
-      border-width: var(--spectrum-slider-border-width-key-focus);
-
-      &::after {
-        left: calc(-1 * var(--spectrum-slider-border-width-key-focus));
-      }
+      transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
     }
 
     &:active,
+    &.is-focused,
     &.is-dragged {
+      border-width: 2px;
       cursor: ns-resize;
       cursor: -webkit-grabbing;
       cursor: grabbing;
