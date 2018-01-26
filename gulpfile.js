@@ -1,7 +1,14 @@
 var gulp = require('gulp');
-var requireDir = require('require-dir');
 
 // Include all tasks
-requireDir('./tasks/');
+require('./tasks/lint');
+require('./tasks/load-dna');
+require('./tasks/icons');
+require('./tasks/build-css');
+require('./tasks/build-docs');
+require('./tasks/clean');
+require('./tasks/gh-pages');
+require('./tasks/build');
+require('./tasks/dev');
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));

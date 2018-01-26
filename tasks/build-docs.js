@@ -1,10 +1,8 @@
 var gulp = require('gulp');
 var exec = require('child_process').exec;
-var runSequence = require('run-sequence');
 var replace = require('gulp-replace');
 var fs = require('fs');
 var path = require('path');
-var replace = require('gulp-replace');
 var plumb = require('./lib/plumb.js');
 
 gulp.task('build-docs:topdoc', function(cb) {
@@ -23,7 +21,7 @@ gulp.task('build-docs:inject-topdoc', function() {
   ])
     .pipe(plumb())
     .pipe(replace(/\{\{\s*(.*?)\s*\}}/g, function(match, p1) {
-      filePath = path.resolve('docs', p1);
+      var filePath = path.resolve('docs', p1);
       return fs.readFileSync(filePath);
     }))
     .pipe(gulp.dest('dist/'));
@@ -54,14 +52,12 @@ gulp.task('build-docs:rewrite-spectrum-icons', function() {
     .pipe(gulp.dest('dist/icons/'));
 });
 
-gulp.task('build-docs', function(cb) {
-  runSequence(
+gulp.task('build-docs',
+  gulp.series(
     'build-docs:inject-topdoc',
     'build-docs:topdoc',
     'build-docs:copy-site-resources',
     'build-docs:copy-spectrum-icons',
-    'build-docs:rewrite-spectrum-icons',
-    cb
-  );
-});
-
+    'build-docs:rewrite-spectrum-icons'
+  )
+);

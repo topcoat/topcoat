@@ -6,7 +6,6 @@ var insert = require('gulp-insert');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var plumb = require('./lib/plumb.js');
-var runSequence = require('run-sequence');
 
 var colorStops = [
   'darkest',
@@ -35,23 +34,6 @@ var processors = [
   })
 ];
 
-gulp.task('build-css', function(cb) {
-  runSequence(
-    [
-      'build-css:individual-components',
-      'build-css:individual-components-multistops',
-      'build-css:individual-components-colorstops',
-      'build-css:page-component-colorstops',
-      'build-css:all-components-multistops'
-    ],
-    [
-      'build-css:concat-standalone',
-      'build-css:build-multistops'
-    ],
-    cb
-  );
-});
-
 /**
   Builds individual components (dimensions only)
 */
@@ -73,7 +55,7 @@ gulp.task('build-css:individual-components-multistops', function() {
       '!src/commons/skin.css'
     ])
       .pipe(plumb())
-      .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';\n.spectrum--" + colorStop + " {\n"))
+      .pipe(insert.prepend(`@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       .pipe(rename(function(path) {
@@ -93,7 +75,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
 
   return gulp.src(globs)
     .pipe(plumb())
-    .pipe(insert.prepend("@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-" + colorStop + ".css';" + prependString))
+    .pipe(insert.prepend(`@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
     .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
@@ -121,7 +103,7 @@ gulp.task('build-css:individual-components-colorstops', function() {
 /**
   Build page skin files separately
 */
-gulp.task('build-css:page-component-colorstops', function(){
+gulp.task('build-css:page-component-colorstops', function() {
   function buildPageSkinFiles(colorStop) {
     return buildSkinFiles(colorStop, 'src/page/skin.css', '.spectrum {\n', '\n}', 'dist/components/page/');
   }
@@ -142,13 +124,13 @@ gulp.task('build-css:all-components-multistops', function() {
 /**
   Builds standalone multistop CSS files
 */
-gulp.task('build-css:build-multistops', function(){
+gulp.task('build-css:build-multistops', function() {
   function buildMultistops(colorStop) {
     return gulp.src('dist/spectrum-' + colorStop + '.css')
       .pipe(plumb())
       // Simply wrap the file in the colorstop
       // This is a workaround for the fact that postcss-import and postcss-nested can't play together
-      .pipe(insert.prepend(".spectrum--" + colorStop + " {\n"))
+      .pipe(insert.prepend(`.spectrum--${colorStop} {\n`))
       .pipe(insert.append('}\n'))
       .pipe(postcss([require('postcss-nested')]))
       .pipe(gulp.dest('dist/'));
@@ -160,7 +142,7 @@ gulp.task('build-css:build-multistops', function(){
 /**
   Builds standalone single colorstop CSS files
 */
-gulp.task('build-css:concat-standalone', function(){
+gulp.task('build-css:concat-standalone', function() {
   function concatStandalone(colorStop) {
     return gulp.src([
       'dist/spectrum-core.css',
@@ -172,5 +154,21 @@ gulp.task('build-css:concat-standalone', function(){
       .pipe(gulp.dest('dist/standalone'));
   }
 
-  return merge.apply(this, colorStops.map(concatStandalone))
+  return merge.apply(this, colorStops.map(concatStandalone));
 });
+
+gulp.task('build-css',
+  gulp.series(
+    gulp.parallel(
+      'build-css:individual-components',
+      'build-css:individual-components-multistops',
+      'build-css:individual-components-colorstops',
+      'build-css:page-component-colorstops',
+      'build-css:all-components-multistops'
+    ),
+    gulp.parallel(
+      'build-css:concat-standalone',
+      'build-css:build-multistops'
+    )
+  )
+);

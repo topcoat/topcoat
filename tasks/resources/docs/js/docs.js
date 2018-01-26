@@ -1,4 +1,5 @@
-/*eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
+/* global document, window, Element, AdobeSpectrum */
 
 'use strict';
 
@@ -37,7 +38,7 @@ function closeDialog(dialog) {
   dialog.classList.remove('is-open');
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
   changeCSS('light');
 });
 

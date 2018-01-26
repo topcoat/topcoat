@@ -18,22 +18,10 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var path = require('path');
 var rename = require('gulp-rename');
-var filter = require('gulp-filter');
 var replace = require('gulp-replace');
-var runSequence = require('run-sequence');
 var Balthazar = require('@spectrum/balthazar');
 
 var dnaVars = require('@spectrum/spectrum-dna/dist/vars/json/dna-vars.json');
-
-gulp.task('load-dna', function(cb) {
-  runSequence(
-    'dna:generate',
-    'dna:postprocess-metadata',
-    'dna:postprocess-dimensions',
-    'dna:postprocess-colorstops',
-    cb
-  );
-});
 
 gulp.task('dna:generate', function() {
   var outputPath = path.resolve('dist', 'vars');
@@ -43,12 +31,12 @@ gulp.task('dna:generate', function() {
     const destFile = `spectrum-${varsType}.css`;
     return Balthazar.convertVars(outputPath, destFile, outType, dnaVars[varsType]);
   }))
-  .then(files => {
-    gutil.log('load-dna: All output has been generated!');
-    files.forEach(fileName => {
-      gutil.log('  created:', fileName);
+    .then(files => {
+      gutil.log('load-dna: All output has been generated!');
+      files.forEach(fileName => {
+        gutil.log('  created:', fileName);
+      });
     });
-  });
 });
 
 gulp.task('dna:postprocess-metadata', function() {
@@ -89,9 +77,18 @@ gulp.task('dna:postprocess-colorstops', function() {
     // replace anything with a value of 'transparent' with an actual transparent color
     // we could swap this to '0' and set an opacity property
     // but that's getting pretty crazy
-    .pipe(replace(/(.*?:) transparent;\n/g, (match, p1, offset, string) => {
-      const result =  `${p1} rgba(0, 0, 0, 0);\n`;
+    .pipe(replace(/(.*?:) transparent;\n/g, (match, p1) => {
+      const result = `${p1} rgba(0, 0, 0, 0);\n`;
       return result;
     }))
     .pipe(gulp.dest('dist/vars/'));
 });
+
+gulp.task('load-dna',
+  gulp.series(
+    'dna:generate',
+    'dna:postprocess-metadata',
+    'dna:postprocess-dimensions',
+    'dna:postprocess-colorstops'
+  )
+);

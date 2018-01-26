@@ -1,25 +1,43 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
 
-gulp.task('dev', ['build'], function() {
-  connect.server({
-    root: 'dist',
-    livereload: true
+var browserSync = require('browser-sync');
+var server = browserSync.create();
+
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    port: 8080,
+    ui: {
+      port: 3000,
+      weinre: {
+        port: 3001
+      }
+    },
+    startPath: 'docs/index.html',
+    server: {
+      baseDir: [
+        './dist/'
+      ],
+      directory: true
+    }
   });
+  done();
+}
 
-  gulp.watch([
-    'src/**/*.css'
-  ], ['reload']);
+function watch() {
+  gulp.watch('src/**/*.css', gulp.series('reload-css'));
 
-  gulp.watch([
-    'docs/**/*.yml'
-  ], ['reload']);
+  gulp.watch('docs/**/*.yml', gulp.series('reload-docs'));
 
-  gulp.watch([
-    'icons/*.svg'
-  ], ['icons']);
-});
+  gulp.watch('icons/*.svg', gulp.series('reload-icons'));
+}
 
-gulp.task('reload', ['build:lite'], function() {
-  gulp.src('').pipe(connect.reload());
-});
+gulp.task('reload-css', gulp.series('build-css', reload));
+gulp.task('reload-docs', gulp.series('build-lite', reload));
+gulp.task('reload-icons', gulp.series('icons', reload));
+
+gulp.task('dev', gulp.series('build', serve, watch));

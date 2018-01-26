@@ -1,10 +1,13 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
   },
   "extends": "eslint:recommended",
   "rules": {
-    "strict": ["error", "safe"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "func-call-spacing": ["error", "never"],
     "indent": ["error", 2],

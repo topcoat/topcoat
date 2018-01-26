@@ -1,22 +1,19 @@
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
 
-gulp.task('build', function(cb) {
-  runSequence(
-    // 'lint', // Disabled for now
+gulp.task('build',
+  gulp.series(
+    'lint',
     'clean',
     'load-dna',
     'icons',
     'build-css',
-    'build-docs',
-    cb
-  );
-});
+    'build-docs'
+  )
+);
 
-gulp.task('build:lite', function(cb) {
-  runSequence(
+gulp.task('build-lite',
+  gulp.series(
     'build-css',
-    'build-docs',
-    cb
-  );
-});
+    'build-docs'
+  )
+);
