@@ -97,6 +97,14 @@
   }
 }
 
+
+a.spectrum-Button {
+  /* Remove appearance for clickable types in iOS and Safari. */
+  -webkit-appearance: none;
+  /* Make link text not selectable  */
+  user-select: none;
+}
+
 .spectrum-Button--action {
   font-size: var(--spectrum-actionbutton-font-size-default);
   font-weight: var(--spectrum-actionbutton-font-weight-default);
