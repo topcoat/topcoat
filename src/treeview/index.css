@@ -16,6 +16,8 @@
   list-style: none;
   position: relative;
   padding: 0;
+  user-select: none;
+  outline: none;
 }
 
 .spectrum-TreeView-item {
@@ -40,6 +42,7 @@
   /* Be inline block with 100% width to prevent margin collapse */
   display: inline-block;
   box-sizing: border-box;
+  cursor: pointer;
 
   width: 100%;
 
@@ -67,6 +70,7 @@
     position: absolute;
     left: calc(var(--spectrum-treenav-row-padding-horizontal-default) + var(--spectrum-treenav-listitem-border-width-default));
     right: var(--spectrum-treenav-row-padding-horizontal-default);
+    z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
     margin-top: calc(-1 * var(--spectrum-treenav-link-padding-vertical-default));

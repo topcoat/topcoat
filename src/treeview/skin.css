@@ -1,7 +1,8 @@
 .spectrum-TreeView-link {
   color: var(--spectrum-treenav-link-text-color-default);
 
-  &:hover {
+  &:hover,
+  &.is-selected {
     color: var(--spectrum-treenav-link-text-color-hover);
 
     &::before {
@@ -16,6 +17,13 @@
       background-color: var(--spectrum-treenav-wrap-background-color-hover);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+      box-shadow: 0px 0px 0px var(--spectrum-treenav-wrap-box-shadow-spread-radius-key-focus) var(--spectrum-treenav-wrap-box-shadow-color-key-focus) inset;
+    }
+  }
+
+  &.is-drop-target {
+    &::before {
+      background-color: var(--spectrum-alias-highlight-selected);
       box-shadow: 0px 0px 0px var(--spectrum-treenav-wrap-box-shadow-spread-radius-key-focus) var(--spectrum-treenav-wrap-box-shadow-color-key-focus) inset;
     }
   }
