@@ -33,6 +33,9 @@
 
   &.is-disabled {
     cursor: default;
+    .spectrum-TabList-item-label {
+      cursor: default;
+    }
   }
 }
 
