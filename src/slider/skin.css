@@ -63,13 +63,13 @@ spectrum-slider-track-disabled(){
     border-color: var(--spectrum-slider-handle-border-color-hover);
   }
 
-  &:.is-focused {
+  &.is-focused {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
     background: var(--spectrum-slider-handle-fill-color-key-focus);
   }
 
   &:active,
-  &:.is-dragging {
+  &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
     background: var(--spectrum-slider-handle-fill-color-down);
   }
