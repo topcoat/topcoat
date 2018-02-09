@@ -61,7 +61,6 @@
   height: var(--spectrum-slider-track-height-default);
   position: relative;
   margin-left: 0;
-  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 }
 
 .spectrum-Slider-track--buffer {
@@ -98,7 +97,7 @@
   border-width: var(--spectrum-slider-handle-border-width-default);
   border-style: solid;
 
-  transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  transition: border-width var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
   &:active,
   &.is-focused,
@@ -244,9 +243,6 @@
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
-
-    /* Why? */
-    transition: all var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
 
     box-sizing: border-box;
     outline: none;

@@ -202,6 +202,8 @@ Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum-Slider--round {
   .spectrum-Slider-handle {
+    box-shadow: none;
+
     &::after {
       background-color: var(--spectrum-slider-round-handle-marker-color-default);
     }
