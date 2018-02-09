@@ -1,6 +1,7 @@
 ---
 name: Popover - Dialog style
 description: Spectrum Popovers are implemented using the Dialog's inner elements.
+status: Beta
 markup: |
   <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">

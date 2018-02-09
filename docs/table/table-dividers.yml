@@ -1,6 +1,7 @@
 ---
 name: Table - Column Dividers
 description: The standard table with column dividers
+status: Beta
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">

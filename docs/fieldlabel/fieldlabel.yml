@@ -1,5 +1,6 @@
 ---
 name: Field Label
+status: Beta
 description: >-
   Field label for use with form inputs.
 markup: |

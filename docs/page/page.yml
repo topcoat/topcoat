@@ -1,5 +1,6 @@
 ---
 name: Page
+status: n/a
 description: |
   The outer page container. The `<body>` tag should only have the `.spectrum` class if using a standalone CSS file.
   If using multistops, the `<body>` tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.

@@ -1,6 +1,7 @@
 ---
 name: Logic Button OR
 description: The Spectrum logical OR button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

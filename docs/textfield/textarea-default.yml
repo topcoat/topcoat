@@ -1,6 +1,7 @@
 ---
 name: Text Area - Default
 description: A Spectrum text area - (a multiline text field)
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

@@ -1,6 +1,7 @@
 ---
 name: Button - Quiet Secondary
 description: A 'quiet secondary' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

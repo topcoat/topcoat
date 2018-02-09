@@ -1,6 +1,7 @@
 ---
 name: Banner - Info
 description: The Spectrum banner 'info'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--info">
     <div class="spectrum-Banner-header">Most Popular</div>

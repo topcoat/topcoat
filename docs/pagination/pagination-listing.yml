@@ -1,6 +1,7 @@
 ---
 name: Pagination - Listing
 description: A Spectrum 'listing' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>

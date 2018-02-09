@@ -1,6 +1,7 @@
 ---
 name: Button - CTA
 description: A Spectrum 'call-to-action' button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

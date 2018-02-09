@@ -1,6 +1,7 @@
 ---
 name: Rating - Disabled
 description: The 'disabled' Spectrum rating
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

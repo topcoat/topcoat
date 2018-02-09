@@ -1,5 +1,6 @@
 ---
 name: Link - Default
 description: A link
+status: Released
 markup: |
   <a href="#" class="spectrum-Link">Link using spectrum-Link</a>

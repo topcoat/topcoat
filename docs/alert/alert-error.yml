@@ -1,6 +1,7 @@
 ---
 name: Alert - Error
 description: The Spectrum alert 'error'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">

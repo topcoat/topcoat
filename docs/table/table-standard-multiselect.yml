@@ -1,6 +1,7 @@
 ---
 name: Table - Standard Multi-Select
 description: The standard multi-select table
+status: Beta
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">

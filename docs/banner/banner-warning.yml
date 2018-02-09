@@ -1,6 +1,7 @@
 ---
 name: Banner - Warning
 description: The Spectrum banner 'warning'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--warning">
     <div class="spectrum-Banner-header">Purchase Soon</div>

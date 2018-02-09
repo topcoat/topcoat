@@ -1,6 +1,7 @@
 ---
 name: Quick Actions
 description: Spectrum quick actions (requires an icon)
+status: Beta
 markup: |
   <div class="spectrum-QuickActions is-open">
     <button class="spectrum-QuickActions-item">

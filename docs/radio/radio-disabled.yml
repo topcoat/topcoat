@@ -1,6 +1,7 @@
 ---
 name: Radio - Disabled
 description: The 'disabled' Spectrum radio
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

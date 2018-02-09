@@ -1,6 +1,7 @@
 ---
 name: Dialog - Fullscreen Takeover
 description: The Spectrum 'fullscreen takeover' dialog
+status: Released
 markup: |
   <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover</button>
   <div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" id="fullscreenTakeoverDialog">

@@ -1,6 +1,7 @@
 ---
 name: Pagination - Button Style Primary
 description: A Spectrum 'button style primary' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-prevButton">

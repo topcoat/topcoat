@@ -1,6 +1,7 @@
 ---
 name: Table - Standard
 description: The standard table
+status: Beta
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">

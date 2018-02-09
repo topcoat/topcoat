@@ -1,6 +1,7 @@
 ---
 name: Accordion - Default
 description: The default spectrum accordion
+status: Beta
 markup: |
   <div class="spectrum-Accordion">
     <div class="spectrum-Accordion-item is-open">

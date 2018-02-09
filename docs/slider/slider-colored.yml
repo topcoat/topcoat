@@ -1,34 +1,35 @@
 ---
-  name: Slider - Color
-  description: Spectrum Color slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--color">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-0" for="spectrum-Slider-input-0">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-0">#2680eb</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" id="spectrum-Slider-input-0">
-        </div>
+name: Slider - Color
+description: Spectrum Color slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--color">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-0" for="spectrum-Slider-input-0">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-0">#2680eb</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" id="spectrum-Slider-input-0">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--color is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-1">#2680eb</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" disabled id="spectrum-Slider-input-1">
-        </div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--color is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-1">#2680eb</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" disabled id="spectrum-Slider-input-1">
       </div>
     </div>
+  </div>
 

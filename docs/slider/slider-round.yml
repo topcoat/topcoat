@@ -1,23 +1,24 @@
 ---
-  name: Slider - Round
-  description: Spectrum round slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--round">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle">
-          <input type="range" class="spectrum-Slider-input">
-        </div>
+name: Slider - Round
+description: Spectrum round slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--round">
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-handle">
+        <input type="range" class="spectrum-Slider-input">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle">
-          <input type="range" class="spectrum-Slider-input">
-        </div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-handle">
+        <input type="range" class="spectrum-Slider-input">
       </div>
     </div>
+  </div>

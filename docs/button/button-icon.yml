@@ -1,6 +1,7 @@
 ---
 name: Button - Icon
 description: A Spectrum icon-only button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

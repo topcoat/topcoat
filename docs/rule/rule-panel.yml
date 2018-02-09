@@ -1,6 +1,7 @@
 ---
 name: Rule - Panel
 description:
+status: Beta
 markup: |
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
     <use xlink:href="#spectrum-icon-18-Delete" />

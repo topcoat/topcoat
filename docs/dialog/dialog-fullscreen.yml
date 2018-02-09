@@ -1,6 +1,7 @@
 ---
 name: Dialog - Fullscreen
 description: The Spectrum 'fullscreen' dialog
+status: Released
 markup: |
   <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--fullscreen" id="fullscreenDialog">

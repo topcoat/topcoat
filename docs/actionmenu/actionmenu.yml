@@ -1,6 +1,7 @@
 ---
 name: Action Menu
 description: An action button with a Flyout. Note that the `is-selected` class should be applied to the button when the menu is open.
+status: Beta
 markup: |
 
   <div class="spectrum-ActionMenu">

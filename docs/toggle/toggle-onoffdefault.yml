@@ -1,6 +1,7 @@
 ---
-name: Toggle Switch - On/Off
-description: The Spectrum toggle on/off
+name: Switch - On/Off
+description: The Spectrum Switch
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

@@ -1,6 +1,7 @@
 ---
 name: Rating - Active
 description: The 'active' Spectrum rating
+status: Beta
 markup: |
   <div class="spectrum-Rating">
     <span class="spectrum-Rating-icon is-active">

@@ -1,6 +1,7 @@
 ---
 name: Rating - Default
 description: The Spectrum Rating stars
+status: Beta
 markup: |
   <div class="spectrum-Rating">
     <span class="spectrum-Rating-icon">

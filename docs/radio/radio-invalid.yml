@@ -1,6 +1,7 @@
 ---
 name: Radio - Invalid
 description: The 'invalid' Spectrum radio
+status: Released
 modifiers:
   ':hover': Hover state
   ':active': Active state

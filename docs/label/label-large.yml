@@ -1,6 +1,7 @@
 ---
 name: Label - Large
 description: A large Spectrum label
+status: Beta
 markup: |
   <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
   style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>

@@ -1,6 +1,7 @@
 ---
 name: Cycle Button - Default
 description: A Spectrum cycle button
+status: Beta
 markup: |
   <button class="spectrum-CycleButton">
     <svg class="spectrum-Icon spectrum-Icon--sizeS is-active" focusable="false" aria-hidden="true" aria-label="Folder">

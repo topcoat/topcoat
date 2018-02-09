@@ -1,6 +1,7 @@
 ---
 name: Stepper - Default
 description: A Spectrum stepper. Note that you must manually apply the is-focused class, and that the is-focused styles below don't look correct unless your cursor is actually in the stepper input field.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

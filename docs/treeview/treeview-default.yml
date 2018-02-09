@@ -1,5 +1,6 @@
 ---
 name: Tree View - Nested
+status: Beta
 description: |
   A nested Spectrum tree view.
   Because the tree view is nested, the visibility of child items is controlled by the open state of the parent item.

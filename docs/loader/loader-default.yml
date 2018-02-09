@@ -1,5 +1,6 @@
 ---
 name: Loader - Default
 description: A Spectrum determinate loader of default type (round)
+status: Beta
 markup: |
   <div class="spectrum-Loader" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>

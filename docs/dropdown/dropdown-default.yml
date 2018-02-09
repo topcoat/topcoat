@@ -1,5 +1,6 @@
 name: Dropdown - Default
 description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
+status: Released
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">

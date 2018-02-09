@@ -1,5 +1,6 @@
 ---
 name: Field Label - Left
+status: Beta
 description: >-
   Field label for use with form inputs; left variation.
 markup: |

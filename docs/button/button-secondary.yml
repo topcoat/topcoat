@@ -1,6 +1,7 @@
 ---
 name: Button - Secondary
 description: A Spectrum 'secondary' style button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

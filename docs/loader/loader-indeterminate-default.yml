@@ -1,5 +1,6 @@
 ---
 name: Loader - Indeterminate
 description: An indeterminate Spectrum Loader of default type (round)
+status: Beta
 markup: |
   <span class="spectrum-Loader spectrum-Loader--indeterminate"></span>

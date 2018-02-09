@@ -1,6 +1,7 @@
 ---
 name: Calendar - Disabled
 description: The disabled calendar
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">

@@ -1,6 +1,7 @@
 ---
 name: Field Group - Vertical
 description: The Spectrum radio group 'vertical'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
     <div class="spectrum-Radio">

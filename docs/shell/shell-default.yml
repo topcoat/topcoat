@@ -1,6 +1,7 @@
 ---
 name: Shell
 description: The application shell.
+status: Beta
 markup: |
   <div style="margin: 0 0 10px 0">Full size example</div>
   <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Shell in Fullscreen Dialog</button>

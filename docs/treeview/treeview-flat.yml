@@ -1,5 +1,6 @@
 ---
 name: Tree View - Flat
+status: Beta
 description: |
   A Spectrum tree view drawn without nesting, suitable for infinite scrolling.
   With this version of the tree, you must manage the visibility of "child items" manually based on the open state of the "parent item."

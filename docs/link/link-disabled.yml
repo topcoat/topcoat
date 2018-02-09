@@ -1,5 +1,6 @@
 ---
 name: Link - Disabled
 description: A disabled link
+status: Released
 markup: |
   <p> This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>

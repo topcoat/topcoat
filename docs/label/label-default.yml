@@ -1,6 +1,7 @@
 ---
 name: Label - Default
 description: A Spectrum label
+status: Beta
 markup: |
   <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
 

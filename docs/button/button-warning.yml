@@ -1,6 +1,7 @@
 ---
 name: Button - Warning
 description: A Spectrum button in 'warning' style
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

@@ -1,6 +1,7 @@
 ---
 name: Alert - Success
 description: The Spectrum alert 'success'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--success">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">

@@ -1,6 +1,7 @@
 ---
 name: Banner - Error
 description: The Spectrum banner 'error'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--error">
     <div class="spectrum-Banner-header">Purchase Soon</div>

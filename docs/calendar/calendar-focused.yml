@@ -1,6 +1,7 @@
 ---
 name: Calendar - Focused
 description: A calendar demonstrating focused dates
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">

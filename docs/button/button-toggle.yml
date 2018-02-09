@@ -1,6 +1,7 @@
 ---
 name: Button - Toggle
 description: A Spectrum 'toggle' button, used in toolbar
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

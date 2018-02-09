@@ -1,6 +1,7 @@
 ---
 name: Toast - Default
 description: The default toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast">
     <div class="spectrum-Toast-content">This is a toast.</div>

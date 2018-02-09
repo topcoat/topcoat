@@ -1,6 +1,7 @@
 ---
 name: Loader - Bar - Small
 description: A Spectrum 'small' bar loader
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

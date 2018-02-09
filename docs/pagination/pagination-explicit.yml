@@ -1,6 +1,7 @@
 ---
 name: Pagination - Explicit
 description: A Spectrum 'explicit' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--icon">

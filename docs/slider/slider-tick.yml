@@ -1,49 +1,50 @@
 ---
-  name: Slider - Tick
-  description: Spectrum tick slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--tick">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
+name: Slider - Tick
+description: Spectrum tick slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--tick">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-ticks">
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--tick is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--tick is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-ticks">
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-15">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-15">
       </div>
     </div>
+  </div>

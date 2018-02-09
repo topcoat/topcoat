@@ -1,6 +1,7 @@
 ---
 name: Button - Action
 description: A Spectrum 'action' button, used in the action bar
+status: Released 
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

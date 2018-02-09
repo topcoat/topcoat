@@ -1,23 +1,24 @@
 ---
-  name: TabList - Page
-  description: The Spectrum tab list with page variant
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 1</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 2</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 3</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 4</label>
-      </div>
-      <div class="spectrum-TabList-item-line" style="width: 28px; left: 8px;"></div>
+name: TabList - Page
+description: The Spectrum tab list with page variant
+status: Beta
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 1</label>
     </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 2</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 3</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 4</label>
+    </div>
+    <div class="spectrum-TabList-item-line" style="width: 28px; left: 8px;"></div>
+  </div>

@@ -1,6 +1,7 @@
 ---
 name: Loader - Bar - Default
 description: A Spectrum bar loader
+status: Beta
 markup: |
   <div style="width: 200px; height: 25px; padding-top: 10px;">
     <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">

@@ -1,41 +1,42 @@
 ---
-  name: Slider - Ramp
-  description: Spectrum ramp slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--ramp">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
+name: Slider - Ramp
+description: Spectrum ramp slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--ramp">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+        </svg>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
-          </svg>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20"  id="spectrum-Slider-input-10">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20"  id="spectrum-Slider-input-10">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--ramp is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-11">14</div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--ramp is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-11">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+        </svg>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
-          </svg>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-11" >
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-11" >
       </div>
     </div>
+  </div>

@@ -1,6 +1,7 @@
 ---
 name: Steplist - Plain
 description: A steplist w/o labels or tooltips
+status: Beta
 markup: |
   <div class="spectrum-Steplist spectrum-Steplist--small">
     <div class="spectrum-Steplist-item is-complete">

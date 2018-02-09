@@ -1,6 +1,7 @@
 ---
 name: Checkbox - Default
 description: The Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

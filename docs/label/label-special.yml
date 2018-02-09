@@ -1,6 +1,7 @@
 ---
 name: Label - Special
 description: A special label
+status: Beta
 markup: |
   <span class="spectrum-Label spectrum-Label--and">And</span>
   <span class="spectrum-Label spectrum-Label--or">Or</span>

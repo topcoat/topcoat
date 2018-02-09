@@ -1,23 +1,24 @@
 ---
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <label class="spectrum-TabList-item-label">Monday</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tuesday</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Wednesday</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Thursday</label>
-      </div>
-      <div class="spectrum-TabList-item is-disabled" tabindex="0">
-        <label class="spectrum-TabList-item-label">Friday</label>
-      </div>
-      <!-- Apply .is-focused to element below when corresponding tab is in focus -->
-      <div class="spectrum-TabList-item-line" style="width: 48px; left: 15px;"></div>
+name: TabList - Anchored
+description: The Spectrum anchored tab list.
+status: Beta
+markup: |
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <label class="spectrum-TabList-item-label">Monday</label>
     </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tuesday</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Wednesday</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Thursday</label>
+    </div>
+    <div class="spectrum-TabList-item is-disabled" tabindex="0">
+      <label class="spectrum-TabList-item-label">Friday</label>
+    </div>
+    <!-- Apply .is-focused to element below when corresponding tab is in focus -->
+    <div class="spectrum-TabList-item-line" style="width: 48px; left: 15px;"></div>
+  </div>

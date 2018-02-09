@@ -1,6 +1,7 @@
 ---
 name: SelectList
 description: A list of options that can be used in a Popover.
+status: Beta
 markup: |
 
   <ul class="spectrum-SelectList" role="listbox">

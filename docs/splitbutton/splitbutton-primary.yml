@@ -1,6 +1,7 @@
 ---
 name: SplitButton - Primary
 description: A primary split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

@@ -1,6 +1,7 @@
 ---
 name: Button - Primary
 description: A Spectrum 'primary' button (which is also the default style)
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

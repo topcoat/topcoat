@@ -1,39 +1,40 @@
 ---
-  name: Slider - Video Player
-  description: Spectrum slider for video players, which display a buffer.
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-16" for="spectrum-Slider-input-16">Slider Label - Default</label>
-        <div class="spectrum-Slider-value">3:48</div>
+name: Slider - Video Player
+description: Spectrum slider for video players, which display a buffer.
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-16" for="spectrum-Slider-input-16">Slider Label - Default</label>
+      <div class="spectrum-Slider-value">3:48</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-16"></div>
+        <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-16"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 20%;">
-          <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" id="spectrum-Slider-input-16">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 20%;">
+        <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" id="spectrum-Slider-input-16">
       </div>
     </div>
-    <div class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-17" for="spectrum-Slider-input-17">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value">3:48</div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-17" for="spectrum-Slider-input-17">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value">3:48</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-17"></div>
+        <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-17"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
-          <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" disabled id="spectrum-Slider-input-17">
-        </div>
+      <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
+        <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" disabled id="spectrum-Slider-input-17">
       </div>
     </div>
+  </div>

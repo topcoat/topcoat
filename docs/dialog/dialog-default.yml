@@ -1,6 +1,7 @@
 ---
 name: Dialog - Default
 description: The Spectrum Dialog.
+status: Released
 markup: |
   <div>
     <h4>Confirmation dialog</h4>

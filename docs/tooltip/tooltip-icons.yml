@@ -1,6 +1,7 @@
 ---
 name: Tooltip
 description: A Spectrum tooltip
+status: Released
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label">

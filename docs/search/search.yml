@@ -1,6 +1,7 @@
 ---
 name: Search
 description: The searchy, cleary field.
+status: Beta
 markup: |
   <form class="spectrum-Search">
     <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input">

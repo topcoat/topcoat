@@ -1,6 +1,7 @@
 ---
 name: Steplist - With Tooltip
 description: A steplist with tooltips
+status: Beta
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">

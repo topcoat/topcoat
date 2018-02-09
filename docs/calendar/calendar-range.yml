@@ -4,6 +4,7 @@ description: |
     A calendar with a range selected.
     `.is-selection-start` goes on the first day in the selection, and `.is-range-start` goes on the first day of each week or month in the middle of a selection (but not the first day of the selection).
     `.is-selection-end` goes on the last day of the selection, and `.is-range-end` goes on the last day of each week or month in the middle of the selection (but not on the last day of the selection).
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">

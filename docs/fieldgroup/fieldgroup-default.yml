@@ -1,6 +1,7 @@
 ---
 name: Field Group - Default
 description: The Spectrum radio group 'default'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup">
     <div class="spectrum-Radio">

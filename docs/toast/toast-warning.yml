@@ -1,6 +1,7 @@
 ---
 name: Toast - Warning
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--warning">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">

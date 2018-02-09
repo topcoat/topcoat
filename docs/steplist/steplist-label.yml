@@ -1,6 +1,7 @@
 ---
 name: Steplist - With Label
 description: A steplist with labels
+status: Beta
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-item is-complete">

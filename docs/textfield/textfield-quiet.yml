@@ -1,6 +1,7 @@
 ---
 name: Text Field - Quiet
 description: A Spectrum text field - quiet
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

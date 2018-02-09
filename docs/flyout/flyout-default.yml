@@ -1,6 +1,7 @@
 ---
 name: Flyout
 description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.
+status: Beta
 markup: |
 
   <div class="spectrum-Popover is-open">

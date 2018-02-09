@@ -1,6 +1,7 @@
 ---
 name: Calendar - Default
 description: The default calendar
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">

@@ -1,6 +1,7 @@
 ---
 name: Alert - Info
 description: The Spectrum alert 'info'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--info">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">

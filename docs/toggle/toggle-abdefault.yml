@@ -1,6 +1,7 @@
 ---
 name: Toggle Switch - A/B
 description: The Spectrum toggle A/B
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

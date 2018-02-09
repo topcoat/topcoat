@@ -1,6 +1,7 @@
 ---
 name: Link - Subtle
 description: A subtle link
+status: Released
 markup: |
   <p> This uses <a href="#" class="spectrum-Link
   spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>

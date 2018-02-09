@@ -1,6 +1,7 @@
 ---
 name: Breadcrumb - Default
 description: The default Spectrum breadcrumb
+status: Beta
 modifiers:
   ':hover': Hover state
   ':focus': Focused

@@ -1,6 +1,7 @@
 ---
 name: Button - Quiet Primary
 description: A 'quiet primary' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

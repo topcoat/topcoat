@@ -1,6 +1,7 @@
 ---
 name: Tooltip - Demo Button
 description: A Spectrum tooltip
+status: Released
 markup: |
   <span class="u-tooltip-showOnHover" style="margin: 15px">
       Bottom

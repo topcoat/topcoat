@@ -1,5 +1,6 @@
 name: Combo Box - Quiet
 description: A combo box uses the input group component to display a field with a button next to it
+status: Beta
 markup: |
   <h4>Default</h4>
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet">

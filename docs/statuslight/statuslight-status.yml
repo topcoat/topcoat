@@ -1,6 +1,7 @@
 ---
 name: Status Light - Status Colors
 description: Status Colors (300) - Color has meaning.
+status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>

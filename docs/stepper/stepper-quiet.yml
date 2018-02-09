@@ -1,6 +1,7 @@
 ---
 name: Stepper - Quiet
 description: A Spectrum stepper - quiet
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

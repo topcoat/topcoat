@@ -1,6 +1,7 @@
 ---
 name: Text Field - Default
 description: A Spectrum text field
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

@@ -1,6 +1,7 @@
 ---
 name: Button - Quiet Warning
 description: A 'quiet warning' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

@@ -1,6 +1,7 @@
 ---
 name: Table - Quiet Multi-Select
 description: The quiet multi-select table
+status: Beta
 markup: |
   <table class="spectrum-Table spectrum-Table--quiet">
     <thead class="spectrum-Table-head">
