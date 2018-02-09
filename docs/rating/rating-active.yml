@@ -4,6 +4,7 @@ description: The 'active' Spectrum rating
 status: Beta
 markup: |
   <div class="spectrum-Rating">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="3" aria-label="Rating - Active">
     <span class="spectrum-Rating-icon is-active">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />

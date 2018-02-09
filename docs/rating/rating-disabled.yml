@@ -8,6 +8,7 @@ modifiers:
   ':focus': Focused
 markup: |
   <div class="spectrum-Rating is-disabled">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="1" aria-label="Rating - Disabled" disabled>
     <span class="spectrum-Rating-icon is-active">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />

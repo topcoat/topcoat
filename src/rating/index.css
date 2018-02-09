@@ -3,7 +3,7 @@
 
 .spectrum-Rating {
   cursor: pointer;
-
+  position: relative;
 
   &.is-disabled {
     cursor: default;
@@ -11,18 +11,27 @@
   }
 }
 
+.spectrum-Rating-input {
+  position: absolute;
+  width: calc(5 * (var(--spectrum-rating-icon-hitarea) + var(--spectrum-rating-icon-spacing))); /* 120px */
+  height: var(--spectrum-rating-icon-hitarea); /* 16px; */
+  opacity: 0.0001;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .spectrum-Rating-icon {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 24px;
-  height: 16px;
+  width: calc(var(--spectrum-rating-icon-hitarea) + var(--spectrum-rating-icon-spacing)); /* 24px; */
+  height: var(--spectrum-rating-icon-hitarea); /* 16px; */
   float: left;
 }
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  width: 16px;
-  height: 16px;
+  width: var(--spectrum-rating-icon-hitarea);
+  height: var(--spectrum-rating-icon-hitarea);
   margin: 0 auto;
 }
 

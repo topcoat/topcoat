@@ -93,3 +93,21 @@
     display: block;
   }
 }
+
+.spectrum-Rating {
+  &:not(:hover) {
+    .spectrum-Rating-input:focus {
+      ~ .spectrum-Rating-icon,
+      ~ .spectrum-Rating-icon:not(.is-active),
+      ~ .spectrum-Rating-icon.is-active {
+        color: var(--spectrum-button-primary-border-color-key-focus);
+
+        > .spectrum-Icon {
+          stroke: currentColor;
+          stroke-width: var(--spectrum-button-border-focus-grow);
+        }
+
+      }
+    }
+  }
+}

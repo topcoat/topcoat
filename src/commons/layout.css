@@ -14,4 +14,8 @@
 
   /* Field group */
   --spectrum-fieldgroup-spacing: 15px;
+
+  /* Rating icon */
+  --spectrum-rating-icon-hitarea: 16px;
+  --spectrum-rating-icon-spacing: 8px;
 }
