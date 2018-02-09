@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  /* Field group */
+  --spectrum-fieldgroup-spacing: 15px;
+}
+
 /* topdoc
 {{ fieldgroup/fieldgroup-default.yml }}
 */

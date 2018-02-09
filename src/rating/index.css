@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  /* Rating icon */
+  --spectrum-rating-icon-hitarea: 16px;
+  --spectrum-rating-icon-spacing: 8px;
+}
 
 .spectrum-Rating {
   cursor: pointer;
