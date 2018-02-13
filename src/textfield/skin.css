@@ -91,6 +91,13 @@
     box-shadow: 0 1px 0 var(--spectrum-input-quiet-border-color-key-focus);
   }
 
+  &:focus-ring {
+    &:not(:active) {
+      border-color: var(--spectrum-input-border-color-key-focus);
+      box-shadow: 0 1px 0 var(--spectrum-input-border-color-key-focus);
+    }
+  }
+
   &:disabled {
     background-color: var(--spectrum-input-quiet-background-color-disabled);
     border-color:  var(--spectrum-input-quiet-border-color-disabled);
@@ -102,6 +109,13 @@
 
     &:focus {
       box-shadow: 0 1px 0 var(--spectrum-input-invalid-border-color-default);
+    }
+
+    &:focus-ring { /* might break things due to pre-defined focus-ring */
+      &:not(:active) {
+        border-color: var(--spectrum-input-invalid-border-color-default);
+        box-shadow: 0 1px 0 var(--spectrum-input-invalid-border-color-default);
+      }
     }
   }
 }
