@@ -18,7 +18,7 @@ var processors = [
   require('postcss-import'),
   require('postcss-nested'),
   require('postcss-inherit'),
-  require('postcss-custom-properties'),
+  require('postcss-custom-properties')({noValueNotifications: 'error'}),
   require('postcss-calc'),
   require('postcss-svg'),
   require('postcss-pxtorem'),
