@@ -34,3 +34,22 @@
   }
 }
 
+.spectrum-Link--overColor {
+  color: var(--spectrum-link-over-color-text-color-default);
+
+  &:hover {
+    color: var(--spectrum-link-over-color-text-color-hover);
+  }
+
+  &:active {
+    color: var(--spectrum-link-over-color-text-color-down);
+  }
+
+  &:focus {
+    color: var(--spectrum-link-over-color-text-color-key-focus);
+  }
+
+  &.is-disabled {
+    color: var(--spectrum-link-over-color-text-color-disabled);
+  }
+}

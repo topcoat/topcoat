@@ -46,3 +46,10 @@
 .spectrum-Link--subtle {
   text-decoration: underline;
 }
+
+/* topdoc
+{{ link/link-overColor.yml }}
+*/
+.spectrum-Link--overColor {
+  text-decoration: underline;
+}

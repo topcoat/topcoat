@@ -1,0 +1,10 @@
+---
+name: Link - Over Color
+description: A link over color
+markup: |
+  <div style="width: 500px; height: 100px; background-color: rgb(51, 171, 132); padding: 6px 9px;">
+    <p class="spectrum-Body" style="color: rgb(255, 255, 255);">
+      Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--overColor"> spectrum-Link--overColor</a>
+      . This is just filler text, but if you keep reading maybe something good will happen.
+    </p>
+  </div>
