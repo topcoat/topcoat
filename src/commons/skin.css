@@ -6,7 +6,7 @@
   --spectrum-button-icon-icon-color-key-focus: var(--spectrum-button-icon-color-key-focus);
   --spectrum-button-icon-icon-color-disabled: var(--spectrum-button-icon-color-disabled);
   --spectrum-button-icon-background-color-default: transparent;
-  --spectrum-button-icon-background-color-down: var(--spectrum-button-primary-background-color-down);
+  --spectrum-button-icon-background-color-down: var(--spectrum-actionbutton-background-color-down);
 
   /* Button */
   --spectrum-button-border-focus-grow: 1px;
