@@ -3,13 +3,12 @@
   "version": "2.0.0-beta.76",
   "scripts": {
     "build": "gulp",
-    "bump": "node node_modules/.bin/dna-npm-bump-version",
+    "dev": "gulp dev",
     "ci-all": "npm run build",
-    "release": "npm run release:stable",
-    "release:snapshot": "npm run build && npm run bump && npm run publish:snapshot",
+    "bump": "node node_modules/.bin/dna-npm-bump-version",
+    "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\"",
     "release:stable": "npm run build && npm run bump && npm run publish:stable",
-    "publish:snapshot": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"snapshot\"",
-    "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\""
+    "release": "npm run release:stable"
   },
   "devDependencies": {
     "@spectrum/balthazar": "^2.x",
