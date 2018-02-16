@@ -2,44 +2,48 @@
 
 We love pull requests from everyone.
 
-[Fork](https://help.github.com/articles/fork-a-repo/), then [clone](https://help.github.com/articles/cloning-a-repository/) the repo:
+Star by [forking](https://help.github.com/articles/fork-a-repo/) the repo, then [clone](https://help.github.com/articles/cloning-a-repository/) your fork:
 
 ```
-git clone git@github.com:your-username/spectrum-css.git
+git clone git@github.com:yourusername/spectrum-css.git
 ```
 
-Set up a branch for your feature or bugfix with a link to the original repo:
+Set up a branch for your feature or bug fix, push it to your fork, and set up a remote for the upstream repo:
 
 ```
 git checkout -b my-awesome-new-feature
-git push --set-upstream origin my-awesome-new-feature
+git push -u origin my-awesome-new-feature
 git remote add upstream git@git.corp.adobe.com:Spectrum/spectrum-css.git
 ```
 
-Set up the project:
+Set up the `@spectrum` npm namespace in your `.npmrc`
+
+```
+echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc
+```
+
+Install dependencies:
 
 ```
 npm install
 ```
 
-[gulp-cli](https://github.com/gulpjs/gulp-cli) is needed to build the project locally:
+Make sure the [gulp-cli](https://github.com/gulpjs/gulp-cli) is installed globally:
 
 ```
 npm install -g gulp-cli
 ```
 
-Gulp can also be used to rebuild and reload the project as changes are made:
+Build the project, open a livereloading browser window, and watch for changes:
 
 ```
 gulp dev
 ```
 
-Then open the browser to [http://localhost:8080/docs](http://localhost:8080).
-
-Commit changes:
+Commit changes, refercing the relevant issue number (if any):
 
 ```
-git commit -m "Cool stuff"
+git commit -m "Cool stuff, closes #250, fixes #252"
 ```
 
 Consider starting the commit message with an applicable emoji:
