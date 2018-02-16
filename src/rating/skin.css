@@ -96,7 +96,7 @@
 
 .spectrum-Rating {
   &:not(:hover) {
-    .spectrum-Rating-input:focus {
+    .spectrum-Rating-input:focus-ring {
       ~ .spectrum-Rating-icon,
       ~ .spectrum-Rating-icon:not(.is-active),
       ~ .spectrum-Rating-icon.is-active {
