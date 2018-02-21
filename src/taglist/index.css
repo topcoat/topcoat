@@ -67,7 +67,7 @@
 }
 
 .spectrum-TagList-item-label {
-  flex: 1;
+  flex: 1 1 auto;
   font-size: var(--spectrum-tag-label-font-size-default);
   cursor: default;
   overflow: hidden;
