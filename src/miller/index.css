@@ -10,7 +10,7 @@
 {{ miller/miller-default.yml }}
 */
 .spectrum-MillerColumns {
-  overflow-x: scroll;
+  overflow-x: auto;
   white-space: nowrap;
   user-select: none;
   padding: var(--spectrum-miller-column-margin-default) 0;
