@@ -9,6 +9,9 @@
   --spectrum-button-icon-border-radius: 4px;
 
   --spectrum-logicbutton-padding-x-default: 8px;
+
+  /* Todo: move to dna */
+  --spectrum-button-quiet-action-padding-x-default: var(--spectrum-actionbutton-padding-x-default);
 }
 
 .spectrum-Button {
@@ -120,6 +123,7 @@ a.spectrum-Button {
 .spectrum-Button--quiet--action {
   font-size: var(--spectrum-button-quiet-action-font-size-default);
   font-weight: var(--spectrum-button-quiet-action-font-weight-default);
+  padding: 0 var(--spectrum-button-quiet-action-padding-x-default);
   border-width: 0;
   border-radius: var(--spectrum-button-quiet-action-border-radius-default);
 }
