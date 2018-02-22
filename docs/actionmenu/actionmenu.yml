@@ -17,12 +17,12 @@ markup: |
         <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
         <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
         <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 4</li>
       </ul>
     </div>
   </div>
 
-  <br>
-  <br>
+  <div class="dummy-spacing"></div>
 
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
@@ -36,12 +36,12 @@ markup: |
         <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
         <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
         <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 4</li>
       </ul>
     </div>
   </div>
 
-  <br>
-  <br>
+  <div class="dummy-spacing"></div>
 
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action">
