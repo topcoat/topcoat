@@ -36,6 +36,8 @@ markup: |
     </div>
   </div>
 
+  <div class="dummy-spacing"></div>
+
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-disabled" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">

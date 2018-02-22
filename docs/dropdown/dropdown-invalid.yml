@@ -16,7 +16,7 @@ markup: |
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
+  <div class="spectrum-Dropdown is-open is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
@@ -41,6 +41,8 @@ markup: |
       </ul>
     </div>
   </div>
+
+  <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">

@@ -15,9 +15,7 @@
   flex-direction: column;
   box-sizing: border-box;
 
-  position: relative;
-  left: 0px;
-  top: 0px;
+  position: absolute;
 
   min-width: var(--spectrum-component-single-line-width);
   min-height: var(--spectrum-component-single-line-height);
