@@ -3,7 +3,10 @@
 :root {
   --spectrum-field-min-width: 100px;
   --spectrum-field-label-margin: 0 0 6px;
-  --spectrum-field-label-left-margin: 10px 5px 6px 0;
+  --spectrum-field-label-left-padding: 10px 5px 0 0;
+  --spectrum-field-label-right-padding: 10px 8px 0 0;
+  --spectrum-tableform-border-spacing: 0 20px;
+  --spectrum-tableform-margin: -20px 0;
 }
 
 /* topdoc
@@ -26,10 +29,42 @@
   font-smoothing: subpixel-antialiased;
 }
 
+/**
+ * Spectrum Table Form
+ */
+.spectrum-Form {
+  display: table;
+  border-collapse: separate;  
+  border-spacing: var(--spectrum-tableform-border-spacing);
+  margin: var(--spectrum-tableform-margin);
+}
+
+.spectrum-Form-item {
+  display: table-row;
+}
+
+.spectrum-Form-itemLabel {
+  @extend .spectrum-FieldLabel;
+  display: table-cell;
+}
+
+.spectrum-Form-itemField {
+  display: table-cell;
+}
+
 /* topdoc
 {{ fieldlabel/fieldlabel-left.yml }}
 */
 .spectrum-FieldLabel--left {
   display: inline-block;
-  margin: var(--spectrum-field-label-left-margin);
+  padding: var(--spectrum-field-label-left-padding);
+}
+
+/* topdoc
+{{ fieldlabel/fieldlabel-right.yml }}
+*/
+.spectrum-FieldLabel--right {
+  display: inline-block;
+  text-align: right;
+  padding: var(--spectrum-field-label-right-padding);
 }

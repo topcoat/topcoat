@@ -1,24 +1,24 @@
 ---
-name: Field Label - Left
+name: Field Label - Right
 status: Beta
 description: >-
-  Field label for use with form inputs; left variation.
+  Field label for use with form inputs; right variation.
 markup: |
   <form class="spectrum-Form">
     <div class="spectrum-Form-item">
-      <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel spectrum-FieldLabel--left">Company Title</label>
+      <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Company Title</label>
       <div class="spectrum-Form-itemField">
         <textarea id="fieldLabelExample-lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
       </div>
     </div>
     <div class="spectrum-Form-item">
-      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-emailaddress">Email Address</label>
+      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-emailaddress">Email Address</label>
       <div class="spectrum-Form-itemField">
         <input class="spectrum-Textfield" aria-invalid="false" type="text" placeholder="Enter your e-mail address" id="fieldLabelExample-emailaddress">
       </div>
     </div>
     <div class="spectrum-Form-item">
-      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
+      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right" for="spectrum-textinput-instance">Country</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-Dropdown" style="width: 195px;">
           <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
@@ -32,7 +32,7 @@ markup: |
     </div>
 
     <div class="spectrum-Form-item">
-      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Interests</label>
+      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right" for="spectrum-textinput-instance">Interests</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
           <div class="spectrum-Radio">
@@ -71,7 +71,7 @@ markup: |
     </div>
 
     <div class="spectrum-Form-item">
-      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-stepper">Age</label>
+      <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-stepper">Age</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-Stepper">
           <span class="spectrum-Stepper-buttons">
