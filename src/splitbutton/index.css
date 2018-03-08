@@ -20,7 +20,17 @@
 .spectrum-SplitButton {
   position: relative;
   display: inline-block;
-  margin-right: var(--spectrum-margin);
+
+  /* Spacing for buttons placed inline */
+  & + .spectrum-SplitButton,
+  & + .spectrum-Button {
+    margin-left: var(--spectrum-margin);
+  }
+}
+
+/* Spacing for buttons placed inline */
+.spectrum-Button + .spectrum-SplitButton {
+  margin-left: var(--spectrum-margin);
 }
 
 .spectrum-SplitButton-action {
