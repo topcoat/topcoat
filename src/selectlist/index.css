@@ -20,9 +20,6 @@
   width: var(--spectrum-selectlist-option-icon-width-default);
   height: var(--spectrum-selectlist-option-icon-height-default);
 
-  width: 12px;
-  height: 12px;
-
   transform: scale(1);
   opacity: 1;
 }
