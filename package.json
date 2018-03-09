@@ -4,6 +4,7 @@
   "scripts": {
     "build": "gulp",
     "dev": "gulp dev",
+    "start": "npm run dev",
     "ci-all": "npm run build",
     "bump": "node node_modules/.bin/dna-npm-bump-version",
     "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\"",
