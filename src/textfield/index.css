@@ -29,7 +29,6 @@
   overflow: visible;
 
   /* Change the input font styles in all browsers */
-  font-family: sans-serif;
   font-size: var(--spectrum-font-size);
   line-height: var(--spectrum-text-body-line-height);
   text-overflow: ellipsis;
