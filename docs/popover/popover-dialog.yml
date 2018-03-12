@@ -11,6 +11,8 @@ markup: |
     <div class="spectrum-Popover-tip"></div>
   </div>
 
+  <div class="dummy-spacing" style="height: 215px"></div>
+
   <br>
   <br>
 
@@ -21,6 +23,8 @@ markup: |
     <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Popover-tip"></div>
   </div>
+
+  <div class="dummy-spacing" style="height: 215px"></div>
 
   <br>
   <br>
@@ -42,6 +46,8 @@ markup: |
     <div class="spectrum-Popover-tip"></div>
   </div>
 
+  <div class="dummy-spacing" style="height: 290px"></div>
+
   <br>
   <br>
 
@@ -61,3 +67,5 @@ markup: |
     </div>
     <div class="spectrum-Popover-tip"></div>
   </div>
+
+  <div class="dummy-spacing" style="height: 290px"></div>
