@@ -11,13 +11,13 @@ markup: |
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    Button
+    <span class="spectrum-Button-label">Button</span>
   </button>
   <button class="spectrum-Button spectrum-Button--quiet--action" disabled>
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    Button
+    <span class="spectrum-Button-label">Button</span>
   </button>
 
   <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--iconOnly">
