@@ -59,6 +59,10 @@ tbody.spectrum-Table-body {
   border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
   background-color: var(--spectrum-table-body-cell-background-color-default);
 
+  &:last-child {
+    border-bottom: none;
+  }
+
   &:hover {
     background-color: var(--spectrum-table-body-cell-background-color-hover);
   }
