@@ -13,3 +13,5 @@ markup: |
       <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
     </ul>
   </div>
+
+  <div class="dummy-spacing"></div>

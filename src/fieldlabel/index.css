@@ -29,9 +29,27 @@
   font-smoothing: subpixel-antialiased;
 }
 
-/**
- * Spectrum Table Form
- */
+/* topdoc
+{{ fieldlabel/fieldlabel-left.yml }}
+*/
+.spectrum-FieldLabel--left {
+  display: inline-block;
+  padding: var(--spectrum-field-label-left-padding);
+}
+
+/* topdoc
+{{ fieldlabel/fieldlabel-right.yml }}
+*/
+.spectrum-FieldLabel--right {
+  display: inline-block;
+  text-align: right;
+  padding: var(--spectrum-field-label-right-padding);
+}
+
+
+/* topdoc
+{{ form/index.yml }}
+*/
 .spectrum-Form {
   display: table;
   border-collapse: separate;  
@@ -50,21 +68,4 @@
 
 .spectrum-Form-itemField {
   display: table-cell;
-}
-
-/* topdoc
-{{ fieldlabel/fieldlabel-left.yml }}
-*/
-.spectrum-FieldLabel--left {
-  display: inline-block;
-  padding: var(--spectrum-field-label-left-padding);
-}
-
-/* topdoc
-{{ fieldlabel/fieldlabel-right.yml }}
-*/
-.spectrum-FieldLabel--right {
-  display: inline-block;
-  text-align: right;
-  padding: var(--spectrum-field-label-right-padding);
 }
