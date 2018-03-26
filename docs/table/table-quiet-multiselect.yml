@@ -8,7 +8,7 @@ markup: |
       <tr>
         <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select All">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
@@ -16,13 +16,13 @@ markup: |
             </span>
           </label>
         </th>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
           Column Title
           <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-TableSortArrow" />
           </svg>
         </th>
-        <th class="spectrum-Table-headCell is-sortable">
+        <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
           Column Title
           <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-TableSortArrow" />
@@ -32,10 +32,10 @@ markup: |
       </tr>
     </thead>
     <tbody class="spectrum-Table-body">
-      <tr class="spectrum-Table-row">
+      <tr class="spectrum-Table-row" tabindex="0">
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
@@ -49,10 +49,10 @@ markup: |
         <td class="spectrum-Table-cell">Row Item Alpha</td>
         <td class="spectrum-Table-cell">Row Item Alpha</td>
       </tr>
-      <tr class="spectrum-Table-row is-selected">
+      <tr class="spectrum-Table-row is-selected" tabindex="0">
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+            <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
@@ -66,10 +66,10 @@ markup: |
         <td class="spectrum-Table-cell">Row Item Bravo</td>
         <td class="spectrum-Table-cell">Row Item Bravo</td>
       </tr>
-      <tr class="spectrum-Table-row is-selected">
+      <tr class="spectrum-Table-row is-selected" tabindex="0">
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+            <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
@@ -83,10 +83,10 @@ markup: |
         <td class="spectrum-Table-cell">Row Item Charlie</td>
         <td class="spectrum-Table-cell">Row Item Charlie</td>
       </tr>
-      <tr class="spectrum-Table-row">
+      <tr class="spectrum-Table-row" tabindex="0">
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
@@ -100,10 +100,10 @@ markup: |
         <td class="spectrum-Table-cell">Row Item Delta</td>
         <td class="spectrum-Table-cell">Row Item Delta</td>
       </tr>
-      <tr class="spectrum-Table-row">
+      <tr class="spectrum-Table-row" tabindex="0">
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
@@ -119,3 +119,4 @@ markup: |
       </tr>
     </tbody>
   </table>
+

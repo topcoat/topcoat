@@ -36,9 +36,14 @@
   padding: var(--spectrum-table-head-cell-padding-vertical-default) var(--spectrum-table-cell-padding-default);
   transition: color var(--spectrum-transition-time) ease-in-out;
   cursor: default;
+  outline: 0;
 
   &.is-sortable {
     cursor: pointer;
+
+    &:focus-ring {
+      text-decoration: underline;
+    }
   }
 
   &.is-sorted-asc,
@@ -102,6 +107,10 @@
 .spectrum-Table-row {
   cursor: pointer;
   transition: background-color var(--spectrum-transition-time) ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 /* topdoc

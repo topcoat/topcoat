@@ -6,13 +6,13 @@ markup: |
   <table class="spectrum-Table spectrum-Table--quiet">
     <thead class="spectrum-Table-head">
       <tr>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
           Column Title
           <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-TableSortArrow" />
           </svg>
         </th>
-        <th class="spectrum-Table-headCell is-sortable">
+        <th class="spectrum-Table-headCell is-sortable" aria-sort="descending" tabindex="0">
           Column Title
           <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-TableSortArrow" />

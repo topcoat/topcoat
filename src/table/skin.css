@@ -14,6 +14,15 @@
       }
     }
 
+    &:focus-ring,
+    &.is-focused {
+      color: var(--spectrum-table-head-cell-text-color-hover);
+
+      .spectrum-Table-sortedIcon {
+        color: var(--spectrum-table-head-cell-sort-icon-color-hover);
+      }
+    }
+
     &:active {
       color: var(--spectrum-table-head-cell-text-color-down);
 
@@ -67,6 +76,11 @@ tbody.spectrum-Table-body {
     background-color: var(--spectrum-table-body-cell-background-color-hover);
   }
 
+  &:focus-ring,
+  &.is-focused {
+    background-color: var(--spectrum-table-body-cell-background-color-hover);
+  }
+
   &:active {
     background-color: var(--spectrum-table-body-cell-background-color-down);
   }
@@ -75,6 +89,11 @@ tbody.spectrum-Table-body {
     background-color: var(--spectrum-table-body-cell-background-color-selected);
 
     &:hover {
+      background-color: var(--spectrum-table-body-cell-background-color-selected-hover);
+    }
+
+    &:focus-ring,
+    &.is-focused {
       background-color: var(--spectrum-table-body-cell-background-color-selected-hover);
     }
   }
@@ -101,6 +120,11 @@ tbody.spectrum-Table-body {
       background-color: var(--spectrum-table-quiet-body-cell-background-color-hover);
     }
 
+    &:focus-ring,
+    &.is-focused {
+      background-color: var(--spectrum-table-quiet-body-cell-background-color-hover);
+    }
+
     &:active {
       background-color: var(--spectrum-table-quiet-body-cell-background-color-down);
     }
@@ -109,6 +133,11 @@ tbody.spectrum-Table-body {
       background-color: var(--spectrum-table-quiet-body-cell-background-color-selected);
 
       &:hover {
+        background-color: var(--spectrum-table-quiet-body-cell-background-color-selected-hover);
+      }
+
+      &:focus-ring,
+      &.is-focused {
         background-color: var(--spectrum-table-quiet-body-cell-background-color-selected-hover);
       }
     }
