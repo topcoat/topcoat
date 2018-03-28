@@ -37,6 +37,10 @@
   }
 }
 
+.spectrum-Tooltip.is-open {
+  pointer-events: none;
+}
+
 .spectrum-Tooltip-tip {
   position: absolute;
   overflow: hidden;

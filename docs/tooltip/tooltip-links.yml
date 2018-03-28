@@ -1,9 +1,0 @@
----
-name: Tooltip - Links
-description: A tooltip with a link in it.
-status: Released
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
-    <span class="spectrum-Tooltip-label"><a href="#" class="spectrum-Link spectrum-Link--subtle">Link to</a></span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
