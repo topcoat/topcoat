@@ -1,0 +1,9 @@
+language: node_js
+addons:
+  chrome: beta
+before_install:
+  - # start your web application and listen on `localhost`
+  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
+before_script:
+  - npm install -g gulp-cli
+script: gulp build
